@@ -1,6 +1,6 @@
 # CCP Audio system manual
 
-This repository contains labels, manuals and documentation on our front of house.
+This repository contains labels, manuals and documentation on our audio gear and it's usage.
 
 # Contents
 
