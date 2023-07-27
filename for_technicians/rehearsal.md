@@ -16,7 +16,7 @@ everything professionally and to avoid hurry-induced errors, fix random issues, 
 
 
 ## At the main console
-Consult with the worship leader on how which instruments will be used,
+Consult with the worship leader on which instruments will be used,
 and who will be at which microphone.
 
 ### Set up the SPL meter
