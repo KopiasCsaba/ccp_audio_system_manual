@@ -41,7 +41,8 @@
 
 * Volume at 9 o'clock
 * DSP preset button NOT pressed in
-  <img alt="" src="assets/reset/coffeshop.png" height="300">
+
+<img alt="" src="assets/reset/coffeshop.png" height="300">
 
 # Align the pulpit
 
