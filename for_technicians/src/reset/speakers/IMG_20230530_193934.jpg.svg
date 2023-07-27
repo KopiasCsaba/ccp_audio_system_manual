@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg244"
+   width="4608"
+   height="6144"
+   viewBox="0 0 4608 6144"
+   sodipodi:docname="IMG_20230530_193934.jpg.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs248">
+    <rect
+       x="2946.949"
+       y="4187.2648"
+       width="652.5206"
+       height="606.78493"
+       id="rect599" />
+    <rect
+       x="2946.949"
+       y="4187.2648"
+       width="652.5206"
+       height="606.78493"
+       id="rect730" />
+    <rect
+       x="2946.949"
+       y="4187.2648"
+       width="652.5206"
+       height="606.78493"
+       id="rect740" />
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath897">
+      <rect
+         style="opacity:0.51;fill:#ff0000;stroke:#ffffff;stroke-width:3.77953;stroke-linejoin:round;paint-order:stroke fill markers"
+         id="rect899"
+         width="1845.2405"
+         height="3144.7266"
+         x="1607.623"
+         y="2230.5295" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="namedview246"
+     pagecolor="#ffffff"
+     bordercolor="#cccccc"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="1"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="0.17999919"
+     inkscape:cx="1636.1185"
+     inkscape:cy="3738.9058"
+     inkscape:window-width="1920"
+     inkscape:window-height="1026"
+     inkscape:window-x="0"
+     inkscape:window-y="30"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g250" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="Image"
+     id="g250">
+    <image
+       width="4608"
+       height="6144"
+       preserveAspectRatio="none"
+       xlink:href="IMG_20230530_193934.jpg"
+       id="image252"
+       clip-path="url(#clipPath897)"
+       inkscape:export-filename="../assets/reset/fills.png"
+       inkscape:export-xdpi="18.32"
+       inkscape:export-ydpi="18.32" />
+  </g>
+</svg>
