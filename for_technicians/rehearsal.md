@@ -77,7 +77,11 @@ For each instrument channel that will be used:
    * Very important!
    * Align height and direction, so that the microphone is in line with the mouth, and points towards them.
    * Meanwhile, keep it in a way so that the sound from the monitor would hit the microphone from the back as much as possible.
-
+ * **Set instrument controls to neutral**
+   * Some instruments have equalizers on them, ask the owner to turn it off, or set it to "flat".
+   * Some instruments have volume controls on them, ask the owner to set it to neutral, or middle.
+   * And ask the owners of the instruments, not to change any of those during performing.
+   
 ## Gain staging
  * Go through all channels (vocal/instruments), and set a proper gain.
    * Ask them one-by-one to play from lowest to highest volume.
