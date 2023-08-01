@@ -1,4 +1,21 @@
 
+<!-- TOC -->
+* [Turn on all the TVs](#turn-on-all-the-tvs)
+  * [Coffee shop screen](#coffee-shop-screen)
+  * [Pole screen](#pole-screen)
+* [Turning on the PC](#turning-on-the-pc)
+* [Setting up the stream](#setting-up-the-stream)
+  * [Facebook Live](#facebook-live)
+* [Start OBS](#start-obs)
+* [Verify audio settings](#verify-audio-settings)
+* [Managing the the camera](#managing-the-the-camera)
+* [Start streaming in OBS](#start-streaming-in-obs)
+* [Start streaming in Facebook](#start-streaming-in-facebook)
+* [Lifecycle of streaming and things to pay attention during service](#lifecycle-of-streaming-and-things-to-pay-attention-during-service)
+* [Verifying stream](#verifying-stream-)
+  * [OBS](#obs-)
+  * [Facebook](#facebook)
+<!-- TOC -->
 
 # Turn on all the TVs
 ## Coffee shop screen
