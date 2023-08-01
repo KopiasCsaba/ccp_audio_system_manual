@@ -54,14 +54,14 @@ Object Channels {
 Object Busses {
     Mix1 = Live L
     Mix2 = Live R
-    Mix3 =
-    Mix4 =
-    Mix5 =
-    Mix6 =
-    Mix7 = Pulpit Feedback Fix
-    Mix8 =
-    Mix9 =
-    Mix10 =
+    Mix3 = Drum Mon
+    Mix4 = Audience Gate Side Chain
+    Mix5 = Drumroom talkback Side Chain
+    Mix6 = Talkback
+    Mix7 = Pulpit Feedback Fixer
+    Mix8 = Guitar Mon
+    Mix9 = Stage Feedback Fixer
+    Mix10 = Mains Mon
     Mix11 =
     Mix12 =
     Mix13 = Effects input 1
@@ -69,6 +69,42 @@ Object Busses {
     Mix15 = Effects input 3
     Mix16 = Effects input 4
 }
+
+Object P16 {
+    CH1 = Mic1
+    CH2 = Mic2
+    CH3 = Mic3
+    CH4 = Mic4
+    CH5 = Mic5
+    CH6 = Mic6 (Keys)
+    CH7 = Inst1
+    CH8 = Inst2
+    CH9 = Inst3
+    CH10 = Inst4
+    CH11 = Inst5
+    CH12 = Keys
+    CH13 = Mains
+    CH14 = Talkback
+    CH15 = Drums
+    CH16 =
+}
+
+Channels::CH9 ---> P16::CH1
+Channels::CH10 ---> P16::CH2
+Channels::CH11 ---> P16::CH3
+Channels::CH12 ---> P16::CH4
+Busses::Mix8 ---> P16::CH5
+Channels::CH19 ---> P16::CH6
+Channels::CH21 ---> P16::CH7
+Busses::Mix3 ---> P16::CH8
+Channels::CH20 ---> P16::CH9
+Busses::Mix10 ---> P16::CH10
+Busses::Mix6 ---> P16::CH11
+
+Channels::CH13 ---> P16::CH13
+Channels::CH14 ---> P16::CH14
+Channels::CH9 ---> P16::CH15
+Channels::CH9 ---> P16::CH16
 
 Object LR
 

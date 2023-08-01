@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg1"
+   width="945"
+   height="2009"
+   viewBox="0 0 945 2009"
+   sodipodi:docname="IMG_20230801_144754_century_remote.jpg.svg"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   inkscape:export-filename="IMG_20230801_144754_century_remote.jpg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#cccccc"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="1"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.38626182"
+     inkscape:cx="473.77191"
+     inkscape:cy="1004.5"
+     inkscape:window-width="1920"
+     inkscape:window-height="1026"
+     inkscape:window-x="0"
+     inkscape:window-y="30"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g1" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="Image"
+     id="g1">
+    <image
+       width="945"
+       height="2009"
+       preserveAspectRatio="none"
+       xlink:href="IMG_20230801_144754.jpg"
+       id="image1"
+       inkscape:export-filename="../../assets/video/century_remote.png"
+       inkscape:export-xdpi="66.898956"
+       inkscape:export-ydpi="66.898956" />
+    <ellipse
+       style="fill:none;stroke:#ff0000;stroke-width:32;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
+       id="path1"
+       cx="325.13559"
+       cy="206.30054"
+       rx="121.74802"
+       ry="115.87022" />
+    <ellipse
+       style="fill:none;stroke:#ff0000;stroke-width:32;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
+       id="ellipse1"
+       cx="461.49121"
+       cy="1794.3494"
+       rx="228.60779"
+       ry="115.87022" />
+  </g>
+</svg>
