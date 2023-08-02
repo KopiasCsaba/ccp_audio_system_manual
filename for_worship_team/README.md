@@ -2,7 +2,7 @@
 
 ## Videos
  * [How does the stage mixer work?](https://youtu.be/nRDQFHH9zpU)
- * [How the drum room stage-talkback work?](https://youtu.be/nelw-jKgT6w)
+ * [How does the drum room stage-talkback work?](https://youtu.be/nelw-jKgT6w)
 
 ## Cable & microphone numbering on the stage
 
