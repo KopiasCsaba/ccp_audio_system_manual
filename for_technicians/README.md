@@ -9,7 +9,6 @@
 ### Video
 * Handling live streaming: [video.md](video.md).
 
-
 # Resources
  * [Behringer X32 Block diagram](assets/x32/blockdiagram.png)
 

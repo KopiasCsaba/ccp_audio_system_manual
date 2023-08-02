@@ -28,18 +28,18 @@ Object Channels {
     CH11 = Mic 3
     CH12 = Mic 4
     CH13 = Mic 5
-    CH14 = Unused
+    CH14 = Mic 6
     CH15 = DrumTB
-    CH16 = Corner XLR
+    CH16 = Unused
 
     CH17 = Instrument 1
     CH18 = Instrument 2
     CH19 = Instrument 3
     CH20 = Instrument 4
-    CH21 = Keyboard L
-    CH22 = Keyboard R
-    CH23 = Unused
-    CH24 = Click
+    CH21 = Instrument 5
+    CH22 = Unused
+    CH23 = Keyboard L
+    CH24 = Keyboard R
 
     CH25 = Kick
     CH26 = Snare
@@ -59,16 +59,18 @@ Object Busses {
     Mix5 = Drumroom talkback Side Chain
     Mix6 = Talkback
     Mix7 = Pulpit Feedback Fixer
-    Mix8 = Guitar Mon
+    Mix8 = Unused
     Mix9 = Stage Feedback Fixer
     Mix10 = Mains Mon
-    Mix11 =
-    Mix12 =
+    Mix11 = Unused
+    Mix12 = Unused
     Mix13 = Effects input 1
     Mix14 = Effects input 2
     Mix15 = Effects input 3
     Mix16 = Effects input 4
 }
+
+
 
 Object P16 {
     CH1 = Mic1
@@ -86,136 +88,185 @@ Object P16 {
     CH13 = Mains
     CH14 = Talkback
     CH15 = Drums
-    CH16 =
+    CH16 = Unused
 }
 
 Channels::CH9 ---> P16::CH1
 Channels::CH10 ---> P16::CH2
 Channels::CH11 ---> P16::CH3
 Channels::CH12 ---> P16::CH4
-Busses::Mix8 ---> P16::CH5
-Channels::CH19 ---> P16::CH6
-Channels::CH21 ---> P16::CH7
-Busses::Mix3 ---> P16::CH8
-Channels::CH20 ---> P16::CH9
-Busses::Mix10 ---> P16::CH10
-Busses::Mix6 ---> P16::CH11
+Channels::CH13 ---> P16::CH5
+Channels::CH14 ---> P16::CH6
+Channels::CH17 ---> P16::CH7
+Channels::CH18 ---> P16::CH8
+Channels::CH19 ---> P16::CH9
+Channels::CH20 ---> P16::CH10
+Channels::CH21 ---> P16::CH11
+Channels::CH23 ---> P16::CH12
+Busses::Mix10 ---> P16::CH13
+Busses::Mix6 ---> P16::CH14
+Busses::Mix3 ---> P16::CH15
 
-Channels::CH13 ---> P16::CH13
-Channels::CH14 ---> P16::CH14
-Channels::CH9 ---> P16::CH15
-Channels::CH9 ---> P16::CH16
 
 Object LR
+
 
 Channels::CH1 ---> LR
 Channels::CH1 ---> Busses::Mix1
 Channels::CH1 ---> Busses::Mix2
+Channels::CH1 ---> Busses::Mix4
+Channels::CH1 ---> Busses::Mix10
 
-Channels::CH2 ---> Busses::Mix7
 Channels::CH2 ---> Busses::Mix1
 Channels::CH2 ---> Busses::Mix2
+Channels::CH2 ---> Busses::Mix4
+Channels::CH2 ---> Busses::Mix7
+
 
 Channels::CH7 ---> Busses::Mix1
 Channels::CH8 ---> Busses::Mix2
 
 
-Channels::CH9 ---> LR
+
 Channels::CH9 ---> Busses::Mix1
 Channels::CH9 ---> Busses::Mix2
+Channels::CH9 ---> Busses::Mix9
 Channels::CH9 ---> Busses::Mix13
 Channels::CH9 ---> Busses::Mix14
 Channels::CH9 ---> Busses::Mix15
 Channels::CH9 ---> Busses::Mix16
 
-Channels::CH10 ---> LR
 Channels::CH10 ---> Busses::Mix1
 Channels::CH10 ---> Busses::Mix2
+Channels::CH10 ---> Busses::Mix9
 Channels::CH10 ---> Busses::Mix13
 Channels::CH10 ---> Busses::Mix14
 Channels::CH10 ---> Busses::Mix15
 Channels::CH10 ---> Busses::Mix16
 
 
-Channels::CH11 ---> LR
 Channels::CH11 ---> Busses::Mix1
 Channels::CH11 ---> Busses::Mix2
+Channels::CH11 ---> Busses::Mix9
 Channels::CH11 ---> Busses::Mix13
 Channels::CH11 ---> Busses::Mix14
 Channels::CH11 ---> Busses::Mix15
 Channels::CH11 ---> Busses::Mix16
 
 
-Channels::CH12 ---> LR
 Channels::CH12 ---> Busses::Mix1
 Channels::CH12 ---> Busses::Mix2
+Channels::CH12 ---> Busses::Mix9
 Channels::CH12 ---> Busses::Mix13
 Channels::CH12 ---> Busses::Mix14
 Channels::CH12 ---> Busses::Mix15
 Channels::CH12 ---> Busses::Mix16
 
+Channels::CH14 ---> Busses::Mix1
+Channels::CH14 ---> Busses::Mix2
+Channels::CH14 ---> Busses::Mix9
+Channels::CH14 ---> Busses::Mix13
+Channels::CH14 ---> Busses::Mix14
+Channels::CH14 ---> Busses::Mix15
+Channels::CH14 ---> Busses::Mix16
 
-Channels::CH13 ---> LR
-Channels::CH13 ---> Busses::Mix1
-Channels::CH13 ---> Busses::Mix2
-Channels::CH13 ---> Busses::Mix13
-Channels::CH13 ---> Busses::Mix14
-Channels::CH13 ---> Busses::Mix15
-Channels::CH13 ---> Busses::Mix16
 
+Channels::CH15 ---> Busses::Mix6
 
 Channels::CH17 ---> LR
 Channels::CH17 ---> Busses::Mix1
 Channels::CH17 ---> Busses::Mix2
+Channels::CH17 ---> Busses::Mix4
 
 Channels::CH18 ---> LR
 Channels::CH18 ---> Busses::Mix1
 Channels::CH18 ---> Busses::Mix2
+Channels::CH18 ---> Busses::Mix4
 
 Channels::CH19 ---> LR
 Channels::CH19 ---> Busses::Mix1
 Channels::CH19 ---> Busses::Mix2
+Channels::CH19 ---> Busses::Mix4
 
 Channels::CH20 ---> LR
 Channels::CH20 ---> Busses::Mix1
 Channels::CH20 ---> Busses::Mix2
+Channels::CH20 ---> Busses::Mix4
 
 Channels::CH21 ---> LR
 Channels::CH21 ---> Busses::Mix1
 Channels::CH21 ---> Busses::Mix2
+Channels::CH21 ---> Busses::Mix4
 
-Channels::CH22 ---> LR
-Channels::CH22 ---> Busses::Mix1
-Channels::CH22 ---> Busses::Mix2
+Channels::CH23 ---> LR
+Channels::CH23 ---> Busses::Mix1
+Channels::CH23 ---> Busses::Mix2
+Channels::CH23 ---> Busses::Mix4
+
+Channels::CH24 ---> LR
+Channels::CH24 ---> Busses::Mix1
+Channels::CH24 ---> Busses::Mix2
+Channels::CH24 ---> Busses::Mix4
+
+
+
+
+
+Channels::CH25 ---> LR
+Channels::CH25 ---> Busses::Mix1
+Channels::CH25 ---> Busses::Mix2
+Channels::CH25 ---> Busses::Mix3
+Channels::CH25 ---> Busses::Mix4
+Channels::CH25 ---> Busses::Mix5
 
 Channels::CH26 ---> LR
 Channels::CH26 ---> Busses::Mix1
 Channels::CH26 ---> Busses::Mix2
+Channels::CH26 ---> Busses::Mix3
+Channels::CH26 ---> Busses::Mix4
+Channels::CH26 ---> Busses::Mix5
 
 Channels::CH27 ---> LR
 Channels::CH27 ---> Busses::Mix1
 Channels::CH27 ---> Busses::Mix2
+Channels::CH27 ---> Busses::Mix3
+Channels::CH27 ---> Busses::Mix4
+Channels::CH27 ---> Busses::Mix5
 
 Channels::CH28 ---> LR
 Channels::CH28 ---> Busses::Mix1
 Channels::CH28 ---> Busses::Mix2
+Channels::CH28 ---> Busses::Mix3
+Channels::CH28 ---> Busses::Mix4
+Channels::CH28 ---> Busses::Mix5
 
 Channels::CH29 ---> LR
 Channels::CH29 ---> Busses::Mix1
 Channels::CH29 ---> Busses::Mix2
+Channels::CH29 ---> Busses::Mix3
+Channels::CH29 ---> Busses::Mix4
+Channels::CH29 ---> Busses::Mix5
 
 Channels::CH30 ---> LR
 Channels::CH30 ---> Busses::Mix1
 Channels::CH30 ---> Busses::Mix2
+Channels::CH30 ---> Busses::Mix3
+Channels::CH30 ---> Busses::Mix4
+Channels::CH30 ---> Busses::Mix5
 
 Channels::CH31 ---> LR
 Channels::CH31 ---> Busses::Mix1
 Channels::CH31 ---> Busses::Mix2
+Channels::CH31 ---> Busses::Mix3
+Channels::CH31 ---> Busses::Mix4
+Channels::CH31 ---> Busses::Mix5
 
 Channels::CH32 ---> LR
 Channels::CH32 ---> Busses::Mix1
 Channels::CH32 ---> Busses::Mix2
-
+Channels::CH32 ---> Busses::Mix3
+Channels::CH32 ---> Busses::Mix4
+Channels::CH32 ---> Busses::Mix5
 
 
 Busses::Mix7 ---> LR
@@ -234,5 +285,6 @@ LR ---> Matrix::Mtx2
 LR ---> Matrix::Mtx3
 LR ---> Matrix::Mtx4
 LR ---> Matrix::Mtx5
+LR ---> Matrix::Mtx6
 
 @enduml
