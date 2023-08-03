@@ -8,7 +8,7 @@
 
 # Before the service
 
-* Make sure all mics, instruments are working.
+* Make sure all mics and instruments are working.
 * Set up the SPL meter.
 
 # During service
@@ -30,9 +30,8 @@
     * Do you hear every vocalist?
     * Do you hear every instrument?
     * Is there any distortion?
-    * Is there anything that bothers you?
+    * Is there anything that bothers your ear?
     * Doest the live stream gets the correct volume?
 
 ## During worship, when someone speaks or prays
-
-* Mute the effects!
+* Mute the effects! Having effect on praying or preaching is very cheesy.

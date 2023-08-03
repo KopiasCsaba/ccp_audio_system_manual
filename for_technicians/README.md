@@ -10,7 +10,8 @@
 * Handling live streaming: [video.md](video.md).
 
 # Resources
- * [Behringer X32 Block diagram](assets/x32/blockdiagram.png)
+ * [Behringer X32 compact block diagram](assets/x32/blockdiagram.png)
+ * [Behringer X32 compact user manual](https://mediadl.musictribe.com/media/sys_master/h1f/h56/8849797021726.pdf)
 
 ## Great resources to learn from
  * https://youtube.com/@AudioUniversity/videos
