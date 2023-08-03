@@ -1,7 +1,7 @@
 @startuml
 !theme mars
 'skinparam linetype polyline
-'skinparam linetype ortho
+skinparam linetype ortho
 'left to right direction
 skinparam style strictuml
 hide empty members

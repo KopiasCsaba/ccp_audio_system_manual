@@ -7,7 +7,7 @@
    viewBox="0 0 210 297"
    version="1.1"
    id="svg8"
-   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
    sodipodi:docname="turningon.svg"
    inkscape:export-filename="/data/home/csaba/cprojects/audio/docs/turningon.png"
    inkscape:export-xdpi="200"
@@ -231,9 +231,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.46109833"
-     inkscape:cx="253.74197"
-     inkscape:cy="600.73954"
+     inkscape:zoom="1.304183"
+     inkscape:cx="235.39641"
+     inkscape:cy="448.55667"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -698,38 +698,50 @@
        xml:space="preserve"
        transform="matrix(0.26458333,0,0,0.26458333,-213.66196,-0.39932222)"
        id="text398"
-       style="font-size:18.6667px;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:justify;white-space:pre;shape-inside:url(#rect400);fill:#000000"
+       style="font-size:18.6667px;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:justify;white-space:pre;shape-inside:url(#rect400);display:inline;fill:#000000"
        x="0"
        y="0"><tspan
          x="876"
          y="960.85289"
-         id="tspan652"><tspan
+         id="tspan2"><tspan
            dx="0 0 0 1.1644459 0 0 0 1.1644459 0 0 0 0 0 0 0 0 0 0 0 1.1644459 0 1.1644459 0 0 0 0 1.1644306 0 0 0 1.1644459 0 0 0 0 0 1.1644611 0 0 0 0 0 0 0 1.1644306 0 0 1.1644611 0 0 1.1644306 0 0 0 1.1644306 0 0 0 1.1644306 0 0 0 0 0 1.1644611 0 0 0 0 0 0 0 0 0 0 1.1644001"
-           id="tspan650">If you experienced a loud pop while turning on or off our audio equipment, we </tspan></tspan><tspan
+           id="tspan1">If you experienced a loud pop while turning on or off our audio equipment, we </tspan></tspan><tspan
          x="876"
          y="984.18627"
-         id="tspan654">kindly ask you to be more careful the next time you follow this guide. 
-</tspan><tspan
+         id="tspan3">kindly ask you to be more careful the next time you follow this guide. &#10;</tspan><tspan
          x="876"
          y="1007.5196"
-         id="tspan658"><tspan
+         id="tspan5"><tspan
            dx="0 0 0 0 0 8.8474483 0 0 0 0 8.8474445 0 0 0 8.8474445 0 0 0 0 0 0 8.8474445 0 0 0 8.8474445 0 0 0 0 0 0 0 8.8474445 0 0 8.8474445 0 0 0 0 8.8474445 0 0 0 0 0 0 0 0 0 8.847414 0 0 8.8474445 0 0 0 0 0 8.8474445"
-           id="tspan656">Loud pops can damage our system, so it's important to avoid them. </tspan></tspan><tspan
+           id="tspan4">Loud pops can damage our system, so it's important to avoid them. </tspan></tspan><tspan
          x="876"
          y="1030.853"
-         id="tspan660">Furthermore, every time it happens, a cat dies.
-</tspan><tspan
+         id="tspan6">Furthermore, every time it happens, a cat dies.&#10;</tspan><tspan
          x="876"
          y="1054.1864"
-         id="tspan662">
-</tspan><tspan
+         id="tspan7">&#10;</tspan><tspan
          x="876"
          y="1077.5198"
-         id="tspan666"><tspan
+         id="tspan9"><tspan
            dx="0 0 0 0.80109215 0 0 0 0.80109215 0 0 0 0.80109596 0 0 0 0.80109596 0 0 0 0 0 0 0 0 0 0 0.80108833 0 0 0 0.80108833 0 0 0 0 0.80108833 0 0 0 0 0 0.80108833 0 0 0.80108833 0 0 0 0 0 0 0 0 0 0 0.80108833 0 0 0 0 0.80108833 0 0 0 0 0.80105782 0 0 0 0.80105782"
-           id="tspan664">If you did not experience any loud pops, we appreciate your care and attention </tspan></tspan><tspan
+           id="tspan8">If you did not experience any loud pops, we appreciate your care and attention </tspan></tspan><tspan
          x="876"
          y="1100.8531"
-         id="tspan668">to our audio equipment. Thank you.</tspan></text>
+         id="tspan10">to our audio equipment. Thank you.</tspan></text>
+    <flowRoot
+       transform="matrix(0.15728926,0,0,0.15728926,8.524007,68.108516)"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.69128"
+       id="flowRoot2"
+       xml:space="preserve"><flowRegion
+         style="stroke-width:1.69128"
+         id="flowRegion2"><rect
+           style="stroke-width:1.69128203"
+           y="183.23396"
+           x="248.57143"
+           height="100.86726"
+           width="826.10358"
+           id="rect2" /></flowRegion><flowPara
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:1.92436"
+         id="flowPara2">Wait until it has booted up.</flowPara></flowRoot>
   </g>
 </svg>

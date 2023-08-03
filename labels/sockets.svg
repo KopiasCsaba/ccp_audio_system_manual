@@ -7,7 +7,7 @@
    viewBox="0 0 297 210"
    version="1.1"
    id="svg2060"
-   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
    sodipodi:docname="sockets.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -32,9 +32,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.28202387"
-     inkscape:cx="861.6292"
-     inkscape:cy="556.69047"
+     inkscape:zoom="0.39884198"
+     inkscape:cx="544.07512"
+     inkscape:cy="513.98802"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -52,13 +52,18 @@
        y="0"
        width="297"
        height="210"
-       id="page838" />
+       id="page838"
+       margin="0"
+       bleed="0" />
     <inkscape:page
        x="307"
        y="0"
        width="297"
        height="210"
-       id="page840" />
+       id="page840"
+       inkscape:export-filename="sockets.pdf"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
   </sodipodi:namedview>
   <metadata
      id="metadata2057">
@@ -192,7 +197,7 @@
            x="88.893425"
            y="443.69717" /></flowRegion><flowPara
          id="flowPara2615-4"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Roboto;-inkscape-font-specification:'Roboto Bold'">COFFEESHOP</flowPara><flowPara
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Roboto;-inkscape-font-specification:'Roboto Bold'">COFFEE SHOP</flowPara><flowPara
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Roboto;-inkscape-font-specification:'Roboto Bold'"
          id="flowPara5769-7">SPEAKERS</flowPara></flowRoot>
     <flowRoot
@@ -253,24 +258,22 @@
        style="font-size:18.6667px;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:justify;white-space:pre;shape-inside:url(#rect4062);display:inline;fill:#000000"><tspan
          x="1011.5078"
          y="211.80797"
-         id="tspan1253"><tspan
+         id="tspan2"><tspan
            dx="0 0 0 0 7.5299759 0 0 0 7.529974 0 0 0 0 0 0 7.5299778 0 0 0 0 0 0 0 7.5299702 0 0 0 7.5299702 0 0 0 7.5299702"
-           id="tspan1251">... and nearby sockets for the PC, </tspan></tspan><tspan
+           id="tspan1">... and nearby sockets for the PC, </tspan></tspan><tspan
          x="1011.5078"
          y="235.14135"
-         id="tspan1255">routers and the charger.
-</tspan><tspan
+         id="tspan3">routers and the charger.&#10;</tspan><tspan
          x="1011.5078"
          y="258.47472"
-         id="tspan1257">
-</tspan><tspan
+         id="tspan4">&#10;</tspan><tspan
          x="1011.5078"
          y="281.80809"
-         id="tspan1261"><tspan
+         id="tspan6"><tspan
            dx="0 0 0 0 0 0 0 0 0.24892998 0 0 0 0.24892616 0 0 0 0 0 0 0.24891853 0 0 0.24891853 0 0 0 0.24893379 0 0 0 0 0 0.24893379"
-           id="tspan1259">Consult the guides at the mixer before </tspan></tspan><tspan
+           id="tspan5">Consult the guides at the mixer before </tspan></tspan><tspan
          x="1011.5078"
          y="305.14147"
-         id="tspan1263">turning on or off!</tspan></text>
+         id="tspan7">turning on or off!</tspan></text>
   </g>
 </svg>
