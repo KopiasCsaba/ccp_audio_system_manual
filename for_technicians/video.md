@@ -21,6 +21,7 @@
 ## Coffee shop screen
  * Pull out to face the audience
  * The button is in the bottom center
+ * Use the remote located in the coffee shop on the pallets, to click on HDMI1 which connects to the Computer
 
 ![lg.jpg](assets/video/lg.jpg)
 
@@ -92,6 +93,7 @@ Start OBS:
  * Mic/Aux should be unmuted
  * Desktop Audio 2 should be muted
  * Upon any signal from the console, Mic/Aux should show signal
+ * Desktop Audio 2 might not show a signal in the beginning. Unmute and then mute again if the signal passes through.
 
 ![obs_audio.png](assets%2Fvideo%2Fscreenshots%2Fobs_audio.png)
 
