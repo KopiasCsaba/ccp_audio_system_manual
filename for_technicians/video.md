@@ -1,3 +1,5 @@
+<h1>DOING A LIVE STREAM</h1>
+<hr>
 
 <!-- TOC -->
 * [Turn on all the TVs](#turn-on-all-the-tvs)
@@ -23,17 +25,17 @@
  * The button is in the bottom center
  * Use the remote located in the coffee shop on the pallets, to click on HDMI1 which connects to the Computer
 
-![lg.jpg](assets/video/lg.jpg)
+<img alt="" src="assets/video/lg.jpg" height="300">
 
 ## Pole screen
 
 With the remote:
 
-![century_remote.jpg](assets%2Fvideo%2Fcentury_remote.jpg)
+<img alt="" src="assets/video/century_remote.jpg" height="300">
 
 Or manually:
 
-![century.jpg](assets%2Fvideo%2Fcentury.jpg)
+<img alt="" src="assets/video/century.jpg" height="300">
 
 
 # Turning on the PC
@@ -41,19 +43,20 @@ Make sure to have the following sockets turned on:
 
 Screens
 
-![socket_screens.jpg](assets%2Fvideo%2Fsocket_screens.jpg)
+<img alt="" src="assets/video/socket_screens.jpg" height="200">
 
 Networking
 
-![socket_network.jpg](assets%2Fvideo%2Fsocket_network.jpg)
+<img alt="" src="assets/video/socket_network.jpg" height="200">
 
 
 PC+Others:
 
-![socket_pc.jpg](assets%2Fvideo%2Fsocket_pc.jpg)
+<img alt="" src="assets/video/socket_pc.jpg" height="200">
 
 Turn on the PC:
-![pc_button.jpg](assets%2Fvideo%2Fpc_button.jpg)
+
+<img alt="" src="assets/video/pc_button.jpg" height="300">
 
 
 
@@ -61,33 +64,33 @@ Turn on the PC:
 ## Facebook Live
 Start Google Chrome:
 
-![taskbar_chrome.png](assets%2Fvideo%2Fscreenshots%2Ftaskbar_chrome.png)
+<img alt="" src="assets/video/screenshots/taskbar_chrome.png">
 
 Click on the "FB: GO LIVE" bookmark:
 
-![chrome_fb_live_.png](assets%2Fvideo%2Fscreenshots%2Fchrome_fb_live_.png)
+<img alt="" src="assets/video/screenshots/chrome_fb_live_.png" height="300">
 
 Click on the "GO LIVE" button:
 
-![fb_live1.jpg](assets%2Fvideo%2Fscreenshots%2Ffb_live1.jpg)
+<img alt="" src="assets/video/screenshots/fb_live1.jpg" height="300">
 
 Edit the post's details:
 
-![fblivedetailedit.png](assets%2Fvideo%2Fscreenshots%2Ffblivedetailedit.png)
+<img alt="" src="assets/video/screenshots/fblivedetailedit.png" height="300">
 
 Type in the title and description:
 
  * For title we use the format "Title of Sermon - Main Passage - Full name of Pastor"
  * For description, you must write something as it will not let you stream otherwise. Usually we write "Good morning church!"
 
-![fb_live_post_Details.png](assets%2Fvideo%2Fscreenshots%2Ffb_live_post_Details.png)
+<img alt="" src="assets/video/screenshots/fb_live_post_Details.png" height="300">
 
 
 # Start OBS
 
 Start OBS:
 
-![taskbar_obs.png](assets%2Fvideo%2Fscreenshots%2Ftaskbar_obs.png)
+<img alt="" src="assets/video/screenshots/taskbar_obs.png">
 
 # Verify audio settings
  * Mic/Aux should be unmuted
@@ -95,13 +98,13 @@ Start OBS:
  * Upon any signal from the console, Mic/Aux should show signal
  * Desktop Audio 2 might not show a signal in the beginning. Unmute and then mute again if the signal passes through.
 
-![obs_audio.png](assets%2Fvideo%2Fscreenshots%2Fobs_audio.png)
+<img alt="" src="assets/video/screenshots/obs_audio.png" height="300">
 
 # Managing the the camera
  * Click on the first/only element in the list "PTZ DEVICE"
  * Double click any of the presets, to point the camera
 
-![obs_camera.png](assets%2Fvideo%2Fscreenshots%2Fobs_camera.png)
+<img alt="" src="assets/video/screenshots/obs_camera.png" height="300">
 
 # Start streaming in OBS
  * Make sure there is no audio coming from the console (mute headset, pulpit and turn stage off)
@@ -112,7 +115,8 @@ Start OBS:
 
 2-3 minutes before the service starts, start the stream so that people can start watching.
 Make sure there is no audio input yet.
-![fb_start_stream.png](assets%2Fvideo%2Fscreenshots%2Ffb_start_stream.png)
+
+<img alt="" src="assets/video/screenshots/fb_start_stream.png" height="300">
 
 
 
@@ -127,18 +131,19 @@ Make sure there is no audio input yet.
 ## OBS 
 Bottom right of OBS:
 
-![obs_status.png](assets%2Fvideo%2Fscreenshots%2Fobs_status.png)
+<img alt="" src="assets/video/screenshots/obs_status.png">
 
 It should look like this:
- * Green indicator
- * CPU < 30%
- * FPS: 60
- * Dropped frames: 0 (a few is fine, if it is going up constantly, then we have an issue)
+
+* Green indicator
+* CPU < 30%
+* FPS: 60
+* Dropped frames: 0 (a few is fine, if it is going up constantly, then we have an issue)
 
 ## Facebook
 The metrics should be kind-of flat, without big dips in it:
 
-![fb_network_stats.png](assets%2Fvideo%2Fscreenshots%2Ffb_network_stats.png)
+<img alt="" src="assets/video/screenshots/fb_network_stats.png" height="300">
 
 Also you want to check on the comments, if something very bad would come up, you can delete it.
 If in doubt, consult an elder/leader about it.

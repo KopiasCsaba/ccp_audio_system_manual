@@ -1,13 +1,21 @@
+<h1>TASKS ON A REHEARSAL</h1>
+<hr>
+
 <!-- TOC -->
 * [Before they arrive](#before-they-arrive)
   * [At the main console](#at-the-main-console)
-    * [Set up the SPL meter](#set-up-the-spl-meter)
+    * [Load scene](#load-scene)
     * [Load vocalists](#load-vocalists)
     * [Load instruments](#load-instruments)
+    * [Set up the SPL meter](#set-up-the-spl-meter)
     * [Other things](#other-things)
   * [At the stage](#at-the-stage)
 * [After they arrive](#after-they-arrive)
   * [Gain staging](#gain-staging)
+  * [During worship](#during-worship)
+    * [If a vocalist sounds off-key or unexpected](#if-a-vocalist-sounds-off-key-or-unexpected)
+  * [After the rehearsal](#after-the-rehearsal)
+    * [Save the preset](#save-the-preset)
 <!-- TOC -->
 
 # Before they arrive

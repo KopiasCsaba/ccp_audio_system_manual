@@ -1,21 +1,22 @@
-<!-- TOC -->
+<h1>VERIFYING AND RESETTING THE SYSTEM STATE</h1>
+<hr>
 
+<!-- TOC -->
 * [Verify main speakers' settings](#verify-main-speakers-settings)
-    * [Front](#front)
-    * [Fills](#fills)
-    * [Coffeshop](#coffeshop)
+  * [Front](#front)
+  * [Fills](#fills)
+  * [Coffeshop](#coffeshop)
 * [Align the pulpit](#align-the-pulpit)
 * [Reset the stage](#reset-the-stage)
-    * [Resetting the stage mixers](#resetting-the-stage-mixers)
-    * [Verify stage mixers' connections](#verify-stage-mixers-connections)
-    * [Verify stage monitor settings & connections](#verify-stage-monitor-settings--connections)
-        * [Left](#left)
-        * [Middle](#middle)
-        * [Right](#right)
-    * [Verify keyboard connection](#verify-keyboard-connection)
-    * [Verify Rhode link settings](#verify-rhode-link-settings)
+  * [Resetting the stage mixers](#resetting-the-stage-mixers)
+  * [Verify stage mixers' connections](#verify-stage-mixers-connections)
+  * [Verify stage monitor settings & connections](#verify-stage-monitor-settings--connections)
+    * [Left](#left)
+    * [Middle](#middle)
+    * [Right](#right)
+  * [Verify keyboard connection](#verify-keyboard-connection)
+  * [Verify Rhode link settings](#verify-rhode-link-settings)
 * [Check that all is working](#check-that-all-is-working)
-
 <!-- TOC -->
 
 # Verify main speakers' settings
@@ -28,6 +29,8 @@
 * Gray button **NOT** pressed in
 
 <img alt="" src="assets/reset/mains.png" height="300">
+
+
 
 ## Fills
 
