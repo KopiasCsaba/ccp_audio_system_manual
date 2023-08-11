@@ -1,3 +1,16 @@
+<h1>Table of contents</h1>
+<hr>
+
+<!-- TOC -->
+* [For technicians](#for-technicians)
+  * [Church audio system related custom documentation and guides](#church-audio-system-related-custom-documentation-and-guides)
+    * [Audio](#audio)
+    * [Live streaming & video](#live-streaming--video)
+    * [Training videos](#training-videos)
+    * [Resources](#resources)
+  * [Great resources to learn from](#great-resources-to-learn-from)
+<!-- TOC -->
+
 # For technicians
 
 ## Church audio system related custom documentation and guides
