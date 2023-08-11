@@ -1,8 +1,7 @@
-<h1>Table of contents</h1>
+<h1>For technicians: table of contents</h1>
 
 
 <!-- TOC -->
-* [For technicians](#for-technicians)
   * [Church audio system related custom documentation and guides](#church-audio-system-related-custom-documentation-and-guides)
     * [Audio](#audio)
     * [Live streaming & video](#live-streaming--video)
@@ -11,7 +10,6 @@
   * [Great resources to learn from](#great-resources-to-learn-from)
 <!-- TOC -->
 
-# For technicians
 
 ## Church audio system related custom documentation and guides
 
