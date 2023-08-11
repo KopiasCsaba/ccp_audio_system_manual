@@ -46,3 +46,12 @@ Our console is called "[Behringer X32 Compact](https://www.behringer.com/product
 * AudioUniversity: https://youtube.com/@AudioUniversity/videos
 * Attaway Audio: https://youtube.com/@AttawayAudio/videos
 * Mix with the masters: https://youtube.com/@mixwiththemasters/videos
+
+## Cable & microphone numbering on the stage
+
+![stage.jpg](../for_worship_team/assets/stage.jpg)
+
+The logic is, that:
+* Close to **Mic1** is now **Inst1** and **Inst2** cables.
+* Close to **Mic3** is the **Inst3** cable.
+* And the stage corner has **Inst4** and **Inst5** cables.
