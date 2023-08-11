@@ -15,3 +15,7 @@ Learn more about being a technician in [for_technicians](for_technicians).
 ## Labels
 
 Find source materials of our printed labels in  [labels](labels).
+
+
+# Short link for this page:
+[https://tinyurl.com/ccpaudioguide](https://tinyurl.com/ccpaudioguide)
