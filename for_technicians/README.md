@@ -1,5 +1,5 @@
 <h1>Table of contents</h1>
-<hr>
+
 
 <!-- TOC -->
 * [For technicians](#for-technicians)
