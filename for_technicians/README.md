@@ -3,11 +3,12 @@
 
 <!-- TOC -->
   * [Church audio system related custom documentation and guides](#church-audio-system-related-custom-documentation-and-guides)
-    * [Audio](#audio)
+    * [Audio](#audio-)
     * [Live streaming & video](#live-streaming--video)
     * [Training videos](#training-videos)
     * [Resources](#resources)
   * [Great resources to learn from](#great-resources-to-learn-from)
+  * [Cable & microphone numbering on the stage](#cable--microphone-numbering-on-the-stage)
 <!-- TOC -->
 
 
