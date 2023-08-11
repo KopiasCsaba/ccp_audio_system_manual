@@ -13,7 +13,9 @@
 
 ## Church audio system related custom documentation and guides
 
-### Audio
+### Audio 
+These are printed out and organized into a folder, that you can find next
+to the console.
 
 * Resetting/setting up the system: [resetting.md](resetting.md).
 * What to do during a rehearsal: [rehearsal.md](rehearsal.md).
@@ -30,7 +32,7 @@
 
 ### Resources
 
-Our console is called "Behringer X32 Compact"
+Our console is called "[Behringer X32 Compact](https://www.behringer.com/product.html?modelCode=P0AAP)"
 * [Behringer X32 compact block diagram](assets/x32/blockdiagram.png)
 * [Behringer X32 compact user manual](https://mediadl.musictribe.com/media/sys_master/h1f/h56/8849797021726.pdf)
 
