@@ -2,28 +2,26 @@
 <hr>
 
 <!-- TOC -->
-
 * [Verify main speakers' settings](#verify-main-speakers-settings)
-    * [Front](#front)
-    * [Fills](#fills)
-    * [Coffeshop](#coffeshop)
+  * [Front speakers](#front-speakers)
+  * [Fill speakers](#fill-speakers)
+  * [Coffeshop speakers](#coffeshop-speakers)
 * [Align the pulpit](#align-the-pulpit)
 * [Reset the stage](#reset-the-stage)
-    * [Resetting the stage mixers](#resetting-the-stage-mixers)
-    * [Verify stage mixers' connections](#verify-stage-mixers-connections)
-    * [Verify stage monitor settings & connections](#verify-stage-monitor-settings--connections)
-        * [Left](#left)
-        * [Middle](#middle)
-        * [Right](#right)
-    * [Verify keyboard connection](#verify-keyboard-connection)
-    * [Verify Rhode link settings](#verify-rhode-link-settings)
+  * [Resetting the stage mixers](#resetting-the-stage-mixers)
+  * [Verify stage mixers' connections](#verify-stage-mixers-connections)
+  * [Verify stage monitor settings & connections](#verify-stage-monitor-settings--connections)
+    * [Left stage monitor](#left-stage-monitor)
+    * [Middle stage monitor](#middle-stage-monitor)
+    * [Right stage monitor](#right-stage-monitor)
+  * [Verify keyboard connection](#verify-keyboard-connection)
+  * [Verify Rhode link settings](#verify-rhode-link-settings)
 * [Check that all is working](#check-that-all-is-working)
-
 <!-- TOC -->
 
 # Verify main speakers' settings
 
-## Front
+## Front speakers
 
 <img alt="" src="assets/reset/mains.png" align="right" style="float:right" height="300">
 
@@ -34,7 +32,7 @@
 
 <br clear="right" style="clear:right"/>
 
-## Fills
+## Fill speakers
 
 <img alt="" src="assets/reset/fills.png" align="right" style="float:right"  height="300">
 
@@ -42,9 +40,11 @@
 * High at 0
 * Low at 0
 
-<br clear="right" style="clear:right"/>
+<br clear="right" style="clear:right;/>
 
-## Coffeshop
+<div style="page-break-after: always;"></div>
+
+## Coffeshop speakers
 
 <img alt="" src="assets/reset/coffeshop.png"  align="right" style="float:right" height="300">
 
@@ -61,10 +61,13 @@ There is a mark on the floor, align the pulpit to be at the correct position.
 
 <img alt="" src="assets/reset/pulpit.jpg" height="300">
 
+<div style="page-break-after: always;"></div>
+
 # Reset the stage
 
 ## Resetting the stage mixers
 
+ 
 Reset the stage mixers, but only **BEFORE** a rehearsal.
 There is one mixer in the drumroom too, reset that one also.
 
@@ -79,42 +82,58 @@ The order is important here:
     * Press **16**
     * **Release** RECALL
 
-<img alt="" src="assets/reset/stagemixer.png" height="200">
+
+<img alt="" src="assets/reset/stagemixer.png" height="300"> 
+
 
 ## Verify stage mixers' connections
 
 Verify that the speakers are connected to **L/MONO**:
 
-<img alt="" src="assets/reset/mixer_conn.jpg" height="300">
+<img alt="" src="assets/reset/mixer_conn.jpg" height="160">
+
+<div style="page-break-after: always;"></div>
 
 ## Verify stage monitor settings & connections
 
-### Left
+### Left stage monitor
+
+<img alt="" src="assets/reset/speaker_left.png"  align="right" style="float:right" height="200">
 
 * All 12 o'clock.
 * Check power and signal cable connections.
 
-<img alt="" src="assets/reset/speaker_left.png" height="300">
 
-### Middle
+<br clear="right" style="clear:right"/>
+
+
+### Middle stage monitor
+
+<img alt="" src="assets/reset/speaker_middle.png"  align="right" style="float:right" height="260">
 
 * All 12 o'clock.
 * Check power and signal cable connections.
 
-<img alt="" src="assets/reset/speaker_middle.png" height="300">
 
-### Right
+<br clear="right" style="clear:right"/>
+
+### Right stage monitor
+
+<img alt="" src="assets/reset/speaker_right.png"  align="right" style="float:right" height="260">
 
 * This one is a bit damaged, the level should be at 3 o'clock!
 * Check power and signal cable connections.
 
-<img alt="" src="assets/reset/speaker_right.png" height="300">
+
+<br clear="right" style="clear:right"/>
+
+<div style="page-break-after: always;"></div>
 
 ## Verify keyboard connection
 
 Verify that it is connected properly, sometimes they unplug it for practicing.
 
-<img alt="" src="assets/reset/keyboard.jpg" height="300">
+<img alt="" src="assets/reset/keyboard.jpg" height="260">
 
 ## Verify Rhode link settings
 
@@ -132,6 +151,6 @@ Verify that it is connected properly, sometimes they unplug it for practicing.
 
 * Speak into each microphone, and you should hear yourself in each monitor.
     * If not:
-        * check the main console for muting/stage off-ness.
+        * check the main console, maybe the stage is off, or the mic is muted.
         * check connections, stage mixer settings (e.g.: reset it properly)
      
