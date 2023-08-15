@@ -31,7 +31,7 @@
 * DSP HPF **OFF**
 * Gray button **NOT** pressed in
 
-<br style="clear: right"/>
+
 
 ## Fills
 
