@@ -21,7 +21,7 @@
 
 # Verify main speakers' settings
 
-<img alt="" src="assets/reset/mains.png" style="float: right;" height="200">
+<img alt="" src="assets/reset/mains.png" align="right" height="200">
 
 ## Front
 
