@@ -25,7 +25,7 @@
 
 ## Front
 
-<img alt="" src="assets/reset/mains.png" align="right" style="float:right" height="200">
+<img alt="" src="assets/reset/mains.png" align="right" style="float:right" height="300">
 
 * Ch 2 Level at **9 o'clock**
 * DSP D-contour **OFF**
@@ -36,20 +36,24 @@
 
 ## Fills
 
+<img alt="" src="assets/reset/fills.png" align="right" style="float:right"  height="300">
+
 * Level at 9 o'clock
 * High at 0
 * Low at 0
 
-<img alt="" src="assets/reset/fills.png" height="200">
+<br clear="right" style="clear:right"/>
 
 ## Coffeshop
+
+<img alt="" src="assets/reset/coffeshop.png"  align="right" style="float:right" height="300">
 
 (This is here for reference, if you have no reason for it, you don't need to check it always.)
 
 * Volume at 9 o'clock
 * DSP preset button NOT pressed in
 
-<img alt="" src="assets/reset/coffeshop.png" height="300">
+<br clear="right" style="clear:right"/>
 
 # Align the pulpit
 
