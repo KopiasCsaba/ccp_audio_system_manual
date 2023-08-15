@@ -2,36 +2,37 @@
 <hr>
 
 <!-- TOC -->
+
 * [Verify main speakers' settings](#verify-main-speakers-settings)
-  * [Front](#front)
-  * [Fills](#fills)
-  * [Coffeshop](#coffeshop)
+    * [Front](#front)
+    * [Fills](#fills)
+    * [Coffeshop](#coffeshop)
 * [Align the pulpit](#align-the-pulpit)
 * [Reset the stage](#reset-the-stage)
-  * [Resetting the stage mixers](#resetting-the-stage-mixers)
-  * [Verify stage mixers' connections](#verify-stage-mixers-connections)
-  * [Verify stage monitor settings & connections](#verify-stage-monitor-settings--connections)
-    * [Left](#left)
-    * [Middle](#middle)
-    * [Right](#right)
-  * [Verify keyboard connection](#verify-keyboard-connection)
-  * [Verify Rhode link settings](#verify-rhode-link-settings)
+    * [Resetting the stage mixers](#resetting-the-stage-mixers)
+    * [Verify stage mixers' connections](#verify-stage-mixers-connections)
+    * [Verify stage monitor settings & connections](#verify-stage-monitor-settings--connections)
+        * [Left](#left)
+        * [Middle](#middle)
+        * [Right](#right)
+    * [Verify keyboard connection](#verify-keyboard-connection)
+    * [Verify Rhode link settings](#verify-rhode-link-settings)
 * [Check that all is working](#check-that-all-is-working)
+
 <!-- TOC -->
 
 # Verify main speakers' settings
 
-
 ## Front
 
-<img alt="" src="assets/reset/mains.png" align="right" height="200">
+<img alt="" src="assets/reset/mains.png" align="right" style="float:right" height="200">
 
 * Ch 2 Level at **9 o'clock**
 * DSP D-contour **OFF**
 * DSP HPF **OFF**
 * Gray button **NOT** pressed in
 
-<br clear="left"/>
+<br clear="right" style="clear:right"/>
 
 ## Fills
 
