@@ -21,6 +21,7 @@ to the console.
 * Resetting/setting up the system: [resetting.md](resetting.md).
 * What to do during a rehearsal: [rehearsal.md](rehearsal.md).
 * What to do during a service: [service.md](service.md).
+* Notes on the console: [notes_on_the_console.md](notes_on_the_console.md).
 
 ### Live streaming & video
 

@@ -4,12 +4,12 @@
 <!-- TOC -->
 * [Before they arrive](#before-they-arrive)
   * [At the main console](#at-the-main-console)
+    * [Set up the sound pressure level meter](#set-up-the-sound-pressure-level-meter)
     * [Load the main scene](#load-the-main-scene)
     * [Load vocal and instrument presets](#load-vocal-and-instrument-presets)
       * [Load Vocalists](#load-vocalists)
       * [Load Instruments](#load-instruments)
       * [Loading a preset](#loading-a-preset)
-    * [Set up the SPL meter](#set-up-the-spl-meter)
     * [Other things](#other-things)
   * [At the stage](#at-the-stage)
 * [After they arrive](#after-they-arrive)
@@ -45,6 +45,7 @@ Load the "CCP Service MAIN" scene.
  * Press the knob to load it
  * Press confirm
 
+<div style="page-break-after: always;"></div>
 
 ### Load vocal and instrument presets
 
@@ -92,6 +93,8 @@ After the initial setup, you might want to save the preset, see "[Save the prese
      * Check stands
     * Check monitor alignments
 
+<div style="page-break-after: always;"></div>
+
 # After they arrive
  * Be nice, connect with them personally.
  * Help them with what ever they ask.
@@ -111,9 +114,10 @@ After the initial setup, you might want to save the preset, see "[Save the prese
  * Go through all channels (vocal/instruments), and set a proper gain.
    * Ask them one-by-one to play from lowest to highest volume.
    * You only care about their highest, but asking from lowest to highest usually helps them in producing more precise levels.
-   * When they are at the highest, they should hit **-18db**
+   * When they are at the highest, they should hit **-18db**.
    * **Gain should generally be left alone after this point.**
 
+<div style="page-break-after: always;"></div>
 
 ## During worship
  * Constantly monitor that everything sounds right.
@@ -154,6 +158,7 @@ An alternative reason can be:
  * Never overwrite the MAIN one please.
 
 On the console:
+
 * Press **VIEW** at the "Scenes" section.
 * With the "Save" knob, scroll to the "**CCP Service**" (without the "<ins>MAIN</ins>").
 * Press the knob to save it.
