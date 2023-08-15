@@ -105,7 +105,9 @@ After the initial setup, you might want to save the preset, see "[Save the prese
    * And ask the owners of the instruments, not to change any of those during performing.
    
 ## Gain staging
+
  * Set the Main fader to 0.
+ * Usually no need to gain-stage the drums and the keyboard.
  * Go through all channels (vocal/instruments), and set a proper gain.
    * Ask them one-by-one to play from lowest to highest volume.
    * You only care about their highest, but asking from lowest to highest usually helps them in producing more precise levels.
