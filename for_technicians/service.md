@@ -35,6 +35,7 @@
     * Is there any distortion?
     * Is there anything that bothers your ear?
     * Doest the live stream gets the correct volume?
+* **PUT YOUR HEAD OUT** to hear what is really going on.
 
 ## During worship, when someone speaks or prays
 * Mute the effects! Having effect on praying or preaching is very cheesy.

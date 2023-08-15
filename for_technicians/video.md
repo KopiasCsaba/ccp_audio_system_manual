@@ -1,5 +1,6 @@
 <h1>DOING A LIVE STREAM</h1>
 <hr>
+THIS DOCUMENT IS DEPRECATED ALREADY, IT IS WORK IN PROGRESS.
 
 <!-- TOC -->
 * [Turn on all the TVs](#turn-on-all-the-tvs)
@@ -10,7 +11,7 @@
   * [Facebook Live](#facebook-live)
 * [Start OBS](#start-obs)
 * [Verify audio settings](#verify-audio-settings)
-* [Managing the the camera](#managing-the-the-camera)
+* [Managing the camera](#managing-the-camera)
 * [Start streaming in OBS](#start-streaming-in-obs)
 * [Start streaming in Facebook](#start-streaming-in-facebook)
 * [Lifecycle of streaming and things to pay attention during service](#lifecycle-of-streaming-and-things-to-pay-attention-during-service)
@@ -100,7 +101,7 @@ Start OBS:
 
 <img alt="" src="assets/video/screenshots/obs_audio.png" height="300">
 
-# Managing the the camera
+# Managing the camera
  * Click on the first/only element in the list "PTZ DEVICE"
  * Double click any of the presets, to point the camera
 
