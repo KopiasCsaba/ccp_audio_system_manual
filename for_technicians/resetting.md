@@ -34,21 +34,21 @@
 
 ## Fill speakers
 
-<img alt="" src="assets/reset/fills.png" align="right" style="float:right"  height="300">
+<img alt="" src="assets/reset/fills.png" align="right" style="float:right"  height="300"/>
 
 * Level at 9 o'clock
 * High at 0
 * Low at 0
 
 
-<br clear="right" style="clear:right"/>
+<br clear="right" style="clear:right">
 
 
 <div style="page-break-after: always;"></div>
 
 ## Coffeshop speakers
 
-<img alt="" src="assets/reset/coffeshop.png"  align="right" style="float:right" height="300">
+<img alt="" src="assets/reset/coffeshop.png"  align="right" style="float:right" height="300"/>
 
 (This is here for reference, if you have no reason for it, you don't need to check it always.)
 
