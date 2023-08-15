@@ -18,14 +18,14 @@
 These are printed out and organized into a folder, that you can find next
 to the console.
 
-* Resetting/setting up the system: [resetting.md](resetting.md).
-* What to do during a rehearsal: [rehearsal.md](rehearsal.md).
-* What to do during a service: [service.md](service.md).
-* Notes on the console: [notes_on_the_console.md](notes_on_the_console.md).
+* Resetting/setting up the system: [WEB](resetting.md), [PDF](resetting.pdf) 
+* What to do during a rehearsal: [WEB](rehearsal.md), [PDF](rehearsal.pdf).
+* What to do during a service: [WEB](service.md), [PDF](service.pdf).
+* Notes on the console: [WEB](notes_on_the_console.md), [PDF](notes_on_the_console.pdf).
 
 ### Live-streaming & video
-
-* Handling live streaming: [video.md](video.md).
+(This section is under construction. )
+* Handling live streaming: [WEB](video.md), [PDF](video.pdf).
 
 ### Training videos
 * [How does the stage mixer work?](https://youtu.be/nRDQFHH9zpU)
@@ -37,7 +37,7 @@ to the console.
 Our console is called "[Behringer X32 Compact](https://www.behringer.com/product.html?modelCode=P0AAP)"
 * [Behringer X32 compact block diagram](assets/x32/blockdiagram.png)
 * [Behringer X32 compact user manual](https://mediadl.musictribe.com/media/sys_master/h1f/h56/8849797021726.pdf)
-
+* [Our mixer's complete backup files](assets/console/files/mixer_backups)
 
 ## Great resources to learn from
 
