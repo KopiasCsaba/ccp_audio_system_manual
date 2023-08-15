@@ -29,6 +29,14 @@ everything professionally and to avoid hurry-induced errors, fix random issues, 
 
 ## At the main console
 
+### Set up the sound pressure level meter
+* Turn it on following the numbers on the buttons.
+    * The two 1s need to be pressed together, until the "n" shows up.
+    * Then wait until it initializes.
+    * Then press 2 and 3.
+* Put it to the counter and watch it always.
+
+
 ### Load the main scene
 Load the "CCP Service MAIN" scene.
 
@@ -70,14 +78,6 @@ Consult with the worship leader on:
  * Press **confirm**
 
 After the initial setup, you might want to save the preset, see "[Save the preset](#save-the-preset)" at the end of this document on how.
-
-### Set up the sound pressure level meter
-* Turn it on following the numbers on the buttons.
-  * The two 1s need to be pressed together, until the "n" shows up.
-  * Then wait until it initializes.
-  * Then press 2 and 3.
-* Put it to the counter and watch it always.
-
 
 ### Other things
  * Mute the preaching mics, to avoid feedbacking.
