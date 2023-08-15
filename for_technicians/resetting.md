@@ -21,17 +21,17 @@
 
 # Verify main speakers' settings
 
-<img alt="" src="assets/reset/mains.png" align="right" height="200">
 
 ## Front
 
+<img alt="" src="assets/reset/mains.png" align="right" height="200">
 
 * Ch 2 Level at **9 o'clock**
 * DSP D-contour **OFF**
 * DSP HPF **OFF**
 * Gray button **NOT** pressed in
 
-
+<br clear="left"/>
 
 ## Fills
 
