@@ -4,7 +4,7 @@
 <!-- TOC -->
   * [Church audio system related custom documentation and guides](#church-audio-system-related-custom-documentation-and-guides)
     * [Audio](#audio-)
-    * [Live streaming & video](#live-streaming--video)
+    * [Live-streaming & video](#live-streaming--video)
     * [Training videos](#training-videos)
     * [Resources](#resources)
   * [Great resources to learn from](#great-resources-to-learn-from)
@@ -23,7 +23,7 @@ to the console.
 * What to do during a service: [service.md](service.md).
 * Notes on the console: [notes_on_the_console.md](notes_on_the_console.md).
 
-### Live streaming & video
+### Live-streaming & video
 
 * Handling live streaming: [video.md](video.md).
 

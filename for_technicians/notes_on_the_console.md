@@ -11,6 +11,13 @@
     * [Muting the effects](#muting-the-effects)
     * [Muting the aux / pc](#muting-the-aux--pc)
   * [Playing background music](#playing-background-music)
+* [Connecting with applications](#connecting-with-applications)
+  * [X32 EDIT](#x32-edit)
+  * [Android](#android)
+* [Other applications that might come handy](#other-applications-that-might-come-handy)
+  * [Android](#android-1)
+    * [Spectrum analyzer](#spectrum-analyzer)
+    * [Instrument tuner aid](#instrument-tuner-aid)
 <!-- TOC -->
 
 
@@ -19,11 +26,11 @@
 
  * You can speak to the stage while holding the "**TALK A**" button.
  * Use "**TALK B**" if you want to talk to the stage AND the house too.
-   * A memory device to remember which is which: you mostly want to talk to the stage only, and that is the most easily accessible button on the top left corner on the console.
+   * A memory device to remember which is which: you mostly want to talk to the stage only, and that is the most easily accessible button in the top left corner on the console.
  * Use the "**Talk level**" knob to set your volume.
  * The microphone is at the left bottom corner of the screen.
  
-<img alt="" src="assets/console/talkback.png"  height="200">
+<img alt="" src="assets/console/talkback.png"  height="153">
 
 # Tips and tricks
 ## Never "select" the group channels
@@ -57,7 +64,7 @@ Pressing them is exactly the same thing as pressing the MUTE button on the respe
 
 It is very important, to be able to quickly turn on/off the stage, because: 
 
- * The microphones might feedback during preaching.
+ * The microphones might feed back during preaching.
  * The musicians sometimes unplug/plug instruments.
  * People on the stage sometimes accidentally hit microphones.
 
@@ -82,7 +89,7 @@ The way to know if the stage is off is the following:
 
 <br clear="right" style="clear:right"/>
 
-The stage off/on does not affect anything important, every level, channel name, eq, mute status etc is retained.
+The stage off/on does not affect anything important, every level, channel name, eq, mute status etc. is retained.
 
 The stage off function does not affect the keyboard, as it is rarely messed with. It is not a source of feedback, and sometimes during the end of the preaching someone might start to play on it. 
 
@@ -126,8 +133,8 @@ It is possible to connect to the console remotely with an application, and basic
 It is not required, but it can come handy sometimes when you are on the stage for example, 
 these apps can spare some kilometers of running back and forth.
 
-Also, if you want to do the mixing outside of the cave, you can use a tablet/pc or whatever.
-Although, I recommend doing that only after you are really confident with the mixer and the system. Because these applications are a bit harder to use, less user friendly/intuitive. If some random issue pops up, you might be able to fix it better/faster/easier if you are next to the console, than turning pages and swiping back and forth, etc.
+Also, if you want to do the mixing outside the cave, you can use a tablet/pc or whatever.
+Although, I recommend doing that only after you are really confident with the mixer and the system. Because these applications are a bit harder to use, less user-friendly/intuitive. If some random issue pops up, you might be able to fix it better/faster/easier if you are next to the console, than turning pages and swiping back and forth, etc.
 
 
 ## X32 EDIT
@@ -142,6 +149,13 @@ I had much success with the app called [Mixing station (org.devcore.mixingstatio
 You might want to download [my settings backup](assets/console/files/android_mixingstation_settings_backup.msz), and load it into the app, to help you started quicker.
 
 
+# Other applications that might come handy
+## Android
+### Spectrum analyzer
+[https://play.google.com/store/apps/details?id=org.intoorbit.spectrum](https://play.google.com/store/apps/details?id=org.intoorbit.spectrum)
+
+### Instrument tuner aid
+[https://play.google.com/store/apps/details?id=de.moekadu.tuner](https://play.google.com/store/apps/details?id=de.moekadu.tuner)
 
 
 

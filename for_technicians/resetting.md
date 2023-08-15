@@ -5,7 +5,7 @@
 * [Verify main speakers' settings](#verify-main-speakers-settings)
   * [Front speakers](#front-speakers)
   * [Fill speakers](#fill-speakers)
-  * [Coffeshop speakers](#coffeshop-speakers)
+  * [Coffee shop speakers](#coffee-shop-speakers)
 * [Align the pulpit](#align-the-pulpit)
 * [Reset the stage](#reset-the-stage)
   * [Resetting the stage mixers](#resetting-the-stage-mixers)
@@ -46,7 +46,7 @@
 
 <div style="page-break-after: always;"></div>
 
-## Coffeshop speakers
+## Coffee shop speakers
 
 <img alt="" src="assets/reset/coffeshop.png"  align="right" style="float:right" height="300"/>
 
@@ -71,7 +71,7 @@ There is a mark on the floor, align the pulpit to be at the correct position.
 
  
 Reset the stage mixers, but only **BEFORE** a rehearsal.
-There is one mixer in the drumroom too, reset that one also.
+There is one mixer in the drum-room too, reset that one also.
 
 The order is important here:
 

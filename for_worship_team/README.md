@@ -6,7 +6,7 @@
 
 ## Cable & microphone numbering on the stage
 
-![stage.jpg](assets%2Fstage.jpg)
+![stage.jpg](assets/stage.jpg)
 
 The logic is, that:
  * Close to **Mic1** is now **Inst1** and **Inst2** cables.

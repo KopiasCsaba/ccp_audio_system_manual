@@ -22,7 +22,7 @@
 <!-- TOC -->
 
 # Before they arrive
-You should be there ~20mins before them, to be able to set up
+You should be there ~20minutes before them, to be able to set up
 everything professionally and to avoid hurry-induced errors, fix random issues, etc.
 
  * Follow the "[Turning on the audio system](../labels/turningon.pdf)" guide posted on the mixer door.
@@ -81,13 +81,13 @@ Consult with the worship leader on:
 After the initial setup, you might want to save the preset, see "[Save the preset](#save-the-preset)" at the end of this document on how.
 
 ### Other things
- * Mute the preaching mics, to avoid feedbacking.
+ * Mute the preaching mics, to avoid feedback.
 
 
 ## At the stage
 * Reset the stage (see: [resetting](resetting.md))
 * Set up stage to be usable by the musicians
-     * Set up correct mic hights
+     * Set up correct mic heights
      * Move away obstacles
      * Fold back unused microphones
      * Check stands
@@ -140,14 +140,14 @@ that is most likely due to them not hearing themselves correctly.
 
 
 To solve this: go up on the stage and check the monitor levels.
-The target is for them to be a bit more loud.
+The target is for them to be a bit louder.
  * Either increase the overall monitor level
  * Or increase their level in the monitor
  * Or lower something that is too loud
 
 An alternative reason can be:
  * An overworking compressor on the channel
- * A too high (or low) lowcut
+ * A too high (or low) low-cut
  * An unfortunate equalizer setting
 
 ## After the rehearsal
