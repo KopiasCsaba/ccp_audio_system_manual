@@ -21,16 +21,17 @@
 
 # Verify main speakers' settings
 
+<img alt="" src="assets/reset/mains.png" style="float: right;" height="200">
+
 ## Front
+
 
 * Ch 2 Level at **9 o'clock**
 * DSP D-contour **OFF**
 * DSP HPF **OFF**
 * Gray button **NOT** pressed in
 
-<img alt="" src="assets/reset/mains.png" height="300">
-
-
+<br style="clear: right"/>
 
 ## Fills
 
@@ -38,9 +39,11 @@
 * High at 0
 * Low at 0
 
-<img alt="" src="assets/reset/fills.png" height="300">
+<img alt="" src="assets/reset/fills.png" height="200">
 
 ## Coffeshop
+
+(This is here for reference, if you have no reason for it, you don't need to check it always.)
 
 * Volume at 9 o'clock
 * DSP preset button NOT pressed in
@@ -67,11 +70,11 @@ The order is important here:
     * Limiter to **MAX**
     * Level to **3 o'clock**
 2. Recall preset 16
-    * Press and hold RECALL
-    * Press 16
-    * Release RECALL
+    * Press and hold **RECALL**
+    * Press **16**
+    * **Release** RECALL
 
-<img alt="" src="assets/reset/stagemixer.png" height="300">
+<img alt="" src="assets/reset/stagemixer.png" height="200">
 
 ## Verify stage mixers' connections
 
@@ -110,10 +113,12 @@ Verify that it is connected properly, sometimes they unplug it for practicing.
 
 ## Verify Rhode link settings
 
+(This is here for reference, if you have no reason for it, you don't need to check it always.)
+
 * The receiver (the one on the wall) should be on 0db gain.
 * The transmitter (the one with the mic) should be on 10db gain.
 
-<img alt="" src="assets/reset/rhodelink.png" height="300">
+<img alt="" src="assets/reset/rhodelink.png" height="200">
 
 # Check that all is working
 
