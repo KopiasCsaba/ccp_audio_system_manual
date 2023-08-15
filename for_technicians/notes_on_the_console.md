@@ -17,9 +17,10 @@
 # Talkback
 
 
- * You can speak to the stage while holding the "TALK A" button.
- * Use "TALK B" if you want to talk to the stage AND the house too.
- * Use the "Talk level" knob to set your volume.
+ * You can speak to the stage while holding the "**TALK A**" button.
+ * Use "**TALK B**" if you want to talk to the stage AND the house too.
+   * A memory device to remember which is which: you mostly want to talk to the stage only, and that is the most easily accessible button on the top left corner on the console.
+ * Use the "**Talk level**" knob to set your volume.
  * The microphone is at the left bottom corner of the screen.
  
 <img alt="" src="assets/console/talkback.png"  height="200">
@@ -35,6 +36,7 @@ The result of selecting those are not intuitive, and the chances of messing up s
 <div style="page-break-after: always;"></div>
 
 ## Shortcuts for muting various things
+On the bottom-right side of the mixer, you'll find these two sections:
 
 <img alt="" src="assets/console/assigns.png"  align="left" style="float:left" height="300">
 <img alt="" src="assets/console/mutes.png"  align="left" style="float:left" height="300">
