@@ -36,10 +36,10 @@ The result of selecting those are not intuitive, and the chances of messing up s
 
 ## Shortcuts for muting various things
 
-<img alt="" src="assets/console/assigns.png"  align="right" style="float:right" height="300">
-<img alt="" src="assets/console/mutes.png"  align="right" style="float:right" height="300">
+<img alt="" src="assets/console/assigns.png"  align="left" style="float:left" height="300">
+<img alt="" src="assets/console/mutes.png"  align="left" style="float:left" height="300">
 
-<br clear="right" style="clear:right"/>
+<br clear="left" style="clear:left"/>
 
 ### Muting preacher microphones
 
