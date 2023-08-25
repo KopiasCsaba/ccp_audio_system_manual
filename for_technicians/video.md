@@ -81,7 +81,7 @@ Edit the post's details:
 
 Type in the title and description:
 
- * For title we use the format "Title of Sermon - Main Passage - Full name of Pastor"
+ * For title, we use the format "Title of Sermon - Main Passage - Full name of Pastor"
  * For description, you must write something as it will not let you stream otherwise. Usually we write "Good morning church!"
 
 <img alt="" src="assets/video/screenshots/fb_live_post_Details.png" height="300">

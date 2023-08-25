@@ -18,13 +18,13 @@
 These are printed out and organized into a folder, that you can find next
 to the console.
 
-* Resetting/setting up the system: [WEB](resetting.md), [PDF](resetting.pdf) 
+* Setting up the system: [WEB](settingup.md), [PDF](settingup.pdf) 
 * What to do during a rehearsal: [WEB](rehearsal.md), [PDF](rehearsal.pdf).
 * What to do during a service: [WEB](service.md), [PDF](service.pdf).
 * Notes on the console: [WEB](notes_on_the_console.md), [PDF](notes_on_the_console.pdf).
 
 ### Live-streaming & video
-(This section is under construction. )
+(This section is under construction.)
 * Handling live streaming: [WEB](video.md), [PDF](video.pdf).
 
 ### Training videos
