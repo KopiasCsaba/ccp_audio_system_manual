@@ -7,12 +7,14 @@
   * [During preaching](#during-preaching)
   * [During worship](#during-worship)
   * [During worship, when someone speaks or prays](#during-worship-when-someone-speaks-or-prays)
+* [Closing up](#closing-up)
 <!-- TOC -->
 
 # Before the service
 
-* Make sure all mics and instruments are working.
-* Set up the SPL meter.
+* Follow the "[Setting up the system](settingup.md)" guide.
+* Just to make sure, you might want to load your last saved preset, probably the "CCP Service" one (without the MAIN!). 
+  * See the [rehearsal](rehearsal.md) guide on how to do that.
 
 # During service
 
@@ -39,3 +41,8 @@
 
 ## During worship, when someone speaks or prays
 * Mute the effects! Having effect on praying or preaching is very cheesy.
+* If it's too much to pay attention to, that's all right, then mute the effects once and forget it:)
+
+# Closing up
+
+After the event is finished, please follow the [closing up procedure](closingup.md).
