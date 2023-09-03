@@ -22,9 +22,8 @@ THIS DOCUMENT IS DEPRECATED ALREADY, IT IS WORK IN PROGRESS.
 
 # Turn on all the TVs
 ## Coffee shop screen
- * Pull out to face the audience
- * The button is in the bottom center
- * Use the remote located in the coffee shop on the pallets, to click on HDMI1 which connects to the Computer
+ * Pull it out to face the audience.
+ * The button is in the bottom center.
 
 <img alt="" src="assets/video/lg.jpg" height="300">
 

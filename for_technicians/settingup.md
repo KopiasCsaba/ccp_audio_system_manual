@@ -8,18 +8,18 @@
 * [Verify main speakers' settings](#verify-main-speakers-settings)
   * [Front speakers](#front-speakers)
   * [Fill speakers](#fill-speakers)
-  * [Coffee shop speakers](#coffee-shop-speakers)
 * [Align the pulpit](#align-the-pulpit)
 * [Reset the stage](#reset-the-stage)
   * [Resetting the stage mixers](#resetting-the-stage-mixers)
-  * [Verify stage mixers' connections](#verify-stage-mixers-connections)
-  * [Verify keyboard connection](#verify-keyboard-connection)
   * [Verify stage monitor settings & connections](#verify-stage-monitor-settings--connections)
     * [Left stage monitor](#left-stage-monitor)
     * [Middle stage monitor](#middle-stage-monitor)
     * [Right stage monitor](#right-stage-monitor)
-  * [Verify Rhode link settings](#verify-rhode-link-settings)
-* [Check that all is working](#check-that-all-is-working)
+  * [Check that everything is working](#check-that-everything-is-working)
+  * [Troubleshooting](#troubleshooting)
+    * [Common failures](#common-failures)
+    * [Stage mixer connection](#stage-mixer-connection)
+    * [Verify keyboard connection](#verify-keyboard-connection)
 <!-- TOC -->
 
 # At the console
@@ -32,24 +32,21 @@ This device measures the volume (lets say) in the room, and it is located on the
 
 <img alt="" src="assets/reset/spl.jpg.png"  align="right" style="float:right" width="300">
 
-
-* Turn it on following the numbers on the buttons.
-    * The two 1-s need to be pressed together, until the "**n**" shows up.
-    * Then wait until it initializes.
-    * Then press 2.
-    * Then press 3.
+* Turn it on following the handwritten numbers on the buttons.
+    * The two button marked "1"(one) need to be pressed together, until the "**n**" shows up on the screen.
+    * Then wait until it fiishes the initialization.
+    * Then press the button marked as 2.
+    * Then press the button marked as 3.
 
 It should read "SLOW" and "C".
 
 <br clear="right" style="clear:right"/>
 
-
-
 * Put it to the counter and watch it always.
 
 ## Put batteries into the headset
 
-Only do this, if the headset will be used.
+Only do this, if the headset will be used, e.g. if there will be preaching.
 
 <img alt="" src="assets/reset/rhodelink.jpg.png"  align="right" style="float:right" width="200">
 
@@ -60,16 +57,14 @@ Only do this, if the headset will be used.
 * While pressing the button, slide down the back side (see image, point #2)
 * Put batteries in
 * Close it back
-* Turn it on by pressing the button on top (see image, point #3)
-* Pay attention to it's muted/unmuted state, and communicate with the preacher about it.
-    * Sometimes they ask that you unmute it and they don't need to pay attention
-    * Sometimes they know how to mute/unmute it
+* Turn it on by long pressing the button on top (see image, point #3)
+    * It should lit up green, displaying 8 on the display.
+* Mute/unmute it as needed by a short(er) press. (It turns red if muted.)
+    * Sometimes they ask that you unmute it and they don't need to pay attention.
+    * Sometimes they know how to mute it, and they do it.
     * And sometimes they forget to unmute it, then you need to signal them.
 
-
-
 <br clear="right" style="clear:right"/>
-
 
 # Verify main speakers' settings
 
@@ -92,22 +87,10 @@ Only do this, if the headset will be used.
 * High at 0
 * Low at 0
 
-
 <br clear="right" style="clear:right">
 
 
 <div style="page-break-after: always;"></div>
-
-## Coffee shop speakers
-
-<img alt="" src="assets/reset/coffeshop.png"  align="right" style="float:right" height="300"/>
-
-(This is here for reference, if you have no reason for it, you don't need to check it always.)
-
-* Volume at 9 o'clock
-* DSP preset button NOT pressed in
-
-<br clear="right" style="clear:right"/>
 
 # Align the pulpit
 
@@ -121,40 +104,24 @@ There is a mark on the floor, align the pulpit to be at the correct position.
 
 ## Resetting the stage mixers
 
- 
-Reset the stage mixers, but only **BEFORE** a rehearsal. (So don't do it before a service, when they already set it up for themselves on the rehearsal.)
+Reset the stage mixers, but only **BEFORE** a rehearsal. (So don't do it before a service, when they already set it up
+for themselves on the rehearsal.)
 
 There is one mixer in the drum-room too, reset that one also.
 
 The order is important here:
 
 1. Turn it on, if it's not on (switch is on the back side)
-2. Reset the top-knobs
-    * Equalizers to **12 o'clock**
+2. Reset the top-knobs as follows (and also on the image):
+    * Equalizers section knobs (first four): **12 o'clock**
     * Limiter to **MAX**
     * Level to **3 o'clock**
-3. Recall preset 16
+3. Recall preset 16:
     * Press and hold **RECALL**
     * Press **16**
     * **Release** RECALL
 
-
 <img alt="" src="assets/reset/stagemixer.png" height="300"> 
-
-<div style="page-break-after: always;"></div>
-
-## Verify stage mixers' connections
-
-Verify that the speakers are connected to **L/MONO**:
-
-<img alt="" src="assets/reset/mixer_conn.jpg" height="160">
-
-
-## Verify keyboard connection
-
-Verify that it is connected properly, sometimes they unplug it for practicing.
-
-<img alt="" src="assets/reset/keyboard.jpg" height="260">
 
 <div style="page-break-after: always;"></div>
 
@@ -168,9 +135,7 @@ Verify that it is connected properly, sometimes they unplug it for practicing.
 * All 12 o'clock.
 * Check power and signal cable connections, somethimes they become loose.
 
-
 <br clear="right" style="clear:right"/>
-
 
 ### Middle stage monitor
 
@@ -178,7 +143,6 @@ Verify that it is connected properly, sometimes they unplug it for practicing.
 
 * All 12 o'clock.
 * Check power and signal cable connections, somethimes they become loose.
-
 
 <br clear="right" style="clear:right"/>
 
@@ -189,26 +153,42 @@ Verify that it is connected properly, sometimes they unplug it for practicing.
 * This one is a bit damaged, the level should be at 3 o'clock!
 * Check power and signal cable connections, somethimes they become loose.
 
-
 <br clear="right" style="clear:right"/>
 
 <div style="page-break-after: always;"></div>
 
-## Verify Rhode link settings
 
-(This is here for reference, if you have no reason for it, you don't need to check it always.)
+## Check that everything is working
 
-* The receiver (the one on the wall) should be on 0db gain.
-* The transmitter (the one with the mic) should be on 10db gain.
+* Turn on the keyboard, and press one of the keys, you should hear it, from all monitors.
 
-<img alt="" src="assets/reset/rhodelink.png" height="200">
+* Speak into each microphone, and you should see activity on the mixer, and hear yourself in each monitor.
 
-# Check that all is working
 
-* Turn on the keyboard, and press one of the keys, you should hear it.
-    * If not, check cables.
+## Troubleshooting
+If there is any issue on the stage, check these things:
 
-* Speak into each microphone, and you should hear yourself in each monitor.
-    * If not:
-        * check the main console, maybe the stage is off, or the mic is muted.
-        * check connections, stage mixer settings (e.g.: reset it properly)
+### Common failures
+No signal activity on the mics?
+ * The stage is off (on the console), that's why no microphone is working.
+ * The individual microphone is muted on the console.
+ * The stage mixer isn't on.
+
+There is signal indication, but inaudible?
+ * A power or signal cable slipped out from the monitor.
+ * The stage mixer is disconnected.
+ * The limiter knob is turned down.
+
+### Stage mixer connection
+
+Verify that the speakers are connected to **L/MONO**:
+
+<img alt="" src="assets/reset/mixer_conn.jpg" height="160">
+
+### Verify keyboard connection
+
+Verify that it is connected properly, sometimes they unplug it for practicing.
+
+<img alt="" src="assets/reset/keyboard.jpg" height="260">
+
+<div style="page-break-after: always;"></div>

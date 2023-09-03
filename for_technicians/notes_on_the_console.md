@@ -2,6 +2,17 @@
 <hr>
 
 <!-- TOC -->
+* [LAYERS, CHANNELS!](#layers-channels-)
+* [Signal flow](#signal-flow)
+* [Notes on groups](#notes-on-groups)
+  * [Speaker](#speaker)
+  * [Vocals](#vocals)
+  * [Instr1-2](#instr1-2)
+  * [Instr3-5](#instr3-5)
+  * [Keyboard](#keyboard)
+  * [Drums](#drums)
+  * [Aux](#aux)
+  * [FX](#fx)
 * [Talkback](#talkback)
 * [Tips and tricks](#tips-and-tricks)
   * [Never "select" the group channels](#never-select-the-group-channels)
@@ -20,6 +31,87 @@
     * [Instrument tuner aid](#instrument-tuner-aid)
 <!-- TOC -->
 
+# LAYERS, CHANNELS! 
+This is one of the most important thing to understand on the console.
+Whenever you want to change something on a channel, you should make sure you are on the right LAYER,
+and that you have selected the right CHANNEL.
+
+To select the right LAYER, press one of the "Speaker", "Vocals", "Instruments", "Drums", "Aux" on the left side of the console.
+To select the right channel, press the "SELECT" button on top of any of the channels on the left side.
+
+# Signal flow
+
+The high-level overview of the signal flow is important to understand, in order to be able to effectively set levels for different things.
+
+It can be summarized as a waterfall, from top to bottom as this:
+- Channels 
+  - On the left side of the mixer.
+  - E.g.: Vocal 1, or Instrument 2 or Kickdrum.
+- Groups (on the right side)
+  - On the right side of the mixer.
+  - E.g.: Vocals, Instruments, Drum, Keyboard.
+- MAIN
+  - The right-most fader on the mixer.
+
+If at any point, any of it is pulled all the way down, there will be no signal passing through. 
+
+For example:
+ * If the Vocal GROUP is pulled down, then no matter how much you pull up one of the vocal CHANNELs, the signal will be blocked at the group level.
+ * Or, no matter how much you pull up the level on the instrument GROUP, if the guitar CHANNEL is pulled down.
+ * And also, no matter what levels are set on the CHANNEL or GROUP level, if the MAIN is pulled down.
+
+They are connected with a pipe let's say, at any point if you step on the pipe, it will block the flow.
+
+# Notes on groups
+
+The groups are called groups for simplicity's sake, but they are actually "remote controls", so they actually remote control all the assigned channel outputs.
+You can imagine it like pulling down the "Vocals" group is the same as pulling down by hand all the separate vocal channels we have.
+
+We have 7 groups:
+ * Speaker
+ * Vocals
+ * Instr1-2
+ * Instr3-5
+ * Keyboard
+ * Drums
+ * Aux
+ * FX
+
+## Speaker
+This contains the headset microphone, and the pulpit microphone. Changing the level will change both, together.
+But usually we only have one of them enabled, so thats fine.
+
+## Vocals
+This group fader sets the levels of all the vocal microphones. 
+So, settint the level of this will change how much vocal the whole mix has.
+If you want to set the balance BETWEEN the vocalists, you can and you should do that on the VOCALS layer by setting the individual vocal channel faders.
+
+## Instr1-2
+This group fader sets the volume for Instrument 1 and Instrument 2.
+The idea is, that usually only one of them is used, so generally this is the lead guitar.
+
+## Instr3-5
+This group fader sets the volume for ALL the other instrument cables (of course excluding the drums and the piano).
+The idea here is that, most of the time we only have one instrument, as we seen in the previous group,
+but even if we have a second one, it will be between 3-5 depending on where the player prefers to stand/plug in.
+
+So generally this group is the "other instrument".
+
+In the rare case of having more instruments than 2 instruments, you want to set the level of this to 0, 
+and manually adjust the balance on the INSTRUMENTS layer instead. 
+
+
+## Keyboard
+This sets the keyboard's volume only, it is not really a group, just a shorthand, to help set the keyboard volume easily.
+
+## Drums
+We have 8 drum microphone, and this one sets them both, together as one up or down.
+
+## Aux
+This sets the volumes of all the incoming signals, from both PCS.
+
+## FX
+This sets how much effect(nowadays we only use reverbs) is being added to the mix. 
 
 # Talkback
 
