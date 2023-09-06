@@ -18,11 +18,15 @@
 These are printed out and organized into a folder, that you can find next
 to the console.
 
+<img alt="" src="assets/manual.jpg"  align="right" style="float:right" width="400">
+
 * Setting up the system: [WEB](settingup.md), [PDF](settingup.pdf)
 * What to do during a rehearsal: [WEB](rehearsal.md), [PDF](rehearsal.pdf).
 * What to do during a service: [WEB](service.md), [PDF](service.pdf).
 * Notes on the console: [WEB](notes_on_the_console.md), [PDF](notes_on_the_console.pdf).
 * Closing up procedure: [WEB](closingup.md), [PDF](closingup.pdf).
+
+<br clear="right" style="clear:right"/>
 
 ### Live-streaming & video
 
