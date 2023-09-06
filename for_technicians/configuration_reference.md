@@ -9,6 +9,13 @@ This document is under construction.
   * [Fill speakers](#fill-speakers)
   * [Coffee shop speakers](#coffee-shop-speakers)
   * [Rhode link settings](#rhode-link-settings)
+* [Streaming](#streaming)
+  * [OBS](#obs)
+  * [OSCBridge](#oscbridge)
+  * [Live](#live)
+* [Hardware](#hardware)
+  * [Camera](#camera)
+  * [Baby-room TV](#baby-room-tv)
 <!-- TOC -->
 
 # Main speakers' settings
@@ -66,6 +73,6 @@ Todo...
 # Hardware
 ## Camera
 Todo...
-## Babyroom TV
+## Baby-room TV
 Todo...
 

@@ -148,3 +148,29 @@ The metrics should be kind-of flat, without big dips in it:
 Also you want to check on the comments, if something very bad would come up, you can delete it.
 If in doubt, consult an elder/leader about it.
 
+
+# FAcebook scheduling:
+ * Event name: Church Service
+ * Press Recurring event
+    * Weekly
+    * sundays
+    * From 10:00 AM
+    * To 12:00PM
+    * Start date next sunday
+    * End date: bit more than half year ahead (depending on how much it lets you to set)
+
+
+ * Description:
+```
+The real service will start at 10:30 AM, the live stream starts 30 min earlier so that you could tune in on time.
+
+You can find the live stream at:
+https://facebook.com/100064617556957/live_videos
+
+We also stream to YouTube:
+https://youtube.com/@calvarychapelpaphos6683/streams
+
+Join us in real life, or through the live stream!
+```
+
+ * Settings -> Stream -> Use persistent stream key (!!!)
