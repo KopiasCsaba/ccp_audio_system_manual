@@ -34,7 +34,7 @@ This device measures the volume (lets say) in the room, and it is located on the
 
 * Turn it on following the handwritten numbers on the buttons.
     * The two button marked "1"(one) need to be pressed together, until the "**n**" shows up on the screen.
-    * Then wait until it fiishes the initialization.
+    * Then wait until it finishes the initialization.
     * Then press the button marked as 2.
     * Then press the button marked as 3.
 
@@ -65,6 +65,8 @@ Only do this, if the headset will be used, e.g. if there will be preaching.
     * And sometimes they forget to unmute it, then you need to signal them.
 
 <br clear="right" style="clear:right"/>
+
+<div style="page-break-after: always;"></div>
 
 # Verify main speakers' settings
 
@@ -133,7 +135,7 @@ The order is important here:
 <img alt="" src="assets/reset/speaker_left.png"  align="right" style="float:right" height="200">
 
 * All 12 o'clock.
-* Check power and signal cable connections, somethimes they become loose.
+* Check power and signal cable connections, sometimes they become loose.
 
 <br clear="right" style="clear:right"/>
 
@@ -142,7 +144,7 @@ The order is important here:
 <img alt="" src="assets/reset/speaker_middle.png"  align="right" style="float:right" height="260">
 
 * All 12 o'clock.
-* Check power and signal cable connections, somethimes they become loose.
+* Check power and signal cable connections, sometimes they become loose.
 
 <br clear="right" style="clear:right"/>
 
@@ -151,7 +153,7 @@ The order is important here:
 <img alt="" src="assets/reset/speaker_right.png"  align="right" style="float:right" height="260">
 
 * This one is a bit damaged, the level should be at 3 o'clock!
-* Check power and signal cable connections, somethimes they become loose.
+* Check power and signal cable connections, sometimes they become loose.
 
 <br clear="right" style="clear:right"/>
 
@@ -169,12 +171,15 @@ The order is important here:
 If there is any issue on the stage, check these things:
 
 ### Common failures
+
 No signal activity on the mics?
+
  * The stage is off (on the console), that's why no microphone is working.
  * The individual microphone is muted on the console.
  * The stage mixer isn't on.
 
 There is signal indication, but inaudible?
+
  * A power or signal cable slipped out from the monitor.
  * The stage mixer is disconnected.
  * The limiter knob is turned down.
@@ -183,12 +188,12 @@ There is signal indication, but inaudible?
 
 Verify that the speakers are connected to **L/MONO**:
 
-<img alt="" src="assets/reset/mixer_conn.jpg" height="160">
+<img alt="" src="assets/reset/mixer_conn.jpg" height="140">
 
 ### Verify keyboard connection
 
 Verify that it is connected properly, sometimes they unplug it for practicing.
 
-<img alt="" src="assets/reset/keyboard.jpg" height="260">
+<img alt="" src="assets/reset/keyboard.jpg" height="140">
 
 <div style="page-break-after: always;"></div>

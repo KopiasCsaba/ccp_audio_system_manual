@@ -3,16 +3,15 @@
 
 <!-- TOC -->
 * [Reference on stage channel numbers](#reference-on-stage-channel-numbers)
-* [Before they arrive](#before-they-arrive)
-* [At the stage](#at-the-stage)
+* [Before the band arrives](#before-the-band-arrives)
   * [At the main console](#at-the-main-console)
     * [Load the main scene](#load-the-main-scene)
     * [Other things](#other-things)
     * [Load vocal and instrument presets](#load-vocal-and-instrument-presets)
-      * [Load Vocalists](#load-vocalists)
-      * [Load Instruments](#load-instruments)
+      * [Load Vocalist presets](#load-vocalist-presets)
+      * [Load Instrument presets](#load-instrument-presets)
       * [Loading a preset](#loading-a-preset)
-* [After they arrive](#after-they-arrive)
+* [After the band arrives](#after-the-band-arrives)
   * [Gain staging](#gain-staging)
     * [How to set the gain](#how-to-set-the-gain)
   * [During worship](#during-worship)
@@ -29,24 +28,18 @@
 
 The logic is, that:
 
-* Close to **Mic1** is now **Inst1** and **Inst2** cables.
+* Close to **Mic1** is the **Inst1** and **Inst2** cables.
 * Close to **Mic3** is the **Inst3** cable.
 * And the stage corner has **Inst4** and **Inst5** cables.
 
-# Before they arrive
+<div style="page-break-after: always;"></div>
+
+# Before the band arrives
 
 You should be there ~20minutes before them, to be able to set up
 everything professionally and to avoid hurry-induced errors, fix random issues, etc.
 
 * Follow the "[Setting up the system](settingup.md)" guide.
-
-# At the stage
-
-* Set up correct mic heights.
-* Check microphone alignments.
-* Check monitor alignments.
-* Fold back unused microphones.
-* Turn down (turn level knob to zero) on monitors that will not be used.
 
 ## At the main console
 
@@ -60,13 +53,14 @@ This contains our default settings, please never overwrite it.
 * By turning the "GO" knob, **SELECT** to the "CCP Service MAIN".
 * **Press** the knob to load it.
 
-<div style="page-break-after: always;"></div>
 
 ### Other things
 
+* Turn on the stage.
 * Mute the preaching mics, to avoid feedback.
 * Set the Main fader to 0.
-* Turn on the stage.
+
+<div style="page-break-after: always;"></div>
 
 ### Load vocal and instrument presets
 
@@ -75,30 +69,30 @@ Consult with the worship leader on:
 * Who will be at which mic on the stage.
 * Who will use which instrument.
 
-Based on this information...
+Based on this information load vocalist presets, and load instrument presets.
 
-#### Load Vocalists
+#### Load Vocalist presets
 
 * Select the **VOCALS** layer.
 * Between Vocal channel 1-6: **mute** and **pull down** unused channels.
     * Do not change channel 7 and 8.
 * Load the appropriate preset for the channels, see: [Loading a preset](#loading-a-preset).
 
-#### Load Instruments
+#### Load Instrument presets
 
 * Select the **Instruments** layer.
 * Between Instrument channels 1-5: **mute** and **pull down** unused channels.
-    * Don't change/mute channels 6,7,8.
+    * Don't change/mute channels 6, 7, 8.
 * Load the appropriate preset for the channels, see: [Loading a preset](#loading-a-preset).
 
 <div style="page-break-after: always;"></div>
 
 #### Loading a preset
 
-* Select the right **LAYER**.
+* Select the right **LAYER** (E.g. vocals or instruments).
 * Press the **SELECT** button on the channel you want to load.
 * Press the **VIEW** button on the EQUALIZER section on the mixer.
-    * It might not be needed, if you pressed it already earlier.
+    * It might not be needed if it is red already: if you pressed it already earlier.
 
 * Press the **UTILITY** button next to the screen.
 
@@ -113,7 +107,7 @@ Based on this information...
 
 * Select the appropriate preset by **turning** the "LOAD PRESET" knob
     * See image, point #3.
-    * "VOC ..." for vocalitst
+    * "VOC ..." for vocalist
     * "GTR ..." for guitars
 
 * Press second knob to load it.
@@ -126,10 +120,18 @@ document on how.
 
 <div style="page-break-after: always;"></div>
 
-# After they arrive
+
+# After the band arrives
 
 * Be nice, connect with them personally.
 * Help them with what ever they ask.
+* Fold back unused microphones.
+* Turn down (turn level knob to zero) on monitors that will not be used.
+* **Ask them to set instrument controls to neutral**
+  * Some instruments have equalizers on them, ask the owner to turn it off, or set it to "flat".
+  * Some instruments have volume controls on them, ask the owner to set it to neutral, or middle.
+  * And ask the owners of the instruments, not to change any of those during performing.
+
 * **Check vocalist-microphone alignments**
     * Very important!
     * Align height and direction, so that the microphone is in line with the mouth, and points towards them. Ideally it
@@ -137,10 +139,6 @@ document on how.
     * Meanwhile, keep it in a way so that the sound from the monitor would hit the microphone from the back as much as
       possible.
   
-* **Ask them to set instrument controls to neutral**
-    * Some instruments have equalizers on them, ask the owner to turn it off, or set it to "flat".
-    * Some instruments have volume controls on them, ask the owner to set it to neutral, or middle.
-    * And ask the owners of the instruments, not to change any of those during performing.
 
 <div style="page-break-after: always;"></div>
 
@@ -165,7 +163,7 @@ document on how.
     * See image, point #1.
 * Watch the channel strip's meter
   * See image, point #2.
-* When the input is around it's highest level, it should be around the **-18db** mark.
+* When the input is around its highest level, it should be around the **-18db** mark.
 * If it needs adjustment, then the turn the "GAIN" knob at the console's top left corner.
     * Do it until the signal jumps around -18 db.
     * See image, point #2.
@@ -194,7 +192,7 @@ document on how.
     * Everything is balanced, everyone hears everyone.
     * Nothing is too loud.
 
-* Did you asked the instrument players to reset their eq/volume levels?
+* Did you ask the instrument players to reset their eq/volume levels?
 * Do you hear all instruments?
 * Do you hear all vocalists?
 * Do you hear the drum?
@@ -205,18 +203,18 @@ document on how.
 Our singers are quite good and checked, so if they sound bad,
 that is most likely due to them not hearing themselves correctly.
 
-To solve this: go up on the stage and check the monitor levels.
-The target is for them to be a bit louder.
+To solve this: go up on the stage and check the monitor volume levels.
 
+Your goal is so that they would be a bit more present in the stage-monitor mix:
 * Either increase the overall monitor level
 * Or increase their level in the monitor
 * Or lower something that is too loud
 
 An alternative reason can be:
 
-* An overworking compressor on the channel
-* A too high (or low) low-cut
-* An unfortunate equalizer setting
+* An overworking compressor on the channel.
+* A too high (or low) low-cut.
+* An unfortunate equalizer setting.
 
 <div style="page-break-after: always;"></div>
 
@@ -225,7 +223,7 @@ An alternative reason can be:
 ## Save the scene
 
 * We have one preset that we never overwrite, that is the **CCP Service MAIN**.
-* We load it, but we save it over on the **CCP Service**. (Thats the "weekly working preset")
+* We load it, but we save it over on the **CCP Service**. (That's the "weekly working preset")
 * Never overwrite the MAIN one please.
 
 On the console:
