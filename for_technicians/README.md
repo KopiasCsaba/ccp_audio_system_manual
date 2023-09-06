@@ -18,7 +18,7 @@
 These are printed out and organized into a folder, that you can find next
 to the console.
 
-<img alt="" src="assets/manual.jpg"  align="right" style="float:right" width="400">
+<img alt="" src="assets/manual.jpg"  align="right" style="float:right" height="200">
 
 * Setting up the system: [WEB](settingup.md), [PDF](settingup.pdf)
 * What to do during a rehearsal: [WEB](rehearsal.md), [PDF](rehearsal.pdf).
