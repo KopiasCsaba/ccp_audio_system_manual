@@ -4,7 +4,7 @@
 <!-- TOC -->
 * [At the console](#at-the-console)
   * [Set up the sound pressure level (SPL) meter](#set-up-the-sound-pressure-level-spl-meter)
-  * [Put batteries into the headset](#put-batteries-into-the-headset)
+  * [Prepare the headset](#prepare-the-headset)
 * [Verify main speakers' settings](#verify-main-speakers-settings)
   * [Front speakers](#front-speakers)
   * [Fill speakers](#fill-speakers)
@@ -32,6 +32,7 @@ This device measures the volume (lets say) in the room, and it is located on the
 
 <img alt="" src="assets/reset/spl.jpg.png"  align="right" style="float:right" width="300">
 
+* It is powered by an adapter, turn on the socket for the adapter.
 * Turn it on following the handwritten numbers on the buttons.
     * The two button marked "1"(one) need to be pressed together, until the "**n**" shows up on the screen.
     * Then wait until it finishes the initialization.
@@ -44,11 +45,11 @@ It should read "SLOW" and "C".
 
 * Put it to the counter and watch it always.
 
-## Put batteries into the headset
+## Prepare the headset
 
 Only do this, if the headset will be used, e.g. if there will be preaching.
 
-<img alt="" src="assets/reset/rhodelink.jpg.png"  align="right" style="float:right" width="200">
+<img alt="" src="assets/reset/rhodelink.jpg.png"  align="right" style="float:right" width="180">
 
 * Above the mixing console, on the shelf you'll find the battery charger.
 * Based on the labels on the charger, select the appropriate set of batteries.
@@ -64,9 +65,10 @@ Only do this, if the headset will be used, e.g. if there will be preaching.
     * Sometimes they know how to mute it, and they do it.
     * And sometimes they forget to unmute it, then you need to signal them.
 
+If the service starts hours later, you can keep it turned off, and only turn it on before it is given to the preacher.
+
 <br clear="right" style="clear:right"/>
 
-<div style="page-break-after: always;"></div>
 
 # Verify main speakers' settings
 
@@ -166,6 +168,9 @@ The order is important here:
 
 * Speak into each microphone, and you should see activity on the mixer, and hear yourself in each monitor.
 
+If everything was working, continue with the [Rehearsal guide](rehearsal.md) or the [Service guide](service.md)!
+
+If something wasn't working, check the rest of this guide on how to troubleshoot.
 
 ## Troubleshooting
 If there is any issue on the stage, check these things:
@@ -188,12 +193,12 @@ There is signal indication, but inaudible?
 
 Verify that the speakers are connected to **L/MONO**:
 
-<img alt="" src="assets/reset/mixer_conn.jpg" height="140">
+<img alt="" src="assets/reset/mixer_conn.jpg" height="100">
 
 ### Verify keyboard connection
 
 Verify that it is connected properly, sometimes they unplug it for practicing.
 
-<img alt="" src="assets/reset/keyboard.jpg" height="140">
+<img alt="" src="assets/reset/keyboard.jpg" height="100">
 
 <div style="page-break-after: always;"></div>

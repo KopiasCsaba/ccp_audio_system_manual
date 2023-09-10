@@ -161,6 +161,11 @@ Pressing them is exactly the same thing as pressing the MUTE button on the respe
 ### Muting the stage
 
 
+Check the "Assign" section above on the image or on the console, and find the "STAGE ON" and "STAGE OFF" buttons.
+Pressing them will turn off or on most of the things on the stage. 
+Also, when you press them, you need to confirm it on the display of the console.
+
+
 It is very important, to be able to quickly turn on/off the stage, because: 
 
  * The microphones might feed back during preaching.
@@ -173,15 +178,12 @@ Please remember:
  * During preaching, the stage must be off.
  * During worship, the preacher mics should be off.
 
+Since the buttons are not lit even if the stage is on or off, the way to know if the stage is off is the following:
 
-Check the "Assign" section above for "STAGE ON" and "STAGE OFF".
-Sadly it's not a single toggle button, and the buttons are not lit in any case.
-The way to know if the stage is off is the following:
+<img alt="" src="assets/console/stage_off.png"  align="right" style="float:right" height="100">
 
-<img alt="" src="assets/console/stage_off.png"  align="right" style="float:right" height="150">
-
- * If you remember, that you pressed "stage off". :)
- * If the channel strip's displays showing "OFF" in the second row.
+ * If you remember, that you pressed "STAGE OFF". :)
+ * If the channel strip's displays showing "OFF" in the second row for vocals or instruments.
  * If there is no signal indication on any stage inputs.
  * If everyone is looking at you, expecting the stage to work. :)
 
@@ -189,7 +191,8 @@ The way to know if the stage is off is the following:
 
 The stage off/on does not affect anything important, every level, channel name, eq, mute status etc. is retained.
 
-The stage off function does not affect the keyboard, as it is rarely messed with. It is not a source of feedback, and sometimes during the end of the preaching someone might start to play on it. 
+The stage off function does not affect the keyboard, as it is rarely messed with. 
+It is not a source of feedback, and sometimes during the end of the preaching someone might start to play on it. 
 
 By never disabling it, we don't need to keep an eye on it either, it just works always.
 
@@ -210,7 +213,6 @@ This button mutes all inputs from the streaming pc and the projection pc leads. 
 
 Especially have them muted before you unplug/plug it in into something.
 
-<div style="page-break-after: always;"></div>
 
 ## Playing background music
 

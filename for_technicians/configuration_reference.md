@@ -65,6 +65,8 @@ This document is under construction.
 # Streaming
 ## OBS
 Todo...
+ * Disable taskbar peeking in windows, as it messes with the live projectors.
+
 ## OSCBridge
 Todo...
 ## Live

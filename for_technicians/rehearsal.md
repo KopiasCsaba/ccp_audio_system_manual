@@ -8,12 +8,10 @@
     * [Load the main scene](#load-the-main-scene)
     * [Other things](#other-things)
     * [Load vocal and instrument presets](#load-vocal-and-instrument-presets)
-      * [Load Vocalist presets](#load-vocalist-presets)
-      * [Load Instrument presets](#load-instrument-presets)
+    * [Mute unused channels](#mute-unused-channels)
       * [Loading a preset](#loading-a-preset)
 * [After the band arrives](#after-the-band-arrives)
   * [Gain staging](#gain-staging)
-    * [How to set the gain](#how-to-set-the-gain)
   * [During worship](#during-worship)
     * [If a vocalist sounds off-key or unexpected](#if-a-vocalist-sounds-off-key-or-unexpected)
 * [After the rehearsal](#after-the-rehearsal)
@@ -50,14 +48,15 @@ Load the "CCP Service MAIN" scene.
 This contains our default settings, please never overwrite it.
 
 * Press **VIEW** at the "Scenes" section of the mixer.
-* By turning the "GO" knob, **SELECT** to the "CCP Service MAIN".
-* **Press** the knob to load it.
+* By **turning the "GO"** knob, scroll to the "CCP Service MAIN".
+* **Press** the "GO" knob to load it.
+* **Press** the "Confirm" knob.
 
 
 ### Other things
 
 * Turn on the stage.
-* Mute the preaching mics, to avoid feedback.
+* Check if the pulpit/headset is muted, and mute if needed.
 * Set the Main fader to 0.
 
 <div style="page-break-after: always;"></div>
@@ -71,49 +70,53 @@ Consult with the worship leader on:
 
 Based on this information load vocalist presets, and load instrument presets.
 
-#### Load Vocalist presets
+### Mute unused channels
 
 * Select the **VOCALS** layer.
 * Between Vocal channel 1-6: **mute** and **pull down** unused channels.
     * Do not change channel 7 and 8.
-* Load the appropriate preset for the channels, see: [Loading a preset](#loading-a-preset).
 
-#### Load Instrument presets
 
-* Select the **Instruments** layer.
+<br/>
+<br/>
+
+* Select the **INSTRUMENTS** layer.
 * Between Instrument channels 1-5: **mute** and **pull down** unused channels.
     * Don't change/mute channels 6, 7, 8.
-* Load the appropriate preset for the channels, see: [Loading a preset](#loading-a-preset).
+
 
 <div style="page-break-after: always;"></div>
 
 #### Loading a preset
+Go through the **VOCAL** and then the  **INSTRUMENT** layer, and for each used channel, load the appropriate preset, repeating the following steps:
 
-* Select the right **LAYER** (E.g. vocals or instruments).
-* Press the **SELECT** button on the channel you want to load.
-* Press the **VIEW** button on the EQUALIZER section on the mixer.
+1. Select the right **LAYER** (E.g. vocals or instruments).
+2. Press the **SELECT** button on the channel you want to load.
+3. Press the **VIEW** button on the EQUALIZER section on the mixer.
     * It might not be needed if it is red already: if you pressed it already earlier.
 
-* Press the **UTILITY** button next to the screen.
+4. Press the **UTILITY** button next to the screen.
 
-<img src="assets/console/presetloading.png" height="300"/>
+    <img src="assets/console/presetloading.png" height="200"/>
 
-* By turning the (first) "SCOPE" knob, select the **RECALL SCOPE**.
+5. By turning the (first) "SCOPE" knob, select the **RECALL SCOPE**.
     * See image, point #1.
 
-* Press the knob to select **all scopes**.
+6. Press the knob to select **all scopes**.
     * See image, point #2.
     * Should look like the green area.
 
-* Select the appropriate preset by **turning** the "LOAD PRESET" knob
+7. Select the appropriate preset by **turning** the "LOAD PRESET" knob
     * See image, point #3.
-    * "VOC ..." for vocalist
     * "GTR ..." for guitars
+    * "VOC ..." for vocalist (you need to scroll down to find those beneath the GTR-s)
 
-* Press second knob to load it.
+8. Press second knob to load it.
     * See image, point #4.
 
-* Press **confirm**
+9. Press **confirm**
+
+10. Repeat this section for the next vocal or instrument channel that is in use.
 
 After the initial setup, you might want to save the preset, see "[Save the scene](#save-the-scene)" at the end of this
 document on how.
@@ -144,12 +147,12 @@ document on how.
 
 ## Gain staging
 
-* Usually no need to gain-stage the drums and the keyboard.
-* Go through Vocal mics 1-6 and Instruments 1-5 and set a proper gain on the used channels.
 
-### How to set the gain
 
-* In order to set the gain level, we must have input.
+Go through **Vocal mics 1-6** and **Instruments 1-5** and set a proper gain on the used channels (no need to gain-stage the drums and the keyboard),
+by repeating the following steps on each used channel:
+
+1. In order to set the gain level, we must have input.
     * Ask them one-by-one to play or sing from lowest to highest volume.
         * You only really care about their highest volume levels, but asking from lowest to highest usually helps them
           in producing more precise
@@ -157,17 +160,20 @@ document on how.
     * Alternatively you can do this while they play.
     * But make sure to set the gain when a normal, regular input is coming through.
 
-<img src="assets/console/gainstaging.png" height="300"/>
+    <img src="assets/console/gainstaging.png" height="300"/>
 
-* Press the **SELECT** button on the channel you are setting the gain on.
+2. Press the **SELECT** button on the channel you are setting the gain on.
     * See image, point #1.
-* Watch the channel strip's meter
-  * See image, point #2.
-* When the input is around its highest level, it should be around the **-18db** mark.
-* If it needs adjustment, then the turn the "GAIN" knob at the console's top left corner.
+3. Watch the channel strip's meter
+    * See image, point #2.
+4. When the input is around its highest level, it should be around the **-18db** mark.
+5. If it needs adjustment, then the turn the "GAIN" knob at the console's top left corner.
     * Do it until the signal jumps around -18 db.
     * See image, point #2.
-* **Usually, channel gain should not be changed after this point.**
+
+6. Repeat this section for the next vocal or instrument channel that is in use.
+
+**Usually, channel gain should not be changed after this point.**
 
 <div style="page-break-after: always;"></div>
 
@@ -233,7 +239,7 @@ On the console:
 * Press the knob to save it.
 * Press the "backspace" knob to delete "MAIN" from the name, if needed.
 * Press the "save" knob.
-* Press confirm.
+* Press the "confirm" knob.
 
 ## Closing up
 
