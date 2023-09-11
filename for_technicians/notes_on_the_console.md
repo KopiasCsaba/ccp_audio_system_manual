@@ -33,7 +33,7 @@
 
 # LAYERS, CHANNELS! 
 
-<img alt="" src="assets/console/layers_channels.png"  height="500">
+<img alt="" src="assets/console/layers_channels.png"  height="350">
 
 
 This is one of the most important things to understand on the console.
@@ -47,14 +47,16 @@ In other words, we have 8 physical channel strips for 32+ channels, and the way
 we can access each of them is by selecting the right LAYER first, where each layer holds
 8 out of those 32+ channels.
 
-For example: 
-The "Speaker" layer holds 8 channels. The first channel on the Speaker layer is the preacher's headset.
-But the "Vocal" layer also holds 8 other channels, where the first channel strip is [Microphone 1](../for_worship_team/assets/stage.jpg).
+For example:
+
+ * The "Speaker" layer holds 8 channels. The first channel there is the preacher's headset.
+ * But the "Vocal" layer also holds 8 other channels, where the first channel strip is [Microphone 1](../for_worship_team/assets/stage.jpg).
 
 So in both cases you would manipulate the "first channel strip", but depending on the layer it might be the Headset, Mic 1, Instrument 1, Kick drum, etc.
 
 This is why it is very important to always make sure, you are on the right LAYER and that you selected the right CHANNEL.
 
+See a visual explanation on this at: [https://youtu.be/Z1rGS40XmTA?t=1428](https://youtu.be/Z1rGS40XmTA?feature=shared&t=1480).
 
 # Signal flow
 
@@ -88,7 +90,7 @@ They are connected with a pipe let's say, at any point if you step on the pipe, 
 The groups are called groups for simplicity's sake, but they are actually "remote controls", so they actually remote control all the assigned channel outputs.
 You can imagine it like pulling down the "Vocals" group is the same as pulling down by hand all the separate vocal channels we have.
 
-We have 7 groups:
+We have 8 groups:
 
  * Speaker
  * Vocals
@@ -136,6 +138,9 @@ This sets the volumes of all the incoming signals, from both PCS. (There ar e tw
 ## FX
 This sets how much effect(nowadays we only use reverbs) is being added to the mix. 
 
+<div style="page-break-after: always;"></div>
+
+
 # Talkback
 
  * You can speak to the stage while holding the "**TALK A**" button.
@@ -154,15 +159,18 @@ Never press the "select" on those.
 
 The result of selecting those are not intuitive, and the chances of messing up something by accident is very high.
 
-<div style="page-break-after: always;"></div>
+
 
 ## Shortcuts for muting various things
 On the bottom-right side of the mixer, you'll find these two sections:
 
-<img alt="" src="assets/console/assigns.png"  align="left" style="float:left" height="300">
-<img alt="" src="assets/console/mutes.png"  align="left" style="float:left" height="300">
+<img alt="" src="assets/console/assigns.png"  align="left" style="float:left" height="200">
+<img alt="" src="assets/console/mutes.png"  align="left" style="float:left" height="200">
 
 <br clear="left" style="clear:left"/>
+
+<div style="page-break-after: always;"></div>
+
 
 ### Muting preacher microphones
 
@@ -173,7 +181,6 @@ Check the "Assign" section above for "HEADSET MUTE" and "PULPIT MUTE".
 Pressing them will make them lit, if they are lit, the channel is MUTED.
 Pressing them is exactly the same thing as pressing the MUTE button on the respective channels on the "Speaker" layer.
 
-<div style="page-break-after: always;"></div>
 
 ### Muting the stage
 
@@ -213,6 +220,7 @@ It is not a source of feedback, and sometimes during the end of the preaching so
 
 By never disabling it, we don't need to keep an eye on it either, it just works always.
 
+<div style="page-break-after: always;"></div>
 
 ### Muting the effects
 
@@ -242,6 +250,7 @@ You might also play back music from the streaming pc.
  * Adjust the volume of the appropriate input (you see on the indicators which one has signal)
 
 
+<div style="page-break-after: always;"></div>
 
 # Connecting with applications
 
@@ -251,6 +260,7 @@ It is not required, but it can come handy sometimes when you are on the stage fo
 these apps can spare some kilometers of running back and forth.
 
 Also, if you want to do the mixing outside the cave, you can use a tablet/pc or whatever.
+
 Although, I recommend doing that only after you are really confident with the mixer and the system. Because these applications are a bit harder to use, less user-friendly/intuitive. If some random issue pops up, you might be able to fix it better/faster/easier if you are next to the console, than turning pages and swiping back and forth, etc.
 
 
