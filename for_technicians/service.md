@@ -4,8 +4,8 @@
 <!-- TOC -->
 * [Before the service](#before-the-service)
 * [During service](#during-service)
-  * [During preaching](#during-preaching)
   * [During worship](#during-worship)
+  * [During preaching](#during-preaching)
   * [During worship, when someone speaks or prays](#during-worship-when-someone-speaks-or-prays)
 * [Closing up](#closing-up)
 <!-- TOC -->
