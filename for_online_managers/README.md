@@ -10,3 +10,6 @@
 
 * How to manage [YouTube](youtube.md)
 * How to manage [Facebook](facebook.md)
+
+# Assets
+Various assets can be found in the [assets](assets) folder.
