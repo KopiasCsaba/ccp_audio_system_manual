@@ -12,6 +12,11 @@ Here is some essential knowledge for you, if you are ever on stage: [for_worship
 
 Learn more about being a technician in [for_technicians](for_technicians). 
 
+## For online managers
+
+Learn more about the tasks for online managers [for_online_managers](for_online_managers). 
+
+
 ## Labels
 
 Find source materials of our printed labels in  [labels](labels).
