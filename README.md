@@ -1,4 +1,4 @@
-# CCP Audio system manual
+# CCP Audio, Video & Media ministry manual
 
 This repository contains labels, manuals and documentation on our audio gear, and it's usage.
 
