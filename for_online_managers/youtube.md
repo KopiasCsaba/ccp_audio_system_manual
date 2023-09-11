@@ -3,19 +3,14 @@
 
 <!-- TOC -->
 * [UNDER CONSTRUCTION](#under-construction)
-* [Lorem](#lorem)
-* [Ipsum](#ipsum)
-  * [Dolor](#dolor)
-    * [Sit amet](#sit-amet)
+* [Tasks](#tasks)
 <!-- TOC -->
 
 # UNDER CONSTRUCTION
 This page is under construction.
 
-# Lorem
-
-# Ipsum
-
-## Dolor
-
-### Sit amet
+# Tasks
+* Publish videos
+  * With the right title
+  * With the right thumbnail
+  * Live stream beginning trimmed
