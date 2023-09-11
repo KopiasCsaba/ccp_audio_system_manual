@@ -32,12 +32,29 @@
 <!-- TOC -->
 
 # LAYERS, CHANNELS! 
+
+<img alt="" src="assets/console/layers_channels.png"  height="500">
+
+
 This is one of the most important things to understand on the console.
 Whenever you want to change something on a channel, you should make sure you are on the right LAYER,
 and that you have selected the right CHANNEL.
 
 To select the right LAYER, press one of the "Speaker", "Vocals", "Instruments", "Drums", "Aux" on the left side of the console.
 To select the right channel, press the "SELECT" button on top of the channels on the left side.
+
+In other words, we have 8 physical channel strips for 32+ channels, and the way
+we can access each of them is by selecting the right LAYER first, where each layer holds
+8 out of those 32+ channels.
+
+For example: 
+The "Speaker" layer holds 8 channels. The first channel on the Speaker layer is the preacher's headset.
+But the "Vocal" layer also holds 8 other channels, where the first channel strip is [Microphone 1](../for_worship_team/assets/stage.jpg).
+
+So in both cases you would manipulate the "first channel strip", but depending on the layer it might be the Headset, Mic 1, Instrument 1, Kick drum, etc.
+
+This is why it is very important to always make sure, you are on the right LAYER and that you selected the right CHANNEL.
+
 
 # Signal flow
 
