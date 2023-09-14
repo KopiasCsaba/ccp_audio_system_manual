@@ -5,10 +5,10 @@
 * [Reference on stage channel numbers](#reference-on-stage-channel-numbers)
 * [Before the band arrives](#before-the-band-arrives)
   * [At the main console](#at-the-main-console)
-    * [Load the main scene](#load-the-main-scene)
-    * [Other things](#other-things)
+    * [Mute pulpit and headset](#mute-pulpit-and-headset)
+    * [Mute unused vocals](#mute-unused-vocals)
+    * [Mute unused instruments](#mute-unused-instruments)
     * [Load vocal and instrument presets](#load-vocal-and-instrument-presets)
-    * [Mute unused channels](#mute-unused-channels)
       * [Loading a preset](#loading-a-preset)
 * [After the band arrives](#after-the-band-arrives)
   * [Gain staging](#gain-staging)
@@ -41,54 +41,42 @@ everything professionally and to avoid hurry-induced errors, fix random issues, 
 
 ## At the main console
 
-### Load the main scene
 
-Load the "CCP Service MAIN" scene.
-
-This contains our default settings, please never overwrite it.
-
-* Press **VIEW** at the "Scenes" section of the mixer.
-* By **turning the "GO"** knob, scroll to the "CCP Service MAIN".
-* **Press** the "GO" knob to load it.
-* **Press** the "Confirm" knob.
-
-
-### Other things
-
-* Turn on the stage.
+### Mute pulpit and headset
 * Check if the pulpit/headset is muted, and mute if needed.
-* Set the Main fader to 0.
 
-<div style="page-break-after: always;"></div>
-
-### Load vocal and instrument presets
-
-Consult with the worship leader on:
-
-* Who will be at which mic on the stage.
-* Who will use which instrument.
-
-Based on this information load vocalist presets, and load instrument presets.
-
-### Mute unused channels
+### Mute unused vocals
 
 * Select the **VOCALS** layer.
 * Between Vocal channel 1-6: **mute** and **pull down** unused channels.
     * Do not change channel 7 and 8.
 
-
-<br/>
-<br/>
+    
+### Mute unused instruments
 
 * Select the **INSTRUMENTS** layer.
 * Between Instrument channels 1-5: **mute** and **pull down** unused channels.
     * Don't change/mute channels 6, 7, 8.
 
 
+
+### Load vocal and instrument presets
+
+You should know:
+
+* Who will be at which mic on the stage.
+* Who will use which instrument.
+
+Our worship related drive document should contain that information,
+but alternatively you can consult about this with the worship leader.
+
+
+Based on this information continue and load the channel presets!
+
 <div style="page-break-after: always;"></div>
 
 #### Loading a preset
-Go through the **VOCAL** and then the  **INSTRUMENT** layer, and for each used channel, load the appropriate preset, repeating the following steps:
+Go through **Vocal mics 1-6** and **Instruments 1-5**, and for each used channel, load the appropriate preset, repeating the following steps:
 
 1. Select the right **LAYER** (E.g. vocals or instruments).
 2. Press the **SELECT** button on the channel you want to load.
@@ -118,7 +106,7 @@ Go through the **VOCAL** and then the  **INSTRUMENT** layer, and for each used c
 
 10. Repeat this section for the next vocal or instrument channel that is in use.
 
-After the initial setup, you might want to save the preset, see "[Save the scene](#save-the-scene)" at the end of this
+After the initial setup, you might want to save the scene, see "[Save the scene](#save-the-scene)" at the end of this
 document on how.
 
 <div style="page-break-after: always;"></div>
@@ -130,6 +118,7 @@ document on how.
 * Help them with what ever they ask.
 * Fold back unused microphones.
 * Turn down (turn level knob to zero) on monitors that will not be used.
+
 * **Ask them to set instrument controls to neutral**
   * Some instruments have equalizers on them, ask the owner to turn it off, or set it to "flat".
   * Some instruments have volume controls on them, ask the owner to set it to neutral, or middle.
@@ -146,7 +135,6 @@ document on how.
 <div style="page-break-after: always;"></div>
 
 ## Gain staging
-
 
 
 Go through **Vocal mics 1-6** and **Instruments 1-5** and set a proper gain on the used channels (no need to gain-stage the drums and the keyboard),
@@ -185,24 +173,27 @@ by repeating the following steps on each used channel:
 * Check if the vocalists have the microphone aligned well.
 * Set up a mix that sounds well while keeping eye on the SPL meter, the limits are written on it.
     * The lead singer should be a bit louder than the other vocalists.
+
 * Check if they need any help, e.g.:
     * Stuck cables
     * Microphone alignment
     * Volume issues
+  
 * Verify that the stage isn't too loud.
     * Sometimes mute the MAIN channel, to see if the stage is too loud or if one source is overpowering the others on
       the stage.
     * If an instrument or vocalist fills the room just from the monitors, ask them or help them adjust it.
+    * Don't mute the room for long, it disturbs the band. Mute, check, unmute.
 * PUT YOUR HEAD OUT of the cave! :)
-  * If you have capacity, go up to the stage while they sing, and check if:
-    * Everything is balanced, everyone hears everyone.
-    * Nothing is too loud.
+
+* If you have capacity, go up to the stage while they sing, and check if:
+  * Everything is balanced, everyone hears everyone.
+  * Nothing is too loud.
 
 * Did you ask the instrument players to reset their eq/volume levels?
 * Do you hear all instruments?
 * Do you hear all vocalists?
-* Do you hear the drum?
-* Is the stage too loud?
+* Do you hear the drum (from the speakers!?)
 
 ### If a vocalist sounds off-key or unexpected
 
@@ -228,18 +219,18 @@ An alternative reason can be:
 
 ## Save the scene
 
-* We have one preset that we never overwrite, that is the **CCP Service MAIN**.
-* We load it, but we save it over on the **CCP Service**. (That's the "weekly working preset")
-* Never overwrite the MAIN one please.
+* We have one scene that we never overwrite, that is the **CCP Service READONLY**.
+* We load it, but we save it over on another scene, the **CCP Service**. (That's the "weekly working preset")
+* Never overwrite the READONLY one please.
 
 On the console:
 
 * Press **VIEW** at the "Scenes" section.
-* With the "Save" knob, scroll to the "**CCP Service**" (without the "<ins>MAIN</ins>").
-* Press the knob to save it.
-* Press the "backspace" knob to delete "MAIN" from the name, if needed.
-* Press the "save" knob.
-* Press the "confirm" knob.
+* With the "Save" knob, scroll to the "**CCP Service**" (without the "<ins>READONLY</ins>" part).
+* Press the "Save" knob to save it.
+* Press the "Backspace" knob to delete "READONLY" from the name, if needed.
+* Press the "Save" knob.
+* Press the "Confirm" knob.
 
 ## Closing up
 

@@ -174,3 +174,7 @@ Join us in real life, or through the live stream!
 ```
 
  * Settings -> Stream -> Use persistent stream key (!!!)
+ * Set up live video
+ * Select software
+ * Select automatically start stream
+ * Press save

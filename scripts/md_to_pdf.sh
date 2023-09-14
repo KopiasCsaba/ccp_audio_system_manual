@@ -36,6 +36,11 @@ margin: 1px;
 border: 1px solid gray;
 }
 
+li {
+}
+ul, ol {
+padding-bottom: 15px;
+}
 
 </style>
 <meta charset=utf-8>

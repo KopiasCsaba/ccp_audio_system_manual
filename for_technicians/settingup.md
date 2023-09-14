@@ -3,6 +3,10 @@
 
 <!-- TOC -->
 * [At the console](#at-the-console)
+  * [Load the appropriate scene](#load-the-appropriate-scene)
+    * [Determine the appropriate scene to load:](#determine-the-appropriate-scene-to-load)
+    * [Loading the scene](#loading-the-scene)
+  * [Other things](#other-things)
   * [Set up the sound pressure level (SPL) meter](#set-up-the-sound-pressure-level-spl-meter)
   * [Prepare the headset](#prepare-the-headset)
 * [Verify main speakers' settings](#verify-main-speakers-settings)
@@ -26,6 +30,26 @@
 
 * Follow the "[Turning on the audio system](../labels/turningon.pdf)" guide posted on the mixer door.
 
+## Load the appropriate scene
+
+### Determine the appropriate scene to load:
+  * If this is a rehearsal: **CCP Service READONLY**
+    * This contains our default settings, please never overwrite it.
+  * If this is the service: **CCP Service**
+    * This is the one you saved on the rehearsal.
+
+### Loading the scene
+
+* Press **VIEW** at the "Scenes" section of the mixer.
+* By **turning the "GO"** knob, scroll to the "CCP Service READONLY".
+* **Press** the "GO" knob to load it.
+* **Press** the "Confirm" knob.
+
+## Other things
+
+* [Turn on the stage](notes_on_the_console.md#muting-the-stage), if you will use it.
+* Set the Main fader to 0.
+
 ## Set up the sound pressure level (SPL) meter
 
 This device measures the volume (lets say) in the room, and it is located on the shelf above the console.
@@ -38,12 +62,11 @@ This device measures the volume (lets say) in the room, and it is located on the
     * Then wait until it finishes the initialization.
     * Then press the button marked as 2.
     * Then press the button marked as 3.
-
-It should read "SLOW" and "C".
-
+* It should read "SLOW" and "C", as on the image.
+* Put it to the counter and watch it always.
 <br clear="right" style="clear:right"/>
 
-* Put it to the counter and watch it always.
+<div style="page-break-after: always;"></div>
 
 ## Prepare the headset
 
@@ -69,6 +92,7 @@ If the service starts hours later, you can keep it turned off, and only turn it 
 
 <br clear="right" style="clear:right"/>
 
+<div style="page-break-after: always;"></div>
 
 # Verify main speakers' settings
 
@@ -129,7 +153,6 @@ The order is important here:
 
 <div style="page-break-after: always;"></div>
 
-
 ## Verify stage monitor settings & connections
 
 ### Left stage monitor
@@ -161,7 +184,6 @@ The order is important here:
 
 <div style="page-break-after: always;"></div>
 
-
 ## Check that everything is working
 
 * Turn on the keyboard, and press one of the keys, you should hear it, from all monitors.
@@ -173,21 +195,22 @@ If everything was working, continue with the [Rehearsal guide](rehearsal.md) or 
 If something wasn't working, check the rest of this guide on how to troubleshoot.
 
 ## Troubleshooting
+
 If there is any issue on the stage, check these things:
 
 ### Common failures
 
 No signal activity on the mics?
 
- * The stage is off (on the console), that's why no microphone is working.
- * The individual microphone is muted on the console.
- * The stage mixer isn't on.
+* The stage is off (on the console), that's why no microphone is working.
+* The individual microphone is muted on the console.
+* The stage mixer isn't on.
 
 There is signal indication, but inaudible?
 
- * A power or signal cable slipped out from the monitor.
- * The stage mixer is disconnected.
- * The limiter knob is turned down.
+* A power or signal cable slipped out from the monitor.
+* The stage mixer is disconnected.
+* The limiter knob is turned down.
 
 ### Stage mixer connection
 
