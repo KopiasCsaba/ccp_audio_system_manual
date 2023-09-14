@@ -41,7 +41,6 @@ everything professionally and to avoid hurry-induced errors, fix random issues, 
 
 ## At the main console
 
-
 ### Mute pulpit and headset
 * Check if the pulpit/headset is muted, and mute if needed.
 
