@@ -8,6 +8,7 @@
 * [Turn on all the TVs](#turn-on-all-the-tvs)
   * [Screen on the pole](#screen-on-the-pole)
   * [Coffee shop screen](#coffee-shop-screen)
+* [About the STREAM lifecycle on sundays](#about-the-stream-lifecycle-on-sundays)
 * [Troubleshooting](#troubleshooting)
   * [No audio input coming to OBS](#no-audio-input-coming-to-obs)
   * [No audio in the office TV](#no-audio-in-the-office-tv)
