@@ -1,180 +1,154 @@
-<h1>DOING A LIVE STREAM</h1>
+<h1>DOING THE LIVE STREAM</h1>
 <hr>
-THIS DOCUMENT IS DEPRECATED ALREADY, IT IS WORK IN PROGRESS.
 
 <!-- TOC -->
+* [Console first!](#console-first)
+* [Turning on the sockets](#turning-on-the-sockets)
+* [Turn on the PC:](#turn-on-the-pc)
 * [Turn on all the TVs](#turn-on-all-the-tvs)
+  * [Screen on the pole](#screen-on-the-pole)
   * [Coffee shop screen](#coffee-shop-screen)
-  * [Pole screen](#pole-screen)
-* [Turning on the PC](#turning-on-the-pc)
-* [Setting up the stream](#setting-up-the-stream)
-  * [Facebook Live](#facebook-live)
-* [Start OBS](#start-obs)
-* [Verify audio settings](#verify-audio-settings)
-* [Managing the camera](#managing-the-camera)
-* [Start streaming in OBS](#start-streaming-in-obs)
-* [Start streaming in Facebook](#start-streaming-in-facebook)
-* [Lifecycle of streaming and things to pay attention during service](#lifecycle-of-streaming-and-things-to-pay-attention-during-service)
-* [Verifying stream](#verifying-stream-)
-  * [OBS](#obs-)
-  * [Facebook](#facebook)
+* [Troubleshooting](#troubleshooting)
+  * [No audio input coming to OBS](#no-audio-input-coming-to-obs)
+  * [No audio in the office TV](#no-audio-in-the-office-tv)
+  * [Restarting the stream on one of the platforms](#restarting-the-stream-on-one-of-the-platforms)
+    * [About our YouTube stream](#about-our-youtube-stream)
+      * [Restarting the YouTube stream](#restarting-the-youtube-stream)
+    * [About our Facebook stream](#about-our-facebook-stream)
+      * [Restarting the Facebook stream](#restarting-the-facebook-stream)
+    * [Restarting just one platform's stream](#restarting-just-one-platforms-stream)
 <!-- TOC -->
 
-# Turn on all the TVs
-## Coffee shop screen
- * Pull it out to face the audience.
- * The button is in the bottom center.
-
-<img alt="" src="assets/video/lg.jpg" height="300">
-
-## Pole screen
-
-With the remote:
-
-<img alt="" src="assets/video/century_remote.jpg" height="300">
-
-Or manually:
-
-<img alt="" src="assets/video/century.jpg" height="300">
 
 
-# Turning on the PC
-Make sure to have the following sockets turned on:
 
-Screens
+# Console first!
+The console must be turned on first (see [turning on the audio system guide](../labels/turningon.pdf)),
+so if you got there first, then just turn on the Mixer first with the socket, and then proceed.
 
-<img alt="" src="assets/video/socket_screens.jpg" height="200">
+# Turning on the sockets
 
-Networking
+Make sure to have the sockets with the following labels turned on:
 
-<img alt="" src="assets/video/socket_network.jpg" height="200">
+ 1. Screens, projector, sockets:
+ 1. Screens
+ 1. Networking
+ 1. PC+Others (it is below the shelf above the console)
 
-
-PC+Others:
-
-<img alt="" src="assets/video/socket_pc.jpg" height="200">
-
-Turn on the PC:
+# Turn on the PC:
+The power button is on the top:
 
 <img alt="" src="assets/video/pc_button.jpg" height="300">
 
+<div style="page-break-after: always;"></div>
+
+# Turn on all the TVs
+
+## Screen on the pole
+
+Use the remote control labeled "CENTURY", it is above the console on the shelf usually:
+
+<img alt="" src="assets/video/century_remote.jpg" height="140">
+
+## Coffee shop screen
+* Pull it out to face the audience.
+* The button is in the bottom center.
+
+<img alt="" src="assets/video/lg.jpg" height="300">
+
+# About the STREAM lifecycle on sundays
+ * 10:00: It will start to stream automatically with the "PRE-STREAM" scene
+   * This helps people to tune in, check audio and video settings, etc.
+ * 10:30: It will switch to the "PULPIT" scene, turn the camera there and hide the projector input, unmute the input, start recording, etc.
+   * This is when the announcements, and the service starts.
+ * Camera movements: the camera will move based on the audio technician's handling of the mute status of the stage/pulpit.
+   * If the headset is unmuted OR the pulpit is unmuted, OR the stage is muted: camera pans to pulpit
+   * If the headset is muted AND the pulpit is muted, AND the stage is unmuted: camera pans to stage
+ * 12:10: The end-of-stream scene will become active on the preview side only.
+   * At the end of the service, after our blessing, someone should make this scene active.
+   * Making this scene active will stop the recording and the live stream also.
+
+<div style="page-break-after: always;"></div>
+
+# Troubleshooting
 
 
-# Setting up the stream
-## Facebook Live
-Start Google Chrome:
+## No audio input coming to OBS
+If you see, that there is no audio coming to OBS:
 
-<img alt="" src="assets/video/screenshots/taskbar_chrome.png">
+Sometimes the audio input device in OBS is reset to something else, than LINE IN.
 
-Click on the "FB: GO LIVE" bookmark:
 
-<img alt="" src="assets/video/screenshots/chrome_fb_live_.png" height="300">
+ 
+ 1. Click on the audio input's three dots (the one that is the highest)
+ 1. Select Properties
+ 1. Select LINE IN
+ 1. Press OK
 
-Click on the "GO LIVE" button:
+<img alt="" src="assets/video/screenshots/troubleshoot_obs_audio_input.png" height="200">
 
-<img alt="" src="assets/video/screenshots/fb_live1.jpg" height="300">
+## No audio in the office TV
+ * Open OBS Settings
+ * Audio section
+ * Advanced
+ * The "monitoring device" should be "SONY TV (2- NVIDIA High Definition Audio)"
 
+<img alt="" src="assets/video/obs_audio_monitor.png" height="200">
+
+<div style="page-break-after: always;"></div>
+
+## Restarting the stream on one of the platforms
+
+
+### About our YouTube stream
+ * Our OBS is scripted, so when the OBS live stream starts, it (OBS) executes a command that automatically
+starts a new live event on YouTube.
+ * So if you stop streaming, then re-start, then it will automatically restart youtube also.
+ * But you might not want to stop streaming, as it will break other platforms that might be still going, e.g. facebook.
+
+#### Restarting the YouTube stream
+ * In this case, you need to manually start again the youtube live stream:
+   * Open the browser on the PC
+   * Click on the "Youtube LIVE" bookmark
+   * After this, proceed to [Re-starting just one platform's stream](#restarting-just-one-platforms-stream)
+   * Restart youtube's stream as shown there
+   * Come back to the youtube live page, and press the go LIVE button.
+ 
+### About our Facebook stream
+ * Facebook can't be auto-started, but events can be created in advance, and they can be set as recurring.
+ * So for some of our events, facebook live is pre-scheduled for a half year or so.
+ * This means, that if we start to stream at the right (scheduled) time, facebook is going live automatically.
+ * But if the stream fails, that scheduled event will stop, and if you want to re-start it you have to initiate a facebook live event manually.
+
+#### Restarting the Facebook stream
+
+* Open the browser on the PC
+* Click on the "FB: GO LIVE" bookmark
+* Click on the "GO LIVE" button
+  
 Edit the post's details:
 
 <img alt="" src="assets/video/screenshots/fblivedetailedit.png" height="300">
 
 Type in the title and description:
 
- * For title, we use the format "Title of Sermon - Main Passage - Full name of Pastor"
- * For description, you must write something as it will not let you stream otherwise. Usually we write "Good morning church!"
+* For title, we use the format "Title of Sermon - Main Passage - Full name of Pastor",
+* But if you are in a hurry, go with "Church Service", someone will rename it later on.
+* For description, you must write something as it will not let you stream otherwise. Usually we write "Good morning church!"
 
 <img alt="" src="assets/video/screenshots/fb_live_post_Details.png" height="300">
 
-
-# Start OBS
-
-Start OBS:
-
-<img alt="" src="assets/video/screenshots/taskbar_obs.png">
-
-# Verify audio settings
- * Mic/Aux should be unmuted
- * Desktop Audio 2 should be muted
- * Upon any signal from the console, Mic/Aux should show signal
- * Desktop Audio 2 might not show a signal in the beginning. Unmute and then mute again if the signal passes through.
-
-<img alt="" src="assets/video/screenshots/obs_audio.png" height="300">
-
-# Managing the camera
- * Click on the first/only element in the list "PTZ DEVICE"
- * Double click any of the presets, to point the camera
-
-<img alt="" src="assets/video/screenshots/obs_camera.png" height="300">
-
-# Start streaming in OBS
- * Make sure there is no audio coming from the console (mute headset, pulpit and turn stage off)
- * Press "Start streaming"
-
-
-# Start streaming in Facebook
-
-2-3 minutes before the service starts, start the stream so that people can start watching.
-Make sure there is no audio input yet.
+* After this, proceed to [Re-starting just one platform's stream](#restarting-just-one-platforms-stream), and then come back to here.
+* Restart facebook's stream  
+* Now press Go Live on facebook:
 
 <img alt="" src="assets/video/screenshots/fb_start_stream.png" height="300">
 
+### Restarting just one platform's stream
 
+* Open up the browser
+* Press the "RESTREAMER" bookmark on the bookmarks toolbar
+* Log in (the user/pass is saved into the browser)
+* Turn off one off the problematic source, and turn it back on, that will reconnect the stream.
 
-# Lifecycle of streaming and things to pay attention during service
- * 2-3 minutes before the announcements start, start the live streaming
- * Pointing the camera using the presets
- * Verify the stream's health & comments (see below)
- * Stop the **RECORDING** after the pastor proclaims the blessing with the church
- * Stop the **STREAMING** after the pastor dismisses the church
-
-# Verifying stream 
-## OBS 
-Bottom right of OBS:
-
-<img alt="" src="assets/video/screenshots/obs_status.png">
-
-It should look like this:
-
-* Green indicator
-* CPU < 30%
-* FPS: 60
-* Dropped frames: 0 (a few is fine, if it is going up constantly, then we have an issue)
-
-## Facebook
-The metrics should be kind-of flat, without big dips in it:
-
-<img alt="" src="assets/video/screenshots/fb_network_stats.png" height="300">
-
-Also you want to check on the comments, if something very bad would come up, you can delete it.
-If in doubt, consult an elder/leader about it.
-
-
-# FAcebook scheduling:
- * Event name: Church Service
- * Press Recurring event
-    * Weekly
-    * sundays
-    * From 10:00 AM
-    * To 12:00PM
-    * Start date next sunday
-    * End date: bit more than half year ahead (depending on how much it lets you to set)
-
-
- * Description:
-```
-The real service will start at 10:30 AM, the live stream starts 30 min earlier so that you could tune in on time.
-
-You can find the live stream at:
-https://facebook.com/100064617556957/live_videos
-
-We also stream to YouTube:
-https://youtube.com/@calvarychapelpaphos6683/streams
-
-Join us in real life, or through the live stream!
-```
-
- * Settings -> Stream -> Use persistent stream key (!!!)
- * Set up live video
- * Select software
- * Select automatically start stream
- * Press save
+<img alt="" src="assets/video/screenshots/restreamer_sources.png">
