@@ -29,7 +29,7 @@ to the console.
 * Notes on the console: [WEB](notes_on_the_console.md), [PDF](notes_on_the_console.pdf).
 * Closing up procedure: [WEB](closingup.md), [PDF](closingup.pdf).
 
-<br clear="right" style="clear:right"/>
+<br clear="both" style="clear:both"/>
 
 ### Live-streaming & video
 

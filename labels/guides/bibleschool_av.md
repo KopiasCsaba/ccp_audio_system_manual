@@ -4,9 +4,11 @@
 <!-- TOC -->
 * [Turning on](#turning-on)
 * [Setup](#setup)
-* [Configure Console](#configure-console)
+* [Configure the console](#configure-the-console)
 * [Prepare for going live](#prepare-for-going-live)
 <!-- TOC -->
+
+<div style="page-break-after: always;"></div>
 
 # Turning on
 1. Follow the [Turning on the audio system](../turningon.pdf) guide.
@@ -63,7 +65,7 @@
 
     <img src="../assets/guides/bibleschool/console.png" align="left" style="float:left"   height="200"> 
     <img src="../assets/guides/bibleschool/assign.png"  align="left" style="float:left"  height="200"> 
-    <br clear="right" style="clear:right"/>
+    <br clear="both" style="clear:both"/>
 
     <div style="page-break-after: always;"></div>
 
@@ -72,7 +74,7 @@
     * Move the first, "HEADSET" channel's fader up and down as needed.
 
     <img src="../assets/guides/bibleschool/headsetvol.png"  height="400"> 
-    <br clear="right" style="clear:right"/>
+    <br clear="both" style="clear:both"/>
 
     <div style="page-break-after: always;"></div>
 

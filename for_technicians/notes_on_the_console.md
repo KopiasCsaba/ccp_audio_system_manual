@@ -2,7 +2,7 @@
 <hr>
 
 <!-- TOC -->
-* [LAYERS, CHANNELS!](#layers-channels-)
+* [LAYERS, CHANNELS!](#layers-channels)
 * [Signal flow](#signal-flow)
 * [Notes on groups](#notes-on-groups)
   * [Speaker](#speaker)
@@ -31,7 +31,9 @@
     * [Instrument tuner aid](#instrument-tuner-aid)
 <!-- TOC -->
 
-# LAYERS, CHANNELS! 
+<div style="page-break-after: always;"></div>
+
+# LAYERS, CHANNELS!
 
 <img alt="" src="assets/console/layers_channels.png"  height="350">
 
@@ -40,7 +42,8 @@ This is one of the most important things to understand on the console.
 Whenever you want to change something on a channel, you should make sure you are on the right LAYER,
 and that you have selected the right CHANNEL.
 
-To select the right LAYER, press one of the "Speaker", "Vocals", "Instruments", "Drums", "Aux" on the left side of the console.
+To select the right LAYER, press one of the "Speaker", "Vocals", "Instruments", "Drums", "Aux" on the left side of the
+console.
 To select the right channel, press the "SELECT" button on top of the channels on the left side.
 
 In other words, we have 8 physical channel strips for 32+ channels, and the way
@@ -49,37 +52,46 @@ we can access each of them is by selecting the right LAYER first, where each lay
 
 For example:
 
- * The "Speaker" layer holds 8 channels. The first channel there is the preacher's headset.
- * But the "Vocal" layer also holds 8 other channels, where the first channel strip is [Microphone 1](../for_worship_team/assets/stage.jpg).
+* The "Speaker" layer holds 8 channels. The first channel there is the preacher's headset.
+* But the "Vocal" layer also holds 8 other channels, where the first channel strip
+  is [Microphone 1](../for_worship_team/assets/stage.jpg).
 
-So in both cases you would manipulate the "first channel strip", but depending on the layer it might be the Headset, Mic 1, Instrument 1, Kick drum, etc.
+So in both cases you would manipulate the "first channel strip", but depending on the layer it might be the Headset, Mic
+1, Instrument 1, Kick drum, etc.
 
-This is why it is very important to always make sure, you are on the right LAYER and that you selected the right CHANNEL.
+This is why it is very important to always make sure, you are on the right LAYER and that you selected the right
+CHANNEL.
 
-See a visual explanation on this at: [https://youtu.be/Z1rGS40XmTA?t=1428](https://youtu.be/Z1rGS40XmTA?feature=shared&t=1480).
+See a visual explanation on this
+at: [https://youtu.be/Z1rGS40XmTA?t=1428](https://youtu.be/Z1rGS40XmTA?feature=shared&t=1480).
+
+<div style="page-break-after: always;"></div>
+
 
 # Signal flow
 
-The high-level overview of the signal flow is important to understand, in order to be able to effectively set levels for different things.
+The high-level overview of the signal flow is important to understand, in order to be able to effectively set levels for
+different things.
 
 It can be summarized as a waterfall, from top to bottom as this:
 
-- Channels 
-  - On the left side of the mixer.
-  - E.g.: Vocal 1, or Instrument 2 or Kick drum.
+- Channels
+    - On the left side of the mixer.
+    - E.g.: Vocal 1, or Instrument 2 or Kick drum.
 - Groups (on the right side)
-  - On the right side of the mixer.
-  - E.g.: Vocals, Instruments, Drum, Keyboard.
+    - On the right side of the mixer.
+    - E.g.: Vocals, Instruments, Drum, Keyboard.
 - MAIN
-  - The right-most fader on the mixer.
+    - The right-most fader on the mixer.
 
-If at any point, any of it is pulled all the way down, there will be no signal passing through. 
+If at any point, any of it is pulled all the way down, there will be no signal passing through.
 
 For example:
 
- * If the Vocal GROUP is pulled down, then no matter how much you pull up one of the vocal CHANNELs, the signal will be blocked at the group level.
- * Or, no matter how much you pull up the level on the instrument GROUP, if the guitar CHANNEL is pulled down.
- * And also, no matter what levels are set on the CHANNEL or GROUP level, if the MAIN is pulled down.
+* If the Vocal GROUP is pulled down, then no matter how much you pull up one of the vocal CHANNELs, the signal will be
+  blocked at the group level.
+* Or, no matter how much you pull up the level on the instrument GROUP, if the guitar CHANNEL is pulled down.
+* And also, no matter what levels are set on the CHANNEL or GROUP level, if the MAIN is pulled down.
 
 They are connected with a pipe let's say, at any point if you step on the pipe, it will block the flow.
 
@@ -87,71 +99,86 @@ They are connected with a pipe let's say, at any point if you step on the pipe, 
 
 # Notes on groups
 
-The groups are called groups for simplicity's sake, but they are actually "remote controls", so they actually remote control all the assigned channel outputs.
-You can imagine it like pulling down the "Vocals" group is the same as pulling down by hand all the separate vocal channels we have.
+The groups are called groups for simplicity's sake, but they are actually "remote controls", so they actually remote
+control all the assigned channel outputs.
+You can imagine it like pulling down the "Vocals" group is the same as pulling down by hand all the separate vocal
+channels we have.
 
 We have 8 groups:
 
- * Speaker
- * Vocals
- * Instr1-2
- * Instr3-5
- * Keyboard
- * Drums
- * Aux
- * FX
+* Speaker
+* Vocals
+* Instr1-2
+* Instr3-5
+* Keyboard
+* Drums
+* Aux
+* FX
 
 ## Speaker
+
 This contains the headset microphone, and the pulpit microphone. Changing the level will change both, together.
 But usually we only have one of them enabled, so that's fine.
 
 ## Vocals
-This group fader sets the levels of all the vocal microphones. 
+
+This group fader sets the levels of all the vocal microphones.
 So, setting the level of this will change how much vocal the whole mix has.
-If you want to set the balance BETWEEN the vocalists, you can, and you should do that on the VOCALS layer by setting the individual vocal channel faders.
+If you want to set the balance BETWEEN the vocalists, you can, and you should do that on the VOCALS layer by setting the
+individual vocal channel faders.
 
 ## Instr1-2
+
 This group fader sets the volume for Instrument 1 and Instrument 2.
 The idea is, that usually only one of them is used, so generally this is the lead guitar.
 
 ## Instr3-5
+
 This group fader sets the volume for ALL the other instrument cables (of course excluding the drums and the piano).
 The idea here is that, most of the time we only have one instrument, as we have seen in the previous group,
 but even if we have a second one, it will be between 3-5 depending on where the player prefers to stand/plug in.
 
 So generally this group is the "other instrument".
 
-In the rare case of having more instruments than 2 instruments, you want to set the level of this to 0, 
-and manually adjust the balance on the INSTRUMENTS layer instead. 
+In the rare case of having more instruments than 2 instruments, you want to set the level of this to 0,
+and manually adjust the balance on the INSTRUMENTS layer instead.
 
 <div style="page-break-after: always;"></div>
 
 ## Keyboard
-This sets the keyboard's volume only, it is not really a group, just a shorthand, to help set the keyboard volume easily.
+
+This sets the keyboard's volume only, it is not really a group, just a shorthand, to help set the keyboard volume
+easily.
 
 ## Drums
+
 We have 8 drum microphones, and this one sets them both, together as one up or down.
 
 ## Aux
-This sets the volumes of all the incoming signals, from both PCS. (There ar e two stereo 3.5mm jack "cable" coming out of the mixer, one is connected to the streaming pc, the other is dangling around the projection pc.)
+
+This sets the volumes of all the incoming signals, from both PCS. (There ar e two stereo 3.5mm jack "cable" coming out
+of the mixer, one is connected to the streaming pc, the other is dangling around the projection pc.)
 
 ## FX
-This sets how much effect(nowadays we only use reverbs) is being added to the mix. 
+
+This sets how much effect(nowadays we only use reverbs) is being added to the mix.
 
 <div style="page-break-after: always;"></div>
 
-
 # Talkback
 
- * You can speak to the stage while holding the "**TALK A**" button.
- * Use "**TALK B**" if you want to talk to the stage AND the house too.
-   * A memory device to remember which is which: you mostly want to talk to the stage only, and that is the most easily accessible button in the top left corner on the console.
- * Use the "**Talk level**" knob to set your volume.
- * The microphone is at the left bottom corner of the screen.
- 
 <img alt="" src="assets/console/talkback.png"  height="153">
 
+* Press and hold "**{TALK A}**" to speak to the stage.
+* Press and hold "**{TALK B}**" to speak to the stage and the room too.
+    * A memory device to remember which is which: you mostly want to talk to the stage only, and that is the most easily
+      accessible button in the top left corner on the console.
+* Turn "**{Talk level}**" to set your volume.
+* The microphone is at the left bottom corner of the screen.
+
+
 # Tips and tricks
+
 ## Never "select" the group channels
 
 On the right half of the console, the first layer is the Groups/DCAs, that remote control other channels.
@@ -159,64 +186,59 @@ Never press the "select" on those.
 
 The result of selecting those are not intuitive, and the chances of messing up something by accident is very high.
 
-
-
 ## Shortcuts for muting various things
+
 On the bottom-right side of the mixer, you'll find these two sections:
 
 <img alt="" src="assets/console/assigns.png"  align="left" style="float:left" height="200">
 <img alt="" src="assets/console/mutes.png"  align="left" style="float:left" height="200">
 
-<br clear="left" style="clear:left"/>
+<br clear="both" style="clear:both"/>
 
 <div style="page-break-after: always;"></div>
 
-
 ### Muting preacher microphones
 
-Because during a service it might often (and sometimes suddenly) changed which microphone is used (pulpit, or the headset), there are two buttons that are always on hand, to mute/unmute them.
+Because during a service it might often (and sometimes suddenly) changed which microphone is used (pulpit, or the
+headset), there are two buttons that are always on hand, to mute/unmute them.
 
 Check the "Assign" section above for "HEADSET MUTE" and "PULPIT MUTE".
 
 Pressing them will make them lit, if they are lit, the channel is MUTED.
 Pressing them is exactly the same thing as pressing the MUTE button on the respective channels on the "Speaker" layer.
 
-
 ### Muting the stage
 
-
 Check the "Assign" section above on the image or on the console, and find the "STAGE ON" and "STAGE OFF" buttons.
-Pressing them will turn off or on most of the things on the stage. 
+Pressing them will turn off or on most of the things on the stage.
 Also, when you press them, you need to confirm it on the display of the console.
 
+It is very important, to be able to quickly turn on/off the stage, because:
 
-It is very important, to be able to quickly turn on/off the stage, because: 
-
- * The microphones might feed back during preaching.
- * The musicians sometimes unplug/plug instruments.
- * People on the stage sometimes accidentally hit microphones.
-
+* The microphones might feed back during preaching.
+* The musicians sometimes unplug/plug instruments.
+* People on the stage sometimes accidentally hit microphones.
 
 Please remember:
 
- * During preaching, the stage must be off.
- * During worship, the preacher mics should be off.
+* During preaching, the stage must be off.
+* During worship, the preacher mics should be off.
 
 Since the buttons are not lit even if the stage is on or off, the way to know if the stage is off is the following:
 
 <img alt="" src="assets/console/stage_off.png"  align="right" style="float:right" height="100">
 
- * If you remember, that you pressed "STAGE OFF". :)
- * If the channel strip's displays showing "OFF" in the second row for vocals or instruments.
- * If there is no signal indication on any stage inputs.
- * If everyone is looking at you, expecting the stage to work. :)
+* If you remember, that you pressed "STAGE OFF". :)
+* If the channel strip's displays showing "OFF" in the second row for vocals or instruments.
+* If there is no signal indication on any stage inputs.
+* If everyone is looking at you, expecting the stage to work. :)
 
-<br clear="right" style="clear:right"/>
+<br clear="both" style="clear:both"/>
 
 The stage off/on does not affect anything important, every level, channel name, eq, mute status etc. is retained.
 
-The stage off function does not affect the keyboard, as it is rarely messed with. 
-It is not a source of feedback, and sometimes during the end of the preaching someone might start to play on it. 
+The stage off function does not affect the keyboard, as it is rarely messed with.
+It is not a source of feedback, and sometimes during the end of the preaching someone might start to play on it.
 
 By never disabling it, we don't need to keep an eye on it either, it just works always.
 
@@ -224,64 +246,75 @@ By never disabling it, we don't need to keep an eye on it either, it just works 
 
 ### Muting the effects
 
-All vocal effects can be disabled by the "EFFECTS" button on the "Mute groups" section (see above). If it is LIT, then it is MUTED.
+All vocal effects can be disabled by the "EFFECTS" button on the "Mute groups" section (see above). If it is LIT, then
+it is MUTED.
 
-We need to watch out during worship, to disable the vocal effects during them preaching/praying. Having echo/reverb on a prayer is very, very, very cheesy, so please pay attention to it.
+We need to watch out during worship, to disable the vocal effects during them preaching/praying. Having echo/reverb on a
+prayer is very, very, very cheesy, so please pay attention to it.
 
-If you think it's too much to look after, then just mute the effects and forget it. It's better not to have effects, than to have them when someone prays:)
+If you think it's too much to look after, then just mute the effects and forget it. It's better not to have effects,
+than to have them when someone prays:)
 
 ### Muting the aux / pc
 
-All aux inputs can be muted with the  "AUX / PC" button on the "Mute groups" section (see above). If it is LIT, then it is MUTED.
+All aux inputs can be muted with the  "AUX / PC" button on the "Mute groups" section (see above). If it is LIT, then it
+is MUTED.
 
-This button mutes all inputs from the streaming pc and the projection pc leads. It's best to have them muted all the time, except when you want to play something from any of those computers/leads. 
+This button mutes all inputs from the streaming pc and the projection pc leads. It's best to have them muted all the
+time, except when you want to play something from any of those computers/leads.
 
 Especially have them muted before you unplug/plug it in into something.
 
-
 ## Playing background music
 
-There is an extra 3.5mm trs jack lead dangling around the projection machine, you might connect some device to it to play back music.
+There is an extra 3.5mm trs jack lead dangling around the projection machine, you might connect some device to it to
+play back music.
 
 You might also play back music from the streaming pc.
 
- * Unmute the "AUX / PC group" (see previous paragraphs)
- * Go to the "AUX IN 1-6, USB REC" layer (on the left side)
- * Adjust the volume of the appropriate input (you see on the indicators which one has signal)
-
+* Unmute the "AUX / PC group" (see previous paragraphs)
+* Go to the "AUX IN 1-6, USB REC" layer (on the left side)
+* Adjust the volume of the appropriate input (you see on the indicators which one has signal)
 
 <div style="page-break-after: always;"></div>
 
 # Connecting with applications
 
-It is possible to connect to the console remotely with an application, and basically do everything you might while standing next to the console. What a world we live in!
+It is possible to connect to the console remotely with an application, and basically do everything you might while
+standing next to the console. What a world we live in!
 
-It is not required, but it can come handy sometimes when you are on the stage for example, 
+It is not required, but it can come handy sometimes when you are on the stage for example,
 these apps can spare some kilometers of running back and forth.
 
 Also, if you want to do the mixing outside the cave, you can use a tablet/pc or whatever.
 
-Although, I recommend doing that only after you are really confident with the mixer and the system. Because these applications are a bit harder to use, less user-friendly/intuitive. If some random issue pops up, you might be able to fix it better/faster/easier if you are next to the console, than turning pages and swiping back and forth, etc.
-
+Although, I recommend doing that only after you are really confident with the mixer and the system. Because these
+applications are a bit harder to use, less user-friendly/intuitive. If some random issue pops up, you might be able to
+fix it better/faster/easier if you are next to the console, than turning pages and swiping back and forth, etc.
 
 ## X32 EDIT
 
-If you have any kind of computer, and you are connected to the network, you can install X32 edit. Check the downloads section [here](https://www.behringer.com/product.html?modelCode=P0AAP).
-
+If you have any kind of computer, and you are connected to the network, you can install X32 edit. Check the downloads
+section [here](https://www.behringer.com/product.html?modelCode=P0AAP).
 
 ## Android
 
-I had much success with the app called [Mixing station (org.devcore.mixingstation)](https://play.google.com/store/apps/details?id=org.devcore.mixingstation).
+I had much success with the app
+called [Mixing station (org.devcore.mixingstation)](https://play.google.com/store/apps/details?id=org.devcore.mixingstation).
 
-You might want to download [my settings backup](assets/console/files/android_mixingstation_settings_backup.msz), and load it into the app, to help you started quicker.
-
+You might want to download [my settings backup](assets/console/files/android_mixingstation_settings_backup.msz), and
+load it into the app, to help you started quicker.
 
 # Other applications that might come handy
+
 ## Android
+
 ### Spectrum analyzer
+
 [https://play.google.com/store/apps/details?id=org.intoorbit.spectrum](https://play.google.com/store/apps/details?id=org.intoorbit.spectrum)
 
 ### Instrument tuner aid
+
 [https://play.google.com/store/apps/details?id=de.moekadu.tuner](https://play.google.com/store/apps/details?id=de.moekadu.tuner)
 
 

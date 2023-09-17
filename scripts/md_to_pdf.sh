@@ -36,10 +36,11 @@ margin: 1px;
 border: 1px solid gray;
 }
 
-li {
+a {
+color: #34315b;
 }
 ul, ol {
-padding-bottom: 15px;
+padding-bottom: 10px;
 }
 
 </style>
@@ -60,7 +61,7 @@ cat >>tmp.html <<EOF
 EOF
 
 # Remove TOC
-sed -i '/<!-- TOC -->/,/<!-- TOC -->/d' tmp.html
+#sed -i '/<!-- TOC -->/,/<!-- TOC -->/d' tmp.html
 
 google-chrome --headless --no-pdf-header-footer --print-to-pdf=tmp.pdf tmp.html >/dev/null 2>&1
 

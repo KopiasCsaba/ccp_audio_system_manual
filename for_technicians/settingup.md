@@ -3,52 +3,45 @@
 
 <!-- TOC -->
 * [At the console](#at-the-console)
-  * [Load the appropriate scene](#load-the-appropriate-scene)
-    * [Determine the appropriate scene to load:](#determine-the-appropriate-scene-to-load)
-    * [Loading the scene](#loading-the-scene)
+  * [Loading the scene](#loading-the-scene)
   * [Other things](#other-things)
   * [Set up the sound pressure level (SPL) meter](#set-up-the-sound-pressure-level-spl-meter)
-  * [Prepare the headset](#prepare-the-headset)
 * [Verify main speakers' settings](#verify-main-speakers-settings)
   * [Front speakers](#front-speakers)
   * [Fill speakers](#fill-speakers)
-* [Align the pulpit](#align-the-pulpit)
-* [Reset the stage](#reset-the-stage)
-  * [Resetting the stage mixers](#resetting-the-stage-mixers)
-  * [Verify stage monitor settings & connections](#verify-stage-monitor-settings--connections)
+* [Verify stage monitor settings & connections](#verify-stage-monitor-settings--connections)
     * [Left stage monitor](#left-stage-monitor)
     * [Middle stage monitor](#middle-stage-monitor)
     * [Right stage monitor](#right-stage-monitor)
-  * [Check that everything is working](#check-that-everything-is-working)
+* [Check if everything is working](#check-if-everything-is-working)
   * [Troubleshooting](#troubleshooting)
     * [Common failures](#common-failures)
     * [Stage mixer connection](#stage-mixer-connection)
     * [Verify keyboard connection](#verify-keyboard-connection)
 <!-- TOC -->
+<div style="page-break-after: always;"></div>
 
 # At the console
 
 * Follow the "[Turning on the audio system](../labels/turningon.pdf)" guide posted on the mixer door.
 
-## Load the appropriate scene
 
-### Determine the appropriate scene to load:
-  * If this is a rehearsal: **CCP Service READONLY**
-    * This contains our default settings, please never overwrite it.
-  * If this is the service: **CCP Service**
-    * This is the one you saved on the rehearsal.
 
-### Loading the scene
+## Loading the scene
 
-* Press **VIEW** at the "Scenes" section of the mixer.
-* By **turning the "GO"** knob, scroll to the "CCP Service READONLY".
-* **Press** the "GO" knob to load it.
-* **Press** the "Confirm" knob.
+* Press **{SCENES/VIEW}**.
+* Turn **{Knobs/GO}**: to scroll to the scene you want to load.
+  * If this is a rehearsal: **Service READONLY**
+  * If this is the service: **Service**
+* Press **{Knobs/GO}**: to load the scene.
+* Press **{Knobs/CONFIRM}**: to really load the scene.
 
 ## Other things
 
-* [Turn on the stage](notes_on_the_console.md#muting-the-stage), if you will use it.
-* Set the Main fader to 0.
+* If you will use the stage:
+  * Press **{Assign/STAGE ON}**.
+  * Press **{Knobs/CONFIRM}**.
+* Set **{Main/Fader}** to 0.
 
 ## Set up the sound pressure level (SPL) meter
 
@@ -64,33 +57,8 @@ This device measures the volume (lets say) in the room, and it is located on the
     * Then press the button marked as 3.
 * It should read "SLOW" and "C", as on the image.
 * Put it to the counter and watch it always.
-<br clear="right" style="clear:right"/>
+<br clear="both" style="clear:both"/>
 
-<div style="page-break-after: always;"></div>
-
-## Prepare the headset
-
-Only do this, if the headset will be used, e.g. if there will be preaching.
-
-<img alt="" src="assets/reset/rhodelink.jpg.png"  align="right" style="float:right" width="180">
-
-* Above the mixing console, on the shelf you'll find the battery charger.
-* Based on the labels on the charger, select the appropriate set of batteries.
-* The headset should be there too.
-* Press the button on the headset (see image, point #1)
-* While pressing the button, slide down the back side (see image, point #2)
-* Put batteries in
-* Close it back
-* Turn it on by long pressing the button on top (see image, point #3)
-    * It should lit up green, displaying 8 on the display.
-* Mute/unmute it as needed by a short(er) press. (It turns red if muted.)
-    * Sometimes they ask that you unmute it and they don't need to pay attention.
-    * Sometimes they know how to mute it, and they do it.
-    * And sometimes they forget to unmute it, then you need to signal them.
-
-If the service starts hours later, you can keep it turned off, and only turn it on before it is given to the preacher.
-
-<br clear="right" style="clear:right"/>
 
 <div style="page-break-after: always;"></div>
 
@@ -105,7 +73,7 @@ If the service starts hours later, you can keep it turned off, and only turn it 
 * DSP HPF **OFF**
 * Gray button **NOT** pressed in
 
-<br clear="right" style="clear:right"/>
+<br clear="both" style="clear:both"/>
 
 ## Fill speakers
 
@@ -120,40 +88,7 @@ If the service starts hours later, you can keep it turned off, and only turn it 
 
 <div style="page-break-after: always;"></div>
 
-# Align the pulpit
-
-There is a mark on the floor, align the pulpit to be at the correct position.
-
-<img alt="" src="assets/reset/pulpit.jpg" height="300">
-
-<div style="page-break-after: always;"></div>
-
-# Reset the stage
-
-## Resetting the stage mixers
-
-Reset the stage mixers, but only **BEFORE** a rehearsal. (So don't do it before a service, when they already set it up
-for themselves on the rehearsal.)
-
-There is one mixer in the drum-room too, reset that one also.
-
-The order is important here:
-
-1. Turn it on, if it's not on (switch is on the back side)
-2. Reset the top-knobs as follows (and also on the image):
-    * Equalizers section knobs (first four): **12 o'clock**
-    * Limiter to **MAX**
-    * Level to **3 o'clock**
-3. Recall preset 16:
-    * Press and hold **RECALL**
-    * Press **16**
-    * **Release** RECALL
-
-<img alt="" src="assets/reset/stagemixer.png" height="300"> 
-
-<div style="page-break-after: always;"></div>
-
-## Verify stage monitor settings & connections
+# Verify stage monitor settings & connections
 
 ### Left stage monitor
 
@@ -162,7 +97,7 @@ The order is important here:
 * All 12 o'clock.
 * Check power and signal cable connections, sometimes they become loose.
 
-<br clear="right" style="clear:right"/>
+<br clear="both" style="clear:both"/>
 
 ### Middle stage monitor
 
@@ -171,7 +106,7 @@ The order is important here:
 * All 12 o'clock.
 * Check power and signal cable connections, sometimes they become loose.
 
-<br clear="right" style="clear:right"/>
+<br clear="both" style="clear:both"/>
 
 ### Right stage monitor
 
@@ -180,11 +115,10 @@ The order is important here:
 * This one is a bit damaged, the level should be at 3 o'clock!
 * Check power and signal cable connections, sometimes they become loose.
 
-<br clear="right" style="clear:right"/>
+<br clear="both" style="clear:both"/>
 
-<div style="page-break-after: always;"></div>
 
-## Check that everything is working
+# Check if everything is working
 
 * Turn on the keyboard, and press one of the keys, you should hear it, from all monitors.
 
@@ -214,14 +148,14 @@ There is signal indication, but inaudible?
 
 ### Stage mixer connection
 
+<img align="right" alt="" src="assets/reset/mixer_conn.jpg" height="100">
 Verify that the speakers are connected to **L/MONO**:
-
-<img alt="" src="assets/reset/mixer_conn.jpg" height="100">
+<br style="clear:both">
 
 ### Verify keyboard connection
+<img align="right" src="assets/reset/keyboard.jpg" height="100">
 
 Verify that it is connected properly, sometimes they unplug it for practicing.
+<br style="clear:both">
 
-<img alt="" src="assets/reset/keyboard.jpg" height="100">
 
-<div style="page-break-after: always;"></div>

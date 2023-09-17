@@ -18,6 +18,8 @@ This document is under construction.
   * [Baby-room TV](#baby-room-tv)
 <!-- TOC -->
 
+<div style="page-break-after: always;"></div>
+
 # Main speakers' settings
 
 ## Front speakers
@@ -29,7 +31,7 @@ This document is under construction.
 * DSP HPF **OFF**
 * Gray button **NOT** pressed in
 
-<br clear="right" style="clear:right"/>
+<br clear="both" style="clear:both"/>
 
 ## Fill speakers
 
@@ -52,7 +54,7 @@ This document is under construction.
 * Volume at 9 o'clock
 * DSP preset button NOT pressed in
 
-<br clear="right" style="clear:right"/>
+<br clear="both" style="clear:both"/>
 
 ## Rhode link settings
 
