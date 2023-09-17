@@ -9,6 +9,8 @@
     * [Resources](#resources)
   * [Great resources to learn from](#great-resources-to-learn-from)
   * [Cable & microphone numbering on the stage](#cable--microphone-numbering-on-the-stage)
+* [General notes for technicians](#general-notes-for-technicians)
+  * [Please never share the WiFi password with anyone](#please-never-share-the-wifi-password-with-anyone)
 <!-- TOC -->
 
 ## Church audio system related custom documentation and guides
