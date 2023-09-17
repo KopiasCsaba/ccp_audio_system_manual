@@ -77,7 +77,7 @@ state.
 ## Stage housekeeping
 
 * Fold back unused microphones.
-* Turn down (turn level knob to zero) on monitors that will not be used.
+* Turn down (turn level knob to zero) on stage mixers that will not be used.
 * Clean up, move away obstacles, trash, etc.
 
 ## At the main console

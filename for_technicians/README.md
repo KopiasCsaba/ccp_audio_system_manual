@@ -27,7 +27,6 @@ to the console.
 * What to do during a rehearsal: [WEB](rehearsal.md), [PDF](rehearsal.pdf).
 * What to do during a service: [WEB](service.md), [PDF](service.pdf).
 * Notes on the console: [WEB](notes_on_the_console.md), [PDF](notes_on_the_console.pdf).
-* Closing up procedure: [WEB](closingup.md), [PDF](closingup.pdf).
 
 <br clear="both" style="clear:both"/>
 
@@ -72,3 +71,14 @@ The logic is, that:
 * Close to **Mic1** is now **Inst1** and **Inst2** cables.
 * Close to **Mic3** is the **Inst3** cable.
 * And the stage corner has **Inst4** and **Inst5** cables.
+
+
+# General notes for technicians
+
+## Please never share the WiFi password with anyone
+Our internal systems for streaming, audio, etc. are using the network, and we don't want any interruption in our network.
+
+Often people ask for the password, feel free to give the above explanation.
+If the reason is to be able to read the bible, we have bibles in many languages, point them 
+to those on the shelves.
+
