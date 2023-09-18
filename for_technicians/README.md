@@ -43,7 +43,7 @@ to the console.
 * [How does the stage mixer work?](https://youtu.be/nRDQFHH9zpU)
 * [How does the drum room stage-talkback work?](https://youtu.be/nelw-jKgT6w)
 * [Audio Training: Overview of the audio system and the console](https://youtube.com/watch?v=Z1rGS40XmTA)
-* [Audio training: Rehearsal walkthrough with the console](https://youtu.be/tFCiLzC7iok)
+* [Audio training: Rehearsal walkthrough with the console](https://youtu.be/CDxC-ptjJwU)
 
 ### Resources
 
