@@ -272,9 +272,12 @@ play back music.
 
 You might also play back music from the streaming pc.
 
-* Unmute the "AUX / PC group" (see previous paragraphs)
-* Go to the "AUX IN 1-6, USB REC" layer (on the left side)
-* Adjust the volume of the appropriate input (you see on the indicators which one has signal)
+* If **{Mute Groups/AUX / PC}** is red, then press it to unmute.
+* Press **{LAYERS/AUX}** to select the aux layer.
+* Adjust the volume of the appropriate input.
+  * Check the LED indicators below the SELECT buttons to see which channels got input signals.
+* You might also want to adjust the AUX group fader, on the right side of the mixer.
+  * e.g. if it's on -60 then you'll hear nothing no matter how much you have on the left.
 
 <div style="page-break-after: always;"></div>
 
