@@ -62,7 +62,7 @@ Use the remote control labeled "CENTURY", it is above the console on the shelf u
 
 # About the STREAM lifecycle on sundays
 
-* 10:00: It will start to stream automatically with the "PRE-STREAM" scene
+* 10:01: It will start to stream automatically with the "PRE-STREAM" scene
     * This helps people to tune in, check audio and video settings, etc.
 * 10:30: It will switch to the "PULPIT" scene, turn the camera there and hide the projector input, unmute the input,
   start recording, etc.
