@@ -1,7 +1,5 @@
 <h1>For Online Managers</h1>
 
-<h2>Table of contents</h2>
-
 
 # Download the recording
 
