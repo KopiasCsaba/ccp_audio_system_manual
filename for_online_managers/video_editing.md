@@ -2,11 +2,6 @@
 
 <h2>Table of contents</h2>
 
-<!-- TOC -->
-* [Download the recording](#download-the-recording)
-* [Trim beginning and end if needed](#trim-beginning-and-end-if-needed)
-* [Upload the recording](#upload-the-recording)
-<!-- TOC -->
 
 # Download the recording
 

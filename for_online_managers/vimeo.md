@@ -1,12 +1,6 @@
 <h1>How to handle YouTube</h1>
 <hr>
 
-<!-- TOC -->
-* [Upload the video](#upload-the-video)
-* [Set video details](#set-video-details)
-* [Add it to the proper playlist](#add-it-to-the-proper-playlist)
-<!-- TOC -->
-
 # Upload the video
 
 Upload the video to
