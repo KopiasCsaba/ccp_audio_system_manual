@@ -3,13 +3,16 @@
 <h2>Table of contents</h2>
 
 <!-- TOC -->
-* [How tos](#how-tos)
+* [Steps to process our recordings](#steps-to-process-our-recordings)
+* [Assets](#assets)
 <!-- TOC -->
 
-# How tos
+# Steps to process our recordings
 
-* How to manage [YouTube](youtube.md)
-* How to manage [Facebook](facebook.md)
+1. [Download and edit](video_editing.md)
+1. [Upload to YouTube](youtube.md)
+1. [Upload to Facebook](facebook_video.md)
+1. [Upload to Vimeo](vimeo.md)
 
 # Assets
 Various assets can be found in the [assets](assets) folder.
