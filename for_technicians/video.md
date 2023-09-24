@@ -1,79 +1,22 @@
 <h1>DOING THE LIVE STREAM</h1>
 <hr>
 
-<!-- TOC -->
-* [Console first!](#console-first)
-* [Turning on the sockets](#turning-on-the-sockets)
-* [Turn on the PC:](#turn-on-the-pc)
-* [Turn on all the TVs](#turn-on-all-the-tvs)
-  * [Screen on the pole](#screen-on-the-pole)
-  * [Coffee shop screen](#coffee-shop-screen)
-* [About the STREAM lifecycle on sundays](#about-the-stream-lifecycle-on-sundays)
-* [Troubleshooting](#troubleshooting)
-  * [No audio input coming to OBS](#no-audio-input-coming-to-obs)
-  * [No audio in the office TV](#no-audio-in-the-office-tv)
-  * [Restarting the stream on one of the platforms](#restarting-the-stream-on-one-of-the-platforms)
-    * [About our YouTube stream](#about-our-youtube-stream)
-      * [Restarting the YouTube stream](#restarting-the-youtube-stream)
-    * [About our Facebook stream](#about-our-facebook-stream)
-      * [Restarting the Facebook stream](#restarting-the-facebook-stream)
-    * [Restarting just one platform's stream](#restarting-just-one-platforms-stream)
-<!-- TOC -->
 
 
-<div style="page-break-after: always;"></div>
 
-# Console first!
+# STREAM lifecycle on sundays
 
-The console must be turned on first (see [turning on the audio system guide](../labels/turningon.pdf)),
-so if you got there first, then just turn on the Mixer first with the socket, and then proceed.
-
-# Turning on the sockets
-
-Make sure to have the sockets with the following labels turned on:
-
-1. Screens, projector, sockets:
-1. Screens
-1. Networking
-1. PC+Others (it is below the shelf above the console)
-
-# Turn on the PC:
-
-The power button is on the top:
-
-<img alt="" src="assets/video/pc_button.jpg" height="300">
-
-<div style="page-break-after: always;"></div>
-
-# Turn on all the TVs
-
-## Screen on the pole
-
-Use the remote control labeled "CENTURY", it is above the console on the shelf usually:
-
-<img alt="" src="assets/video/century_remote.jpg" height="140">
-
-## Coffee shop screen
-
-* Pull it out to face the audience.
-* The button is in the bottom center.
-
-<img alt="" src="assets/video/lg.jpg" height="300">
-
-# About the STREAM lifecycle on sundays
-
-* 10:01: It will start to stream automatically with the "PRE-STREAM" scene
+* **10:01:** It will start to stream automatically with the "PRE-STREAM" scene
     * This helps people to tune in, check audio and video settings, etc.
-* 10:30: It will switch to the "PULPIT" scene, turn the camera there and hide the projector input, unmute the input,
-  start recording, etc.
-    * This is when the announcements, and the service starts.
-* Camera movements: the camera will move based on the audio technician's handling of the mute status of the
-  stage/pulpit.
-    * If the headset is unmuted OR the pulpit is unmuted, OR the stage is muted: camera pans to pulpit
-    * If the headset is muted AND the pulpit is muted, AND the stage is unmuted: camera pans to stage
-* 12:10: The end-of-stream scene will become active on the preview side only.
-    * At the end of the service, after our blessing, someone should make this scene active.
-    * Making this scene active will stop the recording and the live stream also.
+* **10:30:** It will switch to the "PULPIT" scene, turn the camera there, etc.
+
+* **During the service:** the camera will move based on the audio technician's handling of the microphone mutes.
+
+* **11:50:** The end-of-stream scene will become active on the preview side only, this causes nothing yet.
+
+* **AFTER THE BLESSING:**
+  * **YOU** should press the "Transition" button to make the final scene active.
+  * This will stop the recording and the live stream also.
 
 <div style="page-break-after: always;"></div>
 

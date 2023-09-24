@@ -39,8 +39,9 @@ border: 1px solid gray;
 a {
 color: #34315b;
 }
+
 ul, ol {
-padding-bottom: 10px;
+padding-bottom: 7px;
 }
 
 </style>

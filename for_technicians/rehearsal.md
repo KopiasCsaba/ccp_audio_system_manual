@@ -58,19 +58,20 @@ but alternatively you can consult about this with the worship leader also.
 For all the stage mixers, including the one in the drum room, do the following, to reset them to their default working
 state.
 
+<img alt="" src="assets/reset/stagemixer.png" height="300">
+
 (Order is important here!)
 
 1. Turn it on, if it's not on (switch is on the back side)
 2. Reset the top-knobs as follows (and also on the image):
-    * Equalizers section knobs (first four): **12 o'clock**
-    * Limiter to **MAX**
+     * Equalizers section knobs (first four): **12 o'clock**
+     * Limiter to **MAX**
     * Level to **3 o'clock**
 3. Recall preset 16:
-    * Press and hold **RECALL**
-    * Press **16**
+     * Press and hold **RECALL**
+     * Press **16**
     * **Release** RECALL
 
-<img alt="" src="assets/reset/stagemixer.png" height="300"> 
 
 <div style="page-break-after: always;"></div>
 
@@ -161,12 +162,7 @@ Wait for the band to arrive:)
 
 ## Gain staging
 
-Go through:
-
-* **Vocal mics 1 to 6**, and
-* **Instruments 1 to 5**
-
-and for each used channel, check & adjust the gain setting. No need to gain-stage the drums and the keyboard.
+Go through: **Vocal mics 1 to 6** **Instruments 1 to 5** and for each used channel, check & adjust the gain setting. No need to gain-stage the drums and the keyboard.
 
 1. **Have input signal**: In order to set the gain level, we must have input, e.g. they must sing or play the
    instrument.
@@ -177,7 +173,7 @@ and for each used channel, check & adjust the gain setting. No need to gain-stag
     * Make sure to set the gain only when a normal, regular input is coming through. This is very important.
 
     <img src="assets/console/gainstaging.png" height="170"/>
-
+ 
 2. Press **{Layers/VOCAL}** OR **{Layers/INSTR}**: to select the right layer.
 3. Press **{Channel X/SELECT}**: to select the channel for which you want to set the gain.
     * See image, point #1.
@@ -188,12 +184,13 @@ and for each used channel, check & adjust the gain setting. No need to gain-stag
       The same goes for instruments.
 6. Adjust the **{GAIN}** knob at the console's top left corner if needed.
     * Do it until the signal jumps around -18 db.
+    * If you need turn it all the way to the top, you generally want to look out for why. 
+      * Maybe the person is far, not singing on a proper volume, etc.
 
 7. Repeat this section for the next vocal or instrument channel that is in use, or continue if finished.
 
 **Channel gain should not be changed after this initial setup.**
 
-<div style="page-break-after: always;"></div>
 
 ## Save the scene
 

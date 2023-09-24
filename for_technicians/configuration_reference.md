@@ -80,3 +80,11 @@ Todo...
 ## Baby-room TV
 Todo...
 
+# Streaming PC
+ * Disable "peeking" in performance settings
+   * Open Visual Effects Performance Options (SystemPropertiesPerformance.exe)
+   * Disable "Enable peek"
+   * Reason: live screens might be disturbed during services
+ * Enable the automatic start of "Windows Time service" so time would be synced always.
+   * Reason: the service live stream is timed, and have started at the wrong minute.
+

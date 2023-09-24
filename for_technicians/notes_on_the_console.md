@@ -165,6 +165,35 @@ This sets how much effect(nowadays we only use reverbs) is being added to the mi
 
 <div style="page-break-after: always;"></div>
 
+# Listening in (using the headphones, SOLO)
+
+There is a headphone connected to the console:
+
+<img alt="" src="assets/console/headphones.jpg"  height="350">
+
+You can use it to listen in on ANYTHING, specific channels, groups, etc.
+
+## Press the Solo Clear
+First press the solo clear to make sure you are not listening-in on something you don't want to hear.
+
+
+<img alt="" src="assets/console/clearsolo.png"  height="350">
+
+
+## Press the SOLO button(s)
+Press any of the solo buttons, to start listening-in:
+
+<img alt="" src="assets/console/solos.png"  height="350">
+
+You can actually press more than one, to listen in on more things at once.
+
+
+## Adjust volume
+
+You can adjust the volume (in the headphones), by the "PHONES LEVEL" knob at the top of the console.
+
+<img alt="" src="assets/console/phoneslevel.png"  >
+
 # Talkback
 
 <img alt="" src="assets/console/talkback.png"  height="153">
