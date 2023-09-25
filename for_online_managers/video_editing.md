@@ -39,6 +39,8 @@ The video is saved next to the input videos, and in this case, you want to use t
 * Breaks: Bible-school classes usually have a long break in the middle.
 * End: After the "Thank you for joining us" end screen, or after the blessing prayer from 2Cor13:14.
 
+## Trimming, cutting
+
 1. Start [LosslessCut](installing_losslesscut.md)
 2. File -> Open
 3. Select the video file
