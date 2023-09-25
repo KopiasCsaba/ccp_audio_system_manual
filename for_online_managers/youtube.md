@@ -1,4 +1,4 @@
-<h1>How to handle YouTube</h1>
+<h1>Managing YouTube</h1>
 <hr>
 
 <!-- TOC -->

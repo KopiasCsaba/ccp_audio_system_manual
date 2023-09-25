@@ -1,7 +1,15 @@
 <h1>Managing Facebook</h1>
-<hr>
 
+----
 
+<h2>Table of contents</h2>
+
+<!-- TOC -->
+* [Upload the video](#upload-the-video)
+* [Set video details](#set-video-details)
+* [Manage the live recording](#manage-the-live-recording)
+* [Scheuling the facebook live events](#scheuling-the-facebook-live-events)
+<!-- TOC -->
 
 # Upload the video
 
