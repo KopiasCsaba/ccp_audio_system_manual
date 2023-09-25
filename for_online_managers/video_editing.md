@@ -2,23 +2,44 @@
 
 <!-- TOC -->
 * [1) Download the recording](#1-download-the-recording)
-* [2) Trim beginning and end if needed](#2-trim-beginning-and-end-if-needed)
-* [3) Exporting a frame for thumbnail](#3-exporting-a-frame-for-thumbnail)
-* [4) Upload the recording](#4-upload-the-recording)
-* [5) Upload the Thumbnail](#5-upload-the-thumbnail)
+* [2) Concatenate if needed](#2-concatenate-if-needed)
+* [3) Trim beginning and end if needed](#3-trim-beginning-and-end-if-needed)
+  * [Cut points to be aware:](#cut-points-to-be-aware)
+* [4) Exporting a frame for thumbnail](#4-exporting-a-frame-for-thumbnail)
+* [5) Upload the recording](#5-upload-the-recording)
+* [6) Upload the Thumbnail](#6-upload-the-thumbnail)
 <!-- TOC -->
 
 # 1) Download the recording
 
 From [StreamPcObsRecordings](https://drive.google.com/drive/folders/1hNNs13uH2axNPDnkZgHyR10jpfO7UVrc)
+# 2) Concatenate if needed
 
-# 2) Trim beginning and end if needed
+Concatenation is a serious sickness, that happens to video files. Just kidding.
+So that is when you join multiple videos together.
+Sometimes, technical issues might break up the recording into multiple parts. Thats when you need to combine them first.
 
+Use the free, open-source tool called [LosslessCut](https://github.com/mifi/lossless-cut), to edit the video.
+Learn how to install LosslessCut [here.](installing_losslesscut.md)
+
+
+1. Start LosslessCut
+2. File -> Open
+3. Select the video files
+4. Tools -> Merge/Concatenate video files
+5. Press [MERGE]
+
+The video is saved next to the input videos, and in this case, you want to use that in the next steps, instead of the separate parts.
+
+
+# 3) Trim beginning and end if needed
+
+## Cut points to be aware:
 * Beginning: Before the person doing the announcements just about to start to speak
+* Breaks: Bible-school classes usually have a long break in the middle.
 * End: After the "Thank you for joining us" end screen, or after the blessing prayer from 2Cor13:14.
 
 Use the free, open-source tool called [LosslessCut](https://github.com/mifi/lossless-cut), to edit the video.
-
 Learn how to install LosslessCut [here.](installing_losslesscut.md)
 
 1. Start LosslessCut
@@ -51,7 +72,7 @@ You should reach something like this:
 
 The file will be saved next to where you have downloaded the video.
 
-# 3) Exporting a frame for thumbnail
+# 4) Exporting a frame for thumbnail
 
 If you need/want to make a thumbnail out of a frame in the video, follow these steps.
 
@@ -62,7 +83,7 @@ If you need/want to make a thumbnail out of a frame in the video, follow these s
 
 The file will be saved next to where you have downloaded the video.
 
-# 4) Upload the recording
+# 5) Upload the recording
 
 We archive our recordings together with the thumbnails regularly from google drive, thats why
 we ask you to upload the edited files too.
@@ -82,7 +103,7 @@ Example:
 
 `2023-07-30 Right with God - Romans 3:9-31 - Pastor Stephen Clarke`
 
-# 5) Upload the Thumbnail
+# 6) Upload the Thumbnail
 
 If you made a thumbnail, please also upload that to
 the [thumbnails](https://drive.google.com/drive/folders/1G_yGUalItjvr9RIatlAt7c1_WIkqtqAj) folder.
