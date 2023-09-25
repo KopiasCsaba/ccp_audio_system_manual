@@ -1,9 +1,13 @@
 <h1>CONFIGURATION REFERENCE</h1>
-<hr>
+----
+
+<h2>Table of contents</h2>
+
 
 This document is under construction.
 
 <!-- TOC -->
+  * [<h1>CONFIGURATION REFERENCE</h1>](#h1configuration-referenceh1)
 * [Main speakers' settings](#main-speakers-settings)
   * [Front speakers](#front-speakers)
   * [Fill speakers](#fill-speakers)
@@ -16,6 +20,7 @@ This document is under construction.
 * [Hardware](#hardware)
   * [Camera](#camera)
   * [Baby-room TV](#baby-room-tv)
+* [Streaming PC](#streaming-pc)
 <!-- TOC -->
 
 <div style="page-break-after: always;"></div>

@@ -2,10 +2,10 @@
 
 # Steps to process our recordings
 
-1. [Download and edit](video_editing.md)
+1. [Download / Edit / Upload](video_editing.md)
+1. [Upload to Vimeo](vimeo.md)
 1. [Upload to YouTube](youtube.md)
 1. [Upload to Facebook](facebook_video.md)
-1. [Upload to Vimeo](vimeo.md)
 
 # Assets
 

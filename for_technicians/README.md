@@ -1,5 +1,8 @@
-<h1>For technicians: table of contents</h1>
+<h1>For technicians</h1>
 
+----
+
+<h2>Table of contents</h2>
 
 <!-- TOC -->
   * [Church audio system related custom documentation and guides](#church-audio-system-related-custom-documentation-and-guides)

@@ -10,8 +10,9 @@
 
 # Upload the video
 
-Upload the video to
-our [channel](https://studio.youtube.com/channel/UC0uEys0VihIMmJFFL1Swj8g/videos/upload?filter=%5B%5D&sort=%7B%22columnType%22%3A%22date%22%2C%22sortOrder%22%3A%22DESCENDING%22%7D).
+Upload the video to our [channel](https://studio.youtube.com/channel/UC0uEys0VihIMmJFFL1Swj8g/videos/upload?filter=%5B%5D&sort=%7B%22columnType%22%3A%22date%22%2C%22sortOrder%22%3A%22DESCENDING%22%7D).
+If the video is on vimeo already, you could ask Vimeo to upload it to our channel. [Learn more](vimeo.md#publish-from-vimeo-to-youtube-and-facebook).
+
 
 # Set video details
 

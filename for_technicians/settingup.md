@@ -1,5 +1,8 @@
 <h1>SETTING UP THE SYSTEM</h1>
-<hr>
+
+----
+
+<h2>Table of contents</h2>
 
 <!-- TOC -->
 * [At the console](#at-the-console)

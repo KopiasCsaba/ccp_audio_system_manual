@@ -1,17 +1,13 @@
 <h1>Managing Facebook</h1>
 <hr>
 
-<!-- TOC -->
-* [Upload the video](#upload-the-video)
-* [Set video details](#set-video-details)
-* [Manage the live recording](#manage-the-live-recording)
-* [Scheuling the facebook live events](#scheuling-the-facebook-live-events)
-<!-- TOC -->
+
 
 # Upload the video
 
-Upload the video to
-our [facebook page](https://www.facebook.com/profile.php?id=100064617556957&sk=videos).
+Upload the video to our [facebook page](https://www.facebook.com/profile.php?id=100064617556957&sk=videos).
+If the video is on vimeo already, you could ask Vimeo to upload it to our
+channel. [Learn more](vimeo.md#publish-from-vimeo-to-youtube-and-facebook).
 
 # Set video details
 

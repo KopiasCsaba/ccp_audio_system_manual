@@ -1,5 +1,8 @@
 <h1>TASKS ON A REHEARSAL</h1>
-<hr>
+
+----
+
+<h2>Table of contents</h2>
 
 
 <!-- TOC -->

@@ -1,5 +1,9 @@
 <h1>NOTES ON THE CONSOLE</h1>
-<hr>
+
+----
+
+<h2>Table of contents</h2>
+
 
 <!-- TOC -->
 * [LAYERS, CHANNELS!](#layers-channels)
@@ -13,6 +17,10 @@
   * [Drums](#drums)
   * [Aux](#aux)
   * [FX](#fx)
+* [Listening in (using the headphones, SOLO)](#listening-in-using-the-headphones-solo)
+  * [Press the Solo Clear](#press-the-solo-clear)
+  * [Press the SOLO button(s)](#press-the-solo-buttons)
+  * [Adjust volume](#adjust-volume)
 * [Talkback](#talkback)
 * [Tips and tricks](#tips-and-tricks)
   * [Never "select" the group channels](#never-select-the-group-channels)

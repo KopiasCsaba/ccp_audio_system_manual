@@ -1,5 +1,9 @@
 <h1>TASKS ON A SERVICE</h1>
-<hr>
+
+----
+
+<h2>Table of contents</h2>
+
 
 <!-- TOC -->
 * [Before the service](#before-the-service)
