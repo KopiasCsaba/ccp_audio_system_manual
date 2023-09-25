@@ -23,7 +23,7 @@ Use the free, open-source tool called [LosslessCut](https://github.com/mifi/loss
 Learn how to install LosslessCut [here.](installing_losslesscut.md)
 
 
-1. Start LosslessCut
+1. Start [LosslessCut](installing_losslesscut.md)
 2. File -> Open
 3. Select the video files
 4. Tools -> Merge/Concatenate video files
@@ -39,10 +39,7 @@ The video is saved next to the input videos, and in this case, you want to use t
 * Breaks: Bible-school classes usually have a long break in the middle.
 * End: After the "Thank you for joining us" end screen, or after the blessing prayer from 2Cor13:14.
 
-Use the free, open-source tool called [LosslessCut](https://github.com/mifi/lossless-cut), to edit the video.
-Learn how to install LosslessCut [here.](installing_losslesscut.md)
-
-1. Start LosslessCut
+1. Start [LosslessCut](installing_losslesscut.md)
 2. File -> Open
 3. Select the video file
 4. Mark regions:
