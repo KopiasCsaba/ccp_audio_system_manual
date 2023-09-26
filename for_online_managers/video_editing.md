@@ -5,6 +5,7 @@
 * [2) Concatenate if needed](#2-concatenate-if-needed)
 * [3) Trim beginning and end if needed](#3-trim-beginning-and-end-if-needed)
   * [Cut points to be aware:](#cut-points-to-be-aware)
+  * [Trimming, cutting](#trimming-cutting)
 * [4) Exporting a frame for thumbnail](#4-exporting-a-frame-for-thumbnail)
 * [5) Upload the recording](#5-upload-the-recording)
 * [6) Upload the Thumbnail](#6-upload-the-thumbnail)
@@ -59,12 +60,12 @@ The video is saved next to the input videos, and in this case, you want to use t
         * Mark the end by pressing the "End current segment" button.
             *  <img src="assets/video/llc-buttons-out.png">
 
-You can have multiple regions, if you want to cut something out, but most of the time we only trim the beginning and the
-end.
-
-You should reach something like this:
-
-<img src="assets/video/llc-regions.png">
+    You can have multiple regions, if you want to cut something out, but most of the time we only trim the beginning and the
+    end.
+    
+    You should reach something like this:
+    
+    <img src="assets/video/llc-regions.png">
 
 5. Make sure, that the top right selection is "Merge cuts".
 6. Press the "Export+Merge" button.

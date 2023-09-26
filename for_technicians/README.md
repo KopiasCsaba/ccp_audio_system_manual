@@ -33,13 +33,13 @@ to the console.
 * What to do during a service: [WEB](service.md), [PDF](service.pdf).
 * Notes on the console: [WEB](notes_on_the_console.md), [PDF](notes_on_the_console.pdf).
 
+
 <br clear="both" style="clear:both"/>
 
 ### Live-streaming & video
 
-(This section is under construction.)
-
 * Handling live streaming: [WEB](video.md), [PDF](video.pdf).
+* Doing A/V for bibleschool: [WEB](other_guides/bibleschool_av.md), [PDF](other_guides/bibleschool_av.pdf).
 
 ### Training videos
 

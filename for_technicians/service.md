@@ -8,17 +8,20 @@
 <!-- TOC -->
 * [Before the service](#before-the-service)
   * [Align the pulpit](#align-the-pulpit)
-* [Prepare for live-streaming](#prepare-for-live-streaming)
-  * [Turn on the sockets](#turn-on-the-sockets)
-  * [Turn on the pole-TV](#turn-on-the-pole-tv)
-  * [Turn on the coffee-shop TV](#turn-on-the-coffee-shop-tv)
-  * [Turn on the PC](#turn-on-the-pc)
-  * [LOG IN](#log-in)
-  * [During worship](#during-worship)
-  * [During preaching](#during-preaching)
-  * [During worship, when someone speaks or prays](#during-worship-when-someone-speaks-or-prays)
-  * [Close up](#close-up)
+  * [Prepare for live-streaming](#prepare-for-live-streaming)
+    * [Turn on the sockets](#turn-on-the-sockets)
+    * [Turn on the pole-TV](#turn-on-the-pole-tv)
+    * [Turn on the coffee-shop TV](#turn-on-the-coffee-shop-tv)
+    * [Turn on the PC](#turn-on-the-pc)
+    * [LOG IN](#log-in)
+  * [Prepare the headset](#prepare-the-headset)
+* [During service](#during-service)
+* [During worship](#during-worship)
+  * [When someone speaks or prays](#when-someone-speaks-or-prays)
+* [During preaching](#during-preaching)
+* [Closing](#closing)
 <!-- TOC -->
+
 <div style="page-break-after: always;"></div>
 
 # Before the service
@@ -35,17 +38,17 @@ There is a mark on the floor, align the pulpit to be at the correct position.
 
 <div style="page-break-after: always;"></div>
 
-# Prepare for live-streaming
+## Prepare for live-streaming
 You should do this section before 09:50, as timed operations will start the streaming after that.
 
-## Turn on the sockets
+### Turn on the sockets
 
 1. "Screens, projector, sockets" (close to the light switches, below the counter)
 2. "Screens" (between pc screens & console)
 3. "Networking"  (between pc screens & console)
 4. "PC+Others" (it is below the shelf above the console)
 
-## Turn on the pole-TV
+### Turn on the pole-TV
 
 <img alt="" src="assets/video/century_remote.jpg"  align="right" style="float:right" height="100">
 <img alt="" src="assets/video/poletv.jpg" align="right" style="float:right" height="100">
@@ -55,7 +58,7 @@ Use the remote control labeled "CENTURY", it is above the console on the shelf u
 <br clear="both" style="clear:both"/>
 
 
-## Turn on the coffee-shop TV
+### Turn on the coffee-shop TV
 
 <img alt="" src="assets/video/lg.jpg" height="150">
 
@@ -63,7 +66,7 @@ Use the remote control labeled "CENTURY", it is above the console on the shelf u
 * The button is in the bottom center.
 
 
-## Turn on the PC
+### Turn on the PC
 <img alt="" src="assets/video/pc_button.jpg" align="right" style="float:right" height="100">
 
 The power button is on the top:
@@ -71,9 +74,11 @@ The power button is on the top:
 
 <br clear="both" style="clear:both"/>
 
-## LOG IN
+### LOG IN
 
-Aftert the PC booted, enter the password.
+After the PC booted, enter the password.
+
+<div style="page-break-after: always;"></div>
 
 ## Prepare the headset
 
@@ -98,12 +103,13 @@ If the service starts hours later, you can keep it turned off, and only turn it 
 <br clear="both" style="clear:both"/>
 
 <div style="page-break-after: always;"></div>
-## During service
+
+# During service
 
 * Always make sure to mute/unmute the right combination of STAGE / PULPIT / HEADSET. 
 * Only **one of these three** should be unmuted at a time, generally.
 
-## During worship
+# During worship
 
 * Constantly monitor:
     * Did you turn off the preaching mics?
@@ -114,7 +120,12 @@ If the service starts hours later, you can keep it turned off, and only turn it 
     * Is there anything that bothers your ear?
 * **PUT YOUR HEAD OUT** to hear what is really going on.
 
-## During preaching
+## When someone speaks or prays
+
+* Mute the effects! Having effect on praying or preaching is very cheesy.
+* If it's too much to pay attention to, that's all right, then mute the effects once and forget it:)
+
+# During preaching
 
 * Constantly monitor:
     * Is the stage turned off?
@@ -122,14 +133,10 @@ If the service starts hours later, you can keep it turned off, and only turn it 
     * The volume is correct?
     * Is there any distortion?
 
-## During worship, when someone speaks or prays
-
-* Mute the effects! Having effect on praying or preaching is very cheesy.
-* If it's too much to pay attention to, that's all right, then mute the effects once and forget it:)
-
 <div style="page-break-after: always;"></div>
 
-## Close up
+# Closing
+
 * Turn off the coffee shop TV.
 
 * Restore all custom changes on the stage, if you made any.
@@ -142,8 +149,16 @@ If the service starts hours later, you can keep it turned off, and only turn it 
     * Take out the batteries and put them back into the charger, to the same spot they were in.
     * Put the headset back to the shelf above the console too.
 
-* Please wait until the uploading of the recording finishes (keep the PC on).
-  * Just make sure there are ?? minutes between the end of the service and turning off the PC, it sync up automatically.
+
+* Wait for the recordings to upload.
+
+   **If you can**, please wait about 15 minutes to pass between the end of the live-streaming, and turning off the PC.
+   The computer automatically uploads the recordings of this event, so that our crew could edit/upload/manage it.
+
+   You can check on the status by clicking on the:
+   **System tray → Google Drive icon**, and verifying that a file with today's date is being/was uploaded.
+
+   <img src="assets/streampc/drive_sync.png"  height="200">
 
 
 * Follow the "[Turning off the audio system](../labels/turningoff.pdf)" guide posted on the mixer door.

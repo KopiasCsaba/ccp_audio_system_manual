@@ -1,9 +1,6 @@
 <h1>DOING THE LIVE STREAM</h1>
 <hr>
 
-
-
-
 # STREAM lifecycle on sundays
 
 * **10:01:** It will start to stream automatically with the "PRE-STREAM" scene
