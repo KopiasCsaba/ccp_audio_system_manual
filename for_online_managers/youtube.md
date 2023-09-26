@@ -18,6 +18,13 @@ If the video is on vimeo already, you could ask Vimeo to upload it to our channe
 
 Please follow the guidelines in [video metadata templates](video_metadata_templates.md).
 
+Important: The order in which you "publish" videos are important, as
+that will be the final unchangeable "video date", and it determines the order 
+in which the videos will be listed.
+
+So please make sure to keep the order of recordings as much as possible to reflect
+their real in-time order.
+
 # Add it to the proper playlist
 
 * Sunday messages go to "Sunday Messages"
