@@ -1,20 +1,5 @@
 <h1>For technicians</h1>
 
-----
-
-<h2>Table of contents</h2>
-
-<!-- TOC -->
-  * [Church audio system related custom documentation and guides](#church-audio-system-related-custom-documentation-and-guides)
-    * [Audio](#audio)
-    * [Live-streaming & video](#live-streaming--video)
-    * [Training videos](#training-videos)
-    * [Resources](#resources)
-  * [Great resources to learn from](#great-resources-to-learn-from)
-  * [Cable & microphone numbering on the stage](#cable--microphone-numbering-on-the-stage)
-* [General notes for technicians](#general-notes-for-technicians)
-  * [Please never share the WiFi password with anyone](#please-never-share-the-wifi-password-with-anyone)
-<!-- TOC -->
 
 ## Church audio system related custom documentation and guides
 
