@@ -1,5 +1,9 @@
 <h1>HOW TO DO A/V FOR BIBLESCHOOL</h1>
-<hr>
+
+----
+
+<h2>Table of contents</h2>
+
 
 <!-- TOC -->
 * [Turning on](#turning-on)
