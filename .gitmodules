@@ -1,3 +1,3 @@
-[submodule "setup/strempc/obs_scene_assets/SDGStreamingJourney"]
-	path = setup/strempc/obs_scene_assets/SDGStreamingJourney
+[submodule "setup/streampc/obs_scene_assets/SDGStreamingJourney"]
+	path = setup/streampc/obs_scene_assets/SDGStreamingJourney
 	url = https://github.com/KopiasCsaba/SDGStreamingJourney.git
