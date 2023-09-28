@@ -1,0 +1,29 @@
+connectors:
+  youtube:
+    configs:
+      - name: "church_youtube"
+        client_secret: "./static/ccp_client_secret_desktop.json"
+#        stream_key_name: "ccpstreamkey"
+        stream_key_name: "ccp_service_key"
+        broadcast_privacy_status: "public"
+
+streams:
+  - name: "general"
+    connector: "youtube"
+    config: "church_youtube"
+    title: "Calvary Chapel Paphos Live Stream"
+    description: "Welcome to the live stream of Calvary Chapel Paphos!"
+
+  - name: "sunday_service"
+    connector: "youtube"
+    config: "church_youtube"
+    title: "Church Service"
+    description: "Welcome to the live stream of Calvary Chapel Paphos!"
+
+  - name: "bible_school"
+    connector: "youtube"
+    config: "church_youtube"
+    title: "Bibleschool"
+    description: "Welcome to the live stream of Calvary Chapel Paphos!"
+
+

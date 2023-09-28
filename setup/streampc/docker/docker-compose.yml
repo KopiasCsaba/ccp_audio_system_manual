@@ -1,0 +1,44 @@
+version: "3"
+services:
+  restreamer:
+    image: datarhei/restreamer
+    container_name: restreamer
+    ports:
+      - 1935:1935
+      - 8080:8080
+    volumes:
+      - './restreamer/volumes/restreamer/config:/core/config'
+      - './restreamer/volumes/restreamer/data:/core/data'
+    environment:
+      - RS_LOGLEVEL=4
+      - RS_TIMEZONE=EET
+      - RS_SNAPSHOT_INTERVAL=1m
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: any
+        delay: 5s
+        window: 10s
+        
+  console-obs-bridge:
+    hostname: console-obs-bridge
+    container_name: console-obs-bridge
+    image: console-obs-bridge
+    platform: linux/amd64
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: prod
+    volumes:
+      - type: bind
+        source: ./console-obs-bridge/config/
+        target: /core/config/
+    network_mode: host
+    environment:
+      - APP_CONFIG_FILE=/core/config/ccp-oscbridge.yml
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: any
+        delay: 5s
+        window: 10s

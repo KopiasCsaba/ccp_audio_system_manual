@@ -1,0 +1,312 @@
+app:
+  # s a regi de vszg jobb
+  # l az uj, de nem annyira jo
+  # osc_implementation: dummy
+  #  osc_implementation: osc_s
+  osc_implementation: osc_l
+  debug:
+    debug_tasks: true
+    debug_obs_remote: false
+    debug_osc_conditions: true
+    debug_osc_connection: false
+
+obs:
+  host: 192.168.2.118
+  port: 4455
+  password: "WoodenTableWithPineapple"
+
+console:
+  host: 192.168.2.99
+  port: 10023
+  check_address: /ch/01/mix/on
+  check_pattern: "^0|1$"
+  subscriptions:
+    - osc_command:
+        address: /subscribe
+        arguments:
+          - type: string
+            value: /ch/01/mix/on
+          - type: float32
+            value: 50
+      repeat_millis: 8000
+    - osc_command:
+        address: /subscribe
+        arguments:
+          - type: string
+            value: /ch/02/mix/on
+          - type: int32
+            value: 50
+      repeat_millis: 8000
+    - osc_command:
+        address: /subscribe
+        arguments:
+          - type: string
+            value: /config/userrout/in/09
+          - type: int32
+            value: 50
+      repeat_millis: 8000
+
+
+
+
+dummy_console:
+  iteration_speed_secs: 10
+  message_groups:
+    - name: mic_1_on
+      osc_commands:
+        - address: /ch/01/mix/on
+          comment: "headset mute (0: muted, 1: unmuted)"
+          arguments:
+            - type: int32
+              value: 1
+    #    - name: mic_1_off
+    #      osc_commands:
+    #        - address: /ch/01/mix/on
+    #          comment: "headset mute (0: muted, 1: unmuted)"
+    #          arguments:
+    #            - type: int32
+    #              value: 0
+    #
+    #    - name: preacher_mic_1_on_stage_off
+    #      osc_commands:
+    #        - address: /ch/01/mix/on
+    #          comment: "headset mute (0: muted, 1: unmuted)"
+    #          arguments:
+    #            - type: int32
+    #              value: 1
+    #        - address: /ch/02/mix/on
+    #          comment: "pulpit mute (0: muted, 1 unmuted)"
+    #          arguments:
+    #            - type: int32
+    #              value: 0
+    #        - address: /config/userrout/in/09
+    #          comment: "stage mute (0: muted, 33 unmuted)"
+    #          arguments:
+    #            - type: int32
+    #              value: 0
+    #    - name: preacher_mic_2_on_stage_off
+    #      osc_commands:
+    #        - address: /ch/01/mix/on
+    #          comment: "headset mute (0: muted, 1: unmuted)"
+    #          arguments:
+    #            - type: int32
+    #              value: 0
+    #        - address: /ch/02/mix/on
+    #          comment: "pulpit mute (0: muted, 1 unmuted)"
+    #          arguments:
+    #            - type: int32
+    #              value: 1
+    #        - address: /config/userrout/in/09
+    #          comment: "stage mute (0: muted, 33 unmuted)"
+    #          arguments:
+    #            - type: int32
+    #              value: 0
+    #    - name: preacher_mics_off_stage_on
+    #      osc_commands:
+    #        - address: /ch/01/mix/on
+    #          comment: "headset mute (0: muted, 1: unmuted)"
+    #          arguments:
+    #            - type: int32
+    #              value: 0
+    #        - address: /ch/02/mix/on
+    #          comment: "pulpit mute (0: muted, 1 unmuted)"
+    #          arguments:
+    #            - type: int32
+    #              value: 0
+    #        - address: /config/userrout/in/09
+    #          comment: "stage mute (0: muted, 33 unmuted)"
+    #          arguments:
+    #            - type: int32
+    #              value: 33
+    - name: preacher_mics_off_stage_off
+      osc_commands:
+        - address: /ch/01/mix/on
+          comment: "headset mute (0: muted, 1: unmuted)"
+          arguments:
+            - type: int32
+              value: 0
+        - address: /ch/02/mix/on
+          comment: "pulpit mute (0: muted, 1 unmuted)"
+          arguments:
+            - type: int32
+              value: 0
+        - address: /config/userrout/in/09
+          comment: "stage mute (0: muted, 33 unmuted)"
+          arguments:
+            - type: int32
+              value: 0
+
+
+actions:
+  #  test:
+  #    osc_trigger_chain:
+  #      type: osc_match
+  #      parameters:
+  #        address: /ch/01/mix/on
+  #        arguments:
+  #          - index: 0
+  #            type: "int32"
+  #            value: "1"
+  #    tasks:
+  #      - type: http_request
+  #        comment: "Requesting foobar"
+  #        parameters:
+  #          url: "http://192.168.1.75:9998"
+  #          #          method: "get"
+  #          #          body: "HELLO"
+  #          headers:
+  #            - "X-Foo: bar"
+
+  change_to_pulpit:
+    osc_trigger_chain:
+      type: and
+      #        parameters:
+      children:
+        - type: or
+          children:
+            - type: osc_match
+              parameters:
+                address: /ch/01/mix/on
+                arguments:
+                  - index: 0
+                    type: "int32"
+                    value: "1"
+            - type: osc_match
+              parameters:
+                address: /ch/02/mix/on
+                arguments:
+                  - index: 0
+                    type: "int32"
+                    value: "1"
+            - type: osc_match
+              # stage mute (0: muted, 33 unmuted)"
+              parameters:
+                address: /config/userrout/in/09
+                arguments:
+                  - index: 0
+                    type: "int32"
+                    value: "0"
+
+    tasks:
+      - type: http_request
+        parameters:
+          url: "http://192.168.2.104/cgi-bin/ptzctrl.cgi?ptzcmd&poscall&0#PULPIT"
+          method: "get"
+          timeout_secs: 1
+      - type: obs_scene_change
+        parameters:
+          scene: "^PULPIT$"
+          scene_match_type: regexp
+          target: "preview"
+#      - type: http_request
+#        parameters:
+#          url: "http://192.168.2.104/cgi-bin/ptzctrl.cgi?ptzcmd&poscall&0#PULPIT"
+#          method: "get"
+#          timeout_secs: 1
+#      - type: delay
+#        parameters:
+#          delay_millis: 1500
+      - type: obs_scene_change
+        parameters:
+          scene: "^PULPIT$"
+          scene_match_type: regexp
+          target: "program"
+
+
+
+  change_to_stage:
+    osc_trigger_chain:
+      type: and
+      children:
+        - type: osc_match
+          parameters:
+            address: /ch/01/mix/on
+            arguments:
+              - index: 0
+                type: "int32"
+                value: "0"
+        - type: osc_match
+          parameters:
+            address: /ch/02/mix/on
+            arguments:
+              - index: 0
+                type: "int32"
+                value: "0"
+        - type: osc_match
+          # stage mute (0: muted, 33 unmuted)"
+          parameters:
+            address: /config/userrout/in/09
+            arguments:
+              - index: 0
+                type: "int32"
+                value: "33"
+
+    tasks:
+      - type: http_request
+        parameters:
+          url: "http://192.168.2.104/cgi-bin/ptzctrl.cgi?ptzcmd&poscall&1#STAGE"
+          method: "get"
+          timeout_secs: 1
+      - type: obs_scene_change
+        parameters:
+          scene: "^STAGE.*"
+          scene_match_type: regexp
+          target: "preview"
+#      - type: http_request
+#        parameters:
+#          url: "http://192.168.2.104/cgi-bin/ptzctrl.cgi?ptzcmd&poscall&1#STAGE"
+#          method: "get"
+#          timeout_secs: 1
+#      - type: delay
+#        parameters:
+#          delay_millis: 1500
+      - type: obs_scene_change
+        parameters:
+          scene: "^STAGE.*"
+          scene_match_type: regexp
+          target: "program"
+#  end_of_stream:
+#    osc_trigger_chain:
+#      type: and
+#      children:
+#        - type: osc_match
+#          parameters:
+#            address: /ch/01/mix/on
+#            arguments:
+#              - index: 0
+#                type: "int32"
+#                value: "0"
+#        - type: osc_match
+#          parameters:
+#            address: /ch/02/mix/on
+#            arguments:
+#              - index: 0
+#                type: "int32"
+#                value: "0"
+#        - type: osc_match
+#          parameters:
+#            address: /config/userrout/in/09
+#            arguments:
+#              - index: 0
+#                type: "int32"
+#                value: "0"
+#    tasks:
+#      - type: obs_trigger_hotkey_by_name
+#        parameters:
+#          hotkey_name: "macro_condition_hotkey_1"
+#      - type: obs_scene_change
+#        parameters:
+#          scene: "^FINISHED .*"
+#          scene_match_type: regexp
+#          target: "preview"
+#      - type: obs_scene_change
+#        parameters:
+#          scene: "^FINISHED .*"
+#          scene_match_type: regexp
+#          target: "program"
+#
+# PULPIT  "http://192.168.2.104/cgi-bin/ptzctrl.cgi?ptzcmd&poscall&0#PULPIT"
+# STAGE: "http://192.168.2.104/cgi-bin/ptzctrl.cgi?ptzcmd&poscall&1#STAGE"
+# PULPIT WIDE: "http://192.168.2.104/cgi-bin/ptzctrl.cgi?ptzcmd&poscall&2#PULPITWIDE"
+
+
