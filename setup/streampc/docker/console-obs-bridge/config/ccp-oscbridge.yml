@@ -15,63 +15,63 @@ obs_connections:
 
 osc_sources:
   console_bridges:
-  - name: "church_mixer_x32"
-    enabled: true
-    prefix: ""
-    host: 192.168.2.99
-    port: 10023
-    osc_implementation: l
-    init_command:
-      address: /xinfo
-#      arguments:
-#        - type: string
-#          value: "ok"
-    check_address: /ch/01/mix/on
-    check_pattern: "^0|1$"
-    subscriptions:
-      - osc_command:
-          address: /subscribe
-          arguments:
-            - type: string
-              value: /ch/01/mix/on
-            - type: int32
-              value: 10
-        repeat_millis: 8000
-      - osc_command:
-          address: /subscribe
-          arguments:
-            - type: string
-              value: /ch/02/mix/on
-            - type: int32
-              value: 10
-        repeat_millis: 8000
-      - osc_command:
-          address: /subscribe
-          arguments:
-            - type: string
-              value: /config/userrout/in/09
-            - type: int32
-              value: 10
-        repeat_millis: 8000
+    - name: "church_mixer_x32"
+      enabled: true
+      prefix: ""
+      host: 192.168.2.99
+      port: 10023
+      osc_implementation: l
+      init_command:
+        address: /xinfo
+      #      arguments:
+      #        - type: string
+      #          value: "ok"
+      check_address: /ch/01/mix/on
+      check_pattern: "^0|1$"
+      subscriptions:
+        - osc_command:
+            address: /subscribe
+            arguments:
+              - type: string
+                value: /ch/01/mix/on
+              - type: int32
+                value: 10
+          repeat_millis: 8000
+        - osc_command:
+            address: /subscribe
+            arguments:
+              - type: string
+                value: /ch/02/mix/on
+              - type: int32
+                value: 10
+          repeat_millis: 8000
+        - osc_command:
+            address: /subscribe
+            arguments:
+              - type: string
+                value: /config/userrout/in/09
+              - type: int32
+                value: 10
+          repeat_millis: 8000
 
-#  tickers:
-#    - name: "ticker1"
-#      enabled: false
-#      prefix: ""
-#      refresh_rate_millis: 1000
-#
-#  http_bridges:
-#    - name: "httpbridge1"
-#      enabled: false
-#      prefix: ""
-#      port: 7878
-#      host: 0.0.0.0
+  tickers:
+    - name: "ticker1"
+      enabled: true
+      prefix: ""
+      refresh_rate_millis: 1000
+  #
+  #  http_bridges:
+  #    - name: "httpbridge1"
+  #      enabled: false
+  #      prefix: ""
+  #      port: 7878
+  #      host: 0.0.0.0
 
   obs_bridges:
     - name: "obsbridge1"
       enabled: true
-      prefix: "" 
-      connection: "streampc_obs"  
+      prefix: ""
+      connection: "streampc_obs"
 
 
 actions:
@@ -81,12 +81,12 @@ actions:
       children:
         - type: osc_match
           parameters:
-              address: /obs/program_scene
-              arguments:
-                - index: 0
-                  type: "string"
-                  value_match_type: "regexp"
-                  value: ".*autoptz.*"
+            address: /obs/program_scene
+            arguments:
+              - index: 0
+                type: "string"
+                value_match_type: "regexp"
+                value: ".*(autoptz[^_]|autoptz_to_pulpit).*"
         - type: or
           children:
             - type: osc_match
@@ -120,7 +120,7 @@ actions:
           timeout_secs: 1
       - type: obs_scene_change
         parameters:
-          scene: "^PULPIT($|\\s*.*)"
+          scene: "^PULPIT($|\\s*)\\("
           scene_match_type: regexp
           target: "program"
           connection: "streampc_obs"
@@ -138,7 +138,7 @@ actions:
               - index: 0
                 type: "string"
                 value_match_type: "regexp"
-                value: ".*autoptz.*"
+                value: ".*(autoptz[^_]|autoptz_to_stage).*"
         - type: osc_match
           parameters:
             address: /ch/01/mix/on
@@ -174,4 +174,88 @@ actions:
           scene_match_type: regexp
           target: "program"
           connection: "streampc_obs"
+
+  warning_pulpit_and_headset:
+    trigger_chain:
+      type: and
+      children:
+        - type: and
+          children:
+            - type: osc_match
+              parameters:
+                address: /ch/01/mix/on
+                arguments:
+                  - index: 0
+                    type: "int32"
+                    value: "1"
+            - type: osc_match
+              parameters:
+                address: /ch/02/mix/on
+                arguments:
+                  - index: 0
+                    type: "int32"
+                    value: "1"
+            - type: osc_match
+              parameters:
+                address: /time/parts/05
+                arguments:
+                  - index: 0
+                    type: "string"
+                    value_match_type: "regexp"
+                    value: "^(01|20|40)$"
+
+    tasks:
+      - type: obs_vendor_request
+        parameters:
+          connection: "streampc_obs"
+          vendorName: "AdvancedSceneSwitcher"
+          requestType: "AdvancedSceneSwitcherMessage"
+          requestData:
+            message: "warning_pulpit_and_headset"
+
+  warning_stage_and_speaker_mics:
+    trigger_chain:
+      type: and
+      children:
+            - type: or
+              children:
+              - type: osc_match
+                parameters:
+                  address: /ch/01/mix/on
+                  arguments:
+                    - index: 0
+                      type: "int32"
+                      value: "1"
+              - type: osc_match
+                parameters:
+                  address: /ch/02/mix/on
+                  arguments:
+                    - index: 0
+                      type: "int32"
+                      value: "1"
+            - type: osc_match
+              # stage mute (0: muted, 33 unmuted)"
+              parameters:
+                address: /config/userrout/in/09
+                arguments:
+                  - index: 0
+                    type: "int32"
+                    value: "33"
+            - type: osc_match
+              parameters:
+                address: /time/parts/05
+                arguments:
+                  - index: 0
+                    type: "string"
+                    value_match_type: "regexp"
+                    value: "^(01|20|40)$"
+
+    tasks:
+      - type: obs_vendor_request
+        parameters:
+          connection: "streampc_obs"
+          vendorName: "AdvancedSceneSwitcher"
+          requestType: "AdvancedSceneSwitcherMessage"
+          requestData:
+            message: "warning_stage_and_speaker_mics"
 
