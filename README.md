@@ -4,6 +4,10 @@ This repository contains labels, manuals and documentation on our audio gear, an
 
 # Contents
 
+## For preachers
+
+Quick links for preachers: [for_preachers](for_preachers). 
+
 ## For worship team members
 
 Here is some essential knowledge for you, if you are ever on stage: [for_worship_team](for_worship_team). 
