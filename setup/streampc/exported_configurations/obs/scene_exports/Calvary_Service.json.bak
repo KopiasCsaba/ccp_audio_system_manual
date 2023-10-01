@@ -48,7 +48,7 @@
         "volume": 1.0,
         "balance": 0.5,
         "enabled": true,
-        "muted": true,
+        "muted": false,
         "push-to-mute": false,
         "push-to-mute-delay": 0,
         "push-to-talk": false,
@@ -97,38 +97,38 @@
             }
         ]
     },
-    "current_scene": "BIBLESCHOOL BREAK  (mute_on)",
-    "current_program_scene": "PULPIT",
+    "current_scene": "DEBUG",
+    "current_program_scene": "PULPIT (autoptz_to_stage)",
     "scene_order": [
         {
             "name": "STAND BY  (live_off, rec_off, mute_on)"
         },
         {
-            "name": "STAND BY WITH PROJECTION  (live_off, rec_off, mute_on)"
-        },
-        {
             "name": "PRE_STREAM (live_on, rec_off, mute_on)"
         },
         {
-            "name": "SERVICE START  (live_on, rec_on, mute_off)"
+            "name": "SERVICE START  (live_on, rec_on, mute_off, autoptz_to_stage)"
         },
         {
-            "name": "PULPIT"
+            "name": "PULPIT (autoptz_to_stage)"
         },
         {
-            "name": "PULPIT WIDE"
+            "name": "PULPIT WIDE  ( autoptz_to_stage)"
         },
         {
-            "name": "STAGE"
+            "name": "PULPIT WITH PROJECTOR  (autoptz_to_stage)"
         },
         {
-            "name": "DISPLAY CAPTURE"
+            "name": "STAGE  (autoptz)"
         },
         {
-            "name": "FINISHED  (live_delayed_off, rec_delayed_off, mute_on)"
+            "name": "FINISHED  (live_off_delayed, rec_off_delayed, mute_on)"
         },
         {
             "name": "_"
+        },
+        {
+            "name": "_ BLACK"
         },
         {
             "name": "BIBLESCHOOL PULPIT (mute_off)"
@@ -178,7 +178,7 @@
         }
     ],
     "current_transition": "Fade",
-    "transition_duration": 2000,
+    "transition_duration": 1000,
     "preview_locked": false,
     "scaling_enabled": false,
     "scaling_level": 0,
@@ -206,7 +206,7 @@
                     "properties": false,
                     "filters": false,
                     "textinput": false,
-                    "geometry": "AdnQywADAAAAAAZzAAACVgAAB38AAAMVAAAAAAAAAAD//////////wAAAAAAAAAAB4AAAAZzAAACVgAAB38AAAMV",
+                    "geometry": "AdnQywADAAAAAAVPAAAB2gAAB38AAAMxAAAAAAAAAAD//////////wAAAAAAAAAAB4AAAAVPAAAB2gAAB38AAAMx",
                     "split": "AAAA/wAAAAEAAAABAAAAHgD/////AQAAAAIA",
                     "window": "",
                     "dockarea": 8,
@@ -278,7 +278,7 @@
                     "properties": false,
                     "filters": false,
                     "textinput": false,
-                    "geometry": "AdnQywADAAAAAAZzAAADGgAAB38AAAPXAAAAAAAAAAD//////////wAAAAAAAAAAB4AAAAZzAAADGgAAB38AAAPX",
+                    "geometry": "AdnQywADAAAAAAVPAAADNgAAB38AAAPXAAAAAAAAAAD//////////wAAAAAAAAAAB4AAAAVPAAADNgAAB38AAAPX",
                     "split": "AAAA/wAAAAEAAAABAAAAHgD/////AQAAAAIA",
                     "window": "",
                     "dockarea": 8,
@@ -349,6 +349,421 @@
                 "newMacroRegisterHotkey": false
             },
             "macros": [
+                {
+                    "name": "sunday_timed_prestream",
+                    "pause": false,
+                    "parallel": false,
+                    "onChange": true,
+                    "skipExecOnStart": false,
+                    "group": false,
+                    "dockSettings": {
+                        "register": false,
+                        "hasRunButton": true,
+                        "hasPauseButton": true,
+                        "hasStatusLabel": false,
+                        "highlightIfConditionsTrue": false,
+                        "runButtonText": "Run",
+                        "pauseButtonText": "Pause",
+                        "unpauseButtonText": "Unpause",
+                        "conditionsTrueStatusText": "Conditions are true.",
+                        "conditionsFalseStatusText": "Conditions are false."
+                    },
+                    "registerHotkeys": false,
+                    "pauseHotkey": [],
+                    "unpauseHotkey": [],
+                    "togglePauseHotkey": [],
+                    "conditions": [
+                        {
+                            "collapsed": false,
+                            "id": "date",
+                            "logic": 0,
+                            "durationModifier": {
+                                "time_constraint": 0,
+                                "seconds": {
+                                    "value": {
+                                        "value": 0.0,
+                                        "type": 0
+                                    },
+                                    "unit": 0,
+                                    "version": 1
+                                }
+                            },
+                            "dayOfWeek": 7,
+                            "condition": 0,
+                            "dateTime": "Sun Oct 1 10:01:00 2023",
+                            "dateTime2": "Sat Aug 12 13:04:33 2023",
+                            "ignoreDate": false,
+                            "ignoreTime": false,
+                            "repeat": false,
+                            "updateOnRepeat": true,
+                            "duration": {
+                                "value": {
+                                    "value": 0.0,
+                                    "type": 0
+                                },
+                                "unit": 0,
+                                "version": 1
+                            },
+                            "dayOfWeekCheck": true,
+                            "pattern": ".... .. .. .. .. .."
+                        }
+                    ],
+                    "actions": [
+                        {
+                            "collapsed": false,
+                            "id": "scene_switch",
+                            "enabled": true,
+                            "sceneSelection": {
+                                "type": 0,
+                                "name": "PRE_STREAM (live_on, rec_off, mute_on)"
+                            },
+                            "transitionType": 0,
+                            "transition": "",
+                            "duration": {
+                                "value": {
+                                    "value": 0.0,
+                                    "type": 0
+                                },
+                                "unit": 0,
+                                "version": 1
+                            },
+                            "blockUntilTransitionDone": true
+                        }
+                    ]
+                },
+                {
+                    "name": "sunday_timed_start",
+                    "pause": false,
+                    "parallel": false,
+                    "onChange": true,
+                    "skipExecOnStart": false,
+                    "group": false,
+                    "dockSettings": {
+                        "register": false,
+                        "hasRunButton": true,
+                        "hasPauseButton": true,
+                        "hasStatusLabel": false,
+                        "highlightIfConditionsTrue": false,
+                        "runButtonText": "Run",
+                        "pauseButtonText": "Pause",
+                        "unpauseButtonText": "Unpause",
+                        "conditionsTrueStatusText": "Conditions are true.",
+                        "conditionsFalseStatusText": "Conditions are false."
+                    },
+                    "registerHotkeys": false,
+                    "pauseHotkey": [],
+                    "unpauseHotkey": [],
+                    "togglePauseHotkey": [],
+                    "conditions": [
+                        {
+                            "collapsed": false,
+                            "id": "date",
+                            "logic": 0,
+                            "durationModifier": {
+                                "time_constraint": 0,
+                                "seconds": {
+                                    "value": {
+                                        "value": 0.0,
+                                        "type": 0
+                                    },
+                                    "unit": 0,
+                                    "version": 1
+                                }
+                            },
+                            "dayOfWeek": 7,
+                            "condition": 0,
+                            "dateTime": "Sun Oct 1 10:30:00 2023",
+                            "dateTime2": "Sat Aug 12 13:04:33 2023",
+                            "ignoreDate": false,
+                            "ignoreTime": false,
+                            "repeat": false,
+                            "updateOnRepeat": true,
+                            "duration": {
+                                "value": {
+                                    "value": 0.0,
+                                    "type": 0
+                                },
+                                "unit": 0,
+                                "version": 1
+                            },
+                            "dayOfWeekCheck": true,
+                            "pattern": ".... .. .. .. .. .."
+                        }
+                    ],
+                    "actions": [
+                        {
+                            "collapsed": false,
+                            "id": "scene_visibility",
+                            "enabled": true,
+                            "sceneSelection": {
+                                "type": 0,
+                                "name": "_"
+                            },
+                            "sceneItemSelection": {
+                                "type": 0,
+                                "idxType": 0,
+                                "idx": 0,
+                                "item": "Notebook"
+                            },
+                            "action": 1
+                        },
+                        {
+                            "collapsed": false,
+                            "id": "wait",
+                            "enabled": true,
+                            "duration": {
+                                "value": {
+                                    "value": 1.0,
+                                    "type": 0
+                                },
+                                "unit": 0,
+                                "version": 1
+                            },
+                            "duration2": {
+                                "value": {
+                                    "value": 0.0,
+                                    "type": 0
+                                },
+                                "unit": 0,
+                                "version": 1
+                            },
+                            "waitType": 0,
+                            "version": 1
+                        },
+                        {
+                            "collapsed": false,
+                            "id": "scene_switch",
+                            "enabled": true,
+                            "sceneSelection": {
+                                "type": 0,
+                                "name": "SERVICE START  (live_on, rec_on, mute_off, autoptz_to_stage)"
+                            },
+                            "transitionType": 0,
+                            "transition": "Fade",
+                            "duration": {
+                                "value": {
+                                    "value": 1.0,
+                                    "type": 0
+                                },
+                                "unit": 0,
+                                "version": 1
+                            },
+                            "blockUntilTransitionDone": true
+                        }
+                    ]
+                },
+                {
+                    "name": "sunday_end_preview_to_finished",
+                    "pause": false,
+                    "parallel": false,
+                    "onChange": true,
+                    "skipExecOnStart": false,
+                    "group": false,
+                    "dockSettings": {
+                        "register": false,
+                        "hasRunButton": true,
+                        "hasPauseButton": true,
+                        "hasStatusLabel": false,
+                        "highlightIfConditionsTrue": false,
+                        "runButtonText": "Run",
+                        "pauseButtonText": "Pause",
+                        "unpauseButtonText": "Unpause",
+                        "conditionsTrueStatusText": "Conditions are true.",
+                        "conditionsFalseStatusText": "Conditions are false."
+                    },
+                    "registerHotkeys": false,
+                    "pauseHotkey": [],
+                    "unpauseHotkey": [],
+                    "togglePauseHotkey": [],
+                    "conditions": [
+                        {
+                            "collapsed": false,
+                            "id": "date",
+                            "logic": 0,
+                            "durationModifier": {
+                                "time_constraint": 0,
+                                "seconds": {
+                                    "value": {
+                                        "value": 0.0,
+                                        "type": 0
+                                    },
+                                    "unit": 0,
+                                    "version": 1
+                                }
+                            },
+                            "dayOfWeek": 7,
+                            "condition": 1,
+                            "dateTime": "Sun Oct 1 11:50:00 2023",
+                            "dateTime2": "Sun Sep 10 08:53:17 2023",
+                            "ignoreDate": false,
+                            "ignoreTime": false,
+                            "repeat": false,
+                            "updateOnRepeat": true,
+                            "duration": {
+                                "value": {
+                                    "value": 0.0,
+                                    "type": 0
+                                },
+                                "unit": 0,
+                                "version": 1
+                            },
+                            "dayOfWeekCheck": true,
+                            "pattern": ".... .. .. .. .. .."
+                        }
+                    ],
+                    "actions": [
+                        {
+                            "collapsed": false,
+                            "id": "studio_mode",
+                            "enabled": true,
+                            "action": 1,
+                            "sceneSelection": {
+                                "type": 0,
+                                "name": "FINISHED  (live_off_delayed, rec_off_delayed, mute_on)"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "sunday_end_notification",
+                    "pause": false,
+                    "parallel": false,
+                    "onChange": true,
+                    "skipExecOnStart": false,
+                    "group": false,
+                    "dockSettings": {
+                        "register": false,
+                        "hasRunButton": true,
+                        "hasPauseButton": true,
+                        "hasStatusLabel": false,
+                        "highlightIfConditionsTrue": false,
+                        "runButtonText": "Run",
+                        "pauseButtonText": "Pause",
+                        "unpauseButtonText": "Unpause",
+                        "conditionsTrueStatusText": "Conditions are true.",
+                        "conditionsFalseStatusText": "Conditions are false."
+                    },
+                    "registerHotkeys": false,
+                    "pauseHotkey": [],
+                    "unpauseHotkey": [],
+                    "togglePauseHotkey": [],
+                    "conditions": [
+                        {
+                            "collapsed": false,
+                            "id": "studio_mode",
+                            "logic": 0,
+                            "durationModifier": {
+                                "time_constraint": 0,
+                                "seconds": {
+                                    "value": {
+                                        "value": 0.0,
+                                        "type": 0
+                                    },
+                                    "unit": 0,
+                                    "version": 1
+                                }
+                            },
+                            "condition": 2,
+                            "sceneSelection": {
+                                "type": 0,
+                                "name": "FINISHED  (live_off_delayed, rec_off_delayed, mute_on)"
+                            }
+                        },
+                        {
+                            "collapsed": false,
+                            "id": "scene",
+                            "logic": 103,
+                            "durationModifier": {
+                                "time_constraint": 0,
+                                "seconds": {
+                                    "value": {
+                                        "value": 0.0,
+                                        "type": 0
+                                    },
+                                    "unit": 0,
+                                    "version": 1
+                                }
+                            },
+                            "sceneSelection": {
+                                "type": 0,
+                                "name": "FINISHED  (live_off_delayed, rec_off_delayed, mute_on)"
+                            },
+                            "type": 0,
+                            "pattern": ".*Scene.*",
+                            "useTransitionTargetScene": false
+                        },
+                        {
+                            "collapsed": false,
+                            "id": "timer",
+                            "logic": 101,
+                            "durationModifier": {
+                                "time_constraint": 0,
+                                "seconds": {
+                                    "value": {
+                                        "value": 0.0,
+                                        "type": 0
+                                    },
+                                    "unit": 0,
+                                    "version": 1
+                                }
+                            },
+                            "type": 0,
+                            "duration": {
+                                "value": {
+                                    "value": 8.0,
+                                    "type": 0
+                                },
+                                "unit": 0,
+                                "version": 1
+                            },
+                            "duration2": {
+                                "value": {
+                                    "value": 0.0,
+                                    "type": 0
+                                },
+                                "unit": 0,
+                                "version": 1
+                            },
+                            "remaining": 8.0,
+                            "saveRemaining": false,
+                            "paused": false,
+                            "oneshot": false,
+                            "version": 1
+                        },
+                        {
+                            "collapsed": false,
+                            "id": "streaming",
+                            "logic": 101,
+                            "durationModifier": {
+                                "time_constraint": 0,
+                                "seconds": {
+                                    "value": {
+                                        "value": 0.0,
+                                        "type": 0
+                                    },
+                                    "unit": 0,
+                                    "version": 1
+                                }
+                            },
+                            "state": 1,
+                            "keyFrameInterval": {
+                                "value": 0,
+                                "type": 0
+                            }
+                        }
+                    ],
+                    "actions": [
+                        {
+                            "collapsed": false,
+                            "id": "systray_notification",
+                            "enabled": true,
+                            "message": "Maybe its time to stop the LIVE stream? Press transition, to change to the last scene, that will stop everything.",
+                            "title": "STOP THE LIVE STREAM",
+                            "icon": "E:/StreamAssets/ccp_audio_system_manual_gitrepo/setup/streampc/obs_scene_assets/notification_icon_stop.png",
+                            "version": 1
+                        }
+                    ]
+                },
                 {
                     "name": "live_on",
                     "pause": false,
@@ -455,7 +870,7 @@
                                 "name": ""
                             },
                             "type": 4,
-                            "pattern": ".*live_off.*",
+                            "pattern": ".*live_off[^_].*",
                             "useTransitionTargetScene": false
                         }
                     ],
@@ -474,9 +889,9 @@
                     ]
                 },
                 {
-                    "name": "live_delayed_off",
+                    "name": "live_off_delayed",
                     "pause": false,
-                    "parallel": false,
+                    "parallel": true,
                     "onChange": true,
                     "skipExecOnStart": false,
                     "group": false,
@@ -517,7 +932,7 @@
                                 "name": ""
                             },
                             "type": 4,
-                            "pattern": ".*live_delayed_off.*",
+                            "pattern": ".*live_off_delayed.*",
                             "useTransitionTargetScene": false
                         }
                     ],
@@ -528,7 +943,7 @@
                             "enabled": true,
                             "duration": {
                                 "value": {
-                                    "value": 15.0,
+                                    "value": 21.0,
                                     "type": 0
                                 },
                                 "unit": 0,
@@ -661,7 +1076,7 @@
                                 "name": ""
                             },
                             "type": 4,
-                            "pattern": ".*rec_off.*",
+                            "pattern": ".*rec_off[^_].*",
                             "useTransitionTargetScene": false
                         }
                     ],
@@ -677,9 +1092,9 @@
                     ]
                 },
                 {
-                    "name": "rec_delayed_off",
+                    "name": "rec_off_delayed",
                     "pause": false,
-                    "parallel": false,
+                    "parallel": true,
                     "onChange": true,
                     "skipExecOnStart": false,
                     "group": false,
@@ -720,7 +1135,7 @@
                                 "name": ""
                             },
                             "type": 4,
-                            "pattern": ".*rec_delayed_off.*",
+                            "pattern": ".*rec_off_delayed.*",
                             "useTransitionTargetScene": false
                         }
                     ],
@@ -731,7 +1146,50 @@
                             "enabled": true,
                             "duration": {
                                 "value": {
-                                    "value": 15.0,
+                                    "value": 20.0,
+                                    "type": 0
+                                },
+                                "unit": 0,
+                                "version": 1
+                            },
+                            "duration2": {
+                                "value": {
+                                    "value": 0.0,
+                                    "type": 0
+                                },
+                                "unit": 0,
+                                "version": 1
+                            },
+                            "waitType": 0,
+                            "version": 1
+                        },
+                        {
+                            "collapsed": false,
+                            "id": "scene_switch",
+                            "enabled": true,
+                            "sceneSelection": {
+                                "type": 0,
+                                "name": "_ BLACK"
+                            },
+                            "transitionType": 0,
+                            "transition": "Fade",
+                            "duration": {
+                                "value": {
+                                    "value": 0.40000000000000002,
+                                    "type": 0
+                                },
+                                "unit": 0,
+                                "version": 1
+                            },
+                            "blockUntilTransitionDone": true
+                        },
+                        {
+                            "collapsed": false,
+                            "id": "wait",
+                            "enabled": true,
+                            "duration": {
+                                "value": {
+                                    "value": 1.0,
                                     "type": 0
                                 },
                                 "unit": 0,
@@ -755,375 +1213,6 @@
                             "action": 0,
                             "folder": "C:/Users/Calvary/Videos",
                             "format": "%CCYY-%MM-%DD %hh-%mm-%ss"
-                        }
-                    ]
-                },
-                {
-                    "name": "timed_prestream",
-                    "pause": false,
-                    "parallel": false,
-                    "onChange": true,
-                    "skipExecOnStart": false,
-                    "group": false,
-                    "dockSettings": {
-                        "register": false,
-                        "hasRunButton": true,
-                        "hasPauseButton": true,
-                        "hasStatusLabel": false,
-                        "highlightIfConditionsTrue": false,
-                        "runButtonText": "Run",
-                        "pauseButtonText": "Pause",
-                        "unpauseButtonText": "Unpause",
-                        "conditionsTrueStatusText": "Conditions are true.",
-                        "conditionsFalseStatusText": "Conditions are false."
-                    },
-                    "registerHotkeys": false,
-                    "pauseHotkey": [],
-                    "unpauseHotkey": [],
-                    "togglePauseHotkey": [],
-                    "conditions": [
-                        {
-                            "collapsed": false,
-                            "id": "date",
-                            "logic": 0,
-                            "durationModifier": {
-                                "time_constraint": 0,
-                                "seconds": {
-                                    "value": {
-                                        "value": 0.0,
-                                        "type": 0
-                                    },
-                                    "unit": 0,
-                                    "version": 1
-                                }
-                            },
-                            "dayOfWeek": 7,
-                            "condition": 0,
-                            "dateTime": "Sun Sep 24 10:01:00 2023",
-                            "dateTime2": "Sat Aug 12 13:04:33 2023",
-                            "ignoreDate": false,
-                            "ignoreTime": false,
-                            "repeat": false,
-                            "updateOnRepeat": true,
-                            "duration": {
-                                "value": {
-                                    "value": 0.0,
-                                    "type": 0
-                                },
-                                "unit": 0,
-                                "version": 1
-                            },
-                            "dayOfWeekCheck": true,
-                            "pattern": ".... .. .. .. .. .."
-                        }
-                    ],
-                    "actions": [
-                        {
-                            "collapsed": false,
-                            "id": "scene_switch",
-                            "enabled": true,
-                            "sceneSelection": {
-                                "type": 0,
-                                "name": "PRE_STREAM (live_on, rec_off, mute_on)"
-                            },
-                            "transitionType": 0,
-                            "transition": "",
-                            "duration": {
-                                "value": {
-                                    "value": 0.0,
-                                    "type": 0
-                                },
-                                "unit": 0,
-                                "version": 1
-                            },
-                            "blockUntilTransitionDone": true
-                        }
-                    ]
-                },
-                {
-                    "name": "timed_start",
-                    "pause": false,
-                    "parallel": false,
-                    "onChange": true,
-                    "skipExecOnStart": false,
-                    "group": false,
-                    "dockSettings": {
-                        "register": false,
-                        "hasRunButton": true,
-                        "hasPauseButton": true,
-                        "hasStatusLabel": false,
-                        "highlightIfConditionsTrue": false,
-                        "runButtonText": "Run",
-                        "pauseButtonText": "Pause",
-                        "unpauseButtonText": "Unpause",
-                        "conditionsTrueStatusText": "Conditions are true.",
-                        "conditionsFalseStatusText": "Conditions are false."
-                    },
-                    "registerHotkeys": false,
-                    "pauseHotkey": [],
-                    "unpauseHotkey": [],
-                    "togglePauseHotkey": [],
-                    "conditions": [
-                        {
-                            "collapsed": false,
-                            "id": "date",
-                            "logic": 0,
-                            "durationModifier": {
-                                "time_constraint": 0,
-                                "seconds": {
-                                    "value": {
-                                        "value": 0.0,
-                                        "type": 0
-                                    },
-                                    "unit": 0,
-                                    "version": 1
-                                }
-                            },
-                            "dayOfWeek": 7,
-                            "condition": 0,
-                            "dateTime": "Sun Sep 24 10:30:00 2023",
-                            "dateTime2": "Sat Aug 12 13:04:33 2023",
-                            "ignoreDate": false,
-                            "ignoreTime": false,
-                            "repeat": false,
-                            "updateOnRepeat": true,
-                            "duration": {
-                                "value": {
-                                    "value": 0.0,
-                                    "type": 0
-                                },
-                                "unit": 0,
-                                "version": 1
-                            },
-                            "dayOfWeekCheck": true,
-                            "pattern": ".... .. .. .. .. .."
-                        }
-                    ],
-                    "actions": [
-                        {
-                            "collapsed": false,
-                            "id": "scene_switch",
-                            "enabled": true,
-                            "sceneSelection": {
-                                "type": 0,
-                                "name": "SERVICE START  (live_on, rec_on, mute_off)"
-                            },
-                            "transitionType": 0,
-                            "transition": "Fade",
-                            "duration": {
-                                "value": {
-                                    "value": 2.0,
-                                    "type": 0
-                                },
-                                "unit": 0,
-                                "version": 1
-                            },
-                            "blockUntilTransitionDone": true
-                        },
-                        {
-                            "collapsed": false,
-                            "id": "scene_visibility",
-                            "enabled": true,
-                            "sceneSelection": {
-                                "type": 0,
-                                "name": "_"
-                            },
-                            "sceneItemSelection": {
-                                "type": 0,
-                                "idxType": 0,
-                                "idx": 0,
-                                "item": "Notebook"
-                            },
-                            "action": 1
-                        }
-                    ]
-                },
-                {
-                    "name": "timed_finish",
-                    "pause": false,
-                    "parallel": false,
-                    "onChange": true,
-                    "skipExecOnStart": false,
-                    "group": false,
-                    "dockSettings": {
-                        "register": false,
-                        "hasRunButton": true,
-                        "hasPauseButton": true,
-                        "hasStatusLabel": false,
-                        "highlightIfConditionsTrue": false,
-                        "runButtonText": "Run",
-                        "pauseButtonText": "Pause",
-                        "unpauseButtonText": "Unpause",
-                        "conditionsTrueStatusText": "Conditions are true.",
-                        "conditionsFalseStatusText": "Conditions are false."
-                    },
-                    "registerHotkeys": false,
-                    "pauseHotkey": [],
-                    "unpauseHotkey": [],
-                    "togglePauseHotkey": [],
-                    "conditions": [
-                        {
-                            "collapsed": false,
-                            "id": "date",
-                            "logic": 0,
-                            "durationModifier": {
-                                "time_constraint": 0,
-                                "seconds": {
-                                    "value": {
-                                        "value": 0.0,
-                                        "type": 0
-                                    },
-                                    "unit": 0,
-                                    "version": 1
-                                }
-                            },
-                            "dayOfWeek": 7,
-                            "condition": 1,
-                            "dateTime": "Sun Sep 24 11:50:00 2023",
-                            "dateTime2": "Sun Sep 10 08:53:17 2023",
-                            "ignoreDate": false,
-                            "ignoreTime": false,
-                            "repeat": false,
-                            "updateOnRepeat": true,
-                            "duration": {
-                                "value": {
-                                    "value": 0.0,
-                                    "type": 0
-                                },
-                                "unit": 0,
-                                "version": 1
-                            },
-                            "dayOfWeekCheck": true,
-                            "pattern": ".... .. .. .. .. .."
-                        }
-                    ],
-                    "actions": [
-                        {
-                            "collapsed": false,
-                            "id": "studio_mode",
-                            "enabled": true,
-                            "action": 1,
-                            "sceneSelection": {
-                                "type": 0,
-                                "name": "FINISHED  (live_delayed_off, rec_delayed_off, mute_on)"
-                            }
-                        }
-                    ]
-                },
-                {
-                    "name": "projector reset",
-                    "pause": false,
-                    "parallel": false,
-                    "onChange": true,
-                    "skipExecOnStart": false,
-                    "group": false,
-                    "dockSettings": {
-                        "register": false,
-                        "hasRunButton": true,
-                        "hasPauseButton": true,
-                        "hasStatusLabel": false,
-                        "highlightIfConditionsTrue": false,
-                        "runButtonText": "Run",
-                        "pauseButtonText": "Pause",
-                        "unpauseButtonText": "Unpause",
-                        "conditionsTrueStatusText": "Conditions are true.",
-                        "conditionsFalseStatusText": "Conditions are false."
-                    },
-                    "registerHotkeys": false,
-                    "pauseHotkey": [],
-                    "unpauseHotkey": [],
-                    "togglePauseHotkey": [],
-                    "conditions": [
-                        {
-                            "collapsed": false,
-                            "id": "timer",
-                            "logic": 0,
-                            "durationModifier": {
-                                "time_constraint": 0,
-                                "seconds": {
-                                    "value": {
-                                        "value": 0.0,
-                                        "type": 0
-                                    },
-                                    "unit": 0,
-                                    "version": 1
-                                }
-                            },
-                            "type": 0,
-                            "duration": {
-                                "value": {
-                                    "value": 5.0,
-                                    "type": 0
-                                },
-                                "unit": 0,
-                                "version": 1
-                            },
-                            "duration2": {
-                                "value": {
-                                    "value": 0.0,
-                                    "type": 0
-                                },
-                                "unit": 0,
-                                "version": 1
-                            },
-                            "remaining": 5.0,
-                            "saveRemaining": false,
-                            "paused": false,
-                            "oneshot": false,
-                            "version": 1
-                        },
-                        {
-                            "collapsed": false,
-                            "id": "window",
-                            "logic": 103,
-                            "durationModifier": {
-                                "time_constraint": 0,
-                                "seconds": {
-                                    "value": {
-                                        "value": 0.0,
-                                        "type": 0
-                                    },
-                                    "unit": 0,
-                                    "version": 1
-                                }
-                            },
-                            "checkTitle": true,
-                            "window": "Full-screen Projector (Program)",
-                            "windowRegexConfig": {
-                                "enable": false,
-                                "partial": false,
-                                "options": 0
-                            },
-                            "fullscreen": false,
-                            "maximized": false,
-                            "focus": false,
-                            "windowFocusChanged": false,
-                            "checkWindowText": false,
-                            "text": "",
-                            "textRegexConfig": {
-                                "enable": false,
-                                "partial": true,
-                                "options": 0
-                            },
-                            "version": 1
-                        }
-                    ],
-                    "actions": [
-                        {
-                            "collapsed": false,
-                            "id": "projector",
-                            "enabled": true,
-                            "type": 3,
-                            "monitor": 2,
-                            "fullscreen": true,
-                            "sceneSelection": {
-                                "type": 0,
-                                "name": ""
-                            },
-                            "source": {
-                                "type": 0,
-                                "name": ""
-                            }
                         }
                     ]
                 },
@@ -1310,147 +1399,7 @@
                     ]
                 },
                 {
-                    "name": "live_end",
-                    "pause": false,
-                    "parallel": false,
-                    "onChange": true,
-                    "skipExecOnStart": false,
-                    "group": false,
-                    "dockSettings": {
-                        "register": false,
-                        "hasRunButton": true,
-                        "hasPauseButton": true,
-                        "hasStatusLabel": false,
-                        "highlightIfConditionsTrue": false,
-                        "runButtonText": "Run",
-                        "pauseButtonText": "Pause",
-                        "unpauseButtonText": "Unpause",
-                        "conditionsTrueStatusText": "Conditions are true.",
-                        "conditionsFalseStatusText": "Conditions are false."
-                    },
-                    "registerHotkeys": false,
-                    "pauseHotkey": [],
-                    "unpauseHotkey": [],
-                    "togglePauseHotkey": [],
-                    "conditions": [
-                        {
-                            "collapsed": false,
-                            "id": "studio_mode",
-                            "logic": 0,
-                            "durationModifier": {
-                                "time_constraint": 0,
-                                "seconds": {
-                                    "value": {
-                                        "value": 0.0,
-                                        "type": 0
-                                    },
-                                    "unit": 0,
-                                    "version": 1
-                                }
-                            },
-                            "condition": 2,
-                            "sceneSelection": {
-                                "type": 0,
-                                "name": "FINISHED  (live_delayed_off, rec_delayed_off, mute_on)"
-                            }
-                        },
-                        {
-                            "collapsed": false,
-                            "id": "scene",
-                            "logic": 103,
-                            "durationModifier": {
-                                "time_constraint": 0,
-                                "seconds": {
-                                    "value": {
-                                        "value": 0.0,
-                                        "type": 0
-                                    },
-                                    "unit": 0,
-                                    "version": 1
-                                }
-                            },
-                            "sceneSelection": {
-                                "type": 0,
-                                "name": "FINISHED  (live_delayed_off, rec_delayed_off, mute_on)"
-                            },
-                            "type": 0,
-                            "pattern": ".*Scene.*",
-                            "useTransitionTargetScene": false
-                        },
-                        {
-                            "collapsed": false,
-                            "id": "timer",
-                            "logic": 101,
-                            "durationModifier": {
-                                "time_constraint": 0,
-                                "seconds": {
-                                    "value": {
-                                        "value": 0.0,
-                                        "type": 0
-                                    },
-                                    "unit": 0,
-                                    "version": 1
-                                }
-                            },
-                            "type": 0,
-                            "duration": {
-                                "value": {
-                                    "value": 8.0,
-                                    "type": 0
-                                },
-                                "unit": 0,
-                                "version": 1
-                            },
-                            "duration2": {
-                                "value": {
-                                    "value": 0.0,
-                                    "type": 0
-                                },
-                                "unit": 0,
-                                "version": 1
-                            },
-                            "remaining": 8.0,
-                            "saveRemaining": false,
-                            "paused": false,
-                            "oneshot": false,
-                            "version": 1
-                        },
-                        {
-                            "collapsed": false,
-                            "id": "streaming",
-                            "logic": 101,
-                            "durationModifier": {
-                                "time_constraint": 0,
-                                "seconds": {
-                                    "value": {
-                                        "value": 0.0,
-                                        "type": 0
-                                    },
-                                    "unit": 0,
-                                    "version": 1
-                                }
-                            },
-                            "state": 1,
-                            "keyFrameInterval": {
-                                "value": 0,
-                                "type": 0
-                            }
-                        }
-                    ],
-                    "actions": [
-                        {
-                            "collapsed": false,
-                            "id": "systray_notification",
-                            "enabled": true,
-                            "message": "Maybe its time to stop the LIVE stream? Press transition, to change to the last scene, that will stop everything.",
-                            "title": "STOP THE LIVE STREAM",
-                            "icon": "E:/StreamAssets/ccp_audio_system_manual_gitrepo/setup/streampc/obs_scene_assets/stop.png",
-                            "version": 1
-                        }
-                    ]
-                },
-                {
-                    "name": "live_yt_sunday_start",
+                    "name": "sunday_youtube_autostart",
                     "pause": false,
                     "parallel": false,
                     "onChange": true,
@@ -1512,6 +1461,245 @@
                                     }
                                 ]
                             }
+                        }
+                    ]
+                },
+                {
+                    "name": "pole_screen_projector_fixer",
+                    "pause": false,
+                    "parallel": false,
+                    "onChange": true,
+                    "skipExecOnStart": false,
+                    "group": false,
+                    "dockSettings": {
+                        "register": false,
+                        "hasRunButton": true,
+                        "hasPauseButton": true,
+                        "hasStatusLabel": false,
+                        "highlightIfConditionsTrue": false,
+                        "runButtonText": "Run",
+                        "pauseButtonText": "Pause",
+                        "unpauseButtonText": "Unpause",
+                        "conditionsTrueStatusText": "Conditions are true.",
+                        "conditionsFalseStatusText": "Conditions are false."
+                    },
+                    "registerHotkeys": false,
+                    "pauseHotkey": [],
+                    "unpauseHotkey": [],
+                    "togglePauseHotkey": [],
+                    "conditions": [
+                        {
+                            "collapsed": false,
+                            "id": "timer",
+                            "logic": 0,
+                            "durationModifier": {
+                                "time_constraint": 0,
+                                "seconds": {
+                                    "value": {
+                                        "value": 0.0,
+                                        "type": 0
+                                    },
+                                    "unit": 0,
+                                    "version": 1
+                                }
+                            },
+                            "type": 0,
+                            "duration": {
+                                "value": {
+                                    "value": 5.0,
+                                    "type": 0
+                                },
+                                "unit": 0,
+                                "version": 1
+                            },
+                            "duration2": {
+                                "value": {
+                                    "value": 0.0,
+                                    "type": 0
+                                },
+                                "unit": 0,
+                                "version": 1
+                            },
+                            "remaining": 5.0,
+                            "saveRemaining": false,
+                            "paused": false,
+                            "oneshot": false,
+                            "version": 1
+                        },
+                        {
+                            "collapsed": false,
+                            "id": "window",
+                            "logic": 103,
+                            "durationModifier": {
+                                "time_constraint": 0,
+                                "seconds": {
+                                    "value": {
+                                        "value": 0.0,
+                                        "type": 0
+                                    },
+                                    "unit": 0,
+                                    "version": 1
+                                }
+                            },
+                            "checkTitle": true,
+                            "window": "Full-screen Projector (Program)",
+                            "windowRegexConfig": {
+                                "enable": false,
+                                "partial": false,
+                                "options": 0
+                            },
+                            "fullscreen": false,
+                            "maximized": false,
+                            "focus": false,
+                            "windowFocusChanged": false,
+                            "checkWindowText": false,
+                            "text": "",
+                            "textRegexConfig": {
+                                "enable": false,
+                                "partial": true,
+                                "options": 0
+                            },
+                            "version": 1
+                        }
+                    ],
+                    "actions": [
+                        {
+                            "collapsed": false,
+                            "id": "projector",
+                            "enabled": true,
+                            "type": 3,
+                            "monitor": 2,
+                            "fullscreen": true,
+                            "sceneSelection": {
+                                "type": 0,
+                                "name": ""
+                            },
+                            "source": {
+                                "type": 0,
+                                "name": ""
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "notification_pulpit_and_headset",
+                    "pause": false,
+                    "parallel": false,
+                    "onChange": true,
+                    "skipExecOnStart": false,
+                    "group": false,
+                    "dockSettings": {
+                        "register": false,
+                        "hasRunButton": true,
+                        "hasPauseButton": true,
+                        "hasStatusLabel": false,
+                        "highlightIfConditionsTrue": false,
+                        "runButtonText": "Run",
+                        "pauseButtonText": "Pause",
+                        "unpauseButtonText": "Unpause",
+                        "conditionsTrueStatusText": "Conditions are true.",
+                        "conditionsFalseStatusText": "Conditions are false."
+                    },
+                    "registerHotkeys": false,
+                    "pauseHotkey": [],
+                    "unpauseHotkey": [],
+                    "togglePauseHotkey": [],
+                    "conditions": [
+                        {
+                            "collapsed": false,
+                            "id": "websocket",
+                            "logic": 0,
+                            "durationModifier": {
+                                "time_constraint": 0,
+                                "seconds": {
+                                    "value": {
+                                        "value": 0.0,
+                                        "type": 0
+                                    },
+                                    "unit": 0,
+                                    "version": 1
+                                }
+                            },
+                            "type": 0,
+                            "message": "warning_pulpit_and_headset",
+                            "regexConfig": {
+                                "enable": false,
+                                "partial": false,
+                                "options": 0
+                            },
+                            "connection": "Invalid connection selection"
+                        }
+                    ],
+                    "actions": [
+                        {
+                            "collapsed": false,
+                            "id": "systray_notification",
+                            "enabled": true,
+                            "message": "Mute one of them ASAP.",
+                            "title": "PULPIT and HEADSET are both unmuted!",
+                            "icon": "E:/StreamAssets/ccp_audio_system_manual_gitrepo/setup/streampc/obs_scene_assets/notification_icon_warning.png",
+                            "version": 1
+                        }
+                    ]
+                },
+                {
+                    "name": "notification_stage_and_speaker_mics",
+                    "pause": false,
+                    "parallel": false,
+                    "onChange": true,
+                    "skipExecOnStart": false,
+                    "group": false,
+                    "dockSettings": {
+                        "register": false,
+                        "hasRunButton": true,
+                        "hasPauseButton": true,
+                        "hasStatusLabel": false,
+                        "highlightIfConditionsTrue": false,
+                        "runButtonText": "Run",
+                        "pauseButtonText": "Pause",
+                        "unpauseButtonText": "Unpause",
+                        "conditionsTrueStatusText": "Conditions are true.",
+                        "conditionsFalseStatusText": "Conditions are false."
+                    },
+                    "registerHotkeys": false,
+                    "pauseHotkey": [],
+                    "unpauseHotkey": [],
+                    "togglePauseHotkey": [],
+                    "conditions": [
+                        {
+                            "collapsed": false,
+                            "id": "websocket",
+                            "logic": 0,
+                            "durationModifier": {
+                                "time_constraint": 0,
+                                "seconds": {
+                                    "value": {
+                                        "value": 0.0,
+                                        "type": 0
+                                    },
+                                    "unit": 0,
+                                    "version": 1
+                                }
+                            },
+                            "type": 0,
+                            "message": "warning_stage_and_speaker_mics",
+                            "regexConfig": {
+                                "enable": false,
+                                "partial": false,
+                                "options": 0
+                            },
+                            "connection": "Invalid connection selection"
+                        }
+                    ],
+                    "actions": [
+                        {
+                            "collapsed": false,
+                            "id": "systray_notification",
+                            "enabled": true,
+                            "message": "Either the stage should be muted, or the preaching mics.",
+                            "title": "STAGE + PREACHING both unmuted!",
+                            "icon": "E:/StreamAssets/ccp_audio_system_manual_gitrepo/setup/streampc/obs_scene_assets/notification_icon_warning.png",
+                            "version": 1
                         }
                     ]
                 }
@@ -1634,23 +1822,23 @@
             "triggerTabPos": 17,
             "saveWindowGeo": false,
             "windowPosX": 450,
-            "windowPosY": 0,
+            "windowPosY": 187,
             "windowWidth": 1000,
-            "windowHeight": 1000,
+            "windowHeight": 600,
             "macroActionConditionSplitterPosition": [
                 {
-                    "pos": 301
+                    "pos": 147
                 },
                 {
-                    "pos": 482
+                    "pos": 236
                 }
             ],
             "macroListMacroEditSplitterPosition": [
                 {
-                    "pos": 254
+                    "pos": 144
                 },
                 {
-                    "pos": 719
+                    "pos": 829
                 }
             ],
             "version": "577808f1a307cfd49af20a7a6807975ecc50d76f"
@@ -2340,177 +2528,7 @@
         },
         {
             "prev_ver": 486604803,
-            "name": "Desktop Audio 2",
-            "uuid": "3b81147a-efeb-464e-9545-cef0a6e0b258",
-            "id": "wasapi_output_capture",
-            "versioned_id": "wasapi_output_capture",
-            "settings": {
-                "device_id": "{0.0.0.00000000}.{b95ecd6b-b963-4e1f-86b1-95c0beb65605}"
-            },
-            "mixers": 255,
-            "sync": 0,
-            "flags": 0,
-            "volume": 1.0,
-            "balance": 0.5,
-            "enabled": true,
-            "muted": false,
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "hotkeys": {
-                "libobs.mute": [],
-                "libobs.unmute": [],
-                "libobs.push-to-mute": [],
-                "libobs.push-to-talk": []
-            },
-            "deinterlace_mode": 0,
-            "deinterlace_field_order": 0,
-            "monitoring_type": 0,
-            "private_settings": {
-                "mixer_hidden": false
-            }
-        },
-        {
-            "prev_ver": 486604803,
-            "name": "Display Capture",
-            "uuid": "99d59503-ef0f-4e16-8625-d303ce036c6f",
-            "id": "monitor_capture",
-            "versioned_id": "monitor_capture",
-            "settings": {
-                "monitor_id": "\\\\?\\DISPLAY#SNY0801#5&7d96a25&0&UID4359#{e6f07b5f-ee97-4a90-b076-33f57bf4eaa7}"
-            },
-            "mixers": 0,
-            "sync": 0,
-            "flags": 0,
-            "volume": 1.0,
-            "balance": 0.5,
-            "enabled": true,
-            "muted": false,
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "hotkeys": {},
-            "deinterlace_mode": 0,
-            "deinterlace_field_order": 0,
-            "monitoring_type": 0,
-            "private_settings": {}
-        },
-        {
-            "prev_ver": 486604803,
-            "name": "DISPLAY CAPTURE",
-            "uuid": "df9969c6-00b4-4f1f-8539-a5b94f35a3e9",
-            "id": "scene",
-            "versioned_id": "scene",
-            "settings": {
-                "id_counter": 3,
-                "custom_size": false,
-                "items": [
-                    {
-                        "name": "Desktop Audio 2",
-                        "source_uuid": "3b81147a-efeb-464e-9545-cef0a6e0b258",
-                        "visible": true,
-                        "locked": false,
-                        "rot": 0.0,
-                        "pos": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "scale": {
-                            "x": 1.0,
-                            "y": 1.0
-                        },
-                        "align": 5,
-                        "bounds_type": 0,
-                        "bounds_align": 0,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "crop_left": 0,
-                        "crop_top": 0,
-                        "crop_right": 0,
-                        "crop_bottom": 0,
-                        "id": 3,
-                        "group_item_backup": false,
-                        "scale_filter": "disable",
-                        "blend_method": "default",
-                        "blend_type": "normal",
-                        "show_transition": {
-                            "duration": 0
-                        },
-                        "hide_transition": {
-                            "duration": 0
-                        },
-                        "private_settings": {}
-                    },
-                    {
-                        "name": "Display Capture",
-                        "source_uuid": "99d59503-ef0f-4e16-8625-d303ce036c6f",
-                        "visible": true,
-                        "locked": false,
-                        "rot": 0.0,
-                        "pos": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "scale": {
-                            "x": 1.4117647409439087,
-                            "y": 1.4114583730697632
-                        },
-                        "align": 5,
-                        "bounds_type": 0,
-                        "bounds_align": 0,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "crop_left": 0,
-                        "crop_top": 0,
-                        "crop_right": 0,
-                        "crop_bottom": 0,
-                        "id": 2,
-                        "group_item_backup": false,
-                        "scale_filter": "disable",
-                        "blend_method": "default",
-                        "blend_type": "normal",
-                        "show_transition": {
-                            "duration": 0
-                        },
-                        "hide_transition": {
-                            "duration": 0
-                        },
-                        "private_settings": {}
-                    }
-                ]
-            },
-            "mixers": 0,
-            "sync": 0,
-            "flags": 0,
-            "volume": 1.0,
-            "balance": 0.5,
-            "enabled": true,
-            "muted": false,
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "hotkeys": {
-                "OBSBasic.SelectScene": [],
-                "libobs.show_scene_item.Desktop Audio 2": [],
-                "libobs.hide_scene_item.Desktop Audio 2": [],
-                "libobs.show_scene_item.Display Capture": [],
-                "libobs.hide_scene_item.Display Capture": []
-            },
-            "deinterlace_mode": 0,
-            "deinterlace_field_order": 0,
-            "monitoring_type": 0,
-            "private_settings": {}
-        },
-        {
-            "prev_ver": 486604803,
-            "name": "FINISHED  (live_delayed_off, rec_delayed_off, mute_on)",
+            "name": "FINISHED  (live_off_delayed, rec_off_delayed, mute_on)",
             "uuid": "02f70584-0b8b-41b1-8b6f-eb0f42c776f5",
             "id": "scene",
             "versioned_id": "scene",
@@ -2544,44 +2562,6 @@
                         "crop_right": 0,
                         "crop_bottom": 0,
                         "id": 1,
-                        "group_item_backup": false,
-                        "scale_filter": "disable",
-                        "blend_method": "default",
-                        "blend_type": "normal",
-                        "show_transition": {
-                            "duration": 0
-                        },
-                        "hide_transition": {
-                            "duration": 0
-                        },
-                        "private_settings": {}
-                    },
-                    {
-                        "name": "_",
-                        "source_uuid": "9b69a2be-e7f9-4db7-a2be-54ceda5fe841",
-                        "visible": false,
-                        "locked": true,
-                        "rot": 0.0,
-                        "pos": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "scale": {
-                            "x": 1.0,
-                            "y": 1.0
-                        },
-                        "align": 5,
-                        "bounds_type": 0,
-                        "bounds_align": 0,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "crop_left": 0,
-                        "crop_top": 0,
-                        "crop_right": 0,
-                        "crop_bottom": 0,
-                        "id": 2,
                         "group_item_backup": false,
                         "scale_filter": "disable",
                         "blend_method": "default",
@@ -2725,8 +2705,6 @@
                 "OBSBasic.SelectScene": [],
                 "libobs.show_scene_item.PTZ Action to pulpit": [],
                 "libobs.hide_scene_item.PTZ Action to pulpit": [],
-                "libobs.show_scene_item._": [],
-                "libobs.hide_scene_item._": [],
                 "libobs.show_scene_item.palm-trees-2301981_1920.jpg 2": [],
                 "libobs.hide_scene_item.palm-trees-2301981_1920.jpg 2": [],
                 "libobs.show_scene_item.finished_text1": [],
@@ -2866,8 +2844,8 @@
             "id": "browser_source",
             "versioned_id": "browser_source",
             "settings": {
-                "height": 200,
-                "url": "e:\\StreamAssets\\ccp_audio_system_manual_gitrepo\\setup\\streampc\\obs_scene_assets\\SDGStreamingJourney\\src\\sources\\countdown.html?clockOnly=true"
+                "url": "e:\\StreamAssets\\ccp_audio_system_manual_gitrepo\\setup\\streampc\\obs_scene_assets\\SDGStreamingJourney\\src\\sources\\countdown.html?clockOnly=true",
+                "height": 200
             },
             "mixers": 255,
             "sync": 0,
@@ -2901,10 +2879,10 @@
             "settings": {
                 "ndi_fix_alpha_blending": false,
                 "ndi_source_name": "PTZOPTICSCAMERA (Chan1, 192.168.2.104)",
-                "ndi_recv_hw_accel": true,
+                "ndi_recv_hw_accel": false,
                 "ndi_sync": 1,
                 "yuv_range": 2,
-                "latency": 1,
+                "latency": 0,
                 "ndi_audio": false
             },
             "mixers": 255,
@@ -2943,6 +2921,32 @@
                         "brightness": 0.0043,
                         "saturation": 0.22,
                         "hue_shift": 0.0
+                    },
+                    "mixers": 0,
+                    "sync": 0,
+                    "flags": 0,
+                    "volume": 1.0,
+                    "balance": 0.5,
+                    "enabled": false,
+                    "muted": false,
+                    "push-to-mute": false,
+                    "push-to-mute-delay": 0,
+                    "push-to-talk": false,
+                    "push-to-talk-delay": 0,
+                    "hotkeys": {},
+                    "deinterlace_mode": 0,
+                    "deinterlace_field_order": 0,
+                    "monitoring_type": 0,
+                    "private_settings": {}
+                },
+                {
+                    "prev_ver": 486604803,
+                    "name": "Apply LUT",
+                    "uuid": "66efaeb7-b1e6-4e8b-b0cd-4fc551b1090f",
+                    "id": "clut_filter",
+                    "versioned_id": "clut_filter",
+                    "settings": {
+                        "image_path": "E:/StreamAssets/ccp_audio_system_manual_gitrepo/setup/streampc/obs_scene_assets/ptz_colorcorrection_lut.cube"
                     },
                     "mixers": 0,
                     "sync": 0,
@@ -2997,7 +3001,35 @@
             "monitoring_type": 0,
             "private_settings": {
                 "mixer_hidden": true
-            }
+            },
+            "filters": [
+                {
+                    "prev_ver": 486604803,
+                    "name": "Crop/Pad",
+                    "uuid": "860876bd-f71e-4e7f-82f0-0b93b5d04610",
+                    "id": "crop_filter",
+                    "versioned_id": "crop_filter",
+                    "settings": {
+                        "left": 800
+                    },
+                    "mixers": 0,
+                    "sync": 0,
+                    "flags": 0,
+                    "volume": 1.0,
+                    "balance": 0.5,
+                    "enabled": false,
+                    "muted": false,
+                    "push-to-mute": false,
+                    "push-to-mute-delay": 0,
+                    "push-to-talk": false,
+                    "push-to-talk-delay": 0,
+                    "hotkeys": {},
+                    "deinterlace_mode": 0,
+                    "deinterlace_field_order": 0,
+                    "monitoring_type": 0,
+                    "private_settings": {}
+                }
+            ]
         },
         {
             "prev_ver": 486604803,
@@ -3035,7 +3067,35 @@
             "monitoring_type": 0,
             "private_settings": {
                 "mixer_hidden": true
-            }
+            },
+            "filters": [
+                {
+                    "prev_ver": 486604803,
+                    "name": "Crop/Pad",
+                    "uuid": "fe3990d7-d44d-4a82-803a-8b5466e4fcca",
+                    "id": "crop_filter",
+                    "versioned_id": "crop_filter",
+                    "settings": {
+                        "left": 867
+                    },
+                    "mixers": 0,
+                    "sync": 0,
+                    "flags": 0,
+                    "volume": 1.0,
+                    "balance": 0.5,
+                    "enabled": false,
+                    "muted": false,
+                    "push-to-mute": false,
+                    "push-to-mute-delay": 0,
+                    "push-to-talk": false,
+                    "push-to-talk-delay": 0,
+                    "hotkeys": {},
+                    "deinterlace_mode": 0,
+                    "deinterlace_field_order": 0,
+                    "monitoring_type": 0,
+                    "private_settings": {}
+                }
+            ]
         },
         {
             "prev_ver": 486604803,
@@ -3608,6 +3668,34 @@
         },
         {
             "prev_ver": 486604803,
+            "name": "PTZ Action pulpit with projector",
+            "uuid": "6a3edac3-24a9-464c-a202-8458af3552d3",
+            "id": "ptz_action_source",
+            "versioned_id": "ptz_action_source",
+            "settings": {
+                "device_id": 1,
+                "action": 2,
+                "preset_id": 4
+            },
+            "mixers": 0,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1.0,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {},
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {}
+        },
+        {
+            "prev_ver": 486604803,
             "name": "PTZ Action sitting",
             "uuid": "c2c50b33-81c0-4edb-a840-0d0c22097908",
             "id": "ptz_action_source",
@@ -3720,7 +3808,7 @@
         },
         {
             "prev_ver": 486604803,
-            "name": "PULPIT",
+            "name": "PULPIT (autoptz_to_stage)",
             "uuid": "51e9392f-1a5b-4f94-a15f-9e2b3a887746",
             "id": "scene",
             "versioned_id": "scene",
@@ -3834,7 +3922,7 @@
         },
         {
             "prev_ver": 486604803,
-            "name": "PULPIT WIDE",
+            "name": "PULPIT WIDE  ( autoptz_to_stage)",
             "uuid": "7572723e-2c21-4b3e-8d2c-e0704f828a51",
             "id": "scene",
             "versioned_id": "scene",
@@ -3948,7 +4036,121 @@
         },
         {
             "prev_ver": 486604803,
-            "name": "SERVICE START  (live_on, rec_on, mute_off)",
+            "name": "PULPIT WITH PROJECTOR  (autoptz_to_stage)",
+            "uuid": "7d1b38aa-59b6-4a42-bc88-fb2b148ff21a",
+            "id": "scene",
+            "versioned_id": "scene",
+            "settings": {
+                "id_counter": 3,
+                "custom_size": false,
+                "items": [
+                    {
+                        "name": "_",
+                        "source_uuid": "9b69a2be-e7f9-4db7-a2be-54ceda5fe841",
+                        "visible": true,
+                        "locked": false,
+                        "rot": 0.0,
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 1,
+                        "group_item_backup": false,
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 0
+                        },
+                        "hide_transition": {
+                            "duration": 0
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "PTZ Action pulpit with projector",
+                        "source_uuid": "6a3edac3-24a9-464c-a202-8458af3552d3",
+                        "visible": true,
+                        "locked": false,
+                        "rot": 0.0,
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 3,
+                        "group_item_backup": false,
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 0
+                        },
+                        "hide_transition": {
+                            "duration": 0
+                        },
+                        "private_settings": {}
+                    }
+                ]
+            },
+            "mixers": 0,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1.0,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {
+                "OBSBasic.SelectScene": [],
+                "libobs.show_scene_item._": [],
+                "libobs.hide_scene_item._": [],
+                "libobs.show_scene_item.PTZ Action pulpit with projector": [],
+                "libobs.hide_scene_item.PTZ Action pulpit with projector": []
+            },
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {
+                "transition": "Fade",
+                "transition_duration": 600
+            }
+        },
+        {
+            "prev_ver": 486604803,
+            "name": "SERVICE START  (live_on, rec_on, mute_off, autoptz_to_stage)",
             "uuid": "87852ee7-8451-4733-aebf-c241a653496f",
             "id": "scene",
             "versioned_id": "scene",
@@ -4061,7 +4263,7 @@
         },
         {
             "prev_ver": 486604803,
-            "name": "STAGE",
+            "name": "STAGE  (autoptz)",
             "uuid": "f3476d50-ddfb-4688-92b3-cbde52725322",
             "id": "scene",
             "versioned_id": "scene",
@@ -4176,157 +4378,6 @@
         {
             "prev_ver": 486604803,
             "name": "STAND BY  (live_off, rec_off, mute_on)",
-            "uuid": "7290f0d5-aa02-4fe7-888e-9238c7ea1a2c",
-            "id": "scene",
-            "versioned_id": "scene",
-            "settings": {
-                "id_counter": 3,
-                "custom_size": false,
-                "items": [
-                    {
-                        "name": "PTZ Action to pulpit",
-                        "source_uuid": "68711d07-7e7f-4209-8a0b-a5981c6e48a6",
-                        "visible": true,
-                        "locked": false,
-                        "rot": 0.0,
-                        "pos": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "scale": {
-                            "x": 1.0,
-                            "y": 1.0
-                        },
-                        "align": 5,
-                        "bounds_type": 0,
-                        "bounds_align": 0,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "crop_left": 0,
-                        "crop_top": 0,
-                        "crop_right": 0,
-                        "crop_bottom": 0,
-                        "id": 1,
-                        "group_item_backup": false,
-                        "scale_filter": "disable",
-                        "blend_method": "default",
-                        "blend_type": "normal",
-                        "show_transition": {
-                            "duration": 0
-                        },
-                        "hide_transition": {
-                            "duration": 0
-                        },
-                        "private_settings": {}
-                    },
-                    {
-                        "name": "_",
-                        "source_uuid": "9b69a2be-e7f9-4db7-a2be-54ceda5fe841",
-                        "visible": false,
-                        "locked": false,
-                        "rot": 0.0,
-                        "pos": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "scale": {
-                            "x": 1.0,
-                            "y": 1.0
-                        },
-                        "align": 5,
-                        "bounds_type": 0,
-                        "bounds_align": 0,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "crop_left": 0,
-                        "crop_top": 0,
-                        "crop_right": 0,
-                        "crop_bottom": 0,
-                        "id": 2,
-                        "group_item_backup": false,
-                        "scale_filter": "disable",
-                        "blend_method": "default",
-                        "blend_type": "normal",
-                        "show_transition": {
-                            "duration": 0
-                        },
-                        "hide_transition": {
-                            "duration": 0
-                        },
-                        "private_settings": {}
-                    },
-                    {
-                        "name": "finished_text1",
-                        "source_uuid": "0b0e5fe6-2425-42e0-891a-393fa60c8946",
-                        "visible": true,
-                        "locked": false,
-                        "rot": 0.0,
-                        "pos": {
-                            "x": 318.0,
-                            "y": 415.0
-                        },
-                        "scale": {
-                            "x": 0.61557537317276001,
-                            "y": 0.61553031206130981
-                        },
-                        "align": 5,
-                        "bounds_type": 0,
-                        "bounds_align": 0,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "crop_left": 0,
-                        "crop_top": 0,
-                        "crop_right": 0,
-                        "crop_bottom": 0,
-                        "id": 3,
-                        "group_item_backup": false,
-                        "scale_filter": "disable",
-                        "blend_method": "default",
-                        "blend_type": "normal",
-                        "show_transition": {
-                            "duration": 0
-                        },
-                        "hide_transition": {
-                            "duration": 0
-                        },
-                        "private_settings": {}
-                    }
-                ]
-            },
-            "mixers": 0,
-            "sync": 0,
-            "flags": 0,
-            "volume": 1.0,
-            "balance": 0.5,
-            "enabled": true,
-            "muted": false,
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "hotkeys": {
-                "OBSBasic.SelectScene": [],
-                "libobs.show_scene_item.PTZ Action to pulpit": [],
-                "libobs.hide_scene_item.PTZ Action to pulpit": [],
-                "libobs.show_scene_item._": [],
-                "libobs.hide_scene_item._": [],
-                "libobs.show_scene_item.finished_text1": [],
-                "libobs.hide_scene_item.finished_text1": []
-            },
-            "deinterlace_mode": 0,
-            "deinterlace_field_order": 0,
-            "monitoring_type": 0,
-            "private_settings": {}
-        },
-        {
-            "prev_ver": 486604803,
-            "name": "STAND BY WITH PROJECTION  (live_off, rec_off, mute_on)",
             "uuid": "c2ce02f8-4f8e-4baa-a20b-06a50cee9f6d",
             "id": "scene",
             "versioned_id": "scene",
@@ -4490,12 +4541,12 @@
                         "locked": false,
                         "rot": 0.0,
                         "pos": {
-                            "x": 1081.0,
-                            "y": 327.0
+                            "x": 0.0,
+                            "y": 0.0
                         },
                         "scale": {
-                            "x": 0.43697917461395264,
-                            "y": 0.43703705072402954
+                            "x": 1.0,
+                            "y": 1.0
                         },
                         "align": 5,
                         "bounds_type": 0,
@@ -4600,6 +4651,36 @@
                         "key": "OBS_KEY_1"
                     }
                 ]
+            },
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {}
+        },
+        {
+            "prev_ver": 486604803,
+            "name": "_ BLACK",
+            "uuid": "dbfec42e-f2b0-4320-bdb1-6c7aa3fe2141",
+            "id": "scene",
+            "versioned_id": "scene",
+            "settings": {
+                "id_counter": 0,
+                "custom_size": false,
+                "items": []
+            },
+            "mixers": 0,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1.0,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {
+                "OBSBasic.SelectScene": []
             },
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
