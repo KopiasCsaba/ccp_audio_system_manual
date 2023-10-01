@@ -302,22 +302,6 @@ time, except when you want to play something from any of those computers/leads.
 
 Especially have them muted before you unplug/plug it in into something.
 
-## Playing background music
-
-There is an extra 3.5mm trs jack lead dangling around the projection machine, you might connect some device to it to
-play back music.
-
-You might also play back music from the streaming pc.
-
-* If **{Mute Groups/AUX / PC}** is red, then press it to unmute.
-* Press **{LAYERS/AUX}** to select the aux layer.
-* Adjust the volume of the appropriate input.
-  * Check the LED indicators below the SELECT buttons to see which channels got input signals.
-* You might also want to adjust the AUX group fader, on the right side of the mixer.
-  * e.g. if it's on -60 then you'll hear nothing no matter how much you have on the left.
-
-<div style="page-break-after: always;"></div>
-
 # Connecting with applications
 
 It is possible to connect to the console remotely with an application, and basically do everything you might while

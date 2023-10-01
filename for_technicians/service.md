@@ -102,6 +102,22 @@ If the service starts hours later, you can keep it turned off, and only turn it 
 
 <br clear="both" style="clear:both"/>
 
+
+# Before the service
+## Playing background music
+
+There is an extra 3.5mm trs jack lead dangling around the projection machine, you might connect some device to it to
+play back music.
+
+You might also play back music from the streaming pc.
+
+* If **{Mute Groups/AUX / PC}** is red, then press it to unmute.
+* Press **{LAYERS/AUX}** to select the aux layer.
+* Adjust the volume of the appropriate input.
+  * Check the LED indicators below the SELECT buttons to see which channels got input signals.
+* You might also want to adjust the AUX group fader, on the right side of the mixer.
+  * e.g. if it's on -60 then you'll hear nothing no matter how much you have on the left.
+
 <div style="page-break-after: always;"></div>
 
 # During service

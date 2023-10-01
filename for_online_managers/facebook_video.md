@@ -58,6 +58,7 @@ Join us in real life, or through the live stream!
 ```
 
 * Settings -> Stream -> Use persistent stream key (!!!)
+* Create Event
 * Return to home
 
 Now there is right now a bug in facebook, even though it shows it will go automatically live after the creation of the
