@@ -11,6 +11,11 @@
 * [Configure the console](#configure-the-console)
 * [Prepare for going live](#prepare-for-going-live)
 * [Finishing](#finishing)
+* [Troubleshooting](#troubleshooting)
+  * [No audio input coming to OBS](#no-audio-input-coming-to-obs)
+  * [Projector colors are incorrect](#projector-colors-are-incorrect)
+    * [Just slightly off](#just-slightly-off)
+    * [Very off](#very-off)
 <!-- TOC -->
 
 <div style="page-break-after: always;"></div>
@@ -117,3 +122,43 @@
    
 1. Turn off the computer.
 1. Finally, follow the [Turning off the audio system](../../labels/turningoff.pdf) guide.
+
+# Troubleshooting
+
+## No audio input coming to OBS
+
+If you see, that there is no audio coming to OBS:
+
+Sometimes the audio input device in OBS is reset to something else, than LINE IN.
+
+1. Click on the audio input's three dots (the one that is the highest)
+1. Select Properties
+1. Select LINE IN
+1. Press OK
+
+<img alt="" src="assets/video/screenshots/troubleshoot_obs_audio_input.png" height="200">
+
+## Projector colors are incorrect
+Make sure to put something on the screen, e.g. a webpage or an image that you know already, and you know what colors to expect.
+Don't trust the background image on macbooks.
+
+### Just slightly off
+If it is slightly off, e.g. whites are yellow, the projector's image mode is changed.
+
+   * Using the remote controller of the projector (white, asus label), go into it's menu.
+   * Image settings
+   * Select sRGB.
+
+### Very off
+E.g. if many colors are changed, usually blue turns to green, many things to pink, etc.
+
+Then on the Macbook the settings of the display must be adjusted.
+
+ * Make sure that "True tone" is off
+ * Select color profile sRGB
+
+If nothing works, usually "mirroring" instead of "extending" fixes everything no matter what.
+
+
+
+
