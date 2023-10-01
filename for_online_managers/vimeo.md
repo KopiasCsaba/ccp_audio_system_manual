@@ -29,3 +29,6 @@ And you can edit them under the [Showcases](https://vimeo.com/manage/showcases) 
 
 * Select the proper platforms (YouTube and Facebook)
 * And push through the steps
+
+# Fix missing info
+Vimeo does not appear to set thumbnails on the pushed videos, you need to set those manually.

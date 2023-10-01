@@ -26,7 +26,10 @@ Learn more about the tasks for online managers [for_online_managers](for_online_
 Find source materials of our printed labels in  [labels](labels).
 
 
+
+# Needs
+Here are the [current needs](needs.md) of the audio ministry.
+
+
 # Short link for this page:
 [https://tinyurl.com/ccpaudioguide](https://tinyurl.com/ccpaudioguide)
-
-
