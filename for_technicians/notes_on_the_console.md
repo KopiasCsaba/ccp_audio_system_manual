@@ -29,7 +29,6 @@
     * [Muting the stage](#muting-the-stage)
     * [Muting the effects](#muting-the-effects)
     * [Muting the aux / pc](#muting-the-aux--pc)
-* [Connecting with applications](#connecting-with-applications)
   * [X32 EDIT](#x32-edit)
   * [Android](#android)
 * [Other applications that might come handy](#other-applications-that-might-come-handy)
@@ -174,32 +173,31 @@ This sets how much effect(nowadays we only use reverbs) is being added to the mi
 
 # Listening in (using the headphones, SOLO)
 
-There is a headphone connected to the console:
+There is a headphone connected to the console. You can use it to listen in on ANYTHING, specific channels, groups, etc.
 
-<img alt="" src="assets/console/headphones.jpg"  height="350">
+<img alt="" src="assets/console/headphones.jpg"  height="100">
 
-You can use it to listen in on ANYTHING, specific channels, groups, etc.
 
 ## Press the Solo Clear
 First press the solo clear to make sure you are not listening-in on something you don't want to hear.
 
 
-<img alt="" src="assets/console/clearsolo.png"  height="350">
+<img alt="" src="assets/console/clearsolo.png"  height="150">
 
 
 ## Press the SOLO button(s)
-Press any of the solo buttons, to start listening-in:
-
-<img alt="" src="assets/console/solos.png"  height="350">
-
+Press any of the solo buttons, to start listening-in. 
 You can actually press more than one, to listen in on more things at once.
+
+<img alt="" src="assets/console/solos.png" width="400">
+
 
 
 ## Adjust volume
 
 You can adjust the volume (in the headphones), by the "PHONES LEVEL" knob at the top of the console.
 
-<img alt="" src="assets/console/phoneslevel.png"  >
+<img alt="" src="assets/console/phoneslevel.png" height="80" >
 
 # Talkback
 
@@ -301,6 +299,7 @@ time, except when you want to play something from any of those computers/leads.
 
 Especially have them muted before you unplug/plug it in into something.
 
+<div style="page-break-after: always;"></div>
 # Connecting with applications
 
 It is possible to connect to the console remotely with an application, and basically do everything you might while
