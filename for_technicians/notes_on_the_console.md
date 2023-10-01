@@ -29,7 +29,6 @@
     * [Muting the stage](#muting-the-stage)
     * [Muting the effects](#muting-the-effects)
     * [Muting the aux / pc](#muting-the-aux--pc)
-  * [Playing background music](#playing-background-music)
 * [Connecting with applications](#connecting-with-applications)
   * [X32 EDIT](#x32-edit)
   * [Android](#android)
