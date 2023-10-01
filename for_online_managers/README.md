@@ -20,6 +20,7 @@ Various assets can be found in the [assets](assets) folder.
 * [Vimeo channel](https://vimeo.com/user133790558)
 * [Facebook page](https://www.facebook.com/profile.php?id=100064617556957)
 
-
 * [Google drive: Recordings](https://drive.google.com/drive/folders/1hWqKziK_C1x0tJZbU-LRc37UWaybYvJ_?usp=drive_link)
- 
+* Submit title form
+    * [The form](https://tinyurl.com/ccpeventtitle)
+    * [Responses](https://docs.google.com/spreadsheets/d/1U4e9Zl-bMcoLnEX45d6xp-LrloPPm9Uc4XkpturU5JE/edit#gid=563687903)
