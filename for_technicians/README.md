@@ -3,12 +3,19 @@
 
 ## Church audio system related custom documentation and guides
 
-### Audio
+
+### Training videos
+
+1. [Audio Training: Overview of the audio system and the console](https://youtube.com/watch?v=Z1rGS40XmTA)
+1. [Audio training: Rehearsal walkthrough with the console](https://youtu.be/CDxC-ptjJwU)
+1. [How does the stage mixer work?](https://youtu.be/nRDQFHH9zpU)
+1. [How does the drum room stage-talkback work?](https://youtu.be/nelw-jKgT6w)
+
+
+### Audio Gear Manual
 
 
 <img alt="" src="assets/manual.jpg"  align="right" style="float:right" height="200">
-
-
 
 These are printed out and organized into a folder, that you can find next
 to the console.
@@ -18,20 +25,12 @@ to the console.
 * What to do during a service: [WEB](service.md), [PDF](service.pdf).
 * Notes on the console: [WEB](notes_on_the_console.md), [PDF](notes_on_the_console.pdf).
 
-
 <br clear="both" style="clear:both"/>
 
 ### Live-streaming & video
 
 * Handling live streaming: [WEB](video.md), [PDF](video.pdf).
-* Doing A/V for bibleschool: [WEB](other_guides/bibleschool_av.md), [PDF](other_guides/bibleschool_av.pdf).
-
-### Training videos
-
-* [How does the stage mixer work?](https://youtu.be/nRDQFHH9zpU)
-* [How does the drum room stage-talkback work?](https://youtu.be/nelw-jKgT6w)
-* [Audio Training: Overview of the audio system and the console](https://youtube.com/watch?v=Z1rGS40XmTA)
-* [Audio training: Rehearsal walkthrough with the console](https://youtu.be/CDxC-ptjJwU)
+* Doing A/V for Bible school: [WEB](other_guides/bibleschool_av.md), [PDF](other_guides/bibleschool_av.pdf).
 
 ### Resources
 
