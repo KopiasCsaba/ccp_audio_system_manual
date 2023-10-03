@@ -194,6 +194,8 @@ Go through: **Vocal mics 1 to 6** **Instruments 1 to 5** and for each used chann
 
 **Channel gain should not be changed after this initial setup.**
 
+<div style="page-break-after: always;"></div>
+
 
 ## Save the scene
 
