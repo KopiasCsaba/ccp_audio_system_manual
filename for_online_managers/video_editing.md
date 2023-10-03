@@ -14,7 +14,8 @@
 
 # Video tutorial
 
-You can check out this guide as a [video tutorial](https://youtu.be/XMtl2iVmafg) also.
+You can check out parts of this guide as a [video tutorial](https://youtu.be/XMtl2iVmafg) also. 
+Still you want to read the guide also, the video is just a companion guide.
 
 # 1) Download the recording
 
