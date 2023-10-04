@@ -27,7 +27,7 @@ Concatenation is a serious sickness, that happens to video files. Just kidding.
 So that is when you join multiple videos together.
 Sometimes, technical issues might break up the recording into multiple parts. Thats when you need to combine them first.
 
-Use the free, open-source tool called [LosslessCut](https://github.com/mifi/lossless-cut), to edit the video.
+Use the free, open-source tool called [LosslessCut](https://github.com/mifi/lossless-cut/releases), to edit the video.
 Learn how to install LosslessCut [here.](installing_losslesscut.md)
 
 1. Start [LosslessCut](installing_losslesscut.md)
