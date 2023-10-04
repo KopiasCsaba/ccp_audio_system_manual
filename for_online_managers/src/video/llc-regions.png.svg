@@ -18,7 +18,39 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   <defs
-     id="defs1" />
+     id="defs1">
+    <marker
+       style="overflow:visible"
+       id="Triangle"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="0.7"
+       markerHeight="0.7"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135" />
+    </marker>
+    <rect
+       x="478.10489"
+       y="333.56254"
+       width="322.63841"
+       height="110.31169"
+       id="rect3" />
+    <rect
+       x="478.10489"
+       y="333.56254"
+       width="322.63841"
+       height="110.31169"
+       id="rect4" />
+  </defs>
   <sodipodi:namedview
      id="namedview1"
      pagecolor="#ffffff"
@@ -29,8 +61,8 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="0.78757825"
-     inkscape:cx="846.89998"
-     inkscape:cy="259.02188"
+     inkscape:cx="672.94901"
+     inkscape:cy="175.22068"
      inkscape:window-width="1920"
      inkscape:window-height="1026"
      inkscape:window-x="0"
@@ -47,6 +79,11 @@
        preserveAspectRatio="none"
        xlink:href="llc-regions.png"
        id="image1" />
+    <path
+       style="fill:none;stroke:#ff0000;stroke-width:8.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;stroke-dasharray:none;marker-end:url(#Triangle);paint-order:stroke markers fill"
+       d="m 276.04818,329.81122 c 67.80346,27.12877 179.98866,-9.51137 182.74462,140.05993"
+       id="path6"
+       sodipodi:nodetypes="cc" />
     <rect
        style="fill:none;stroke:#ff0000;stroke-width:8;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke fill markers"
        id="rect2"
@@ -61,5 +98,36 @@
        height="37.33305"
        x="1132.6526"
        y="559.66693" />
+    <text
+       xml:space="preserve"
+       id="text3"
+       style="font-size:8px;font-family:RobotoBold;-inkscape-font-specification:RobotoBold;white-space:pre;shape-inside:url(#rect3);display:inline;fill:#00ff00;stroke:none;stroke-width:16;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill"
+       transform="matrix(6.3080404,0,0,6.3080404,-2515.4373,-1740.3108)"><tspan
+         x="478.10547"
+         y="340.5625"
+         id="tspan1">Will be kept</tspan></text>
+    <text
+       xml:space="preserve"
+       id="text4"
+       style="font-size:8px;font-family:RobotoBold;-inkscape-font-specification:RobotoBold;white-space:pre;shape-inside:url(#rect4);display:inline;fill:#ff0000;stroke:none;stroke-width:16;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill"
+       transform="matrix(6.3080404,0,0,6.3080404,-2970.0535,-1832.9723)"><tspan
+         x="478.10547"
+         y="340.5625"
+         id="tspan2">Will be deleted</tspan></text>
+    <path
+       style="fill:none;stroke:#00ff00;stroke-width:8.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;stroke-dasharray:none;marker-end:url(#Triangle);paint-order:stroke markers fill"
+       d="m 516.10745,421.14367 -151.42437,56.28866"
+       id="path4"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#00ff00;stroke-width:8.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;stroke-dasharray:none;marker-end:url(#Triangle);paint-order:stroke markers fill"
+       d="m 516.10745,421.14367 23.54921,57.78799"
+       id="path5"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#ff0000;stroke-width:9.66156;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;stroke-dasharray:none;marker-end:url(#Triangle);paint-order:stroke markers fill"
+       d="m 273.61675,332.09399 c -95.43684,26.54552 -160.29042,-4.12445 -241.102722,129.66469"
+       id="path7"
+       sodipodi:nodetypes="cc" />
   </g>
 </svg>
