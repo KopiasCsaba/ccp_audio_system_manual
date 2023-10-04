@@ -4,7 +4,7 @@
 * [Video tutorial](#video-tutorial)
 * [1) Concatenate if needed](#1-concatenate-if-needed)
 * [2) Trim and cut as needed](#2-trim-and-cut-as-needed)
-  * [Cut points to be aware:](#cut-points-to-be-aware)
+  * [Cut points to be aware](#cut-points-to-be-aware)
   * [Trimming, cutting](#trimming-cutting)
 * [3) Exporting a frame for thumbnail](#3-exporting-a-frame-for-thumbnail)
 <!-- TOC -->
@@ -35,7 +35,7 @@ separate parts.
 
 # 2) Trim and cut as needed
 
-## Cut points to be aware:
+## Cut points to be aware
 
 * Beginning: Before the person doing the announcements just about to start to speak.
     * Sometimes they are testing audio, or just chatting you want to check and cut that.
