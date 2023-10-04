@@ -54,7 +54,7 @@ separate parts.
 1. Start [LosslessCut](installing_losslesscut.md)
 2. File -> Open
 3. Select the video file
-4. Mark regions:
+4. Mark regions (you want to KEEP not those you want to delete!):
     * Mark IN point
         * Move the playhead to the position where you want the IN point to be.
         * Fine-tune the alignment with the keyframe buttons.
@@ -73,7 +73,7 @@ separate parts.
    the
    end.
 
-   You should reach something like this:
+   You should reach something like this (regions you are KEEPING are displayed with a brownish bar, the black one with are TRASH icon will be deleted:
 
     <img src="assets/video/llc-regions.png">
 
