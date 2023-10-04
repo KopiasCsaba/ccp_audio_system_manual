@@ -19,7 +19,7 @@ Still you want to read the guide also, the video is just a companion guide.
 
 Concatenation is a serious sickness, that happens to video files. Just kidding.
 So that is when you join multiple videos together.
-Sometimes, technical issues might break up the recording into multiple parts. Thats when you need to combine them first.
+Sometimes, technical issues might break up the recording into multiple parts. That's when you need to combine them first.
 
 Use the free, open-source tool called [LosslessCut](https://github.com/mifi/lossless-cut/releases), to edit the video.
 Learn how to install LosslessCut [here.](installing_losslesscut.md)
@@ -50,14 +50,14 @@ separate parts.
 3. Select the video file
 4. Mark regions (you want to KEEP not those you want to delete!):
     * Mark IN point
-        * Move the playhead to the position where you want the IN point to be.
+        * Move the play-head to the position where you want the IN point to be.
         * Fine-tune the alignment with the keyframe buttons.
             * <img src="assets/video/llc-keyframe-buttons.png">
         * Mark the beginning by pressing the "Start current segment" button.
             * <img src="assets/video/llc-buttons-in.png">
 
     * Mark OUT point
-        * Move the playhead to the position where you want the OUT point to be.
+        * Move the play head to the position where you want the OUT point to be.
         * Fine-tune the alignment with the keyframe buttons.
             * <img src="assets/video/llc-keyframe-buttons.png">
         * Mark the end by pressing the "End current segment" button.
@@ -80,7 +80,7 @@ The file will be saved next to where you have downloaded the video.
 
 If you need/want to make a thumbnail out of a frame in the video, follow these steps.
 
-* Move the playhead to the frame you want to export
+* Move the play-head to the frame you want to export
 * Press the little camera icon in the bottom right corner
 
 <img src="assets/video/thumbexport.png">

@@ -8,7 +8,7 @@
 * [Upload the video](#upload-the-video)
 * [Set video details](#set-video-details)
 * [Manage the live recording](#manage-the-live-recording)
-* [Scheuling the facebook live events](#scheuling-the-facebook-live-events)
+* [Scheduling the facebook live events](#scheduling-the-facebook-live-events)
 <!-- TOC -->
 
 # Upload the video
@@ -29,7 +29,7 @@ We most probably streamed the recording, so if you have properly uploaded, publi
 please make the relevant LIVE recording
 unlisted.
 
-# Scheuling the facebook live events
+# Scheduling the facebook live events
 
 Every half year or so, we should re-create the "Church Service" recurring event.
 

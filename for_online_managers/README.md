@@ -15,11 +15,11 @@ And then, regularly (probably not by the online managers):
 # Steps to process an event's recording
 
 1. [Download](download.md)
-1. [Edit](video_editing.md)
-2. [Upload to Vimeo](vimeo.md)
-3. [Upload to YouTube](youtube.md)
-4. [Upload to Facebook](facebook_video.md)
-5. [Manage the google drive folders](manage_google_drive.md)
+2. [Edit](video_editing.md)
+3. [Upload to Vimeo](vimeo.md)
+4. [Upload to YouTube](youtube.md)
+5. [Upload to Facebook](facebook_video.md)
+6. [Manage the google drive folders](manage_google_drive.md)
 
 # Assets
 
@@ -27,7 +27,7 @@ Various assets can be found in the [assets](assets) folder.
 
 # Quick links
 
-* [Webiste](https://calvarycyprus.com)
+* [Website](https://calvarycyprus.com)
 * [Youtube studio](https://studio.youtube.com/channel/UC0uEys0VihIMmJFFL1Swj8g/videos)
 * [Youtube channel](https://www.youtube.com/channel/UC0uEys0VihIMmJFFL1Swj8g)
 * [Vimeo channel](https://vimeo.com/user133790558)

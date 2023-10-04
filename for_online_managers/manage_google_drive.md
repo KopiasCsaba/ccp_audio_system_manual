@@ -4,7 +4,7 @@
 
 # 1) Upload the recording & thumbnail to the archive
 
-We archive our recordings together with the thumbnails regularly from google drive, thats why
+We archive our recordings together with the thumbnails regularly from Google Drive, that's why
 we ask you to **always upload** the edited files to this drive folder also.
 
 Please upload/copy:

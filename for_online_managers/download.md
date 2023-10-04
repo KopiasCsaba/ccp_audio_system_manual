@@ -15,7 +15,7 @@ then you can work with them. Check the church's schedule to know when things hap
 
 Currently, the regular events are as follows:
  * Sunday services
- * Tuesday, Thursday bibleschool
+ * Tuesday, Thursday bible-school
 
 
 # Download recordings
