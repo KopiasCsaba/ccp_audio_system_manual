@@ -136,7 +136,7 @@ Sometimes the audio input device in OBS is reset to something else, than LINE IN
 1. Select LINE IN
 1. Press OK
 
-<img alt="" src="assets/video/screenshots/troubleshoot_obs_audio_input.png" height="200">
+<img alt="" src="../assets/video/screenshots/troubleshoot_obs_audio_input.png" height="200">
 
 ## Projector colors are incorrect
 Make sure to put something on the screen, e.g. a webpage or an image that you know already, and you know what colors to expect.

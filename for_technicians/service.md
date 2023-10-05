@@ -15,6 +15,8 @@
     * [Turn on the PC](#turn-on-the-pc)
     * [LOG IN](#log-in)
   * [Prepare the headset](#prepare-the-headset)
+* [Before the service](#before-the-service-1)
+  * [Playing background music](#playing-background-music)
 * [During service](#during-service)
 * [During worship](#during-worship)
   * [When someone speaks or prays](#when-someone-speaks-or-prays)
