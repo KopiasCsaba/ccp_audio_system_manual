@@ -23,9 +23,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#c2c2c2"
      inkscape:document-units="mm"
-     inkscape:zoom="2.3808152"
-     inkscape:cx="365.21104"
-     inkscape:cy="107.94622"
+     inkscape:zoom="2.5883547"
+     inkscape:cx="277.97582"
+     inkscape:cy="156.08371"
      inkscape:window-width="1920"
      inkscape:window-height="1026"
      inkscape:window-x="0"
@@ -504,7 +504,7 @@
        y="51.305874" />
     <text
        xml:space="preserve"
-       transform="matrix(0.26882892,0,0,0.26882892,48.776569,1.9011076)"
+       transform="matrix(0.25216021,0,0,0.25216021,54.8873,5.1659627)"
        id="text14"
        style="font-size:8px;font-family:RobotoBold;-inkscape-font-specification:RobotoBold;text-align:center;white-space:pre;shape-inside:url(#rect14);display:inline;fill:#000000;stroke:none;stroke-width:8.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill"
        x="12.78125"
@@ -630,7 +630,7 @@
            id="tspan27">BREAK</tspan></tspan></text>
     <text
        xml:space="preserve"
-       transform="matrix(0.31957795,0,0,0.31957795,30.115873,-35.430663)"
+       transform="matrix(0.31957795,0,0,0.31957795,-10.493213,-14.53896)"
        id="text26"
        style="font-size:8px;font-family:RobotoBold;-inkscape-font-specification:RobotoBold;text-align:end;white-space:pre;shape-inside:url(#rect27);display:inline;fill:#000000;stroke:none;stroke-width:8.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill"
        x="14.878906"
@@ -825,7 +825,7 @@
        xml:space="preserve"
        transform="matrix(0.55163147,0,0,0.55163147,-90.625542,93.856062)"
        id="text56"
-       style="font-size:8px;font-family:RobotoBold;-inkscape-font-specification:RobotoBold;text-align:center;white-space:pre;shape-inside:url(#rect57);fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:8.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill"><tspan
+       style="font-size:8px;font-family:RobotoBold;-inkscape-font-specification:RobotoBold;text-align:center;white-space:pre;shape-inside:url(#rect57);display:inline;fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:8.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill"><tspan
          x="340.71094"
          y="349.11914"
          id="tspan49">160mm</tspan></text>
