@@ -82,11 +82,13 @@ actions:
         - type: osc_match
           parameters:
             address: /obs/program_scene
+            trigger_on_change: false
             arguments:
               - index: 0
                 type: "string"
                 value_match_type: "regexp"
                 value: ".*(autoptz[^_]|autoptz_to_pulpit).*"
+
         - type: or
           children:
             - type: osc_match
@@ -134,6 +136,7 @@ actions:
         - type: osc_match
           parameters:
             address: /obs/program_scene
+            trigger_on_change: false
             arguments:
               - index: 0
                 type: "string"
