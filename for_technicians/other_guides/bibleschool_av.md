@@ -42,11 +42,11 @@
 
 1. Connect the "**FROM PULPIT**" HDMI cable with the extender to the "**TO PROJECTOR**" cable.
 
-1. Put the little keyboard (with 4 buttons) outside the audio cave, where the person managing it (may be you:)) will
+2. Put the little keyboard (with 4 buttons) outside the audio cave, where the person managing it (may be you:)) will
    sit. It is on a long extension cable for this reason.
-    1. Use the "Cam. Toggle" button on it, to switch between the camera and the slides.
+    * You'll be able to concentrate better if you are not inside the audio cave.
 
-1. Put batteries into the headset
+3. Put batteries into the headset
     1. Based on the day, select the right pair of batteries
     2. Push the button at the back of the headset and while pushing, slide down the backplate.
     3. Put in batteries, close back.
@@ -63,7 +63,7 @@
 
 1. Set up the MAIN bus.
     1. Mute button should not be red.
-    2. Set Main fader to 0 (thats not the lowest position)
+    2. Set Main fader to 0 (that's not the lowest position)
 
     <img src="../assets/other_guides/bibleschool/mains.png" style="vertical-align: center" height="300"> 
 
@@ -96,35 +96,36 @@
 # Lifecycle of the stream
 
 ### BEFORE THE CLASS STARTS
- * Select and make live the appropriate "**EVENT PRE STREAM**" scene.
+ * Make live the "**EVENT PRE STREAM**" scene.
  * This starts the live stream with pre-stream image/audio so people can tune in.
 
 ### WHEN THE CLASS STARTS
- * Make live the "**Pulpit**" or "**Sitting**" scene in OBS.
+* Make live the "**Pulpit**" or "**Sitting**" scene.
+
+### DURING THE CLASS
+* Toggle between the camera and the projector with the "**CAM TOGGLE**" button.
 
 ### WHEN GOING ON BREAK
  * Make live the "**EVENT BREAK**" scene.
 
 ### WHEN RETURNING FROM A BREAK
- * Make live the "**Pulpit**" or "**Sitting**" scene in OBS.
+ * Make live the "**Pulpit**" or "**Sitting**" scene.
 
 ### AT THE END
  * Make live the "**EVENT FINISHED**" scene.
  * This will cut recording and streaming after a little delay.
  
-    
-
+ 
 # Finishing
 
-1. Press "STOP RECORDING" in OBS.
 1. Turn off the projector.
-1. Close back the projector-screen.
-1. Put back the little keyboard.
-1. Get the headset batteries out and put them back into the charger.
-1. Put the headset back to the shelf.
-1. Restore the HDMI cables as they were (unplug, and reconnect the USB grabber)
+2. Close back the projector-screen.
+3. Put back the little keyboard.
+4. Get the headset batteries out and put them back into the charger.
+5. Put the headset back to the shelf.
+6. Restore the HDMI cables as they were (unplug, and reconnect the USB grabber)
 
-1. Wait for the recordings to upload.
+7. Wait for the recordings to upload.
 
    **If you can**, please wait about 15 minutes to pass between "stop recording", and turning off the PC.
    The computer automatically uploads the recordings of this class, so that our crew could edit/upload/manage it.
@@ -134,8 +135,8 @@
 
    <img src="../assets/streampc/drive_sync.png"  height="200">
    
-1. Turn off the computer.
-1. Finally, follow the [Turning off the audio system](../../labels/turningoff.pdf) guide.
+8. Turn off the computer.
+9. Finally, follow the [Turning off the audio system](../../labels/turningoff.pdf) guide.
 
 # Troubleshooting
 
