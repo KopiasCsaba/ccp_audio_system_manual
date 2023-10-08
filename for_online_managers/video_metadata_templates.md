@@ -41,7 +41,7 @@ https://calvarycyprus.com
 Example:
 
 ```
-2023-07-30
+30.07.2023
 
 --
 https://calvarycyprus.com
