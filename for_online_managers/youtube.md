@@ -34,12 +34,14 @@ Usually the timestampes are like this:
 
 ```
 00:00 Welcome & announcements
-11:58 Worship 1
+11:58 Worship
 35:50 Preaching
 01:34:50 Prayer
-01:38:43 Worship 2
+01:38:43 Worship
 01:43:00 Outro & blessing
 ```
+
+![](assets/youtube/timestampexample.png)
 
 Please note:
  * You must start the first item with "00:00" as per [youtube's requirement for chapters](https://support.google.com/youtube/answer/9884579?hl=en).
