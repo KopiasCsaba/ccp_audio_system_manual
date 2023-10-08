@@ -4,6 +4,7 @@
 <!-- TOC -->
 * [Upload the video](#upload-the-video)
 * [Set video details](#set-video-details)
+  * [Table of contents for videos (a.k.a: Youtube video chapters)](#table-of-contents-for-videos-aka-youtube-video-chapters)
 * [Add it to the proper playlist](#add-it-to-the-proper-playlist)
 * [Manage the live recording](#manage-the-live-recording)
 <!-- TOC -->
@@ -51,7 +52,7 @@ Please note:
 * Mathitís classes go to their respective playlists and to "Mathitís - School of Discipleship"
 
 Example:
-"Please add my screenshot"
+![](assets/youtube/playlistexample.png)
 
 # Manage the live recording
 
