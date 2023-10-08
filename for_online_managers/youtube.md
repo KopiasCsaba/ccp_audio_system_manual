@@ -41,12 +41,11 @@ Usually the timestampes are like this:
 01:43:00 Outro & blessing
 ```
 
-![](assets/youtube/timestampexample.png)
-
 Please note:
  * You must start the first item with "00:00" as per [youtube's requirement for chapters](https://support.google.com/youtube/answer/9884579?hl=en).
  * Please zero-pad values for a nicer outlook. So use "01:00" instead of "1:00".
 
+<img src="assets/youtube/timestampexample.png" height="400">
 
 # Add it to the proper playlist
 
@@ -54,7 +53,9 @@ Please note:
 * Mathitís classes go to their respective playlists and to "Mathitís - School of Discipleship"
 
 Example:
-![](assets/youtube/playlistexample.png)
+
+<img src="assets/youtube/playlistexample.png" height="400">
+
 
 # Manage the live recording
 
