@@ -30,7 +30,7 @@ their real in-time order.
 
 If possible please add timestamps. Then the user can jump to the part he would like to watch. This is a manual process, go trough the video and look at which time something starts and note it down in the description. 
 
-Usually the timestampes are like this:
+Usually the timestamps are like this:
 
 ```
 00:00 Welcome & announcements
