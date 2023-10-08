@@ -32,19 +32,19 @@
 
 ## Loading the scene
 
-* Press **{SCENES/VIEW}**.
-* Turn **{Knobs/GO}**: to scroll to the scene you want to load.
-  * If this is a rehearsal: **Service READONLY**
-  * If this is the service: **Service**
-* Press **{Knobs/GO}**: to load the scene.
-* Press **{Knobs/CONFIRM}**: to really load the scene.
+1. Press **{SCENES/VIEW}**.
+2. Turn **{Knobs/GO}**: to scroll to the scene you want to load.
+   * If this is a rehearsal: **Service READONLY**
+   * If this is the service: **Service**
+3. Press **{Knobs/GO}**: to load the scene.
+4. Press **{Knobs/CONFIRM}**: to really load the scene.
 
 ## Other things
 
-* If you will use the stage:
-  * Press **{Assign/STAGE ON}**.
-  * Press **{Knobs/CONFIRM}**.
-* Set **{Main/Fader}** to 0.
+1. If you will use the stage:
+   1. Press **{Assign/STAGE ON}**.
+   2. Press **{Knobs/CONFIRM}**.
+2. Set **{Main/Fader}** to 0.
 
 ## Set up the sound pressure level (SPL) meter
 
@@ -52,14 +52,14 @@ This device measures the volume (lets say) in the room, and it is located on the
 
 <img alt="" src="assets/reset/spl.jpg.png"  align="right" style="float:right" width="300">
 
-* It is powered by an adapter, turn on the socket for the adapter.
-* Turn it on following the handwritten numbers on the buttons.
-    * The two button marked "1"(one) need to be pressed together, until the "**n**" shows up on the screen.
-    * Then wait until it finishes the initialization.
-    * Then press the button marked as 2.
-    * Then press the button marked as 3.
-* It should read "SLOW" and "C", as on the image.
-* Put it to the counter and watch it always.
+1. It is powered by an adapter, turn on the socket for the adapter.
+2. Turn it on following the handwritten numbers on the buttons.
+    1. The two button marked "1"(one) need to be pressed together, until the "**n**" shows up on the screen.
+    2. Then wait until it finishes the initial counting back (999,888,777...) and shows the volume in real time.
+    3. Then press the button marked as 2.
+    4. Then press the button marked as 3.
+3. It should read "SLOW" and "C", as on the image.
+4. Put it to the counter and watch it always.
 <br clear="both" style="clear:both"/>
 
 
@@ -68,7 +68,7 @@ This device measures the volume (lets say) in the room, and it is located on the
 # Verify main speakers' settings
 
 ## Front speakers
-
+ 
 <img alt="" src="assets/reset/mains.png" align="right" style="float:right" height="300">
 
 * Ch 2 Level at **9 o'clock**

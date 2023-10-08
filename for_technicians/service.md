@@ -73,7 +73,7 @@ Use the remote control labeled "CENTURY", it is above the console on the shelf u
 
 The power button is on the top:
 
-
+**Wait** for the LOGIN screen.
 <br clear="both" style="clear:both"/>
 
 ### LOG IN
