@@ -20,7 +20,7 @@ Please follow the guidelines in [video metadata templates](video_metadata_templa
 
 Important: The order in which you "publish" videos are important, as
 that will be the final unchangeable "video date", and it determines the order 
-in which the videos will be listed.
+in which the videos will be listed. Therefore always publich the OLDEST one first before pulishing a newer one f. e. first publish 03.10.2023 and then 08.10.2023
 
 So please make sure to keep the order of recordings as much as possible to reflect
 their real in-time order.
@@ -29,6 +29,9 @@ their real in-time order.
 
 * Sunday messages go to "Sunday Messages"
 * Mathitís classes go to their respective playlists and to "Mathitís - School of Discipleship"
+
+Example:
+"Please add my screenshot"
 
 # Manage the live recording
 
