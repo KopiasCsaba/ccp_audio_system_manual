@@ -25,6 +25,16 @@ in which the videos will be listed.
 So please make sure to keep the order of recordings as much as possible to reflect
 their real in-time order.
 
+If possible please add timestamps.Then the user can jump to the part he would like to. This is kind of a manual process. Go trough the video and look at which time something starts and note it down in the description. 
+Usually the timestampes are like this:
+0:00 Welcome & announcements
+11:58 Worship 1
+35:50 Preaching
+1:34:50 Prayer
+1:38:43 Worship 2
+1:43:00 Outro & blessing
+
+
 # Add it to the proper playlist
 
 * Sunday messages go to "Sunday Messages"
