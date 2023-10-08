@@ -89,16 +89,30 @@
     <div style="page-break-after: always;"></div>
 
 # Prepare for going live
-1. Turn on the PC
+1. Turn on the PC & LOG IN
     1. The power button is on the top of the PC.
+    2. OBS should have started automatically after login. 
 
-1. Start apps
-    1. Start OBS (should have started on its own)
-    2. Select and make live the appropriate "BIBLESCHOOL *" scene.
+# Lifecycle of the stream
 
-1. When the class starts, press "START RECORDING" in OBS.
-    * Ensure you are on the proper scene
-    * Ensure the camera positioned to where it should
+### BEFORE THE CLASS STARTS
+ * Select and make live the appropriate "**EVENT PRE STREAM**" scene.
+ * This starts the live stream with pre-stream image/audio so people can tune in.
+
+### WHEN THE CLASS STARTS
+ * Make live the "**Pulpit**" or "**Sitting**" scene in OBS.
+
+### WHEN GOING ON BREAK
+ * Make live the "**EVENT BREAK**" scene.
+
+### WHEN RETURNING FROM A BREAK
+ * Make live the "**Pulpit**" or "**Sitting**" scene in OBS.
+
+### AT THE END
+ * Make live the "**EVENT FINISHED**" scene.
+ * This will cut recording and streaming after a little delay.
+ 
+    
 
 # Finishing
 
