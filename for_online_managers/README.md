@@ -41,6 +41,6 @@ Various assets can be found in the [assets](assets) folder.
  * [Recordings](https://drive.google.com/drive/folders/1hWqKziK_C1x0tJZbU-LRc37UWaybYvJ_)
    * [Thumbnails](https://drive.google.com/drive/folders/1G_yGUalItjvr9RIatlAt7c1_WIkqtqAj?usp=drive_link)
      * [Message Title Form](https://drive.google.com/drive/folders/1s27VPf_XdvECamqAqauSTVW-hWHz549-?usp=drive_link)
-   * [StreamPcOBSRecordings](https://drive.google.com/drive/folders/1hNNs13uH2axNPDnkZgHyR10jpfO7UVrc?usp=drive_link)
+   * [StreamPcOBSRecordings](https://drive.google.com/drive/folders/1481RIYeUCDoGzn1Gs2k_BB6f6PxW0zcU?usp=drive_link)
    * [OtherRecordings](https://drive.google.com/drive/folders/17gQgmRwi3JmZXZ_OICUVdbewtcM3omxd?usp=drive_link)
    * [ArchivedRecordings](https://drive.google.com/drive/folders/1uiSQAJTFtMKRcx1BCm3R-SwR9kuvnIYf?usp=drive_link)

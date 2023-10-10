@@ -23,9 +23,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#c2c2c2"
      inkscape:document-units="mm"
-     inkscape:zoom="1.8658742"
-     inkscape:cx="363.36854"
-     inkscape:cy="194.54688"
+     inkscape:zoom="1.8972406"
+     inkscape:cx="333.11536"
+     inkscape:cy="210.30542"
      inkscape:window-width="1920"
      inkscape:window-height="1026"
      inkscape:window-x="0"
@@ -529,6 +529,12 @@
        width="48.944535"
        height="39.552783"
        id="rect130" />
+    <rect
+       x="342.3063"
+       y="191.71003"
+       width="48.944535"
+       height="39.552783"
+       id="rect131" />
   </defs>
   <g
      inkscape:label="Layer 1"
@@ -578,44 +584,44 @@
        y="44.805874" />
     <g
        id="g130"
-       style="fill:#beffc8;fill-opacity:1">
+       style="fill:#ffffff;fill-opacity:1">
       <rect
-         style="fill:#beffc8;fill-opacity:1;stroke:none;stroke-width:1.09809;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill"
+         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.09809;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill"
          id="rect2"
          width="13"
          height="6.5"
          x="39.306126"
          y="23.914169" />
       <rect
-         style="fill:#beffc8;stroke:none;stroke-width:1.0981;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill;fill-opacity:1"
+         style="fill:#ffffff;stroke:none;stroke-width:1.0981;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill;fill-opacity:1"
          id="rect3"
          width="13"
          height="6.5"
          x="59.61068"
          y="23.914169" />
       <rect
-         style="fill:#beffc8;stroke:none;stroke-width:1.0981;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill;fill-opacity:1"
+         style="fill:#ffffff;stroke:none;stroke-width:1.0981;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill;fill-opacity:1"
          id="rect5"
          width="13"
          height="6.5"
          x="79.915237"
          y="23.914169" />
       <rect
-         style="fill:#beffc8;stroke:none;stroke-width:1.0981;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill;fill-opacity:1"
+         style="fill:#ffffff;stroke:none;stroke-width:1.0981;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill;fill-opacity:1"
          id="rect7"
          width="13"
          height="6.5"
          x="100.2198"
          y="23.914169" />
       <rect
-         style="fill:#beffc8;fill-opacity:1;stroke:none;stroke-width:1.09809;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill"
+         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.09809;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill"
          id="rect9"
          width="13"
          height="6.5"
          x="120.52435"
          y="23.914169" />
       <rect
-         style="fill:#beffc8;stroke:none;stroke-width:1.55294;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill;fill-opacity:1"
+         style="fill:#ffffff;stroke:none;stroke-width:1.55294;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill;fill-opacity:1"
          id="rect11"
          width="13"
          height="13"
@@ -699,7 +705,7 @@
            id="tspan10">CANVAS</tspan></tspan></text>
     <text
        xml:space="preserve"
-       transform="matrix(0.31965312,0,0,0.31965312,-32.630701,-37.258284)"
+       transform="matrix(0.23449322,0,0,0.23449322,-2.5059703,-20.820428)"
        id="text21"
        style="font-size:8px;font-family:RobotoBold;-inkscape-font-specification:RobotoBold;text-align:end;white-space:pre;shape-inside:url(#rect22);display:inline;fill:#000000;stroke:none;stroke-width:8.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill"
        x="14.878906"
@@ -711,7 +717,7 @@
            id="tspan12">PULPIT</tspan></tspan></text>
     <text
        xml:space="preserve"
-       transform="matrix(0.31537968,0,0,0.31537968,-11.123656,-36.407733)"
+       transform="matrix(0.23135829,0,0,0.23135829,18.680717,-20.196199)"
        id="text22"
        style="font-size:8px;font-family:RobotoBold;-inkscape-font-specification:RobotoBold;text-align:end;white-space:pre;shape-inside:url(#rect23);display:inline;fill:#000000;stroke:none;stroke-width:8.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill"
        x="14.878906"
@@ -723,7 +729,7 @@
            id="tspan14">STAGE</tspan></tspan></text>
     <text
        xml:space="preserve"
-       transform="matrix(0.31537968,0,0,0.31537968,5.5473591,-15.540957)"
+       transform="matrix(0.23135829,0,0,0.23135829,36.340543,0.67057659)"
        id="text25"
        style="font-size:8px;font-family:RobotoBold;-inkscape-font-specification:RobotoBold;text-align:end;white-space:pre;shape-inside:url(#rect26);display:inline;fill:#000000;stroke:none;stroke-width:8.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill"
        x="14.878906"
@@ -733,7 +739,7 @@
          id="tspan16">FINISH</tspan></text>
     <text
        xml:space="preserve"
-       transform="matrix(0.32404396,0,0,0.32404396,-18.040989,-17.213038)"
+       transform="matrix(0.23771429,0,0,0.23771429,13.606256,-0.54938751)"
        id="text26"
        style="font-size:8px;font-family:RobotoBold;-inkscape-font-specification:RobotoBold;text-align:end;white-space:pre;shape-inside:url(#rect27);display:inline;fill:#000000;stroke:none;stroke-width:8.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill"
        x="14.878906"
@@ -900,7 +906,7 @@
        y="30.414169" />
     <text
        xml:space="preserve"
-       transform="matrix(0.31537968,0,0,0.31537968,7.2039192,-36.399958)"
+       transform="matrix(0.23135829,0,0,0.23135829,37.534985,-20.188424)"
        id="text44"
        style="font-size:8px;font-family:RobotoBold;-inkscape-font-specification:RobotoBold;text-align:end;white-space:pre;shape-inside:url(#rect52);display:inline;fill:#000000;stroke:none;stroke-width:8.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill"
        x="14.878906"
@@ -1045,24 +1051,17 @@
            id="tspan45">EVENT</tspan></tspan></text>
     <text
        xml:space="preserve"
-       transform="matrix(0.32404396,0,0,0.32404396,-38.440489,-17.187722)"
+       transform="matrix(0.23646383,0,0,0.23646383,-0.56246781,-0.3080194)"
        id="text96"
-       style="font-size:8px;font-family:RobotoBold;-inkscape-font-specification:RobotoBold;text-align:end;white-space:pre;shape-inside:url(#rect126);display:inline;fill:#000000;stroke:none;stroke-width:8.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill"
-       x="14.878906"
+       style="font-size:8px;font-family:RobotoBold;-inkscape-font-specification:RobotoBold;text-align:start;white-space:pre;shape-inside:url(#rect126);display:inline;fill:#000000;stroke:none;stroke-width:8.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill"
+       x="-16.535156"
        y="0"><tspan
-         x="366.60938"
+         x="342.30664"
          y="198.71094"
-         id="tspan47">START</tspan></text>
-    <text
-       xml:space="preserve"
-       transform="matrix(0.32404396,0,0,0.32404396,-55.237524,-17.187722)"
-       id="text126"
-       style="font-size:8px;font-family:RobotoBold;-inkscape-font-specification:RobotoBold;text-align:end;white-space:pre;shape-inside:url(#rect127);display:inline;fill:#000000;stroke:none;stroke-width:8.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill"
-       x="14.878906"
-       y="0"><tspan
-         x="355.78516"
-         y="198.71094"
-         id="tspan48">STANDBY</tspan></text>
+         id="tspan47">PRE&#10;</tspan><tspan
+         x="342.30664"
+         y="208.71094"
+         id="tspan48">STREAM</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.1832556,0,0,0.1832556,20.716682,14.361815)"
@@ -1099,5 +1098,15 @@
          id="tspan54"><tspan
            style="text-align:end;text-anchor:end"
            id="tspan53">EVENT</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.23135829,0,0,0.23135829,-22.236357,0.69554298)"
+       id="text130"
+       style="font-size:8px;font-family:RobotoBold;-inkscape-font-specification:RobotoBold;text-align:end;white-space:pre;shape-inside:url(#rect131);display:inline;fill:#000000;stroke:none;stroke-width:8.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill"
+       x="14.878906"
+       y="0"><tspan
+         x="355.78516"
+         y="198.71094"
+         id="tspan55">STANDBY</tspan></text>
   </g>
 </svg>
