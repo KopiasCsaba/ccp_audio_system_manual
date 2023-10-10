@@ -1,5 +1,5 @@
 $sourceFolder = "e:\OBSRecordings"
-$destinationFolder = "g:\My Drive\StreamPcObsRecordings\"
+$destinationFolder = "g:\My Drive\Recordings\StreamPcObsRecordings\"
 $lastRunFile = "e:\OBSRecordings.last.sync"
 
 #Echo "OK"
