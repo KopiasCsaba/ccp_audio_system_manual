@@ -45,13 +45,6 @@ Sometimes the audio input device in OBS is reset to something else, than LINE IN
 
 ## Restarting the stream on one of the platforms
 
-### About our YouTube stream
-
-* Our OBS is scripted, so when the OBS live stream starts, it (OBS) executes a command that automatically
-  starts a new live event on YouTube.
-* So if you stop streaming, then re-start, then it will automatically restart youtube also.
-* But you might not want to stop streaming, as it will break other platforms that might be still going, e.g. facebook.
-
 #### Restarting the YouTube stream
 
 * In this case, you need to manually start again the youtube live stream:

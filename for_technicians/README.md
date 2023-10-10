@@ -30,7 +30,7 @@ to the console.
 ### Live-streaming & video
 
 * Handling live streaming: [WEB](video.md), [PDF](video.pdf).
-* Doing A/V for Bible school: [WEB](other_guides/bibleschool_av.md), [PDF](other_guides/bibleschool_av.pdf).
+* How to manage a general event with projection & streaming (E.g.: bible school class): [WEB](other_guides/general_event.md), [PDF](other_guides/general_event.pdf).
 
 ### Resources
 
