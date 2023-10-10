@@ -30,7 +30,7 @@ Example:
 
 If and only if a recording is published everywhere properly, and the edited version is uploaded, you can delete it from the StreamPcObsRecordings folder.
      
-The Streaming PC uploads copies of the recordings to [StreamPcObsRecordings](https://drive.google.com/drive/folders/1hNNs13uH2axNPDnkZgHyR10jpfO7UVrc?usp=drive_link), but
+The Streaming PC uploads copies of the recordings to [StreamPcObsRecordings](https://drive.google.com/drive/folders/1481RIYeUCDoGzn1Gs2k_BB6f6PxW0zcU?usp=drive_link), but
 retains the recordings outside of this folder, locally.
 So **deleting from StreamPcObsRecordings does not make us loose the recording**. 
 
