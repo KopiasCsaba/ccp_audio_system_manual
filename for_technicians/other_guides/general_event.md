@@ -9,27 +9,25 @@ E.g.: Bible school, ad-hoc events, etc.
 
 
 <!-- TOC -->
-
 * [Turning on](#turning-on)
 * [Setup projection](#setup-projection)
 * [Setup headset](#setup-headset)
 * [Configure the console](#configure-the-console)
 * [Prepare for going live](#prepare-for-going-live)
 * [Lifecycle of the stream](#lifecycle-of-the-stream)
-    * [Use the small keyboard](#use-the-small-keyboard)
-        * [BEFORE THE CLASS STARTS](#before-the-class-starts)
-        * [WHEN THE CLASS STARTS](#when-the-class-starts)
-        * [DURING THE CLASS](#during-the-class)
-        * [WHEN GOING ON A BREAK](#when-going-on-a-break)
-        * [WHEN RETURNING FROM A BREAK](#when-returning-from-a-break)
-        * [AT THE END](#at-the-end)
+  * [Use the small keyboard](#use-the-small-keyboard)
+    * [BEFORE THE CLASS STARTS](#before-the-class-starts)
+    * [WHEN THE CLASS STARTS](#when-the-class-starts)
+    * [DURING THE CLASS](#during-the-class)
+    * [WHEN GOING ON A BREAK](#when-going-on-a-break)
+    * [WHEN RETURNING FROM A BREAK](#when-returning-from-a-break)
+    * [AT THE END](#at-the-end)
 * [Troubleshooting](#troubleshooting)
-    * [No audio input coming to OBS](#no-audio-input-coming-to-obs)
-    * [Projector colors are incorrect](#projector-colors-are-incorrect)
-        * [Verify projector's image mode](#verify-projectors-image-mode)
-        * [Check the Mac's display settings](#check-the-macs-display-settings)
-    * [Restarting the stream on one of the platforms](#restarting-the-stream-on-one-of-the-platforms)
-
+  * [No audio input coming to OBS](#no-audio-input-coming-to-obs)
+  * [Projector colors are incorrect](#projector-colors-are-incorrect)
+    * [Verify projector's image mode](#verify-projectors-image-mode)
+    * [Check the Mac's display settings](#check-the-macs-display-settings)
+  * [Restarting the stream on one of the platforms](#restarting-the-stream-on-one-of-the-platforms)
 <!-- TOC -->
 
 <div style="page-break-after: always;"></div>
