@@ -97,12 +97,9 @@
             }
         ]
     },
-    "current_scene": "EVENT FINISHED  (live_off_delayed, rec_off_delayed, mute_on)",
-    "current_program_scene": "PULPIT (mute_off, autoptz_to_stage)",
+    "current_scene": "SITTING (mute_off, autoptz_to_stage)",
+    "current_program_scene": "SITTING (mute_off, autoptz_to_stage)",
     "scene_order": [
-        {
-            "name": "STAND BY  (live_off, rec_off, mute_on)"
-        },
         {
             "name": "=============== SUNDAY ==============="
         },
@@ -116,13 +113,13 @@
             "name": "=============== CAM POSITIONS ==============="
         },
         {
-            "name": "PULPIT (mute_off, autoptz_to_stage)"
+            "name": "PROJECTOR  (mute_off, autoptz_to_stage)"
         },
         {
             "name": "PULPIT WIDE  (mute_off, autoptz_to_stage)"
         },
         {
-            "name": "PROJECTOR  (mute_off, autoptz_to_stage)"
+            "name": "PULPIT (mute_off, autoptz_to_stage)"
         },
         {
             "name": "STAGE  (mute_off, autoptz)"
@@ -134,10 +131,13 @@
             "name": "=============== GENERAL EVENT ==============="
         },
         {
-            "name": "EVENT PRE STREAM (live_on, rec_on, mute_on)"
+            "name": "STAND BY  (live_off, rec_off, mute_on)"
         },
         {
-            "name": "EVENT BREAK  (mute_on)"
+            "name": "EVENT PRE STREAM (live_on, rec_on_afterleave, mute_on)"
+        },
+        {
+            "name": "EVENT BREAK  (mute_on, rec_pause)"
         },
         {
             "name": "EVENT FINISHED  (live_off_delayed, rec_off_delayed, mute_on)"
@@ -190,7 +190,7 @@
         }
     ],
     "current_transition": "Fade",
-    "transition_duration": 1000,
+    "transition_duration": 400,
     "preview_locked": false,
     "scaling_enabled": false,
     "scaling_level": 0,
@@ -218,7 +218,7 @@
                     "properties": false,
                     "filters": false,
                     "textinput": false,
-                    "geometry": "AdnQywADAAAAAAULAAACRgAAB38AAAPXAAAAAAAAAAD//////////wAAAAAAAAAAB4AAAAULAAACRgAAB38AAAPX",
+                    "geometry": "AdnQywADAAAAAAWDAAACRgAAB38AAAPXAAAAAAAAAAD//////////wAAAAAAAAAAB4AAAAWDAAACRgAAB38AAAPX",
                     "split": "AAAA/wAAAAEAAAABAAAAHgD/////AQAAAAIA",
                     "window": "",
                     "dockarea": 8,
@@ -290,7 +290,7 @@
                     "properties": false,
                     "filters": false,
                     "textinput": false,
-                    "geometry": "AdnQywADAAAAAAQ8AAACRgAABQYAAALRAAAAAAAAAAD//////////wAAAAAAAAAAB4AAAAQ8AAACRgAABQYAAALR",
+                    "geometry": "AdnQywADAAAAAASeAAACRgAABX4AAALSAAAAAAAAAAD//////////wAAAAAAAAAAB4AAAASeAAACRgAABX4AAALS",
                     "split": "AAAA/wAAAAEAAAABAAAAHgD/////AQAAAAIA",
                     "window": "",
                     "dockarea": 8,
@@ -727,7 +727,7 @@
                             },
                             "sceneSelection": {
                                 "type": 0,
-                                "name": "EVENT FINISHED  (live_off_delayed, rec_off_delayed, mute_on)"
+                                "name": "_ BLACK"
                             },
                             "type": 0,
                             "pattern": ".*Scene.*",
@@ -770,6 +770,27 @@
                             "paused": false,
                             "oneshot": false,
                             "version": 1
+                        },
+                        {
+                            "collapsed": false,
+                            "id": "streaming",
+                            "logic": 101,
+                            "durationModifier": {
+                                "time_constraint": 0,
+                                "seconds": {
+                                    "value": {
+                                        "value": 0.0,
+                                        "type": 0
+                                    },
+                                    "unit": 0,
+                                    "version": 1
+                                }
+                            },
+                            "state": 1,
+                            "keyFrameInterval": {
+                                "value": 0,
+                                "type": 0
+                            }
                         },
                         {
                             "collapsed": false,
@@ -1058,7 +1079,66 @@
                                 "name": ""
                             },
                             "type": 4,
-                            "pattern": ".*rec_on.*",
+                            "pattern": ".*rec_on[^_].*",
+                            "useTransitionTargetScene": false
+                        }
+                    ],
+                    "actions": [
+                        {
+                            "collapsed": false,
+                            "id": "recording",
+                            "enabled": true,
+                            "action": 1,
+                            "folder": "C:/Users/Calvary/Videos",
+                            "format": "%CCYY-%MM-%DD %hh-%mm-%ss"
+                        }
+                    ]
+                },
+                {
+                    "name": "rec_on_afterleave",
+                    "pause": false,
+                    "parallel": false,
+                    "onChange": true,
+                    "skipExecOnStart": false,
+                    "group": false,
+                    "dockSettings": {
+                        "register": false,
+                        "hasRunButton": true,
+                        "hasPauseButton": true,
+                        "hasStatusLabel": false,
+                        "highlightIfConditionsTrue": false,
+                        "runButtonText": "Run",
+                        "pauseButtonText": "Pause",
+                        "unpauseButtonText": "Unpause",
+                        "conditionsTrueStatusText": "Conditions are true.",
+                        "conditionsFalseStatusText": "Conditions are false."
+                    },
+                    "registerHotkeys": false,
+                    "pauseHotkey": [],
+                    "unpauseHotkey": [],
+                    "togglePauseHotkey": [],
+                    "conditions": [
+                        {
+                            "collapsed": false,
+                            "id": "scene",
+                            "logic": 0,
+                            "durationModifier": {
+                                "time_constraint": 0,
+                                "seconds": {
+                                    "value": {
+                                        "value": 0.0,
+                                        "type": 0
+                                    },
+                                    "unit": 0,
+                                    "version": 1
+                                }
+                            },
+                            "sceneSelection": {
+                                "type": 0,
+                                "name": ""
+                            },
+                            "type": 5,
+                            "pattern": ".*rec_on_afterleave[^_].*",
                             "useTransitionTargetScene": false
                         }
                     ],
@@ -1258,6 +1338,147 @@
                     ]
                 },
                 {
+                    "name": "rec_paused_pause",
+                    "pause": false,
+                    "parallel": true,
+                    "onChange": true,
+                    "skipExecOnStart": false,
+                    "group": false,
+                    "dockSettings": {
+                        "register": false,
+                        "hasRunButton": true,
+                        "hasPauseButton": true,
+                        "hasStatusLabel": false,
+                        "highlightIfConditionsTrue": false,
+                        "runButtonText": "Run",
+                        "pauseButtonText": "Pause",
+                        "unpauseButtonText": "Unpause",
+                        "conditionsTrueStatusText": "Conditions are true.",
+                        "conditionsFalseStatusText": "Conditions are false."
+                    },
+                    "registerHotkeys": false,
+                    "pauseHotkey": [],
+                    "unpauseHotkey": [],
+                    "togglePauseHotkey": [],
+                    "conditions": [
+                        {
+                            "collapsed": false,
+                            "id": "scene",
+                            "logic": 0,
+                            "durationModifier": {
+                                "time_constraint": 0,
+                                "seconds": {
+                                    "value": {
+                                        "value": 0.0,
+                                        "type": 0
+                                    },
+                                    "unit": 0,
+                                    "version": 1
+                                }
+                            },
+                            "sceneSelection": {
+                                "type": 0,
+                                "name": ""
+                            },
+                            "type": 4,
+                            "pattern": ".*rec_pause.*",
+                            "useTransitionTargetScene": true
+                        }
+                    ],
+                    "actions": [
+                        {
+                            "collapsed": false,
+                            "id": "wait",
+                            "enabled": true,
+                            "duration": {
+                                "value": {
+                                    "value": 4.0,
+                                    "type": 0
+                                },
+                                "unit": 0,
+                                "version": 1
+                            },
+                            "duration2": {
+                                "value": {
+                                    "value": 0.0,
+                                    "type": 0
+                                },
+                                "unit": 0,
+                                "version": 1
+                            },
+                            "waitType": 0,
+                            "version": 1
+                        },
+                        {
+                            "collapsed": false,
+                            "id": "recording",
+                            "enabled": true,
+                            "action": 2,
+                            "folder": "C:/Users/Calvary/Videos",
+                            "format": "%CCYY-%MM-%DD %hh-%mm-%ss"
+                        }
+                    ]
+                },
+                {
+                    "name": "rec_paused_resume",
+                    "pause": false,
+                    "parallel": true,
+                    "onChange": true,
+                    "skipExecOnStart": false,
+                    "group": false,
+                    "dockSettings": {
+                        "register": false,
+                        "hasRunButton": true,
+                        "hasPauseButton": true,
+                        "hasStatusLabel": false,
+                        "highlightIfConditionsTrue": false,
+                        "runButtonText": "Run",
+                        "pauseButtonText": "Pause",
+                        "unpauseButtonText": "Unpause",
+                        "conditionsTrueStatusText": "Conditions are true.",
+                        "conditionsFalseStatusText": "Conditions are false."
+                    },
+                    "registerHotkeys": false,
+                    "pauseHotkey": [],
+                    "unpauseHotkey": [],
+                    "togglePauseHotkey": [],
+                    "conditions": [
+                        {
+                            "collapsed": false,
+                            "id": "scene",
+                            "logic": 0,
+                            "durationModifier": {
+                                "time_constraint": 0,
+                                "seconds": {
+                                    "value": {
+                                        "value": 0.0,
+                                        "type": 0
+                                    },
+                                    "unit": 0,
+                                    "version": 1
+                                }
+                            },
+                            "sceneSelection": {
+                                "type": 0,
+                                "name": ""
+                            },
+                            "type": 5,
+                            "pattern": ".*rec_pause.*",
+                            "useTransitionTargetScene": true
+                        }
+                    ],
+                    "actions": [
+                        {
+                            "collapsed": false,
+                            "id": "recording",
+                            "enabled": true,
+                            "action": 3,
+                            "folder": "C:/Users/Calvary/Videos",
+                            "format": "%CCYY-%MM-%DD %hh-%mm-%ss"
+                        }
+                    ]
+                },
+                {
                     "name": "mute_on",
                     "pause": false,
                     "parallel": false,
@@ -1441,7 +1662,7 @@
                 },
                 {
                     "name": "sunday_youtube_autostart",
-                    "pause": false,
+                    "pause": true,
                     "parallel": false,
                     "onChange": true,
                     "skipExecOnStart": false,
@@ -1790,7 +2011,7 @@
                                     "control": true,
                                     "alt": true,
                                     "command": true,
-                                    "key": "OBS_KEY_3"
+                                    "key": "OBS_KEY_F3"
                                 }
                             ]
                         }
@@ -1903,7 +2124,7 @@
                                     "control": true,
                                     "alt": true,
                                     "command": true,
-                                    "key": "OBS_KEY_8"
+                                    "key": "OBS_KEY_F8"
                                 }
                             ]
                         }
@@ -2016,7 +2237,7 @@
                                     "control": true,
                                     "alt": true,
                                     "command": true,
-                                    "key": "OBS_KEY_7"
+                                    "key": "OBS_KEY_F7"
                                 }
                             ]
                         }
@@ -2129,7 +2350,7 @@
                                     "control": true,
                                     "alt": true,
                                     "command": true,
-                                    "key": "OBS_KEY_9"
+                                    "key": "OBS_KEY_F9"
                                 }
                             ]
                         }
@@ -2242,7 +2463,7 @@
                                     "control": true,
                                     "alt": true,
                                     "command": true,
-                                    "key": "OBS_KEY_4"
+                                    "key": "OBS_KEY_F4"
                                 }
                             ]
                         }
@@ -2355,7 +2576,7 @@
                                     "control": true,
                                     "alt": true,
                                     "command": true,
-                                    "key": "OBS_KEY_2"
+                                    "key": "OBS_KEY_F2"
                                 }
                             ]
                         }
@@ -2543,21 +2764,21 @@
             "windowPosX": 450,
             "windowPosY": 187,
             "windowWidth": 1000,
-            "windowHeight": 600,
+            "windowHeight": 786,
             "macroActionConditionSplitterPosition": [
                 {
-                    "pos": 147
+                    "pos": 219
                 },
                 {
-                    "pos": 236
+                    "pos": 350
                 }
             ],
             "macroListMacroEditSplitterPosition": [
                 {
-                    "pos": 276
+                    "pos": 213
                 },
                 {
-                    "pos": 697
+                    "pos": 760
                 }
             ],
             "version": "577808f1a307cfd49af20a7a6807975ecc50d76f"
@@ -2686,60 +2907,6 @@
         },
         {
             "prev_ver": 486604803,
-            "name": "brake-system-2709406_1280.png",
-            "uuid": "41dcfefd-8472-4622-a0d4-75e158f44e26",
-            "id": "image_source",
-            "versioned_id": "image_source",
-            "settings": {
-                "file": "E:/StreamAssets/ccp_audio_system_manual_gitrepo/setup/streampc/obs_scene_assets/brake-system-2709406_1280.png"
-            },
-            "mixers": 0,
-            "sync": 0,
-            "flags": 0,
-            "volume": 1.0,
-            "balance": 0.5,
-            "enabled": true,
-            "muted": false,
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "hotkeys": {},
-            "deinterlace_mode": 0,
-            "deinterlace_field_order": 0,
-            "monitoring_type": 0,
-            "private_settings": {},
-            "filters": [
-                {
-                    "prev_ver": 486604803,
-                    "name": "Chroma Key",
-                    "uuid": "d9011545-0d73-46f1-a2ab-6ba3a0283b00",
-                    "id": "chroma_key_filter",
-                    "versioned_id": "chroma_key_filter_v2",
-                    "settings": {
-                        "opacity": 0.063700000000000007
-                    },
-                    "mixers": 0,
-                    "sync": 0,
-                    "flags": 0,
-                    "volume": 1.0,
-                    "balance": 0.5,
-                    "enabled": true,
-                    "muted": false,
-                    "push-to-mute": false,
-                    "push-to-mute-delay": 0,
-                    "push-to-talk": false,
-                    "push-to-talk-delay": 0,
-                    "hotkeys": {},
-                    "deinterlace_mode": 0,
-                    "deinterlace_field_order": 0,
-                    "monitoring_type": 0,
-                    "private_settings": {}
-                }
-            ]
-        },
-        {
-            "prev_ver": 486604803,
             "name": "christian-piano-music-143489.mp3",
             "uuid": "66391b3a-4fff-474b-9412-f6f9c23105a6",
             "id": "ffmpeg_source",
@@ -2834,12 +3001,12 @@
         },
         {
             "prev_ver": 486604803,
-            "name": "EVENT BREAK  (mute_on)",
+            "name": "EVENT BREAK  (mute_on, rec_pause)",
             "uuid": "c7636678-6f72-4375-93ee-62d2c4683e14",
             "id": "scene",
             "versioned_id": "scene",
             "settings": {
-                "id_counter": 7,
+                "id_counter": 8,
                 "custom_size": false,
                 "items": [
                     {
@@ -2849,7 +3016,7 @@
                         "locked": false,
                         "rot": 0.0,
                         "pos": {
-                            "x": 0.0,
+                            "x": -1.0,
                             "y": 0.0
                         },
                         "scale": {
@@ -2872,6 +3039,44 @@
                         "scale_filter": "disable",
                         "blend_method": "default",
                         "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 0
+                        },
+                        "hide_transition": {
+                            "duration": 0
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "event_break_loading",
+                        "source_uuid": "fab16907-d2c8-423e-bc84-9b04e7fa8a3a",
+                        "visible": true,
+                        "locked": false,
+                        "rot": 0.0,
+                        "pos": {
+                            "x": 1306.0,
+                            "y": 664.0
+                        },
+                        "scale": {
+                            "x": 0.35104167461395264,
+                            "y": 0.35092592239379883
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 8,
+                        "group_item_backup": false,
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "additive",
                         "show_transition": {
                             "duration": 0
                         },
@@ -2906,82 +3111,6 @@
                         "crop_right": 0,
                         "crop_bottom": 0,
                         "id": 4,
-                        "group_item_backup": false,
-                        "scale_filter": "disable",
-                        "blend_method": "default",
-                        "blend_type": "normal",
-                        "show_transition": {
-                            "duration": 0
-                        },
-                        "hide_transition": {
-                            "duration": 0
-                        },
-                        "private_settings": {}
-                    },
-                    {
-                        "name": "brake-system-2709406_1280.png",
-                        "source_uuid": "41dcfefd-8472-4622-a0d4-75e158f44e26",
-                        "visible": true,
-                        "locked": false,
-                        "rot": 0.0,
-                        "pos": {
-                            "x": 1040.0,
-                            "y": 131.0
-                        },
-                        "scale": {
-                            "x": 0.75625002384185791,
-                            "y": 0.75596529245376587
-                        },
-                        "align": 5,
-                        "bounds_type": 0,
-                        "bounds_align": 0,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "crop_left": 0,
-                        "crop_top": 0,
-                        "crop_right": 0,
-                        "crop_bottom": 0,
-                        "id": 5,
-                        "group_item_backup": false,
-                        "scale_filter": "disable",
-                        "blend_method": "default",
-                        "blend_type": "normal",
-                        "show_transition": {
-                            "duration": 0
-                        },
-                        "hide_transition": {
-                            "duration": 0
-                        },
-                        "private_settings": {}
-                    },
-                    {
-                        "name": "ms_timer",
-                        "source_uuid": "3875d2da-360e-4cd4-9158-a865a2759487",
-                        "visible": true,
-                        "locked": false,
-                        "rot": 0.0,
-                        "pos": {
-                            "x": 1440.0,
-                            "y": 890.0
-                        },
-                        "scale": {
-                            "x": 0.48500001430511475,
-                            "y": 0.48500001430511475
-                        },
-                        "align": 5,
-                        "bounds_type": 0,
-                        "bounds_align": 0,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "crop_left": 0,
-                        "crop_top": 0,
-                        "crop_right": 0,
-                        "crop_bottom": 0,
-                        "id": 6,
                         "group_item_backup": false,
                         "scale_filter": "disable",
                         "blend_method": "default",
@@ -3049,18 +3178,16 @@
                 "OBSBasic.SelectScene": [
                     {
                         "shift": true,
-                        "control": true,
-                        "key": "OBS_KEY_7"
+                        "command": true,
+                        "key": "OBS_KEY_F9"
                     }
                 ],
                 "libobs.show_scene_item.ms_bg": [],
                 "libobs.hide_scene_item.ms_bg": [],
+                "libobs.show_scene_item.event_break_loading": [],
+                "libobs.hide_scene_item.event_break_loading": [],
                 "libobs.show_scene_item.ms_break": [],
                 "libobs.hide_scene_item.ms_break": [],
-                "libobs.show_scene_item.brake-system-2709406_1280.png": [],
-                "libobs.hide_scene_item.brake-system-2709406_1280.png": [],
-                "libobs.show_scene_item.ms_timer": [],
-                "libobs.hide_scene_item.ms_timer": [],
                 "libobs.show_scene_item.christian-piano-music-143489.mp3": [],
                 "libobs.hide_scene_item.christian-piano-music-143489.mp3": []
             },
@@ -3213,8 +3340,8 @@
                 "OBSBasic.SelectScene": [
                     {
                         "shift": true,
-                        "control": true,
-                        "key": "OBS_KEY_6"
+                        "command": true,
+                        "key": "OBS_KEY_F10"
                     }
                 ],
                 "libobs.show_scene_item.palm-trees-2301981_1920.jpg 2": [],
@@ -3231,12 +3358,12 @@
         },
         {
             "prev_ver": 486604803,
-            "name": "EVENT PRE STREAM (live_on, rec_on, mute_on)",
+            "name": "EVENT PRE STREAM (live_on, rec_on_afterleave, mute_on)",
             "uuid": "232bf565-c647-4a08-9b59-36081a0007b3",
             "id": "scene",
             "versioned_id": "scene",
             "settings": {
-                "id_counter": 7,
+                "id_counter": 8,
                 "custom_size": false,
                 "items": [
                     {
@@ -3354,18 +3481,18 @@
                         "private_settings": {}
                     },
                     {
-                        "name": "ms_timer",
-                        "source_uuid": "3875d2da-360e-4cd4-9158-a865a2759487",
+                        "name": "event_break_loading",
+                        "source_uuid": "fab16907-d2c8-423e-bc84-9b04e7fa8a3a",
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
                         "pos": {
-                            "x": 1440.0,
-                            "y": 890.0
+                            "x": 1306.0,
+                            "y": 664.0
                         },
                         "scale": {
-                            "x": 0.48500001430511475,
-                            "y": 0.48500001430511475
+                            "x": 0.35104167461395264,
+                            "y": 0.35092592239379883
                         },
                         "align": 5,
                         "bounds_type": 0,
@@ -3378,11 +3505,11 @@
                         "crop_top": 0,
                         "crop_right": 0,
                         "crop_bottom": 0,
-                        "id": 7,
+                        "id": 8,
                         "group_item_backup": false,
                         "scale_filter": "disable",
                         "blend_method": "default",
-                        "blend_type": "normal",
+                        "blend_type": "additive",
                         "show_transition": {
                             "duration": 0
                         },
@@ -3405,15 +3532,21 @@
             "push-to-talk": false,
             "push-to-talk-delay": 0,
             "hotkeys": {
-                "OBSBasic.SelectScene": [],
+                "OBSBasic.SelectScene": [
+                    {
+                        "shift": true,
+                        "command": true,
+                        "key": "OBS_KEY_F8"
+                    }
+                ],
                 "libobs.show_scene_item.ms_start_bg": [],
                 "libobs.hide_scene_item.ms_start_bg": [],
                 "libobs.show_scene_item.ms_start_soon": [],
                 "libobs.hide_scene_item.ms_start_soon": [],
                 "libobs.show_scene_item.christian-piano-music-143489.mp3": [],
                 "libobs.hide_scene_item.christian-piano-music-143489.mp3": [],
-                "libobs.show_scene_item.ms_timer": [],
-                "libobs.hide_scene_item.ms_timer": []
+                "libobs.show_scene_item.event_break_loading": [],
+                "libobs.hide_scene_item.event_break_loading": []
             },
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
@@ -3422,6 +3555,47 @@
                 "transition": "Fade",
                 "transition_duration": 600
             }
+        },
+        {
+            "prev_ver": 486604803,
+            "name": "event_break_loading",
+            "uuid": "fab16907-d2c8-423e-bc84-9b04e7fa8a3a",
+            "id": "ffmpeg_source",
+            "versioned_id": "ffmpeg_source",
+            "settings": {
+                "hw_decode": false,
+                "local_file": "E:/StreamAssets/ccp_audio_system_manual_gitrepo/setup/streampc/obs_scene_assets/loading_pixabay.mp4",
+                "is_local_file": true,
+                "looping": true,
+                "clear_on_media_end": false,
+                "restart_on_activate": false,
+                "linear_alpha": true
+            },
+            "mixers": 255,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1.0,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {
+                "libobs.mute": [],
+                "libobs.unmute": [],
+                "libobs.push-to-mute": [],
+                "libobs.push-to-talk": [],
+                "MediaSource.Restart": [],
+                "MediaSource.Play": [],
+                "MediaSource.Pause": [],
+                "MediaSource.Stop": []
+            },
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {}
         },
         {
             "prev_ver": 486604803,
@@ -3524,7 +3698,7 @@
             "id": "text_gdiplus",
             "versioned_id": "text_gdiplus_v2",
             "settings": {
-                "text": "We are having \na short break,\nwe'll continue soon!"
+                "text": "We'll continue soon!"
             },
             "mixers": 0,
             "sync": 0,
@@ -3597,39 +3771,6 @@
         },
         {
             "prev_ver": 486604803,
-            "name": "ms_timer",
-            "uuid": "3875d2da-360e-4cd4-9158-a865a2759487",
-            "id": "browser_source",
-            "versioned_id": "browser_source",
-            "settings": {
-                "url": "e:\\StreamAssets\\ccp_audio_system_manual_gitrepo\\setup\\streampc\\obs_scene_assets\\SDGStreamingJourney\\src\\sources\\countdown.html?clockOnly=true",
-                "height": 200
-            },
-            "mixers": 255,
-            "sync": 0,
-            "flags": 0,
-            "volume": 1.0,
-            "balance": 0.5,
-            "enabled": true,
-            "muted": false,
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "hotkeys": {
-                "libobs.mute": [],
-                "libobs.unmute": [],
-                "libobs.push-to-mute": [],
-                "libobs.push-to-talk": [],
-                "ObsBrowser.Refresh": []
-            },
-            "deinterlace_mode": 0,
-            "deinterlace_field_order": 0,
-            "monitoring_type": 0,
-            "private_settings": {}
-        },
-        {
-            "prev_ver": 486604803,
             "name": "New (NDI)",
             "uuid": "902b9fc4-1f85-4316-8c24-fb4b4870e71e",
             "id": "ndi_source",
@@ -3669,16 +3810,13 @@
             "filters": [
                 {
                     "prev_ver": 486604803,
-                    "name": "Colour Correction",
-                    "uuid": "d2607f21-a73e-481f-b788-4b2dad9de56e",
-                    "id": "color_filter",
-                    "versioned_id": "color_filter_v2",
+                    "name": "Apply LUT",
+                    "uuid": "66efaeb7-b1e6-4e8b-b0cd-4fc551b1090f",
+                    "id": "clut_filter",
+                    "versioned_id": "clut_filter",
                     "settings": {
-                        "gamma": 0.089999999999999997,
-                        "contrast": 1.22,
-                        "brightness": 0.0043,
-                        "saturation": 0.22,
-                        "hue_shift": 0.0
+                        "image_path": "E:/StreamAssets/ccp_audio_system_manual_gitrepo/setup/streampc/obs_scene_assets/ptz_colorcorrection_lut.cube",
+                        "passthrough_alpha": false
                     },
                     "mixers": 0,
                     "sync": 0,
@@ -3699,12 +3837,13 @@
                 },
                 {
                     "prev_ver": 486604803,
-                    "name": "Apply LUT",
-                    "uuid": "66efaeb7-b1e6-4e8b-b0cd-4fc551b1090f",
+                    "name": "Apply LUT 2",
+                    "uuid": "955006e6-aa9a-41e4-bd10-616cd7d3bb28",
                     "id": "clut_filter",
                     "versioned_id": "clut_filter",
                     "settings": {
-                        "image_path": "E:/StreamAssets/ccp_audio_system_manual_gitrepo/setup/streampc/obs_scene_assets/ptz_colorcorrection_lut.cube"
+                        "image_path": "E:/StreamAssets/ccp_audio_system_manual_gitrepo/setup/streampc/obs_scene_assets/ptz_colorcorrection_lut2.cube",
+                        "clut_amount": 1.0
                     },
                     "mixers": 0,
                     "sync": 0,
@@ -3734,73 +3873,14 @@
             "settings": {
                 "video_device_id": "USB Video:\\\\?\\usb#22vid_534d&pid_2109&mi_00#22a&198d9bd0&0&0000#22{65e8773d-8f56-11d0-a3b9-00a0c9223196}\\global",
                 "last_video_device_id": "USB Video:\\\\?\\usb#22vid_534d&pid_2109&mi_00#22a&198d9bd0&0&0000#22{65e8773d-8f56-11d0-a3b9-00a0c9223196}\\global",
-                "color_range": "full",
-                "hw_decode": true
-            },
-            "mixers": 255,
-            "sync": 0,
-            "flags": 0,
-            "volume": 1.0,
-            "balance": 0.5,
-            "enabled": true,
-            "muted": false,
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "hotkeys": {
-                "libobs.mute": [],
-                "libobs.unmute": [],
-                "libobs.push-to-mute": [],
-                "libobs.push-to-talk": []
-            },
-            "deinterlace_mode": 0,
-            "deinterlace_field_order": 0,
-            "monitoring_type": 0,
-            "private_settings": {
-                "mixer_hidden": true
-            },
-            "filters": [
-                {
-                    "prev_ver": 486604803,
-                    "name": "Crop/Pad",
-                    "uuid": "860876bd-f71e-4e7f-82f0-0b93b5d04610",
-                    "id": "crop_filter",
-                    "versioned_id": "crop_filter",
-                    "settings": {
-                        "left": 800
-                    },
-                    "mixers": 0,
-                    "sync": 0,
-                    "flags": 0,
-                    "volume": 1.0,
-                    "balance": 0.5,
-                    "enabled": false,
-                    "muted": false,
-                    "push-to-mute": false,
-                    "push-to-mute-delay": 0,
-                    "push-to-talk": false,
-                    "push-to-talk-delay": 0,
-                    "hotkeys": {},
-                    "deinterlace_mode": 0,
-                    "deinterlace_field_order": 0,
-                    "monitoring_type": 0,
-                    "private_settings": {}
-                }
-            ]
-        },
-        {
-            "prev_ver": 486604803,
-            "name": "Old (HDMI camlink, slow)",
-            "uuid": "f944efc0-fc15-412d-bf2b-8aad0b56b0a7",
-            "id": "dshow_input",
-            "versioned_id": "dshow_input",
-            "settings": {
-                "video_device_id": "Cam Link 4K:\\\\?\\usb#22vid_0fd9&pid_0066&mi_00#226&231ce39c&0&0000#22{65e8773d-8f56-11d0-a3b9-00a0c9223196}\\global",
-                "last_video_device_id": "Cam Link 4K:\\\\?\\usb#22vid_0fd9&pid_0066&mi_00#226&231ce39c&0&0000#22{65e8773d-8f56-11d0-a3b9-00a0c9223196}\\global",
-                "active": true,
+                "resolution": "1920x1080",
+                "last_resolution": "1920x1080",
+                "buffering": 2,
+                "frame_interval": 333333,
+                "res_type": 1,
                 "color_space": "709",
                 "color_range": "full",
+                "autorotation": false,
                 "hw_decode": true
             },
             "mixers": 255,
@@ -3825,35 +3905,7 @@
             "monitoring_type": 0,
             "private_settings": {
                 "mixer_hidden": true
-            },
-            "filters": [
-                {
-                    "prev_ver": 486604803,
-                    "name": "Crop/Pad",
-                    "uuid": "fe3990d7-d44d-4a82-803a-8b5466e4fcca",
-                    "id": "crop_filter",
-                    "versioned_id": "crop_filter",
-                    "settings": {
-                        "left": 867
-                    },
-                    "mixers": 0,
-                    "sync": 0,
-                    "flags": 0,
-                    "volume": 1.0,
-                    "balance": 0.5,
-                    "enabled": false,
-                    "muted": false,
-                    "push-to-mute": false,
-                    "push-to-mute-delay": 0,
-                    "push-to-talk": false,
-                    "push-to-talk-delay": 0,
-                    "hotkeys": {},
-                    "deinterlace_mode": 0,
-                    "deinterlace_field_order": 0,
-                    "monitoring_type": 0,
-                    "private_settings": {}
-                }
-            ]
+            }
         },
         {
             "prev_ver": 486604803,
@@ -4182,8 +4234,8 @@
                 "OBSBasic.SelectScene": [
                     {
                         "shift": true,
-                        "control": true,
-                        "key": "OBS_KEY_1"
+                        "command": true,
+                        "key": "OBS_KEY_F1"
                     }
                 ],
                 "libobs.show_scene_item._ Notebook + Cam": [],
@@ -4442,8 +4494,8 @@
                 "OBSBasic.SelectScene": [
                     {
                         "shift": true,
-                        "control": true,
-                        "key": "OBS_KEY_3"
+                        "command": true,
+                        "key": "OBS_KEY_F3"
                     }
                 ],
                 "libobs.show_scene_item.PTZ Action to pulpit": [],
@@ -4562,8 +4614,8 @@
                 "OBSBasic.SelectScene": [
                     {
                         "shift": true,
-                        "control": true,
-                        "key": "OBS_KEY_2"
+                        "command": true,
+                        "key": "OBS_KEY_F2"
                     }
                 ],
                 "libobs.show_scene_item._ Notebook + Cam": [],
@@ -4682,8 +4734,8 @@
                 "OBSBasic.SelectScene": [
                     {
                         "shift": true,
-                        "control": true,
-                        "key": "OBS_KEY_5"
+                        "command": true,
+                        "key": "OBS_KEY_F5"
                     }
                 ],
                 "libobs.show_scene_item.PTZ Action sitting": [],
@@ -4802,8 +4854,8 @@
                 "OBSBasic.SelectScene": [
                     {
                         "shift": true,
-                        "control": true,
-                        "key": "OBS_KEY_4"
+                        "command": true,
+                        "key": "OBS_KEY_F4"
                     }
                 ],
                 "libobs.show_scene_item._ Notebook + Cam": [],
@@ -4919,7 +4971,13 @@
             "push-to-talk": false,
             "push-to-talk-delay": 0,
             "hotkeys": {
-                "OBSBasic.SelectScene": [],
+                "OBSBasic.SelectScene": [
+                    {
+                        "shift": true,
+                        "command": true,
+                        "key": "OBS_KEY_F7"
+                    }
+                ],
                 "libobs.show_scene_item.PTZ Action to pulpit": [],
                 "libobs.hide_scene_item.PTZ Action to pulpit": [],
                 "libobs.show_scene_item._ Notebook + Cam": [],
@@ -5504,47 +5562,9 @@
                         "private_settings": {}
                     },
                     {
-                        "name": "Old (HDMI camlink, slow)",
-                        "source_uuid": "f944efc0-fc15-412d-bf2b-8aad0b56b0a7",
-                        "visible": false,
-                        "locked": false,
-                        "rot": 0.0,
-                        "pos": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "scale": {
-                            "x": 1.0,
-                            "y": 1.0
-                        },
-                        "align": 5,
-                        "bounds_type": 0,
-                        "bounds_align": 0,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "crop_left": 0,
-                        "crop_top": 0,
-                        "crop_right": 0,
-                        "crop_bottom": 0,
-                        "id": 19,
-                        "group_item_backup": false,
-                        "scale_filter": "disable",
-                        "blend_method": "default",
-                        "blend_type": "normal",
-                        "show_transition": {
-                            "duration": 0
-                        },
-                        "hide_transition": {
-                            "duration": 0
-                        },
-                        "private_settings": {}
-                    },
-                    {
                         "name": "Notebook",
                         "source_uuid": "86bf5a3a-2836-400a-8d4f-03b9f675a6c5",
-                        "visible": false,
+                        "visible": true,
                         "locked": false,
                         "rot": 0.0,
                         "pos": {
@@ -5604,20 +5624,18 @@
                 "OBSBasic.SelectScene": [],
                 "libobs.show_scene_item.New (NDI)": [],
                 "libobs.hide_scene_item.New (NDI)": [],
-                "libobs.show_scene_item.Old (HDMI camlink, slow)": [],
-                "libobs.hide_scene_item.Old (HDMI camlink, slow)": [],
                 "libobs.show_scene_item.Notebook": [
                     {
                         "shift": true,
-                        "control": true,
-                        "key": "OBS_KEY_F1"
+                        "command": true,
+                        "key": "OBS_KEY_F11"
                     }
                 ],
                 "libobs.hide_scene_item.Notebook": [
                     {
                         "shift": true,
-                        "control": true,
-                        "key": "OBS_KEY_F1"
+                        "command": true,
+                        "key": "OBS_KEY_F11"
                     }
                 ]
             },
