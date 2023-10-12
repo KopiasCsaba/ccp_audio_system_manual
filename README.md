@@ -2,34 +2,19 @@
 
 This repository contains labels, manuals and documentation on our audio gear, and it's usage.
 
-# Contents
+# Sub-pages
 
-## For preachers
+* For the [preachers](for_preachers)
+* For the [projection team](for_projection_team)
+* For the [worship team](for_worship_team)
+* For the [technicians](for_technicians)
+* For the [online managers](for_online_managers)
 
-Quick links for preachers: [for_preachers](for_preachers). 
+# Other pages
 
-## For worship team members
+* Source materials of our printed [labels](labels).
+* Here are the [current needs](needs.md) of the audio ministry.
 
-Here is some essential knowledge for you, if you are ever on stage: [for_worship_team](for_worship_team). 
+## Short link for this page:
 
-## For technicians
-
-Learn more about being a technician in [for_technicians](for_technicians). 
-
-## For online managers
-
-Learn more about the tasks for online managers [for_online_managers](for_online_managers). 
-
-
-## Labels
-
-Find source materials of our printed labels in  [labels](labels).
-
-
-
-# Needs
-Here are the [current needs](needs.md) of the audio ministry.
-
-
-# Short link for this page:
 [https://tinyurl.com/ccpaudioguide](https://tinyurl.com/ccpaudioguide)

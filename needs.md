@@ -6,6 +6,7 @@
 - We need a light added somewhere to shine on the preacher, we need something that has a big surface area, so that it would not blind, but we need to overcome the projector, and also the camera is noisy if it doesn't get enough light.
 - A stage monitor is out of service.
 - AIRBNB box for holding the console key
-
+- Flood lights, to illuminate the speaker
+- Buying/building/installing sound absorption panels in the room 
 
  
