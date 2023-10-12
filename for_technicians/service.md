@@ -6,22 +6,24 @@
 
 
 <!-- TOC -->
+
 * [Before the service](#before-the-service)
-  * [Align the pulpit](#align-the-pulpit)
-  * [Prepare for live-streaming](#prepare-for-live-streaming)
-    * [Turn on the sockets](#turn-on-the-sockets)
-    * [Turn on the pole-TV](#turn-on-the-pole-tv)
-    * [Turn on the coffee-shop TV](#turn-on-the-coffee-shop-tv)
-    * [Turn on the PC](#turn-on-the-pc)
-    * [LOG IN](#log-in)
-  * [Prepare the headset](#prepare-the-headset)
+    * [Align the pulpit](#align-the-pulpit)
+    * [Prepare for live-streaming](#prepare-for-live-streaming)
+        * [Turn on the sockets](#turn-on-the-sockets)
+        * [Turn on the pole-TV](#turn-on-the-pole-tv)
+        * [Turn on the coffee-shop TV](#turn-on-the-coffee-shop-tv)
+        * [Turn on the PC](#turn-on-the-pc)
+        * [LOG IN](#log-in)
+    * [Prepare the headset](#prepare-the-headset)
 * [Before the service](#before-the-service-1)
-  * [Playing background music](#playing-background-music)
+    * [Playing background music](#playing-background-music)
 * [During service](#during-service)
 * [During worship](#during-worship)
-  * [When someone speaks or prays](#when-someone-speaks-or-prays)
+    * [When someone speaks or prays](#when-someone-speaks-or-prays)
 * [During preaching](#during-preaching)
 * [Closing](#closing)
+
 <!-- TOC -->
 
 <div style="page-break-after: always;"></div>
@@ -41,6 +43,7 @@ There is a mark on the floor, align the pulpit to be at the correct position.
 <div style="page-break-after: always;"></div>
 
 ## Prepare for live-streaming
+
 You should do this section before 09:50, as timed operations will start the streaming after that.
 
 ### Turn on the sockets
@@ -59,7 +62,6 @@ Use the remote control labeled "CENTURY", it is above the console on the shelf u
 
 <br clear="both" style="clear:both"/>
 
-
 ### Turn on the coffee-shop TV
 
 <img alt="" src="assets/video/lg.jpg" height="150">
@@ -67,8 +69,8 @@ Use the remote control labeled "CENTURY", it is above the console on the shelf u
 * Pull it out to face the audience.
 * The button is in the bottom center.
 
-
 ### Turn on the PC
+
 <img alt="" src="assets/video/pc_button.jpg" align="right" style="float:right" height="100">
 
 The power button is on the top:
@@ -104,8 +106,8 @@ If the service starts hours later, you can keep it turned off, and only turn it 
 
 <br clear="both" style="clear:both"/>
 
-
 # Before the service
+
 ## Playing background music
 
 There is an extra 3.5mm trs jack lead dangling around the projection machine, you might connect some device to it to
@@ -116,18 +118,15 @@ You might also play back music from the streaming pc.
 * If **{Mute Groups/AUX / PC}** is red, then press it to unmute.
 * Press **{LAYERS/AUX}** to select the aux layer.
 * Adjust the volume of the appropriate input.
-  * Check the LED indicators below the SELECT buttons to see which channels got input signals.
+    * Check the LED indicators below the SELECT buttons to see which channels got input signals.
 * You might also want to adjust the AUX group fader, on the right side of the mixer.
-  * e.g. if it's on -60 then you'll hear nothing no matter how much you have on the left.
+    * e.g. if it's on -60 then you'll hear nothing no matter how much you have on the left.
 
 <div style="page-break-after: always;"></div>
 
 # During service
 
-* Always make sure to mute/unmute the right combination of STAGE / PULPIT / HEADSET. 
-* Only **one of these three** should be unmuted at a time, generally.
-
-# During worship
+## During worship
 
 * Constantly monitor:
     * Did you turn off the preaching mics?
@@ -138,18 +137,34 @@ You might also play back music from the streaming pc.
     * Is there anything that bothers your ear?
 * **PUT YOUR HEAD OUT** to hear what is really going on.
 
-## When someone speaks or prays
+### When someone speaks or prays
 
 * Mute the effects! Having effect on praying or preaching is very cheesy.
 * If it's too much to pay attention to, that's all right, then mute the effects once and forget it:)
 
-# During preaching
+## During preaching
 
 * Constantly monitor:
     * Is the stage turned off?
     * Only the right microphone is on? (pulpit **OR** headset, never both)
     * The volume is correct?
     * Is there any distortion?
+
+# Rule of thumb
+
+
+* Always make sure to mute/unmute the right combination of STAGE / PULPIT / HEADSET.
+* Only **ONE of those three** should be unmuted at a time.
+
+
+| When          | Pulpit | Headset | Stage |
+|:--------------|:-------|:--------|:------|
+| Announcements | ON     | Muted*  | OFF   |
+| Worship       | Muted  | Muted   | ON    |
+| Preaching**   | Muted  | ON      | OFF   |
+
+* *: If the person who is doing the announcements has the headset then switch to it.
+* **: If the headset doesn't work, or stops to work, then switch to pulpit.
 
 <div style="page-break-after: always;"></div>
 
@@ -170,11 +185,11 @@ You might also play back music from the streaming pc.
 
 * Wait for the recordings to upload.
 
-   **If you can**, please wait about 15 minutes to pass between the end of the live-streaming, and turning off the PC.
-   The computer automatically uploads the recordings of this event, so that our crew could edit/upload/manage it.
+  **If you can**, please wait about 15 minutes to pass between the end of the live-streaming, and turning off the PC.
+  The computer automatically uploads the recordings of this event, so that our crew could edit/upload/manage it.
 
-   You can check on the status by clicking on the:
-   **System tray → Google Drive icon**, and verifying that a file with today's date is being/was uploaded.
+  You can check on the status by clicking on the:
+  **System tray → Google Drive icon**, and verifying that a file with today's date is being/was uploaded.
 
    <img src="assets/streampc/drive_sync.png"  height="200">
 

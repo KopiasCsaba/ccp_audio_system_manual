@@ -30,6 +30,18 @@ font-family: Roboto;
   font-family: 'Georgia', serif;
 }
 
+table {
+border:1px solid black;
+border-collapse:collapse;
+}
+tr, td, th {
+border:1px solid black;
+}
+
+th {
+font-weight:bold;
+}
+
 img {
 padding: 1px;
 margin: 1px;
