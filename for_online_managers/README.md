@@ -34,7 +34,7 @@ Various assets can be found in the [assets](assets) folder.
 * [Facebook page](https://www.facebook.com/profile.php?id=100064617556957)
 
 * Submit title form
-    * [The form](https://tinyurl.com/ccpeventtitle)
+    * [The form](https://tinyurl.com/ccptitle) (send this to the preachers)
     * [Responses](https://docs.google.com/spreadsheets/d/1U4e9Zl-bMcoLnEX45d6xp-LrloPPm9Uc4XkpturU5JE/edit#gid=563687903)
 
 ## Google drive hierarchy
