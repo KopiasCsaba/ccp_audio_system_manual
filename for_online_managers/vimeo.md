@@ -28,7 +28,11 @@ And you can edit them under the [Showcases](https://vimeo.com/manage/showcases) 
 <img src="assets/vimeo/publish_to_social.png">
 
 * Select the proper platforms (YouTube and Facebook)
-* And push through the steps
+* And push through the steps.
+
+
 
 # Fix missing info
-Vimeo does not appear to set thumbnails on the pushed videos, you need to set those manually.
+ - Vimeo does not appear to set thumbnails on the pushed videos, you need to set those manually.
+ - On YouTube you need to add the video to the [proper playlist](youtube.md#add-it-to-the-proper-playlist), make the live unlisted, etc. (Check all the steps in the [youtube](youtube.md) guide.)
+ - On facebook you need to  make the live unlisted, and check for other potential steps in the [facebook](facebook_video.md) guide.
