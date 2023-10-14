@@ -97,8 +97,8 @@
             }
         ]
     },
-    "current_scene": "PROJECTOR  (mute_off, autoptz_to_stage)",
-    "current_program_scene": "STAGE  (mute_off, autoptz)",
+    "current_scene": "SITTING (mute_off, autoptz_to_stage)",
+    "current_program_scene": "SITTING (mute_off, autoptz_to_stage)",
     "scene_order": [
         {
             "name": "=============== SUNDAY ==============="
@@ -218,7 +218,7 @@
                     "properties": false,
                     "filters": false,
                     "textinput": false,
-                    "geometry": "AdnQywADAAAAAATtAAACRgAAB38AAAPXAAAAAAAAAAD//////////wAAAAAAAAAAB4AAAATtAAACRgAAB38AAAPX",
+                    "geometry": "AdnQywADAAAAAAWDAAACRgAAB38AAAPXAAAAAAAAAAD//////////wAAAAAAAAAAB4AAAAWDAAACRgAAB38AAAPX",
                     "split": "AAAA/wAAAAEAAAABAAAAHgD/////AQAAAAIA",
                     "window": "",
                     "dockarea": 8,
@@ -290,7 +290,7 @@
                     "properties": false,
                     "filters": false,
                     "textinput": false,
-                    "geometry": "AdnQywADAAAAAAQoAAACRgAABOgAAALSAAAAAAAAAAD//////////wAAAAAAAAAAB4AAAAQoAAACRgAABOgAAALS",
+                    "geometry": "AdnQywADAAAAAASeAAACRgAABX4AAALSAAAAAAAAAAD//////////wAAAAAAAAAAB4AAAASeAAACRgAABX4AAALS",
                     "split": "AAAA/wAAAAEAAAABAAAAHgD/////AQAAAAIA",
                     "window": "",
                     "dockarea": 8,
@@ -1662,7 +1662,7 @@
                 },
                 {
                     "name": "sunday_youtube_autostart",
-                    "pause": false,
+                    "pause": true,
                     "parallel": false,
                     "onChange": true,
                     "skipExecOnStart": false,
@@ -2762,23 +2762,23 @@
             "triggerTabPos": 17,
             "saveWindowGeo": false,
             "windowPosX": 450,
-            "windowPosY": 17,
-            "windowWidth": 1297,
-            "windowHeight": 770,
+            "windowPosY": 187,
+            "windowWidth": 1000,
+            "windowHeight": 786,
             "macroActionConditionSplitterPosition": [
                 {
-                    "pos": 370
+                    "pos": 219
                 },
                 {
-                    "pos": 183
+                    "pos": 350
                 }
             ],
             "macroListMacroEditSplitterPosition": [
                 {
-                    "pos": 442
+                    "pos": 213
                 },
                 {
-                    "pos": 828
+                    "pos": 760
                 }
             ],
             "version": "577808f1a307cfd49af20a7a6807975ecc50d76f"
@@ -3184,12 +3184,12 @@
                 ],
                 "libobs.show_scene_item.ms_bg": [],
                 "libobs.hide_scene_item.ms_bg": [],
+                "libobs.show_scene_item.event_break_loading": [],
+                "libobs.hide_scene_item.event_break_loading": [],
                 "libobs.show_scene_item.ms_break": [],
                 "libobs.hide_scene_item.ms_break": [],
                 "libobs.show_scene_item.christian-piano-music-143489.mp3": [],
-                "libobs.hide_scene_item.christian-piano-music-143489.mp3": [],
-                "libobs.show_scene_item.event_break_loading": [],
-                "libobs.hide_scene_item.event_break_loading": []
+                "libobs.hide_scene_item.christian-piano-music-143489.mp3": []
             },
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
@@ -3563,13 +3563,13 @@
             "id": "ffmpeg_source",
             "versioned_id": "ffmpeg_source",
             "settings": {
-                "looping": true,
                 "hw_decode": false,
-                "clear_on_media_end": false,
-                "is_local_file": true,
-                "linear_alpha": true,
                 "local_file": "E:/StreamAssets/ccp_audio_system_manual_gitrepo/setup/streampc/obs_scene_assets/loading_pixabay.mp4",
-                "restart_on_activate": false
+                "is_local_file": true,
+                "looping": true,
+                "clear_on_media_end": false,
+                "restart_on_activate": false,
+                "linear_alpha": true
             },
             "mixers": 255,
             "sync": 0,
@@ -3875,78 +3875,12 @@
                 "last_video_device_id": "USB Video:\\\\?\\usb#22vid_534d&pid_2109&mi_00#22a&198d9bd0&0&0000#22{65e8773d-8f56-11d0-a3b9-00a0c9223196}\\global",
                 "resolution": "1920x1080",
                 "last_resolution": "1920x1080",
+                "buffering": 2,
+                "frame_interval": 333333,
                 "res_type": 1,
                 "color_space": "709",
                 "color_range": "full",
                 "autorotation": false,
-                "hw_decode": true,
-                "frame_interval": 166666,
-                "buffering": 2
-            },
-            "mixers": 255,
-            "sync": 0,
-            "flags": 0,
-            "volume": 1.0,
-            "balance": 0.5,
-            "enabled": true,
-            "muted": false,
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "hotkeys": {
-                "libobs.mute": [],
-                "libobs.unmute": [],
-                "libobs.push-to-mute": [],
-                "libobs.push-to-talk": []
-            },
-            "deinterlace_mode": 0,
-            "deinterlace_field_order": 0,
-            "monitoring_type": 0,
-            "private_settings": {
-                "mixer_hidden": true
-            },
-            "filters": [
-                {
-                    "prev_ver": 486604803,
-                    "name": "Crop/Pad",
-                    "uuid": "860876bd-f71e-4e7f-82f0-0b93b5d04610",
-                    "id": "crop_filter",
-                    "versioned_id": "crop_filter",
-                    "settings": {
-                        "left": 800
-                    },
-                    "mixers": 0,
-                    "sync": 0,
-                    "flags": 0,
-                    "volume": 1.0,
-                    "balance": 0.5,
-                    "enabled": false,
-                    "muted": false,
-                    "push-to-mute": false,
-                    "push-to-mute-delay": 0,
-                    "push-to-talk": false,
-                    "push-to-talk-delay": 0,
-                    "hotkeys": {},
-                    "deinterlace_mode": 0,
-                    "deinterlace_field_order": 0,
-                    "monitoring_type": 0,
-                    "private_settings": {}
-                }
-            ]
-        },
-        {
-            "prev_ver": 486604803,
-            "name": "Old (HDMI camlink, slow)",
-            "uuid": "f944efc0-fc15-412d-bf2b-8aad0b56b0a7",
-            "id": "dshow_input",
-            "versioned_id": "dshow_input",
-            "settings": {
-                "video_device_id": "Cam Link 4K:\\\\?\\usb#22vid_0fd9&pid_0066&mi_00#226&231ce39c&0&0000#22{65e8773d-8f56-11d0-a3b9-00a0c9223196}\\global",
-                "last_video_device_id": "Cam Link 4K:\\\\?\\usb#22vid_0fd9&pid_0066&mi_00#226&231ce39c&0&0000#22{65e8773d-8f56-11d0-a3b9-00a0c9223196}\\global",
-                "active": true,
-                "color_space": "709",
-                "color_range": "full",
                 "hw_decode": true
             },
             "mixers": 255,
@@ -3971,35 +3905,7 @@
             "monitoring_type": 0,
             "private_settings": {
                 "mixer_hidden": true
-            },
-            "filters": [
-                {
-                    "prev_ver": 486604803,
-                    "name": "Crop/Pad",
-                    "uuid": "fe3990d7-d44d-4a82-803a-8b5466e4fcca",
-                    "id": "crop_filter",
-                    "versioned_id": "crop_filter",
-                    "settings": {
-                        "left": 867
-                    },
-                    "mixers": 0,
-                    "sync": 0,
-                    "flags": 0,
-                    "volume": 1.0,
-                    "balance": 0.5,
-                    "enabled": false,
-                    "muted": false,
-                    "push-to-mute": false,
-                    "push-to-mute-delay": 0,
-                    "push-to-talk": false,
-                    "push-to-talk-delay": 0,
-                    "hotkeys": {},
-                    "deinterlace_mode": 0,
-                    "deinterlace_field_order": 0,
-                    "monitoring_type": 0,
-                    "private_settings": {}
-                }
-            ]
+            }
         },
         {
             "prev_ver": 486604803,
@@ -5656,47 +5562,9 @@
                         "private_settings": {}
                     },
                     {
-                        "name": "Old (HDMI camlink, slow)",
-                        "source_uuid": "f944efc0-fc15-412d-bf2b-8aad0b56b0a7",
-                        "visible": false,
-                        "locked": false,
-                        "rot": 0.0,
-                        "pos": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "scale": {
-                            "x": 1.0,
-                            "y": 1.0
-                        },
-                        "align": 5,
-                        "bounds_type": 0,
-                        "bounds_align": 0,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "crop_left": 0,
-                        "crop_top": 0,
-                        "crop_right": 0,
-                        "crop_bottom": 0,
-                        "id": 19,
-                        "group_item_backup": false,
-                        "scale_filter": "disable",
-                        "blend_method": "default",
-                        "blend_type": "normal",
-                        "show_transition": {
-                            "duration": 0
-                        },
-                        "hide_transition": {
-                            "duration": 0
-                        },
-                        "private_settings": {}
-                    },
-                    {
                         "name": "Notebook",
                         "source_uuid": "86bf5a3a-2836-400a-8d4f-03b9f675a6c5",
-                        "visible": false,
+                        "visible": true,
                         "locked": false,
                         "rot": 0.0,
                         "pos": {
@@ -5756,8 +5624,6 @@
                 "OBSBasic.SelectScene": [],
                 "libobs.show_scene_item.New (NDI)": [],
                 "libobs.hide_scene_item.New (NDI)": [],
-                "libobs.show_scene_item.Old (HDMI camlink, slow)": [],
-                "libobs.hide_scene_item.Old (HDMI camlink, slow)": [],
                 "libobs.show_scene_item.Notebook": [
                     {
                         "shift": true,

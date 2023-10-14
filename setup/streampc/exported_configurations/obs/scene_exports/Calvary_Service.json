@@ -48,7 +48,7 @@
         "volume": 1.0,
         "balance": 0.5,
         "enabled": true,
-        "muted": false,
+        "muted": true,
         "push-to-mute": false,
         "push-to-mute-delay": 0,
         "push-to-talk": false,
@@ -97,8 +97,8 @@
             }
         ]
     },
-    "current_scene": "SITTING (mute_off, autoptz_to_stage)",
-    "current_program_scene": "SITTING (mute_off, autoptz_to_stage)",
+    "current_scene": "EVENT FINISHED  (live_off_delayed, rec_off_delayed, mute_on)",
+    "current_program_scene": "_ BLACK",
     "scene_order": [
         {
             "name": "=============== SUNDAY ==============="
@@ -126,6 +126,9 @@
         },
         {
             "name": "SITTING (mute_off, autoptz_to_stage)"
+        },
+        {
+            "name": "CUSTOM (mute_off, autoptz_to_stage)"
         },
         {
             "name": "=============== GENERAL EVENT ==============="
@@ -218,7 +221,7 @@
                     "properties": false,
                     "filters": false,
                     "textinput": false,
-                    "geometry": "AdnQywADAAAAAAWDAAACRgAAB38AAAPXAAAAAAAAAAD//////////wAAAAAAAAAAB4AAAAWDAAACRgAAB38AAAPX",
+                    "geometry": "AdnQywADAAAAAAVEAAACRgAAB38AAAPXAAAAAAAAAAD//////////wAAAAAAAAAAB4AAAAVEAAACRgAAB38AAAPX",
                     "split": "AAAA/wAAAAEAAAABAAAAHgD/////AQAAAAIA",
                     "window": "",
                     "dockarea": 8,
@@ -242,7 +245,7 @@
                     "properties": false,
                     "filters": false,
                     "textinput": false,
-                    "geometry": "AdnQywADAAAAAAMSAAACDQAAA9kAAAKPAAADEgAAAiwAAAPZAAACjwAAAAAAAAAAB4AAAAMSAAACLAAAA9kAAAKP",
+                    "geometry": "AdnQywADAAD///84AAACDf////8AAAKP////OAAAAiz/////AAACjwAAAAEAAAAABQD///84AAACLP////8AAAKP",
                     "split": "AAAA/wAAAAEAAAAAAP////8BAAAAAgA=",
                     "window": "",
                     "dockarea": 0,
@@ -266,7 +269,7 @@
                     "properties": false,
                     "filters": false,
                     "textinput": false,
-                    "geometry": "AdnQywADAAAAAAMSAAACDQAAA9kAAAKPAAADEgAAAiwAAAPZAAACjwAAAAAAAAAAB4AAAAMSAAACLAAAA9kAAAKP",
+                    "geometry": "AdnQywADAAD///84AAACDf////8AAAKP////OAAAAiz/////AAACjwAAAAEAAAAABQD///84AAACLP////8AAAKP",
                     "split": "AAAA/wAAAAEAAAAAAP////8BAAAAAgA=",
                     "window": "",
                     "dockarea": 0,
@@ -290,7 +293,7 @@
                     "properties": false,
                     "filters": false,
                     "textinput": false,
-                    "geometry": "AdnQywADAAAAAASeAAACRgAABX4AAALSAAAAAAAAAAD//////////wAAAAAAAAAAB4AAAASeAAACRgAABX4AAALS",
+                    "geometry": "AdnQywADAAAAAARRAAACRgAABT8AAALSAAAAAAAAAAD//////////wAAAAAAAAAAB4AAAARRAAACRgAABT8AAALS",
                     "split": "AAAA/wAAAAEAAAABAAAAHgD/////AQAAAAIA",
                     "window": "",
                     "dockarea": 8,
@@ -2943,6 +2946,126 @@
         },
         {
             "prev_ver": 486604803,
+            "name": "CUSTOM (mute_off, autoptz_to_stage)",
+            "uuid": "5410e6db-5514-4145-9fd8-e992cb01ab01",
+            "id": "scene",
+            "versioned_id": "scene",
+            "settings": {
+                "id_counter": 3,
+                "custom_size": false,
+                "items": [
+                    {
+                        "name": "_ Notebook + Cam",
+                        "source_uuid": "9b69a2be-e7f9-4db7-a2be-54ceda5fe841",
+                        "visible": true,
+                        "locked": false,
+                        "rot": 0.0,
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 2,
+                        "group_item_backup": false,
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 0
+                        },
+                        "hide_transition": {
+                            "duration": 0
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "PTZ Action sitting 2",
+                        "source_uuid": "b487bc29-f4e0-4cd5-b6d5-c5b13d065335",
+                        "visible": true,
+                        "locked": false,
+                        "rot": 0.0,
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 3,
+                        "group_item_backup": false,
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 0
+                        },
+                        "hide_transition": {
+                            "duration": 0
+                        },
+                        "private_settings": {}
+                    }
+                ]
+            },
+            "mixers": 0,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1.0,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {
+                "OBSBasic.SelectScene": [
+                    {
+                        "shift": true,
+                        "command": true,
+                        "key": "OBS_KEY_F6"
+                    }
+                ],
+                "libobs.show_scene_item._ Notebook + Cam": [],
+                "libobs.hide_scene_item._ Notebook + Cam": [],
+                "libobs.show_scene_item.PTZ Action sitting 2": [],
+                "libobs.hide_scene_item.PTZ Action sitting 2": []
+            },
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {
+                "transition": "Fade",
+                "transition_duration": 600
+            }
+        },
+        {
+            "prev_ver": 486604803,
             "name": "debug",
             "uuid": "3c444d0d-6402-4eef-937e-96f585dd282c",
             "id": "browser_source",
@@ -4309,6 +4432,34 @@
         },
         {
             "prev_ver": 486604803,
+            "name": "PTZ Action sitting 2",
+            "uuid": "b487bc29-f4e0-4cd5-b6d5-c5b13d065335",
+            "id": "ptz_action_source",
+            "versioned_id": "ptz_action_source",
+            "settings": {
+                "device_id": 1,
+                "action": 2,
+                "preset_id": 5
+            },
+            "mixers": 0,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1.0,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {},
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {}
+        },
+        {
+            "prev_ver": 486604803,
             "name": "PTZ Action to pulpit",
             "uuid": "68711d07-7e7f-4209-8a0b-a5981c6e48a6",
             "id": "ptz_action_source",
@@ -5564,7 +5715,7 @@
                     {
                         "name": "Notebook",
                         "source_uuid": "86bf5a3a-2836-400a-8d4f-03b9f675a6c5",
-                        "visible": true,
+                        "visible": false,
                         "locked": false,
                         "rot": 0.0,
                         "pos": {
