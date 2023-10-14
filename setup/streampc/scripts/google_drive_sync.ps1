@@ -31,6 +31,11 @@ foreach ($file in $files) {
         echo "Skipping non .mp4 file: $file"
          continue
     }
+
+    while ((Get-Item (Join-Path $sourceFolder $file)).LastWriteTime -gt (Get-Date).AddSeconds(-20)) {
+        echo "Waiting on still changing file: $file ..."
+        Start-Sleep 5
+    }
   
 
     if (!(Test-Path $destinationFile) -or ($file.Length -ne (Get-Item $destinationFile).Length)) {
