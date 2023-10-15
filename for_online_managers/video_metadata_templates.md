@@ -102,6 +102,6 @@ Usually their first slide is the thumbnail:
  * Seek to the part in the video where the slide is shown
  * Make the video fullscreen.
  * Make a print screen.
- * Save the file with the name "YYYY-MM-DD.png", where the date is the class' date.
+ * Save the file with the name "DD-MM-YYYY.png", where the date is the class' date.
  * Upload the thumbnail to the [Thumbnails/Matihitis](https://drive.google.com/drive/folders/1rElfp7KXbIOpjS5-Yb0whedpEGWxYHst) folder.
 

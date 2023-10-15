@@ -19,11 +19,11 @@ Please use the following file naming system:
 
 Template:
 
-`YYYY-MM-DD $TITLE - $PASSAGE - $PASTOR_NAME`
+`MM-DD-YYYY $TITLE - $PASSAGE - $PASTOR_NAME`
 
 Example:
 
-`2023-07-30 Right with God - Romans 3:9-31 - Pastor Stephen Clarke`
+`22-10-2023 Right with God - Romans 3:9-31 - Pastor Stephen Clarke`
 
 
 # Clean up
