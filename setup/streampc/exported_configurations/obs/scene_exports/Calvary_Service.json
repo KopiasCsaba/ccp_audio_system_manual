@@ -97,8 +97,8 @@
             }
         ]
     },
-    "current_scene": "EVENT PRE STREAM (live_on, rec_on_afterleave, mute_on)",
-    "current_program_scene": "_ BLACK",
+    "current_scene": "STAND BY  (live_off, rec_off, mute_on)",
+    "current_program_scene": "STAND BY  (live_off, rec_off, mute_on)",
     "scene_order": [
         {
             "name": "=============== SUNDAY ==============="
@@ -140,10 +140,10 @@
             "name": "EVENT PRE STREAM (live_on, rec_on_afterleave, mute_on)"
         },
         {
-            "name": "EVENT BREAK  (mute_on, rec_pause)"
+            "name": "EVENT FINISHED  (live_off_delayed, rec_off_delayed, mute_on)"
         },
         {
-            "name": "EVENT FINISHED  (live_off_delayed, rec_off_delayed, mute_on)"
+            "name": "EVENT BREAK  (mute_on, rec_pause)"
         },
         {
             "name": "=============== Others ==============="
@@ -194,7 +194,7 @@
     ],
     "current_transition": "Fade",
     "transition_duration": 400,
-    "preview_locked": false,
+    "preview_locked": true,
     "scaling_enabled": false,
     "scaling_level": 0,
     "scaling_off_x": 0.0,
@@ -221,7 +221,7 @@
                     "properties": false,
                     "filters": false,
                     "textinput": false,
-                    "geometry": "AdnQywADAAAAAAVEAAACRgAAB38AAAPXAAAAAAAAAAD//////////wAAAAAAAAAAB4AAAAVEAAACRgAAB38AAAPX",
+                    "geometry": "AdnQywADAAAAAAOzAAABXgAABDYAAAK/AAAAAAAAAAD//////////wAAAAAAAAAAB4AAAAOzAAABXgAABDYAAAK/",
                     "split": "AAAA/wAAAAEAAAABAAAAHgD/////AQAAAAIA",
                     "window": "",
                     "dockarea": 8,
@@ -245,7 +245,7 @@
                     "properties": false,
                     "filters": false,
                     "textinput": false,
-                    "geometry": "AdnQywADAAD///84AAACDf////8AAAKP////OAAAAiz/////AAACjwAAAAEAAAAABQD///84AAACLP////8AAAKP",
+                    "geometry": "AdnQywADAAAAAAAAAAAAAAAAAMcAAACCAAAAAAAAAB8AAADHAAAAggAAAAAAAAAAB4AAAAAAAAAAHwAAAMcAAACC",
                     "split": "AAAA/wAAAAEAAAAAAP////8BAAAAAgA=",
                     "window": "",
                     "dockarea": 0,
@@ -269,7 +269,7 @@
                     "properties": false,
                     "filters": false,
                     "textinput": false,
-                    "geometry": "AdnQywADAAD///84AAACDf////8AAAKP////OAAAAiz/////AAACjwAAAAEAAAAABQD///84AAACLP////8AAAKP",
+                    "geometry": "AdnQywADAAAAAAAAAAAAAAAAAMcAAACCAAAAAAAAAB8AAADHAAAAggAAAAAAAAAAB4AAAAAAAAAAHwAAAMcAAACC",
                     "split": "AAAA/wAAAAEAAAAAAP////8BAAAAAgA=",
                     "window": "",
                     "dockarea": 0,
@@ -293,7 +293,7 @@
                     "properties": false,
                     "filters": false,
                     "textinput": false,
-                    "geometry": "AdnQywADAAAAAARRAAACRgAABT8AAALSAAAAAAAAAAD//////////wAAAAAAAAAAB4AAAARRAAACRgAABT8AAALS",
+                    "geometry": "AdnQywADAAAAAAMIAAABXgAAA64AAAGyAAAAAAAAAAD//////////wAAAAAAAAAAB4AAAAMIAAABXgAAA64AAAGy",
                     "split": "AAAA/wAAAAEAAAABAAAAHgD/////AQAAAAIA",
                     "window": "",
                     "dockarea": 8,
@@ -393,7 +393,7 @@
                             },
                             "dayOfWeek": 7,
                             "condition": 0,
-                            "dateTime": "Sun Oct 8 10:01:00 2023",
+                            "dateTime": "Sun Oct 22 10:01:00 2023",
                             "dateTime2": "Sat Aug 12 13:04:33 2023",
                             "ignoreDate": false,
                             "ignoreTime": false,
@@ -475,7 +475,7 @@
                             },
                             "dayOfWeek": 7,
                             "condition": 0,
-                            "dateTime": "Sun Oct 8 10:30:00 2023",
+                            "dateTime": "Sun Oct 22 10:30:00 2023",
                             "dateTime2": "Sat Aug 12 13:04:33 2023",
                             "ignoreDate": false,
                             "ignoreTime": false,
@@ -637,7 +637,7 @@
                             },
                             "dayOfWeek": 7,
                             "condition": 1,
-                            "dateTime": "Sun Oct 8 11:50:00 2023",
+                            "dateTime": "Sun Oct 22 11:50:00 2023",
                             "dateTime2": "Sun Sep 10 08:53:17 2023",
                             "ignoreDate": false,
                             "ignoreTime": false,
@@ -2645,6 +2645,72 @@
                             }
                         }
                     ]
+                },
+                {
+                    "name": "obs_startup",
+                    "pause": false,
+                    "parallel": false,
+                    "onChange": true,
+                    "skipExecOnStart": false,
+                    "group": false,
+                    "dockSettings": {
+                        "register": false,
+                        "hasRunButton": true,
+                        "hasPauseButton": true,
+                        "hasStatusLabel": false,
+                        "highlightIfConditionsTrue": false,
+                        "runButtonText": "Run",
+                        "pauseButtonText": "Pause",
+                        "unpauseButtonText": "Unpause",
+                        "conditionsTrueStatusText": "Conditions are true.",
+                        "conditionsFalseStatusText": "Conditions are false."
+                    },
+                    "registerHotkeys": false,
+                    "pauseHotkey": [],
+                    "unpauseHotkey": [],
+                    "togglePauseHotkey": [],
+                    "conditions": [
+                        {
+                            "collapsed": false,
+                            "id": "plugin_state",
+                            "logic": 0,
+                            "durationModifier": {
+                                "time_constraint": 0,
+                                "seconds": {
+                                    "value": {
+                                        "value": 0.0,
+                                        "type": 0
+                                    },
+                                    "unit": 0,
+                                    "version": 1
+                                }
+                            },
+                            "condition": 0,
+                            "version": 1
+                        }
+                    ],
+                    "actions": [
+                        {
+                            "collapsed": false,
+                            "id": "scene_switch",
+                            "enabled": true,
+                            "sceneSelection": {
+                                "type": 0,
+                                "name": "STAND BY  (live_off, rec_off, mute_on)"
+                            },
+                            "transitionType": 0,
+                            "transition": "",
+                            "duration": {
+                                "value": {
+                                    "value": 0.0,
+                                    "type": 0
+                                },
+                                "unit": 0,
+                                "version": 1
+                            },
+                            "blockUntilTransitionDone": true
+                        }
+                    ]
                 }
             ],
             "connections": [],
@@ -2764,24 +2830,24 @@
             "sceneGroupTabPos": 14,
             "triggerTabPos": 17,
             "saveWindowGeo": false,
-            "windowPosX": 450,
-            "windowPosY": 187,
+            "windowPosX": 216,
+            "windowPosY": 207,
             "windowWidth": 1000,
-            "windowHeight": 786,
+            "windowHeight": 600,
             "macroActionConditionSplitterPosition": [
                 {
-                    "pos": 219
+                    "pos": 190
                 },
                 {
-                    "pos": 350
+                    "pos": 193
                 }
             ],
             "macroListMacroEditSplitterPosition": [
                 {
-                    "pos": 213
+                    "pos": 144
                 },
                 {
-                    "pos": 760
+                    "pos": 829
                 }
             ],
             "version": "577808f1a307cfd49af20a7a6807975ecc50d76f"
@@ -3381,18 +3447,18 @@
                         "key": "OBS_KEY_F9"
                     }
                 ],
+                "libobs.show_scene_item.christian-piano-music-143489.mp3": [],
+                "libobs.hide_scene_item.christian-piano-music-143489.mp3": [],
+                "libobs.show_scene_item.ms_start_bg": [],
+                "libobs.hide_scene_item.ms_start_bg": [],
+                "libobs.show_scene_item.laser_-_121651_pixabay.mp4": [],
+                "libobs.hide_scene_item.laser_-_121651_pixabay.mp4": [],
                 "libobs.show_scene_item.ms_bg": [],
                 "libobs.hide_scene_item.ms_bg": [],
                 "libobs.show_scene_item.event_break_loading": [],
                 "libobs.hide_scene_item.event_break_loading": [],
                 "libobs.show_scene_item.ms_break": [],
-                "libobs.hide_scene_item.ms_break": [],
-                "libobs.show_scene_item.christian-piano-music-143489.mp3": [],
-                "libobs.hide_scene_item.christian-piano-music-143489.mp3": [],
-                "libobs.show_scene_item.laser_-_121651_pixabay.mp4": [],
-                "libobs.hide_scene_item.laser_-_121651_pixabay.mp4": [],
-                "libobs.show_scene_item.ms_start_bg": [],
-                "libobs.hide_scene_item.ms_start_bg": []
+                "libobs.hide_scene_item.ms_break": []
             },
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
@@ -3782,14 +3848,14 @@
                 ],
                 "libobs.show_scene_item.ms_start_bg": [],
                 "libobs.hide_scene_item.ms_start_bg": [],
+                "libobs.show_scene_item.laser_-_121651_pixabay.mp4": [],
+                "libobs.hide_scene_item.laser_-_121651_pixabay.mp4": [],
                 "libobs.show_scene_item.ms_start_soon": [],
                 "libobs.hide_scene_item.ms_start_soon": [],
                 "libobs.show_scene_item.christian-piano-music-143489.mp3": [],
                 "libobs.hide_scene_item.christian-piano-music-143489.mp3": [],
                 "libobs.show_scene_item.event_break_loading": [],
-                "libobs.hide_scene_item.event_break_loading": [],
-                "libobs.show_scene_item.laser_-_121651_pixabay.mp4": [],
-                "libobs.hide_scene_item.laser_-_121651_pixabay.mp4": []
+                "libobs.hide_scene_item.event_break_loading": []
             },
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
@@ -3916,8 +3982,8 @@
             "versioned_id": "ffmpeg_source",
             "settings": {
                 "local_file": "E:/StreamAssets/ccp_audio_system_manual_gitrepo/setup/streampc/obs_scene_assets/laser_-_121651_pixabay.mp4",
-                "restart_on_activate": false,
-                "looping": true
+                "looping": true,
+                "restart_on_activate": false
             },
             "mixers": 255,
             "sync": 0,
