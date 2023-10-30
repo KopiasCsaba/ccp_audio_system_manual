@@ -16,7 +16,7 @@ E.g.: Bible school, ad-hoc events, etc.
 * [Prepare for going live](#prepare-for-going-live)
 * [Lifecycle of the stream](#lifecycle-of-the-stream)
   * [Use the small keyboard](#use-the-small-keyboard)
-    * [BEFORE THE EVENT STARTS](#before-the-event-starts)
+    * [BEFORE the event starts](#before-the-event-starts)
     * [WHEN THE EVENT STARTS](#when-the-event-starts)
     * [DURING THE EVENT](#during-the-event)
     * [WHEN GOING ON A BREAK](#when-going-on-a-break)
