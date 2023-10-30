@@ -16,9 +16,9 @@ E.g.: Bible school, ad-hoc events, etc.
 * [Prepare for going live](#prepare-for-going-live)
 * [Lifecycle of the stream](#lifecycle-of-the-stream)
   * [Use the small keyboard](#use-the-small-keyboard)
-    * [BEFORE THE CLASS STARTS](#before-the-class-starts)
-    * [WHEN THE CLASS STARTS](#when-the-class-starts)
-    * [DURING THE CLASS](#during-the-class)
+    * [BEFORE THE EVENT STARTS](#before-the-event-starts)
+    * [WHEN THE EVENT STARTS](#when-the-event-starts)
+    * [DURING THE EVENT](#during-the-event)
     * [WHEN GOING ON A BREAK](#when-going-on-a-break)
     * [WHEN RETURNING FROM A BREAK](#when-returning-from-a-break)
     * [AT THE END](#at-the-end)
@@ -51,18 +51,14 @@ E.g.: Bible school, ad-hoc events, etc.
 
 1. Connect the "**FROM PULPIT**" HDMI cable with the extender to the "**TO PROJECTOR**" cable, if the preacher is presenting.
 
-2. Put the little keyboard outside the audio cave, where the person managing it will sit.
-    * It is on a long extension cable for this reason.
-    * You'll be able to concentrate better if you are not inside the audio cave during the class.
+2. Turn on the projector & bring down the projection-screen.
 
-3. Turn on the projector & bring down the projection-screen.
-
-4. Turn on the "Century" TV on the pole, with the remote control, that is labeled "CENTURY".
+3. Turn on the "Century" TV on the pole, with the remote control, that is labeled "CENTURY".
     * The remote is usually above or around the console.
 
-5. Turn on the TV in the coffee shop too, if needed.
+4. Turn on the TV in the coffee shop too, if needed.
 
-6. Set up the device that is being used for projection:
+5. Set up the device that is being used for projection:
     * Enable "Extended display"
     * Set **screen refresh rate to 50HZ** on the extended display 
       * The default is 60, but that might cause wrong projector colors, and it WILL cause
@@ -72,7 +68,7 @@ E.g.: Bible school, ad-hoc events, etc.
         * Turn off "True Tone"
         * Select "sRGB-IEC..." color profile
 
-7. Make sure the projector is in sRGB mode (there is an "image mode" button on the remote). 
+6. Make sure the projector is in sRGB mode (there is an "image mode" button on the remote). 
    * Some MACs reset it to "HDR SIM", that WILL NOT WORK (will cause wrong colors).
 
 # Setup headset
@@ -138,18 +134,18 @@ In the following paragraphs, the term "make live" means you can use the keyboard
 * Press the appropriate button to bring up the scene in the preview section.
 * Press FN + TRANSITION together to make it "live".
 
-### BEFORE THE CLASS STARTS
+### BEFORE the event starts
 
 * Make live the "**PRE STREAM**" scene.
 * It's best to go live 15-20 mins before, to have ample time to fix issues for you and for the audience.
 * This starts the live stream with pre-stream image/audio so people can tune in, check audio/video settings.
 
-### WHEN THE CLASS STARTS
+### WHEN THE EVENT STARTS
 
 * Make live the "**PULPIT**" or "**SITTING**" scene.
 * Switching away from "PRE STREAM" triggers the recording to start.
 
-### DURING THE CLASS
+### DURING THE EVENT
 
 * Toggle between the camera and the projector with the "**CAM TOGGLE**" button as needed.
 
@@ -187,7 +183,7 @@ In the following paragraphs, the term "make live" means you can use the keyboard
 8. Wait for the recordings to upload.
 
    **If you can**, please wait about 5-10 minutes to pass between the end of the stream, and turning off the PC.
-   The computer automatically uploads the recordings of this class, so that our crew could edit/upload/manage it.
+   The computer automatically uploads the recordings of this event, so that our crew could edit/upload/manage it.
 
    You can check on the status by clicking on the:
    **System tray → Google Drive icon**, and verifying that a file with today's date is being/was uploaded.
