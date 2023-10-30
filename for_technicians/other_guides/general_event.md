@@ -131,8 +131,8 @@ E.g.: Bible school, ad-hoc events, etc.
 
 In the following paragraphs, the term "make live" means you can use the keyboard.
 
-* Press the appropriate button to bring up the scene in the preview section.
-* Press FN + TRANSITION together to make it "live".
+* Press the appropriate button to bring up the scene in the preview section (IN OBS) (top left area, called "PREVIEW").
+* Press FN + TRANSITION together to make it "live" (when it is on the top right area, called "PROGRAM").
 
 ### BEFORE the event starts
 
