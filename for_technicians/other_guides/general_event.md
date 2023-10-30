@@ -22,11 +22,9 @@ E.g.: Bible school, ad-hoc events, etc.
     * [WHEN GOING ON A BREAK](#when-going-on-a-break)
     * [WHEN RETURNING FROM A BREAK](#when-returning-from-a-break)
     * [AT THE END](#at-the-end)
+* [Finishing](#finishing)
 * [Troubleshooting](#troubleshooting)
   * [No audio input coming to OBS](#no-audio-input-coming-to-obs)
-  * [Projector colors are incorrect](#projector-colors-are-incorrect)
-    * [Verify projector's image mode](#verify-projectors-image-mode)
-    * [Check the Mac's display settings](#check-the-macs-display-settings)
   * [Restarting the stream on one of the platforms](#restarting-the-stream-on-one-of-the-platforms)
 <!-- TOC -->
 
@@ -51,7 +49,7 @@ E.g.: Bible school, ad-hoc events, etc.
 
 # Setup projection
 
-1. Connect the "**FROM PULPIT**" HDMI cable with the extender to the "**TO PROJECTOR**" cable.
+1. Connect the "**FROM PULPIT**" HDMI cable with the extender to the "**TO PROJECTOR**" cable, if the preacher is presenting.
 
 2. Put the little keyboard outside the audio cave, where the person managing it will sit.
     * It is on a long extension cable for this reason.
@@ -63,6 +61,19 @@ E.g.: Bible school, ad-hoc events, etc.
     * The remote is usually above or around the console.
 
 5. Turn on the TV in the coffee shop too, if needed.
+
+6. Set up the device that is being used for projection:
+    * Enable "Extended display"
+    * Set **screen refresh rate to 50HZ** on the extended display 
+      * The default is 60, but that might cause wrong projector colors, and it WILL cause
+        running-lines effect with the camera.
+    * Set resolution to 1080p (1920x1080)
+    * On MAC devices:
+        * Turn off "True Tone"
+        * Select "sRGB-IEC..." color profile
+
+7. Make sure the projector is in sRGB mode (there is an "image mode" button on the remote). 
+   * Some MACs reset it to "HDR SIM", that WILL NOT WORK (will cause wrong colors).
 
 # Setup headset
 
@@ -146,8 +157,7 @@ In the following paragraphs, the term "make live" means you can use the keyboard
 
 * Make live the "**EVENT BREAK**" scene.
 * This pauses the recording, keeps live stream with a waiting screen.
-* This also mutes the live stream, but not mutes anything in the room, you might wanna do that manually with *
-  *{Layers/Speaker/Headset/Mute}**.
+* This also mutes the live stream, but not mutes anything in the room, you might wanna do that manually with **{Layers/Speaker/Headset/Mute}**.
 
 ### WHEN RETURNING FROM A BREAK
 
@@ -160,6 +170,7 @@ In the following paragraphs, the term "make live" means you can use the keyboard
 * This will cut recording and streaming after a minute-long delay.
 
 <div style="page-break-after: always;"></div>
+
 # Finishing
 
 1. **RESET PROJECTOR IMAGE MODE**
@@ -202,31 +213,6 @@ Sometimes the audio input device in OBS is reset to something else, than LINE IN
 4. Press OK
 
 <img alt="" src="../assets/video/screenshots/troubleshoot_obs_audio_input.png" height="200">
-
-## Projector colors are incorrect
-
-Make sure to put something on the screen, e.g. a webpage or an image that you know already, and you know what colors to
-expect.
-Don't trust the background image on macbooks.
-
-### Verify projector's image mode
-
-Some Mac's cause our projector to change the image mode to "HDR SIM." when connected. But that will not produce good
-colours.
-You must set it back to **sRGB** to get correct colors.
-
-* Using the remote controller of the projector (white, asus label), press the "MODE" button.
-* Select **sRGB**.
-
-You need to check this always after connecting a mac.
-
-### Check the Mac's display settings
-
-* Make sure that "True tone" is off.
-* Select color profile **sRGB** for the extended/mirrored display.
-* Make sure the resolution is not larger than "1080p" or "1920x1080".
-
-If nothing works, usually "mirroring" instead of "extending" fixes everything no matter what.
 
 ## Restarting the stream on one of the platforms
 
