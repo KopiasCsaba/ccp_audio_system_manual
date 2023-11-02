@@ -9,6 +9,7 @@ E.g.: Bible school, ad-hoc events, etc.
 
 
 <!-- TOC -->
+* [Prepare](#prepare)
 * [Turning on](#turning-on)
 * [Setup projection](#setup-projection)
 * [Setup headset](#setup-headset)
@@ -30,6 +31,9 @@ E.g.: Bible school, ad-hoc events, etc.
 
 <div style="page-break-after: always;"></div>
 
+# Prepare
+You want to check out the introduction video about how to use the small keyboard: [https://youtu.be/bivtL445jj4](https://youtu.be/bivtL445jj4)
+
 # Turning on
 
 1. Follow the [Turning on the audio system](../../labels/turningon.pdf) guide.
@@ -47,6 +51,9 @@ E.g.: Bible school, ad-hoc events, etc.
     * "Screens + Sockets + Projector"
         * on the right of the pc screens, close to the light switches
 
+<div style="page-break-after: always;"></div>
+
+
 # Setup projection
 
 1. Connect the "**FROM PULPIT**" HDMI cable with the extender to the "**TO PROJECTOR**" cable, if the preacher is presenting.
@@ -60,9 +67,7 @@ E.g.: Bible school, ad-hoc events, etc.
 
 5. Set up the device that is being used for projection:
     * Enable "Extended display"
-    * Set **screen refresh rate to 50HZ** on the extended display 
-      * The default is 60, but that might cause wrong projector colors, and it WILL cause
-        running-lines effect with the camera.
+    * Set **screen refresh rate to 50HZ** on the extended display. Very important.
     * Set resolution to 1080p (1920x1080)
     * On MAC devices:
         * Turn off "True Tone"
@@ -71,14 +76,27 @@ E.g.: Bible school, ad-hoc events, etc.
 6. Make sure the projector is in sRGB mode (there is an "image mode" button on the remote). 
    * Some MACs reset it to "HDR SIM", that WILL NOT WORK (will cause wrong colors).
 
+
 # Setup headset
 
-1. Based on the day, select the right pair of batteries from the charger.
-2. Push the button at the back of the headset and while pushing, slide down the backplate.
-3. Put in batteries, close back.
-4. Long press the single button at the top to turn it on, make sure it is green.
+
+<img alt="" src="../assets/reset/rhodelink.jpg.png"  align="right" style="float:right" width="180">
+
+1. Above the mixing console, on the shelf you'll find the battery charger.
+2. Based on the labels on the charger, select the appropriate set of batteries.
+3. The headset should be there too.
+4. Press the button on the headset (see image, point #1)
+5. While pressing the button, slide down the back side (see image, point #2)
+6. Put batteries in
+7. Close it back
+8. Turn it on by long pressing the button on top (see image, point #3)
+    * It should lit up green, displaying 8 on the display.
+
+<br clear="both" style="clear:both"/>
+
 
 <div style="page-break-after: always;"></div>
+
 
 # Configure the console
 
@@ -92,7 +110,7 @@ E.g.: Bible school, ad-hoc events, etc.
     1. Make sure **{MAIN/Mute}** is not red. (Press it to toggle.)
     2. Set **{MAIN/Fader}** to 0 (that's not the lowest position)
 
-    <img src="../assets/other_guides/bibleschool/mains.png" style="vertical-align: center" height="300"> 
+    <img src="../assets/other_guides/bibleschool/mains.png" style="vertical-align: center" height="200"> 
 
 3. Find the "ASSIGN" section on the mixer, on the right side.
     1. If **{Assign/PULPIT MUTE}** is gray, press it.
@@ -175,12 +193,11 @@ In the following paragraphs, the term "make live" means you can use the keyboard
     * Select sRGB if needed.
 2. Turn off the projector.
 3. Close back the projector-screen.
-4. Put back the little keyboard.
-5. Get the headset batteries out and put them back into the charger. Please pay attention to the polarity.
-6. Put the headset back to the shelf.
-7. Restore the HDMI cables as they were (unplug, and reconnect the USB grabber)
+4. Get the headset batteries out and put them back into the charger. Please pay attention to the polarity.
+5. Put the headset back to the shelf.
+6. Restore the HDMI cables as they were (unplug, and reconnect the USB grabber)
 
-8. Wait for the recordings to upload.
+7. Wait for the recordings to upload.
 
    **If you can**, please wait about 5-10 minutes to pass between the end of the stream, and turning off the PC.
    The computer automatically uploads the recordings of this event, so that our crew could edit/upload/manage it.
@@ -190,28 +207,7 @@ In the following paragraphs, the term "make live" means you can use the keyboard
 
    <img src="../assets/streampc/drive_sync.png"  height="200">
 
-9. Turn off the computer.
-10. Finally, follow the [Turning off the audio system](../../labels/turningoff.pdf) guide.
+8. Turn off the computer.
+9. Finally, follow the [Turning off the audio system](../../labels/turningoff.pdf) guide.
 
 <div style="page-break-after: always;"></div>
-
-# Troubleshooting
-
-## No audio input coming to OBS
-
-If you see, that there is no audio coming to OBS:
-
-Sometimes the audio input device in OBS is reset to something else, than LINE IN.
-
-1. Click on the audio input's three dots (the one that is the highest)
-2. Select Properties
-3. Select LINE IN
-4. Press OK
-
-<img alt="" src="../assets/video/screenshots/troubleshoot_obs_audio_input.png" height="200">
-
-## Restarting the stream on one of the platforms
-
-@TODO This section is under construction.
-
-

@@ -6,24 +6,23 @@
 
 
 <!-- TOC -->
-
 * [Before the service](#before-the-service)
-    * [Align the pulpit](#align-the-pulpit)
-    * [Prepare for live-streaming](#prepare-for-live-streaming)
-        * [Turn on the sockets](#turn-on-the-sockets)
-        * [Turn on the pole-TV](#turn-on-the-pole-tv)
-        * [Turn on the coffee-shop TV](#turn-on-the-coffee-shop-tv)
-        * [Turn on the PC](#turn-on-the-pc)
-        * [LOG IN](#log-in)
-    * [Prepare the headset](#prepare-the-headset)
+  * [Align the pulpit](#align-the-pulpit)
+  * [Prepare for live-streaming](#prepare-for-live-streaming)
+    * [Turn on the sockets](#turn-on-the-sockets)
+    * [Turn on the pole-TV](#turn-on-the-pole-tv)
+    * [Turn on the coffee-shop TV](#turn-on-the-coffee-shop-tv)
+    * [Turn on the PC](#turn-on-the-pc)
+    * [LOG IN](#log-in)
+  * [Prepare the headset](#prepare-the-headset)
 * [Before the service](#before-the-service-1)
-    * [Playing background music](#playing-background-music)
+  * [Playing background music](#playing-background-music)
 * [During service](#during-service)
-* [During worship](#during-worship)
+  * [During worship](#during-worship)
     * [When someone speaks or prays](#when-someone-speaks-or-prays)
-* [During preaching](#during-preaching)
+  * [During preaching](#during-preaching)
+* [Rule of thumb](#rule-of-thumb)
 * [Closing](#closing)
-
 <!-- TOC -->
 
 <div style="page-break-after: always;"></div>
@@ -88,16 +87,16 @@ After the PC booted, enter the password.
 
 <img alt="" src="assets/reset/rhodelink.jpg.png"  align="right" style="float:right" width="180">
 
-* Above the mixing console, on the shelf you'll find the battery charger.
-* Based on the labels on the charger, select the appropriate set of batteries.
-* The headset should be there too.
-* Press the button on the headset (see image, point #1)
-* While pressing the button, slide down the back side (see image, point #2)
-* Put batteries in
-* Close it back
-* Turn it on by long pressing the button on top (see image, point #3)
+1. Above the mixing console, on the shelf you'll find the battery charger.
+2. Based on the labels on the charger, select the appropriate set of batteries.
+3. The headset should be there too.
+4. Press the button on the headset (see image, point #1)
+5. While pressing the button, slide down the back side (see image, point #2)
+6. Put batteries in
+7. Close it back
+8. Turn it on by long pressing the button on top (see image, point #3)
     * It should lit up green, displaying 8 on the display.
-* Mute/unmute it as needed by a short(er) press. (It turns red if muted.)
+9. Mute/unmute it as needed by a short(er) press. (It turns red if muted.)
     * Sometimes they ask that you unmute it and they don't need to pay attention.
     * Sometimes they know how to mute it, and they do it.
     * And sometimes they forget to unmute it, then you need to signal them.
