@@ -64,3 +64,6 @@ We most probably streamed the recording, and that can be found in the "LIVE" tab
 If you have properly uploaded, published the recording as a "VIDEO", then please make the relevant LIVE recording "
 unlisted".
 
+The live videos can be found [here](https://studio.youtube.com/channel/UC0uEys0VihIMmJFFL1Swj8g/videos/live?filter=%5B%5D&sort=%7B%22columnType%22%3A%22date%22%2C%22sortOrder%22%3A%22DESCENDING%22%7D).
+
+![](assets/youtube/unlist.png)
