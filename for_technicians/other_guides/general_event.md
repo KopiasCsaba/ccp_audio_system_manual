@@ -24,9 +24,6 @@ E.g.: Bible school, ad-hoc events, etc.
     * [WHEN RETURNING FROM A BREAK](#when-returning-from-a-break)
     * [AT THE END](#at-the-end)
 * [Finishing](#finishing)
-* [Troubleshooting](#troubleshooting)
-  * [No audio input coming to OBS](#no-audio-input-coming-to-obs)
-  * [Restarting the stream on one of the platforms](#restarting-the-stream-on-one-of-the-platforms)
 <!-- TOC -->
 
 <div style="page-break-after: always;"></div>
@@ -100,9 +97,9 @@ You want to check out the introduction video about how to use the small keyboard
 
 # Configure the console
 
-1. Load the **CCP SERVICE READONLY** scene in the console:
+1. Load the **SERVICE READONLY** scene in the console:
     1. Press **{Scenes/VIEW}**
-    2. Turn **{Knobs/GO}**: to select "CCP SERVICE READONLY".
+    2. Turn **{Knobs/GO}**: to select "SERVICE READONLY".
     3. Press **{Knobs/GO}**: to load the scene.
     4. Press **{Knobs/CONFIRM}**: to really load the scene.
 

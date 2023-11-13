@@ -29,10 +29,12 @@
     * [Muting the stage](#muting-the-stage)
     * [Muting the effects](#muting-the-effects)
     * [Muting the aux / pc](#muting-the-aux--pc)
-  * [X32 EDIT](#x32-edit)
-  * [Android](#android)
+* [Remote controlling the console](#remote-controlling-the-console)
+  * [From PC: X32 EDIT](#from-pc-x32-edit)
+  * [From Android: Mixing station](#from-android-mixing-station)
+* [Remote control OBS: OBS Blade](#remote-control-obs-obs-blade)
 * [Other applications that might come handy](#other-applications-that-might-come-handy)
-  * [Android](#android-1)
+  * [Android](#android)
     * [Spectrum analyzer](#spectrum-analyzer)
     * [Instrument tuner aid](#instrument-tuner-aid)
 <!-- TOC -->
@@ -300,7 +302,8 @@ time, except when you want to play something from any of those computers/leads.
 Especially have them muted before you unplug/plug it in into something.
 
 <div style="page-break-after: always;"></div>
-# Connecting with applications
+
+# Remote controlling the console
 
 It is possible to connect to the console remotely with an application, and basically do everything you might while
 standing next to the console. What a world we live in!
@@ -314,18 +317,32 @@ Although, I recommend doing that only after you are really confident with the mi
 applications are a bit harder to use, less user-friendly/intuitive. If some random issue pops up, you might be able to
 fix it better/faster/easier if you are next to the console, than turning pages and swiping back and forth, etc.
 
-## X32 EDIT
+## From PC: X32 EDIT
 
 If you have any kind of computer, and you are connected to the network, you can install X32 edit. Check the downloads
 section [here](https://www.behringer.com/product.html?modelCode=P0AAP).
 
-## Android
+## From Android: Mixing station
 
 I had much success with the app
 called [Mixing station (org.devcore.mixingstation)](https://play.google.com/store/apps/details?id=org.devcore.mixingstation).
 
 You might want to download [my settings backup](assets/console/files/android_mixingstation_settings_backup.msz), and
 load it into the app, to help you started quicker.
+
+# Remote control OBS: OBS Blade
+
+It is possible to setup remote controlling with OBS with the [OBS Blade](https://play.google.com/store/apps/details?id=com.kounex.obsBlade) app.
+
+You find the IP/PORT/PASS in OBS.
+
+In the app:
+
+ * Enable "Studio mode" in the settings
+ * Now you can select a scene and do the transition on it.
+ * If you want to toggle the projector/camera, then select "_ Notebook + Cam", scroll down and in the "Sources", toggle the notebook's visibility.
+
+<div style="page-break-after: always;"></div>
 
 # Other applications that might come handy
 
@@ -338,7 +355,6 @@ load it into the app, to help you started quicker.
 ### Instrument tuner aid
 
 [https://play.google.com/store/apps/details?id=de.moekadu.tuner](https://play.google.com/store/apps/details?id=de.moekadu.tuner)
-
 
 
 

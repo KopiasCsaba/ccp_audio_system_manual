@@ -7,9 +7,9 @@
 ### Training videos
 
 1. [Audio Training: Overview of the audio system and the console](https://youtube.com/watch?v=Z1rGS40XmTA)
-1. [Audio training: Rehearsal walkthrough with the console](https://youtu.be/CDxC-ptjJwU)
-1. [How does the stage mixer work?](https://youtu.be/nRDQFHH9zpU)
-1. [How does the drum room stage-talkback work?](https://youtu.be/nelw-jKgT6w)
+2. [Audio training: Rehearsal walkthrough with the console](https://youtu.be/CDxC-ptjJwU)
+3. [How does the stage mixer work?](https://youtu.be/nRDQFHH9zpU)
+4. [How does the drum room stage-talkback work?](https://youtu.be/nelw-jKgT6w)
 
 
 ### Audio Gear Manual
@@ -20,7 +20,7 @@
 These are printed out and organized into a folder, that you can find next
 to the console.
 
-* Setting up the system: [WEB](settingup.md), [PDF](settingup.pdf)
+* Setting up the system: [WEB](setup.md), [PDF](setup.pdf)
 * What to do during a rehearsal: [WEB](rehearsal.md), [PDF](rehearsal.pdf).
 * What to do during a service: [WEB](service.md), [PDF](service.pdf).
 * Notes on the console: [WEB](notes_on_the_console.md), [PDF](notes_on_the_console.pdf).
@@ -40,7 +40,7 @@ Our console is called "[Behringer X32 Compact](https://www.behringer.com/product
 * [Behringer X32 compact user manual](https://mediadl.musictribe.com/media/sys_master/h1f/h56/8849797021726.pdf)
 * [Our mixer's complete backup files](assets/console/files/mixer_backups)
 
-* Configuration reference [WEB](configuration_reference.md), [PDF](configuration_reference.pdf).
+* Configuration reference [WEB](../setup/configuration_reference.md)
 
 ## Great resources to learn from
 

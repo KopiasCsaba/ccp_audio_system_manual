@@ -58,7 +58,7 @@ Make sure **all** the following statements hold true:
     * Turn off "TRUE TONE"
     * Select the right color profile: "sRGB-IEC..." for the extended display.
 * The projector's image mode is sRGB
-    * Use the remote control, press "MODE" button and select sRGB.
+    * Use the remote control, press the "MODE" button and select sRGB.
 
 
 <div style="page-break-after: always;"></div>
@@ -70,13 +70,14 @@ Make sure **all** the following statements hold true:
 
 In OBS:
 
-* Select the "_ Notebook + Cam" scene
-* Right-click on the "Notebook" source
+* Select the "_ Notebook + Cam" scene.
+* Right-click on the "Notebook" source, select "Properties".
 * Press deactivate, then activate.
 
 ## No image from the camera
 
 Make sure you have turned all the required sockets on, especially these:
+
  * "Main speakers"
  * "Screens + Sockets + Projector"
  * "Network"
@@ -148,10 +149,9 @@ Sometimes the audio input device in OBS is reset to something else, than LINE IN
 
     <img alt="" src="assets/video/screenshots/fb_live_post_Details.png" height="300">
 
-4. After this, proceed to [Restarting just one platform's stream](#restarting-just-one-platforms-stream), restart the
-   facebook stream, and then come
+4. After this, proceed to [Restarting just one platform's stream](#restarting-just-one-platforms-stream), restart the facebook stream, and then come
    back to here.
-6. Now press Go Live on facebook:
+5. Now press Go Live on facebook:
 
 <img alt="" src="assets/video/screenshots/fb_start_stream.png" height="300">
 

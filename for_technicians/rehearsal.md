@@ -44,7 +44,7 @@ The logic is, that:
 You should be there ~20minutes before them, to be able to set up
 everything professionally and to avoid hurry-induced errors, fix random issues, etc.
 
-* Follow the "[Setting up the system](settingup.md)" guide.
+* Follow the "[Setting up the system](setup.md)" guide.
 
 ## You should know the band setup
 
@@ -140,7 +140,6 @@ and for each used channel, load the appropriate preset, repeating the following 
 
 11. Repeat this section for the next vocal or instrument channel that is in use, or continue if you are finished.
 
-<div style="page-break-after: always;"></div>
 
 Wait for the band to arrive:)
 
@@ -175,13 +174,11 @@ Go through: **Vocal mics 1 to 6** **Instruments 1 to 5** and for each used chann
           in producing more precise results.
     * Make sure to set the gain only when a normal, regular input is coming through. This is very important.
 
-    <img src="assets/console/gainstaging.png" height="170"/>
+    <img src="assets/console/gainstaging.png" height="160"/>
  
 2. Press **{Layers/VOCAL}** OR **{Layers/INSTR}**: to select the right layer.
-3. Press **{Channel X/SELECT}**: to select the channel for which you want to set the gain.
-    * See image, point #1.
-4. Watch **{Channel X/METER}**.
-    * See image, point #2.
+3. Press **{Channel X/SELECT}**: to select the channel for which you want to set the gain.  (See image, #1.)
+4. Watch **{Channel X/METER}**. (See image, #2.)
 5. Aim for **-18db:** When the input is around its normal level, it should be around the -18db mark.
     * Normal level: when the singer sings normally, not far from the mic, not shying away, and when not shouting strong.
       The same goes for instruments.
