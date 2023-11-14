@@ -25,6 +25,9 @@ to the console.
 * What to do during a service: [WEB](service.md), [PDF](service.pdf).
 * Notes on the console: [WEB](notes_on_the_console.md), [PDF](notes_on_the_console.pdf).
 
+
+* Troubleshooting guide: [WEB](troubleshooting.md), [PDF](troubleshooting.pdf).
+
 <br clear="both" style="clear:both"/>
 
 ### Live-streaming & video
