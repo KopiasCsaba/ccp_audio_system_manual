@@ -20,10 +20,10 @@
 These are printed out and organized into a folder, that you can find next
 to the console.
 
-* Setting up the system: [WEB](setup.md), [PDF](setup.pdf)
-* What to do during a rehearsal: [WEB](rehearsal.md), [PDF](rehearsal.pdf).
-* What to do during a service: [WEB](service.md), [PDF](service.pdf).
-* Notes on the console: [WEB](notes_on_the_console.md), [PDF](notes_on_the_console.pdf).
+ * Setting up the system: [WEB](setup.md), [PDF](setup.pdf)
+ * What to do during a rehearsal: [WEB](rehearsal.md), [PDF](rehearsal.pdf).
+ * What to do during a service: [WEB](service.md), [PDF](service.pdf).
+ * Notes on the console: [WEB](notes_on_the_console.md), [PDF](notes_on_the_console.pdf).
 
 <br>
 
@@ -33,18 +33,18 @@ to the console.
 
 ### Live-streaming & video
 
-* Handling live streaming: [WEB](video.md), [PDF](video.pdf).
-* How to manage a general event with projection & streaming (E.g.: bible school class): [WEB](other_guides/general_event.md), [PDF](other_guides/general_event.pdf).
+ * Handling live streaming: [WEB](video.md), [PDF](video.pdf).
+ * How to manage a general event with projection & streaming (E.g.: bible school class): [WEB](other_guides/general_event.md), [PDF](other_guides/general_event.pdf).
 
 ### Resources
 
 Our console is called "[Behringer X32 Compact](https://www.behringer.com/product.html?modelCode=P0AAP)"
 
-* [Behringer X32 compact block diagram](assets/x32/blockdiagram.png)
-* [Behringer X32 compact user manual](https://mediadl.musictribe.com/media/sys_master/h1f/h56/8849797021726.pdf)
-* [Our mixer's complete backup files](assets/console/files/mixer_backups)
+ * [Behringer X32 compact block diagram](assets/x32/blockdiagram.png)
+ * [Behringer X32 compact user manual](https://mediadl.musictribe.com/media/sys_master/h1f/h56/8849797021726.pdf)
+ * [Our mixer's complete backup files](assets/console/files/mixer_backups)
 
-* Configuration reference [WEB](../setup/configuration_reference.md)
+ * Configuration reference [WEB](../setup/configuration_reference.md)
 
 ## Great resources to learn from
 
