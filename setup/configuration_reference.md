@@ -152,7 +152,7 @@ Important parts are important because otherwise the TV does not remember which i
  * Exposure
    * Mode: manual
    * Iris: F1.8
-   * Shutter: 1/60
+   * Shutter: 1/100
    * Gain: 0
    * DRC: 0
  * Color
@@ -183,7 +183,8 @@ Important parts are important because otherwise the TV does not remember which i
    * Call preset speed: 24
    * Pre zoom speed: 7
  * Noise reduction:
-   * NR2D-Level 3
+   * NR2D-Level Off
+   * NR3D-Level Off
  * SETUP:
    * DVIMode: Hdmi
    * Lens: Type2
