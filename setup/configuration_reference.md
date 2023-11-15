@@ -150,7 +150,16 @@ turned on.
     * Single listen: off
 
 ## PTZ Camera
+### Webadmin
+#### Video
 
+![video_tab.png](streampc/exported_configurations/ptzoptics/video_tab.png)
+
+#### Image
+
+![image_tab.png](streampc/exported_configurations/ptzoptics/image_tab.png)
+
+### OSD
 | Setting                   | Pulpit & All other | Stage   |
 |---------------------------|--------------------|---------|
 | Exposure / Mode           | manual             | manual  |
@@ -202,7 +211,8 @@ turned on.
 
 ## Baby-room TV
 
-* Browser homepage to the restreamer page.
+* Browser homepage & bookmark the restreamer page: https://tinyurl.com/tvstreamtest1
+* Remove unneeded menu shortcuts, by "down arrow/remove".
 
 # Streaming PC
 
