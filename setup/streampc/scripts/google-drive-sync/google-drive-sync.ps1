@@ -1,3 +1,6 @@
+# This script is called by the command task-start-google-drive-sync.cmd
+# Which is called by the task scheduler job exported into: scheduled-task-for-google-drive-sync.xml
+
 $sourceFolder = "e:\OBSRecordings"
 $destinationFolder = "g:\My Drive\Recordings\StreamPcObsRecordings\"
 $lastRunFile = "e:\OBSRecordings.last.sync"

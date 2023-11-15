@@ -1,4 +1,5 @@
-# The first part of the script to obtain the access token remains the same...
+# This script is called by the task scheduler job exported into: scheduled-task-for-enable-restreamer-streams.xml
+
 
 # Obtain access token
 $apiEndpoint = "http://192.168.2.118:8080/api"
