@@ -124,7 +124,7 @@ This document is under construction.
  * General
    * Standby Light: on
    * Settings help: on
-   * Screen saved: off (**<-VERY IMPORTANT**)
+   * Screen saver: off (**<-VERY IMPORTANT**)
    * No signal image: off (**<-VERY IMPORTANT**)
 
 Important parts are important because otherwise the TV does not remember which input should it use the next time it is turned on.
