@@ -1,1 +1,1 @@
-powershell.exe -WindowStyle Hidden -nologo -file "google_drive_sync.ps1"  >> "g:\My Drive\Recordings\StreamPcObsRecordings\sync-log.txt" 2>&1
+powershell.exe -WindowStyle Hidden -nologo -file "google-drive-sync.ps1"  >> "g:\My Drive\Recordings\StreamPcObsRecordings\sync-log.txt" 2>&1
