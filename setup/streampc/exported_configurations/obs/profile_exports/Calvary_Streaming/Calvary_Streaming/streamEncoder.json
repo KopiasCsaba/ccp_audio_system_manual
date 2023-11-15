@@ -1,1 +1,1 @@
-{"bitrate":5000,"preset2":"p6","multipass":"fullres","lookahead":true,"bf":4,"profile":"main","keyint_sec":2}
+{"rate_control":"HQCBR","bitrate":10000,"keyint_sec":1,"bf":0}

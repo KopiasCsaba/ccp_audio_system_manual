@@ -48,7 +48,7 @@
         "volume": 1.0,
         "balance": 0.5,
         "enabled": true,
-        "muted": false,
+        "muted": true,
         "push-to-mute": false,
         "push-to-mute-delay": 0,
         "push-to-talk": false,
@@ -98,7 +98,7 @@
         ]
     },
     "current_scene": "STAND BY  (live_off, rec_off, mute_on)",
-    "current_program_scene": "MANUAL (mute_off, autoptz_to_stage)",
+    "current_program_scene": "STAND BY  (live_off, rec_off, mute_on)",
     "scene_order": [
         {
             "name": "=============== SUNDAY ==============="
@@ -195,7 +195,7 @@
             "alwaysOnTopOverridden": false
         }
     ],
-    "current_transition": "Cut",
+    "current_transition": "Fade",
     "transition_duration": 400,
     "preview_locked": false,
     "scaling_enabled": false,
@@ -224,7 +224,7 @@
                     "properties": false,
                     "filters": false,
                     "textinput": false,
-                    "geometry": "AdnQywADAAAAAASoAAACIwAAB38AAAPXAAAAAAAAAAD//////////wAAAAAAAAAAB4AAAASoAAACIwAAB38AAAPX",
+                    "geometry": "AdnQywADAAAAAAQ4AAACTgAABP8AAAPPAAAAAAAAAAD//////////wAAAAAAAAAABQAAAAQ4AAACTgAABP8AAAPP",
                     "split": "AAAA/wAAAAEAAAABAAAAHgD/////AQAAAAIA",
                     "window": "",
                     "dockarea": 8,
@@ -248,7 +248,7 @@
                     "properties": false,
                     "filters": false,
                     "textinput": false,
-                    "geometry": "AdnQywADAAAAAAAAAAAAAAAAAMcAAACCAAAAAAAAAB8AAADHAAAAggAAAAAAAAAAB4AAAAAAAAAAHwAAAMcAAACC",
+                    "geometry": "AdnQywADAAAAAAJOAAABugAAAxUAAAI8AAACTgAAAdkAAAMVAAACPAAAAAEAAAAAB4AAAAJOAAAB2QAAAxUAAAI8",
                     "split": "AAAA/wAAAAEAAAAAAP////8BAAAAAgA=",
                     "window": "",
                     "dockarea": 0,
@@ -272,7 +272,7 @@
                     "properties": false,
                     "filters": false,
                     "textinput": false,
-                    "geometry": "AdnQywADAAAAAAAAAAAAAAAAAMcAAACCAAAAAAAAAB8AAADHAAAAggAAAAAAAAAAB4AAAAAAAAAAHwAAAMcAAACC",
+                    "geometry": "AdnQywADAAAAAAJOAAABugAAAxUAAAI8AAACTgAAAdkAAAMVAAACPAAAAAEAAAAAB4AAAAJOAAAB2QAAAxUAAAI8",
                     "split": "AAAA/wAAAAEAAAAAAP////8BAAAAAgA=",
                     "window": "",
                     "dockarea": 0,
@@ -296,7 +296,7 @@
                     "properties": false,
                     "filters": false,
                     "textinput": false,
-                    "geometry": "AdnQywADAAAAAAPRAAACIwAABKMAAAKMAAAAAAAAAAD//////////wAAAAAAAAAAB4AAAAPRAAACIwAABKMAAAKM",
+                    "geometry": "AdnQywADAAAAAAN2AAACTgAABDMAAAK4AAAAAAAAAAD//////////wAAAAAAAAAABQAAAAN2AAACTgAABDMAAAK4",
                     "split": "AAAA/wAAAAEAAAABAAAAHgD/////AQAAAAIA",
                     "window": "",
                     "dockarea": 8,
@@ -387,7 +387,7 @@
                             },
                             "dayOfWeek": 7,
                             "condition": 0,
-                            "dateTime": "Sun Oct 29 10:01:00 2023",
+                            "dateTime": "Sun Nov 12 10:01:00 2023",
                             "dateTime2": "Sat Aug 12 13:04:33 2023",
                             "ignoreDate": false,
                             "ignoreTime": false,
@@ -469,7 +469,7 @@
                             },
                             "dayOfWeek": 7,
                             "condition": 0,
-                            "dateTime": "Sun Oct 29 10:30:00 2023",
+                            "dateTime": "Sun Nov 12 10:30:00 2023",
                             "dateTime2": "Sat Aug 12 13:04:33 2023",
                             "ignoreDate": false,
                             "ignoreTime": false,
@@ -631,7 +631,7 @@
                             },
                             "dayOfWeek": 7,
                             "condition": 1,
-                            "dateTime": "Sun Oct 29 11:50:00 2023",
+                            "dateTime": "Sun Nov 12 11:50:00 2023",
                             "dateTime2": "Sun Sep 10 08:53:17 2023",
                             "ignoreDate": false,
                             "ignoreTime": false,
@@ -2038,7 +2038,7 @@
                             "enabled": true,
                             "duration": {
                                 "value": {
-                                    "value": 0.29999999999999999,
+                                    "value": 0.20000000000000001,
                                     "type": 0
                                 },
                                 "unit": 0,
@@ -2171,7 +2171,7 @@
                             "enabled": true,
                             "duration": {
                                 "value": {
-                                    "value": 0.29999999999999999,
+                                    "value": 0.20000000000000001,
                                     "type": 0
                                 },
                                 "unit": 0,
@@ -2424,7 +2424,7 @@
                             "method": 0,
                             "duration": {
                                 "value": {
-                                    "value": 1.0,
+                                    "value": 0.0,
                                     "type": 0
                                 },
                                 "unit": 0,
@@ -2437,7 +2437,7 @@
                             "enabled": true,
                             "duration": {
                                 "value": {
-                                    "value": 0.29999999999999999,
+                                    "value": 0.20000000000000001,
                                     "type": 0
                                 },
                                 "unit": 0,
@@ -2465,7 +2465,7 @@
                             "method": 0,
                             "duration": {
                                 "value": {
-                                    "value": 1.0,
+                                    "value": 0.0,
                                     "type": 0
                                 },
                                 "unit": 0,
@@ -3130,7 +3130,7 @@
             "volume": 0.21101802587509155,
             "balance": 0.5,
             "enabled": true,
-            "muted": true,
+            "muted": false,
             "push-to-mute": false,
             "push-to-mute-delay": 0,
             "push-to-talk": false,
@@ -3199,7 +3199,7 @@
                         "private_settings": {}
                     },
                     {
-                        "name": "PTZ Action sitting 2",
+                        "name": "PTZ Action custom",
                         "source_uuid": "b487bc29-f4e0-4cd5-b6d5-c5b13d065335",
                         "visible": true,
                         "locked": false,
@@ -3259,8 +3259,8 @@
                 ],
                 "libobs.show_scene_item._ Notebook + Cam": [],
                 "libobs.hide_scene_item._ Notebook + Cam": [],
-                "libobs.show_scene_item.PTZ Action sitting 2": [],
-                "libobs.hide_scene_item.PTZ Action sitting 2": []
+                "libobs.show_scene_item.PTZ Action custom": [],
+                "libobs.hide_scene_item.PTZ Action custom": []
             },
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
@@ -4228,44 +4228,6 @@
                             "duration": 0
                         },
                         "private_settings": {}
-                    },
-                    {
-                        "name": "PTZ Action sitting 2",
-                        "source_uuid": "b487bc29-f4e0-4cd5-b6d5-c5b13d065335",
-                        "visible": true,
-                        "locked": false,
-                        "rot": 0.0,
-                        "pos": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "scale": {
-                            "x": 1.0,
-                            "y": 1.0
-                        },
-                        "align": 5,
-                        "bounds_type": 0,
-                        "bounds_align": 0,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "crop_left": 0,
-                        "crop_top": 0,
-                        "crop_right": 0,
-                        "crop_bottom": 0,
-                        "id": 2,
-                        "group_item_backup": false,
-                        "scale_filter": "disable",
-                        "blend_method": "default",
-                        "blend_type": "normal",
-                        "show_transition": {
-                            "duration": 0
-                        },
-                        "hide_transition": {
-                            "duration": 0
-                        },
-                        "private_settings": {}
                     }
                 ]
             },
@@ -4283,9 +4245,7 @@
             "hotkeys": {
                 "OBSBasic.SelectScene": [],
                 "libobs.show_scene_item._ Notebook + Cam": [],
-                "libobs.hide_scene_item._ Notebook + Cam": [],
-                "libobs.show_scene_item.PTZ Action sitting 2": [],
-                "libobs.hide_scene_item.PTZ Action sitting 2": []
+                "libobs.hide_scene_item._ Notebook + Cam": []
             },
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
@@ -4505,8 +4465,8 @@
                 "last_video_device_id": "USB Video:\\\\?\\usb#22vid_534d&pid_2109&mi_00#22a&198d9bd0&0&0000#22{65e8773d-8f56-11d0-a3b9-00a0c9223196}\\global",
                 "resolution": "1920x1080",
                 "last_resolution": "1920x1080",
-                "buffering": 2,
-                "frame_interval": 333333,
+                "buffering": 1,
+                "frame_interval": 250000,
                 "res_type": 1,
                 "active": true,
                 "color_space": "709",
@@ -4884,6 +4844,34 @@
         },
         {
             "prev_ver": 486604803,
+            "name": "PTZ Action custom",
+            "uuid": "b487bc29-f4e0-4cd5-b6d5-c5b13d065335",
+            "id": "ptz_action_source",
+            "versioned_id": "ptz_action_source",
+            "settings": {
+                "device_id": 1,
+                "action": 2,
+                "preset_id": 5
+            },
+            "mixers": 0,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1.0,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {},
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {}
+        },
+        {
+            "prev_ver": 486604803,
             "name": "PTZ Action pulpit with projector",
             "uuid": "6a3edac3-24a9-464c-a202-8458af3552d3",
             "id": "ptz_action_source",
@@ -4920,34 +4908,6 @@
                 "device_id": 1,
                 "action": 2,
                 "preset_id": 3
-            },
-            "mixers": 0,
-            "sync": 0,
-            "flags": 0,
-            "volume": 1.0,
-            "balance": 0.5,
-            "enabled": true,
-            "muted": false,
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "hotkeys": {},
-            "deinterlace_mode": 0,
-            "deinterlace_field_order": 0,
-            "monitoring_type": 0,
-            "private_settings": {}
-        },
-        {
-            "prev_ver": 486604803,
-            "name": "PTZ Action sitting 2",
-            "uuid": "b487bc29-f4e0-4cd5-b6d5-c5b13d065335",
-            "id": "ptz_action_source",
-            "versioned_id": "ptz_action_source",
-            "settings": {
-                "device_id": 1,
-                "action": 2,
-                "preset_id": 5
             },
             "mixers": 0,
             "sync": 0,
@@ -5057,14 +5017,14 @@
             "id": "scene",
             "versioned_id": "scene",
             "settings": {
-                "id_counter": 9,
+                "id_counter": 10,
                 "custom_size": false,
                 "items": [
                     {
                         "name": "PTZ Action to pulpit",
                         "source_uuid": "68711d07-7e7f-4209-8a0b-a5981c6e48a6",
                         "visible": true,
-                        "locked": false,
+                        "locked": true,
                         "rot": 0.0,
                         "pos": {
                             "x": 0.0,
@@ -5135,6 +5095,44 @@
                             "duration": 0
                         },
                         "private_settings": {}
+                    },
+                    {
+                        "name": "New (NDI)",
+                        "source_uuid": "902b9fc4-1f85-4316-8c24-fb4b4870e71e",
+                        "visible": false,
+                        "locked": false,
+                        "rot": 0.0,
+                        "pos": {
+                            "x": 1332.0,
+                            "y": 749.0
+                        },
+                        "scale": {
+                            "x": 0.30625000596046448,
+                            "y": 0.30648148059844971
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 10,
+                        "group_item_backup": false,
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 0
+                        },
+                        "hide_transition": {
+                            "duration": 0
+                        },
+                        "private_settings": {}
                     }
                 ]
             },
@@ -5160,7 +5158,9 @@
                 "libobs.show_scene_item.PTZ Action to pulpit": [],
                 "libobs.hide_scene_item.PTZ Action to pulpit": [],
                 "libobs.show_scene_item._ Notebook + Cam": [],
-                "libobs.hide_scene_item._ Notebook + Cam": []
+                "libobs.hide_scene_item._ Notebook + Cam": [],
+                "libobs.show_scene_item.New (NDI)": [],
+                "libobs.hide_scene_item.New (NDI)": []
             },
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
