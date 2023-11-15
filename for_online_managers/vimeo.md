@@ -9,6 +9,8 @@ Upload the video to our [vimeo page](https://vimeo.com/user133790558).
 
 # Set video details
 
+![](assets/vimeo/video_metadata.png)
+
 Please follow the guidelines in [video metadata templates](video_metadata_templates.md).
 
 # Add it to the proper playlist

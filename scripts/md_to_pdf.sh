@@ -7,16 +7,23 @@ PDF_PATH="$(dirname $(realpath "$1"))/$(basename "$1" .md).pdf"
 
 cd $(dirname "$1")
 
+FILE_FOOTER=$(basename "$INPUT_MD_PATH" .md)
+FILE_FOOTER=${FILE_FOOTER^^}
+FILE_FOOTER="${FILE_FOOTER//_/ }"
+
+
 echo "CONVERTING $INPUT_MD_PATH"
 
-if [ -f "$PDF_PATH" ]; then
-  pdf_modification_time=$(stat -c %Y "$PDF_PATH")
-  input_file_modification_time=$(stat -c %Y "$INPUT_MD_PATH")
+if [ -z "$ALL" ]; then
+  if [ -f "$PDF_PATH" ]; then
+    pdf_modification_time=$(stat -c %Y "$PDF_PATH")
+    input_file_modification_time=$(stat -c %Y "$INPUT_MD_PATH")
 
-  # Compare the timestamps and perform an action
-  if [[ $input_file_modification_time -lt $pdf_modification_time ]]; then
-    echo "PDF is up to date."
-    exit
+    # Compare the timestamps and perform an action
+    if [[ $input_file_modification_time -lt $pdf_modification_time ]]; then
+      echo "PDF is up to date."
+      exit
+    fi
   fi
 fi
 
@@ -88,14 +95,14 @@ cat >pagenumber.latex <<EOF
 
 \pagestyle{fancy}
 \fancyfoot{}
-\fancyfoot[R]{\Large\thepage}
+\fancyfoot[R]{\vspace*{8pt} $FILE_FOOTER / \thepage}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
-\fancyfootoffset{3cm} % Adjust this value as needed
+\fancyfootoffset{3.7cm} % Adjust this value as needed
 
 \begin{document}
 \includepdfset{pagecommand=\thispagestyle{fancy}}
-\includepdf[fitpaper=true,scale=0.98,pages=-]{tmp.pdf}
+\includepdf[fitpaper=true,scale=1,pages=-]{tmp.pdf}
 \end{document}
 
 EOF

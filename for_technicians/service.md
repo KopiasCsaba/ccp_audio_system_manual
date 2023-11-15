@@ -6,33 +6,38 @@
 
 
 <!-- TOC -->
-
 * [Before the service](#before-the-service)
-    * [Align the pulpit](#align-the-pulpit)
-    * [Prepare for live-streaming](#prepare-for-live-streaming)
-        * [Turn on the sockets](#turn-on-the-sockets)
-        * [Turn on the pole-TV](#turn-on-the-pole-tv)
-        * [Turn on the coffee-shop TV](#turn-on-the-coffee-shop-tv)
-        * [Turn on the PC](#turn-on-the-pc)
-        * [LOG IN](#log-in)
-    * [Prepare the headset](#prepare-the-headset)
+  * [Align the pulpit](#align-the-pulpit)
+  * [Prepare for live-streaming](#prepare-for-live-streaming)
+    * [Turn on the sockets](#turn-on-the-sockets)
+    * [Turn on the pole-TV](#turn-on-the-pole-tv)
+    * [Turn on the coffee-shop TV](#turn-on-the-coffee-shop-tv)
+    * [Turn on the PC](#turn-on-the-pc)
+    * [LOG IN](#log-in)
+  * [Prepare the headset](#prepare-the-headset)
+  * [Rehearsal](#rehearsal)
 * [Before the service](#before-the-service-1)
-    * [Playing background music](#playing-background-music)
+  * [Playing background music](#playing-background-music)
+    * [First option: Playing from the streaming PC](#first-option-playing-from-the-streaming-pc)
+    * [Second option: from the extra 3.5mm cord](#second-option-from-the-extra-35mm-cord)
+    * [Enabling the background music](#enabling-the-background-music)
 * [During service](#during-service)
-* [During worship](#during-worship)
+  * [During worship](#during-worship)
     * [When someone speaks or prays](#when-someone-speaks-or-prays)
-* [During preaching](#during-preaching)
+  * [During preaching](#during-preaching)
+* [Rule of thumb](#rule-of-thumb)
 * [Closing](#closing)
-
 <!-- TOC -->
 
 <div style="page-break-after: always;"></div>
 
 # Before the service
 
-* Follow the [setting up the system](settingup.md) guide.
-* Mute the stage
-* Mute the pulpit and the headset
+* Follow the [setting up the system](setup.md) guide.
+* You don't need to go through the rehearsal guide again. Definitely don't reset the stage mixers.
+* Turn off the stage.
+* Mute the pulpit.
+* Mute the headset.
 
 ## Align the pulpit
 
@@ -88,16 +93,16 @@ After the PC booted, enter the password.
 
 <img alt="" src="assets/reset/rhodelink.jpg.png"  align="right" style="float:right" width="180">
 
-* Above the mixing console, on the shelf you'll find the battery charger.
-* Based on the labels on the charger, select the appropriate set of batteries.
-* The headset should be there too.
-* Press the button on the headset (see image, point #1)
-* While pressing the button, slide down the back side (see image, point #2)
-* Put batteries in
-* Close it back
-* Turn it on by long pressing the button on top (see image, point #3)
+1. Above the mixing console, on the shelf you'll find the battery charger.
+2. Based on the labels on the charger, select the appropriate set of batteries.
+3. The headset should be there too.
+4. Press the button on the headset (see image, point #1)
+5. While pressing the button, slide down the back side (see image, point #2)
+6. Put batteries in
+7. Close it back
+8. Turn it on by long pressing the button on top (see image, point #3)
     * It should lit up green, displaying 8 on the display.
-* Mute/unmute it as needed by a short(er) press. (It turns red if muted.)
+9. Mute/unmute it as needed by a short(er) press. (It turns red if muted.)
     * Sometimes they ask that you unmute it and they don't need to pay attention.
     * Sometimes they know how to mute it, and they do it.
     * And sometimes they forget to unmute it, then you need to signal them.
@@ -106,23 +111,34 @@ If the service starts hours later, you can keep it turned off, and only turn it 
 
 <br clear="both" style="clear:both"/>
 
+## Rehearsal
+Usually there is a small rehearsal before the service, since you are set up from the previous rehearsal, just check that everything is ok.
+
+<div style="page-break-after: always;"></div>
+
 # Before the service
 
 ## Playing background music
 
-There is an extra 3.5mm trs jack lead dangling around the projection machine, you might connect some device to it to
+You can play background music from two sources, the easiest is the first option.
+
+### First option: Playing from the streaming PC
+ 1. Open Google Chrome
+ 2. There is a bookmark called, "BG MUSIC"
+ 3. Start playing (with shuffle)
+
+### Second option: from the extra 3.5mm cord
+
+There is an extra 3.5mm TRS jack lead dangling around the projection machine, you might connect some device to it to
 play back music.
 
-You might also play back music from the streaming pc.
+### Enabling the background music
 
-* If **{Mute Groups/AUX / PC}** is red, then press it to unmute.
-* Press **{LAYERS/AUX}** to select the aux layer.
-* Adjust the volume of the appropriate input.
-    * Check the LED indicators below the SELECT buttons to see which channels got input signals.
-* You might also want to adjust the AUX group fader, on the right side of the mixer.
-    * e.g. if it's on -60 then you'll hear nothing no matter how much you have on the left.
+* Unmute **{Mute Groups/"AUX / PC"}** 
+* Set the level with **{Groups/"AUX / PC"}** (on the right side)
 
 <div style="page-break-after: always;"></div>
+
 
 # During service
 
