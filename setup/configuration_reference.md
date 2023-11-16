@@ -223,3 +223,22 @@ turned on.
 * Enable the automatic start of "Windows Time service" so time would be synced always.
     * Reason: the service live stream is timed, and have started at the wrong minute.
 
+# Console Read only preset
+
+ * Left layer: Speaker
+   * Headset fader: 0db
+   * Pulpit fader: 0db
+ * Right layer: GROUP DCA1-8
+   * Speaker: -20db
+   * Aux/PC: -20db
+ * Mute groups: 
+   * Effects: muted
+   * Aux/PC: muted
+ * Assign:
+   * Headset: muted
+   * Pulpuit: muted
+   * Stage: ON
+ * Instruments layer:
+   * 1-5: INSTR UNUSED PRESET
+ * Vocals layer: 1-4,6: VOC UNUSED PRESET
+

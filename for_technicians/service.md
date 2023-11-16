@@ -148,7 +148,7 @@ play back music.
     * Did you turn off the preaching mics?
     * Is the volume in a normal range?
     * Do you hear every vocalist & instrument?
-    * Do you hear the drum? (From the speakers?)
+    * Do you hear the drum? (From the speakers? Listen for the hi-hats!)
     * Is there any distortion?
     * Is there anything that bothers your ear?
 * **PUT YOUR HEAD OUT** to hear what is really going on.

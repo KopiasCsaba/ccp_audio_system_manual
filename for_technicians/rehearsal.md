@@ -12,14 +12,14 @@
   * [Reset the stage mixers](#reset-the-stage-mixers)
   * [Stage housekeeping](#stage-housekeeping)
   * [At the main console](#at-the-main-console)
-    * [Mute pulpit and headset](#mute-pulpit-and-headset)
     * [Mute unused vocals](#mute-unused-vocals)
-    * [Mute unused instruments](#mute-unused-instruments)
     * [Load channel presets](#load-channel-presets)
 * [After the band arrives](#after-the-band-arrives)
   * [Gain staging](#gain-staging)
   * [Save the scene](#save-the-scene)
   * [During the rehearsal](#during-the-rehearsal)
+    * [Set up a mix](#set-up-a-mix)
+    * [Check stage monitors](#check-stage-monitors)
     * [If a vocalist sounds off-key or unexpected](#if-a-vocalist-sounds-off-key-or-unexpected)
 * [After the rehearsal](#after-the-rehearsal)
   * [Save the scene](#save-the-scene-1)
@@ -59,49 +59,39 @@ but alternatively you can consult about this with the worship leader also.
 ## Reset the stage mixers
 
 For all the stage mixers, including the one in the drum room, do the following, to reset them to their default working
-state.
+state. 
+
+ONLY DO THIS BEFORE THE REHEARSAL. DON'T DO THIS BEFORE THE SERVICE!
 
 <img alt="" src="assets/reset/stagemixer.png" height="300">
 
-(Order is important here!)
+Do these in this order (important):
 
 1. Turn it on, if it's not on (switch is on the back side)
 2. Reset the top-knobs as follows (and also on the image):
-     * Equalizers section knobs (first four): **12 o'clock**
-     * Limiter to **MAX**
+    * Equalizers section knobs (first four): **12 o'clock**
+    * Limiter to **MAX**
     * Level to **3 o'clock**
 3. Recall preset 16:
-     * Press and hold **RECALL**
-     * Press **16**
+    * Press and hold **RECALL**
+    * Press **16**
     * **Release** RECALL
-
 
 <div style="page-break-after: always;"></div>
 
 ## Stage housekeeping
 
 * Fold back unused microphones.
-* Turn down (turn level knob to zero) on stage mixers that will not be used.
+* Turn level knob to zero on stage mixers that will not be used.
 * Clean up, move away obstacles, trash, etc.
 
 ## At the main console
 
-### Mute pulpit and headset
-
-* If **{Assign/PULPIT MUTE}** is gray, press it.
-* If **{Assign/HEADSET MUTE}** is gray, press it.
-
 ### Mute unused vocals
 
 * Press **{Layers/VOCAL}**: to select the vocals layer.
-* **Mute** and **Pull down** unused channels between 1-6.
+* **Mute** unused channels between 1-6.
 * Do not change channel 7 and 8.
-
-### Mute unused instruments
-
-* Press **{Layers/INSTR}** to select the instruments layer.
-* **Mute** and **pull down** unused channels between 1-5.
-* Don't change channels 6, 7, 8.
 
 <div style="page-break-after: always;"></div>
 
@@ -117,7 +107,7 @@ and for each used channel, load the appropriate preset, repeating the following 
 <img src="assets/console/presetloading.png" height="200"/>
 
 1. Press **{Layers/VOCAL}** OR **{Layers/INSTR}**: to select the right layer.
-2. Press **{Channel X/SELECT}**: to select the channel where you want to load the preset.
+2. Press **{Channel ?/SELECT}**: to select the channel where you want to load the preset.
 3. Press **{Equalizer/VIEW}**:
     * No need to press again, if it is red already.
 
@@ -139,7 +129,6 @@ and for each used channel, load the appropriate preset, repeating the following 
 10. Press **{Knobs/CONFIRM}**.
 
 11. Repeat this section for the next vocal or instrument channel that is in use, or continue if you are finished.
-
 
 Wait for the band to arrive:)
 
@@ -164,52 +153,68 @@ Wait for the band to arrive:)
 
 ## Gain staging
 
-Go through: **Vocal mics 1 to 6** **Instruments 1 to 5** and for each used channel, check & adjust the gain setting. No need to gain-stage the drums and the keyboard.
+<img src="assets/console/gainstaging_tall.png" align="right" style="float:right" width=130/>
 
-1. **Have input signal**: In order to set the gain level, we must have input, e.g. they must sing or play the
+Go through: **Vocal 1-6**, **Instruments 1-5**: and for each used channel, check the gain.
+
+Warnings & common pitfalls:
+
+* In this step, you have no reason to touch ANY OF THE FADERS. Focus on these: Gain knob, Select button, Channel meter.
+* No need to gain-stage the drums and the keyboard.
+* Don't adjust if there is no input!
+* Always, always, always check which channel is selected before turning the gain knob.
+* If you need to turn up gain all the way to the top **something is wrong**.
+    * Don't do this, even if the level remains too low. It will feedback and cause all sorts of problems.
+    * Maybe the person is far, not singing on a proper volume, etc.
+
+Checking the gain:
+
+1. **Have input signal**: You **must have input coming in**, e.g. they must sing or play the
    instrument.
-    * You can do this while they are playing already.
-    * Or ask them one-by-one to play or sing from their lowest to highest volume.
-        * You only really care about their highest volume levels, but asking from lowest to highest usually helps them
-          in producing more precise results.
-    * Make sure to set the gain only when a normal, regular input is coming through. This is very important.
 
-    <img src="assets/console/gainstaging.png" height="160"/>
- 
 2. Press **{Layers/VOCAL}** OR **{Layers/INSTR}**: to select the right layer.
-3. Press **{Channel X/SELECT}**: to select the channel for which you want to set the gain.  (See image, #1.)
-4. Watch **{Channel X/METER}**. (See image, #2.)
-5. Aim for **-18db:** When the input is around its normal level, it should be around the -18db mark.
-    * Normal level: when the singer sings normally, not far from the mic, not shying away, and when not shouting strong.
-      The same goes for instruments.
-6. Adjust the **{GAIN}** knob at the console's top left corner if needed.
-    * Do it until the signal jumps around -18 db.
-    * If you need turn it all the way to the top, you generally want to look out for why. 
-      * Maybe the person is far, not singing on a proper volume, etc.
-
-7. Repeat this section for the next vocal or instrument channel that is in use, or continue if finished.
+3. Press **{Channel ?/SELECT}**: to select the right channel.
+4. Watch **{Channel ?/METER}**.
+5. Adjust the **{GAIN}** knob at the console's top left corner until the meter jumps around -18db. <br>
+   <img src="assets/console/gainstaging.png" height="160"/>
+    * Normal level: when the singer sings on a proper volume, close and straight to the mic. This is when it should be
+      around -18db.
+6. Repeat this section for the next vocal or instrument channel that is in use, or continue if finished.
 
 **Channel gain should not be changed after this initial setup.**
 
 <div style="page-break-after: always;"></div>
 
-
 ## Save the scene
 
 On the console:
 
-* Press **{Scenes/VIEW}**.
-* Turn **{Knobs/Save}** to scroll to the "**Service**" (without the "READONLY" part!) scene.
-* Press **{Knobs/SAVE}**: to save.
-* Press **{Knobs/BACKSPACE}**: to remove "READONLY" from the name if needed.
-* Press **{Knobs/SAVE}**.
-* Press **{Knobs/CONFIRM}**.
+1. Press **{Scenes/VIEW}**.
+2. Turn **{Knobs/Save}** to scroll to the "**Service**" (**without** the "READONLY" part!) scene.
+3. Press **{Knobs/SAVE}**: to save.
+4. Press **{Knobs/BACKSPACE}**: to remove "READONLY" from the name if needed.
+5. Press **{Knobs/SAVE}**.
+6. Press **{Knobs/CONFIRM}**.
 
 ## During the rehearsal
 
-* Set up a mix (with the 8 group faders on the right) that sounds right.
+### Set up a mix
+
+1. Set up a mix with the 8 group faders on the right that sounds right.
     * The lead singer should be a bit louder than the other vocalists.
-* **PUT YOUR HEAD OUT** and listen!
+    * Set Vocal balance on the left side, on the VOCAL layer.
+   
+2. **PUT YOUR HEAD OUT** and listen!
+3. Is the volume below the limit on the SPL meter?
+4. Do you hear all instruments?
+5. Do you hear all vocalists?
+6. Do you hear the drum (from the speakers!? Watch for the hi-hats.)
+7. Does all the singers sing into the microphone?
+    * Are they far away from it, or angled in relation to it?
+8. Did you ask the instrument players to reset their eq/volume levels?
+9. Do they need any help?
+
+### Check stage monitors
 
 * If you have capacity, go up to the stage while they sing, and check if:
     * Everything is balanced, everyone hears everyone.
@@ -219,15 +224,7 @@ On the console:
     * Sometimes mute the MAIN channel, to see if the stage is too loud or if one source is overpowering the others on
       the stage.
     * If an instrument or vocalist fills the room just from the monitors, ask them or help them adjust it.
-    * Don't mute the room for long, it disturbs the band. Mute, check, unmute.
-* Is the volume below the limit on the SPL meter?
-* Did you ask the instrument players to reset their eq/volume levels?
-* Do you hear all instruments?
-* Do you hear all vocalists?
-* Do you hear the drum (from the speakers!?)
-* Does all the singers sing into the microphone?
-    * Are they far away from it, or angled in relation to it?
-* Do they need any help?
+    * Don't mute the room for long, it disturbs the band. Mute, listen, unmute.
 
 <div style="page-break-after: always;"></div>
 
@@ -240,9 +237,9 @@ To solve this: go up on the stage and check the monitor volume levels.
 
 Your goal is so that they would be a bit more present in the stage-monitor mix:
 
-* Either increase the overall monitor level
-* Or increase their level in the monitor
-* Or lower something that is too loud
+* Either increase the overall monitor level.
+* Or increase their level in the monitor.
+* Or lower something that is too loud.
 
 An alternative reason can be:
 
@@ -250,19 +247,16 @@ An alternative reason can be:
 * A too high (or low) low-cut.
 * An unfortunate equalizer setting.
 
-
 # After the rehearsal
 
 ## Save the scene
 
-On the console:
-
-* Press **{Scenes/VIEW}**.
-* Turn **{Knobs/Save}** to scroll to the "**Service**" (without the "READONLY" part!) scene.
-* Press **{Knobs/SAVE}**: to save.
-* Press **{Knobs/BACKSPACE}**: to remove "READONLY" from the name if needed.
-* Press **{Knobs/SAVE}**.
-* Press **{Knobs/CONFIRM}**.
+1. Press **{Scenes/VIEW}**.
+2. Turn **{Knobs/Save}** to scroll to the "**Service**" (**without** the "READONLY" part!) scene.
+3. Press **{Knobs/SAVE}**: to save.
+4. Press **{Knobs/BACKSPACE}**: to remove "READONLY" from the name if needed.
+5. Press **{Knobs/SAVE}**.
+6. Press **{Knobs/CONFIRM}**.
 
 ## Close up
 

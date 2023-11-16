@@ -1,23 +1,41 @@
-<h1>SUNDAYS</h1>
-<hr>
+# STREAM lifecycle on Sundays
+### 10:01
+It will automatically start to stream with the "SERVICE PRE-STREAM" scene.
+This helps people to tune in, check audio and video settings, etc.
 
-# STREAM lifecycle on sundays
+The "TOGGLE" button does not work during this.
 
-* **10:01:** It will start to stream automatically with the "PRE-STREAM" scene.
-    * This helps people to tune in, check audio and video settings, etc.
-    * The "TOGGLE" button does not work during this.
-  
-* **10:30:** It will switch to the "PULPIT" scene, turn the camera there, etc.
+### 10:30  
+It will automatically switch to the "PULPIT" scene, and starts the recording.
 
-* **During the service:** the camera will move based on the audio technician's handling of the microphone mutes.
+### DURING the service
 
-* **Close to the end of the service:** The end-of-stream scene will become active on the preview side only, this causes nothing yet.
+Use the <img src="assets/keycaps/camtoggle.png" height=34 align=center> button to toggle between the camera and the presentation.
 
-* **AFTER THE BLESSING, on "AMEN":**
-  * **YOU** should manually make the FINISH scene live.
-    * Make sure that the **FINISH** scene is in the preview on the left.
-      * Press the "FINISH" button if it isn't.
-    * Press the "FN + Transition" to make the final scene active.
-      * This will stop the recording and the live stream also.
+#### Changing camera angles
+* Press any of these once:
+  <img src="assets/keycaps/projector_canvas.png" height=34 align=center>
+  <img src="assets/keycaps/pulpit_wide.png" height=34 align=center>
+  <img src="assets/keycaps/pulpit.png" height=34 align=center>
+  <img src="assets/keycaps/stage.png" height=34 align=center>
 
-<div style="page-break-after: always;"></div>
+* Press <img src="assets/keycaps/fn.png" height=34 align=center> together with  <img src="assets/keycaps/camtoggle.png" height=34 align=center> to transition to live.
+
+#### Manual camera adjustment
+To manually move or zoom the camera:
+
+* Press & hold <img src="assets/keycaps/fn.png" height=34 align=center>
+* Press any of these to move: ←, ↑, →, ↓
+* Press any of these to zoom:+, -
+
+
+
+### AFTER the end, after the blessing, on "AMEN"
+
+* Press <img src="assets/keycaps/finish.png" height=34 align=center>.
+
+
+* Press <img src="assets/keycaps/fn.png" height=34 align=center> together with  <img src="assets/keycaps/camtoggle.png" height=34 align=center> to transition to live.
+ 
+* This will stop the recording and the live stream also.
+

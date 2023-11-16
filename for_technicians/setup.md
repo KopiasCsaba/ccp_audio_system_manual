@@ -41,10 +41,7 @@
 
 ## Other things
 
-1. If you will use the stage:
-   1. Press **{Assign/STAGE ON}**.
-   2. Press **{Knobs/CONFIRM}**.
-2. Set **{Main/Fader}** to 0.
+1. Set **{Main/Fader}** to 0.
 
 ## Set up the sound pressure level (SPL) meter
 

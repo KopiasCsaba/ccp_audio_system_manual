@@ -11,11 +11,11 @@
 * [Notes on groups](#notes-on-groups)
   * [Speaker](#speaker)
   * [Vocals](#vocals)
-  * [Instr1-2](#instr1-2)
-  * [Instr3-5](#instr3-5)
+  * [Instr 1, 2](#instr-1-2)
+  * [Instr 3, 4, 5](#instr-3-4-5)
   * [Keyboard](#keyboard)
   * [Drums](#drums)
-  * [Aux](#aux)
+  * [Aux / PC](#aux--pc)
   * [FX](#fx)
 * [Listening in (using the headphones, SOLO)](#listening-in-using-the-headphones-solo)
   * [Press the Solo Clear](#press-the-solo-clear)
@@ -116,11 +116,11 @@ We have 8 groups:
 
 * Speaker
 * Vocals
-* Instr1-2
-* Instr3-5
+* Instr 1, 2
+* Instr 3, 4, 5
 * Keyboard
 * Drums
-* Aux
+* Aux / PC
 * FX
 
 ## Speaker
@@ -135,12 +135,12 @@ So, setting the level of this will change how much vocal the whole mix has.
 If you want to set the balance BETWEEN the vocalists, you can, and you should do that on the VOCALS layer by setting the
 individual vocal channel faders.
 
-## Instr1-2
+## Instr 1, 2
 
 This group fader sets the volume for Instrument 1 and Instrument 2.
 The idea is, that usually only one of them is used, so generally this is the lead guitar.
 
-## Instr3-5
+## Instr 3, 4, 5
 
 This group fader sets the volume for ALL the other instrument cables (of course excluding the drums and the piano).
 The idea here is that, most of the time we only have one instrument, as we have seen in the previous group,
@@ -162,14 +162,15 @@ easily.
 
 We have 8 drum microphones, and this one sets them both, together as one up or down.
 
-## Aux
+## Aux / PC
 
 This sets the volumes of all the incoming signals, from both PCS. (There ar e two stereo 3.5mm jack "cable" coming out
 of the mixer, one is connected to the streaming pc, the other is dangling around the projection pc.)
 
 ## FX
 
-This sets how much effect(nowadays we only use reverbs) is being added to the mix.
+This sets how much effect (nowadays we only use reverbs) is being added to the mix.
+Effects can be muted in **{Mute Groups/EFFECTS}**.
 
 <div style="page-break-after: always;"></div>
 
@@ -260,16 +261,15 @@ Please remember:
 * During preaching, the stage must be off.
 * During worship, the preacher mics should be off.
 
-Since the buttons are not lit even if the stage is on or off, the way to know if the stage is off is the following:
+The buttons aren't lighting up in muted state, so this is the way to know if the stage is muted:
 
-<img alt="" src="assets/console/stage_off.png"  align="right" style="float:right" height="100">
+* If some of the groups (The 8 faders on the right side) are black.
+    <img alt="" src="assets/console/stageoff.png"  height="150">
 
 * If you remember, that you pressed "STAGE OFF". :)
-* If the channel strip's displays showing "OFF" in the second row for vocals or instruments.
 * If there is no signal indication on any stage inputs.
 * If everyone is looking at you, expecting the stage to work. :)
 
-<br clear="both" style="clear:both"/>
 
 The stage off/on does not affect anything important, every level, channel name, eq, mute status etc. is retained.
 
@@ -278,7 +278,6 @@ It is not a source of feedback, and sometimes during the end of the preaching so
 
 By never disabling it, we don't need to keep an eye on it either, it just works always.
 
-<div style="page-break-after: always;"></div>
 
 ### Muting the effects
 

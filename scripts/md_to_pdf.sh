@@ -98,7 +98,7 @@ cat >pagenumber.latex <<EOF
 \fancyfoot[R]{\vspace*{8pt} $FILE_FOOTER / \thepage}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
-\fancyfootoffset{3.7cm} % Adjust this value as needed
+\fancyfootoffset{2cm} % Adjust this value as needed
 
 \begin{document}
 \includepdfset{pagecommand=\thispagestyle{fancy}}
