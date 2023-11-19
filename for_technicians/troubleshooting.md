@@ -8,6 +8,10 @@
 
 
 <!-- TOC -->
+* [Baby room TV doesn't work](#baby-room-tv-doesnt-work)
+  * [No signal](#no-signal)
+  * [The page can not be found](#the-page-can-not-be-found-)
+  * [What URL?](#what-url)
 * [Camera](#camera)
   * [The projector's image has rolling lines](#the-projectors-image-has-rolling-lines)
 * [Projector](#projector)
@@ -26,6 +30,53 @@
     * [Restarting just one platform's stream](#restarting-just-one-platforms-stream)
 <!-- TOC -->
 
+
+<div style="page-break-after: always;"></div>
+
+# Baby room TV doesn't work
+## No signal
+ * That TV only gets signal when the stream is going in OBS.
+
+## The page can not be found 
+ * After turning on, the TV needs a minute to connect to the internet, just wait a bit and retry.
+ * Make sure the "Network" socket is turned on.
+
+## What URL?
+If for any reason the TV forgets the URL it needs to load, load this url:
+https://tinyurl.com/tvstreamtest1
+
+<div style="page-break-after: always;"></div>
+
+# Electricity is GONE!?
+# There are three main boxes:
+ * Behind the projector screen (main room, upstairs things)
+ * Kitchen (mostly just kitchen stuff is switched from here)
+ * Main switch outside
+
+If the lights in the kitchen still works, you need to check behind the projector screen. Otherwise probably the main switch tripped.
+
+## Behind the projector screen
+
+Sadly, currently you need to unscrew two screws to get the panel off.
+You can find a screwdriver in the storage area next to the book-gardrobe, behind the door.
+
+
+<img src="assets/troubleshoot/behind_the_projector_3.jpg" height=200 align="right">
+<img src="assets/troubleshoot/behind_the_projector_2.jpg" height=200 align="right">
+<img src="assets/troubleshoot/behind_the_projector_1.jpg" height=200  align="right">
+
+<br style="clear:both;">
+
+## Main switch
+You need to go outside of the building:
+
+<img src="assets/troubleshoot/main_switch_path.png" height=160  >
+<br>
+<img src="assets/troubleshoot/mainswitch_3.jpg" height=200 align="right">
+<img src="assets/troubleshoot/mainswitch_2.jpg" height=200 align="right">
+<img src="assets/troubleshoot/mainswitch_1.jpg" height=200 align="right">
+<img src="assets/troubleshoot/mainswitch_0.jpg" height=200 align="right">
+<br style="clear:both;">
 
 <div style="page-break-after: always;"></div>
 
