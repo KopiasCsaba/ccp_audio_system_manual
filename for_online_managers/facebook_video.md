@@ -21,6 +21,10 @@ channel. [Learn more](vimeo.md#publish-from-vimeo-to-youtube-and-facebook).
 
 Please follow the guidelines in [video metadata templates](video_metadata_templates.md).
 
+**PLEASE NOTE:** When uploading to Facebook, please make sure the video title is entered in both the post __title and description__ fields.<br>
+This ensures that the video title is visible in people's Facebook feeds. <br>
+_(If this is not done, majority of viewers will not see the title of the video as they browse)_
+
 # Manage the live recording
 
 **@TODO:** Check out how exactly we should do this on facebook, and update this.
