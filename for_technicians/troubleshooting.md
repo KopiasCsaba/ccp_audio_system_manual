@@ -12,6 +12,10 @@
   * [No signal](#no-signal)
   * [The page can not be found](#the-page-can-not-be-found-)
   * [What URL?](#what-url)
+* [Electricity is GONE!?](#electricity-is-gone)
+  * [Three main electric boxes](#three-main-electric-boxes)
+  * [Behind the projector screen](#behind-the-projector-screen)
+  * [Main switch](#main-switch)
 * [Camera](#camera)
   * [The projector's image has rolling lines](#the-projectors-image-has-rolling-lines)
 * [Projector](#projector)
@@ -48,7 +52,7 @@ https://tinyurl.com/tvstreamtest1
 <div style="page-break-after: always;"></div>
 
 # Electricity is GONE!?
-# There are three main boxes:
+## Three main electric boxes
  * Behind the projector screen (main room, upstairs things)
  * Kitchen (mostly just kitchen stuff is switched from here)
  * Main switch outside
