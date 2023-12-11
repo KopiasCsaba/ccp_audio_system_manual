@@ -8,6 +8,7 @@
 <!-- TOC -->
 * [Before the service](#before-the-service)
   * [Align the pulpit](#align-the-pulpit)
+  * [Align the pulpit microphone](#align-the-pulpit-microphone)
   * [Prepare for live-streaming](#prepare-for-live-streaming)
     * [Turn on the sockets](#turn-on-the-sockets)
     * [Turn on the pole-TV](#turn-on-the-pole-tv)
@@ -39,11 +40,18 @@
 * Mute the pulpit.
 * Mute the headset.
 
+
+## Align the pulpit microphone
+
+Make sure the pulpit microphone is aligned properly: it should point to the mouth of the speaker.
+
 ## Align the pulpit
 
 There is a mark on the floor, align the pulpit to be at the correct position.
 
 <img alt="" src="assets/reset/pulpit.jpg" height="300">
+
+
 
 <div style="page-break-after: always;"></div>
 
