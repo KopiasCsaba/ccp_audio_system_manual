@@ -9,6 +9,7 @@ services:
     volumes:
       - './restreamer/volumes/restreamer/config:/core/config'
       - './restreamer/volumes/restreamer/data:/core/data'
+  
     environment:
       - RS_LOGLEVEL=4
       - RS_TIMEZONE=EET

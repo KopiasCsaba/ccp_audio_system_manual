@@ -35,18 +35,23 @@ foreach ($file in $files) {
          continue
     }
 
-    while ((Get-Item (Join-Path $sourceFolder $file)).LastWriteTime -gt (Get-Date).AddSeconds(-20)) {
-        echo "Waiting on still changing file: $file ..."
+   
+    while ((Get-Item (Join-Path $sourceFolder $file)).LastWriteTime.AddSeconds(30) -gt (Get-Date)) {
+           $fileSize = (Get-Item  (Join-Path $sourceFolder $file)).length
+        echo "Waiting on still changing/recently changed file: $file ($fileSize bytes)..."
         Start-Sleep 5
     }
-  
+   
 
     if (!(Test-Path $destinationFile) -or ($file.Length -ne (Get-Item $destinationFile).Length)) {
     
 
         # File not copied yet or size is different
         try {
-	        echo "Copying $file ..."
+            $fileSize = (Get-Item $file.FullName).length
+            $fileMD5 = (Get-FileHash -Path $file.FullName -Algorithm MD5).Hash
+	        echo "Copying $file (size: $fileSize b, md5: $fileMD5)..."
+
             Copy-Item $file.FullName $destinationFolder -ErrorAction Stop
         } catch {
             # Handle the error as needed
