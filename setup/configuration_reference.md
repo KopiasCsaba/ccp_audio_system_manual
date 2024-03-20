@@ -222,6 +222,13 @@ turned on.
     * Reason: live screens might be disturbed during services
 * Enable the automatic start of "Windows Time service" so time would be synced always.
     * Reason: the service live stream is timed, and have started at the wrong minute.
+* Enable HDMI the hdmi capture's audio input to pass through the audio output
+    * Run mmsys.cpl
+    * "Recording" tab
+    * Choose "Digital audio interface"
+    * "Listen" tab
+    * Enable    
+
 
 # Console Read only preset
 
