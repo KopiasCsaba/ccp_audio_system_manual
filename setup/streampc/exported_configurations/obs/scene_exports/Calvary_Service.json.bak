@@ -1,6 +1,6 @@
 {
     "DesktopAudioDevice1": {
-        "prev_ver": 486604803,
+        "prev_ver": 503316482,
         "name": "Desktop Audio",
         "uuid": "273dc63e-29e4-41cd-a5a6-a3ce894c9ed3",
         "id": "wasapi_output_capture",
@@ -33,7 +33,7 @@
         }
     },
     "AuxAudioDevice1": {
-        "prev_ver": 486604803,
+        "prev_ver": 503316482,
         "name": "Line in",
         "uuid": "1f1ad33e-a16f-488b-b927-168bc968671f",
         "id": "wasapi_input_capture",
@@ -67,7 +67,7 @@
         },
         "filters": [
             {
-                "prev_ver": 486604803,
+                "prev_ver": 503316482,
                 "name": "Noise Gate",
                 "uuid": "52f8aff4-5627-41d3-867e-039663c9b9d2",
                 "id": "noise_gate_filter",
@@ -137,13 +137,13 @@
             "name": "=============== GENERAL EVENT ==============="
         },
         {
+            "name": "EVENT FINISHED  (live_off_delayed, rec_off_delayed, mute_on)"
+        },
+        {
             "name": "STAND BY  (live_off, rec_off, mute_on)"
         },
         {
             "name": "EVENT PRE STREAM (live_on, rec_on_afterleave, mute_on)"
-        },
-        {
-            "name": "EVENT FINISHED  (live_off_delayed, rec_off_delayed, mute_on)"
         },
         {
             "name": "EVENT BREAK  (mute_on, rec_pause)"
@@ -191,20 +191,19 @@
         {
             "monitor": 2,
             "type": 3,
-            "geometry": "AdnQywADAAAAAAeIAAAAAAAADvcAAAQvAAAHgAAAAAAAAA7/AAAEJQAAAAIABAAAB4AAAAeAAAAAAAAADv8AAAQ3",
+            "geometry": "AdnQywADAAAAAAyHAAAAAAAAEXgAAALIAAAMgAAAAAAAABF/AAACtwAAAAIABAAABQAAAAyAAAAAAAAAEX8AAALP",
             "alwaysOnTopOverridden": false
         }
     ],
     "current_transition": "Fade",
     "transition_duration": 400,
-    "preview_locked": false,
+    "preview_locked": true,
     "scaling_enabled": false,
     "scaling_level": 0,
     "scaling_off_x": 0.0,
     "scaling_off_y": 0.0,
     "virtual-camera": {
-        "type": 0,
-        "internal": 0
+        "type2": 3
     },
     "modules": {
         "source-dock": {
@@ -224,7 +223,7 @@
                     "properties": false,
                     "filters": false,
                     "textinput": false,
-                    "geometry": "AdnQywADAAAAAAZSAAACUwAAB38AAAPXAAAAAAAAAAD//////////wAAAAAAAAAAB4AAAAZSAAACUwAAB38AAAPX",
+                    "geometry": "AdnQywADAAAAAAZTAAAChgAAB38AAAP+AAAAAAAAAAD//////////wAAAAEAAAAAB4AAAAZTAAAChgAAB38AAAP+",
                     "split": "AAAA/wAAAAEAAAABAAAAHgD/////AQAAAAIA",
                     "window": "",
                     "dockarea": 8,
@@ -248,7 +247,7 @@
                     "properties": false,
                     "filters": false,
                     "textinput": false,
-                    "geometry": "AdnQywADAAD///84AAAB6P////8AAAJq////OAAAAgf/////AAACagAAAAEAAAAABQD///84AAACB/////8AAAJq",
+                    "geometry": "AdnQywADAAAAAAJOAAABugAAAxUAAAI8AAACTgAAAdkAAAMVAAACPAAAAAAAAAAABQAAAAJOAAAB2QAAAxUAAAI8",
                     "split": "AAAA/wAAAAEAAAAAAP////8BAAAAAgA=",
                     "window": "",
                     "dockarea": 0,
@@ -272,7 +271,7 @@
                     "properties": false,
                     "filters": false,
                     "textinput": false,
-                    "geometry": "AdnQywADAAD///84AAAB6P////8AAAJq////OAAAAgf/////AAACagAAAAEAAAAABQD///84AAACB/////8AAAJq",
+                    "geometry": "AdnQywADAAAAAAJOAAABugAAAxUAAAI8AAACTgAAAdkAAAMVAAACPAAAAAAAAAAABQAAAAJOAAAB2QAAAxUAAAI8",
                     "split": "AAAA/wAAAAEAAAAAAP////8BAAAAAgA=",
                     "window": "",
                     "dockarea": 0,
@@ -296,7 +295,7 @@
                     "properties": false,
                     "filters": false,
                     "textinput": false,
-                    "geometry": "AdnQywADAAAAAAUvAAACUwAABk0AAAK9AAAAAAAAAAD//////////wAAAAAAAAAAB4AAAAUvAAACUwAABk0AAAK9",
+                    "geometry": "AdnQywADAAAAAAUwAAAChgAABk4AAALwAAAAAAAAAAD//////////wAAAAEAAAAAB4AAAAUwAAAChgAABk4AAALw",
                     "split": "AAAA/wAAAAEAAAABAAAAHgD/////AQAAAAIA",
                     "window": "",
                     "dockarea": 8,
@@ -387,7 +386,7 @@
                             },
                             "dayOfWeek": 7,
                             "condition": 0,
-                            "dateTime": "Sun Nov 12 10:01:00 2023",
+                            "dateTime": "Sun Feb 4 10:01:00 2024",
                             "dateTime2": "Sat Aug 12 13:04:33 2023",
                             "ignoreDate": false,
                             "ignoreTime": false,
@@ -469,7 +468,7 @@
                             },
                             "dayOfWeek": 7,
                             "condition": 0,
-                            "dateTime": "Sun Nov 12 10:30:00 2023",
+                            "dateTime": "Sun Feb 4 10:30:00 2024",
                             "dateTime2": "Sat Aug 12 13:04:33 2023",
                             "ignoreDate": false,
                             "ignoreTime": false,
@@ -631,7 +630,7 @@
                             },
                             "dayOfWeek": 7,
                             "condition": 1,
-                            "dateTime": "Sun Nov 12 11:50:00 2023",
+                            "dateTime": "Sun Feb 4 11:50:00 2024",
                             "dateTime2": "Sun Sep 10 08:53:17 2023",
                             "ignoreDate": false,
                             "ignoreTime": false,
@@ -2970,24 +2969,24 @@
             "sceneGroupTabPos": 14,
             "triggerTabPos": 17,
             "saveWindowGeo": false,
-            "windowPosX": 450,
-            "windowPosY": 187,
-            "windowWidth": 1000,
-            "windowHeight": 600,
+            "windowPosX": 1551,
+            "windowPosY": 108,
+            "windowWidth": 1179,
+            "windowHeight": 893,
             "macroActionConditionSplitterPosition": [
                 {
-                    "pos": 147
+                    "pos": 391
                 },
                 {
-                    "pos": 236
+                    "pos": 285
                 }
             ],
             "macroListMacroEditSplitterPosition": [
                 {
-                    "pos": 144
+                    "pos": 171
                 },
                 {
-                    "pos": 829
+                    "pos": 981
                 }
             ],
             "version": "577808f1a307cfd49af20a7a6807975ecc50d76f"
@@ -2995,7 +2994,7 @@
     },
     "sources": [
         {
-            "prev_ver": 486604803,
+            "prev_ver": 503316482,
             "name": "=============== CAM POSITIONS ===============",
             "uuid": "4f8e42e1-a18c-49e9-ae94-187b0aee138d",
             "id": "scene",
@@ -3025,7 +3024,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 486604803,
+            "prev_ver": 503316482,
             "name": "=============== GENERAL EVENT ===============",
             "uuid": "7f66ef03-96c2-474c-856d-b3e91b6f2e6b",
             "id": "scene",
@@ -3055,7 +3054,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 486604803,
+            "prev_ver": 503316482,
             "name": "=============== Others ===============",
             "uuid": "3c0b6db1-6dcb-48a4-a95c-8e045aae60cc",
             "id": "scene",
@@ -3085,7 +3084,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 486604803,
+            "prev_ver": 503316482,
             "name": "=============== SUNDAY ===============",
             "uuid": "799d00d1-cf90-4926-89f7-293f1c770e30",
             "id": "scene",
@@ -3115,7 +3114,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 486604803,
+            "prev_ver": 503316482,
             "name": "christian-piano-music-143489.mp3",
             "uuid": "66391b3a-4fff-474b-9412-f6f9c23105a6",
             "id": "ffmpeg_source",
@@ -3151,7 +3150,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 486604803,
+            "prev_ver": 503316482,
             "name": "CUSTOM (mute_off, autoptz_to_stage)",
             "uuid": "5410e6db-5514-4145-9fd8-e992cb01ab01",
             "id": "scene",
@@ -3257,10 +3256,10 @@
                         "key": "OBS_KEY_F6"
                     }
                 ],
-                "libobs.show_scene_item._ Notebook + Cam": [],
-                "libobs.hide_scene_item._ Notebook + Cam": [],
-                "libobs.show_scene_item.PTZ Action custom": [],
-                "libobs.hide_scene_item.PTZ Action custom": []
+                "libobs.show_scene_item.2": [],
+                "libobs.hide_scene_item.2": [],
+                "libobs.show_scene_item.3": [],
+                "libobs.hide_scene_item.3": []
             },
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
@@ -3271,7 +3270,7 @@
             }
         },
         {
-            "prev_ver": 486604803,
+            "prev_ver": 503316482,
             "name": "debug",
             "uuid": "3c444d0d-6402-4eef-937e-96f585dd282c",
             "id": "browser_source",
@@ -3303,7 +3302,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 486604803,
+            "prev_ver": 503316482,
             "name": "debug_text",
             "uuid": "612a9e01-e2c2-4cd1-90ce-130577e365ad",
             "id": "text_gdiplus",
@@ -3329,7 +3328,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 486604803,
+            "prev_ver": 503316482,
             "name": "EVENT BREAK  (mute_on, rec_pause)",
             "uuid": "c7636678-6f72-4375-93ee-62d2c4683e14",
             "id": "scene",
@@ -3587,18 +3586,18 @@
                         "key": "OBS_KEY_F9"
                     }
                 ],
-                "libobs.show_scene_item.christian-piano-music-143489.mp3": [],
-                "libobs.hide_scene_item.christian-piano-music-143489.mp3": [],
-                "libobs.show_scene_item.ms_start_bg": [],
-                "libobs.hide_scene_item.ms_start_bg": [],
-                "libobs.show_scene_item.laser_-_121651_pixabay.mp4": [],
-                "libobs.hide_scene_item.laser_-_121651_pixabay.mp4": [],
-                "libobs.show_scene_item.ms_bg": [],
-                "libobs.hide_scene_item.ms_bg": [],
-                "libobs.show_scene_item.event_break_loading": [],
-                "libobs.hide_scene_item.event_break_loading": [],
-                "libobs.show_scene_item.ms_break": [],
-                "libobs.hide_scene_item.ms_break": []
+                "libobs.show_scene_item.7": [],
+                "libobs.hide_scene_item.7": [],
+                "libobs.show_scene_item.13": [],
+                "libobs.hide_scene_item.13": [],
+                "libobs.show_scene_item.12": [],
+                "libobs.hide_scene_item.12": [],
+                "libobs.show_scene_item.3": [],
+                "libobs.hide_scene_item.3": [],
+                "libobs.show_scene_item.8": [],
+                "libobs.hide_scene_item.8": [],
+                "libobs.show_scene_item.4": [],
+                "libobs.hide_scene_item.4": []
             },
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
@@ -3609,7 +3608,7 @@
             }
         },
         {
-            "prev_ver": 486604803,
+            "prev_ver": 503316482,
             "name": "EVENT FINISHED  (live_off_delayed, rec_off_delayed, mute_on)",
             "uuid": "02f70584-0b8b-41b1-8b6f-eb0f42c776f5",
             "id": "scene",
@@ -3753,12 +3752,12 @@
                         "key": "OBS_KEY_F10"
                     }
                 ],
-                "libobs.show_scene_item.palm-trees-2301981_1920.jpg 2": [],
-                "libobs.hide_scene_item.palm-trees-2301981_1920.jpg 2": [],
-                "libobs.show_scene_item.finished_text1": [],
-                "libobs.hide_scene_item.finished_text1": [],
-                "libobs.show_scene_item.finished_text2": [],
-                "libobs.hide_scene_item.finished_text2": []
+                "libobs.show_scene_item.4": [],
+                "libobs.hide_scene_item.4": [],
+                "libobs.show_scene_item.3": [],
+                "libobs.hide_scene_item.3": [],
+                "libobs.show_scene_item.5": [],
+                "libobs.hide_scene_item.5": []
             },
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
@@ -3766,7 +3765,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 486604803,
+            "prev_ver": 503316482,
             "name": "EVENT PRE STREAM (live_on, rec_on_afterleave, mute_on)",
             "uuid": "232bf565-c647-4a08-9b59-36081a0007b3",
             "id": "scene",
@@ -3986,16 +3985,16 @@
                         "key": "OBS_KEY_F8"
                     }
                 ],
-                "libobs.show_scene_item.ms_start_bg": [],
-                "libobs.hide_scene_item.ms_start_bg": [],
-                "libobs.show_scene_item.laser_-_121651_pixabay.mp4": [],
-                "libobs.hide_scene_item.laser_-_121651_pixabay.mp4": [],
-                "libobs.show_scene_item.ms_start_soon": [],
-                "libobs.hide_scene_item.ms_start_soon": [],
-                "libobs.show_scene_item.christian-piano-music-143489.mp3": [],
-                "libobs.hide_scene_item.christian-piano-music-143489.mp3": [],
-                "libobs.show_scene_item.event_break_loading": [],
-                "libobs.hide_scene_item.event_break_loading": []
+                "libobs.show_scene_item.3": [],
+                "libobs.hide_scene_item.3": [],
+                "libobs.show_scene_item.12": [],
+                "libobs.hide_scene_item.12": [],
+                "libobs.show_scene_item.4": [],
+                "libobs.hide_scene_item.4": [],
+                "libobs.show_scene_item.5": [],
+                "libobs.hide_scene_item.5": [],
+                "libobs.show_scene_item.8": [],
+                "libobs.hide_scene_item.8": []
             },
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
@@ -4006,7 +4005,7 @@
             }
         },
         {
-            "prev_ver": 486604803,
+            "prev_ver": 503316482,
             "name": "event_break_loading",
             "uuid": "fab16907-d2c8-423e-bc84-9b04e7fa8a3a",
             "id": "ffmpeg_source",
@@ -4047,7 +4046,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 486604803,
+            "prev_ver": 503316482,
             "name": "finished_text1",
             "uuid": "0b0e5fe6-2425-42e0-891a-393fa60c8946",
             "id": "text_gdiplus",
@@ -4081,7 +4080,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 486604803,
+            "prev_ver": 503316482,
             "name": "finished_text2",
             "uuid": "11d2157b-985d-49a6-a739-bb9f8b6fdf4d",
             "id": "text_gdiplus",
@@ -4115,7 +4114,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 486604803,
+            "prev_ver": 503316482,
             "name": "laser_-_121651_pixabay.mp4",
             "uuid": "3693be67-e736-4639-819a-8d8bbbf8f6d1",
             "id": "ffmpeg_source",
@@ -4152,7 +4151,7 @@
             "private_settings": {},
             "filters": [
                 {
-                    "prev_ver": 486604803,
+                    "prev_ver": 503316482,
                     "name": "Colour Correction",
                     "uuid": "b85b1c3e-94df-49c5-8f78-c06b407caac2",
                     "id": "color_filter",
@@ -4182,7 +4181,7 @@
             ]
         },
         {
-            "prev_ver": 486604803,
+            "prev_ver": 503316482,
             "name": "MANUAL (mute_off, autoptz_to_stage)",
             "uuid": "87225443-ba46-4ae3-b448-e3bae27d2156",
             "id": "scene",
@@ -4244,8 +4243,8 @@
             "push-to-talk-delay": 0,
             "hotkeys": {
                 "OBSBasic.SelectScene": [],
-                "libobs.show_scene_item._ Notebook + Cam": [],
-                "libobs.hide_scene_item._ Notebook + Cam": []
+                "libobs.show_scene_item.1": [],
+                "libobs.hide_scene_item.1": []
             },
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
@@ -4256,7 +4255,7 @@
             }
         },
         {
-            "prev_ver": 486604803,
+            "prev_ver": 503316482,
             "name": "ms_bg",
             "uuid": "7762aa05-5d1b-45f4-aa21-9a493bb1716f",
             "id": "color_source",
@@ -4282,7 +4281,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 486604803,
+            "prev_ver": 503316482,
             "name": "ms_break",
             "uuid": "eea43bcf-ddff-42ae-9de6-691812732687",
             "id": "text_gdiplus",
@@ -4308,7 +4307,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 486604803,
+            "prev_ver": 503316482,
             "name": "ms_start_bg",
             "uuid": "6499dbbe-80b6-43b2-acf3-fbbdbafa78d7",
             "id": "color_source",
@@ -4334,7 +4333,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 486604803,
+            "prev_ver": 503316482,
             "name": "ms_start_soon",
             "uuid": "31045b10-e640-4016-9ad2-85376dccd9aa",
             "id": "text_gdiplus",
@@ -4360,7 +4359,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 486604803,
+            "prev_ver": 503316482,
             "name": "New (NDI)",
             "uuid": "902b9fc4-1f85-4316-8c24-fb4b4870e71e",
             "id": "ndi_source",
@@ -4399,7 +4398,7 @@
             },
             "filters": [
                 {
-                    "prev_ver": 486604803,
+                    "prev_ver": 503316482,
                     "name": "Apply LUT",
                     "uuid": "66efaeb7-b1e6-4e8b-b0cd-4fc551b1090f",
                     "id": "clut_filter",
@@ -4426,7 +4425,7 @@
                     "private_settings": {}
                 },
                 {
-                    "prev_ver": 486604803,
+                    "prev_ver": 503316482,
                     "name": "Apply LUT 2",
                     "uuid": "955006e6-aa9a-41e4-bd10-616cd7d3bb28",
                     "id": "clut_filter",
@@ -4455,7 +4454,7 @@
             ]
         },
         {
-            "prev_ver": 486604803,
+            "prev_ver": 503316482,
             "name": "Notebook",
             "uuid": "86bf5a3a-2836-400a-8d4f-03b9f675a6c5",
             "id": "dshow_input",
@@ -4499,7 +4498,7 @@
             }
         },
         {
-            "prev_ver": 486604803,
+            "prev_ver": 503316482,
             "name": "palm-trees-2301981_1920.jpg",
             "uuid": "af118ec0-a85f-4a3d-afb9-ca15feee1077",
             "id": "image_source",
@@ -4525,7 +4524,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 486604803,
+            "prev_ver": 503316482,
             "name": "palm-trees-2301981_1920.jpg 2",
             "uuid": "a1aacf90-b6d8-4997-8272-ada44d169545",
             "id": "image_source",
@@ -4551,7 +4550,7 @@
             "private_settings": {},
             "filters": [
                 {
-                    "prev_ver": 486604803,
+                    "prev_ver": 503316482,
                     "name": "Chroma Key",
                     "uuid": "a2d9810c-2768-4275-a61c-16518d2e58e0",
                     "id": "chroma_key_filter",
@@ -4579,7 +4578,7 @@
             ]
         },
         {
-            "prev_ver": 486604803,
+            "prev_ver": 503316482,
             "name": "prestream_cntdwn",
             "uuid": "bbf2ed3c-dae9-4a69-9bfc-20ab62403f58",
             "id": "browser_source",
@@ -4614,7 +4613,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 486604803,
+            "prev_ver": 503316482,
             "name": "prestream_text2",
             "uuid": "444989cc-e2f8-415c-8542-6b72edbc9ff4",
             "id": "text_gdiplus",
@@ -4649,7 +4648,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 486604803,
+            "prev_ver": 503316482,
             "name": "prestream_text3",
             "uuid": "0313b12d-5fc4-4c4c-baea-c752c7a11ba5",
             "id": "text_gdiplus",
@@ -4687,7 +4686,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 486604803,
+            "prev_ver": 503316482,
             "name": "prestream_text4",
             "uuid": "8886eb5f-a73b-4c7a-812f-619c805bffe0",
             "id": "text_gdiplus",
@@ -4723,7 +4722,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 486604803,
+            "prev_ver": 503316482,
             "name": "PROJECTOR  (mute_off, autoptz_to_stage)",
             "uuid": "7d1b38aa-59b6-4a42-bc88-fb2b148ff21a",
             "id": "scene",
@@ -4829,10 +4828,10 @@
                         "key": "OBS_KEY_F1"
                     }
                 ],
-                "libobs.show_scene_item._ Notebook + Cam": [],
-                "libobs.hide_scene_item._ Notebook + Cam": [],
-                "libobs.show_scene_item.PTZ Action pulpit with projector": [],
-                "libobs.hide_scene_item.PTZ Action pulpit with projector": []
+                "libobs.show_scene_item.1": [],
+                "libobs.hide_scene_item.1": [],
+                "libobs.show_scene_item.3": [],
+                "libobs.hide_scene_item.3": []
             },
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
@@ -4843,7 +4842,7 @@
             }
         },
         {
-            "prev_ver": 486604803,
+            "prev_ver": 503316482,
             "name": "PTZ Action custom",
             "uuid": "b487bc29-f4e0-4cd5-b6d5-c5b13d065335",
             "id": "ptz_action_source",
@@ -4871,7 +4870,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 486604803,
+            "prev_ver": 503316482,
             "name": "PTZ Action pulpit with projector",
             "uuid": "6a3edac3-24a9-464c-a202-8458af3552d3",
             "id": "ptz_action_source",
@@ -4899,7 +4898,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 486604803,
+            "prev_ver": 503316482,
             "name": "PTZ Action sitting",
             "uuid": "c2c50b33-81c0-4edb-a840-0d0c22097908",
             "id": "ptz_action_source",
@@ -4927,7 +4926,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 486604803,
+            "prev_ver": 503316482,
             "name": "PTZ Action to pulpit",
             "uuid": "68711d07-7e7f-4209-8a0b-a5981c6e48a6",
             "id": "ptz_action_source",
@@ -4955,7 +4954,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 486604803,
+            "prev_ver": 503316482,
             "name": "PTZ Action to pulpit wide",
             "uuid": "d7a96685-7d5b-4d42-89a1-8d7660a280a3",
             "id": "ptz_action_source",
@@ -4983,7 +4982,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 486604803,
+            "prev_ver": 503316482,
             "name": "PTZ Action to stage",
             "uuid": "010c4049-352e-4063-92d2-8c419e0cafd6",
             "id": "ptz_action_source",
@@ -5011,7 +5010,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 486604803,
+            "prev_ver": 503316482,
             "name": "PULPIT (mute_off, autoptz_to_stage)",
             "uuid": "51e9392f-1a5b-4f94-a15f-9e2b3a887746",
             "id": "scene",
@@ -5155,12 +5154,12 @@
                         "key": "OBS_KEY_F3"
                     }
                 ],
-                "libobs.show_scene_item.PTZ Action to pulpit": [],
-                "libobs.hide_scene_item.PTZ Action to pulpit": [],
-                "libobs.show_scene_item._ Notebook + Cam": [],
-                "libobs.hide_scene_item._ Notebook + Cam": [],
-                "libobs.show_scene_item.New (NDI)": [],
-                "libobs.hide_scene_item.New (NDI)": []
+                "libobs.show_scene_item.8": [],
+                "libobs.hide_scene_item.8": [],
+                "libobs.show_scene_item.9": [],
+                "libobs.hide_scene_item.9": [],
+                "libobs.show_scene_item.10": [],
+                "libobs.hide_scene_item.10": []
             },
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
@@ -5171,7 +5170,7 @@
             }
         },
         {
-            "prev_ver": 486604803,
+            "prev_ver": 503316482,
             "name": "PULPIT WIDE  (mute_off, autoptz_to_stage)",
             "uuid": "7572723e-2c21-4b3e-8d2c-e0704f828a51",
             "id": "scene",
@@ -5277,10 +5276,10 @@
                         "key": "OBS_KEY_F2"
                     }
                 ],
-                "libobs.show_scene_item._ Notebook + Cam": [],
-                "libobs.hide_scene_item._ Notebook + Cam": [],
-                "libobs.show_scene_item.PTZ Action to pulpit wide": [],
-                "libobs.hide_scene_item.PTZ Action to pulpit wide": []
+                "libobs.show_scene_item.2": [],
+                "libobs.hide_scene_item.2": [],
+                "libobs.show_scene_item.3": [],
+                "libobs.hide_scene_item.3": []
             },
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
@@ -5291,7 +5290,7 @@
             }
         },
         {
-            "prev_ver": 486604803,
+            "prev_ver": 503316482,
             "name": "SITTING (mute_off, autoptz_to_stage)",
             "uuid": "af5bdfe0-1dca-4baf-b9ea-6457f4b2dacb",
             "id": "scene",
@@ -5397,10 +5396,10 @@
                         "key": "OBS_KEY_F5"
                     }
                 ],
-                "libobs.show_scene_item.PTZ Action sitting": [],
-                "libobs.hide_scene_item.PTZ Action sitting": [],
-                "libobs.show_scene_item._ Notebook + Cam": [],
-                "libobs.hide_scene_item._ Notebook + Cam": []
+                "libobs.show_scene_item.3": [],
+                "libobs.hide_scene_item.3": [],
+                "libobs.show_scene_item.2": [],
+                "libobs.hide_scene_item.2": []
             },
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
@@ -5411,7 +5410,7 @@
             }
         },
         {
-            "prev_ver": 486604803,
+            "prev_ver": 503316482,
             "name": "STAGE  (mute_off, autoptz)",
             "uuid": "f3476d50-ddfb-4688-92b3-cbde52725322",
             "id": "scene",
@@ -5517,10 +5516,10 @@
                         "key": "OBS_KEY_F4"
                     }
                 ],
-                "libobs.show_scene_item._ Notebook + Cam": [],
-                "libobs.hide_scene_item._ Notebook + Cam": [],
-                "libobs.show_scene_item.PTZ Action to stage": [],
-                "libobs.hide_scene_item.PTZ Action to stage": []
+                "libobs.show_scene_item.2": [],
+                "libobs.hide_scene_item.2": [],
+                "libobs.show_scene_item.3": [],
+                "libobs.hide_scene_item.3": []
             },
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
@@ -5531,7 +5530,7 @@
             }
         },
         {
-            "prev_ver": 486604803,
+            "prev_ver": 503316482,
             "name": "STAND BY  (live_off, rec_off, mute_on)",
             "uuid": "c2ce02f8-4f8e-4baa-a20b-06a50cee9f6d",
             "id": "scene",
@@ -5637,10 +5636,10 @@
                         "key": "OBS_KEY_F7"
                     }
                 ],
-                "libobs.show_scene_item.PTZ Action to pulpit": [],
-                "libobs.hide_scene_item.PTZ Action to pulpit": [],
-                "libobs.show_scene_item._ Notebook + Cam": [],
-                "libobs.hide_scene_item._ Notebook + Cam": []
+                "libobs.show_scene_item.1": [],
+                "libobs.hide_scene_item.1": [],
+                "libobs.show_scene_item.2": [],
+                "libobs.hide_scene_item.2": []
             },
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
@@ -5648,7 +5647,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 486604803,
+            "prev_ver": 503316482,
             "name": "SUNDAY_PRE_STREAM (live_on, rec_off, mute_on)",
             "uuid": "e17e4db7-2bf4-4900-8e8b-bf495059fadc",
             "id": "scene",
@@ -5900,18 +5899,18 @@
             "push-to-talk-delay": 0,
             "hotkeys": {
                 "OBSBasic.SelectScene": [],
-                "libobs.show_scene_item.palm-trees-2301981_1920.jpg": [],
-                "libobs.hide_scene_item.palm-trees-2301981_1920.jpg": [],
-                "libobs.show_scene_item.christian-piano-music-143489.mp3": [],
-                "libobs.hide_scene_item.christian-piano-music-143489.mp3": [],
-                "libobs.show_scene_item.prestream_text3": [],
-                "libobs.hide_scene_item.prestream_text3": [],
-                "libobs.show_scene_item.prestream_cntdwn": [],
-                "libobs.hide_scene_item.prestream_cntdwn": [],
-                "libobs.show_scene_item.prestream_text2": [],
-                "libobs.hide_scene_item.prestream_text2": [],
-                "libobs.show_scene_item.prestream_text4": [],
-                "libobs.hide_scene_item.prestream_text4": []
+                "libobs.show_scene_item.1": [],
+                "libobs.hide_scene_item.1": [],
+                "libobs.show_scene_item.4": [],
+                "libobs.hide_scene_item.4": [],
+                "libobs.show_scene_item.3": [],
+                "libobs.hide_scene_item.3": [],
+                "libobs.show_scene_item.5": [],
+                "libobs.hide_scene_item.5": [],
+                "libobs.show_scene_item.6": [],
+                "libobs.hide_scene_item.6": [],
+                "libobs.show_scene_item.7": [],
+                "libobs.hide_scene_item.7": []
             },
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
@@ -5919,7 +5918,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 486604803,
+            "prev_ver": 503316482,
             "name": "SUNDAY_SERVICE START  (live_on, rec_on, mute_off, autoptz_to_stage)",
             "uuid": "87852ee7-8451-4733-aebf-c241a653496f",
             "id": "scene",
@@ -6019,10 +6018,10 @@
             "push-to-talk-delay": 0,
             "hotkeys": {
                 "OBSBasic.SelectScene": [],
-                "libobs.show_scene_item.PTZ Action to pulpit": [],
-                "libobs.hide_scene_item.PTZ Action to pulpit": [],
-                "libobs.show_scene_item._ Notebook + Cam": [],
-                "libobs.hide_scene_item._ Notebook + Cam": []
+                "libobs.show_scene_item.1": [],
+                "libobs.hide_scene_item.1": [],
+                "libobs.show_scene_item.2": [],
+                "libobs.hide_scene_item.2": []
             },
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
@@ -6032,7 +6031,7 @@
             }
         },
         {
-            "prev_ver": 486604803,
+            "prev_ver": 503316482,
             "name": "_ BLACK",
             "uuid": "dbfec42e-f2b0-4320-bdb1-6c7aa3fe2141",
             "id": "scene",
@@ -6062,7 +6061,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 486604803,
+            "prev_ver": 503316482,
             "name": "_ DEBUG",
             "uuid": "c491d29c-4bc6-4855-8f85-535b60040b72",
             "id": "scene",
@@ -6162,10 +6161,10 @@
             "push-to-talk-delay": 0,
             "hotkeys": {
                 "OBSBasic.SelectScene": [],
-                "libobs.show_scene_item.debug": [],
-                "libobs.hide_scene_item.debug": [],
-                "libobs.show_scene_item.debug_text": [],
-                "libobs.hide_scene_item.debug_text": []
+                "libobs.show_scene_item.8": [],
+                "libobs.hide_scene_item.8": [],
+                "libobs.show_scene_item.9": [],
+                "libobs.hide_scene_item.9": []
             },
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
@@ -6173,7 +6172,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 486604803,
+            "prev_ver": 503316482,
             "name": "_ Notebook + Cam",
             "uuid": "9b69a2be-e7f9-4db7-a2be-54ceda5fe841",
             "id": "scene",
@@ -6281,16 +6280,16 @@
             "push-to-talk-delay": 0,
             "hotkeys": {
                 "OBSBasic.SelectScene": [],
-                "libobs.show_scene_item.New (NDI)": [],
-                "libobs.hide_scene_item.New (NDI)": [],
-                "libobs.show_scene_item.Notebook": [
+                "libobs.show_scene_item.17": [],
+                "libobs.hide_scene_item.17": [],
+                "libobs.show_scene_item.20": [
                     {
                         "shift": true,
                         "command": true,
                         "key": "OBS_KEY_F11"
                     }
                 ],
-                "libobs.hide_scene_item.Notebook": [
+                "libobs.hide_scene_item.20": [
                     {
                         "shift": true,
                         "command": true,

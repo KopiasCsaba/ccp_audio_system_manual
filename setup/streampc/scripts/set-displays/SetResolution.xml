@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SetResolution xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <Profiles>
+      <DisplayProfile>
+         <Name>1080</Name>
+         <Width>1920</Width>
+         <Height>1080</Height>
+         <Frequency>60</Frequency>
+         <BitSize>32</BitSize>
+         <Orientation>Default</Orientation>
+      </DisplayProfile>
+      <DisplayProfile>
+         <Name>4k</Name>
+         <Width>3840</Width>
+         <Height>2160</Height>
+         <Frequency>60</Frequency>
+         <BitSize>32</BitSize>
+         <Orientation>Default</Orientation>
+      </DisplayProfile>
+      <DisplayProfile>
+         <Name>1440</Name>
+         <Width>2560</Width>
+         <Height>1440</Height>
+         <Frequency>60</Frequency>
+         <BitSize>32</BitSize>
+         <Orientation>Default</Orientation>
+      </DisplayProfile>
+      <DisplayProfile>
+         <Name>720</Name>
+         <Width>1280</Width>
+         <Height>720</Height>
+         <Frequency>60</Frequency>
+         <BitSize>32</BitSize>
+         <Orientation>Default</Orientation>
+      </DisplayProfile>
+   </Profiles>
+   <MinResolutionWidth>1024</MinResolutionWidth>
+</SetResolution>

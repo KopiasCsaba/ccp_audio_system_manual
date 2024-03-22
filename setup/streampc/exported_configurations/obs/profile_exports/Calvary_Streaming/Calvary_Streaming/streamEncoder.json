@@ -1,1 +1,1 @@
-{"rate_control":"HQCBR","bitrate":8000,"keyint_sec":1,"bf":0,"profile":"main"}
+{"bitrate":6000,"keyint_sec":2,"preset":"faster","profile":"high","tune":"film"}
