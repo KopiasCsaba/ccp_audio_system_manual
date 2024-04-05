@@ -228,6 +228,12 @@ turned on.
     * Choose "Digital audio interface"
     * "Listen" tab
     * Enable    
+* Make OBS auto start with some delay for docker to start before...
+    * Windows+R
+    * shell:startup
+    * New shortcut
+	* Start in: "C:\Program Files\obs-studio\bin\64bit"
+	* Target: C:\Windows\System32\cmd.exe /c start "" /b /wait C:\Windows\System32\timeout.exe /T 20 /nobreak && start "" /b "C:\Program Files\obs-studio\bin\64bit\obs64.exe" --disable-shutdown-check
 
 
 # Console Read only preset
