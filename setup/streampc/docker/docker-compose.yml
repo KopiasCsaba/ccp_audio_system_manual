@@ -14,6 +14,7 @@ services:
       - RS_LOGLEVEL=4
       - RS_TIMEZONE=EET
       - RS_SNAPSHOT_INTERVAL=1m
+      - CORE_API_AUTH_ENABLE=false
     deploy:
       replicas: 1
       restart_policy:
