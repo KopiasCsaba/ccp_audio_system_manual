@@ -69,12 +69,18 @@ Now there is right now a bug in facebook, even though it shows it will go automa
 event, it won't.
 The solution seems to be to go back a second time, and enable it.
 
-* At the page view, "Live video"
-* Scheduled broadcasts
-* Select the just created one
-* Three dots -> view
-* Set up live video
-* Turn on "Automatically go live"
-* Save
+1. Go to the [Facebook Page](https://www.facebook.com/profile.php?id=100064617556957)
+2. Select the upcoming one
+    
+    <img src="assets/fb/fix_stream/1.jpg" height=300>
 
-**@TODO:** add images to describe this.
+3. Click on Set up live video
+
+    <img src="assets/fb/fix_stream/2.jpg" height=300>
+4. Click on "Streaming Software"
+5. Enable "Persistent stream key"
+6. Turn on "Go live automatically at scheduled start time"
+7. Save
+
+    <img src="assets/fb/fix_stream/3.jpg" height=300>
+
