@@ -84,3 +84,4 @@ The solution seems to be to go back a second time, and enable it.
 
     <img src="assets/fb/fix_stream/3.jpg" height=300>
 
+Sadly, this needs to be done every week for now.
