@@ -9,6 +9,7 @@
 * [Set video details](#set-video-details)
 * [Manage the live recording](#manage-the-live-recording)
 * [Scheduling the facebook live events](#scheduling-the-facebook-live-events)
+  * [Enabling auto start every week](#enabling-auto-start-every-week)
 <!-- TOC -->
 
 # Upload the video
@@ -65,6 +66,7 @@ Join us in real life, or through the live stream!
 * Create Event
 * Return to home
 
+## Enabling auto start every week
 Now there is right now a bug in facebook, even though it shows it will go automatically live after the creation of the
 event, it won't.
 The solution seems to be to go back a second time, and enable it.
