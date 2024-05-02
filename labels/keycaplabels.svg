@@ -9,9 +9,9 @@
    id="svg1"
    inkscape:version="1.3.2 (091e20ef0f, 2023-11-25)"
    sodipodi:docname="keycaplabels.svg"
-   inkscape:export-filename="keycaplabels.png"
-   inkscape:export-xdpi="96"
-   inkscape:export-ydpi="96"
+   inkscape:export-filename="keycaplabels.pdf"
+   inkscape:export-xdpi="400"
+   inkscape:export-ydpi="400"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -27,11 +27,11 @@
      inkscape:deskcolor="#c2c2c2"
      inkscape:document-units="mm"
      inkscape:zoom="2.5331152"
-     inkscape:cx="427.53681"
+     inkscape:cx="395.95515"
      inkscape:cy="129.48483"
-     inkscape:window-width="1920"
+     inkscape:window-width="2560"
      inkscape:window-height="1031"
-     inkscape:window-x="0"
+     inkscape:window-x="1920"
      inkscape:window-y="25"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1"
@@ -603,6 +603,18 @@
        width="48.944535"
        height="39.552783"
        id="rect80" />
+    <rect
+       x="342.3063"
+       y="191.71003"
+       width="48.944535"
+       height="39.552783"
+       id="rect61" />
+    <rect
+       x="342.3063"
+       y="191.71003"
+       width="48.944535"
+       height="39.552783"
+       id="rect136" />
   </defs>
   <g
      inkscape:label="Layer 1"
@@ -738,15 +750,15 @@
        y="0"><tspan
          x="357.97168"
          y="198.71094"
-         id="tspan4"><tspan
+         id="tspan3"><tspan
            style="font-weight:bold;text-align:center;text-anchor:middle"
-           id="tspan1">CAM
+           id="tspan2">CAM
 </tspan></tspan><tspan
          x="351.72949"
          y="208.71094"
-         id="tspan8"><tspan
+         id="tspan6"><tspan
            style="font-weight:bold;text-align:center;text-anchor:middle"
-           id="tspan7">TOGGLE</tspan></tspan></text>
+           id="tspan5">TOGGLE</tspan></tspan></text>
     <rect
        style="fill:#ffbf00;fill-opacity:1;stroke:none;stroke-width:1.0981;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill"
        id="rect15"
@@ -763,9 +775,9 @@
        y="0"><tspan
          x="343.42285"
          y="198.71094"
-         id="tspan14"><tspan
+         id="tspan8"><tspan
            style="font-weight:bold"
-           id="tspan10">TRANSITION</tspan></tspan></text>
+           id="tspan7">TRANSITION</tspan></tspan></text>
     <rect
        style="fill:#ffbf00;fill-opacity:1;stroke:none;stroke-width:1.55294;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill"
        id="rect17"
@@ -778,16 +790,16 @@
        inkscape:export-ydpi="195.38458" />
     <text
        xml:space="preserve"
-       transform="matrix(0.83994509,0,0,0.83994509,-262.26425,-113.21181)"
+       transform="matrix(0.83994509,0,0,0.83994509,-262.26425,-115.45464)"
        id="text17"
        style="font-size:8px;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:center;white-space:pre;shape-inside:url(#rect18);display:inline;fill:#000000;stroke:none;stroke-width:8.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill"
        x="12.78125"
        y="0"><tspan
          x="361.76074"
          y="198.71094"
-         id="tspan17"><tspan
+         id="tspan10"><tspan
            style="font-weight:bold"
-           id="tspan16">FN</tspan></tspan></text>
+           id="tspan9">FN</tspan></tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.15842662,0,0,0.15842662,-14.475024,-6.2221167)"
@@ -797,15 +809,15 @@
        y="0"><tspan
          x="342.30664"
          y="202.21094"
-         id="tspan19"><tspan
+         id="tspan12"><tspan
            style="font-weight:bold"
-           id="tspan18">PROJECTOR
+           id="tspan11">PROJECTOR
 </tspan></tspan><tspan
          x="342.30664"
          y="217.21094"
-         id="tspan21"><tspan
+         id="tspan14"><tspan
            style="font-weight:bold"
-           id="tspan20">CANVAS</tspan></tspan></text>
+           id="tspan13">CANVAS</tspan></tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.23449322,0,0,0.23449322,-2.5059703,-20.820428)"
@@ -818,9 +830,9 @@
        inkscape:export-ydpi="195.38458"><tspan
          x="353.22949"
          y="198.71094"
-         id="tspan23"><tspan
+         id="tspan16"><tspan
            style="font-weight:bold;text-align:center;text-anchor:middle"
-           id="tspan22">PULPIT</tspan></tspan></text>
+           id="tspan15">PULPIT</tspan></tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.23135829,0,0,0.23135829,18.680717,-20.196199)"
@@ -830,9 +842,9 @@
        y="0"><tspan
          x="354.41613"
          y="198.71094"
-         id="tspan25"><tspan
+         id="tspan18"><tspan
            style="font-weight:bold;text-align:center;text-anchor:middle"
-           id="tspan24">STAGE</tspan></tspan></text>
+           id="tspan17">STAGE</tspan></tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.23135829,0,0,0.23135829,36.340543,0.67057659)"
@@ -842,9 +854,9 @@
        y="0"><tspan
          x="365.96094"
          y="198.71094"
-         id="tspan27"><tspan
+         id="tspan20"><tspan
            style="font-weight:bold"
-           id="tspan26">FINISH</tspan></tspan></text>
+           id="tspan19">FINISH</tspan></tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.23771429,0,0,0.23771429,13.606256,-0.54938751)"
@@ -854,9 +866,9 @@
        y="0"><tspan
          x="366.05859"
          y="198.71094"
-         id="tspan29"><tspan
+         id="tspan22"><tspan
            style="font-weight:bold"
-           id="tspan28">BREAK</tspan></tspan></text>
+           id="tspan21">BREAK</tspan></tspan></text>
     <rect
        style="fill:#ffbf00;fill-opacity:1;stroke:none;stroke-width:1.0981;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill"
        id="rect28"
@@ -913,7 +925,7 @@
        style="font-size:8px;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:center;white-space:pre;shape-inside:url(#rect57);display:inline;fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:8.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill"><tspan
          x="340.76172"
          y="349.11914"
-         id="tspan30">160mm</tspan></text>
+         id="tspan23">160mm</tspan></text>
     <rect
        style="fill:#ffbf00;fill-opacity:1;stroke:none;stroke-width:1.0981;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill"
        id="rect121"
@@ -951,9 +963,9 @@
        y="0"><tspan
          x="360.68359"
          y="198.71094"
-         id="tspan32"><tspan
+         id="tspan25"><tspan
            style="font-weight:bold"
-           id="tspan31">SITTING</tspan></tspan></text>
+           id="tspan24">SITTING</tspan></tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.1832556,0,0,0.1832556,-19.944288,-6.5442063)"
@@ -963,9 +975,9 @@
        y="0"><tspan
          x="357.8125"
          y="198.71094"
-         id="tspan34"><tspan
+         id="tspan27"><tspan
            style="text-align:end;baseline-shift:baseline;text-anchor:end"
-           id="tspan33">PREVIEW</tspan></tspan></text>
+           id="tspan26">PREVIEW</tspan></tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.15842662,0,0,0.15842662,5.8295301,-6.2221167)"
@@ -975,15 +987,15 @@
        y="0"><tspan
          x="342.30664"
          y="202.21094"
-         id="tspan36"><tspan
+         id="tspan29"><tspan
            style="font-weight:bold"
-           id="tspan35">PULPIT
+           id="tspan28">PULPIT
 </tspan></tspan><tspan
          x="342.30664"
          y="217.21094"
-         id="tspan38"><tspan
+         id="tspan31"><tspan
            style="font-weight:bold"
-           id="tspan37">WIDE</tspan></tspan></text>
+           id="tspan30">WIDE</tspan></tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.23646383,0,0,0.23646383,-0.56246781,-0.3080194)"
@@ -993,15 +1005,15 @@
        y="0"><tspan
          x="342.30664"
          y="198.71094"
-         id="tspan40"><tspan
+         id="tspan33"><tspan
            style="font-weight:bold"
-           id="tspan39">PRE
+           id="tspan32">PRE
 </tspan></tspan><tspan
          x="342.30664"
          y="208.71094"
-         id="tspan42"><tspan
+         id="tspan35"><tspan
            style="font-weight:bold"
-           id="tspan41">STREAM</tspan></tspan></text>
+           id="tspan34">STREAM</tspan></tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.23135829,0,0,0.23135829,-22.236357,0.69554298)"
@@ -1011,80 +1023,44 @@
        y="0"><tspan
          x="355.7218"
          y="198.71094"
-         id="tspan44"><tspan
+         id="tspan37"><tspan
            style="font-weight:bold"
-           id="tspan43">STANDBY</tspan></tspan></text>
+           id="tspan36">STANDBY</tspan></tspan></text>
     <text
        xml:space="preserve"
-       transform="matrix(0.27041138,0,0,0.27041138,48.210459,-20.655245)"
+       transform="matrix(0.27041138,0,0,0.27041138,-33.072465,0.23962865)"
        id="text2"
        style="font-size:8px;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:center;white-space:pre;shape-inside:url(#rect59);display:inline;fill:#000000;stroke:none;stroke-width:8.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill"
        x="12.78125"
        y="0"><tspan
          x="344.64551"
          y="198.71094"
-         id="tspan46"><tspan
+         id="tspan39"><tspan
            style="font-weight:bold"
-           id="tspan45">STREAM PC
+           id="tspan38">STREAM PC
 </tspan></tspan><tspan
          x="350.86024"
          y="208.71094"
-         id="tspan48"><tspan
+         id="tspan41"><tspan
            style="font-weight:bold"
-           id="tspan47">DISPLAY</tspan></tspan></text>
+           id="tspan40">DISPLAY</tspan></tspan></text>
     <text
        xml:space="preserve"
-       transform="matrix(0.27041138,0,0,0.27041138,-33.17651,0.23645977)"
+       transform="matrix(0.27041138,0,0,0.27041138,-53.443565,-20.652604)"
        id="text109"
        style="font-size:8px;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:center;white-space:pre;shape-inside:url(#rect132);display:inline;fill:#000000;stroke:none;stroke-width:8.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill"
        x="12.78125"
        y="0"><tspan
          x="351.33585"
          y="198.71094"
-         id="tspan50"><tspan
+         id="tspan43"><tspan
            style="font-weight:bold"
-           id="tspan49">FADE TO </tspan></tspan><tspan
+           id="tspan42">FADE TO </tspan></tspan><tspan
          x="354.21148"
          y="208.71094"
-         id="tspan52"><tspan
+         id="tspan45"><tspan
            style="font-weight:bold"
-           id="tspan51">BLACK</tspan></tspan></text>
-    <text
-       xml:space="preserve"
-       transform="matrix(0.27041138,0,0,0.27041138,-53.411876,-20.683765)"
-       id="text132"
-       style="font-size:8px;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:center;white-space:pre;shape-inside:url(#rect133);display:inline;fill:#1a1a1a;stroke:none;stroke-width:8.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill"
-       x="12.78125"
-       y="0"><tspan
-         x="358.58105"
-         y="198.71094"
-         id="tspan54"><tspan
-           style="font-weight:bold;stroke-width:0.369807"
-           id="tspan53">LIVE
-</tspan></tspan><tspan
-         x="359.62988"
-         y="208.71094"
-         id="tspan56"><tspan
-           style="font-weight:bold;stroke-width:0.369807"
-           id="tspan55">OFF</tspan></tspan></text>
-    <text
-       xml:space="preserve"
-       transform="matrix(0.27041138,0,0,0.27041138,-33.107322,-20.669505)"
-       id="text133"
-       style="font-size:8px;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:center;white-space:pre;shape-inside:url(#rect134);display:inline;fill:#000000;stroke:none;stroke-width:8.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill"
-       x="12.78125"
-       y="0"><tspan
-         x="358.58105"
-         y="198.71094"
-         id="tspan58"><tspan
-           style="font-weight:bold;text-anchor:middle"
-           id="tspan57">LIVE
-</tspan></tspan><tspan
-         x="361.19824"
-         y="208.71094"
-         id="tspan60"><tspan
-           style="font-weight:bold;text-anchor:middle"
-           id="tspan59">ON</tspan></tspan></text>
+           id="tspan44">BLACK</tspan></tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(-0.38833213,0,0,-0.38833213,249.15381,131.34438)"
@@ -1094,9 +1070,9 @@
        y="0"><tspan
          x="361.908"
          y="201.99652"
-         id="tspan62"><tspan
+         id="tspan47"><tspan
            style="font-weight:bold;font-size:11.6252px"
-           id="tspan61">↑</tspan></tspan></text>
+           id="tspan46">↑</tspan></tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0,0.38833213,0.38833213,0,9.6267373,-87.878136)"
@@ -1106,9 +1082,9 @@
        y="0"><tspan
          x="361.908"
          y="201.99652"
-         id="tspan64"><tspan
+         id="tspan49"><tspan
            style="font-weight:bold;font-size:11.6252px"
-           id="tspan63">↑</tspan></tspan></text>
+           id="tspan48">↑</tspan></tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0,0.38833213,-0.38833213,0,203.81285,-87.878136)"
@@ -1118,9 +1094,9 @@
        y="0"><tspan
          x="361.908"
          y="201.99652"
-         id="tspan66"><tspan
+         id="tspan51"><tspan
            style="font-weight:bold;font-size:11.6252px"
-           id="tspan65">↑</tspan></tspan></text>
+           id="tspan50">↑</tspan></tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.1832556,0,0,0.1832556,23.556965,20.861812)"
@@ -1130,7 +1106,7 @@
        y="0"><tspan
          x="358.07324"
          y="198.71094"
-         id="tspan67">CAM </tspan></text>
+         id="tspan52">CAM </tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.1832556,0,0,0.1832556,43.861522,20.861812)"
@@ -1140,7 +1116,7 @@
        y="0"><tspan
          x="358.07324"
          y="198.71094"
-         id="tspan68">CAM </tspan></text>
+         id="tspan53">CAM </tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.1832556,0,0,0.1832556,64.166088,20.861812)"
@@ -1150,7 +1126,7 @@
        y="0"><tspan
          x="358.07324"
          y="198.71094"
-         id="tspan69">CAM </tspan></text>
+         id="tspan54">CAM </tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.38833213,0,0,0.38833213,-35.714224,-43.12433)"
@@ -1160,9 +1136,9 @@
        y="0"><tspan
          x="361.908"
          y="201.99652"
-         id="tspan71"><tspan
+         id="tspan56"><tspan
            style="font-weight:bold;font-size:11.6252px"
-           id="tspan70">↑</tspan></tspan></text>
+           id="tspan55">↑</tspan></tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0,0.38833213,-0.38833213,0,203.93187,-108.76102)"
@@ -1172,9 +1148,9 @@
        y="0"><tspan
          x="363.61091"
          y="201.88299"
-         id="tspan73"><tspan
+         id="tspan58"><tspan
            style="font-weight:bold;font-size:11.6252px"
-           id="tspan72">+</tspan></tspan></text>
+           id="tspan57">+</tspan></tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(-0.56885617,0,0,-0.56885617,295.04158,146.49325)"
@@ -1184,9 +1160,9 @@
        y="0"><tspan
          x="364.48791"
          y="201.88299"
-         id="tspan75"><tspan
+         id="tspan60"><tspan
            style="font-weight:bold;font-size:11.6252px"
-           id="tspan74">-</tspan></tspan></text>
+           id="tspan59">-</tspan></tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.1832556,0,0,0.1832556,23.556942,-0.04421491)"
@@ -1196,7 +1172,7 @@
        y="0"><tspan
          x="358.07324"
          y="198.71094"
-         id="tspan76">CAM </tspan></text>
+         id="tspan61">CAM </tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.1832556,0,0,0.1832556,43.861499,-0.04421491)"
@@ -1206,7 +1182,7 @@
        y="0"><tspan
          x="358.07324"
          y="198.71094"
-         id="tspan77">CAM </tspan></text>
+         id="tspan62">CAM </tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.1832556,0,0,0.1832556,64.166065,-0.04421491)"
@@ -1216,19 +1192,25 @@
        y="0"><tspan
          x="358.07324"
          y="198.71094"
-         id="tspan78">CAM </tspan></text>
+         id="tspan63">CAM </tspan></text>
     <text
        xml:space="preserve"
-       transform="matrix(0.23135829,0,0,0.23135829,58.741456,-20.188424)"
+       transform="matrix(0.23135829,0,0,0.23135829,62.156265,-20.188424)"
        id="text134"
-       style="font-size:8px;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:end;white-space:pre;shape-inside:url(#rect135);display:inline;fill:#000000;stroke:none;stroke-width:8.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill"
-       x="14.878906"
+       style="font-size:8px;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:start;white-space:pre;shape-inside:url(#rect135);display:inline;fill:#000000;stroke:none;stroke-width:8.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill"
+       x="-17.410156"
        y="0"><tspan
-         x="358.44922"
+         x="342.30664"
          y="198.71094"
-         id="tspan80"><tspan
+         id="tspan65"><tspan
            style="font-weight:bold"
-           id="tspan79">CUSTOM</tspan></tspan></text>
+           id="tspan64">CUSTOM
+</tspan></tspan><tspan
+         x="342.30664"
+         y="208.71094"
+         id="tspan67"><tspan
+           style="font-weight:bold"
+           id="tspan66">ANGLE</tspan></tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.1832556,0,0,0.1832556,0.41424888,-6.5442063)"
@@ -1238,9 +1220,9 @@
        y="0"><tspan
          x="357.8125"
          y="198.71094"
-         id="tspan82"><tspan
+         id="tspan69"><tspan
            style="text-align:end;baseline-shift:baseline;text-anchor:end"
-           id="tspan81">PREVIEW</tspan></tspan></text>
+           id="tspan68">PREVIEW</tspan></tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.1832556,0,0,0.1832556,41.023395,-6.5442063)"
@@ -1250,9 +1232,9 @@
        y="0"><tspan
          x="357.8125"
          y="198.71094"
-         id="tspan84"><tspan
+         id="tspan71"><tspan
            style="text-align:end;baseline-shift:baseline;text-anchor:end"
-           id="tspan83">PREVIEW</tspan></tspan></text>
+           id="tspan70">PREVIEW</tspan></tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.1832556,0,0,0.1832556,20.718829,-6.5573581)"
@@ -1262,9 +1244,9 @@
        y="0"><tspan
          x="357.8125"
          y="198.71094"
-         id="tspan86"><tspan
+         id="tspan73"><tspan
            style="text-align:end;baseline-shift:baseline;text-anchor:end"
-           id="tspan85">PREVIEW</tspan></tspan></text>
+           id="tspan72">PREVIEW</tspan></tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.1832556,0,0,0.1832556,81.632464,-6.5442063)"
@@ -1274,9 +1256,9 @@
        y="0"><tspan
          x="357.8125"
          y="198.71094"
-         id="tspan88"><tspan
+         id="tspan75"><tspan
            style="text-align:end;baseline-shift:baseline;text-anchor:end"
-           id="tspan87">PREVIEW</tspan></tspan></text>
+           id="tspan74">PREVIEW</tspan></tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.1832556,0,0,0.1832556,61.32793,-6.5442063)"
@@ -1286,9 +1268,9 @@
        y="0"><tspan
          x="357.8125"
          y="198.71094"
-         id="tspan90"><tspan
+         id="tspan77"><tspan
            style="text-align:end;baseline-shift:baseline;text-anchor:end"
-           id="tspan89">PREVIEW</tspan></tspan></text>
+           id="tspan76">PREVIEW</tspan></tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.1832556,0,0,0.1832556,0.41424888,14.320705)"
@@ -1298,9 +1280,9 @@
        y="0"><tspan
          x="357.8125"
          y="198.71094"
-         id="tspan92"><tspan
+         id="tspan79"><tspan
            style="text-align:end;baseline-shift:baseline;text-anchor:end"
-           id="tspan91">PREVIEW</tspan></tspan></text>
+           id="tspan78">PREVIEW</tspan></tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.1832556,0,0,0.1832556,41.023395,14.320705)"
@@ -1310,9 +1292,9 @@
        y="0"><tspan
          x="357.8125"
          y="198.71094"
-         id="tspan94"><tspan
+         id="tspan81"><tspan
            style="text-align:end;baseline-shift:baseline;text-anchor:end"
-           id="tspan93">PREVIEW</tspan></tspan></text>
+           id="tspan80">PREVIEW</tspan></tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.1832556,0,0,0.1832556,20.718829,14.307553)"
@@ -1322,9 +1304,9 @@
        y="0"><tspan
          x="357.8125"
          y="198.71094"
-         id="tspan96"><tspan
+         id="tspan83"><tspan
            style="text-align:end;baseline-shift:baseline;text-anchor:end"
-           id="tspan95">PREVIEW</tspan></tspan></text>
+           id="tspan82">PREVIEW</tspan></tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.1832556,0,0,0.1832556,61.32793,14.320705)"
@@ -1334,8 +1316,43 @@
        y="0"><tspan
          x="357.8125"
          y="198.71094"
-         id="tspan98"><tspan
+         id="tspan85"><tspan
            style="text-align:end;baseline-shift:baseline;text-anchor:end"
-           id="tspan97">PREVIEW</tspan></tspan></text>
+           id="tspan84">PREVIEW</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.27041138,0,0,0.27041138,48.145744,-20.652076)"
+       id="text6"
+       style="font-size:8px;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:center;white-space:pre;shape-inside:url(#rect61);display:inline;fill:#000000;stroke:none;stroke-width:8.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill"
+       x="12.78125"
+       y="0"><tspan
+         x="356.92133"
+         y="198.71094"
+         id="tspan87"><tspan
+           style="font-weight:bold"
+           id="tspan86">SAVE </tspan></tspan><tspan
+         x="345.53613"
+         y="208.71094"
+         id="tspan89"><tspan
+           style="font-weight:bold"
+           id="tspan88">CUSTOM A.</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.27041138,0,0,0.27041138,-53.443565,1.0999939)"
+       id="text104"
+       style="font-size:5.21839px;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:center;white-space:pre;shape-inside:url(#rect136);display:inline;fill:#000000;stroke:none;stroke-width:8.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill"
+       x="12.78125"
+       y="0"><tspan
+         x="345.92244"
+         y="196.27703"
+         id="tspan91"><tspan
+           style="font-weight:bold"
+           id="tspan90">USE THE YELLOW
+</tspan></tspan><tspan
+         x="354.09544"
+         y="202.80001"
+         id="tspan93"><tspan
+           style="font-weight:bold"
+           id="tspan92">FUNCTION</tspan></tspan></text>
   </g>
 </svg>
