@@ -6,7 +6,7 @@
 
 
 <!-- TOC -->
-* [Before the service](#before-the-service)
+* [Prepare for the service](#prepare-for-the-service)
   * [Align the pulpit microphone](#align-the-pulpit-microphone)
   * [Align the pulpit](#align-the-pulpit)
   * [Prepare for live-streaming](#prepare-for-live-streaming)
@@ -17,7 +17,7 @@
     * [LOG IN](#log-in)
   * [Prepare the headset](#prepare-the-headset)
   * [Rehearsal](#rehearsal)
-* [Before the service](#before-the-service-1)
+* [Before the service](#before-the-service)
   * [Playing background music](#playing-background-music)
     * [First option: Playing from the streaming PC](#first-option-playing-from-the-streaming-pc)
     * [Second option: from the extra 3.5mm cord](#second-option-from-the-extra-35mm-cord)
@@ -32,7 +32,7 @@
 
 <div style="page-break-after: always;"></div>
 
-# Before the service
+# Prepare for the service
 
 * Follow the [setting up the system](setup.md) guide.
 * You don't need to go through the rehearsal guide again. Definitely don't reset the stage mixers.
