@@ -7,8 +7,8 @@
 
 <!-- TOC -->
 * [Before the service](#before-the-service)
-  * [Align the pulpit](#align-the-pulpit)
   * [Align the pulpit microphone](#align-the-pulpit-microphone)
+  * [Align the pulpit](#align-the-pulpit)
   * [Prepare for live-streaming](#prepare-for-live-streaming)
     * [Turn on the sockets](#turn-on-the-sockets)
     * [Turn on the pole-TV](#turn-on-the-pole-tv)
@@ -45,11 +45,13 @@
 
 Make sure the pulpit microphone is aligned properly: it should point to the mouth of the speaker.
 
+<img alt="" src="assets/reset/pulpit_mic_lined.jpg" height="300">
+
 ## Align the pulpit
 
 There is a mark on the floor, align the pulpit to be at the correct position.
 
-<img alt="" src="assets/reset/pulpit.jpg" height="300">
+<img alt="" src="assets/reset/pulpit.jpg" height="200">
 
 
 
@@ -62,9 +64,7 @@ You should do this section before 09:50, as timed operations will start the stre
 ### Turn on the sockets
 
 1. "Screens, projector, sockets" (close to the light switches, below the counter)
-2. "Screens" (between pc screens & console)
-3. "Networking"  (between pc screens & console)
-4. "PC+Others" (it is below the shelf above the console)
+2. "Networking"  (between pc screens & console)
 
 ### Turn on the pole-TV
 

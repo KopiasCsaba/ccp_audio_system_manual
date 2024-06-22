@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg1"
+   width="1539.5129"
+   height="1139"
+   viewBox="0 0 1539.5129 1139"
+   sodipodi:docname="pulpit_mic.jpg.svg"
+   inkscape:export-filename="../../../../../../../../../media/extradisk/others/audio/ccp_audio_system_manual/for_technicians/assets/reset/pulpit_mic_lined.jpg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#cccccc"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="1"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.28260378"
+     inkscape:cx="-53.077847"
+     inkscape:cy="888.1693"
+     inkscape:window-width="1920"
+     inkscape:window-height="1031"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g1" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="Image"
+     id="g1">
+    <image
+       width="1539.5129"
+       height="1139"
+       preserveAspectRatio="none"
+       xlink:href="pulpit_mic.jpg"
+       id="image1"
+       clip-path="none"
+       inkscape:export-filename="pulpit_mic_lined.jpg"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <rect
+       style="opacity:0.262322;fill:#000000;stroke:none;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;stroke-opacity:0.99826;paint-order:stroke markers fill"
+       id="rect3"
+       width="1539.5129"
+       height="1139"
+       x="0"
+       y="1.815752e-05" />
+    <path
+       style="opacity:1;fill:none;stroke:#ff0000;stroke-width:25.4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;stroke-dasharray:25.4, 33.02;stroke-dashoffset:0;stroke-opacity:0.99826;paint-order:stroke markers fill"
+       d="m 456.50124,508.74058 c 72.27316,-192.20524 263.2519,-151.44541 370.58882,-289.59029"
+       id="path1"
+       sodipodi:nodetypes="cc" />
+  </g>
+</svg>

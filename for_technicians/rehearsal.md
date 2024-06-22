@@ -45,6 +45,7 @@ You should be there ~20minutes before them, to be able to set up
 everything professionally and to avoid hurry-induced errors, fix random issues, etc.
 
 * Follow the "[Setting up the system](setup.md)" guide.
+* You might want to turn on the PC, if you or the projection team needs it.
 
 ## You should know the band setup
 

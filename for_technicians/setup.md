@@ -49,14 +49,13 @@ This device measures the volume (lets say) in the room, and it is located on the
 
 <img alt="" src="assets/reset/spl.jpg.png"  align="right" style="float:right" width="300">
 
-1. It is powered by an adapter, turn on the socket for the adapter.
-2. Turn it on following the handwritten numbers on the buttons.
+1. Turn it on following the handwritten numbers on the buttons.
     1. The two button marked "1"(one) need to be pressed together, until the "**n**" shows up on the screen.
     2. Then wait until it finishes the initial counting back (999,888,777...) and shows the volume in real time.
     3. Then press the button marked as 2.
     4. Then press the button marked as 3.
-3. It should read "SLOW" and "C", as on the image.
-4. Put it to the counter and watch it always.
+2. It should read "SLOW" and "C", as on the image.
+3. Put it to the counter and watch it always.
 <br clear="both" style="clear:both"/>
 
 
