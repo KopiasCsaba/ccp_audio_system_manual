@@ -50,7 +50,7 @@ This device measures the volume (lets say) in the room, and it is located on the
 <img alt="" src="assets/reset/spl.jpg.png"  align="right" style="float:right" width="300">
 
 1. Turn it on following the handwritten numbers on the buttons.
-    1. The two button marked "1"(one) need to be pressed together, until the "**n**" shows up on the screen.
+    1. The two button marked "1" (one) needs to be pressed together, until the "**n**" shows up on the screen.
     2. Then wait until it finishes the initial counting back (999,888,777...) and shows the volume in real time.
     3. Then press the button marked as 2.
     4. Then press the button marked as 3.
@@ -121,7 +121,7 @@ This device measures the volume (lets say) in the room, and it is located on the
 
 * Turn on the keyboard, and press one of the keys, you should hear it, from all monitors.
 
-* Speak into each microphone, and you should see activity on the mixer, and hear yourself in each monitor.
+* Speak into each microphone, and you should see activity on the stage mixers, and hear yourself in each monitor.
 
 If everything was working, continue with the [Rehearsal guide](rehearsal.md) or the [Service guide](service.md)!
 
@@ -135,15 +135,17 @@ If there is any issue on the stage, check these things:
 
 No signal activity on the mics?
 
-* The stage is off (on the console), that's why no microphone is working.
-* The individual microphone is muted on the console.
-* The stage mixer isn't on.
+* Did you check the cable connection to the mic?
+* Is the stage mixer turned on? (Is it lit red around the knobs?)
+* Is the stage on in the console?
+* Is that mic unmuted on the console?
 
 There is signal indication, but inaudible?
 
-* A power or signal cable slipped out from the monitor.
-* The stage mixer is disconnected.
-* The limiter knob is turned down.
+* Are the monitors plugged in into the electrical socket on the stage?
+* Does a power or signal cable slipped out from the monitor?
+* Is the stage mixer connected to the monitor?
+* Is the limiter and level knobs above half way?
 
 ### Stage mixer connection
 

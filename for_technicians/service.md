@@ -198,14 +198,13 @@ play back music.
 
 * Restore all custom changes on the stage, if you made any.
 
-* SPL METER:
-    * Turn off the SPL meter.
-    * Put it back onto the shelf above the console.
+* Plug back the monitor power cables on the stage.
+
+* SPL METER: Put it back onto the shelf above the console.
 
 * Headset:
     * Take out the batteries and put them back into the charger, to the same spot they were in.
     * Put the headset back to the shelf above the console too.
-
 
 * Wait for the recordings to upload.
 

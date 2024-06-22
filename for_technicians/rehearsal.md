@@ -9,6 +9,8 @@
 * [Reference on stage channel names](#reference-on-stage-channel-names)
 * [Before the band arrives](#before-the-band-arrives)
   * [You should know the band setup](#you-should-know-the-band-setup)
+  * [(Dis)connect Monitors](#disconnect-monitors)
+  * [Setup phone cable](#setup-phone-cable)
   * [Reset the stage mixers](#reset-the-stage-mixers)
   * [Stage housekeeping](#stage-housekeeping)
   * [At the main console](#at-the-main-console)
@@ -55,33 +57,53 @@ everything professionally and to avoid hurry-induced errors, fix random issues, 
 Our worship related drive document should contain that information,
 but alternatively you can consult about this with the worship leader also.
 
+
+## (Dis)connect Monitors
+
+Check the band setup, **if they use In-Ear Monitoring** on MIC1 or MIC2 **unplug** the appropriate monitors.
+Also, plug them in if they don't use I.E.M.
+
+<img alt="" src="assets/iem/monitor_plugs.jpg" height="100">
+<img alt="" src="assets/iem/monitor_plugs_unplugged.jpg" height="100">
+ 
+
+## Setup phone cable
+
+If they specified "PHONE" as an instrument in the document, connect that instrument cable to the little adapter hanging at the back of
+the second music stander.
+
+<img alt="" src="assets/phone/phones.jpg" height="200">
+
 <div style="page-break-after: always;"></div>
+ 
 
 ## Reset the stage mixers
 
 For all the stage mixers, including the one in the drum room, do the following, to reset them to their default working
 state. 
 
-ONLY DO THIS BEFORE THE REHEARSAL. DON'T DO THIS BEFORE THE SERVICE!
+ONLY DO THIS **BEFORE THE REHEARSAL**. DON'T DO THIS BEFORE THE SERVICE!
 
-<img alt="" src="assets/reset/stagemixer.png" height="300">
 
-Do these in this order (important):
+Do these in this order:
 
 1. Turn it on, if it's not on (switch is on the back side)
-2. Reset the top-knobs as follows (and also on the image):
-    * Equalizers section knobs (first four): **12 o'clock**
-    * Limiter to **MAX**
-    * Level to **3 o'clock**
-3. Recall preset 16:
-    * Press and hold **RECALL**
-    * Press **16**
-    * **Release** RECALL
+2. **Reset the top-knobs** as follows (and also on the image):
+     * Equalizers section knobs (first four): 12 o'clock
+      * Limiter to MAX
+    * Level to 3 o'clock
+3. **Recall preset 16**:
+     * Press and hold RECALL
+      * Press 16
+    * Release RECALL
+   
+<img alt="" src="assets/reset/stagemixer.png" height="300" align="center">
 
 <div style="page-break-after: always;"></div>
 
 ## Stage housekeeping
 
+* Tidy up cables, especially I.E.M. cables.
 * Fold back unused microphones.
 * Turn level knob to zero on stage mixers that will not be used.
 * Clean up, move away obstacles, trash, etc.
@@ -135,9 +157,6 @@ Wait for the band to arrive:)
 
 # After the band arrives
 
-* Be nice, connect with them personally.
-* Help them with what ever they ask.
-
 * **Ask them to set instrument controls to neutral**
     * Some instruments have equalizers on them, ask the owner to turn it off, or set it to "flat".
     * Some instruments have volume controls on them, ask the owner to set it to neutral, or middle.
@@ -149,6 +168,9 @@ Wait for the band to arrive:)
       points bottom up.
     * Meanwhile, keep it in a way so that the sound from the monitor would hit the microphone from the back as much as
       possible.
+
+* Be nice, connect with them personally.
+* Help them with what ever they ask.
 
 <div style="page-break-after: always;"></div>
 
@@ -261,8 +283,6 @@ An alternative reason can be:
 
 ## Close up
 
-* SPL METER:
-    * Turn off the SPL meter.
-    * Put it back onto the shelf above the console.
+* SPL METER: Put it back onto the shelf above the console.
 
 * Follow the "[Turning off the audio system](../labels/turningoff.pdf)" guide posted on the mixer door.
