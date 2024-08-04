@@ -48,7 +48,7 @@
         "volume": 1.0,
         "balance": 0.5,
         "enabled": true,
-        "muted": true,
+        "muted": false,
         "push-to-mute": false,
         "push-to-mute-delay": 0,
         "push-to-talk": false,
@@ -97,8 +97,8 @@
             }
         ]
     },
-    "current_scene": "PROJECTOR  (mute_off, autoptz_to_stage)",
-    "current_program_scene": "_ BLACK",
+    "current_scene": "EVENT FINISHED  (rs_off_delayed, rec_off_delayed, mute_on, fade_out)",
+    "current_program_scene": "PULPIT (mute_off, autoptz_to_stage)",
     "scene_order": [
         {
             "name": "=============== SUNDAY ==============="
@@ -191,13 +191,13 @@
         {
             "monitor": 2,
             "type": 3,
-            "geometry": "AdnQywADAAAAAAeIAAAAAAAADvcAAAQvAAAHgAAAAAAAAA7/AAAEJAAAAAIABAAAB4AAAAeAAAAAAAAADv8AAAQ3",
+            "geometry": "AdnQywADAAAAAAeIAAAAAAAADvcAAAQvAAAHgAAAAAAAAA7/AAAEJQAAAAIABAAAB4AAAAeAAAAAAAAADv8AAAQ3",
             "alwaysOnTopOverridden": false
         }
     ],
     "current_transition": "Fade",
     "transition_duration": 400,
-    "preview_locked": false,
+    "preview_locked": true,
     "scaling_enabled": false,
     "scaling_level": 0,
     "scaling_off_x": 0.0,
@@ -702,7 +702,7 @@
                 },
                 {
                     "name": "sunday_end_notification",
-                    "pause": false,
+                    "pause": true,
                     "parallel": false,
                     "onChange": true,
                     "skipExecOnStart": false,
