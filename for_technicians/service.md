@@ -6,9 +6,9 @@
 
 
 <!-- TOC -->
-* [Before the service](#before-the-service)
-  * [Align the pulpit](#align-the-pulpit)
+* [Prepare for the service](#prepare-for-the-service)
   * [Align the pulpit microphone](#align-the-pulpit-microphone)
+  * [Align the pulpit](#align-the-pulpit)
   * [Prepare for live-streaming](#prepare-for-live-streaming)
     * [Turn on the sockets](#turn-on-the-sockets)
     * [Turn on the pole-TV](#turn-on-the-pole-tv)
@@ -17,7 +17,7 @@
     * [LOG IN](#log-in)
   * [Prepare the headset](#prepare-the-headset)
   * [Rehearsal](#rehearsal)
-* [Before the service](#before-the-service-1)
+* [Before the service](#before-the-service)
   * [Playing background music](#playing-background-music)
     * [First option: Playing from the streaming PC](#first-option-playing-from-the-streaming-pc)
     * [Second option: from the extra 3.5mm cord](#second-option-from-the-extra-35mm-cord)
@@ -32,7 +32,7 @@
 
 <div style="page-break-after: always;"></div>
 
-# Before the service
+# Prepare for the service
 
 * Follow the [setting up the system](setup.md) guide.
 * You don't need to go through the rehearsal guide again. Definitely don't reset the stage mixers.
@@ -45,11 +45,13 @@
 
 Make sure the pulpit microphone is aligned properly: it should point to the mouth of the speaker.
 
+<img alt="" src="assets/reset/pulpit_mic_lined.jpg" height="300">
+
 ## Align the pulpit
 
 There is a mark on the floor, align the pulpit to be at the correct position.
 
-<img alt="" src="assets/reset/pulpit.jpg" height="300">
+<img alt="" src="assets/reset/pulpit.jpg" height="200">
 
 
 
@@ -62,9 +64,7 @@ You should do this section before 09:50, as timed operations will start the stre
 ### Turn on the sockets
 
 1. "Screens, projector, sockets" (close to the light switches, below the counter)
-2. "Screens" (between pc screens & console)
-3. "Networking"  (between pc screens & console)
-4. "PC+Others" (it is below the shelf above the console)
+2. "Networking"  (between pc screens & console)
 
 ### Turn on the pole-TV
 
@@ -198,14 +198,13 @@ play back music.
 
 * Restore all custom changes on the stage, if you made any.
 
-* SPL METER:
-    * Turn off the SPL meter.
-    * Put it back onto the shelf above the console.
+* Plug back the monitor power cables on the stage.
+
+* SPL METER: Put it back onto the shelf above the console.
 
 * Headset:
     * Take out the batteries and put them back into the charger, to the same spot they were in.
     * Put the headset back to the shelf above the console too.
-
 
 * Wait for the recordings to upload.
 

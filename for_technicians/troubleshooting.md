@@ -100,7 +100,6 @@ You need to go outside of the building:
   HDMI.
 * Make sure the right sockets are on:
     * "Screens + Sockets + Projector"
-    * "PC + OTHERS"
 
 ## Colors are wrong
 
