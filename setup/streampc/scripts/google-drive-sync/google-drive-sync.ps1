@@ -36,11 +36,29 @@ foreach ($file in $files) {
     }
 
    
-    while ((Get-Item (Join-Path $sourceFolder $file)).LastWriteTime.AddSeconds(30) -gt (Get-Date)) {
-           $fileSize = (Get-Item  (Join-Path $sourceFolder $file)).length
-        echo "Waiting on still changing/recently changed file: $file ($fileSize bytes)..."
-        Start-Sleep 5
+    $success = $false
+
+    while (-not $success) {
+        try {
+            # Check if the file is still changing
+            if ((Get-Item (Join-Path $sourceFolder $file)).LastWriteTime.AddSeconds(120) -gt (Get-Date)) {
+                $fileSize = (Get-Item (Join-Path $sourceFolder $file)).length
+                echo "Waiting on still changing/recently changed file: $file ($fileSize bytes)..."
+            } else {
+                # File has stopped changing, attempt to get hash
+                $fileMD5 = (Get-FileHash -Path (Join-Path $sourceFolder $file) -Algorithm MD5 -ErrorAction Stop).Hash
+                $success = $true
+            }
+        }
+        catch {
+            # Handle any errors (e.g., file in use), and retry after waiting
+            echo "The file '$file' is in use by another process or an error occurred. Retrying in 10 seconds..."
+        }
+
+        # Wait before the next iteration (either after detecting a changing file or handling an error)
+        Start-Sleep 10
     }
+
    
 
     if (!(Test-Path $destinationFile) -or ($file.Length -ne (Get-Item $destinationFile).Length)) {
