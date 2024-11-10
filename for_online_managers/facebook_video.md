@@ -38,8 +38,11 @@ unlisted.
 
 Every half year or so, we should re-create the "Church Service" recurring event.
 
+* [Start from the 'Events' Tab](https://www.facebook.com/profile.php?id=100064617556957&sk=events) -> "Create event"
+
 * Event name: Church Service
 * Press Recurring event
+    * Type: Virtual
     * Weekly
     * sundays
     * From 10:00 AM
