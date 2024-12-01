@@ -44,3 +44,10 @@ services:
         condition: any
         delay: 5s
         window: 10s
+
+  ccpremote:
+    image: nginx:alpine
+    ports:
+      - "8888:80"
+    volumes:
+      - ./ccpremote:/usr/share/nginx/html

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OBS WebSocket Example</title>
+    <script src="https://unpkg.com/obs-websocket-js"></script>
+    <style>
+        body {
+            font-family: Arial,serif;
+        }
+
+        #buttons-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+        }
+
+        .sceneBtn hr {
+            height:1px;
+            border:none;
+            border-top:1px solid black;
+            margin:2px 0px 2px 0px;
+        }
+        .sceneBtn {
+            height: 60px;
+            font-size: 15px;
+            cursor: pointer;
+            background-color: white;
+            color: black;
+            font-weight: normal;
+            border: 1px solid black;
+            border-radius: 5px;
+            -webkit-transition: none;
+            -moz-transition: none;
+            -o-transition: none;
+            transition: none;
+        }
+
+        .doubleWide {
+            grid-column: span 2;
+        }
+
+        /*.sceneBtn:focus {*/
+        /*    background-color: inherit;*/
+        /*}*/
+
+        .eventScene {
+            background-color: #fac0c0;
+        }
+        .camToggle {
+            background: #ff00ff;
+
+        }
+
+        .newRow {
+            grid-column: 1 / -1;
+        }
+
+        h4 {
+            margin-top:0px;
+            margin-bottom: 4px;
+        }
+    </style>
+</head>
+<body>
+<h4>OBS Remote (<span id="connection-status">disconnected</span>)</h4>
+<div id="buttons-container"></div>
+<script>
+    const hotkeyButtons = {
+
+        "<b>SCENE</b><hr>Projector Canvas": {"type": "sceneToPreview", "className": "sceneBtn", "data": {"sceneId": 15}},
+        "<b>SCENE</b><hr>Pulpit Wide": {"type": "sceneToPreview", "className": "sceneBtn", "data": {"sceneId": 14}},
+        "<b>SCENE</b><hr>Stage": {"type": "sceneToPreview", "className": "sceneBtn", "data": {"sceneId": 12}},
+        "<b>SCENE</b><hr>Sitting": {"type": "sceneToPreview", "className": "sceneBtn", "data": {"sceneId": 11}},
+        "<b>SCENE</b><hr>Custom Angle": {"type": "sceneToPreview", "className": "sceneBtn", "data": {"sceneId": 10}},
+        "<b>SCENE</b><hr>Standby": {"type": "sceneToPreview", "className": "sceneBtn", "data": {"sceneId": 6}},
+        "<b>SCENE</b><hr>PRE STREAM": {"type": "sceneToPreview", "className": "sceneBtn eventScene", "data": {"sceneId": 5}},
+        "<b>SCENE</b><hr>BREAK": {"type": "sceneToPreview", "className": "sceneBtn eventScene", "data": {"sceneId": 4}},
+        "<b>SCENE</b><hr>FINISH": {"type": "sceneToPreview", "className": "sceneBtn eventScene", "data": {"sceneId": 7}},
+        "<b>TRANSITION</b>": {"type": "hotkey", "className": "sceneBtn transition", "data": {"on": "OBSBasic.Transition", "off": "OBSBasic.Transition"}, "confirm": true},
+        "<b>CAM TOGGLE</b>": {"type": "hotkey", "className": "sceneBtn camToggle doubleWide", "data": {"on": "libobs.show_scene_item.20", "off": "libobs.hide_scene_item.20"}},
+    };
+
+    // Initialize the OBS WebSocket
+    const obs = new OBSWebSocket();
+    // Password for the WebSocket connection
+    const password = 'WoodenTableWithPineapple';
+    let reconnectTimeout = 5000; // 5 seconds
+    let scenes = {}; // Store scenes globally to access later
+
+    async function connectOBS() {
+        try {
+            // Connect to OBS WebSocket
+            await obs.connect('ws://192.168.2.118:4455', password);
+            console.log('Connected to OBS WebSocket');
+            document.getElementById('connection-status').textContent = 'connected';
+
+            // Fetch hotkeys
+            const hotkeysResponse = await obs.call('GetHotkeyList');
+            const hotkeys = hotkeysResponse.hotkeys;
+            console.log("HOTKEYS");
+            console.log(JSON.stringify(hotkeys, null, " "));
+
+            // Fetch scenes
+            const scenesResponse = await obs.call('GetSceneList');
+            scenes = {};
+            console.log(scenesResponse.scenes);
+            for (const s of scenesResponse.scenes) {
+                scenes[s.sceneName] = s.sceneIndex;
+            }
+            console.log("SCENES");
+            console.log(JSON.stringify(scenes, null, " "));
+
+            // Fetch scene items for each scene
+            const sceneItems = {};
+            for (const scene of Object.keys(scenes)) {
+                const itemsResponse = await obs.call('GetSceneItemList', {sceneName: scene});
+                for (const item of itemsResponse.sceneItems) {
+                    sceneItems[item.sourceName] = item.sceneItemId;
+                }
+            }
+            console.log("ITEMS");
+            console.log(JSON.stringify(sceneItems, null, " "));
+
+            // Create buttons for each hotkey defined in hotkeyButtons
+            createHotkeyButtons();
+        } catch (error) {
+            console.error('Error connecting to OBS WebSocket:', error);
+            document.getElementById('connection-status').textContent = 'disconnected, reconnecting...';
+            setTimeout(connectOBS, reconnectTimeout);
+        }
+    }
+
+    function createHotkeyButtons() {
+        const container = document.getElementById('buttons-container');
+        container.innerHTML = '';
+
+        for (const [key, value] of Object.entries(hotkeyButtons)) {
+            if (key === "className") continue; // Skip the className key
+
+            const button = document.createElement('button');
+            button.innerHTML = key;
+            button.className = value.className || 'sceneBtn';
+
+            button.addEventListener('click', async () => {
+                const plainTextKey = key.replace(/<[^>]*>/g, '');  // Strip HTML tags from the key
+                try {
+                    if (value.confirm && !confirm(`Are you sure to execute '${plainTextKey}'?`)) {
+                        return;
+                    }
+
+                    if (value.type === 'hotkey') {
+                        const hotkeyToExecute = button.dataset.state === 'off' && value.data.off ? value.data.on : value.data.off;
+                        if (hotkeyToExecute) {
+                            await obs.call('TriggerHotkeyByName', {hotkeyName: hotkeyToExecute});
+                            console.log(`Executed hotkey: ${hotkeyToExecute}`);
+
+                            // Toggle the button state if "off" is defined
+                            if (value.data.off) {
+                                button.dataset.state = button.dataset.state === 'off' ? 'on' : 'off';
+                            }
+                        }
+                    } else if (value.type === 'sceneToPreview') {
+                        const sceneName = Object.keys(scenes).find(key => scenes[key] === value.data.sceneId);
+                        if (sceneName) {
+                            await obs.call('SetCurrentPreviewScene', {sceneName});
+                            console.log(`Set scene to preview: ID ${value.data.sceneId}`);
+                        }
+                    }
+                } catch (error) {
+                    console.error('Error executing action:', error);
+                }
+            });
+
+
+            container.appendChild(button);
+        }
+    }
+
+    // Reconnect logic when the connection is closed
+    obs.on('ConnectionClosed', () => {
+        console.warn('OBS WebSocket connection closed. Reconnecting...');
+        document.getElementById('connection-status').textContent = 'disconnected, reconnecting...';
+        setTimeout(connectOBS, reconnectTimeout);
+    });
+
+    // Connect to OBS WebSocket when the page loads
+    connectOBS();
+</script>
+</body>
+</html>
