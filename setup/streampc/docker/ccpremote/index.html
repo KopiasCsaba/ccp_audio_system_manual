@@ -7,7 +7,7 @@
     <script src="https://unpkg.com/obs-websocket-js"></script>
     <style>
         body {
-            font-family: Arial,serif;
+            font-family: Arial, serif;
         }
 
         #buttons-container {
@@ -17,11 +17,12 @@
         }
 
         .sceneBtn hr {
-            height:1px;
-            border:none;
-            border-top:1px solid black;
-            margin:2px 0px 2px 0px;
+            height: 1px;
+            border: none;
+            border-top: 1px solid black;
+            margin: 2px 0px 2px 0px;
         }
+
         .sceneBtn {
             height: 60px;
             font-size: 15px;
@@ -41,16 +42,12 @@
             grid-column: span 2;
         }
 
-        /*.sceneBtn:focus {*/
-        /*    background-color: inherit;*/
-        /*}*/
-
         .eventScene {
             background-color: #fac0c0;
         }
+
         .camToggle {
             background: #ff00ff;
-
         }
 
         .newRow {
@@ -58,7 +55,7 @@
         }
 
         h4 {
-            margin-top:0px;
+            margin-top: 0px;
             margin-bottom: 4px;
         }
     </style>
@@ -68,7 +65,6 @@
 <div id="buttons-container"></div>
 <script>
     const hotkeyButtons = {
-
         "<b>SCENE</b><hr>Projector Canvas": {"type": "sceneToPreview", "className": "sceneBtn", "data": {"sceneId": 15}},
         "<b>SCENE</b><hr>Pulpit Wide": {"type": "sceneToPreview", "className": "sceneBtn", "data": {"sceneId": 14}},
         "<b>SCENE</b><hr>Stage": {"type": "sceneToPreview", "className": "sceneBtn", "data": {"sceneId": 12}},
@@ -83,34 +79,43 @@
     };
 
     // Initialize the OBS WebSocket
-    const obs = new OBSWebSocket();
-    // Password for the WebSocket connection
+    let obs;
     const password = 'WoodenTableWithPineapple';
-    let reconnectTimeout = 5000; // 5 seconds
+    const reconnectTimeout = 5000; // 5 seconds
     let scenes = {}; // Store scenes globally to access later
+    let versionInterval; // Store interval ID for the OBS version fetch
+    let retryInterval = null; // Store interval ID for the OBS version fetch
+
+    function initializeOBS() {
+        obs = new OBSWebSocket();
+
+        obs.on('ConnectionClosed', handleConnectionClosed);
+    }
 
     async function connectOBS() {
         try {
+            console.log('Connecting...');
+            initializeOBS();
             // Connect to OBS WebSocket
             await obs.connect('ws://192.168.2.118:4455', password);
+
+            clearInterval(retryInterval);
+
             console.log('Connected to OBS WebSocket');
             document.getElementById('connection-status').textContent = 'connected';
 
             // Fetch hotkeys
             const hotkeysResponse = await obs.call('GetHotkeyList');
             const hotkeys = hotkeysResponse.hotkeys;
-            console.log("HOTKEYS");
-            console.log(JSON.stringify(hotkeys, null, " "));
+            console.log("HOTKEYS", hotkeys);
 
             // Fetch scenes
             const scenesResponse = await obs.call('GetSceneList');
             scenes = {};
-            console.log(scenesResponse.scenes);
             for (const s of scenesResponse.scenes) {
                 scenes[s.sceneName] = s.sceneIndex;
             }
-            console.log("SCENES");
-            console.log(JSON.stringify(scenes, null, " "));
+            console.log("SCENES", scenes);
 
             // Fetch scene items for each scene
             const sceneItems = {};
@@ -120,16 +125,45 @@
                     sceneItems[item.sourceName] = item.sceneItemId;
                 }
             }
-            console.log("ITEMS");
-            console.log(JSON.stringify(sceneItems, null, " "));
+            console.log("ITEMS", sceneItems);
 
             // Create buttons for each hotkey defined in hotkeyButtons
             createHotkeyButtons();
+
+            startFetchingOBSVersion();
+
+
         } catch (error) {
-            console.error('Error connecting to OBS WebSocket:', error);
-            document.getElementById('connection-status').textContent = 'disconnected, reconnecting...';
-            setTimeout(connectOBS, reconnectTimeout);
+            handleConnectionClosed(error);
         }
+    }
+
+    function handleConnectionClosed(error) {
+        if (retryInterval == null) {
+
+            clearInterval(versionInterval);
+            console.warn('OBS WebSocket connection closed. Reconnecting...', error);
+            document.getElementById('connection-status').textContent = 'disconnected, reconnecting...';
+            obs.disconnect();
+            retryInterval = setInterval(connectOBS, reconnectTimeout);
+        }
+    }
+
+    function startFetchingOBSVersion() {
+        // Clear any existing interval to prevent multiple intervals running
+        if (versionInterval) {
+            clearInterval(versionInterval);
+        }
+
+        // Set an interval to fetch OBS version every 5 seconds
+        versionInterval = setInterval(async () => {
+            try {
+                const versionResponse = await obs.call('GetVersion');
+                console.log(`OBS Version: ${versionResponse.obsVersion}`);
+            } catch (error) {
+                handleConnectionClosed(error);
+            }
+        }, 5000);
     }
 
     function createHotkeyButtons() {
@@ -137,8 +171,6 @@
         container.innerHTML = '';
 
         for (const [key, value] of Object.entries(hotkeyButtons)) {
-            if (key === "className") continue; // Skip the className key
-
             const button = document.createElement('button');
             button.innerHTML = key;
             button.className = value.className || 'sceneBtn';
@@ -169,21 +201,13 @@
                         }
                     }
                 } catch (error) {
-                    console.error('Error executing action:', error);
+                    handleConnectionClosed(error);
                 }
             });
-
 
             container.appendChild(button);
         }
     }
-
-    // Reconnect logic when the connection is closed
-    obs.on('ConnectionClosed', () => {
-        console.warn('OBS WebSocket connection closed. Reconnecting...');
-        document.getElementById('connection-status').textContent = 'disconnected, reconnecting...';
-        setTimeout(connectOBS, reconnectTimeout);
-    });
 
     // Connect to OBS WebSocket when the page loads
     connectOBS();
