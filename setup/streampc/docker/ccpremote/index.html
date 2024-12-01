@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>
+        const WS_PASS = 'WoodenTableWithPineapple';
+        const WS_HOST = '192.168.2.118';
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OBS WebSocket Example</title>
+    <title>CCP Remote</title>
     <script src="https://unpkg.com/obs-websocket-js"></script>
     <style>
         body {
@@ -80,26 +84,25 @@
 
     // Initialize the OBS WebSocket
     let obs;
-    const password = 'WoodenTableWithPineapple';
     const reconnectTimeout = 5000; // 5 seconds
     let scenes = {}; // Store scenes globally to access later
     let versionInterval; // Store interval ID for the OBS version fetch
     let retryInterval = null; // Store interval ID for the OBS version fetch
 
     function initializeOBS() {
+        console.log('Connecting...');
         obs = new OBSWebSocket();
-
         obs.on('ConnectionClosed', handleConnectionClosed);
     }
 
     async function connectOBS() {
         try {
-            console.log('Connecting...');
             initializeOBS();
             // Connect to OBS WebSocket
-            await obs.connect('ws://192.168.2.118:4455', password);
+            await obs.connect('ws://' + WS_HOST + ':4455', WS_PASS);
 
             clearInterval(retryInterval);
+            retryInterval = null;
 
             console.log('Connected to OBS WebSocket');
             document.getElementById('connection-status').textContent = 'connected';
@@ -157,6 +160,7 @@
 
         // Set an interval to fetch OBS version every 5 seconds
         versionInterval = setInterval(async () => {
+            console.log("startFetchingOBSVersion");
             try {
                 const versionResponse = await obs.call('GetVersion');
                 console.log(`OBS Version: ${versionResponse.obsVersion}`);
