@@ -47,7 +47,16 @@ services:
 
   ccpremote:
     image: nginx:alpine
+    hostname: ccpremote
+    container_name: ccpremote
+    network_mode: host
     ports:
-      - "8888:80"
+      - "80:80"
     volumes:
       - ./ccpremote:/usr/share/nginx/html
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: any
+        delay: 5s
+        window: 10s

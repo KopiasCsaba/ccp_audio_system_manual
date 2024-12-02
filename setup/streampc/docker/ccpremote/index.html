@@ -2,8 +2,11 @@
 <html lang="en">
 <head>
     <script>
+        // const WS_PASS = '123456';
+        // const WS_HOST = '192.168.1.75';
         const WS_PASS = 'WoodenTableWithPineapple';
         const WS_HOST = '192.168.2.118';
+
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -65,9 +68,24 @@
     </style>
 </head>
 <body>
-<h4>OBS Remote (<span id="connection-status">disconnected</span>)</h4>
+<h4>OBS Remote (<span id="connection-status">connecting...</span>)</h4>
 <div id="buttons-container"></div>
 <script>
+    /**
+     * Determine hotkey names, scene ids, scene item ids from the web debugging toolbar's console log upon first connection.
+     *
+     * Currently supported features:
+     * # Bring up preview scene
+     *  "<b>SCENE</b><hr>Stage": {"type": "sceneToPreview", "className": "sceneBtn", "data": {"sceneId": 12}},
+     *
+     * # Execute hotkey
+     * "<b>TRANSITION</b>": {"type": "hotkey", "className": "sceneBtn transition", "data": {"hotkeyName": "OBSBasic.Transition"}, "confirm": true},
+     *
+     * (Optional confirm keyword makes you confirm the action with an alert dialog.)
+     *
+     * # Execute two hotkeys alternating
+     * "<b>CAM TOGGLE</b>": {"type": "hotkey", "className": "sceneBtn camToggle doubleWide", "data": {"hotkeyName": "libobs.show_scene_item.20", "toggleHotkeyName": "libobs.hide_scene_item.20"}},
+     */
     const hotkeyButtons = {
         "<b>SCENE</b><hr>Projector Canvas": {"type": "sceneToPreview", "className": "sceneBtn", "data": {"sceneId": 15}},
         "<b>SCENE</b><hr>Pulpit Wide": {"type": "sceneToPreview", "className": "sceneBtn", "data": {"sceneId": 14}},
@@ -78,93 +96,101 @@
         "<b>SCENE</b><hr>PRE STREAM": {"type": "sceneToPreview", "className": "sceneBtn eventScene", "data": {"sceneId": 5}},
         "<b>SCENE</b><hr>BREAK": {"type": "sceneToPreview", "className": "sceneBtn eventScene", "data": {"sceneId": 4}},
         "<b>SCENE</b><hr>FINISH": {"type": "sceneToPreview", "className": "sceneBtn eventScene", "data": {"sceneId": 7}},
-        "<b>TRANSITION</b>": {"type": "hotkey", "className": "sceneBtn transition", "data": {"on": "OBSBasic.Transition", "off": "OBSBasic.Transition"}, "confirm": true},
-        "<b>CAM TOGGLE</b>": {"type": "hotkey", "className": "sceneBtn camToggle doubleWide", "data": {"on": "libobs.show_scene_item.20", "off": "libobs.hide_scene_item.20"}},
+        "<b>TRANSITION</b>": {"type": "hotkey", "className": "sceneBtn transition", "data": {"hotkeyName": "OBSBasic.Transition"}, "confirm": true},
+        "<b>CAM TOGGLE</b>": {"type": "hotkey", "className": "sceneBtn camToggle doubleWide", "data": {"hotkeyName": "libobs.show_scene_item.20", "toggleHotkeyName": "libobs.hide_scene_item.20"}},
     };
 
     // Initialize the OBS WebSocket
-    let obs;
     const reconnectTimeout = 5000; // 5 seconds
-    let scenes = {}; // Store scenes globally to access later
-    let versionInterval; // Store interval ID for the OBS version fetch
-    let retryInterval = null; // Store interval ID for the OBS version fetch
+    let obs;
+    let scenes = {}; // key: scene name, value: scene index
+    let keepAliveInterval = null;
+    let reconnectInterval = null;
 
-    function initializeOBS() {
-        console.log('Connecting...');
-        obs = new OBSWebSocket();
-        obs.on('ConnectionClosed', handleConnectionClosed);
-    }
 
     async function connectOBS() {
         try {
-            initializeOBS();
+            console.log('Connecting...');
+            obs = new OBSWebSocket();
+            obs.on('ConnectionClosed', handleConnectionClosed);
+            obs.on('ConnectionError', handleConnectionClosed);
+
             // Connect to OBS WebSocket
             await obs.connect('ws://' + WS_HOST + ':4455', WS_PASS);
 
-            clearInterval(retryInterval);
-            retryInterval = null;
+            clearInterval(reconnectInterval);
+            reconnectInterval=null;
 
             console.log('Connected to OBS WebSocket');
-            document.getElementById('connection-status').textContent = 'connected';
+            setConnectionStatus(true);
+            await fetchOBSDetails();
 
-            // Fetch hotkeys
-            const hotkeysResponse = await obs.call('GetHotkeyList');
-            const hotkeys = hotkeysResponse.hotkeys;
-            console.log("HOTKEYS", hotkeys);
-
-            // Fetch scenes
-            const scenesResponse = await obs.call('GetSceneList');
-            scenes = {};
-            for (const s of scenesResponse.scenes) {
-                scenes[s.sceneName] = s.sceneIndex;
-            }
-            console.log("SCENES", scenes);
-
-            // Fetch scene items for each scene
-            const sceneItems = {};
-            for (const scene of Object.keys(scenes)) {
-                const itemsResponse = await obs.call('GetSceneItemList', {sceneName: scene});
-                for (const item of itemsResponse.sceneItems) {
-                    sceneItems[item.sourceName] = item.sceneItemId;
-                }
-            }
-            console.log("ITEMS", sceneItems);
-
-            // Create buttons for each hotkey defined in hotkeyButtons
             createHotkeyButtons();
-
-            startFetchingOBSVersion();
-
-
+            startOBSKeepAliveChecker();
         } catch (error) {
             handleConnectionClosed(error);
         }
     }
 
-    function handleConnectionClosed(error) {
-        if (retryInterval == null) {
 
-            clearInterval(versionInterval);
-            console.warn('OBS WebSocket connection closed. Reconnecting...', error);
-            document.getElementById('connection-status').textContent = 'disconnected, reconnecting...';
-            obs.disconnect();
-            retryInterval = setInterval(connectOBS, reconnectTimeout);
-        }
+    function setConnectionStatus(isConnected) {
+        document.getElementById('connection-status').textContent = isConnected ? 'connected' : 'disconnected, reconnecting...';
     }
 
-    function startFetchingOBSVersion() {
-        // Clear any existing interval to prevent multiple intervals running
-        if (versionInterval) {
-            clearInterval(versionInterval);
+    async function fetchOBSDetails() {
+        // Fetch hotkeys
+        const dump = {};
+        const hotkeysResponse = await obs.call('GetHotkeyList');
+        const hotkeys = [...new Set(hotkeysResponse.hotkeys)];
+        dump['hotkeys'] = hotkeys;
+
+        // Fetch scenes
+        const scenesResponse = await obs.call('GetSceneList');
+        scenes = {};
+        for (const s of scenesResponse.scenes) {
+            scenes[s.sceneName] = s.sceneIndex;
+        }
+        dump['scenes'] = scenes;
+
+
+        // Fetch scene items for each scene
+        const sceneItems = {};
+        for (const scene of Object.keys(scenes)) {
+            const itemsResponse = await obs.call('GetSceneItemList', {sceneName: scene});
+            for (const item of itemsResponse.sceneItems) {
+                sceneItems[item.sourceName] = item.sceneItemId;
+            }
         }
 
+        dump['sceneItems'] = sceneItems;
+        console.log("OBS DATA");
+        console.log(JSON.stringify(dump,null," "));
+    }
+
+    function handleConnectionClosed(error) {
+        if (reconnectInterval) {
+            return;
+        }
+        console.warn('OBS WebSocket connection closed. Reconnecting...', error);
+
+        clearInterval(keepAliveInterval);
+        keepAliveInterval=null;
+
+        setConnectionStatus(false);
+        obs.disconnect();
+        reconnectInterval = setInterval(connectOBS, reconnectTimeout);
+    }
+
+    function startOBSKeepAliveChecker() {
+
         // Set an interval to fetch OBS version every 5 seconds
-        versionInterval = setInterval(async () => {
-            console.log("startFetchingOBSVersion");
+        keepAliveInterval = setInterval(async () => {
+            console.log("OBS Keep alive check...");
             try {
                 const versionResponse = await obs.call('GetVersion');
                 console.log(`OBS Version: ${versionResponse.obsVersion}`);
             } catch (error) {
+                console.log("Keep alive failed...");
                 handleConnectionClosed(error);
             }
         }, 5000);
@@ -180,21 +206,22 @@
             button.className = value.className || 'sceneBtn';
 
             button.addEventListener('click', async () => {
-                const plainTextKey = key.replace(/<[^>]*>/g, '');  // Strip HTML tags from the key
+                const plainTextKey = key.replace(/<[^>]*>/g, '');  // Strip HTML tags from the key's HTML
                 try {
                     if (value.confirm && !confirm(`Are you sure to execute '${plainTextKey}'?`)) {
                         return;
                     }
 
                     if (value.type === 'hotkey') {
-                        const hotkeyToExecute = button.dataset.state === 'off' && value.data.off ? value.data.on : value.data.off;
+                        const hotkeyToExecute = button.dataset.state === '1' && value.data.toggleHotkeyName ? value.data.toggleHotkeyName : value.data.hotkeyName;
+                        console.log(hotkeyToExecute,button.dataset,value.data);
                         if (hotkeyToExecute) {
                             await obs.call('TriggerHotkeyByName', {hotkeyName: hotkeyToExecute});
                             console.log(`Executed hotkey: ${hotkeyToExecute}`);
 
                             // Toggle the button state if "off" is defined
-                            if (value.data.off) {
-                                button.dataset.state = button.dataset.state === 'off' ? 'on' : 'off';
+                            if (value.data.toggleHotkeyName) {
+                                button.dataset.state = button.dataset.state === '1' ? '0' : '1';
                             }
                         }
                     } else if (value.type === 'sceneToPreview') {
