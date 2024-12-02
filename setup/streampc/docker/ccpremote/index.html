@@ -6,11 +6,12 @@
         // const WS_HOST = '192.168.1.75';
         const WS_PASS = 'WoodenTableWithPineapple';
         const WS_HOST = '192.168.2.118';
+        const WS_PORT = '4455';
 
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CCP Remote</title>
+    <title>OBS Remote</title>
     <script src="https://unpkg.com/obs-websocket-js"></script>
     <style>
         body {
@@ -45,8 +46,14 @@
             transition: none;
         }
 
+        /** Add this to the button to make it double wide.
         .doubleWide {
             grid-column: span 2;
+        }
+
+        /* Add this to the button, to break the next line */
+        .newRow {
+            grid-column: 1 / -1;
         }
 
         .eventScene {
@@ -55,10 +62,6 @@
 
         .camToggle {
             background: #ff00ff;
-        }
-
-        .newRow {
-            grid-column: 1 / -1;
         }
 
         h4 {
@@ -81,10 +84,15 @@
      * # Execute hotkey
      * "<b>TRANSITION</b>": {"type": "hotkey", "className": "sceneBtn transition", "data": {"hotkeyName": "OBSBasic.Transition"}, "confirm": true},
      *
-     * (Optional confirm keyword makes you confirm the action with an alert dialog.)
-     *
      * # Execute two hotkeys alternating
      * "<b>CAM TOGGLE</b>": {"type": "hotkey", "className": "sceneBtn camToggle doubleWide", "data": {"hotkeyName": "libobs.show_scene_item.20", "toggleHotkeyName": "libobs.hide_scene_item.20"}},
+     *
+     *
+     * Parameters:
+     * type: one of: hotkey, sceneToPreview
+     * confirm: (Bool) Optional confirm keyword makes you confirm the action with an alert dialog.
+     * className: Extra class names that the button will get, lets you customize the outlook.
+     *
      */
     const hotkeyButtons = {
         "<b>SCENE</b><hr>Projector Canvas": {"type": "sceneToPreview", "className": "sceneBtn", "data": {"sceneId": 15}},
@@ -116,10 +124,10 @@
             obs.on('ConnectionError', handleConnectionClosed);
 
             // Connect to OBS WebSocket
-            await obs.connect('ws://' + WS_HOST + ':4455', WS_PASS);
+            await obs.connect('ws://' + WS_HOST + ':' + WS_PORT, WS_PASS);
 
             clearInterval(reconnectInterval);
-            reconnectInterval=null;
+            reconnectInterval = null;
 
             console.log('Connected to OBS WebSocket');
             setConnectionStatus(true);
@@ -164,7 +172,7 @@
 
         dump['sceneItems'] = sceneItems;
         console.log("OBS DATA");
-        console.log(JSON.stringify(dump,null," "));
+        console.log(JSON.stringify(dump, null, " "));
     }
 
     function handleConnectionClosed(error) {
@@ -174,7 +182,7 @@
         console.warn('OBS WebSocket connection closed. Reconnecting...', error);
 
         clearInterval(keepAliveInterval);
-        keepAliveInterval=null;
+        keepAliveInterval = null;
 
         setConnectionStatus(false);
         obs.disconnect();
@@ -214,7 +222,7 @@
 
                     if (value.type === 'hotkey') {
                         const hotkeyToExecute = button.dataset.state === '1' && value.data.toggleHotkeyName ? value.data.toggleHotkeyName : value.data.hotkeyName;
-                        console.log(hotkeyToExecute,button.dataset,value.data);
+                        console.log(hotkeyToExecute, button.dataset, value.data);
                         if (hotkeyToExecute) {
                             await obs.call('TriggerHotkeyByName', {hotkeyName: hotkeyToExecute});
                             console.log(`Executed hotkey: ${hotkeyToExecute}`);
@@ -243,5 +251,44 @@
     // Connect to OBS WebSocket when the page loads
     connectOBS();
 </script>
+<!--<script>-->
+<!--    // Keep the phone screen on. Doesn't work on non https... -->
+<!--    let wakeLock = null;-->
+
+<!--    async function requestWakeLock() {-->
+<!--        try {-->
+<!--            wakeLock = await navigator.wakeLock.request('screen');-->
+<!--            wakeLock.addEventListener('release', requestWakeLock);-->
+<!--            console.log("WAKE LOCK requested.");-->
+<!--        } catch (err) {-->
+<!--            console.error('Wake Lock request failed:', err);-->
+<!--        }-->
+<!--    }-->
+
+<!--    document.addEventListener('visibilitychange', () => {-->
+<!--        if (wakeLock !== null && document.visibilityState === 'visible') {-->
+<!--            requestWakeLock();-->
+<!--        }-->
+<!--    });-->
+
+<!--    requestWakeLock();-->
+<!--</script>-->
+<!--<script>-->
+<!--    // Keep the phone screen on. Doesn't work :/ -->
+<!--    var video = document.createElement('video');-->
+<!--    video.setAttribute('loop', '');-->
+
+<!--    function addSourceToVideo(element, type, dataURI) {-->
+<!--        var source = document.createElement('source');-->
+<!--        source.src = dataURI;-->
+<!--        source.type = 'video/' + type;-->
+<!--        element.appendChild(source);-->
+<!--    }-->
+
+<!--    addSourceToVideo(video, 'webm', 'data:video/webm;base64,GkXfo0AgQoaBAUL3gQFC8oEEQvOBCEKCQAR3ZWJtQoeBAkKFgQIYU4BnQI0VSalmQCgq17FAAw9CQE2AQAZ3aGFtbXlXQUAGd2hhbW15RIlACECPQAAAAAAAFlSua0AxrkAu14EBY8WBAZyBACK1nEADdW5khkAFVl9WUDglhohAA1ZQOIOBAeBABrCBCLqBCB9DtnVAIueBAKNAHIEAAIAwAQCdASoIAAgAAUAmJaQAA3AA/vz0AAA=');-->
+<!--    addSourceToVideo(video, 'mp4', 'data:video/mp4;base64,AAAAHGZ0eXBpc29tAAACAGlzb21pc28ybXA0MQAAAAhmcmVlAAAAG21kYXQAAAGzABAHAAABthADAowdbb9/AAAC6W1vb3YAAABsbXZoZAAAAAB8JbCAfCWwgAAAA+gAAAAAAAEAAAEAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAIVdHJhawAAAFx0a2hkAAAAD3wlsIB8JbCAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAQAAAAAAIAAAACAAAAAABsW1kaWEAAAAgbWRoZAAAAAB8JbCAfCWwgAAAA+gAAAAAVcQAAAAAAC1oZGxyAAAAAAAAAAB2aWRlAAAAAAAAAAAAAAAAVmlkZW9IYW5kbGVyAAAAAVxtaW5mAAAAFHZtaGQAAAABAAAAAAAAAAAAAAAkZGluZgAAABxkcmVmAAAAAAAAAAEAAAAMdXJsIAAAAAEAAAEcc3RibAAAALhzdHNkAAAAAAAAAAEAAACobXA0dgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAIAAgASAAAAEgAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABj//wAAAFJlc2RzAAAAAANEAAEABDwgEQAAAAADDUAAAAAABS0AAAGwAQAAAbWJEwAAAQAAAAEgAMSNiB9FAEQBFGMAAAGyTGF2YzUyLjg3LjQGAQIAAAAYc3R0cwAAAAAAAAABAAAAAQAAAAAAAAAcc3RzYwAAAAAAAAABAAAAAQAAAAEAAAABAAAAFHN0c3oAAAAAAAAAEwAAAAEAAAAUc3RjbwAAAAAAAAABAAAALAAAAGB1ZHRhAAAAWG1ldGEAAAAAAAAAIWhkbHIAAAAAAAAAAG1kaXJhcHBsAAAAAAAAAAAAAAAAK2lsc3QAAAAjqXRvbwAAABtkYXRhAAAAAQAAAABMYXZmNTIuNzguMw==');-->
+
+<!--    video.play();-->
+<!--</script>-->
 </body>
 </html>
