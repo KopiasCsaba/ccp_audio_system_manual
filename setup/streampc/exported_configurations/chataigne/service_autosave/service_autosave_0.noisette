@@ -3503,10 +3503,16 @@
                   {
                     "niceName": "Consequence",
                     "type": "Consequence",
-                    "commandModule": "m32Advanced",
-                    "commandPath": "Requests",
-                    "commandType": "Sync All",
+                    "commandModule": "generic",
+                    "commandPath": "",
+                    "commandType": "Trigger a Control",
                     "command": {
+                      "parameters": [
+                        {
+                          "value": "/modules/m32Advanced/templates/syncAll/trigger",
+                          "controlAddress": "/target"
+                        }
+                      ],
                       "paramLinks": {
                       }
                     }
@@ -3514,10 +3520,20 @@
                   {
                     "niceName": "Consequence 1",
                     "type": "Consequence",
-                    "commandModule": "m32Advanced",
-                    "commandPath": "Requests",
-                    "commandType": "Sync All",
+                    "commandModule": "generic",
+                    "commandPath": "",
+                    "commandType": "Log a value",
                     "command": {
+                      "parameters": [
+                        {
+                          "value": "JEN\u0150",
+                          "controlAddress": "/message"
+                        },
+                        {
+                          "value": "",
+                          "controlAddress": "/target"
+                        }
+                      ],
                       "paramLinks": {
                       }
                     }
