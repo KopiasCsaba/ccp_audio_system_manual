@@ -86,3 +86,7 @@ foreach ($file in $files) {
 echo "Finished properly, saving last-sync time."
 # Save the current timestamp as the last run
 (Get-Date).ToString("yyy-MM-ddTHH:mm:ss") | Set-Content $lastRunFile
+
+
+robocopy "C:\Users\Calvary\AppData\Roaming\obs-studio\logs" /MIR "g:\My Drive\Recordings\StreamPcObsRecordings\logs\obs"
+# robocopy "c:\Users\Calvary\AppData\Local\Docker\log" /MIR "g:\My Drive\Recordings\StreamPcObsRecordings\logs\docker"

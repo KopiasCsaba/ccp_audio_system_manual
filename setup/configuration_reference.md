@@ -234,7 +234,8 @@ turned on.
     * New shortcut
 	* Start in: "C:\Program Files\obs-studio\bin\64bit"
 	* Target: C:\Windows\System32\cmd.exe /c start "" /b /wait C:\Windows\System32\timeout.exe /T 20 /nobreak && start "" /b "C:\Program Files\obs-studio\bin\64bit\obs64.exe" --disable-shutdown-check
-
+* Disable search indexind
+* Disable WSL2 guiApplications: https://learn.microsoft.com/en-us/windows/wsl/wsl-config
 
 # Console Read only preset
 
