@@ -49,7 +49,6 @@ services:
     image: nginx:alpine
     hostname: ccpremote
     container_name: ccpremote
-    network_mode: host
     ports:
       - "80:80"
     volumes:
