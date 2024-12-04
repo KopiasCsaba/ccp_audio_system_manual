@@ -8,9 +8,9 @@
       "dashboardSettings": {
         "parameters": [
           {
-            "value": "",
+            "value": "/obsremote",
             "controlAddress": "/showDashboardOnStartup",
-            "enabled": false
+            "enabled": true
           },
           {
             "value": true,
@@ -20,6 +20,14 @@
             "value": 9999,
             "hexMode": false,
             "controlAddress": "/serverPort"
+          },
+          {
+            "value": "12345",
+            "controlAddress": "/password"
+          },
+          {
+            "value": true,
+            "controlAddress": "/unlockOnlyOnce"
           }
         ]
       },
@@ -30,7 +38,7 @@
   "dashboardManager": {
     "parameters": [
       {
-        "value": false,
+        "value": true,
         "controlAddress": "/editMode"
       }
     ],
@@ -55,7 +63,7 @@
                 {
                   "value": [
                     -22.0,
-                    3.0
+                    2.0
                   ],
                   "controlAddress": "/viewUIPosition"
                 },
@@ -166,7 +174,7 @@
                 {
                   "value": [
                     -22.0,
-                    -244.0
+                    -195.0
                   ],
                   "controlAddress": "/viewUIPosition"
                 },
@@ -240,7 +248,7 @@
                 {
                   "value": [
                     -22.0,
-                    -194.5999755859375
+                    -145.0
                   ],
                   "controlAddress": "/viewUIPosition"
                 },
@@ -424,8 +432,45 @@
               "parameters": [
                 {
                   "value": [
-                    -22.0,
-                    -145.2000122070312
+                    237.0,
+                    5.0
+                  ],
+                  "controlAddress": "/viewUIPosition"
+                },
+                {
+                  "value": [
+                    200.0,
+                    40.0
+                  ],
+                  "controlAddress": "/viewUISize"
+                },
+                {
+                  "value": "/states/obs_state/processors/transition/trigger",
+                  "controlAddress": "/target"
+                },
+                {
+                  "value": "TRANSITION",
+                  "controlAddress": "/customText",
+                  "enabled": true
+                },
+                {
+                  "value": "",
+                  "controlAddress": "/customImage",
+                  "enabled": false
+                }
+              ],
+              "niceName": "Item 11",
+              "hideInEditor": true,
+              "type": "DashboardTriggerItem",
+              "ghostAddress": "/states/obs_state/processors/transition/trigger",
+              "controllable": "/states/obs_state/processors/transition/trigger"
+            },
+            {
+              "parameters": [
+                {
+                  "value": [
+                    237.0,
+                    -45.0
                   ],
                   "controlAddress": "/viewUIPosition"
                 },
@@ -451,7 +496,7 @@
                   "enabled": false
                 }
               ],
-              "niceName": "Item 10",
+              "niceName": "Item 12",
               "hideInEditor": true,
               "type": "DashboardTriggerItem",
               "ghostAddress": "/states/obs_state/processors/camTOGGLE/trigger",
@@ -496,19 +541,19 @@
             {
               "type": 1,
               "width": 2560,
-              "height": 694,
+              "height": 844,
               "direction": 1,
               "shifters": [
                 {
                   "type": 1,
                   "width": 307,
-                  "height": 694,
+                  "height": 844,
                   "direction": 2,
                   "shifters": [
                     {
                       "type": 0,
                       "width": 307,
-                      "height": 355,
+                      "height": 430,
                       "currentContent": "Modules",
                       "tabs": [
                         {
@@ -519,7 +564,7 @@
                     {
                       "type": 0,
                       "width": 307,
-                      "height": 333,
+                      "height": 408,
                       "currentContent": "Custom Variables",
                       "tabs": [
                         {
@@ -531,8 +576,8 @@
                 },
                 {
                   "type": 0,
-                  "width": 1692,
-                  "height": 694,
+                  "width": 1626,
+                  "height": 844,
                   "currentContent": "State Machine",
                   "tabs": [
                     {
@@ -551,8 +596,8 @@
                 },
                 {
                   "type": 0,
-                  "width": 549,
-                  "height": 694,
+                  "width": 615,
+                  "height": 844,
                   "currentContent": "Inspector",
                   "tabs": [
                     {
@@ -565,13 +610,13 @@
             {
               "type": 1,
               "width": 2560,
-              "height": 317,
+              "height": 167,
               "direction": 1,
               "shifters": [
                 {
                   "type": 0,
                   "width": 178,
-                  "height": 317,
+                  "height": 167,
                   "currentContent": "Sequences",
                   "tabs": [
                     {
@@ -581,8 +626,8 @@
                 },
                 {
                   "type": 0,
-                  "width": 1179,
-                  "height": 317,
+                  "width": 873,
+                  "height": 167,
                   "currentContent": "Sequence Editor",
                   "tabs": [
                     {
@@ -592,8 +637,19 @@
                 },
                 {
                   "type": 0,
+                  "width": 300,
+                  "height": 167,
+                  "currentContent": "The Detective",
+                  "tabs": [
+                    {
+                      "name": "The Detective"
+                    }
+                  ]
+                },
+                {
+                  "type": 0,
                   "width": 1191,
-                  "height": 317,
+                  "height": 167,
                   "currentContent": "Logger",
                   "tabs": [
                     {
@@ -2785,6 +2841,10 @@
           {
             "value": true,
             "controlAddress": "/enabled"
+          },
+          {
+            "value": true,
+            "controlAddress": "/logOutgoing"
           }
         ],
         "niceName": "OBS Websocket",
@@ -2800,10 +2860,6 @@
             },
             {
               "parameters": [
-                {
-                  "value": true,
-                  "controlAddress": "/enabled"
-                },
                 {
                   "value": "scripts/obs_ext.js",
                   "controlAddress": "/filePath"
@@ -3065,6 +3121,114 @@
                     }
                   ],
                   "niceName": "sceneItemId"
+                }
+              ]
+            },
+            {
+              "niceName": "TOGGLE CAM",
+              "type": "CommandTemplate",
+              "menuPath": "Scene Items Requests",
+              "commandType": "SetSceneItemEnabled",
+              "params": [
+                {
+                  "parameters": [
+                    {
+                      "value": "",
+                      "controlAddress": "/requestId"
+                    },
+                    {
+                      "value": true,
+                      "minValue": 0,
+                      "maxValue": 1,
+                      "default": true,
+                      "controlAddress": "/editable",
+                      "type": "Boolean",
+                      "niceName": "Editable",
+                      "customizable": false,
+                      "removable": false,
+                      "description": "If enabled, the parameter will be editable when instantiating this template",
+                      "hideInEditor": false,
+                      "feedbackOnly": false
+                    }
+                  ],
+                  "niceName": "request Id"
+                },
+                {
+                  "parameters": [
+                    {
+                      "value": "_ Notebook + Cam",
+                      "controlMode": 2,
+                      "reference": {
+                        "value": "/customVariables/sceneNames/variables/_NOTEBOOK_Cam/_NOTEBOOK_Cam",
+                        "controlAddress": "/reference"
+                      },
+                      "controlAddress": "/sceneName"
+                    },
+                    {
+                      "value": true,
+                      "minValue": 0,
+                      "maxValue": 1,
+                      "default": true,
+                      "controlAddress": "/editable",
+                      "type": "Boolean",
+                      "niceName": "Editable",
+                      "customizable": false,
+                      "removable": false,
+                      "description": "If enabled, the parameter will be editable when instantiating this template",
+                      "hideInEditor": false,
+                      "feedbackOnly": false
+                    }
+                  ],
+                  "niceName": "sceneName"
+                },
+                {
+                  "parameters": [
+                    {
+                      "value": 0,
+                      "hexMode": false,
+                      "controlAddress": "/sceneItemId"
+                    },
+                    {
+                      "value": true,
+                      "minValue": 0,
+                      "maxValue": 1,
+                      "default": true,
+                      "controlAddress": "/editable",
+                      "type": "Boolean",
+                      "niceName": "Editable",
+                      "customizable": false,
+                      "removable": false,
+                      "description": "If enabled, the parameter will be editable when instantiating this template",
+                      "hideInEditor": false,
+                      "feedbackOnly": false
+                    }
+                  ],
+                  "niceName": "sceneItemId"
+                },
+                {
+                  "parameters": [
+                    {
+                      "value": false,
+                      "controlMode": 1,
+                      "expression": "root.modules.obsWebsocket.values.scene_item_20_enabled.get()",
+                      "controlAddress": "/sceneItemEnabled"
+                    },
+                    {
+                      "value": true,
+                      "minValue": 0,
+                      "maxValue": 1,
+                      "default": true,
+                      "controlAddress": "/editable",
+                      "type": "Boolean",
+                      "niceName": "Editable",
+                      "customizable": false,
+                      "removable": false,
+                      "description": "If enabled, the parameter will be editable when instantiating this template",
+                      "hideInEditor": false,
+                      "feedbackOnly": false
+                    }
+                  ],
+                  "niceName": "sceneItemEnabled"
                 }
               ]
             }
@@ -3565,6 +3729,93 @@
             }
           }
         }
+      },
+      {
+        "niceName": "Sound Card",
+        "type": "Sound Card",
+        "scripts": {
+          "viewOffset": [
+            0,
+            0
+          ],
+          "viewZoom": 1.0
+        },
+        "params": {
+          "parameters": [
+            {
+              "value": "MPM",
+              "controlAddress": "/pitchDetectionMethod"
+            }
+          ],
+          "containers": {
+            "inputVolumes": {
+              "parameters": [
+                {
+                  "value": 2.171084403991699,
+                  "controlAddress": "/input1Gain"
+                }
+              ]
+            },
+            "outputVolumes": {
+              "editorIsCollapsed": true
+            },
+            "monitor": {
+              "parameters": [
+                {
+                  "value": false,
+                  "controlAddress": "/enabled"
+                },
+                {
+                  "value": 2.710843324661255,
+                  "controlAddress": "/monitorVolume"
+                }
+              ]
+            },
+            "fftAnalysis": {
+              "parameters": [
+                {
+                  "value": false,
+                  "controlAddress": "/enabled"
+                }
+              ],
+              "viewOffset": [
+                0,
+                0
+              ],
+              "viewZoom": 1.0
+            },
+            "ltc": {
+              "parameters": [
+                {
+                  "value": false,
+                  "controlAddress": "/enabled"
+                }
+              ],
+              "editorIsCollapsed": true
+            }
+          }
+        },
+        "templates": {
+          "viewOffset": [
+            0,
+            0
+          ],
+          "viewZoom": 1.0
+        },
+        "audioSettings": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n\r\n<DEVICESETUP deviceType=\"ALSA\" audioOutputDeviceName=\"\" audioInputDeviceName=\"PulseAudio Sound Server\"\r\n             audioDeviceRate=\"44100.0\" audioDeviceInChans=\"1\"/>\r\n",
+        "analyzer": {
+          "parameters": [
+            {
+              "value": false,
+              "controlAddress": "/enabled"
+            }
+          ],
+          "viewOffset": [
+            0,
+            0
+          ],
+          "viewZoom": 1.0
+        }
       }
     ],
     "viewOffset": [
@@ -3811,6 +4062,29 @@
               "niceName": "FINISH",
               "editorIsCollapsed": true,
               "type": "String Parameter"
+            },
+            {
+              "parameters": [
+                {
+                  "value": "_ Notebook + Cam",
+                  "controlMode": 2,
+                  "reference": {
+                    "value": "/modules/obsWebsocket/values/scenes/_Notebook_Cam/sceneName",
+                    "controlAddress": "/reference"
+                  },
+                  "controlAddress": "/_NOTEBOOK_Cam",
+                  "feedbackOnly": false,
+                  "type": "String",
+                  "niceName": "_ NOTEBOOK + Cam",
+                  "customizable": true,
+                  "removable": false,
+                  "description": "Custom control of type String",
+                  "hideInEditor": false
+                }
+              ],
+              "niceName": "_ NOTEBOOK + Cam",
+              "editorIsCollapsed": true,
+              "type": "String Parameter"
             }
           ],
           "viewOffset": [
@@ -3857,7 +4131,7 @@
             {
               "parameters": [
                 {
-                  "value": true,
+                  "value": false,
                   "minValue": 0,
                   "maxValue": 1,
                   "default": false,
@@ -3878,7 +4152,7 @@
             {
               "parameters": [
                 {
-                  "value": true,
+                  "value": false,
                   "minValue": 0,
                   "maxValue": 1,
                   "default": false,
@@ -3899,7 +4173,7 @@
             {
               "parameters": [
                 {
-                  "value": false,
+                  "value": true,
                   "minValue": 0,
                   "maxValue": 1,
                   "default": false,
@@ -3941,7 +4215,7 @@
             {
               "parameters": [
                 {
-                  "value": false,
+                  "value": true,
                   "minValue": 0,
                   "maxValue": 1,
                   "default": false,
@@ -3962,7 +4236,7 @@
             {
               "parameters": [
                 {
-                  "value": false,
+                  "value": true,
                   "minValue": 0,
                   "maxValue": 1,
                   "default": false,
@@ -4004,7 +4278,7 @@
             {
               "parameters": [
                 {
-                  "value": true,
+                  "value": false,
                   "minValue": 0,
                   "maxValue": 1,
                   "default": false,
@@ -4025,7 +4299,7 @@
             {
               "parameters": [
                 {
-                  "value": false,
+                  "value": true,
                   "minValue": 0,
                   "maxValue": 1,
                   "default": false,
@@ -4046,7 +4320,7 @@
             {
               "parameters": [
                 {
-                  "value": false,
+                  "value": true,
                   "minValue": 0,
                   "maxValue": 1,
                   "default": false,
@@ -4067,7 +4341,7 @@
             {
               "parameters": [
                 {
-                  "value": false,
+                  "value": true,
                   "minValue": 0,
                   "maxValue": 1,
                   "default": false,
@@ -4176,8 +4450,8 @@
         "parameters": [
           {
             "value": [
-              -475.0,
-              -304.0
+              -610.1747436523438,
+              -518.2135620117188
             ],
             "controlAddress": "/viewUIPosition"
           },
@@ -4588,8 +4862,8 @@
         "parameters": [
           {
             "value": [
-              -526.0,
-              107.0
+              -610.1747436523438,
+              -139.1844635009766
             ],
             "controlAddress": "/viewUIPosition"
           }
@@ -4846,15 +5120,15 @@
         "parameters": [
           {
             "value": [
-              63.0,
-              -406.0
+              -216.2330322265625,
+              -516.9708862304688
             ],
             "controlAddress": "/viewUIPosition"
           },
           {
             "value": [
-              438.0,
-              521.0
+              402.0,
+              800.0
             ],
             "controlAddress": "/viewUISize"
           },
@@ -4867,162 +5141,6 @@
         "type": "State",
         "processors": {
           "items": [
-            {
-              "niceName": "TAG autoptz",
-              "editorIsCollapsed": true,
-              "type": "Mapping",
-              "im": {
-                "items": [
-                  {
-                    "parameters": [
-                      {
-                        "value": "/modules/obsWebsocket/values/currentScene",
-                        "controlAddress": "/inputValue"
-                      }
-                    ],
-                    "niceName": "Input Value",
-                    "type": "Input Value"
-                  }
-                ],
-                "viewOffset": [
-                  0,
-                  0
-                ],
-                "viewZoom": 1.0
-              },
-              "params": {
-                "parameters": [
-                  {
-                    "value": 50,
-                    "hexMode": false,
-                    "controlAddress": "/updateRate"
-                  },
-                  {
-                    "value": false,
-                    "controlAddress": "/sendOnOutputChangeOnly"
-                  },
-                  {
-                    "value": true,
-                    "controlAddress": "/sendAfterLoad"
-                  },
-                  {
-                    "value": true,
-                    "controlAddress": "/sendOnActivate"
-                  }
-                ],
-                "editorIsCollapsed": true
-              },
-              "filters": {
-                "items": [
-                  {
-                    "parameters": [
-                      {
-                        "value": false,
-                        "controlAddress": "/enabled"
-                      }
-                    ],
-                    "niceName": "Script",
-                    "editorIsCollapsed": true,
-                    "type": "Script",
-                    "filterParams": {
-                      "paramLinks": {
-                      }
-                    },
-                    "script": {
-                      "parameters": [
-                        {
-                          "value": "scripts/filters/regexp_test.js",
-                          "controlAddress": "/filePath"
-                        }
-                      ],
-                      "niceName": "regexp_test",
-                      "type": "BaseItem",
-                      "scriptParams": {
-                        "parameters": [
-                          {
-                            "value": "autoptz([^\\w]|$)",
-                            "controlAddress": "/regexp"
-                          }
-                        ]
-                      }
-                    }
-                  },
-                  {
-                    "niceName": "Condition",
-                    "type": "Condition",
-                    "filterParams": {
-                      "paramLinks": {
-                      }
-                    },
-                    "conditions": {
-                      "items": [
-                        {
-                          "parameters": [
-                            {
-                              "value": "/modules/obsWebsocket/values/currentScene",
-                              "controlAddress": "/inputValue"
-                            },
-                            {
-                              "value": true,
-                              "controlAddress": "/alwaysTrigger"
-                            }
-                          ],
-                          "niceName": "From Input Value",
-                          "type": "From Input Value",
-                          "comparator": {
-                            "parameters": [
-                              {
-                                "value": "Contains",
-                                "controlAddress": "/comparisonFunction"
-                              },
-                              {
-                                "value": "autoptz",
-                                "controlAddress": "/reference"
-                              }
-                            ],
-                            "hideInEditor": true
-                          }
-                        }
-                      ],
-                      "viewOffset": [
-                        0,
-                        0
-                      ],
-                      "viewZoom": 1.0
-                    }
-                  },
-                  {
-                    "niceName": "Convert To Boolean",
-                    "type": "Convert To Boolean",
-                    "filterParams": {
-                      "parameters": [
-                        {
-                          "value": "",
-                          "controlAddress": "/retargetComponent"
-                        }
-                      ],
-                      "paramLinks": {
-                      }
-                    },
-                    "ghostOptions": {
-                      "retarget": null
-                    }
-                  }
-                ],
-                "viewOffset": [
-                  0,
-                  0
-                ],
-                "viewZoom": 1.0
-              },
-              "outputs": {
-                "viewOffset": [
-                  0,
-                  0
-                ],
-                "viewZoom": 1.0
-              }
-            },
             {
               "niceName": "SW SCENE Projector",
               "editorIsCollapsed": true,
@@ -5704,10 +5822,74 @@
               }
             },
             {
+              "niceName": "TRANSITION",
+              "editorIsCollapsed": true,
+              "type": "Action",
+              "conditions": {
+                "items": [
+                  {
+                    "parameters": [
+                      {
+                        "value": "",
+                        "controlAddress": "/inputValue"
+                      }
+                    ],
+                    "niceName": "From Input Value",
+                    "type": "From Input Value"
+                  }
+                ],
+                "viewOffset": [
+                  0,
+                  0
+                ],
+                "viewZoom": 1.0
+              },
+              "consequences": {
+                "parameters": [
+                  {
+                    "value": false,
+                    "controlAddress": "/cancelDelaysOnTrigger"
+                  }
+                ],
+                "items": [
+                  {
+                    "niceName": "Consequence 1",
+                    "type": "Consequence",
+                    "commandModule": "obsWebsocket",
+                    "commandPath": "Transitions Requests",
+                    "commandType": "TriggerStudioModeTransition",
+                    "command": {
+                      "paramLinks": {
+                      }
+                    }
+                  }
+                ],
+                "viewOffset": [
+                  0,
+                  0
+                ],
+                "viewZoom": 1.0
+              },
+              "consequencesOff": {
+                "viewOffset": [
+                  0,
+                  0
+                ],
+                "viewZoom": 1.0
+              }
+            },
+            {
+              "parameters": [
+                {
+                  "value": true,
+                  "controlAddress": "/enabled"
+                }
+              ],
               "niceName": "CAM TOGGLE",
               "editorIsCollapsed": true,
               "type": "Action",
               "conditions": {
+                "editorIsCollapsed": true,
                 "items": [
                   {
                     "parameters": [
@@ -5744,7 +5926,7 @@
                 ],
                 "items": [
                   {
-                    "niceName": "Consequence",
+                    "niceName": "Consequence 1",
                     "type": "Consequence",
                     "commandModule": "obsWebsocket",
                     "commandPath": "Scene Items Requests",
@@ -5752,12 +5934,26 @@
                     "command": {
                       "parameters": [
                         {
+                          "value": "_ Notebook + Cam",
+                          "controlMode": 2,
+                          "reference": {
+                            "value": "/customVariables/sceneNames/variables/_NOTEBOOK_Cam/_NOTEBOOK_Cam",
+                            "controlAddress": "/reference"
+                          },
+                          "controlAddress": "/sceneName"
+                        },
+                        {
                           "value": 20,
                           "hexMode": false,
                           "controlAddress": "/sceneItemId"
                         },
                         {
-                          "value": false,
+                          "value": true,
+                          "controlMode": 2,
+                          "reference": {
+                            "value": "/states/obs_state/processors/camVisibilityNegated/outValues/out1",
+                            "controlAddress": "/reference"
+                          },
                           "controlAddress": "/sceneItemEnabled"
                         }
                       ],
@@ -5773,6 +5969,12 @@
                 "viewZoom": 1.0
               },
               "consequencesOff": {
+                "parameters": [
+                  {
+                    "value": false,
+                    "controlAddress": "/cancelDelaysOnTrigger"
+                  }
+                ],
                 "viewOffset": [
                   0,
                   0
@@ -7475,20 +7677,20 @@
               }
             },
             {
-              "niceName": "Action 1",
+              "niceName": "CamVisibilityNegated",
               "editorIsCollapsed": true,
-              "type": "Action",
-              "conditions": {
+              "type": "Mapping",
+              "im": {
                 "items": [
                   {
                     "parameters": [
                       {
-                        "value": "",
+                        "value": "/modules/obsWebsocket/values/scene_item_20_enabled",
                         "controlAddress": "/inputValue"
                       }
                     ],
-                    "niceName": "From Input Value",
-                    "type": "From Input Value"
+                    "niceName": "Input Value",
+                    "type": "Input Value"
                   }
                 ],
                 "viewOffset": [
@@ -7497,14 +7699,34 @@
                 ],
                 "viewZoom": 1.0
               },
-              "consequences": {
+              "params": {
+                "parameters": [
+                  {
+                    "value": 50,
+                    "hexMode": false,
+                    "controlAddress": "/updateRate"
+                  }
+                ],
+                "editorIsCollapsed": true
+              },
+              "filters": {
+                "items": [
+                  {
+                    "niceName": "Inverse",
+                    "type": "Inverse",
+                    "filterParams": {
+                      "paramLinks": {
+                      }
+                    }
+                  }
+                ],
                 "viewOffset": [
                   0,
                   0
                 ],
                 "viewZoom": 1.0
               },
-              "consequencesOff": {
+              "outputs": {
                 "viewOffset": [
                   0,
                   0
@@ -7522,10 +7744,10 @@
       }
     ],
     "viewOffset": [
-      -264,
-      155
+      -281,
+      90
     ],
-    "viewZoom": 1.0,
+    "viewZoom": 0.8046875,
     "transitions": {
       "hideInEditor": true,
       "viewOffset": [
@@ -7537,10 +7759,10 @@
     "comments": {
       "hideInEditor": true,
       "viewOffset": [
-        -264,
-        155
+        -281,
+        90
       ],
-      "viewZoom": 1.0
+      "viewZoom": 0.8046875
     }
   },
   "sequences": {

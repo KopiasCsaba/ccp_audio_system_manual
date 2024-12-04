@@ -38,7 +38,7 @@
   "dashboardManager": {
     "parameters": [
       {
-        "value": false,
+        "value": true,
         "controlAddress": "/editMode"
       }
     ],
@@ -63,7 +63,7 @@
                 {
                   "value": [
                     -22.0,
-                    3.0
+                    2.0
                   ],
                   "controlAddress": "/viewUIPosition"
                 },
@@ -174,7 +174,7 @@
                 {
                   "value": [
                     -22.0,
-                    -244.0
+                    -195.0
                   ],
                   "controlAddress": "/viewUIPosition"
                 },
@@ -248,7 +248,7 @@
                 {
                   "value": [
                     -22.0,
-                    -194.5999755859375
+                    -145.0
                   ],
                   "controlAddress": "/viewUIPosition"
                 },
@@ -432,8 +432,45 @@
               "parameters": [
                 {
                   "value": [
-                    -22.0,
-                    -145.2000122070312
+                    237.0,
+                    5.0
+                  ],
+                  "controlAddress": "/viewUIPosition"
+                },
+                {
+                  "value": [
+                    200.0,
+                    40.0
+                  ],
+                  "controlAddress": "/viewUISize"
+                },
+                {
+                  "value": "/states/obs_state/processors/transition/trigger",
+                  "controlAddress": "/target"
+                },
+                {
+                  "value": "TRANSITION",
+                  "controlAddress": "/customText",
+                  "enabled": true
+                },
+                {
+                  "value": "",
+                  "controlAddress": "/customImage",
+                  "enabled": false
+                }
+              ],
+              "niceName": "Item 11",
+              "hideInEditor": true,
+              "type": "DashboardTriggerItem",
+              "ghostAddress": "/states/obs_state/processors/transition/trigger",
+              "controllable": "/states/obs_state/processors/transition/trigger"
+            },
+            {
+              "parameters": [
+                {
+                  "value": [
+                    237.0,
+                    -45.0
                   ],
                   "controlAddress": "/viewUIPosition"
                 },
@@ -459,11 +496,43 @@
                   "enabled": false
                 }
               ],
-              "niceName": "Item 10",
+              "niceName": "Item 12",
               "hideInEditor": true,
               "type": "DashboardTriggerItem",
               "ghostAddress": "/states/obs_state/processors/camTOGGLE/trigger",
               "controllable": "/states/obs_state/processors/camTOGGLE/trigger"
+            },
+            {
+              "parameters": [
+                {
+                  "value": [
+                    -376.0,
+                    5.0
+                  ],
+                  "controlAddress": "/viewUIPosition"
+                },
+                {
+                  "value": [
+                    200.0,
+                    40.0
+                  ],
+                  "controlAddress": "/viewUISize"
+                },
+                {
+                  "value": "/customVariables/workflows/variables/stageMuteCounter/stageMuteCounter",
+                  "controlAddress": "/target"
+                },
+                {
+                  "value": "",
+                  "controlAddress": "/toggleImage",
+                  "enabled": false
+                }
+              ],
+              "niceName": "Item 10",
+              "hideInEditor": true,
+              "type": "DashboardParameterItem",
+              "ghostAddress": "/customVariables/workflows/variables/stageMuteCounter/stageMuteCounter",
+              "controllable": "/customVariables/workflows/variables/stageMuteCounter/stageMuteCounter"
             }
           ],
           "viewOffset": [
@@ -504,19 +573,19 @@
             {
               "type": 1,
               "width": 2560,
-              "height": 694,
+              "height": 722,
               "direction": 1,
               "shifters": [
                 {
                   "type": 1,
                   "width": 307,
-                  "height": 694,
+                  "height": 722,
                   "direction": 2,
                   "shifters": [
                     {
                       "type": 0,
                       "width": 307,
-                      "height": 355,
+                      "height": 370,
                       "currentContent": "Modules",
                       "tabs": [
                         {
@@ -527,7 +596,7 @@
                     {
                       "type": 0,
                       "width": 307,
-                      "height": 333,
+                      "height": 346,
                       "currentContent": "Custom Variables",
                       "tabs": [
                         {
@@ -539,8 +608,8 @@
                 },
                 {
                   "type": 0,
-                  "width": 1143,
-                  "height": 694,
+                  "width": 1626,
+                  "height": 722,
                   "currentContent": "State Machine",
                   "tabs": [
                     {
@@ -559,8 +628,8 @@
                 },
                 {
                   "type": 0,
-                  "width": 1098,
-                  "height": 694,
+                  "width": 615,
+                  "height": 722,
                   "currentContent": "Inspector",
                   "tabs": [
                     {
@@ -573,13 +642,13 @@
             {
               "type": 1,
               "width": 2560,
-              "height": 317,
+              "height": 289,
               "direction": 1,
               "shifters": [
                 {
                   "type": 0,
                   "width": 178,
-                  "height": 317,
+                  "height": 289,
                   "currentContent": "Sequences",
                   "tabs": [
                     {
@@ -590,7 +659,7 @@
                 {
                   "type": 0,
                   "width": 873,
-                  "height": 317,
+                  "height": 289,
                   "currentContent": "Sequence Editor",
                   "tabs": [
                     {
@@ -601,7 +670,7 @@
                 {
                   "type": 0,
                   "width": 300,
-                  "height": 317,
+                  "height": 289,
                   "currentContent": "The Detective",
                   "tabs": [
                     {
@@ -612,7 +681,7 @@
                 {
                   "type": 0,
                   "width": 1191,
-                  "height": 317,
+                  "height": 289,
                   "currentContent": "Logger",
                   "tabs": [
                     {
@@ -2537,6 +2606,12 @@
         }
       },
       {
+        "parameters": [
+          {
+            "value": true,
+            "controlAddress": "/enabled"
+          }
+        ],
         "niceName": "HTTP - PTZ CONTROL",
         "type": "HTTP",
         "scripts": {
@@ -3215,6 +3290,16 @@
             "activeItemTransform": {
               "parameters": [
                 {
+                  "value": 0,
+                  "hexMode": false,
+                  "controlAddress": "/positionX"
+                },
+                {
+                  "value": 0,
+                  "hexMode": false,
+                  "controlAddress": "/positionY"
+                },
+                {
                   "value": 1.0,
                   "controlAddress": "/zoom"
                 }
@@ -3682,6 +3767,123 @@
             }
           }
         }
+      },
+      {
+        "parameters": [
+          {
+            "value": true,
+            "controlAddress": "/enabled"
+          }
+        ],
+        "niceName": "Sound Card",
+        "type": "Sound Card",
+        "scripts": {
+          "viewOffset": [
+            0,
+            0
+          ],
+          "viewZoom": 1.0
+        },
+        "params": {
+          "parameters": [
+            {
+              "value": 4.505882263183594,
+              "controlAddress": "/inputGain"
+            },
+            {
+              "value": "MPM",
+              "controlAddress": "/pitchDetectionMethod"
+            }
+          ],
+          "containers": {
+            "inputVolumes": {
+              "parameters": [
+                {
+                  "value": 2.612048387527466,
+                  "controlAddress": "/input1Gain"
+                }
+              ]
+            },
+            "outputVolumes": {
+              "editorIsCollapsed": true
+            },
+            "monitor": {
+              "parameters": [
+                {
+                  "value": false,
+                  "controlAddress": "/enabled"
+                },
+                {
+                  "value": 4.469879627227783,
+                  "controlAddress": "/monitorVolume"
+                }
+              ]
+            },
+            "fftAnalysis": {
+              "parameters": [
+                {
+                  "value": false,
+                  "controlAddress": "/enabled"
+                }
+              ],
+              "viewOffset": [
+                0,
+                0
+              ],
+              "viewZoom": 1.0
+            },
+            "ltc": {
+              "parameters": [
+                {
+                  "value": false,
+                  "controlAddress": "/enabled"
+                }
+              ],
+              "editorIsCollapsed": true
+            }
+          }
+        },
+        "templates": {
+          "viewOffset": [
+            0,
+            0
+          ],
+          "viewZoom": 1.0
+        },
+        "audioSettings": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n\r\n<DEVICESETUP deviceType=\"ALSA\" audioOutputDeviceName=\"\" audioInputDeviceName=\"PulseAudio Sound Server\"\r\n             audioDeviceRate=\"44100.0\" audioDeviceInChans=\"1\"/>\r\n",
+        "analyzer": {
+          "parameters": [
+            {
+              "value": false,
+              "controlAddress": "/enabled"
+            }
+          ],
+          "viewOffset": [
+            0,
+            0
+          ],
+          "viewZoom": 1.0
+        }
+      },
+      {
+        "niceName": "Keyboard",
+        "type": "Keyboard",
+        "scripts": {
+          "viewOffset": [
+            0,
+            0
+          ],
+          "viewZoom": 1.0
+        },
+        "params": {
+        },
+        "templates": {
+          "viewOffset": [
+            0,
+            0
+          ],
+          "viewZoom": 1.0
+        }
       }
     ],
     "viewOffset": [
@@ -3997,7 +4199,7 @@
             {
               "parameters": [
                 {
-                  "value": true,
+                  "value": false,
                   "minValue": 0,
                   "maxValue": 1,
                   "default": false,
@@ -4018,7 +4220,7 @@
             {
               "parameters": [
                 {
-                  "value": true,
+                  "value": false,
                   "minValue": 0,
                   "maxValue": 1,
                   "default": false,
@@ -4081,7 +4283,7 @@
             {
               "parameters": [
                 {
-                  "value": false,
+                  "value": true,
                   "minValue": 0,
                   "maxValue": 1,
                   "default": false,
@@ -4102,7 +4304,7 @@
             {
               "parameters": [
                 {
-                  "value": false,
+                  "value": true,
                   "minValue": 0,
                   "maxValue": 1,
                   "default": false,
@@ -4144,7 +4346,7 @@
             {
               "parameters": [
                 {
-                  "value": true,
+                  "value": false,
                   "minValue": 0,
                   "maxValue": 1,
                   "default": false,
@@ -4165,7 +4367,7 @@
             {
               "parameters": [
                 {
-                  "value": false,
+                  "value": true,
                   "minValue": 0,
                   "maxValue": 1,
                   "default": false,
@@ -4186,7 +4388,7 @@
             {
               "parameters": [
                 {
-                  "value": false,
+                  "value": true,
                   "minValue": 0,
                   "maxValue": 1,
                   "default": false,
@@ -4207,7 +4409,7 @@
             {
               "parameters": [
                 {
-                  "value": false,
+                  "value": true,
                   "minValue": 0,
                   "maxValue": 1,
                   "default": false,
@@ -4302,6 +4504,74 @@
           ],
           "viewZoom": 1.0
         }
+      },
+      {
+        "parameters": [
+          {
+            "value": true,
+            "controlAddress": "/enabled"
+          }
+        ],
+        "niceName": "Workflows",
+        "type": "CVGroup",
+        "params": {
+        },
+        "variables": {
+          "items": [
+            {
+              "parameters": [
+                {
+                  "value": 0,
+                  "hexMode": false,
+                  "controlAddress": "/stageMuteCounter",
+                  "feedbackOnly": false,
+                  "type": "Integer",
+                  "niceName": "StageMuteCounter",
+                  "customizable": true,
+                  "removable": false,
+                  "description": "Custom control of type Integer",
+                  "hideInEditor": false
+                }
+              ],
+              "niceName": "StageMuteCounter",
+              "editorIsCollapsed": true,
+              "type": "Int Parameter"
+            },
+            {
+              "parameters": [
+                {
+                  "value": true,
+                  "minValue": 0,
+                  "maxValue": 1,
+                  "default": false,
+                  "controlAddress": "/stageMuted",
+                  "feedbackOnly": false,
+                  "type": "Boolean",
+                  "niceName": "StageMuted",
+                  "customizable": true,
+                  "removable": false,
+                  "description": "Custom control of type Boolean",
+                  "hideInEditor": false
+                }
+              ],
+              "niceName": "StageMuted",
+              "editorIsCollapsed": true,
+              "type": "Bool Parameter"
+            }
+          ],
+          "viewOffset": [
+            0,
+            0
+          ],
+          "viewZoom": 1.0
+        },
+        "presets": {
+          "viewOffset": [
+            0,
+            0
+          ],
+          "viewZoom": 1.0
+        }
       }
     ],
     "viewOffset": [
@@ -4316,8 +4586,8 @@
         "parameters": [
           {
             "value": [
-              -323.0,
-              -327.0
+              -610.1747436523438,
+              -518.2135620117188
             ],
             "controlAddress": "/viewUIPosition"
           },
@@ -4728,10 +4998,17 @@
         "parameters": [
           {
             "value": [
-              -526.0,
-              107.0
+              -610.0,
+              -150.0
             ],
             "controlAddress": "/viewUIPosition"
+          },
+          {
+            "value": [
+              355.0,
+              138.0
+            ],
+            "controlAddress": "/viewUISize"
           }
         ],
         "niceName": "CameraActions",
@@ -4986,15 +5263,15 @@
         "parameters": [
           {
             "value": [
-              63.0,
-              -406.0
+              -216.2330322265625,
+              -516.9708862304688
             ],
             "controlAddress": "/viewUIPosition"
           },
           {
             "value": [
-              438.0,
-              521.0
+              402.0,
+              800.0
             ],
             "controlAddress": "/viewUISize"
           },
@@ -5688,34 +5965,86 @@
               }
             },
             {
+              "niceName": "TRANSITION",
+              "editorIsCollapsed": true,
+              "type": "Action",
+              "conditions": {
+                "items": [
+                  {
+                    "parameters": [
+                      {
+                        "value": "",
+                        "controlAddress": "/inputValue"
+                      }
+                    ],
+                    "niceName": "From Input Value",
+                    "type": "From Input Value"
+                  }
+                ],
+                "viewOffset": [
+                  0,
+                  0
+                ],
+                "viewZoom": 1.0
+              },
+              "consequences": {
+                "parameters": [
+                  {
+                    "value": false,
+                    "controlAddress": "/cancelDelaysOnTrigger"
+                  }
+                ],
+                "items": [
+                  {
+                    "niceName": "Consequence 1",
+                    "type": "Consequence",
+                    "commandModule": "obsWebsocket",
+                    "commandPath": "Transitions Requests",
+                    "commandType": "TriggerStudioModeTransition",
+                    "command": {
+                      "paramLinks": {
+                      }
+                    }
+                  }
+                ],
+                "viewOffset": [
+                  0,
+                  0
+                ],
+                "viewZoom": 1.0
+              },
+              "consequencesOff": {
+                "viewOffset": [
+                  0,
+                  0
+                ],
+                "viewZoom": 1.0
+              }
+            },
+            {
               "parameters": [
                 {
-                  "value": false,
+                  "value": true,
                   "controlAddress": "/enabled"
+                },
+                {
+                  "value": [
+                    0.5971372723579407,
+                    0.1581647098064423,
+                    0.6230784058570862,
+                    1.0
+                  ],
+                  "controlAddress": "/color"
                 }
               ],
               "niceName": "CAM TOGGLE",
               "editorIsCollapsed": true,
               "type": "Action",
               "conditions": {
-                "parameters": [
-                  {
-                    "value": 0.0,
-                    "controlAddress": "/validationTime"
-                  },
-                  {
-                    "value": 0.0,
-                    "controlAddress": "/invalidationTime"
-                  }
-                ],
                 "editorIsCollapsed": true,
                 "items": [
                   {
                     "parameters": [
-                      {
-                        "value": true,
-                        "controlAddress": "/enabled"
-                      },
                       {
                         "value": "/modules/obsWebsocket/values/scene_item_20_enabled",
                         "controlAddress": "/inputValue"
@@ -5742,10 +6071,6 @@
               },
               "consequences": {
                 "parameters": [
-                  {
-                    "value": 0.0,
-                    "controlAddress": "/delay"
-                  },
                   {
                     "value": false,
                     "controlAddress": "/cancelDelaysOnTrigger"
@@ -5775,7 +6100,12 @@
                           "controlAddress": "/sceneItemId"
                         },
                         {
-                          "value": false,
+                          "value": true,
+                          "controlMode": 2,
+                          "reference": {
+                            "value": "/states/obs_state/processors/camVisibilityNegated/outValues/out1",
+                            "controlAddress": "/reference"
+                          },
                           "controlAddress": "/sceneItemEnabled"
                         }
                       ],
@@ -5793,51 +6123,8 @@
               "consequencesOff": {
                 "parameters": [
                   {
-                    "value": 0.0,
-                    "controlAddress": "/delay"
-                  },
-                  {
                     "value": false,
                     "controlAddress": "/cancelDelaysOnTrigger"
-                  }
-                ],
-                "items": [
-                  {
-                    "parameters": [
-                      {
-                        "value": false,
-                        "controlAddress": "/enabled"
-                      }
-                    ],
-                    "niceName": "Consequence",
-                    "type": "Consequence",
-                    "commandModule": "obsWebsocket",
-                    "commandPath": "Scene Items Requests",
-                    "commandType": "SetSceneItemEnabled",
-                    "command": {
-                      "parameters": [
-                        {
-                          "value": "_ Notebook + Cam",
-                          "controlMode": 2,
-                          "reference": {
-                            "value": "/customVariables/sceneNames/variables/_NOTEBOOK_Cam/_NOTEBOOK_Cam",
-                            "controlAddress": "/reference"
-                          },
-                          "controlAddress": "/sceneName"
-                        },
-                        {
-                          "value": 20,
-                          "hexMode": false,
-                          "controlAddress": "/sceneItemId"
-                        },
-                        {
-                          "value": true,
-                          "controlAddress": "/sceneItemEnabled"
-                        }
-                      ],
-                      "paramLinks": {
-                      }
-                    }
                   }
                 ],
                 "viewOffset": [
@@ -6699,6 +6986,12 @@
               "editorIsCollapsed": true,
               "type": "Action",
               "conditions": {
+                "parameters": [
+                  {
+                    "value": "AND",
+                    "controlAddress": "/operator"
+                  }
+                ],
                 "items": [
                   {
                     "parameters": [
@@ -7540,6 +7833,413 @@
                 ],
                 "viewZoom": 1.0
               }
+            },
+            {
+              "niceName": "Cam Visibility Negated",
+              "editorIsCollapsed": true,
+              "type": "Mapping",
+              "im": {
+                "items": [
+                  {
+                    "parameters": [
+                      {
+                        "value": "/modules/obsWebsocket/values/scene_item_20_enabled",
+                        "controlAddress": "/inputValue"
+                      }
+                    ],
+                    "niceName": "Input Value",
+                    "type": "Input Value"
+                  }
+                ],
+                "viewOffset": [
+                  0,
+                  0
+                ],
+                "viewZoom": 1.0
+              },
+              "params": {
+                "parameters": [
+                  {
+                    "value": 50,
+                    "hexMode": false,
+                    "controlAddress": "/updateRate"
+                  }
+                ],
+                "editorIsCollapsed": true
+              },
+              "filters": {
+                "items": [
+                  {
+                    "niceName": "Inverse",
+                    "type": "Inverse",
+                    "filterParams": {
+                      "paramLinks": {
+                      }
+                    }
+                  }
+                ],
+                "viewOffset": [
+                  0,
+                  0
+                ],
+                "viewZoom": 1.0
+              },
+              "outputs": {
+                "viewOffset": [
+                  0,
+                  0
+                ],
+                "viewZoom": 1.0
+              }
+            }
+          ],
+          "viewOffset": [
+            0,
+            0
+          ],
+          "viewZoom": 1.0
+        }
+      },
+      {
+        "parameters": [
+          {
+            "value": [
+              269.0,
+              -516.0
+            ],
+            "controlAddress": "/viewUIPosition"
+          },
+          {
+            "value": [
+              493.0,
+              179.0
+            ],
+            "controlAddress": "/viewUISize"
+          },
+          {
+            "value": true,
+            "controlAddress": "/active"
+          }
+        ],
+        "niceName": "Stage Muter",
+        "type": "State",
+        "processors": {
+          "items": [
+            {
+              "niceName": "Stage Mute Watcher",
+              "editorIsCollapsed": true,
+              "type": "Action",
+              "conditions": {
+                "parameters": [
+                  {
+                    "value": 0.2000000029802322,
+                    "controlAddress": "/validationTime"
+                  },
+                  {
+                    "value": 0.009999999776482582,
+                    "controlAddress": "/invalidationTime"
+                  }
+                ],
+                "items": [
+                  {
+                    "parameters": [
+                      {
+                        "value": "/modules/soundCard/values/pitchDetection/note",
+                        "controlAddress": "/inputValue"
+                      }
+                    ],
+                    "niceName": "From Input Value",
+                    "type": "From Input Value",
+                    "comparator": {
+                      "parameters": [
+                        {
+                          "value": "C",
+                          "controlAddress": "/reference"
+                        }
+                      ],
+                      "hideInEditor": true
+                    }
+                  }
+                ],
+                "viewOffset": [
+                  0,
+                  0
+                ],
+                "viewZoom": 1.0
+              },
+              "consequences": {
+                "parameters": [
+                  {
+                    "value": false,
+                    "controlAddress": "/cancelDelaysOnTrigger"
+                  }
+                ],
+                "items": [
+                  {
+                    "niceName": "Consequence",
+                    "type": "Consequence",
+                    "commandModule": "customVariables",
+                    "commandPath": "",
+                    "commandType": "Set Value",
+                    "command": {
+                      "parameters": [
+                        {
+                          "value": "/workflows/stageMuteCounter",
+                          "controlAddress": "/target"
+                        },
+                        {
+                          "value": "All",
+                          "controlAddress": "/component"
+                        },
+                        {
+                          "value": "Add",
+                          "controlAddress": "/operator"
+                        },
+                        {
+                          "value": 1,
+                          "hexMode": false,
+                          "controlAddress": "/value"
+                        }
+                      ],
+                      "paramLinks": {
+                      }
+                    }
+                  },
+                  {
+                    "niceName": "Consequence 2",
+                    "type": "Consequence",
+                    "commandModule": "sequences",
+                    "commandPath": "Playback",
+                    "commandType": "Play Sequence",
+                    "command": {
+                      "parameters": [
+                        {
+                          "value": "/sequences/resetMuteCounter",
+                          "controlAddress": "/target"
+                        },
+                        {
+                          "value": true,
+                          "controlAddress": "/playFromStart"
+                        }
+                      ],
+                      "paramLinks": {
+                      }
+                    }
+                  }
+                ],
+                "viewOffset": [
+                  0,
+                  0
+                ],
+                "viewZoom": 1.0
+              },
+              "consequencesOff": {
+                "viewOffset": [
+                  0,
+                  0
+                ],
+                "viewZoom": 1.0
+              }
+            },
+            {
+              "niceName": "Stage Muter",
+              "editorIsCollapsed": true,
+              "type": "Action",
+              "conditions": {
+                "items": [
+                  {
+                    "parameters": [
+                      {
+                        "value": "/customVariables/customVariables/values/workflows/stageMuteCounter",
+                        "controlAddress": "/inputValue"
+                      },
+                      {
+                        "value": false,
+                        "controlAddress": "/alwaysTrigger"
+                      }
+                    ],
+                    "niceName": "From Input Value 1",
+                    "type": "From Input Value",
+                    "comparator": {
+                      "parameters": [
+                        {
+                          "value": ">=",
+                          "controlAddress": "/comparisonFunction"
+                        },
+                        {
+                          "value": 4,
+                          "hexMode": false,
+                          "controlAddress": "/reference"
+                        }
+                      ],
+                      "hideInEditor": true
+                    }
+                  }
+                ],
+                "viewOffset": [
+                  0,
+                  0
+                ],
+                "viewZoom": 1.0
+              },
+              "consequences": {
+                "parameters": [
+                  {
+                    "value": false,
+                    "controlAddress": "/cancelDelaysOnTrigger"
+                  }
+                ],
+                "items": [
+                  {
+                    "niceName": "Consequence",
+                    "type": "Consequence",
+                    "commandModule": "generic",
+                    "commandPath": "",
+                    "commandType": "Log a message",
+                    "command": {
+                      "parameters": [
+                        {
+                          "value": "Unmuting the stage",
+                          "controlMode": 1,
+                          "expression": "root.customVariables.workflows.variables.stageMuted.stageMuted.get()?\"Unmuting the stage\":\"Muting the stage\"",
+                          "controlAddress": "/message"
+                        }
+                      ],
+                      "paramLinks": {
+                      }
+                    }
+                  },
+                  {
+                    "niceName": "Consequence 1",
+                    "type": "Consequence",
+                    "commandModule": "customVariables",
+                    "commandPath": "",
+                    "commandType": "Set Value",
+                    "command": {
+                      "parameters": [
+                        {
+                          "value": "/workflows/stageMuteCounter",
+                          "controlAddress": "/target"
+                        },
+                        {
+                          "value": "All",
+                          "controlAddress": "/component"
+                        },
+                        {
+                          "value": "Equals",
+                          "controlAddress": "/operator"
+                        }
+                      ],
+                      "paramLinks": {
+                      }
+                    }
+                  },
+                  {
+                    "niceName": "Consequence 2",
+                    "type": "Consequence",
+                    "commandModule": "customVariables",
+                    "commandPath": "",
+                    "commandType": "Set Value",
+                    "command": {
+                      "parameters": [
+                        {
+                          "value": "/workflows/stageMuted",
+                          "controlAddress": "/target"
+                        },
+                        {
+                          "value": "All",
+                          "controlAddress": "/component"
+                        },
+                        {
+                          "value": "Equals",
+                          "controlAddress": "/operator"
+                        },
+                        {
+                          "value": false,
+                          "controlMode": 2,
+                          "reference": {
+                            "value": "/states/stageMuter/processors/stageMutedNegated/outValues/out1",
+                            "controlAddress": "/reference"
+                          },
+                          "controlAddress": "/value"
+                        }
+                      ],
+                      "paramLinks": {
+                      }
+                    }
+                  }
+                ],
+                "viewOffset": [
+                  0,
+                  0
+                ],
+                "viewZoom": 1.0
+              },
+              "consequencesOff": {
+                "viewOffset": [
+                  0,
+                  0
+                ],
+                "viewZoom": 1.0
+              }
+            },
+            {
+              "niceName": "Stage Muted Negated",
+              "editorIsCollapsed": true,
+              "type": "Mapping",
+              "im": {
+                "items": [
+                  {
+                    "parameters": [
+                      {
+                        "value": "/customVariables/customVariables/values/workflows/stageMuted",
+                        "controlAddress": "/inputValue"
+                      }
+                    ],
+                    "niceName": "Input Value",
+                    "type": "Input Value"
+                  }
+                ],
+                "viewOffset": [
+                  0,
+                  0
+                ],
+                "viewZoom": 1.0
+              },
+              "params": {
+                "parameters": [
+                  {
+                    "value": 50,
+                    "hexMode": false,
+                    "controlAddress": "/updateRate"
+                  }
+                ],
+                "editorIsCollapsed": true
+              },
+              "filters": {
+                "items": [
+                  {
+                    "niceName": "Inverse",
+                    "type": "Inverse",
+                    "filterParams": {
+                      "paramLinks": {
+                      }
+                    }
+                  }
+                ],
+                "viewOffset": [
+                  0,
+                  0
+                ],
+                "viewZoom": 1.0
+              },
+              "outputs": {
+                "viewOffset": [
+                  0,
+                  0
+                ],
+                "viewZoom": 1.0
+              }
             }
           ],
           "viewOffset": [
@@ -7551,8 +8251,8 @@
       }
     ],
     "viewOffset": [
-      -264,
-      155
+      -72,
+      183
     ],
     "viewZoom": 1.0,
     "transitions": {
@@ -7566,13 +8266,149 @@
     "comments": {
       "hideInEditor": true,
       "viewOffset": [
-        -264,
-        155
+        -72,
+        183
       ],
       "viewZoom": 1.0
     }
   },
   "sequences": {
+    "items": [
+      {
+        "parameters": [
+          {
+            "value": 3.0,
+            "controlAddress": "/totalTime"
+          },
+          {
+            "value": false,
+            "controlAddress": "/loop"
+          },
+          {
+            "value": 3.0,
+            "controlAddress": "/viewEndTime"
+          },
+          {
+            "value": [
+              0.2121215611696243,
+              0.2121215611696243,
+              0.2121215611696243,
+              1.0
+            ],
+            "controlAddress": "/color"
+          },
+          {
+            "value": "",
+            "controlAddress": "/ltcSyncModule",
+            "enabled": false
+          }
+        ],
+        "niceName": "Reset Mute Counter",
+        "type": "Sequence",
+        "layers": {
+          "hideInEditor": true,
+          "items": [
+            {
+              "parameters": [
+                {
+                  "value": 60.0,
+                  "controlAddress": "/listSize"
+                }
+              ],
+              "niceName": "Trigger",
+              "type": "Trigger",
+              "triggers": {
+                "hideInEditor": true,
+                "items": [
+                  {
+                    "parameters": [
+                      {
+                        "value": [
+                          0.2777764797210693,
+                          0.2777764797210693,
+                          0.2777764797210693,
+                          1.0
+                        ],
+                        "controlAddress": "/color"
+                      },
+                      {
+                        "value": 3.0,
+                        "controlAddress": "/time"
+                      },
+                      {
+                        "value": 0.2583333253860474,
+                        "controlAddress": "/flagY"
+                      }
+                    ],
+                    "niceName": "Reset Mute Counter",
+                    "type": "TimeTrigger",
+                    "consequences": {
+                      "parameters": [
+                        {
+                          "value": false,
+                          "controlAddress": "/cancelDelaysOnTrigger"
+                        }
+                      ],
+                      "items": [
+                        {
+                          "niceName": "Consequence",
+                          "type": "Consequence",
+                          "commandModule": "customVariables",
+                          "commandPath": "",
+                          "commandType": "Set Value",
+                          "command": {
+                            "parameters": [
+                              {
+                                "value": "/workflows/stageMuteCounter",
+                                "controlAddress": "/target"
+                              },
+                              {
+                                "value": "All",
+                                "controlAddress": "/component"
+                              },
+                              {
+                                "value": "Equals",
+                                "controlAddress": "/operator"
+                              }
+                            ],
+                            "paramLinks": {
+                            }
+                          }
+                        }
+                      ],
+                      "viewOffset": [
+                        0,
+                        0
+                      ],
+                      "viewZoom": 1.0
+                    }
+                  }
+                ],
+                "viewOffset": [
+                  0,
+                  0
+                ],
+                "viewZoom": 1.0
+              }
+            }
+          ],
+          "viewOffset": [
+            0,
+            0
+          ],
+          "viewZoom": 1.0
+        },
+        "cues": {
+          "hideInEditor": true,
+          "viewOffset": [
+            0,
+            0
+          ],
+          "viewZoom": 1.0
+        },
+        "editing": true
+      }
+    ],
     "viewOffset": [
       0,
       0
