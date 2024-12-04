@@ -1,9 +1,17 @@
-5: UnhandledExceptionFilter + 0x1ec
-6: RtlCopyMemory + 0x2bbd
-7: _C_specific_handler + 0x97
-8: _chkstk + 0x12f
-9: RtlFindCharInUnicodeString + 0xa96
-10: KiUserExceptionDispatcher + 0x2e
-42: recalloc + 0xa3
-43: BaseThreadInitThunk + 0x1d
-44: RtlUserThreadStart + 0x28
+Chataigne(+0xad60dc) [0x5e731cbf10dc]
+Chataigne(+0x102f367) [0x5e731d14a367]
+Chataigne(+0xac2e7d) [0x5e731cbdde7d]
+/lib/x86_64-linux-gnu/libc.so.6(+0x42520) [0x791d15a42520]
+Chataigne(+0xe33614) [0x5e731cf4e614]
+Chataigne(+0xe33467) [0x5e731cf4e467]
+Chataigne(+0xe36f0c) [0x5e731cf51f0c]
+Chataigne(+0xe972c6) [0x5e731cfb22c6]
+Chataigne(+0xf1234d) [0x5e731d02d34d]
+Chataigne(+0xbb8e4a) [0x5e731ccd3e4a]
+Chataigne(+0xbadcf0) [0x5e731ccc8cf0]
+Chataigne(+0xbb57b9) [0x5e731ccd07b9]
+Chataigne(+0x48658c) [0x5e731c5a158c]
+Chataigne(+0x48661f) [0x5e731c5a161f]
+/lib/x86_64-linux-gnu/libc.so.6(+0x29d90) [0x791d15a29d90]
+/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0x80) [0x791d15a29e40]
+Chataigne(+0x4931ca) [0x5e731c5ae1ca]

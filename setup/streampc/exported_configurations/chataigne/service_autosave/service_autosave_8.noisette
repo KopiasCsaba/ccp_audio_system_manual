@@ -517,13 +517,32 @@
                       ]
                     },
                     {
-                      "type": 0,
+                      "type": 1,
                       "width": 307,
                       "height": 333,
-                      "currentContent": "Custom Variables",
-                      "tabs": [
+                      "direction": 1,
+                      "shifters": [
                         {
-                          "name": "Custom Variables"
+                          "type": 0,
+                          "width": 150,
+                          "height": 333,
+                          "currentContent": "The Detective",
+                          "tabs": [
+                            {
+                              "name": "The Detective"
+                            }
+                          ]
+                        },
+                        {
+                          "type": 0,
+                          "width": 151,
+                          "height": 333,
+                          "currentContent": "Custom Variables",
+                          "tabs": [
+                            {
+                              "name": "Custom Variables"
+                            }
+                          ]
                         }
                       ]
                     }
@@ -2785,6 +2804,10 @@
           {
             "value": true,
             "controlAddress": "/enabled"
+          },
+          {
+            "value": true,
+            "controlAddress": "/logOutgoing"
           }
         ],
         "niceName": "OBS Websocket",
@@ -5719,11 +5742,11 @@
               "conditions": {
                 "parameters": [
                   {
-                    "value": 1.0,
+                    "value": 0.0,
                     "controlAddress": "/validationTime"
                   },
                   {
-                    "value": 1.0,
+                    "value": 0.0,
                     "controlAddress": "/invalidationTime"
                   }
                 ],
@@ -5731,7 +5754,7 @@
                   {
                     "parameters": [
                       {
-                        "value": false,
+                        "value": true,
                         "controlAddress": "/enabled"
                       },
                       {
@@ -5740,17 +5763,26 @@
                       }
                     ],
                     "niceName": "From Input Value 1",
-                    "editorIsCollapsed": true,
                     "type": "From Input Value",
                     "comparator": {
                       "parameters": [
                         {
-                          "value": false,
+                          "value": true,
                           "controlAddress": "/reference"
                         }
                       ],
                       "hideInEditor": true
                     }
+                  },
+                  {
+                    "parameters": [
+                      {
+                        "value": false,
+                        "controlAddress": "/active"
+                      }
+                    ],
+                    "niceName": "Manual",
+                    "type": "Manual"
                   }
                 ],
                 "viewOffset": [
@@ -5761,6 +5793,10 @@
               },
               "consequences": {
                 "parameters": [
+                  {
+                    "value": 0.0,
+                    "controlAddress": "/delay"
+                  },
                   {
                     "value": false,
                     "controlAddress": "/cancelDelaysOnTrigger"
@@ -5790,8 +5826,7 @@
                           "controlAddress": "/sceneItemId"
                         },
                         {
-                          "controlMode": 1,
-                          "expression": "",
+                          "value": false,
                           "controlAddress": "/sceneItemEnabled"
                         }
                       ],
@@ -5809,12 +5844,22 @@
               "consequencesOff": {
                 "parameters": [
                   {
+                    "value": 0.0,
+                    "controlAddress": "/delay"
+                  },
+                  {
                     "value": false,
                     "controlAddress": "/cancelDelaysOnTrigger"
                   }
                 ],
                 "items": [
                   {
+                    "parameters": [
+                      {
+                        "value": false,
+                        "controlAddress": "/enabled"
+                      }
+                    ],
                     "niceName": "Consequence",
                     "type": "Consequence",
                     "commandModule": "obsWebsocket",

@@ -517,13 +517,32 @@
                       ]
                     },
                     {
-                      "type": 0,
+                      "type": 1,
                       "width": 307,
                       "height": 333,
-                      "currentContent": "Custom Variables",
-                      "tabs": [
+                      "direction": 1,
+                      "shifters": [
                         {
-                          "name": "Custom Variables"
+                          "type": 0,
+                          "width": 150,
+                          "height": 333,
+                          "currentContent": "The Detective",
+                          "tabs": [
+                            {
+                              "name": "The Detective"
+                            }
+                          ]
+                        },
+                        {
+                          "type": 0,
+                          "width": 151,
+                          "height": 333,
+                          "currentContent": "Custom Variables",
+                          "tabs": [
+                            {
+                              "name": "Custom Variables"
+                            }
+                          ]
                         }
                       ]
                     }
@@ -2785,6 +2804,10 @@
           {
             "value": true,
             "controlAddress": "/enabled"
+          },
+          {
+            "value": true,
+            "controlAddress": "/logOutgoing"
           }
         ],
         "niceName": "OBS Websocket",
@@ -5740,7 +5763,6 @@
                       }
                     ],
                     "niceName": "From Input Value 1",
-                    "editorIsCollapsed": true,
                     "type": "From Input Value",
                     "comparator": {
                       "parameters": [
@@ -5790,8 +5812,9 @@
                           "controlAddress": "/sceneItemId"
                         },
                         {
+                          "value": true,
                           "controlMode": 1,
-                          "expression": "",
+                          "expression": "root.modules.obsWebsocket.values.scene_item_20_enabled",
                           "controlAddress": "/sceneItemEnabled"
                         }
                       ],
@@ -5815,7 +5838,14 @@
                 ],
                 "items": [
                   {
+                    "parameters": [
+                      {
+                        "value": false,
+                        "controlAddress": "/enabled"
+                      }
+                    ],
                     "niceName": "Consequence",
+                    "editorIsCollapsed": true,
                     "type": "Consequence",
                     "commandModule": "obsWebsocket",
                     "commandPath": "Scene Items Requests",

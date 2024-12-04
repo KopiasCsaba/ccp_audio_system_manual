@@ -2,79 +2,78 @@
 <html lang="en">
 
 <head>
-  <script>
-    // const WS_PASS = '123456';
-    // const WS_HOST = '192.168.1.75';
-    const WS_PASS = 'WoodenTableWithPineapple';
-    const WS_HOST = '192.168.2.118';
-    const WS_PORT = '4455';
-  </script>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OBS Remote</title>
-  <script src="https://unpkg.com/obs-websocket-js"></script>
-  <style>
-    body {
-      font-family: Arial, serif;
-    }
-
-    #buttons-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 10px;
-    }
-
-    .sceneBtn hr {
-      height: 1px;
-      border: none;
-      border-top: 1px solid black;
-      margin: 2px 0px 2px 0px;
-    }
-
-    .sceneBtn {
-      height: 60px;
-      font-size: 15px;
-      cursor: pointer;
-      background-color: white;
-      color: black;
-      font-weight: normal;
-      border: 1px solid black;
-      border-radius: 5px;
-      -webkit-transition: none;
-      -moz-transition: none;
-      -o-transition: none;
-      transition: none;
-    }
-
-    /** Add this to the button to make it double wide.
-        .doubleWide {
-            grid-column: span 2;
+    <script>
+        const WS_PASS = 'WoodenTableWithPineapple';
+        const WS_HOST = '192.168.2.118';
+        // const WS_HOST = '127.0.0.1';
+        const WS_PORT = '4455';
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OBS Remote</title>
+    <script src="https://unpkg.com/obs-websocket-js"></script>
+    <style>
+        body {
+            font-family: Arial, serif;
         }
 
-        /* Add this to the button, to break the next line */
-    .newRow {
-      grid-column: 1 / -1;
-    }
+        #buttons-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 5px;
+        }
 
-    .eventScene {
-      background-color: #fac0c0;
-    }
+        .sceneBtn hr {
+            height: 1px;
+            border: none;
+            border-top: 1px solid black;
+            margin: 0px 0px 0px 0px;
+        }
 
-    .camToggle {
-      background: #ff00ff;
-    }
+        .sceneBtn {
+            height: 46px;
+            font-size: 13px;
+            cursor: pointer;
+            background-color: white;
+            color: black;
+            font-weight: normal;
+            border: 1px solid black;
+            border-radius: 5px;
+            -webkit-transition: none;
+            -moz-transition: none;
+            -o-transition: none;
+            transition: none;
+        }
 
-    h4 {
-      margin-top: 0px;
-      margin-bottom: 4px;
-    }
-  </style>
+        /** Add this to the button to make it double wide.
+            .doubleWide {
+                grid-column: span 2;
+            }
+
+            /* Add this to the button, to break the next line */
+        .newRow {
+            grid-column: 1 / -1;
+        }
+
+        .eventScene {
+            background-color: #fac0c0;
+        }
+
+        .camToggle {
+            background: #ff00ff;
+        }
+
+        h4 {
+            margin-top: 0px;
+            margin-bottom: 4px;
+        }
+    </style>
 </head>
 
 <body>
-  <h4>OBS Remote (<span id="connection-status">connecting...</span>)</h4>
-  <div id="buttons-container"></div>
-  <script>
+<h4>OBS Remote (<span id="connection-status">connecting...</span>)</h4>
+<div id="buttons-container"></div>
+<script>
     /**
      * Determine hotkey names, scene ids, scene item ids from the web debugging toolbar's console log upon first connection.
      *
@@ -96,87 +95,92 @@
      *
      */
     const hotkeyButtons = {
-      "<b>SCENE</b><hr>Projector Canvas": {
-        "type": "sceneToPreview",
-        "className": "sceneBtn",
-        "data": {
-          "sceneId": 15
-        }
-      },
-      "<b>SCENE</b><hr>Pulpit Wide": {
-        "type": "sceneToPreview",
-        "className": "sceneBtn",
-        "data": {
-          "sceneId": 14
-        }
-      },
-      "<b>SCENE</b><hr>Stage": {
-        "type": "sceneToPreview",
-        "className": "sceneBtn",
-        "data": {
-          "sceneId": 12
-        }
-      },
-      "<b>SCENE</b><hr>Sitting": {
-        "type": "sceneToPreview",
-        "className": "sceneBtn",
-        "data": {
-          "sceneId": 11
-        }
-      },
-      "<b>SCENE</b><hr>Custom Angle": {
-        "type": "sceneToPreview",
-        "className": "sceneBtn",
-        "data": {
-          "sceneId": 10
-        }
-      },
-      "<b>SCENE</b><hr>Standby": {
-        "type": "sceneToPreview",
-        "className": "sceneBtn",
-        "data": {
-          "sceneId": 6
-        }
-      },
-      "<b>SCENE</b><hr>PRE STREAM": {
-        "type": "sceneToPreview",
-        "className": "sceneBtn eventScene",
-        "data": {
-          "sceneId": 5
-        }
-      },
-      "<b>SCENE</b><hr>BREAK": {
-        "type": "sceneToPreview",
-        "className": "sceneBtn eventScene",
-        "data": {
-          "sceneId": 4
-        }
-      },
-      "<b>SCENE</b><hr>FINISH": {
-        "type": "sceneToPreview",
-        "className": "sceneBtn eventScene",
-        "data": {
-          "sceneId": 7
-        }
-      },
-      "<b>TRANSITION</b>": {
-        "type": "hotkey",
-        "className": "sceneBtn transition",
-        "data": {
-          "hotkeyName": "OBSBasic.Transition"
+        "<b>SCENE</b><hr>Projector Canvas": {
+            "type": "sceneToPreview",
+            "className": "sceneBtn",
+            "data": {
+                "sceneId": 15
+            }
         },
-        "confirm": true
-      },
+        "<b>SCENE</b><hr>Pulpit Wide": {
+            "type": "sceneToPreview",
+            "className": "sceneBtn",
+            "data": {
+                "sceneId": 14
+            }
+        }, "<b>SCENE</b><hr>Pulpit": {
+            "type": "sceneToPreview",
+            "className": "sceneBtn",
+            "data": {
+                "sceneId": 13
+            }
+        },
+        "<b>SCENE</b><hr>Stage": {
+            "type": "sceneToPreview",
+            "className": "sceneBtn",
+            "data": {
+                "sceneId": 12
+            }
+        },
+        "<b>SCENE</b><hr>Sitting": {
+            "type": "sceneToPreview",
+            "className": "sceneBtn",
+            "data": {
+                "sceneId": 11
+            }
+        },
+        "<b>SCENE</b><hr>Custom Angle": {
+            "type": "sceneToPreview",
+            "className": "sceneBtn",
+            "data": {
+                "sceneId": 10
+            }
+        },
+        "<b>SCENE</b><hr>Standby": {
+            "type": "sceneToPreview",
+            "className": "sceneBtn",
+            "data": {
+                "sceneId": 6
+            }
+        },
+        "<b>SCENE</b><hr>PRE STREAM": {
+            "type": "sceneToPreview",
+            "className": "sceneBtn eventScene",
+            "data": {
+                "sceneId": 5
+            }
+        },
+        "<b>SCENE</b><hr>BREAK": {
+            "type": "sceneToPreview",
+            "className": "sceneBtn eventScene",
+            "data": {
+                "sceneId": 4
+            }
+        },
+        "<b>SCENE</b><hr>FINISH": {
+            "type": "sceneToPreview",
+            "className": "sceneBtn eventScene",
+            "data": {
+                "sceneId": 7
+            }
+        },
+        "<b>TRANSITION</b>": {
+            "type": "hotkey",
+            "className": "sceneBtn transition ",
+            "data": {
+                "hotkeyName": "OBSBasic.Transition"
+            },
+            "confirm": true
+        },
 
-  "<b>CAM TOGGLE</b>": {
-        "type": "toggleSceneItemVisibility",
-        "className": "sceneBtn camToggle doubleWide",
-        "data": {
-          "sceneItemId": 20,
-	  "sceneName":"_ Notebook + Cam"
-        }
-      },
-
+        "<b>CAM TOGGLE</b>": {
+            "type": "toggleSceneItemVisibility",
+            "className": "sceneBtn camToggle doubleWide",
+            "data": {
+                "sceneItemId": 20,
+                "sceneName": "_ Notebook + Cam"
+            }
+        },
 
 
     };
@@ -186,190 +190,197 @@
     let scenes = {}; // key: scene name, value: scene index
     let keepAliveInterval = null;
     let reconnectInterval = null;
+
     async function connectOBS() {
-      try {
-        console.log('Connecting...');
-        obs = new OBSWebSocket();
-        obs.on('ConnectionClosed', handleConnectionClosed);
-        obs.on('ConnectionError', handleConnectionClosed);
-        // Connect to OBS WebSocket
-        await obs.connect('ws://' + WS_HOST + ':' + WS_PORT, WS_PASS);
-        clearInterval(reconnectInterval);
-        reconnectInterval = null;
-        console.log('Connected to OBS WebSocket');
-        setConnectionStatus(true);
-        await fetchOBSDetails();
-        createHotkeyButtons();
-        startOBSKeepAliveChecker();
-      } catch (error) {
-        handleConnectionClosed(error);
-      }
+        try {
+            console.log('Connecting...');
+            obs = new OBSWebSocket();
+            obs.on('ConnectionClosed', handleConnectionClosed);
+            obs.on('ConnectionError', handleConnectionClosed);
+            // Connect to OBS WebSocket
+            await obs.connect('ws://' + WS_HOST + ':' + WS_PORT, WS_PASS, {
+                eventSubscriptions: 0,
+                rpcVersion: 1
+            });
+            clearInterval(reconnectInterval);
+            reconnectInterval = null;
+            console.log('Connected to OBS WebSocket');
+            setConnectionStatus(true);
+            await fetchOBSDetails();
+            createHotkeyButtons();
+            startOBSKeepAliveChecker();
+        } catch (error) {
+            handleConnectionClosed(error);
+        }
     }
 
     function setConnectionStatus(isConnected) {
-      document.getElementById('connection-status').textContent = isConnected ? 'connected' : 'disconnected, reconnecting...';
+        document.getElementById('connection-status').textContent = isConnected ? 'connected' : 'disconnected, reconnecting...';
     }
+
     async function fetchOBSDetails() {
-      // Fetch hotkeys
-      const dump = {};
-      const hotkeysResponse = await obs.call('GetHotkeyList');
-      const hotkeys = [...new Set(hotkeysResponse.hotkeys)];
-      dump['hotkeys'] = hotkeys;
-      // Fetch scenes
-      const scenesResponse = await obs.call('GetSceneList');
-      scenes = {};
-      for (const s of scenesResponse.scenes) {
-        scenes[s.sceneName] = s.sceneIndex;
-      }
-      dump['scenes'] = scenes;
-      // Fetch scene items for each scene
-      const sceneItems = {};
-      for (const scene of Object.keys(scenes)) {
-        const itemsResponse = await obs.call('GetSceneItemList', {
-          sceneName: scene
-        });
-        for (const item of itemsResponse.sceneItems) {
-          sceneItems[item.sourceName] = item.sceneItemId;
+        // Fetch hotkeys
+        const dump = {};
+        const hotkeysResponse = await obs.call('GetHotkeyList');
+        const hotkeys = [...new Set(hotkeysResponse.hotkeys)];
+        dump['hotkeys'] = hotkeys;
+        // Fetch scenes
+        const scenesResponse = await obs.call('GetSceneList');
+        scenes = {};
+        for (const s of scenesResponse.scenes) {
+            scenes[s.sceneName] = s.sceneIndex;
         }
-      }
-      dump['sceneItems'] = sceneItems;
-      console.log("OBS DATA");
-      console.log(JSON.stringify(dump, null, " "));
+        dump['scenes'] = scenes;
+        // Fetch scene items for each scene
+        const sceneItems = {};
+        for (const scene of Object.keys(scenes)) {
+            const itemsResponse = await obs.call('GetSceneItemList', {
+                sceneName: scene
+            });
+            for (const item of itemsResponse.sceneItems) {
+                sceneItems[item.sourceName] = item.sceneItemId;
+            }
+        }
+        dump['sceneItems'] = sceneItems;
+        console.log("OBS DATA");
+        console.log(JSON.stringify(dump, null, " "));
     }
 
     function handleConnectionClosed(error) {
-      if (reconnectInterval) {
-        return;
-      }
-      console.warn('OBS WebSocket connection closed. Reconnecting...', error);
-      clearInterval(keepAliveInterval);
-      keepAliveInterval = null;
-      setConnectionStatus(false);
-      obs.disconnect();
-      reconnectInterval = setInterval(connectOBS, reconnectTimeout);
+        if (reconnectInterval) {
+            return;
+        }
+        console.warn('OBS WebSocket connection closed. Reconnecting...', error);
+        clearInterval(keepAliveInterval);
+        keepAliveInterval = null;
+        setConnectionStatus(false);
+        obs.disconnect();
+        reconnectInterval = setInterval(connectOBS, reconnectTimeout);
     }
 
     function startOBSKeepAliveChecker() {
-      // Set an interval to fetch OBS version every 5 seconds
-      keepAliveInterval = setInterval(async () => {
-        console.log("OBS Keep alive check...");
-        try {
-          const versionResponse = await obs.call('GetVersion');
-          console.log(`OBS Version: ${versionResponse.obsVersion}`);
-        } catch (error) {
-          console.log("Keep alive failed...");
-          handleConnectionClosed(error);
-        }
-      }, 5000);
+        // Set an interval to fetch OBS version every 5 seconds
+        keepAliveInterval = setInterval(async () => {
+            console.log("OBS Keep alive check...");
+            try {
+                const versionResponse = await obs.call('GetVersion');
+                console.log(`OBS Version: ${versionResponse.obsVersion}`);
+            } catch (error) {
+                console.log("Keep alive failed...");
+                handleConnectionClosed(error);
+            }
+        }, 5000);
     }
 
     function createHotkeyButtons() {
-      const container = document.getElementById('buttons-container');
-      container.innerHTML = '';
-      for (const [key, value] of Object.entries(hotkeyButtons)) {
-        const button = document.createElement('button');
-        button.innerHTML = key;
-        button.className = value.className || 'sceneBtn';
-        button.addEventListener('click', () => handleButtonClick(button, key, value));
-        container.appendChild(button);
-      }
+        const container = document.getElementById('buttons-container');
+        container.innerHTML = '';
+        for (const [key, value] of Object.entries(hotkeyButtons)) {
+            const button = document.createElement('button');
+            button.innerHTML = key;
+            button.className = value.className || 'sceneBtn';
+            button.addEventListener('click', () => handleButtonClick(button, key, value));
+            container.appendChild(button);
+        }
     }
+
     async function handleButtonClick(button, key, value) {
-      const plainTextKey = key.replace(/<[^>]*>/g, ''); // Strip HTML tags from the key's HTML
-      try {
-        if (value.confirm && !confirm(`Are you sure to execute '${plainTextKey}'?`)) {
-          return;
-        }
-        if (value.type === 'hotkey') {
-          const hotkeyToExecute = button.dataset.state === '1' && value.data.toggleHotkeyName ? value.data.toggleHotkeyName : value.data.hotkeyName;
-          console.log(hotkeyToExecute, button.dataset, value.data);
-          if (hotkeyToExecute) {
-            await obs.call('TriggerHotkeyByName', {
-              hotkeyName: hotkeyToExecute
-            });
-            console.log(`Executed hotkey: ${hotkeyToExecute}`);
-            // Toggle the button state if "off" is defined
-            if (value.data.toggleHotkeyName) {
-              button.dataset.state = button.dataset.state === '1' ? '0' : '1';
+        const plainTextKey = key.replace(/<[^>]*>/g, ''); // Strip HTML tags from the key's HTML
+        try {
+            if (value.confirm && !confirm(`Are you sure to execute '${plainTextKey}'?`)) {
+                return;
             }
-          }
-        } else if (value.type === 'sceneToPreview') {
-          const sceneName = Object.keys(scenes).find(key => scenes[key] === value.data.sceneId);
-          if (sceneName) {
-            await obs.call('SetCurrentPreviewScene', {
-              sceneName
-            });
-            console.log(`Set scene to preview: ID ${value.data.sceneId}`);
-          }
-        } else if (value.type === 'toggleSceneItemVisibility') {
+            if (value.type === 'hotkey') {
+                const hotkeyToExecute = button.dataset.state === '1' && value.data.toggleHotkeyName ? value.data.toggleHotkeyName : value.data.hotkeyName;
+                console.log(hotkeyToExecute, button.dataset, value.data);
+                if (hotkeyToExecute) {
+                    await obs.call('TriggerHotkeyByName', {
+                        hotkeyName: hotkeyToExecute
+                    });
+                    console.log(`Executed hotkey: ${hotkeyToExecute}`);
+                    // Toggle the button state if "off" is defined
+                    if (value.data.toggleHotkeyName) {
+                        button.dataset.state = button.dataset.state === '1' ? '0' : '1';
+                    }
+                }
+            } else if (value.type === 'sceneToPreview') {
+                const sceneName = Object.keys(scenes).find(key => scenes[key] === value.data.sceneId);
+                if (sceneName) {
+                    await obs.call('SetCurrentPreviewScene', {
+                        sceneName
+                    });
+                    console.log(`Set scene to preview: ID ${value.data.sceneId}`);
+                }
+            } else if (value.type === 'toggleSceneItemVisibility') {
 
-          const {
-            sceneItemId, sceneName
-          } = value.data;
+                const {
+                    sceneItemId, sceneName
+                } = value.data;
 
-          if (sceneItemId !== undefined) {
+                if (sceneItemId !== undefined) {
 
-            const response = await obs.call('GetSceneItemEnabled', {
-              sceneItemId, sceneName
-            });
+                    const response = await obs.call('GetSceneItemEnabled', {
+                        sceneItemId, sceneName
+                    });
 
-            const currentVisibility = response.sceneItemEnabled;
-	    <!-- @TODO: Api version difference handling 5.1 vs 5.0 -->
-            await obs.call('SetSceneItemEnabled', {
-              sceneItemId,
-	      sceneName,
-              sceneItemEnabled: !currentVisibility
-            });
+                    const currentVisibility = response.sceneItemEnabled;
+                    <!-- @TODO: Api version difference handling 5.1 vs 5.0 -->
+                    await obs.call('SetSceneItemEnabled', {
+                        sceneItemId,
+                        sceneName,
+                        sceneItemEnabled: !currentVisibility
+                    });
 
-            //console.log(`Toggled visibility for source: ${sourceName} in scene: ${sceneName}, new visibility: ${!currentVisibility}`);
-          }
+                    //console.log(`Toggled visibility for source: ${sourceName} in scene: ${sceneName}, new visibility: ${!currentVisibility}`);
+                }
+            }
+        } catch (error) {
+            handleConnectionClosed(error);
         }
-      } catch (error) {
-        handleConnectionClosed(error);
-      }
     }
+
     // Connect to OBS WebSocket when the page loads
     connectOBS();
-  </script>
-  <!--<script>-->
-  <!--    // Keep the phone screen on. Doesn't work on non https... -->
-  <!--    let wakeLock = null;-->
+</script>
+<!--<script>-->
+<!--    // Keep the phone screen on. Doesn't work on non https... -->
+<!--    let wakeLock = null;-->
 
-  <!--    async function requestWakeLock() {-->
-  <!--        try {-->
-  <!--            wakeLock = await navigator.wakeLock.request('screen');-->
-  <!--            wakeLock.addEventListener('release', requestWakeLock);-->
-  <!--            console.log("WAKE LOCK requested.");-->
-  <!--        } catch (err) {-->
-  <!--            console.error('Wake Lock request failed:', err);-->
-  <!--        }-->
-  <!--    }-->
+<!--    async function requestWakeLock() {-->
+<!--        try {-->
+<!--            wakeLock = await navigator.wakeLock.request('screen');-->
+<!--            wakeLock.addEventListener('release', requestWakeLock);-->
+<!--            console.log("WAKE LOCK requested.");-->
+<!--        } catch (err) {-->
+<!--            console.error('Wake Lock request failed:', err);-->
+<!--        }-->
+<!--    }-->
 
-  <!--    document.addEventListener('visibilitychange', () => {-->
-  <!--        if (wakeLock !== null && document.visibilityState === 'visible') {-->
-  <!--            requestWakeLock();-->
-  <!--        }-->
-  <!--    });-->
+<!--    document.addEventListener('visibilitychange', () => {-->
+<!--        if (wakeLock !== null && document.visibilityState === 'visible') {-->
+<!--            requestWakeLock();-->
+<!--        }-->
+<!--    });-->
 
-  <!--    requestWakeLock();-->
-  <!--</script>-->
-  <!--<script>-->
-  <!--    // Keep the phone screen on. Doesn't work :/ -->
-  <!--    var video = document.createElement('video');-->
-  <!--    video.setAttribute('loop', '');-->
+<!--    requestWakeLock();-->
+<!--</script>-->
+<!--<script>-->
+<!--    // Keep the phone screen on. Doesn't work :/ -->
+<!--    var video = document.createElement('video');-->
+<!--    video.setAttribute('loop', '');-->
 
-  <!--    function addSourceToVideo(element, type, dataURI) {-->
-  <!--        var source = document.createElement('source');-->
-  <!--        source.src = dataURI;-->
-  <!--        source.type = 'video/' + type;-->
-  <!--        element.appendChild(source);-->
-  <!--    }-->
+<!--    function addSourceToVideo(element, type, dataURI) {-->
+<!--        var source = document.createElement('source');-->
+<!--        source.src = dataURI;-->
+<!--        source.type = 'video/' + type;-->
+<!--        element.appendChild(source);-->
+<!--    }-->
 
-  <!--    addSourceToVideo(video, 'webm', 'data:video/webm;base64,GkXfo0AgQoaBAUL3gQFC8oEEQvOBCEKCQAR3ZWJtQoeBAkKFgQIYU4BnQI0VSalmQCgq17FAAw9CQE2AQAZ3aGFtbXlXQUAGd2hhbW15RIlACECPQAAAAAAAFlSua0AxrkAu14EBY8WBAZyBACK1nEADdW5khkAFVl9WUDglhohAA1ZQOIOBAeBABrCBCLqBCB9DtnVAIueBAKNAHIEAAIAwAQCdASoIAAgAAUAmJaQAA3AA/vz0AAA=');-->
-  <!--    addSourceToVideo(video, 'mp4', 'data:video/mp4;base64,AAAAHGZ0eXBpc29tAAACAGlzb21pc28ybXA0MQAAAAhmcmVlAAAAG21kYXQAAAGzABAHAAABthADAowdbb9/AAAC6W1vb3YAAABsbXZoZAAAAAB8JbCAfCWwgAAAA+gAAAAAAAEAAAEAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAIVdHJhawAAAFx0a2hkAAAAD3wlsIB8JbCAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAQAAAAAAIAAAACAAAAAABsW1kaWEAAAAgbWRoZAAAAAB8JbCAfCWwgAAAA+gAAAAAVcQAAAAAAC1oZGxyAAAAAAAAAAB2aWRlAAAAAAAAAAAAAAAAVmlkZW9IYW5kbGVyAAAAAVxtaW5mAAAAFHZtaGQAAAABAAAAAAAAAAAAAAAkZGluZgAAABxkcmVmAAAAAAAAAAEAAAAMdXJsIAAAAAEAAAEcc3RibAAAALhzdHNkAAAAAAAAAAEAAACobXA0dgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAIAAgASAAAAEgAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABj//wAAAFJlc2RzAAAAAANEAAEABDwgEQAAAAADDUAAAAAABS0AAAGwAQAAAbWJEwAAAQAAAAEgAMSNiB9FAEQBFGMAAAGyTGF2YzUyLjg3LjQGAQIAAAAYc3R0cwAAAAAAAAABAAAAAQAAAAAAAAAcc3RzYwAAAAAAAAABAAAAAQAAAAEAAAABAAAAFHN0c3oAAAAAAAAAEwAAAAEAAAAUc3RjbwAAAAAAAAABAAAALAAAAGB1ZHRhAAAAWG1ldGEAAAAAAAAAIWhkbHIAAAAAAAAAAG1kaXJhcHBsAAAAAAAAAAAAAAAAK2lsc3QAAAAjqXRvbwAAABtkYXRhAAAAAQAAAABMYXZmNTIuNzguMw==');-->
+<!--    addSourceToVideo(video, 'webm', 'data:video/webm;base64,GkXfo0AgQoaBAUL3gQFC8oEEQvOBCEKCQAR3ZWJtQoeBAkKFgQIYU4BnQI0VSalmQCgq17FAAw9CQE2AQAZ3aGFtbXlXQUAGd2hhbW15RIlACECPQAAAAAAAFlSua0AxrkAu14EBY8WBAZyBACK1nEADdW5khkAFVl9WUDglhohAA1ZQOIOBAeBABrCBCLqBCB9DtnVAIueBAKNAHIEAAIAwAQCdASoIAAgAAUAmJaQAA3AA/vz0AAA=');-->
+<!--    addSourceToVideo(video, 'mp4', 'data:video/mp4;base64,AAAAHGZ0eXBpc29tAAACAGlzb21pc28ybXA0MQAAAAhmcmVlAAAAG21kYXQAAAGzABAHAAABthADAowdbb9/AAAC6W1vb3YAAABsbXZoZAAAAAB8JbCAfCWwgAAAA+gAAAAAAAEAAAEAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAIVdHJhawAAAFx0a2hkAAAAD3wlsIB8JbCAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAQAAAAAAIAAAACAAAAAABsW1kaWEAAAAgbWRoZAAAAAB8JbCAfCWwgAAAA+gAAAAAVcQAAAAAAC1oZGxyAAAAAAAAAAB2aWRlAAAAAAAAAAAAAAAAVmlkZW9IYW5kbGVyAAAAAVxtaW5mAAAAFHZtaGQAAAABAAAAAAAAAAAAAAAkZGluZgAAABxkcmVmAAAAAAAAAAEAAAAMdXJsIAAAAAEAAAEcc3RibAAAALhzdHNkAAAAAAAAAAEAAACobXA0dgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAIAAgASAAAAEgAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABj//wAAAFJlc2RzAAAAAANEAAEABDwgEQAAAAADDUAAAAAABS0AAAGwAQAAAbWJEwAAAQAAAAEgAMSNiB9FAEQBFGMAAAGyTGF2YzUyLjg3LjQGAQIAAAAYc3R0cwAAAAAAAAABAAAAAQAAAAAAAAAcc3RzYwAAAAAAAAABAAAAAQAAAAEAAAABAAAAFHN0c3oAAAAAAAAAEwAAAAEAAAAUc3RjbwAAAAAAAAABAAAALAAAAGB1ZHRhAAAAWG1ldGEAAAAAAAAAIWhkbHIAAAAAAAAAAG1kaXJhcHBsAAAAAAAAAAAAAAAAK2lsc3QAAAAjqXRvbwAAABtkYXRhAAAAAQAAAABMYXZmNTIuNzguMw==');-->
 
-  <!--    video.play();-->
-  <!--</script>-->
+<!--    video.play();-->
+<!--</script>-->
 </body>
 
 </html>

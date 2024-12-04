@@ -531,7 +531,7 @@
                 },
                 {
                   "type": 0,
-                  "width": 1389,
+                  "width": 837,
                   "height": 694,
                   "currentContent": "State Machine",
                   "tabs": [
@@ -551,7 +551,18 @@
                 },
                 {
                   "type": 0,
-                  "width": 852,
+                  "width": 300,
+                  "height": 694,
+                  "currentContent": "The Detective",
+                  "tabs": [
+                    {
+                      "name": "The Detective"
+                    }
+                  ]
+                },
+                {
+                  "type": 0,
+                  "width": 1098,
                   "height": 694,
                   "currentContent": "Inspector",
                   "tabs": [
@@ -2785,6 +2796,10 @@
           {
             "value": true,
             "controlAddress": "/enabled"
+          },
+          {
+            "value": true,
+            "controlAddress": "/logOutgoing"
           }
         ],
         "niceName": "OBS Websocket",
@@ -3061,6 +3076,114 @@
                     }
                   ],
                   "niceName": "sceneItemId"
+                }
+              ]
+            },
+            {
+              "niceName": "TOGGLE CAM",
+              "type": "CommandTemplate",
+              "menuPath": "Scene Items Requests",
+              "commandType": "SetSceneItemEnabled",
+              "params": [
+                {
+                  "parameters": [
+                    {
+                      "value": "",
+                      "controlAddress": "/requestId"
+                    },
+                    {
+                      "value": true,
+                      "minValue": 0,
+                      "maxValue": 1,
+                      "default": true,
+                      "controlAddress": "/editable",
+                      "type": "Boolean",
+                      "niceName": "Editable",
+                      "customizable": false,
+                      "removable": false,
+                      "description": "If enabled, the parameter will be editable when instantiating this template",
+                      "hideInEditor": false,
+                      "feedbackOnly": false
+                    }
+                  ],
+                  "niceName": "request Id"
+                },
+                {
+                  "parameters": [
+                    {
+                      "value": "_ Notebook + Cam",
+                      "controlMode": 2,
+                      "reference": {
+                        "value": "/customVariables/sceneNames/variables/_NOTEBOOK_Cam/_NOTEBOOK_Cam",
+                        "controlAddress": "/reference"
+                      },
+                      "controlAddress": "/sceneName"
+                    },
+                    {
+                      "value": true,
+                      "minValue": 0,
+                      "maxValue": 1,
+                      "default": true,
+                      "controlAddress": "/editable",
+                      "type": "Boolean",
+                      "niceName": "Editable",
+                      "customizable": false,
+                      "removable": false,
+                      "description": "If enabled, the parameter will be editable when instantiating this template",
+                      "hideInEditor": false,
+                      "feedbackOnly": false
+                    }
+                  ],
+                  "niceName": "sceneName"
+                },
+                {
+                  "parameters": [
+                    {
+                      "value": 0,
+                      "hexMode": false,
+                      "controlAddress": "/sceneItemId"
+                    },
+                    {
+                      "value": true,
+                      "minValue": 0,
+                      "maxValue": 1,
+                      "default": true,
+                      "controlAddress": "/editable",
+                      "type": "Boolean",
+                      "niceName": "Editable",
+                      "customizable": false,
+                      "removable": false,
+                      "description": "If enabled, the parameter will be editable when instantiating this template",
+                      "hideInEditor": false,
+                      "feedbackOnly": false
+                    }
+                  ],
+                  "niceName": "sceneItemId"
+                },
+                {
+                  "parameters": [
+                    {
+                      "value": false,
+                      "controlMode": 1,
+                      "expression": "root.modules.obsWebsocket.values.scene_item_20_enabled.get()?1:0",
+                      "controlAddress": "/sceneItemEnabled"
+                    },
+                    {
+                      "value": true,
+                      "minValue": 0,
+                      "maxValue": 1,
+                      "default": true,
+                      "controlAddress": "/editable",
+                      "type": "Boolean",
+                      "niceName": "Editable",
+                      "customizable": false,
+                      "removable": false,
+                      "description": "If enabled, the parameter will be editable when instantiating this template",
+                      "hideInEditor": false,
+                      "feedbackOnly": false
+                    }
+                  ],
+                  "niceName": "sceneItemEnabled"
                 }
               ]
             }
@@ -5713,25 +5836,32 @@
               }
             },
             {
+              "parameters": [
+                {
+                  "value": false,
+                  "controlAddress": "/enabled"
+                }
+              ],
               "niceName": "CAM TOGGLE",
               "editorIsCollapsed": true,
               "type": "Action",
               "conditions": {
                 "parameters": [
                   {
-                    "value": 1.0,
+                    "value": 0.0,
                     "controlAddress": "/validationTime"
                   },
                   {
-                    "value": 1.0,
+                    "value": 0.0,
                     "controlAddress": "/invalidationTime"
                   }
                 ],
+                "editorIsCollapsed": true,
                 "items": [
                   {
                     "parameters": [
                       {
-                        "value": false,
+                        "value": true,
                         "controlAddress": "/enabled"
                       },
                       {
@@ -5740,12 +5870,11 @@
                       }
                     ],
                     "niceName": "From Input Value 1",
-                    "editorIsCollapsed": true,
                     "type": "From Input Value",
                     "comparator": {
                       "parameters": [
                         {
-                          "value": false,
+                          "value": true,
                           "controlAddress": "/reference"
                         }
                       ],
@@ -5761,6 +5890,10 @@
               },
               "consequences": {
                 "parameters": [
+                  {
+                    "value": 0.0,
+                    "controlAddress": "/delay"
+                  },
                   {
                     "value": false,
                     "controlAddress": "/cancelDelaysOnTrigger"
@@ -5790,8 +5923,7 @@
                           "controlAddress": "/sceneItemId"
                         },
                         {
-                          "controlMode": 1,
-                          "expression": "",
+                          "value": false,
                           "controlAddress": "/sceneItemEnabled"
                         }
                       ],
@@ -5809,12 +5941,22 @@
               "consequencesOff": {
                 "parameters": [
                   {
+                    "value": 0.0,
+                    "controlAddress": "/delay"
+                  },
+                  {
                     "value": false,
                     "controlAddress": "/cancelDelaysOnTrigger"
                   }
                 ],
                 "items": [
                   {
+                    "parameters": [
+                      {
+                        "value": false,
+                        "controlAddress": "/enabled"
+                      }
+                    ],
                     "niceName": "Consequence",
                     "type": "Consequence",
                     "commandModule": "obsWebsocket",
