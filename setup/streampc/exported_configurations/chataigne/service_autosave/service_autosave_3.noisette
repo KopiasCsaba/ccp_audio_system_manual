@@ -87,7 +87,7 @@
                   "controlAddress": "/viewUISize"
                 },
                 {
-                  "value": "/states/obs_state/processors/camTOGGLE/trigger",
+                  "value": "/states/obs/processors/camTOGGLE/trigger",
                   "controlAddress": "/target"
                 },
                 {
@@ -130,8 +130,8 @@
               "niceName": "Item 12",
               "hideInEditor": true,
               "type": "DashboardTriggerItem",
-              "ghostAddress": "/states/obs_state/processors/camTOGGLE/trigger",
-              "controllable": "/states/obs_state/processors/camTOGGLE/trigger"
+              "ghostAddress": "/states/obs/processors/camTOGGLE/trigger",
+              "controllable": "/states/obs/processors/camTOGGLE/trigger"
             }
           ],
           "viewOffset": [
@@ -177,7 +177,7 @@
                   "controlAddress": "/viewUISize"
                 },
                 {
-                  "value": "/states/obs_state/processors/swSCENEProjector/trigger",
+                  "value": "/states/obs/processors/swSCENEProjector/trigger",
                   "controlAddress": "/target"
                 },
                 {
@@ -194,8 +194,8 @@
               "niceName": "Item",
               "hideInEditor": true,
               "type": "DashboardTriggerItem",
-              "ghostAddress": "/states/obs_state/processors/swSCENEProjector/trigger",
-              "controllable": "/states/obs_state/processors/swSCENEProjector/trigger"
+              "ghostAddress": "/states/obs/processors/swSCENEProjector/trigger",
+              "controllable": "/states/obs/processors/swSCENEProjector/trigger"
             },
             {
               "parameters": [
@@ -214,7 +214,7 @@
                   "controlAddress": "/viewUISize"
                 },
                 {
-                  "value": "/states/obs_state/processors/swSCENEPulpitWide/trigger",
+                  "value": "/states/obs/processors/swSCENEPulpitWide/trigger",
                   "controlAddress": "/target"
                 },
                 {
@@ -233,8 +233,8 @@
               "niceName": "Item 1",
               "hideInEditor": true,
               "type": "DashboardTriggerItem",
-              "ghostAddress": "/states/obs_state/processors/swSCENEPulpitWide/trigger",
-              "controllable": "/states/obs_state/processors/swSCENEPulpitWide/trigger"
+              "ghostAddress": "/states/obs/processors/swSCENEPulpitWide/trigger",
+              "controllable": "/states/obs/processors/swSCENEPulpitWide/trigger"
             },
             {
               "parameters": [
@@ -253,7 +253,7 @@
                   "controlAddress": "/viewUISize"
                 },
                 {
-                  "value": "/states/obs_state/processors/swSCENEPulpit/trigger",
+                  "value": "/states/obs/processors/swSCENEPulpit/trigger",
                   "controlAddress": "/target"
                 },
                 {
@@ -270,8 +270,8 @@
               "niceName": "Item 2",
               "hideInEditor": true,
               "type": "DashboardTriggerItem",
-              "ghostAddress": "/states/obs_state/processors/swSCENEPulpit/trigger",
-              "controllable": "/states/obs_state/processors/swSCENEPulpit/trigger"
+              "ghostAddress": "/states/obs/processors/swSCENEPulpit/trigger",
+              "controllable": "/states/obs/processors/swSCENEPulpit/trigger"
             },
             {
               "parameters": [
@@ -290,7 +290,7 @@
                   "controlAddress": "/viewUISize"
                 },
                 {
-                  "value": "/states/obs_state/processors/swSCENEStage/trigger",
+                  "value": "/states/obs/processors/swSCENEStage/trigger",
                   "controlAddress": "/target"
                 },
                 {
@@ -307,8 +307,8 @@
               "niceName": "Item 3",
               "hideInEditor": true,
               "type": "DashboardTriggerItem",
-              "ghostAddress": "/states/obs_state/processors/swSCENEStage/trigger",
-              "controllable": "/states/obs_state/processors/swSCENEStage/trigger"
+              "ghostAddress": "/states/obs/processors/swSCENEStage/trigger",
+              "controllable": "/states/obs/processors/swSCENEStage/trigger"
             },
             {
               "parameters": [
@@ -327,7 +327,7 @@
                   "controlAddress": "/viewUISize"
                 },
                 {
-                  "value": "/states/obs_state/processors/swSCENESitting/trigger",
+                  "value": "/states/obs/processors/swSCENESitting/trigger",
                   "controlAddress": "/target"
                 },
                 {
@@ -344,8 +344,8 @@
               "niceName": "Item 4",
               "hideInEditor": true,
               "type": "DashboardTriggerItem",
-              "ghostAddress": "/states/obs_state/processors/swSCENESitting/trigger",
-              "controllable": "/states/obs_state/processors/swSCENESitting/trigger"
+              "ghostAddress": "/states/obs/processors/swSCENESitting/trigger",
+              "controllable": "/states/obs/processors/swSCENESitting/trigger"
             },
             {
               "parameters": [
@@ -364,7 +364,7 @@
                   "controlAddress": "/viewUISize"
                 },
                 {
-                  "value": "/states/obs_state/processors/swSCENECustom/trigger",
+                  "value": "/states/obs/processors/swSCENECustom/trigger",
                   "controlAddress": "/target"
                 },
                 {
@@ -381,8 +381,8 @@
               "niceName": "Item 5",
               "hideInEditor": true,
               "type": "DashboardTriggerItem",
-              "ghostAddress": "/states/obs_state/processors/swSCENECustom/trigger",
-              "controllable": "/states/obs_state/processors/swSCENECustom/trigger"
+              "ghostAddress": "/states/obs/processors/swSCENECustom/trigger",
+              "controllable": "/states/obs/processors/swSCENECustom/trigger"
             },
             {
               "parameters": [
@@ -401,7 +401,7 @@
                   "controlAddress": "/viewUISize"
                 },
                 {
-                  "value": "/states/obs_state/processors/swSCENEStandby/trigger",
+                  "value": "/states/obs/processors/swSCENEStandby/trigger",
                   "controlAddress": "/target"
                 },
                 {
@@ -428,8 +428,8 @@
               "niceName": "Item 6",
               "hideInEditor": true,
               "type": "DashboardTriggerItem",
-              "ghostAddress": "/states/obs_state/processors/swSCENEStandby/trigger",
-              "controllable": "/states/obs_state/processors/swSCENEStandby/trigger"
+              "ghostAddress": "/states/obs/processors/swSCENEStandby/trigger",
+              "controllable": "/states/obs/processors/swSCENEStandby/trigger"
             },
             {
               "parameters": [
@@ -448,7 +448,7 @@
                   "controlAddress": "/viewUISize"
                 },
                 {
-                  "value": "/states/obs_state/processors/swSCENEPRESTREAM/trigger",
+                  "value": "/states/obs/processors/swSCENEPRESTREAM/trigger",
                   "controlAddress": "/target"
                 },
                 {
@@ -475,8 +475,8 @@
               "niceName": "Item 7",
               "hideInEditor": true,
               "type": "DashboardTriggerItem",
-              "ghostAddress": "/states/obs_state/processors/swSCENEPRESTREAM/trigger",
-              "controllable": "/states/obs_state/processors/swSCENEPRESTREAM/trigger"
+              "ghostAddress": "/states/obs/processors/swSCENEPRESTREAM/trigger",
+              "controllable": "/states/obs/processors/swSCENEPRESTREAM/trigger"
             },
             {
               "parameters": [
@@ -495,7 +495,7 @@
                   "controlAddress": "/viewUISize"
                 },
                 {
-                  "value": "/states/obs_state/processors/swSCENEBREAK/trigger",
+                  "value": "/states/obs/processors/swSCENEBREAK/trigger",
                   "controlAddress": "/target"
                 },
                 {
@@ -522,8 +522,8 @@
               "niceName": "Item 8",
               "hideInEditor": true,
               "type": "DashboardTriggerItem",
-              "ghostAddress": "/states/obs_state/processors/swSCENEBREAK/trigger",
-              "controllable": "/states/obs_state/processors/swSCENEBREAK/trigger"
+              "ghostAddress": "/states/obs/processors/swSCENEBREAK/trigger",
+              "controllable": "/states/obs/processors/swSCENEBREAK/trigger"
             },
             {
               "parameters": [
@@ -542,7 +542,7 @@
                   "controlAddress": "/viewUISize"
                 },
                 {
-                  "value": "/states/obs_state/processors/swSCENEFINISH/trigger",
+                  "value": "/states/obs/processors/swSCENEFINISH/trigger",
                   "controlAddress": "/target"
                 },
                 {
@@ -569,8 +569,8 @@
               "niceName": "Item 9",
               "hideInEditor": true,
               "type": "DashboardTriggerItem",
-              "ghostAddress": "/states/obs_state/processors/swSCENEFINISH/trigger",
-              "controllable": "/states/obs_state/processors/swSCENEFINISH/trigger"
+              "ghostAddress": "/states/obs/processors/swSCENEFINISH/trigger",
+              "controllable": "/states/obs/processors/swSCENEFINISH/trigger"
             },
             {
               "parameters": [
@@ -589,7 +589,7 @@
                   "controlAddress": "/viewUISize"
                 },
                 {
-                  "value": "/states/obs_state/processors/transition/trigger",
+                  "value": "/states/obs/processors/transition/trigger",
                   "controlAddress": "/target"
                 },
                 {
@@ -606,8 +606,8 @@
               "niceName": "Item 11",
               "hideInEditor": true,
               "type": "DashboardTriggerItem",
-              "ghostAddress": "/states/obs_state/processors/transition/trigger",
-              "controllable": "/states/obs_state/processors/transition/trigger"
+              "ghostAddress": "/states/obs/processors/transition/trigger",
+              "controllable": "/states/obs/processors/transition/trigger"
             },
             {
               "parameters": [
@@ -626,7 +626,7 @@
                   "controlAddress": "/viewUISize"
                 },
                 {
-                  "value": "/states/obs_state/processors/camTOGGLE/trigger",
+                  "value": "/states/obs/processors/camTOGGLE/trigger",
                   "controlAddress": "/target"
                 },
                 {
@@ -653,8 +653,8 @@
               "niceName": "Item 12",
               "hideInEditor": true,
               "type": "DashboardTriggerItem",
-              "ghostAddress": "/states/obs_state/processors/camTOGGLE/trigger",
-              "controllable": "/states/obs_state/processors/camTOGGLE/trigger"
+              "ghostAddress": "/states/obs/processors/camTOGGLE/trigger",
+              "controllable": "/states/obs/processors/camTOGGLE/trigger"
             },
             {
               "parameters": [
@@ -677,6 +677,11 @@
                   "controlAddress": "/target"
                 },
                 {
+                  "value": "PAN",
+                  "controlAddress": "/customText",
+                  "enabled": true
+                },
+                {
                   "value": 60,
                   "hexMode": false,
                   "controlAddress": "/textSize",
@@ -685,6 +690,26 @@
                 {
                   "value": false,
                   "controlAddress": "/showValue"
+                },
+                {
+                  "value": [
+                    0.1036548987030983,
+                    0.534615695476532,
+                    0.08430980890989304,
+                    1.0
+                  ],
+                  "controlAddress": "/backgroundColor",
+                  "enabled": true
+                },
+                {
+                  "value": [
+                    0.7058823704719543,
+                    0.196078434586525,
+                    0.1294117718935013,
+                    1.0
+                  ],
+                  "controlAddress": "/foregroundColor",
+                  "enabled": false
                 },
                 {
                   "value": "",
@@ -709,8 +734,8 @@
                 },
                 {
                   "value": [
-                    620.0,
-                    60.0
+                    60.0,
+                    400.0
                   ],
                   "controlAddress": "/viewUISize"
                 },
@@ -719,14 +744,42 @@
                   "controlAddress": "/target"
                 },
                 {
+                  "value": "TILT",
+                  "controlAddress": "/customText",
+                  "enabled": true
+                },
+                {
                   "value": 60,
                   "hexMode": false,
                   "controlAddress": "/textSize",
                   "enabled": true
                 },
                 {
+                  "value": true,
+                  "controlAddress": "/opaqueBackground"
+                },
+                {
+                  "value": "",
+                  "controlAddress": "/customDescription",
+                  "enabled": true
+                },
+                {
                   "value": false,
                   "controlAddress": "/showValue"
+                },
+                {
+                  "value": [
+                    0.1036548987030983,
+                    0.534615695476532,
+                    0.08430980890989304,
+                    1.0
+                  ],
+                  "controlAddress": "/backgroundColor",
+                  "enabled": true
+                },
+                {
+                  "value": "Vertical Slider",
+                  "controlAddress": "/style"
                 },
                 {
                   "value": "",
@@ -744,21 +797,26 @@
               "parameters": [
                 {
                   "value": [
-                    -280.0,
-                    80.0
+                    -200.0,
+                    60.0
                   ],
                   "controlAddress": "/viewUIPosition"
                 },
                 {
                   "value": [
-                    620.0,
-                    60.0
+                    660.0,
+                    380.0
                   ],
                   "controlAddress": "/viewUISize"
                 },
                 {
                   "value": "/customVariables/camera/variables/camZOOM/camZOOM",
                   "controlAddress": "/target"
+                },
+                {
+                  "value": "ZOOM",
+                  "controlAddress": "/customText",
+                  "enabled": true
                 },
                 {
                   "value": 60,
@@ -771,6 +829,20 @@
                   "controlAddress": "/showValue"
                 },
                 {
+                  "value": [
+                    0.1036548987030983,
+                    0.534615695476532,
+                    0.08430980890989304,
+                    1.0
+                  ],
+                  "controlAddress": "/backgroundColor",
+                  "enabled": true
+                },
+                {
+                  "value": "Rotary Slider",
+                  "controlAddress": "/style"
+                },
+                {
                   "value": "",
                   "controlAddress": "/toggleImage",
                   "enabled": false
@@ -781,11 +853,41 @@
               "type": "DashboardParameterItem",
               "ghostAddress": "/customVariables/camera/variables/camZOOM/camZOOM",
               "controllable": "/customVariables/camera/variables/camZOOM/camZOOM"
+            },
+            {
+              "parameters": [
+                {
+                  "value": [
+                    -280.0,
+                    -240.0
+                  ],
+                  "controlAddress": "/viewUIPosition"
+                },
+                {
+                  "value": [
+                    245.0,
+                    76.0
+                  ],
+                  "controlAddress": "/viewUISize"
+                },
+                {
+                  "value": "CAMERA",
+                  "controlAddress": "/text"
+                },
+                {
+                  "value": 68.5,
+                  "customUI": 3,
+                  "controlAddress": "/size"
+                }
+              ],
+              "niceName": "Comment",
+              "hideInEditor": true,
+              "type": "DashboardCommentItem"
             }
           ],
           "viewOffset": [
             -92,
-            156
+            59
           ],
           "viewZoom": 0.4906250238418579
         },
@@ -1045,19 +1147,19 @@
             {
               "type": 1,
               "width": 1836,
-              "height": 726,
+              "height": 794,
               "direction": 1,
               "shifters": [
                 {
                   "type": 1,
                   "width": 307,
-                  "height": 726,
+                  "height": 794,
                   "direction": 2,
                   "shifters": [
                     {
                       "type": 0,
                       "width": 307,
-                      "height": 373,
+                      "height": 407,
                       "currentContent": "Modules",
                       "tabs": [
                         {
@@ -1068,7 +1170,7 @@
                     {
                       "type": 0,
                       "width": 307,
-                      "height": 347,
+                      "height": 381,
                       "currentContent": "Custom Variables",
                       "tabs": [
                         {
@@ -1080,8 +1182,8 @@
                 },
                 {
                   "type": 0,
-                  "width": 955,
-                  "height": 726,
+                  "width": 1022,
+                  "height": 794,
                   "currentContent": "State Machine",
                   "tabs": [
                     {
@@ -1100,8 +1202,8 @@
                 },
                 {
                   "type": 0,
-                  "width": 562,
-                  "height": 726,
+                  "width": 495,
+                  "height": 794,
                   "currentContent": "Inspector",
                   "tabs": [
                     {
@@ -1114,13 +1216,13 @@
             {
               "type": 1,
               "width": 1836,
-              "height": 283,
+              "height": 215,
               "direction": 1,
               "shifters": [
                 {
                   "type": 0,
                   "width": 178,
-                  "height": 283,
+                  "height": 215,
                   "currentContent": "Sequences",
                   "tabs": [
                     {
@@ -1131,7 +1233,7 @@
                 {
                   "type": 0,
                   "width": 710,
-                  "height": 283,
+                  "height": 215,
                   "currentContent": "Sequence Editor",
                   "tabs": [
                     {
@@ -1142,7 +1244,7 @@
                 {
                   "type": 0,
                   "width": 300,
-                  "height": 283,
+                  "height": 215,
                   "currentContent": "The Detective",
                   "tabs": [
                     {
@@ -1153,7 +1255,7 @@
                 {
                   "type": 0,
                   "width": 630,
-                  "height": 283,
+                  "height": 215,
                   "currentContent": "Logger",
                   "tabs": [
                     {
@@ -5345,7 +5447,7 @@
             {
               "parameters": [
                 {
-                  "value": 19.33096154285553,
+                  "value": 0.0,
                   "minValue": -50.0,
                   "maxValue": 50.0,
                   "default": 0.0,
@@ -5433,15 +5535,15 @@
         "parameters": [
           {
             "value": [
-              -610.1747436523438,
-              -518.2135620117188
+              -770.0,
+              -618.0
             ],
             "controlAddress": "/viewUIPosition"
           },
           {
             "value": [
-              355.0,
-              336.0
+              376.0,
+              203.0
             ],
             "controlAddress": "/viewUISize"
           },
@@ -5845,8 +5947,8 @@
         "parameters": [
           {
             "value": [
-              -592.0,
-              -156.0
+              -801.0,
+              -365.0
             ],
             "controlAddress": "/viewUIPosition"
           },
@@ -5862,7 +5964,7 @@
             "controlAddress": "/active"
           }
         ],
-        "niceName": "CameraActions",
+        "niceName": "Camera",
         "type": "State",
         "processors": {
           "items": [
@@ -6301,7 +6403,7 @@
                   {
                     "parameters": [
                       {
-                        "value": "/states/cameraActions/processors/camMOVEURL/outValues/out1",
+                        "value": "/states/camera/processors/camMOVEURL/outValues/out1",
                         "controlAddress": "/inputValue"
                       },
                       {
@@ -6353,7 +6455,7 @@
                           "value": "",
                           "controlMode": 2,
                           "reference": {
-                            "value": "/states/cameraActions/processors/camMOVEURL/outValues/out1",
+                            "value": "/states/camera/processors/camMOVEURL/outValues/out1",
                             "controlAddress": "/reference"
                           },
                           "controlAddress": "/address"
@@ -6467,8 +6569,8 @@
         "parameters": [
           {
             "value": [
-              -216.2330322265625,
-              -516.9708862304688
+              -346.0,
+              -618.0
             ],
             "controlAddress": "/viewUIPosition"
           },
@@ -6484,7 +6586,7 @@
             "controlAddress": "/active"
           }
         ],
-        "niceName": "OBS_STATE",
+        "niceName": "OBS",
         "type": "State",
         "processors": {
           "items": [
@@ -7300,10 +7402,10 @@
                           "controlAddress": "/sceneItemId"
                         },
                         {
-                          "value": true,
+                          "value": false,
                           "controlMode": 2,
                           "reference": {
-                            "value": "/states/obs_state/processors/camVisibilityNegated/outValues/out1",
+                            "value": "/states/obs/processors/camVisibilityNegated/outValues/out1",
                             "controlAddress": "/reference"
                           },
                           "controlAddress": "/sceneItemEnabled"
@@ -9436,7 +9538,7 @@
     ],
     "viewOffset": [
       390,
-      83
+      374
     ],
     "viewZoom": 1.0,
     "transitions": {
@@ -9451,7 +9553,7 @@
       "hideInEditor": true,
       "viewOffset": [
         390,
-        83
+        374
       ],
       "viewZoom": 1.0
     }
@@ -9590,11 +9692,11 @@
       {
         "parameters": [
           {
-            "value": 10.0,
+            "value": 5.0,
             "controlAddress": "/totalTime"
           },
           {
-            "value": 10.0,
+            "value": 5.0,
             "controlAddress": "/viewEndTime"
           },
           {
@@ -9623,7 +9725,7 @@
                   {
                     "parameters": [
                       {
-                        "value": 10.0,
+                        "value": 5.0,
                         "controlAddress": "/time"
                       }
                     ],
@@ -9737,6 +9839,22 @@
         },
         "cues": {
           "hideInEditor": true,
+          "items": [
+            {
+              "parameters": [
+                {
+                  "value": 10.0,
+                  "controlAddress": "/time"
+                },
+                {
+                  "value": "",
+                  "controlAddress": "/loopJumpCue"
+                }
+              ],
+              "niceName": "Cue",
+              "type": "BaseItem"
+            }
+          ],
           "viewOffset": [
             0,
             0
