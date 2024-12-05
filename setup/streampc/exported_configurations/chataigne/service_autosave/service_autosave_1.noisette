@@ -134,7 +134,7 @@
           "parameters": [
             {
               "value": [
-                1500.0,
+                1700.0,
                 1500.0
               ],
               "controlAddress": "/canvasSize",
@@ -150,15 +150,15 @@
               "parameters": [
                 {
                   "value": [
-                    -640.0,
-                    -580.0
+                    -780.0,
+                    -520.0
                   ],
                   "controlAddress": "/viewUIPosition"
                 },
                 {
                   "value": [
-                    200.0,
-                    120.0
+                    260.0,
+                    160.0
                   ],
                   "controlAddress": "/viewUISize"
                 },
@@ -169,6 +169,12 @@
                 {
                   "value": "PROJECTOR CANVAS",
                   "controlAddress": "/customText",
+                  "enabled": true
+                },
+                {
+                  "value": 43,
+                  "hexMode": false,
+                  "controlAddress": "/textSize",
                   "enabled": true
                 },
                 {
@@ -187,15 +193,15 @@
               "parameters": [
                 {
                   "value": [
-                    -420.0,
-                    -580.0
+                    -520.0,
+                    -520.0
                   ],
                   "controlAddress": "/viewUIPosition"
                 },
                 {
                   "value": [
-                    200.0,
-                    120.0
+                    260.0,
+                    160.0
                   ],
                   "controlAddress": "/viewUISize"
                 },
@@ -208,6 +214,12 @@
                   "controlMode": 1,
                   "expression": "\"Pulpit\\nWide\"",
                   "controlAddress": "/customText",
+                  "enabled": true
+                },
+                {
+                  "value": 50,
+                  "hexMode": false,
+                  "controlAddress": "/textSize",
                   "enabled": true
                 },
                 {
@@ -226,15 +238,15 @@
               "parameters": [
                 {
                   "value": [
-                    -200.0,
-                    -580.0
+                    -260.0,
+                    -520.0
                   ],
                   "controlAddress": "/viewUIPosition"
                 },
                 {
                   "value": [
-                    200.0,
-                    120.0
+                    260.0,
+                    160.0
                   ],
                   "controlAddress": "/viewUISize"
                 },
@@ -245,6 +257,12 @@
                 {
                   "value": "PULPIT",
                   "controlAddress": "/customText",
+                  "enabled": true
+                },
+                {
+                  "value": 50,
+                  "hexMode": false,
+                  "controlAddress": "/textSize",
                   "enabled": true
                 },
                 {
@@ -263,15 +281,15 @@
               "parameters": [
                 {
                   "value": [
-                    20.0,
-                    -580.0
+                    0.0,
+                    -520.0
                   ],
                   "controlAddress": "/viewUIPosition"
                 },
                 {
                   "value": [
-                    200.0,
-                    120.0
+                    260.0,
+                    160.0
                   ],
                   "controlAddress": "/viewUISize"
                 },
@@ -282,6 +300,12 @@
                 {
                   "value": "STAGE",
                   "controlAddress": "/customText",
+                  "enabled": true
+                },
+                {
+                  "value": 50,
+                  "hexMode": false,
+                  "controlAddress": "/textSize",
                   "enabled": true
                 },
                 {
@@ -300,15 +324,15 @@
               "parameters": [
                 {
                   "value": [
-                    240.0,
-                    -580.0
+                    260.0,
+                    -520.0
                   ],
                   "controlAddress": "/viewUIPosition"
                 },
                 {
                   "value": [
-                    200.0,
-                    120.0
+                    260.0,
+                    160.0
                   ],
                   "controlAddress": "/viewUISize"
                 },
@@ -319,6 +343,12 @@
                 {
                   "value": "SITTING",
                   "controlAddress": "/customText",
+                  "enabled": true
+                },
+                {
+                  "value": 50,
+                  "hexMode": false,
+                  "controlAddress": "/textSize",
                   "enabled": true
                 },
                 {
@@ -337,15 +367,15 @@
               "parameters": [
                 {
                   "value": [
-                    460.0,
-                    -580.0
+                    520.0,
+                    -520.0
                   ],
                   "controlAddress": "/viewUIPosition"
                 },
                 {
                   "value": [
-                    200.0,
-                    120.0
+                    260.0,
+                    160.0
                   ],
                   "controlAddress": "/viewUISize"
                 },
@@ -356,6 +386,12 @@
                 {
                   "value": "CUSTOM",
                   "controlAddress": "/customText",
+                  "enabled": true
+                },
+                {
+                  "value": 50,
+                  "hexMode": false,
+                  "controlAddress": "/textSize",
                   "enabled": true
                 },
                 {
@@ -374,15 +410,15 @@
               "parameters": [
                 {
                   "value": [
-                    -420.0,
-                    -380.0
+                    -780.0,
+                    -360.0
                   ],
                   "controlAddress": "/viewUIPosition"
                 },
                 {
                   "value": [
-                    200.0,
-                    120.0
+                    260.0,
+                    160.0
                   ],
                   "controlAddress": "/viewUISize"
                 },
@@ -393,6 +429,12 @@
                 {
                   "value": "STANDBY",
                   "controlAddress": "/customText",
+                  "enabled": true
+                },
+                {
+                  "value": 50,
+                  "hexMode": false,
+                  "controlAddress": "/textSize",
                   "enabled": true
                 },
                 {
@@ -421,15 +463,15 @@
               "parameters": [
                 {
                   "value": [
-                    -200.0,
-                    -380.0
+                    -520.0,
+                    -360.0
                   ],
                   "controlAddress": "/viewUIPosition"
                 },
                 {
                   "value": [
-                    200.0,
-                    120.0
+                    260.0,
+                    160.0
                   ],
                   "controlAddress": "/viewUISize"
                 },
@@ -440,6 +482,12 @@
                 {
                   "value": "PRE STREAM",
                   "controlAddress": "/customText",
+                  "enabled": true
+                },
+                {
+                  "value": 50,
+                  "hexMode": false,
+                  "controlAddress": "/textSize",
                   "enabled": true
                 },
                 {
@@ -468,15 +516,15 @@
               "parameters": [
                 {
                   "value": [
-                    20.0,
-                    -380.0
+                    -260.0,
+                    -360.0
                   ],
                   "controlAddress": "/viewUIPosition"
                 },
                 {
                   "value": [
-                    200.0,
-                    120.0
+                    260.0,
+                    160.0
                   ],
                   "controlAddress": "/viewUISize"
                 },
@@ -487,6 +535,12 @@
                 {
                   "value": "BREAK",
                   "controlAddress": "/customText",
+                  "enabled": true
+                },
+                {
+                  "value": 50,
+                  "hexMode": false,
+                  "controlAddress": "/textSize",
                   "enabled": true
                 },
                 {
@@ -515,15 +569,15 @@
               "parameters": [
                 {
                   "value": [
-                    240.0,
-                    -380.0
+                    0.0,
+                    -360.0
                   ],
                   "controlAddress": "/viewUIPosition"
                 },
                 {
                   "value": [
-                    200.0,
-                    120.0
+                    260.0,
+                    160.0
                   ],
                   "controlAddress": "/viewUISize"
                 },
@@ -534,6 +588,12 @@
                 {
                   "value": "FINISH",
                   "controlAddress": "/customText",
+                  "enabled": true
+                },
+                {
+                  "value": 50,
+                  "hexMode": false,
+                  "controlAddress": "/textSize",
                   "enabled": true
                 },
                 {
@@ -562,15 +622,15 @@
               "parameters": [
                 {
                   "value": [
-                    -640.0,
-                    -660.0
+                    520.0,
+                    -200.0
                   ],
                   "controlAddress": "/viewUIPosition"
                 },
                 {
                   "value": [
-                    420.0,
-                    60.0
+                    260.0,
+                    160.0
                   ],
                   "controlAddress": "/viewUISize"
                 },
@@ -582,6 +642,21 @@
                   "value": "TRANSITION",
                   "controlAddress": "/customText",
                   "enabled": true
+                },
+                {
+                  "value": 41,
+                  "hexMode": false,
+                  "controlAddress": "/textSize",
+                  "enabled": true
+                },
+                {
+                  "value": true,
+                  "controlMode": 2,
+                  "reference": {
+                    "value": "/customVariables/dashboard/variables/transitionButtonLock/transitionButtonLock",
+                    "controlAddress": "/reference"
+                  },
+                  "controlAddress": "/readOnly"
                 },
                 {
                   "value": "",
@@ -599,15 +674,15 @@
               "parameters": [
                 {
                   "value": [
-                    460.0,
-                    -380.0
+                    260.0,
+                    -360.0
                   ],
                   "controlAddress": "/viewUIPosition"
                 },
                 {
                   "value": [
-                    200.0,
-                    120.0
+                    520.0,
+                    160.0
                   ],
                   "controlAddress": "/viewUISize"
                 },
@@ -621,10 +696,16 @@
                   "enabled": true
                 },
                 {
+                  "value": 50,
+                  "hexMode": false,
+                  "controlAddress": "/textSize",
+                  "enabled": true
+                },
+                {
                   "value": [
-                    1.0,
-                    0.1269215792417526,
-                    0.8014039397239685,
+                    0.6769216060638428,
+                    0.1119529455900192,
+                    0.6647960543632507,
                     1.0
                   ],
                   "controlAddress": "/backgroundColor",
@@ -646,202 +727,8 @@
               "parameters": [
                 {
                   "value": [
-                    -280.0,
-                    -80.0
-                  ],
-                  "controlAddress": "/viewUIPosition"
-                },
-                {
-                  "value": [
-                    620.0,
-                    60.0
-                  ],
-                  "controlAddress": "/viewUISize"
-                },
-                {
-                  "value": "/customVariables/camera/variables/camPAN/camPAN",
-                  "controlAddress": "/target"
-                },
-                {
-                  "value": "PAN",
-                  "controlAddress": "/customText",
-                  "enabled": true
-                },
-                {
-                  "value": 60,
-                  "hexMode": false,
-                  "controlAddress": "/textSize",
-                  "enabled": true
-                },
-                {
-                  "value": false,
-                  "controlAddress": "/showValue"
-                },
-                {
-                  "value": [
-                    0.1036548987030983,
-                    0.534615695476532,
-                    0.08430980890989304,
-                    1.0
-                  ],
-                  "controlAddress": "/backgroundColor",
-                  "enabled": true
-                },
-                {
-                  "value": [
-                    0.7058823704719543,
-                    0.196078434586525,
-                    0.1294117718935013,
-                    1.0
-                  ],
-                  "controlAddress": "/foregroundColor",
-                  "enabled": false
-                },
-                {
-                  "value": "",
-                  "controlAddress": "/toggleImage",
-                  "enabled": false
-                }
-              ],
-              "niceName": "Item 10",
-              "hideInEditor": true,
-              "type": "DashboardParameterItem",
-              "ghostAddress": "/customVariables/camera/variables/camPAN/camPAN",
-              "controllable": "/customVariables/camera/variables/camPAN/camPAN"
-            },
-            {
-              "parameters": [
-                {
-                  "value": [
-                    -280.0,
-                    0.0
-                  ],
-                  "controlAddress": "/viewUIPosition"
-                },
-                {
-                  "value": [
-                    60.0,
-                    400.0
-                  ],
-                  "controlAddress": "/viewUISize"
-                },
-                {
-                  "value": "/customVariables/camera/variables/camTILT/camTILT",
-                  "controlAddress": "/target"
-                },
-                {
-                  "value": "TILT",
-                  "controlAddress": "/customText",
-                  "enabled": true
-                },
-                {
-                  "value": 60,
-                  "hexMode": false,
-                  "controlAddress": "/textSize",
-                  "enabled": true
-                },
-                {
-                  "value": "",
-                  "controlAddress": "/customDescription",
-                  "enabled": true
-                },
-                {
-                  "value": false,
-                  "controlAddress": "/showValue"
-                },
-                {
-                  "value": [
-                    0.1036548987030983,
-                    0.534615695476532,
-                    0.08430980890989304,
-                    1.0
-                  ],
-                  "controlAddress": "/backgroundColor",
-                  "enabled": true
-                },
-                {
-                  "value": "Vertical Slider",
-                  "controlAddress": "/style"
-                },
-                {
-                  "value": "",
-                  "controlAddress": "/toggleImage",
-                  "enabled": false
-                }
-              ],
-              "niceName": "Item 13",
-              "hideInEditor": true,
-              "type": "DashboardParameterItem",
-              "ghostAddress": "/customVariables/camera/variables/camTILT/camTILT",
-              "controllable": "/customVariables/camera/variables/camTILT/camTILT"
-            },
-            {
-              "parameters": [
-                {
-                  "value": [
-                    -180.0,
-                    0.0
-                  ],
-                  "controlAddress": "/viewUIPosition"
-                },
-                {
-                  "value": [
-                    660.0,
-                    380.0
-                  ],
-                  "controlAddress": "/viewUISize"
-                },
-                {
-                  "value": "/customVariables/camera/variables/camZOOM/camZOOM",
-                  "controlAddress": "/target"
-                },
-                {
-                  "value": "ZOOM",
-                  "controlAddress": "/customText",
-                  "enabled": true
-                },
-                {
-                  "value": 60,
-                  "hexMode": false,
-                  "controlAddress": "/textSize",
-                  "enabled": true
-                },
-                {
-                  "value": false,
-                  "controlAddress": "/showValue"
-                },
-                {
-                  "value": [
-                    0.1036548987030983,
-                    0.534615695476532,
-                    0.08430980890989304,
-                    1.0
-                  ],
-                  "controlAddress": "/backgroundColor",
-                  "enabled": true
-                },
-                {
-                  "value": "Rotary Slider",
-                  "controlAddress": "/style"
-                },
-                {
-                  "value": "",
-                  "controlAddress": "/toggleImage",
-                  "enabled": false
-                }
-              ],
-              "niceName": "Item 14",
-              "hideInEditor": true,
-              "type": "DashboardParameterItem",
-              "ghostAddress": "/customVariables/camera/variables/camZOOM/camZOOM",
-              "controllable": "/customVariables/camera/variables/camZOOM/camZOOM"
-            },
-            {
-              "parameters": [
-                {
-                  "value": [
-                    -280.0,
-                    -240.0
+                    -580.0,
+                    -40.0
                   ],
                   "controlAddress": "/viewUIPosition"
                 },
@@ -870,15 +757,15 @@
               "parameters": [
                 {
                   "value": [
-                    40.0,
-                    500.0
+                    -580.0,
+                    340.0
                   ],
                   "controlAddress": "/viewUIPosition"
                 },
                 {
                   "value": [
-                    100.0,
-                    100.0
+                    220.0,
+                    200.0
                   ],
                   "controlAddress": "/viewUISize"
                 },
@@ -889,6 +776,12 @@
                 {
                   "value": "<",
                   "controlAddress": "/customText",
+                  "enabled": true
+                },
+                {
+                  "value": 100,
+                  "hexMode": false,
+                  "controlAddress": "/textSize",
                   "enabled": true
                 },
                 {
@@ -911,15 +804,15 @@
               "parameters": [
                 {
                   "value": [
-                    240.0,
-                    500.0
+                    -140.0,
+                    340.0
                   ],
                   "controlAddress": "/viewUIPosition"
                 },
                 {
                   "value": [
-                    100.0,
-                    100.0
+                    220.0,
+                    200.0
                   ],
                   "controlAddress": "/viewUISize"
                 },
@@ -930,6 +823,12 @@
                 {
                   "value": ">",
                   "controlAddress": "/customText",
+                  "enabled": true
+                },
+                {
+                  "value": 100,
+                  "hexMode": false,
+                  "controlAddress": "/textSize",
                   "enabled": true
                 },
                 {
@@ -952,15 +851,15 @@
               "parameters": [
                 {
                   "value": [
-                    240.0,
-                    400.0
+                    -140.0,
+                    140.0
                   ],
                   "controlAddress": "/viewUIPosition"
                 },
                 {
                   "value": [
-                    100.0,
-                    100.0
+                    220.0,
+                    200.0
                   ],
                   "controlAddress": "/viewUISize"
                 },
@@ -971,6 +870,12 @@
                 {
                   "value": "/",
                   "controlAddress": "/customText",
+                  "enabled": true
+                },
+                {
+                  "value": 100,
+                  "hexMode": false,
+                  "controlAddress": "/textSize",
                   "enabled": true
                 },
                 {
@@ -993,15 +898,15 @@
               "parameters": [
                 {
                   "value": [
-                    140.0,
-                    400.0
+                    -360.0,
+                    140.0
                   ],
                   "controlAddress": "/viewUIPosition"
                 },
                 {
                   "value": [
-                    100.0,
-                    100.0
+                    220.0,
+                    200.0
                   ],
                   "controlAddress": "/viewUISize"
                 },
@@ -1012,6 +917,13 @@
                 {
                   "value": "^",
                   "controlAddress": "/customText",
+                  "enabled": true
+                },
+                {
+                  "value": 100,
+                  "alwaysNotify": true,
+                  "hexMode": false,
+                  "controlAddress": "/textSize",
                   "enabled": true
                 },
                 {
@@ -1034,15 +946,15 @@
               "parameters": [
                 {
                   "value": [
-                    40.0,
-                    400.0
+                    -580.0,
+                    140.0
                   ],
                   "controlAddress": "/viewUIPosition"
                 },
                 {
                   "value": [
-                    100.0,
-                    100.0
+                    220.0,
+                    200.0
                   ],
                   "controlAddress": "/viewUISize"
                 },
@@ -1053,6 +965,12 @@
                 {
                   "value": "\\",
                   "controlAddress": "/customText",
+                  "enabled": true
+                },
+                {
+                  "value": 100,
+                  "hexMode": false,
+                  "controlAddress": "/textSize",
                   "enabled": true
                 },
                 {
@@ -1075,15 +993,15 @@
               "parameters": [
                 {
                   "value": [
-                    240.0,
-                    600.0
+                    -140.0,
+                    540.0
                   ],
                   "controlAddress": "/viewUIPosition"
                 },
                 {
                   "value": [
-                    100.0,
-                    100.0
+                    220.0,
+                    200.0
                   ],
                   "controlAddress": "/viewUISize"
                 },
@@ -1094,6 +1012,12 @@
                 {
                   "value": "\\",
                   "controlAddress": "/customText",
+                  "enabled": true
+                },
+                {
+                  "value": 100,
+                  "hexMode": false,
+                  "controlAddress": "/textSize",
                   "enabled": true
                 },
                 {
@@ -1116,15 +1040,15 @@
               "parameters": [
                 {
                   "value": [
-                    40.0,
-                    600.0
+                    -580.0,
+                    540.0
                   ],
                   "controlAddress": "/viewUIPosition"
                 },
                 {
                   "value": [
-                    100.0,
-                    100.0
+                    220.0,
+                    200.0
                   ],
                   "controlAddress": "/viewUISize"
                 },
@@ -1135,6 +1059,12 @@
                 {
                   "value": "/",
                   "controlAddress": "/customText",
+                  "enabled": true
+                },
+                {
+                  "value": 100,
+                  "hexMode": false,
+                  "controlAddress": "/textSize",
                   "enabled": true
                 },
                 {
@@ -1157,15 +1087,15 @@
               "parameters": [
                 {
                   "value": [
-                    140.0,
-                    600.0
+                    -360.0,
+                    540.0
                   ],
                   "controlAddress": "/viewUIPosition"
                 },
                 {
                   "value": [
-                    100.0,
-                    100.0
+                    220.0,
+                    200.0
                   ],
                   "controlAddress": "/viewUISize"
                 },
@@ -1176,6 +1106,12 @@
                 {
                   "value": "\u02d8",
                   "controlAddress": "/customText",
+                  "enabled": true
+                },
+                {
+                  "value": 100,
+                  "hexMode": false,
+                  "controlAddress": "/textSize",
                   "enabled": true
                 },
                 {
@@ -1199,14 +1135,14 @@
                 {
                   "value": [
                     400.0,
-                    600.0
+                    140.0
                   ],
                   "controlAddress": "/viewUIPosition"
                 },
                 {
                   "value": [
-                    100.0,
-                    100.0
+                    220.0,
+                    200.0
                   ],
                   "controlAddress": "/viewUISize"
                 },
@@ -1217,6 +1153,12 @@
                 {
                   "value": "-",
                   "controlAddress": "/customText",
+                  "enabled": true
+                },
+                {
+                  "value": 100,
+                  "hexMode": false,
+                  "controlAddress": "/textSize",
                   "enabled": true
                 },
                 {
@@ -1239,15 +1181,15 @@
               "parameters": [
                 {
                   "value": [
-                    400.0,
-                    400.0
+                    180.0,
+                    140.0
                   ],
                   "controlAddress": "/viewUIPosition"
                 },
                 {
                   "value": [
-                    100.0,
-                    100.0
+                    220.0,
+                    200.0
                   ],
                   "controlAddress": "/viewUISize"
                 },
@@ -1258,6 +1200,12 @@
                 {
                   "value": "+",
                   "controlAddress": "/customText",
+                  "enabled": true
+                },
+                {
+                  "value": 100,
+                  "hexMode": false,
+                  "controlAddress": "/textSize",
                   "enabled": true
                 },
                 {
@@ -1280,21 +1228,27 @@
               "parameters": [
                 {
                   "value": [
-                    -220.0,
-                    600.0
+                    180.0,
+                    460.0
                   ],
                   "controlAddress": "/viewUIPosition"
                 },
                 {
                   "value": [
-                    220.0,
-                    100.0
+                    440.0,
+                    80.0
                   ],
                   "controlAddress": "/viewUISize"
                 },
                 {
                   "value": "/customVariables/camera/variables/ptspeed/ptspeed",
                   "controlAddress": "/target"
+                },
+                {
+                  "value": 40,
+                  "hexMode": false,
+                  "controlAddress": "/textSize",
+                  "enabled": true
                 },
                 {
                   "value": false,
@@ -1340,21 +1294,27 @@
               "parameters": [
                 {
                   "value": [
-                    -220.0,
-                    400.0
+                    180.0,
+                    360.0
                   ],
                   "controlAddress": "/viewUIPosition"
                 },
                 {
                   "value": [
-                    220.0,
-                    100.0
+                    440.0,
+                    80.0
                   ],
                   "controlAddress": "/viewUISize"
                 },
                 {
                   "value": "/customVariables/camera/variables/zoomspeed/zoomspeed",
                   "controlAddress": "/target"
+                },
+                {
+                  "value": 40,
+                  "hexMode": false,
+                  "controlAddress": "/textSize",
+                  "enabled": true
                 },
                 {
                   "value": false,
@@ -1385,11 +1345,62 @@
               "type": "DashboardParameterItem",
               "ghostAddress": "/customVariables/camera/variables/zoomspeed/zoomspeed",
               "controllable": "/customVariables/camera/variables/zoomspeed/zoomspeed"
+            },
+            {
+              "parameters": [
+                {
+                  "value": [
+                    260.0,
+                    -200.0
+                  ],
+                  "controlAddress": "/viewUIPosition"
+                },
+                {
+                  "value": [
+                    260.0,
+                    160.0
+                  ],
+                  "controlAddress": "/viewUISize"
+                },
+                {
+                  "value": "/customVariables/dashboard/variables/transitionButtonLock/transitionButtonLock",
+                  "controlAddress": "/target"
+                },
+                {
+                  "value": "TRANSITION LOCK",
+                  "controlAddress": "/customText",
+                  "enabled": true
+                },
+                {
+                  "value": [
+                    0.800000011920929,
+                    0.800000011920929,
+                    0.800000011920929,
+                    1.0
+                  ],
+                  "controlAddress": "/textColor",
+                  "enabled": true
+                },
+                {
+                  "value": "Toggle Button",
+                  "controlAddress": "/style"
+                },
+                {
+                  "value": "",
+                  "controlAddress": "/toggleImage",
+                  "enabled": false
+                }
+              ],
+              "niceName": "Item 10",
+              "hideInEditor": true,
+              "type": "DashboardParameterItem",
+              "ghostAddress": "/customVariables/workflows/variables/obsTransitionLock/obsTransitionLock",
+              "controllable": "/customVariables/dashboard/variables/transitionButtonLock/transitionButtonLock"
             }
           ],
           "viewOffset": [
             -92,
-            -38
+            59
           ],
           "viewZoom": 0.4906250238418579
         },
@@ -1569,31 +1580,6 @@
               "type": "DashboardEnumParameterItem",
               "ghostAddress": "/modules/soundCard/values/pitchDetection/note",
               "controllable": "/modules/soundCard/values/pitchDetection/note"
-            },
-            {
-              "parameters": [
-                {
-                  "value": [
-                    200.0,
-                    40.0
-                  ],
-                  "controlAddress": "/viewUISize"
-                },
-                {
-                  "value": "/customVariables/camera/variables/camZOOM/camZOOM",
-                  "controlAddress": "/target"
-                },
-                {
-                  "value": "",
-                  "controlAddress": "/toggleImage",
-                  "enabled": false
-                }
-              ],
-              "niceName": "Item 5",
-              "hideInEditor": true,
-              "type": "DashboardParameterItem",
-              "ghostAddress": "/customVariables/camera/variables/camZOOM/camZOOM",
-              "controllable": "/customVariables/camera/variables/camZOOM/camZOOM"
             }
           ],
           "viewOffset": [
@@ -1723,7 +1709,7 @@
               "shifters": [
                 {
                   "type": 0,
-                  "width": 274,
+                  "width": 678,
                   "height": 213,
                   "currentContent": "Sequences",
                   "tabs": [
@@ -1734,7 +1720,7 @@
                 },
                 {
                   "type": 0,
-                  "width": 1434,
+                  "width": 224,
                   "height": 213,
                   "currentContent": "Sequence Editor",
                   "tabs": [
@@ -1745,7 +1731,7 @@
                 },
                 {
                   "type": 0,
-                  "width": 201,
+                  "width": 605,
                   "height": 213,
                   "currentContent": "The Detective",
                   "tabs": [
@@ -1756,7 +1742,7 @@
                 },
                 {
                   "type": 0,
-                  "width": 633,
+                  "width": 1035,
                   "height": 213,
                   "currentContent": "Logger",
                   "tabs": [
@@ -4296,7 +4282,7 @@
             {
               "parameters": [
                 {
-                  "value": "scripts/obs_ext.js",
+                  "value": "scripts/obs_scene_item_visibility.js",
                   "controlAddress": "/filePath"
                 },
                 {
@@ -4304,7 +4290,7 @@
                   "controlAddress": "/enableLog"
                 }
               ],
-              "niceName": "obs_ext",
+              "niceName": "obs_scene_item_visibility",
               "type": "BaseItem",
               "scriptParams": {
                 "hideInEditor": true
@@ -4313,7 +4299,7 @@
             {
               "parameters": [
                 {
-                  "value": "/data/home/csaba/Documents/projects/general/github/ccp_audio_system_manual/setup/streampc/exported_configurations/chataigne/scripts/obs_current_scene_tags.js",
+                  "value": "scripts/obs_current_scene_tags.js",
                   "controlAddress": "/filePath"
                 },
                 {
@@ -4723,6 +4709,10 @@
                   ]
                 }
               }
+            },
+            "sceneItemVisibility": {
+              "owned": true,
+              "niceName": "SceneItemVisibility"
             },
             "sceneNameTags": {
               "owned": true,
@@ -5533,6 +5523,7 @@
                   "shortName": "cam_input_changed"
                 },
                 {
+                  "value": false,
                   "minValue": 0,
                   "maxValue": 1,
                   "default": true,
@@ -5577,7 +5568,8 @@
                   "value": "PROJECTOR  (mute_off, autoptz_to_stage)",
                   "controlMode": 2,
                   "reference": {
-                    "value": "/modules/obsWebsocket/values/scenes/projector_mute_offAutoptz_to_stage_/sceneName",
+                    "value": "",
+                    "ghostValue": "/modules/obsWebsocket/values/scenes/projector_mute_offAutoptz_to_stage_/sceneName",
                     "controlAddress": "/reference"
                   },
                   "controlAddress": "/projectorScene",
@@ -5600,7 +5592,8 @@
                   "value": "PULPIT WIDE  (mute_off, autoptz_to_stage)",
                   "controlMode": 2,
                   "reference": {
-                    "value": "/modules/obsWebsocket/values/scenes/pulpitWIDE_mute_offAutoptz_to_stage_/sceneName",
+                    "value": "",
+                    "ghostValue": "/modules/obsWebsocket/values/scenes/pulpitWIDE_mute_offAutoptz_to_stage_/sceneName",
                     "controlAddress": "/reference"
                   },
                   "controlAddress": "/pulpitWide",
@@ -5623,7 +5616,8 @@
                   "value": "PULPIT (mute_off, autoptz_to_stage)",
                   "controlMode": 2,
                   "reference": {
-                    "value": "/modules/obsWebsocket/values/scenes/pulpit_mute_offAutoptz_to_stage_/sceneName",
+                    "value": "",
+                    "ghostValue": "/modules/obsWebsocket/values/scenes/pulpit_mute_offAutoptz_to_stage_/sceneName",
                     "controlAddress": "/reference"
                   },
                   "controlAddress": "/pulpit",
@@ -5646,7 +5640,8 @@
                   "value": "STAGE  (mute_off, autoptz)",
                   "controlMode": 2,
                   "reference": {
-                    "value": "/modules/obsWebsocket/values/scenes/stage_mute_offAutoptz_/sceneName",
+                    "value": "",
+                    "ghostValue": "/modules/obsWebsocket/values/scenes/stage_mute_offAutoptz_/sceneName",
                     "controlAddress": "/reference"
                   },
                   "controlAddress": "/stage",
@@ -5669,7 +5664,8 @@
                   "value": "SITTING (mute_off, autoptz_to_stage)",
                   "controlMode": 2,
                   "reference": {
-                    "value": "/modules/obsWebsocket/values/scenes/sitting_mute_offAutoptz_to_stage_/sceneName",
+                    "value": "",
+                    "ghostValue": "/modules/obsWebsocket/values/scenes/sitting_mute_offAutoptz_to_stage_/sceneName",
                     "controlAddress": "/reference"
                   },
                   "controlAddress": "/sitting",
@@ -5692,7 +5688,8 @@
                   "value": "CUSTOM (mute_off, autoptz_to_stage)",
                   "controlMode": 2,
                   "reference": {
-                    "value": "/modules/obsWebsocket/values/scenes/custom_mute_offAutoptz_to_stage_/sceneName",
+                    "value": "",
+                    "ghostValue": "/modules/obsWebsocket/values/scenes/custom_mute_offAutoptz_to_stage_/sceneName",
                     "controlAddress": "/reference"
                   },
                   "controlAddress": "/custom",
@@ -5715,7 +5712,8 @@
                   "value": "STAND BY  (live_off, rec_off, mute_on)",
                   "controlMode": 2,
                   "reference": {
-                    "value": "/modules/obsWebsocket/values/scenes/standBY_live_offRec_offMute_on_/sceneName",
+                    "value": "",
+                    "ghostValue": "/modules/obsWebsocket/values/scenes/standBY_live_offRec_offMute_on_/sceneName",
                     "controlAddress": "/reference"
                   },
                   "controlAddress": "/standby",
@@ -5738,7 +5736,8 @@
                   "value": "EVENT PRE STREAM (live_on, rs_on, rec_on_afterleave, mute_on)",
                   "controlMode": 2,
                   "reference": {
-                    "value": "/modules/obsWebsocket/values/scenes/eventPRESTREAM_live_onRs_onRec_on_afterleaveMute_on_/sceneName",
+                    "value": "",
+                    "ghostValue": "/modules/obsWebsocket/values/scenes/eventPRESTREAM_live_onRs_onRec_on_afterleaveMute_on_/sceneName",
                     "controlAddress": "/reference"
                   },
                   "controlAddress": "/preSTREAM",
@@ -5761,7 +5760,8 @@
                   "value": "EVENT BREAK  (mute_on, rec_pause)",
                   "controlMode": 2,
                   "reference": {
-                    "value": "/modules/obsWebsocket/values/scenes/eventBREAK_mute_onRec_pause_/sceneName",
+                    "value": "",
+                    "ghostValue": "/modules/obsWebsocket/values/scenes/eventBREAK_mute_onRec_pause_/sceneName",
                     "controlAddress": "/reference"
                   },
                   "controlAddress": "/break",
@@ -5784,7 +5784,8 @@
                   "value": "EVENT FINISHED  (rs_off_delayed, rec_off_delayed, mute_on, fade_out)",
                   "controlMode": 2,
                   "reference": {
-                    "value": "/modules/obsWebsocket/values/scenes/eventFINISHED_rs_off_delayedRec_off_delayedMute_onFade_out_/sceneName",
+                    "value": "",
+                    "ghostValue": "/modules/obsWebsocket/values/scenes/eventFINISHED_rs_off_delayedRec_off_delayedMute_onFade_out_/sceneName",
                     "controlAddress": "/reference"
                   },
                   "controlAddress": "/finish",
@@ -5807,7 +5808,8 @@
                   "value": "_ Notebook + Cam",
                   "controlMode": 2,
                   "reference": {
-                    "value": "/modules/obsWebsocket/values/scenes/_Notebook_Cam/sceneName",
+                    "value": "",
+                    "ghostValue": "/modules/obsWebsocket/values/scenes/_Notebook_Cam/sceneName",
                     "controlAddress": "/reference"
                   },
                   "controlAddress": "/_NOTEBOOK_Cam",
@@ -5887,7 +5889,6 @@
             {
               "parameters": [
                 {
-                  "value": true,
                   "minValue": 0,
                   "maxValue": 1,
                   "default": false,
@@ -5930,70 +5931,6 @@
             {
               "parameters": [
                 {
-                  "value": 0.0,
-                  "minValue": -50.0,
-                  "maxValue": 50.0,
-                  "default": 0.0,
-                  "controlAddress": "/camPAN",
-                  "feedbackOnly": false,
-                  "type": "Float",
-                  "niceName": "Cam PAN",
-                  "customizable": true,
-                  "removable": false,
-                  "description": "Custom control of type Float",
-                  "hideInEditor": false
-                }
-              ],
-              "niceName": "Cam PAN",
-              "editorIsCollapsed": true,
-              "type": "Float Parameter"
-            },
-            {
-              "parameters": [
-                {
-                  "value": 0.0,
-                  "minValue": -50.0,
-                  "maxValue": 50.0,
-                  "default": 0.0,
-                  "controlAddress": "/camTILT",
-                  "feedbackOnly": false,
-                  "type": "Float",
-                  "niceName": "Cam TILT",
-                  "customizable": true,
-                  "removable": false,
-                  "description": "Custom control of type Float",
-                  "hideInEditor": false
-                }
-              ],
-              "niceName": "Cam TILT",
-              "editorIsCollapsed": true,
-              "type": "Float Parameter"
-            },
-            {
-              "parameters": [
-                {
-                  "value": 0.0,
-                  "minValue": -14.0,
-                  "maxValue": 14.0,
-                  "default": 0.0,
-                  "controlAddress": "/camZOOM",
-                  "feedbackOnly": false,
-                  "type": "Float",
-                  "niceName": "Cam ZOOM",
-                  "customizable": true,
-                  "removable": false,
-                  "description": "Custom control of type Float",
-                  "hideInEditor": false
-                }
-              ],
-              "niceName": "Cam ZOOM",
-              "editorIsCollapsed": true,
-              "type": "Float Parameter"
-            },
-            {
-              "parameters": [
-                {
-                  "value": false,
                   "minValue": 0,
                   "maxValue": 1,
                   "default": false,
@@ -6074,7 +6011,6 @@
             {
               "parameters": [
                 {
-                  "value": false,
                   "minValue": 0,
                   "maxValue": 1,
                   "default": false,
@@ -6195,7 +6131,7 @@
             {
               "parameters": [
                 {
-                  "value": 8,
+                  "value": 10,
                   "minValue": 1.0,
                   "maxValue": 24.0,
                   "default": 0,
@@ -6217,7 +6153,7 @@
             {
               "parameters": [
                 {
-                  "value": 4,
+                  "value": 2,
                   "minValue": 1.0,
                   "maxValue": 7.0,
                   "default": 0,
@@ -6250,6 +6186,49 @@
           ],
           "viewZoom": 1.0
         }
+      },
+      {
+        "niceName": "Dashboard",
+        "type": "CVGroup",
+        "params": {
+        },
+        "variables": {
+          "items": [
+            {
+              "parameters": [
+                {
+                  "value": true,
+                  "minValue": 0,
+                  "maxValue": 1,
+                  "default": false,
+                  "controlAddress": "/transitionButtonLock",
+                  "feedbackOnly": false,
+                  "type": "Boolean",
+                  "niceName": "Transition Button Lock",
+                  "customizable": true,
+                  "removable": false,
+                  "description": "Custom control of type Boolean",
+                  "hideInEditor": false
+                }
+              ],
+              "niceName": "Transition Button Lock",
+              "editorIsCollapsed": true,
+              "type": "Bool Parameter"
+            }
+          ],
+          "viewOffset": [
+            0,
+            0
+          ],
+          "viewZoom": 1.0
+        },
+        "presets": {
+          "viewOffset": [
+            0,
+            0
+          ],
+          "viewZoom": 1.0
+        }
       }
     ],
     "viewOffset": [
@@ -6264,8 +6243,8 @@
         "parameters": [
           {
             "value": [
-              -753.2307739257812,
-              -833.6410522460938
+              -687.0,
+              -833.0
             ],
             "controlAddress": "/viewUIPosition"
           },
@@ -6677,7 +6656,7 @@
           {
             "value": [
               -687.0,
-              -558.0
+              -588.0
             ],
             "controlAddress": "/viewUIPosition"
           },
@@ -7076,6 +7055,14 @@
                     "value": 50,
                     "hexMode": false,
                     "controlAddress": "/updateRate"
+                  },
+                  {
+                    "value": true,
+                    "controlAddress": "/sendOnInputChangeOnly"
+                  },
+                  {
+                    "value": false,
+                    "controlAddress": "/sendOnOutputChangeOnly"
                   }
                 ],
                 "editorIsCollapsed": true
@@ -7127,6 +7114,16 @@
               "editorIsCollapsed": true,
               "type": "Action",
               "conditions": {
+                "parameters": [
+                  {
+                    "value": 0.05000000074505806,
+                    "controlAddress": "/validationTime"
+                  },
+                  {
+                    "value": 0.05000000074505806,
+                    "controlAddress": "/invalidationTime"
+                  }
+                ],
                 "items": [
                   {
                     "parameters": [
@@ -7199,7 +7196,6 @@
                 "items": [
                   {
                     "niceName": "Consequence",
-                    "editorIsCollapsed": true,
                     "type": "Consequence",
                     "commandModule": "http_PTZCONTROL",
                     "commandPath": "Templates",
@@ -7224,27 +7220,6 @@
                           0
                         ],
                         "viewZoom": 1.0
-                      }
-                    }
-                  },
-                  {
-                    "niceName": "Consequence 1",
-                    "type": "Consequence",
-                    "commandModule": "sequences",
-                    "commandPath": "Playback",
-                    "commandType": "Play Sequence",
-                    "command": {
-                      "parameters": [
-                        {
-                          "value": "/sequences/resetCameraVariables",
-                          "controlAddress": "/target"
-                        },
-                        {
-                          "value": true,
-                          "controlAddress": "/playFromStart"
-                        }
-                      ],
-                      "paramLinks": {
                       }
                     }
                   }
@@ -8065,6 +8040,35 @@
                       "paramLinks": {
                       }
                     }
+                  },
+                  {
+                    "niceName": "Consequence",
+                    "type": "Consequence",
+                    "commandModule": "customVariables",
+                    "commandPath": "",
+                    "commandType": "Set Value",
+                    "command": {
+                      "parameters": [
+                        {
+                          "value": "/dashboard/transitionButtonLock",
+                          "controlAddress": "/target"
+                        },
+                        {
+                          "value": "All",
+                          "controlAddress": "/component"
+                        },
+                        {
+                          "value": "Equals",
+                          "controlAddress": "/operator"
+                        },
+                        {
+                          "value": true,
+                          "controlAddress": "/value"
+                        }
+                      ],
+                      "paramLinks": {
+                      }
+                    }
                   }
                 ],
                 "viewOffset": [
@@ -8134,6 +8138,7 @@
                           "controlAddress": "/sceneItemId"
                         },
                         {
+                          "value": false,
                           "controlMode": 2,
                           "reference": {
                             "value": "/states/obs/processors/camVisibilityNegated/outValues/out1",
@@ -8162,8 +8167,9 @@
                     "command": {
                       "parameters": [
                         {
+                          "value": false,
                           "controlMode": 1,
-                          "expression": "root.modules.obsWebsocket.values.scene_item_20_enabled.get()>0?0:1",
+                          "expression": "root.modules.obsWebsocket.values.sceneItemVisibility.scene_item_20.get()>0?0:1",
                           "controlAddress": "/sceneItemEnabled"
                         }
                       ],
@@ -8195,7 +8201,7 @@
                   {
                     "parameters": [
                       {
-                        "value": "/modules/obsWebsocket/values/scene_item_20_enabled",
+                        "value": "/modules/obsWebsocket/values/sceneItemVisibility/scene_item_20",
                         "controlAddress": "/inputValue"
                       }
                     ],
@@ -8256,8 +8262,8 @@
         "parameters": [
           {
             "value": [
-              133.0,
-              -805.0
+              163.0,
+              -833.0
             ],
             "controlAddress": "/viewUIPosition"
           },
@@ -8484,6 +8490,7 @@
                           "controlAddress": "/operator"
                         },
                         {
+                          "value": true,
                           "controlMode": 1,
                           "expression": "root.customVariables.workflows.variables.stageMuted.stageMuted.get()>0?0:1",
                           "controlAddress": "/value"
@@ -8769,8 +8776,8 @@
         "parameters": [
           {
             "value": [
-              133.0,
-              -491.0
+              163.0,
+              -487.0
             ],
             "controlAddress": "/viewUIPosition"
           },
@@ -8917,7 +8924,7 @@
             {
               "parameters": [
                 {
-                  "value": false,
+                  "value": true,
                   "controlAddress": "/enabled"
                 }
               ],
@@ -9026,7 +9033,7 @@
     ],
     "viewOffset": [
       2,
-      485
+      582
     ],
     "viewZoom": 1.0,
     "transitions": {
@@ -9044,8 +9051,8 @@
           "parameters": [
             {
               "value": [
-                587.0,
-                -664.0
+                605.0,
+                -691.0
               ],
               "controlAddress": "/viewUIPosition"
             },
@@ -9068,8 +9075,8 @@
           "parameters": [
             {
               "value": [
-                585.0,
-                -438.0
+                598.0,
+                -442.0
               ],
               "controlAddress": "/viewUIPosition"
             },
@@ -9092,8 +9099,8 @@
           "parameters": [
             {
               "value": [
-                567.7948608398438,
-                -776.2051391601562
+                581.0,
+                -781.0
               ],
               "controlAddress": "/viewUIPosition"
             },
@@ -9115,7 +9122,7 @@
       ],
       "viewOffset": [
         2,
-        485
+        582
       ],
       "viewZoom": 1.0
     }
@@ -9244,179 +9251,6 @@
         },
         "cues": {
           "hideInEditor": true,
-          "viewOffset": [
-            0,
-            0
-          ],
-          "viewZoom": 1.0
-        }
-      },
-      {
-        "parameters": [
-          {
-            "value": 5.0,
-            "controlAddress": "/totalTime"
-          },
-          {
-            "value": 5.0,
-            "controlAddress": "/viewEndTime"
-          },
-          {
-            "value": "",
-            "controlAddress": "/ltcSyncModule",
-            "enabled": false
-          }
-        ],
-        "niceName": "Reset Camera Variables",
-        "type": "Sequence",
-        "layers": {
-          "hideInEditor": true,
-          "items": [
-            {
-              "parameters": [
-                {
-                  "value": 60.0,
-                  "controlAddress": "/listSize"
-                }
-              ],
-              "niceName": "Trigger",
-              "type": "Trigger",
-              "triggers": {
-                "hideInEditor": true,
-                "items": [
-                  {
-                    "parameters": [
-                      {
-                        "value": 5.0,
-                        "controlAddress": "/time"
-                      }
-                    ],
-                    "niceName": "Trigger 1",
-                    "type": "TimeTrigger",
-                    "consequences": {
-                      "parameters": [
-                        {
-                          "value": false,
-                          "controlAddress": "/cancelDelaysOnTrigger"
-                        }
-                      ],
-                      "items": [
-                        {
-                          "niceName": "Consequence",
-                          "type": "Consequence",
-                          "commandModule": "customVariables",
-                          "commandPath": "",
-                          "commandType": "Set Value",
-                          "command": {
-                            "parameters": [
-                              {
-                                "value": "/camera/camZOOM",
-                                "controlAddress": "/target"
-                              },
-                              {
-                                "value": "All",
-                                "controlAddress": "/component"
-                              },
-                              {
-                                "value": "Equals",
-                                "controlAddress": "/operator"
-                              }
-                            ],
-                            "paramLinks": {
-                            }
-                          }
-                        },
-                        {
-                          "niceName": "Consequence 1",
-                          "type": "Consequence",
-                          "commandModule": "customVariables",
-                          "commandPath": "",
-                          "commandType": "Set Value",
-                          "command": {
-                            "parameters": [
-                              {
-                                "value": "/camera/camTILT",
-                                "controlAddress": "/target"
-                              },
-                              {
-                                "value": "All",
-                                "controlAddress": "/component"
-                              },
-                              {
-                                "value": "Equals",
-                                "controlAddress": "/operator"
-                              }
-                            ],
-                            "paramLinks": {
-                            }
-                          }
-                        },
-                        {
-                          "niceName": "Consequence 2",
-                          "type": "Consequence",
-                          "commandModule": "customVariables",
-                          "commandPath": "",
-                          "commandType": "Set Value",
-                          "command": {
-                            "parameters": [
-                              {
-                                "value": "/camera/camPAN",
-                                "controlAddress": "/target"
-                              },
-                              {
-                                "value": "All",
-                                "controlAddress": "/component"
-                              },
-                              {
-                                "value": "Equals",
-                                "controlAddress": "/operator"
-                              }
-                            ],
-                            "paramLinks": {
-                            }
-                          }
-                        }
-                      ],
-                      "viewOffset": [
-                        0,
-                        0
-                      ],
-                      "viewZoom": 1.0
-                    }
-                  }
-                ],
-                "viewOffset": [
-                  0,
-                  0
-                ],
-                "viewZoom": 1.0
-              }
-            }
-          ],
-          "viewOffset": [
-            0,
-            0
-          ],
-          "viewZoom": 1.0
-        },
-        "cues": {
-          "hideInEditor": true,
-          "items": [
-            {
-              "parameters": [
-                {
-                  "value": 10.0,
-                  "controlAddress": "/time"
-                },
-                {
-                  "value": "",
-                  "controlAddress": "/loopJumpCue"
-                }
-              ],
-              "niceName": "Cue",
-              "type": "BaseItem"
-            }
-          ],
           "viewOffset": [
             0,
             0
