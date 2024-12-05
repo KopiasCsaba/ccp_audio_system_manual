@@ -8,7 +8,7 @@
       "dashboardSettings": {
         "parameters": [
           {
-            "value": "/obsremote",
+            "value": "/advanced",
             "controlAddress": "/showDashboardOnStartup",
             "enabled": true
           },
@@ -22,11 +22,11 @@
             "controlAddress": "/serverPort"
           },
           {
-            "value": "12345",
+            "value": "",
             "controlAddress": "/password"
           },
           {
-            "value": true,
+            "value": false,
             "controlAddress": "/unlockOnlyOnce"
           }
         ]
@@ -44,17 +44,29 @@
     ],
     "items": [
       {
-        "niceName": "OBSREMOTE",
+        "niceName": "BASIC",
         "type": "BaseItem",
         "itemManager": {
           "parameters": [
             {
               "value": [
-                1200.0,
-                800.0
+                1000.0,
+                500.0
               ],
               "controlAddress": "/canvasSize",
-              "enabled": false
+              "enabled": true
+            },
+            {
+              "value": 0.1381174921989441,
+              "controlAddress": "/backgroundImageScale"
+            },
+            {
+              "value": 0.0,
+              "controlAddress": "/backgroundImageAlpha"
+            },
+            {
+              "value": true,
+              "controlAddress": "/snapGridMode"
             }
           ],
           "items": [
@@ -62,15 +74,105 @@
               "parameters": [
                 {
                   "value": [
-                    -22.0,
-                    2.0
+                    -460.0,
+                    -160.0
+                  ],
+                  "controlAddress": "/viewUIPosition"
+                },
+                {
+                  "value": [
+                    520.0,
+                    160.0
+                  ],
+                  "controlAddress": "/viewUISize"
+                },
+                {
+                  "value": "/states/obs_state/processors/camTOGGLE/trigger",
+                  "controlAddress": "/target"
+                },
+                {
+                  "value": "CAM TOGGLE",
+                  "controlAddress": "/customText",
+                  "enabled": true
+                },
+                {
+                  "value": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ],
+                  "controlAddress": "/textColor",
+                  "enabled": true
+                },
+                {
+                  "value": 40,
+                  "hexMode": false,
+                  "controlAddress": "/textSize",
+                  "enabled": true
+                },
+                {
+                  "value": [
+                    1.0,
+                    0.1269215792417526,
+                    0.8014039397239685,
+                    1.0
+                  ],
+                  "controlAddress": "/backgroundColor",
+                  "enabled": true
+                },
+                {
+                  "value": "",
+                  "controlAddress": "/customImage",
+                  "enabled": false
+                }
+              ],
+              "niceName": "Item 12",
+              "hideInEditor": true,
+              "type": "DashboardTriggerItem",
+              "ghostAddress": "/states/obs_state/processors/camTOGGLE/trigger",
+              "controllable": "/states/obs_state/processors/camTOGGLE/trigger"
+            }
+          ],
+          "viewOffset": [
+            198,
+            0
+          ],
+          "viewZoom": 1.271875023841858
+        }
+      },
+      {
+        "niceName": "ADVANCED",
+        "type": "BaseItem",
+        "itemManager": {
+          "parameters": [
+            {
+              "value": [
+                1500.0,
+                1500.0
+              ],
+              "controlAddress": "/canvasSize",
+              "enabled": true
+            },
+            {
+              "value": true,
+              "controlAddress": "/snapGridMode"
+            }
+          ],
+          "items": [
+            {
+              "parameters": [
+                {
+                  "value": [
+                    -640.0,
+                    -580.0
                   ],
                   "controlAddress": "/viewUIPosition"
                 },
                 {
                   "value": [
                     200.0,
-                    40.0
+                    120.0
                   ],
                   "controlAddress": "/viewUISize"
                 },
@@ -79,7 +181,7 @@
                   "controlAddress": "/target"
                 },
                 {
-                  "value": "SW SCENE Projector",
+                  "value": "PROJECTOR CANVAS",
                   "controlAddress": "/customText",
                   "enabled": true
                 },
@@ -99,15 +201,15 @@
               "parameters": [
                 {
                   "value": [
-                    -22.0,
-                    250.0
+                    -420.0,
+                    -580.0
                   ],
                   "controlAddress": "/viewUIPosition"
                 },
                 {
                   "value": [
                     200.0,
-                    40.0
+                    120.0
                   ],
                   "controlAddress": "/viewUISize"
                 },
@@ -116,7 +218,9 @@
                   "controlAddress": "/target"
                 },
                 {
-                  "value": "SW SCENE Pulpit wide",
+                  "value": "Pulpit\nWide",
+                  "controlMode": 1,
+                  "expression": "\"Pulpit\\nWide\"",
                   "controlAddress": "/customText",
                   "enabled": true
                 },
@@ -136,15 +240,15 @@
               "parameters": [
                 {
                   "value": [
-                    -22.0,
-                    200.6000061035156
+                    -200.0,
+                    -580.0
                   ],
                   "controlAddress": "/viewUIPosition"
                 },
                 {
                   "value": [
                     200.0,
-                    40.0
+                    120.0
                   ],
                   "controlAddress": "/viewUISize"
                 },
@@ -153,7 +257,7 @@
                   "controlAddress": "/target"
                 },
                 {
-                  "value": "SW SCENE Pulpit",
+                  "value": "PULPIT",
                   "controlAddress": "/customText",
                   "enabled": true
                 },
@@ -173,15 +277,15 @@
               "parameters": [
                 {
                   "value": [
-                    -22.0,
-                    -195.0
+                    20.0,
+                    -580.0
                   ],
                   "controlAddress": "/viewUIPosition"
                 },
                 {
                   "value": [
                     200.0,
-                    40.0
+                    120.0
                   ],
                   "controlAddress": "/viewUISize"
                 },
@@ -190,7 +294,7 @@
                   "controlAddress": "/target"
                 },
                 {
-                  "value": "SW SCENE Stage",
+                  "value": "STAGE",
                   "controlAddress": "/customText",
                   "enabled": true
                 },
@@ -210,15 +314,15 @@
               "parameters": [
                 {
                   "value": [
-                    -22.0,
-                    151.1999969482422
+                    240.0,
+                    -580.0
                   ],
                   "controlAddress": "/viewUIPosition"
                 },
                 {
                   "value": [
                     200.0,
-                    40.0
+                    120.0
                   ],
                   "controlAddress": "/viewUISize"
                 },
@@ -227,7 +331,7 @@
                   "controlAddress": "/target"
                 },
                 {
-                  "value": "SW SCENE Sitting",
+                  "value": "SITTING",
                   "controlAddress": "/customText",
                   "enabled": true
                 },
@@ -247,15 +351,15 @@
               "parameters": [
                 {
                   "value": [
-                    -22.0,
-                    -145.0
+                    460.0,
+                    -580.0
                   ],
                   "controlAddress": "/viewUIPosition"
                 },
                 {
                   "value": [
                     200.0,
-                    40.0
+                    120.0
                   ],
                   "controlAddress": "/viewUISize"
                 },
@@ -264,7 +368,7 @@
                   "controlAddress": "/target"
                 },
                 {
-                  "value": "SW SCENE Custom",
+                  "value": "CUSTOM",
                   "controlAddress": "/customText",
                   "enabled": true
                 },
@@ -284,15 +388,15 @@
               "parameters": [
                 {
                   "value": [
-                    -22.0,
-                    101.7999877929688
+                    -420.0,
+                    -380.0
                   ],
                   "controlAddress": "/viewUIPosition"
                 },
                 {
                   "value": [
                     200.0,
-                    40.0
+                    120.0
                   ],
                   "controlAddress": "/viewUISize"
                 },
@@ -301,8 +405,18 @@
                   "controlAddress": "/target"
                 },
                 {
-                  "value": "SW SCENE Standby",
+                  "value": "STANDBY",
                   "controlAddress": "/customText",
+                  "enabled": true
+                },
+                {
+                  "value": [
+                    0.692305862903595,
+                    0.2636274397373199,
+                    0.2636274397373199,
+                    1.0
+                  ],
+                  "controlAddress": "/backgroundColor",
                   "enabled": true
                 },
                 {
@@ -321,15 +435,15 @@
               "parameters": [
                 {
                   "value": [
-                    -22.0,
-                    52.39999389648438
+                    -200.0,
+                    -380.0
                   ],
                   "controlAddress": "/viewUIPosition"
                 },
                 {
                   "value": [
                     200.0,
-                    40.0
+                    120.0
                   ],
                   "controlAddress": "/viewUISize"
                 },
@@ -338,8 +452,18 @@
                   "controlAddress": "/target"
                 },
                 {
-                  "value": "SW SCENE PRE STREAM",
+                  "value": "PRE STREAM",
                   "controlAddress": "/customText",
+                  "enabled": true
+                },
+                {
+                  "value": [
+                    0.692305862903595,
+                    0.2636274397373199,
+                    0.2636274397373199,
+                    1.0
+                  ],
+                  "controlAddress": "/backgroundColor",
                   "enabled": true
                 },
                 {
@@ -358,15 +482,15 @@
               "parameters": [
                 {
                   "value": [
-                    -22.0,
-                    -46.4000244140625
+                    20.0,
+                    -380.0
                   ],
                   "controlAddress": "/viewUIPosition"
                 },
                 {
                   "value": [
                     200.0,
-                    40.0
+                    120.0
                   ],
                   "controlAddress": "/viewUISize"
                 },
@@ -375,8 +499,18 @@
                   "controlAddress": "/target"
                 },
                 {
-                  "value": "SW SCENE BREAK",
+                  "value": "BREAK",
                   "controlAddress": "/customText",
+                  "enabled": true
+                },
+                {
+                  "value": [
+                    0.692305862903595,
+                    0.2636274397373199,
+                    0.2636274397373199,
+                    1.0
+                  ],
+                  "controlAddress": "/backgroundColor",
                   "enabled": true
                 },
                 {
@@ -395,15 +529,15 @@
               "parameters": [
                 {
                   "value": [
-                    -22.0,
-                    -95.79998779296875
+                    240.0,
+                    -380.0
                   ],
                   "controlAddress": "/viewUIPosition"
                 },
                 {
                   "value": [
                     200.0,
-                    40.0
+                    120.0
                   ],
                   "controlAddress": "/viewUISize"
                 },
@@ -412,8 +546,18 @@
                   "controlAddress": "/target"
                 },
                 {
-                  "value": "SW SCENE FINISH",
+                  "value": "FINISH",
                   "controlAddress": "/customText",
+                  "enabled": true
+                },
+                {
+                  "value": [
+                    0.692305862903595,
+                    0.2636274397373199,
+                    0.2636274397373199,
+                    1.0
+                  ],
+                  "controlAddress": "/backgroundColor",
                   "enabled": true
                 },
                 {
@@ -432,15 +576,15 @@
               "parameters": [
                 {
                   "value": [
-                    237.0,
-                    5.0
+                    -640.0,
+                    -660.0
                   ],
                   "controlAddress": "/viewUIPosition"
                 },
                 {
                   "value": [
-                    200.0,
-                    40.0
+                    420.0,
+                    60.0
                   ],
                   "controlAddress": "/viewUISize"
                 },
@@ -469,15 +613,15 @@
               "parameters": [
                 {
                   "value": [
-                    237.0,
-                    -45.0
+                    460.0,
+                    -380.0
                   ],
                   "controlAddress": "/viewUIPosition"
                 },
                 {
                   "value": [
                     200.0,
-                    40.0
+                    120.0
                   ],
                   "controlAddress": "/viewUISize"
                 },
@@ -488,6 +632,16 @@
                 {
                   "value": "CAM TOGGLE",
                   "controlAddress": "/customText",
+                  "enabled": true
+                },
+                {
+                  "value": [
+                    1.0,
+                    0.1269215792417526,
+                    0.8014039397239685,
+                    1.0
+                  ],
+                  "controlAddress": "/backgroundColor",
                   "enabled": true
                 },
                 {
@@ -506,8 +660,158 @@
               "parameters": [
                 {
                   "value": [
-                    -376.0,
-                    5.0
+                    -280.0,
+                    -80.0
+                  ],
+                  "controlAddress": "/viewUIPosition"
+                },
+                {
+                  "value": [
+                    620.0,
+                    60.0
+                  ],
+                  "controlAddress": "/viewUISize"
+                },
+                {
+                  "value": "/customVariables/camera/variables/camPAN/camPAN",
+                  "controlAddress": "/target"
+                },
+                {
+                  "value": 60,
+                  "hexMode": false,
+                  "controlAddress": "/textSize",
+                  "enabled": true
+                },
+                {
+                  "value": false,
+                  "controlAddress": "/showValue"
+                },
+                {
+                  "value": "",
+                  "controlAddress": "/toggleImage",
+                  "enabled": false
+                }
+              ],
+              "niceName": "Item 10",
+              "hideInEditor": true,
+              "type": "DashboardParameterItem",
+              "ghostAddress": "/customVariables/camera/variables/camPAN/camPAN",
+              "controllable": "/customVariables/camera/variables/camPAN/camPAN"
+            },
+            {
+              "parameters": [
+                {
+                  "value": [
+                    -280.0,
+                    0.0
+                  ],
+                  "controlAddress": "/viewUIPosition"
+                },
+                {
+                  "value": [
+                    620.0,
+                    60.0
+                  ],
+                  "controlAddress": "/viewUISize"
+                },
+                {
+                  "value": "/customVariables/camera/variables/camTILT/camTILT",
+                  "controlAddress": "/target"
+                },
+                {
+                  "value": 60,
+                  "hexMode": false,
+                  "controlAddress": "/textSize",
+                  "enabled": true
+                },
+                {
+                  "value": false,
+                  "controlAddress": "/showValue"
+                },
+                {
+                  "value": "",
+                  "controlAddress": "/toggleImage",
+                  "enabled": false
+                }
+              ],
+              "niceName": "Item 13",
+              "hideInEditor": true,
+              "type": "DashboardParameterItem",
+              "ghostAddress": "/customVariables/camera/variables/camTILT/camTILT",
+              "controllable": "/customVariables/camera/variables/camTILT/camTILT"
+            },
+            {
+              "parameters": [
+                {
+                  "value": [
+                    -280.0,
+                    80.0
+                  ],
+                  "controlAddress": "/viewUIPosition"
+                },
+                {
+                  "value": [
+                    620.0,
+                    60.0
+                  ],
+                  "controlAddress": "/viewUISize"
+                },
+                {
+                  "value": "/customVariables/camera/variables/camZOOM/camZOOM",
+                  "controlAddress": "/target"
+                },
+                {
+                  "value": 60,
+                  "hexMode": false,
+                  "controlAddress": "/textSize",
+                  "enabled": true
+                },
+                {
+                  "value": false,
+                  "controlAddress": "/showValue"
+                },
+                {
+                  "value": "",
+                  "controlAddress": "/toggleImage",
+                  "enabled": false
+                }
+              ],
+              "niceName": "Item 14",
+              "hideInEditor": true,
+              "type": "DashboardParameterItem",
+              "ghostAddress": "/customVariables/camera/variables/camZOOM/camZOOM",
+              "controllable": "/customVariables/camera/variables/camZOOM/camZOOM"
+            }
+          ],
+          "viewOffset": [
+            -92,
+            156
+          ],
+          "viewZoom": 0.4906250238418579
+        },
+        "editing": true
+      },
+      {
+        "niceName": "I DARE YOU",
+        "type": "BaseItem",
+        "itemManager": {
+          "parameters": [
+            {
+              "value": [
+                1000.0,
+                1200.0
+              ],
+              "controlAddress": "/canvasSize",
+              "enabled": true
+            }
+          ],
+          "items": [
+            {
+              "parameters": [
+                {
+                  "value": [
+                    -466.0194091796875,
+                    -498.3301086425781
                   ],
                   "controlAddress": "/viewUIPosition"
                 },
@@ -528,20 +832,172 @@
                   "enabled": false
                 }
               ],
-              "niceName": "Item 10",
+              "niceName": "Item",
               "hideInEditor": true,
               "type": "DashboardParameterItem",
               "ghostAddress": "/customVariables/workflows/variables/stageMuteCounter/stageMuteCounter",
               "controllable": "/customVariables/workflows/variables/stageMuteCounter/stageMuteCounter"
+            },
+            {
+              "parameters": [
+                {
+                  "value": [
+                    -466.0194091796875,
+                    -387.7281494140625
+                  ],
+                  "controlAddress": "/viewUIPosition"
+                },
+                {
+                  "value": [
+                    200.0,
+                    40.0
+                  ],
+                  "controlAddress": "/viewUISize"
+                },
+                {
+                  "value": "/states/stageMuter/processors/stageMuteWatcher/conditions/validationTime",
+                  "controlAddress": "/target"
+                },
+                {
+                  "value": "",
+                  "controlAddress": "/toggleImage",
+                  "enabled": false
+                }
+              ],
+              "niceName": "Item 1",
+              "hideInEditor": true,
+              "type": "DashboardParameterItem",
+              "ghostAddress": "/states/stageMuter/processors/stageMuteWatcher/conditions/validationTime",
+              "controllable": "/states/stageMuter/processors/stageMuteWatcher/conditions/validationTime"
+            },
+            {
+              "parameters": [
+                {
+                  "value": [
+                    -466.0194091796875,
+                    -436.1941833496094
+                  ],
+                  "controlAddress": "/viewUIPosition"
+                },
+                {
+                  "value": [
+                    200.0,
+                    40.0
+                  ],
+                  "controlAddress": "/viewUISize"
+                },
+                {
+                  "value": "/states/stageMuter/processors/stageMuteWatcher/conditions/invalidationTime",
+                  "controlAddress": "/target"
+                },
+                {
+                  "value": "",
+                  "controlAddress": "/toggleImage",
+                  "enabled": false
+                }
+              ],
+              "niceName": "Item 2",
+              "hideInEditor": true,
+              "type": "DashboardParameterItem",
+              "ghostAddress": "/states/stageMuter/processors/stageMuteWatcher/conditions/invalidationTime",
+              "controllable": "/states/stageMuter/processors/stageMuteWatcher/conditions/invalidationTime"
+            },
+            {
+              "parameters": [
+                {
+                  "value": [
+                    -466.0194091796875,
+                    -311.9223327636719
+                  ],
+                  "controlAddress": "/viewUIPosition"
+                },
+                {
+                  "value": [
+                    200.0,
+                    40.0
+                  ],
+                  "controlAddress": "/viewUISize"
+                },
+                {
+                  "value": "/states/stageMuter/processors/stageMuteWatcher/conditions/fromInputValue/comparator/reference",
+                  "controlAddress": "/target"
+                },
+                {
+                  "value": "",
+                  "controlAddress": "/toggleImage",
+                  "enabled": false
+                }
+              ],
+              "niceName": "Item 3",
+              "hideInEditor": true,
+              "type": "DashboardEnumParameterItem",
+              "ghostAddress": "/states/stageMuter/processors/stageMuteWatcher/conditions/fromInputValue/comparator/reference",
+              "controllable": "/states/stageMuter/processors/stageMuteWatcher/conditions/fromInputValue/comparator/reference"
+            },
+            {
+              "parameters": [
+                {
+                  "value": [
+                    -466.0194091796875,
+                    -249.7864074707031
+                  ],
+                  "controlAddress": "/viewUIPosition"
+                },
+                {
+                  "value": [
+                    200.0,
+                    40.0
+                  ],
+                  "controlAddress": "/viewUISize"
+                },
+                {
+                  "value": "/modules/soundCard/values/pitchDetection/note",
+                  "controlAddress": "/target"
+                },
+                {
+                  "value": "",
+                  "controlAddress": "/toggleImage",
+                  "enabled": false
+                }
+              ],
+              "niceName": "Item 4",
+              "hideInEditor": true,
+              "type": "DashboardEnumParameterItem",
+              "ghostAddress": "/modules/soundCard/values/pitchDetection/note",
+              "controllable": "/modules/soundCard/values/pitchDetection/note"
+            },
+            {
+              "parameters": [
+                {
+                  "value": [
+                    200.0,
+                    40.0
+                  ],
+                  "controlAddress": "/viewUISize"
+                },
+                {
+                  "value": "/customVariables/camera/variables/camZOOM/camZOOM",
+                  "controlAddress": "/target"
+                },
+                {
+                  "value": "",
+                  "controlAddress": "/toggleImage",
+                  "enabled": false
+                }
+              ],
+              "niceName": "Item 5",
+              "hideInEditor": true,
+              "type": "DashboardParameterItem",
+              "ghostAddress": "/customVariables/camera/variables/camZOOM/camZOOM",
+              "controllable": "/customVariables/camera/variables/camZOOM/camZOOM"
             }
           ],
           "viewOffset": [
-            0,
-            0
+            130,
+            144
           ],
-          "viewZoom": 1.0
-        },
-        "editing": true
+          "viewZoom": 0.8046875
+        }
       }
     ],
     "viewOffset": [
@@ -551,6 +1007,22 @@
     "viewZoom": 1.0
   },
   "parrots": {
+    "items": [
+      {
+        "niceName": "Parrot",
+        "type": "Parrot",
+        "targets": [
+          "/customVariables/workflows/variables/stageMuteCounter/stageMuteCounter"
+        ],
+        "records": {
+          "viewOffset": [
+            0,
+            0
+          ],
+          "viewZoom": 1.0
+        }
+      }
+    ],
     "viewOffset": [
       0,
       0
@@ -560,32 +1032,32 @@
   "layout": {
     "mainLayout": {
       "type": 1,
-      "width": 2560,
-      "height": 1017,
+      "width": 1836,
+      "height": 1015,
       "direction": 2,
       "shifters": [
         {
           "type": 1,
-          "width": 2560,
-          "height": 1017,
+          "width": 1836,
+          "height": 1015,
           "direction": 2,
           "shifters": [
             {
               "type": 1,
-              "width": 2560,
-              "height": 722,
+              "width": 1836,
+              "height": 726,
               "direction": 1,
               "shifters": [
                 {
                   "type": 1,
                   "width": 307,
-                  "height": 722,
+                  "height": 726,
                   "direction": 2,
                   "shifters": [
                     {
                       "type": 0,
                       "width": 307,
-                      "height": 370,
+                      "height": 373,
                       "currentContent": "Modules",
                       "tabs": [
                         {
@@ -596,7 +1068,7 @@
                     {
                       "type": 0,
                       "width": 307,
-                      "height": 346,
+                      "height": 347,
                       "currentContent": "Custom Variables",
                       "tabs": [
                         {
@@ -608,8 +1080,8 @@
                 },
                 {
                   "type": 0,
-                  "width": 1626,
-                  "height": 722,
+                  "width": 955,
+                  "height": 726,
                   "currentContent": "State Machine",
                   "tabs": [
                     {
@@ -628,8 +1100,8 @@
                 },
                 {
                   "type": 0,
-                  "width": 615,
-                  "height": 722,
+                  "width": 562,
+                  "height": 726,
                   "currentContent": "Inspector",
                   "tabs": [
                     {
@@ -641,14 +1113,14 @@
             },
             {
               "type": 1,
-              "width": 2560,
-              "height": 289,
+              "width": 1836,
+              "height": 283,
               "direction": 1,
               "shifters": [
                 {
                   "type": 0,
                   "width": 178,
-                  "height": 289,
+                  "height": 283,
                   "currentContent": "Sequences",
                   "tabs": [
                     {
@@ -658,8 +1130,8 @@
                 },
                 {
                   "type": 0,
-                  "width": 873,
-                  "height": 289,
+                  "width": 710,
+                  "height": 283,
                   "currentContent": "Sequence Editor",
                   "tabs": [
                     {
@@ -670,7 +1142,7 @@
                 {
                   "type": 0,
                   "width": 300,
-                  "height": 289,
+                  "height": 283,
                   "currentContent": "The Detective",
                   "tabs": [
                     {
@@ -680,8 +1152,8 @@
                 },
                 {
                   "type": 0,
-                  "width": 1191,
-                  "height": 289,
+                  "width": 630,
+                  "height": 283,
                   "currentContent": "Logger",
                   "tabs": [
                     {
@@ -2609,7 +3081,7 @@
         "parameters": [
           {
             "value": true,
-            "controlAddress": "/enabled"
+            "controlAddress": "/logOutgoing"
           }
         ],
         "niceName": "HTTP - PTZ CONTROL",
@@ -2847,6 +3319,327 @@
                     },
                     {
                       "value": true,
+                      "minValue": 0,
+                      "maxValue": 1,
+                      "default": true,
+                      "controlAddress": "/editable",
+                      "type": "Boolean",
+                      "niceName": "Editable",
+                      "customizable": false,
+                      "removable": false,
+                      "description": "If enabled, the parameter will be editable when instantiating this template",
+                      "hideInEditor": false,
+                      "feedbackOnly": false
+                    }
+                  ],
+                  "niceName": "Extra Headers"
+                }
+              ]
+            },
+            {
+              "niceName": "MOVE",
+              "type": "CommandTemplate",
+              "menuPath": "",
+              "commandType": "Request",
+              "customValues": {
+                "viewOffset": [
+                  0,
+                  0
+                ],
+                "viewZoom": 1.0
+              },
+              "params": [
+                {
+                  "parameters": [
+                    {
+                      "value": "GET",
+                      "controlAddress": "/method"
+                    },
+                    {
+                      "value": true,
+                      "minValue": 0,
+                      "maxValue": 1,
+                      "default": true,
+                      "controlAddress": "/editable",
+                      "type": "Boolean",
+                      "niceName": "Editable",
+                      "customizable": false,
+                      "removable": false,
+                      "description": "If enabled, the parameter will be editable when instantiating this template",
+                      "hideInEditor": false,
+                      "feedbackOnly": false
+                    }
+                  ],
+                  "niceName": "Method"
+                },
+                {
+                  "parameters": [
+                    {
+                      "value": "Raw",
+                      "controlAddress": "/resultType"
+                    },
+                    {
+                      "value": true,
+                      "minValue": 0,
+                      "maxValue": 1,
+                      "default": true,
+                      "controlAddress": "/editable",
+                      "type": "Boolean",
+                      "niceName": "Editable",
+                      "customizable": false,
+                      "removable": false,
+                      "description": "If enabled, the parameter will be editable when instantiating this template",
+                      "hideInEditor": false,
+                      "feedbackOnly": false
+                    }
+                  ],
+                  "niceName": "Result Type"
+                },
+                {
+                  "parameters": [
+                    {
+                      "value": "",
+                      "controlAddress": "/address"
+                    },
+                    {
+                      "value": true,
+                      "minValue": 0,
+                      "maxValue": 1,
+                      "default": true,
+                      "controlAddress": "/editable",
+                      "type": "Boolean",
+                      "niceName": "Editable",
+                      "customizable": false,
+                      "removable": false,
+                      "description": "If enabled, the parameter will be editable when instantiating this template",
+                      "hideInEditor": false,
+                      "feedbackOnly": false
+                    }
+                  ],
+                  "niceName": "Address"
+                },
+                {
+                  "parameters": [
+                    {
+                      "value": "",
+                      "controlAddress": "/extraHeaders"
+                    },
+                    {
+                      "value": true,
+                      "minValue": 0,
+                      "maxValue": 1,
+                      "default": true,
+                      "controlAddress": "/editable",
+                      "type": "Boolean",
+                      "niceName": "Editable",
+                      "customizable": false,
+                      "removable": false,
+                      "description": "If enabled, the parameter will be editable when instantiating this template",
+                      "hideInEditor": false,
+                      "feedbackOnly": false
+                    }
+                  ],
+                  "niceName": "Extra Headers"
+                }
+              ]
+            },
+            {
+              "niceName": "PTZSTOP",
+              "type": "CommandTemplate",
+              "menuPath": "",
+              "commandType": "Request",
+              "customValues": {
+                "viewOffset": [
+                  0,
+                  0
+                ],
+                "viewZoom": 1.0
+              },
+              "params": [
+                {
+                  "parameters": [
+                    {
+                      "value": "GET",
+                      "controlAddress": "/method"
+                    },
+                    {
+                      "value": false,
+                      "minValue": 0,
+                      "maxValue": 1,
+                      "default": true,
+                      "controlAddress": "/editable",
+                      "type": "Boolean",
+                      "niceName": "Editable",
+                      "customizable": false,
+                      "removable": false,
+                      "description": "If enabled, the parameter will be editable when instantiating this template",
+                      "hideInEditor": false,
+                      "feedbackOnly": false
+                    }
+                  ],
+                  "niceName": "Method"
+                },
+                {
+                  "parameters": [
+                    {
+                      "value": "Raw",
+                      "controlAddress": "/resultType"
+                    },
+                    {
+                      "value": false,
+                      "minValue": 0,
+                      "maxValue": 1,
+                      "default": true,
+                      "controlAddress": "/editable",
+                      "type": "Boolean",
+                      "niceName": "Editable",
+                      "customizable": false,
+                      "removable": false,
+                      "description": "If enabled, the parameter will be editable when instantiating this template",
+                      "hideInEditor": false,
+                      "feedbackOnly": false
+                    }
+                  ],
+                  "niceName": "Result Type"
+                },
+                {
+                  "parameters": [
+                    {
+                      "value": "cgi-bin/ptzctrl.cgi?ptzcmd&ptzstop&1&1",
+                      "controlAddress": "/address"
+                    },
+                    {
+                      "value": false,
+                      "minValue": 0,
+                      "maxValue": 1,
+                      "default": true,
+                      "controlAddress": "/editable",
+                      "type": "Boolean",
+                      "niceName": "Editable",
+                      "customizable": false,
+                      "removable": false,
+                      "description": "If enabled, the parameter will be editable when instantiating this template",
+                      "hideInEditor": false,
+                      "feedbackOnly": false
+                    }
+                  ],
+                  "niceName": "Address"
+                },
+                {
+                  "parameters": [
+                    {
+                      "value": "",
+                      "controlAddress": "/extraHeaders"
+                    },
+                    {
+                      "value": false,
+                      "minValue": 0,
+                      "maxValue": 1,
+                      "default": true,
+                      "controlAddress": "/editable",
+                      "type": "Boolean",
+                      "niceName": "Editable",
+                      "customizable": false,
+                      "removable": false,
+                      "description": "If enabled, the parameter will be editable when instantiating this template",
+                      "hideInEditor": false,
+                      "feedbackOnly": false
+                    }
+                  ],
+                  "niceName": "Extra Headers"
+                }
+              ]
+            },
+            {
+              "niceName": "ZOOMSTOP",
+              "type": "CommandTemplate",
+              "menuPath": "",
+              "commandType": "Request",
+              "customValues": {
+                "viewOffset": [
+                  0,
+                  0
+                ],
+                "viewZoom": 1.0
+              },
+              "params": [
+                {
+                  "parameters": [
+                    {
+                      "value": "GET",
+                      "controlAddress": "/method"
+                    },
+                    {
+                      "value": false,
+                      "minValue": 0,
+                      "maxValue": 1,
+                      "default": true,
+                      "controlAddress": "/editable",
+                      "type": "Boolean",
+                      "niceName": "Editable",
+                      "customizable": false,
+                      "removable": false,
+                      "description": "If enabled, the parameter will be editable when instantiating this template",
+                      "hideInEditor": false,
+                      "feedbackOnly": false
+                    }
+                  ],
+                  "niceName": "Method"
+                },
+                {
+                  "parameters": [
+                    {
+                      "value": "Raw",
+                      "controlAddress": "/resultType"
+                    },
+                    {
+                      "value": false,
+                      "minValue": 0,
+                      "maxValue": 1,
+                      "default": true,
+                      "controlAddress": "/editable",
+                      "type": "Boolean",
+                      "niceName": "Editable",
+                      "customizable": false,
+                      "removable": false,
+                      "description": "If enabled, the parameter will be editable when instantiating this template",
+                      "hideInEditor": false,
+                      "feedbackOnly": false
+                    }
+                  ],
+                  "niceName": "Result Type"
+                },
+                {
+                  "parameters": [
+                    {
+                      "value": "cgi-bin/ptzctrl.cgi?ptzcmd&ZOOMSTOP&1",
+                      "controlAddress": "/address"
+                    },
+                    {
+                      "value": false,
+                      "minValue": 0,
+                      "maxValue": 1,
+                      "default": true,
+                      "controlAddress": "/editable",
+                      "type": "Boolean",
+                      "niceName": "Editable",
+                      "customizable": false,
+                      "removable": false,
+                      "description": "If enabled, the parameter will be editable when instantiating this template",
+                      "hideInEditor": false,
+                      "feedbackOnly": false
+                    }
+                  ],
+                  "niceName": "Address"
+                },
+                {
+                  "parameters": [
+                    {
+                      "value": "",
+                      "controlAddress": "/extraHeaders"
+                    },
+                    {
+                      "value": false,
                       "minValue": 0,
                       "maxValue": 1,
                       "default": true,
@@ -3290,17 +4083,17 @@
             "activeItemTransform": {
               "parameters": [
                 {
-                  "value": 0,
+                  "value": 1332,
                   "hexMode": false,
                   "controlAddress": "/positionX"
                 },
                 {
-                  "value": 0,
+                  "value": 749,
                   "hexMode": false,
                   "controlAddress": "/positionY"
                 },
                 {
-                  "value": 1.0,
+                  "value": 0.3062500059604645,
                   "controlAddress": "/zoom"
                 }
               ],
@@ -3324,11 +4117,11 @@
             "scenes": {
               "parameters": [
                 {
-                  "value": "_ Notebook + Cam",
+                  "value": "PULPIT (mute_off, autoptz_to_stage)",
                   "controlAddress": "/slctScene"
                 },
                 {
-                  "value": "black",
+                  "value": "Pole Camera",
                   "controlAddress": "/slctItem"
                 }
               ],
@@ -3769,12 +4562,6 @@
         }
       },
       {
-        "parameters": [
-          {
-            "value": true,
-            "controlAddress": "/enabled"
-          }
-        ],
         "niceName": "Sound Card",
         "type": "Sound Card",
         "scripts": {
@@ -3787,7 +4574,7 @@
         "params": {
           "parameters": [
             {
-              "value": 4.505882263183594,
+              "value": 7.941176414489746,
               "controlAddress": "/inputGain"
             },
             {
@@ -3814,7 +4601,7 @@
                   "controlAddress": "/enabled"
                 },
                 {
-                  "value": 4.469879627227783,
+                  "value": 7.361445426940918,
                   "controlAddress": "/monitorVolume"
                 }
               ]
@@ -3826,6 +4613,7 @@
                   "controlAddress": "/enabled"
                 }
               ],
+              "editorIsCollapsed": true,
               "viewOffset": [
                 0,
                 0
@@ -3850,7 +4638,7 @@
           ],
           "viewZoom": 1.0
         },
-        "audioSettings": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n\r\n<DEVICESETUP deviceType=\"ALSA\" audioOutputDeviceName=\"\" audioInputDeviceName=\"PulseAudio Sound Server\"\r\n             audioDeviceRate=\"44100.0\" audioDeviceInChans=\"1\"/>\r\n",
+        "audioSettings": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n\r\n<DEVICESETUP deviceType=\"ALSA\" audioOutputDeviceName=\"PulseAudio Sound Server\"\r\n             audioInputDeviceName=\"PulseAudio Sound Server\" audioDeviceRate=\"44100.0\"\r\n             audioDeviceInChans=\"1\"/>\r\n",
         "analyzer": {
           "parameters": [
             {
@@ -3858,26 +4646,7 @@
               "controlAddress": "/enabled"
             }
           ],
-          "viewOffset": [
-            0,
-            0
-          ],
-          "viewZoom": 1.0
-        }
-      },
-      {
-        "niceName": "Keyboard",
-        "type": "Keyboard",
-        "scripts": {
-          "viewOffset": [
-            0,
-            0
-          ],
-          "viewZoom": 1.0
-        },
-        "params": {
-        },
-        "templates": {
+          "editorIsCollapsed": true,
           "viewOffset": [
             0,
             0
@@ -4199,7 +4968,7 @@
             {
               "parameters": [
                 {
-                  "value": false,
+                  "value": true,
                   "minValue": 0,
                   "maxValue": 1,
                   "default": false,
@@ -4283,7 +5052,7 @@
             {
               "parameters": [
                 {
-                  "value": true,
+                  "value": false,
                   "minValue": 0,
                   "maxValue": 1,
                   "default": false,
@@ -4304,7 +5073,7 @@
             {
               "parameters": [
                 {
-                  "value": true,
+                  "value": false,
                   "minValue": 0,
                   "maxValue": 1,
                   "default": false,
@@ -4346,7 +5115,7 @@
             {
               "parameters": [
                 {
-                  "value": false,
+                  "value": true,
                   "minValue": 0,
                   "maxValue": 1,
                   "default": false,
@@ -4367,7 +5136,7 @@
             {
               "parameters": [
                 {
-                  "value": true,
+                  "value": false,
                   "minValue": 0,
                   "maxValue": 1,
                   "default": false,
@@ -4388,7 +5157,7 @@
             {
               "parameters": [
                 {
-                  "value": true,
+                  "value": false,
                   "minValue": 0,
                   "maxValue": 1,
                   "default": false,
@@ -4409,7 +5178,7 @@
             {
               "parameters": [
                 {
-                  "value": true,
+                  "value": false,
                   "minValue": 0,
                   "maxValue": 1,
                   "default": false,
@@ -4506,12 +5275,6 @@
         }
       },
       {
-        "parameters": [
-          {
-            "value": true,
-            "controlAddress": "/enabled"
-          }
-        ],
         "niceName": "Workflows",
         "type": "CVGroup",
         "params": {
@@ -4521,7 +5284,7 @@
             {
               "parameters": [
                 {
-                  "value": 0,
+                  "value": 1,
                   "hexMode": false,
                   "controlAddress": "/stageMuteCounter",
                   "feedbackOnly": false,
@@ -4540,7 +5303,6 @@
             {
               "parameters": [
                 {
-                  "value": true,
                   "minValue": 0,
                   "maxValue": 1,
                   "default": false,
@@ -4557,6 +5319,91 @@
               "niceName": "StageMuted",
               "editorIsCollapsed": true,
               "type": "Bool Parameter"
+            }
+          ],
+          "viewOffset": [
+            0,
+            0
+          ],
+          "viewZoom": 1.0
+        },
+        "presets": {
+          "viewOffset": [
+            0,
+            0
+          ],
+          "viewZoom": 1.0
+        }
+      },
+      {
+        "niceName": "Camera",
+        "type": "CVGroup",
+        "params": {
+        },
+        "variables": {
+          "items": [
+            {
+              "parameters": [
+                {
+                  "value": 0.0,
+                  "minValue": -50.0,
+                  "maxValue": 50.0,
+                  "default": 0.0,
+                  "controlAddress": "/camPAN",
+                  "feedbackOnly": false,
+                  "type": "Float",
+                  "niceName": "Cam PAN",
+                  "customizable": true,
+                  "removable": false,
+                  "description": "Custom control of type Float",
+                  "hideInEditor": false
+                }
+              ],
+              "niceName": "Cam PAN",
+              "editorIsCollapsed": true,
+              "type": "Float Parameter"
+            },
+            {
+              "parameters": [
+                {
+                  "value": 0.0,
+                  "minValue": -50.0,
+                  "maxValue": 50.0,
+                  "default": 0.0,
+                  "controlAddress": "/camTILT",
+                  "feedbackOnly": false,
+                  "type": "Float",
+                  "niceName": "Cam TILT",
+                  "customizable": true,
+                  "removable": false,
+                  "description": "Custom control of type Float",
+                  "hideInEditor": false
+                }
+              ],
+              "niceName": "Cam TILT",
+              "editorIsCollapsed": true,
+              "type": "Float Parameter"
+            },
+            {
+              "parameters": [
+                {
+                  "value": 0.0,
+                  "minValue": -33.0,
+                  "maxValue": 33.0,
+                  "default": 0.0,
+                  "controlAddress": "/camZOOM",
+                  "feedbackOnly": false,
+                  "type": "Float",
+                  "niceName": "Cam ZOOM",
+                  "customizable": true,
+                  "removable": false,
+                  "description": "Custom control of type Float",
+                  "hideInEditor": false
+                }
+              ],
+              "niceName": "Cam ZOOM",
+              "editorIsCollapsed": true,
+              "type": "Float Parameter"
             }
           ],
           "viewOffset": [
@@ -4998,17 +5845,21 @@
         "parameters": [
           {
             "value": [
-              -610.0,
-              -150.0
+              -592.0,
+              -156.0
             ],
             "controlAddress": "/viewUIPosition"
           },
           {
             "value": [
-              355.0,
-              138.0
+              366.0,
+              311.0
             ],
             "controlAddress": "/viewUISize"
+          },
+          {
+            "value": true,
+            "controlAddress": "/active"
           }
         ],
         "niceName": "CameraActions",
@@ -5244,6 +6095,359 @@
                 "viewZoom": 1.0
               },
               "consequencesOff": {
+                "viewOffset": [
+                  0,
+                  0
+                ],
+                "viewZoom": 1.0
+              }
+            },
+            {
+              "niceName": "Y_MOVE_LEFT",
+              "editorIsCollapsed": true,
+              "type": "Action",
+              "conditions": {
+                "parameters": [
+                  {
+                    "value": 1.0,
+                    "controlAddress": "/validationTime"
+                  }
+                ],
+                "items": [
+                  {
+                    "parameters": [
+                      {
+                        "value": "",
+                        "ghostValue": "/states/cameraActions/processors/ySPEED/outValues/out1",
+                        "controlAddress": "/inputValue"
+                      },
+                      {
+                        "value": true,
+                        "controlAddress": "/alwaysTrigger"
+                      }
+                    ],
+                    "niceName": "From Input Value",
+                    "type": "From Input Value"
+                  },
+                  {
+                    "parameters": [
+                      {
+                        "value": "",
+                        "ghostValue": "/customVariables/camera/variables/camVertical/camVertical",
+                        "controlAddress": "/inputValue"
+                      },
+                      {
+                        "value": true,
+                        "controlAddress": "/alwaysTrigger"
+                      }
+                    ],
+                    "niceName": "From Input Value 1",
+                    "type": "From Input Value"
+                  }
+                ],
+                "viewOffset": [
+                  0,
+                  0
+                ],
+                "viewZoom": 1.0
+              },
+              "consequences": {
+                "parameters": [
+                  {
+                    "value": false,
+                    "controlAddress": "/cancelDelaysOnTrigger"
+                  }
+                ],
+                "items": [
+                  {
+                    "niceName": "Consequence",
+                    "type": "Consequence",
+                    "commandModule": "http_PTZCONTROL",
+                    "commandPath": "Templates",
+                    "commandType": "MOVE",
+                    "command": {
+                      "paramLinks": {
+                      },
+                      "argManager": {
+                        "hideInEditor": true,
+                        "viewOffset": [
+                          0,
+                          0
+                        ],
+                        "viewZoom": 1.0
+                      }
+                    }
+                  }
+                ],
+                "viewOffset": [
+                  0,
+                  0
+                ],
+                "viewZoom": 1.0
+              },
+              "consequencesOff": {
+                "viewOffset": [
+                  0,
+                  0
+                ],
+                "viewZoom": 1.0
+              }
+            },
+            {
+              "niceName": "CAM MOVE URL",
+              "editorIsCollapsed": true,
+              "type": "Mapping",
+              "im": {
+                "items": [
+                  {
+                    "niceName": "Input String",
+                    "type": "Input String"
+                  },
+                  {
+                    "parameters": [
+                      {
+                        "value": "/customVariables/camera/variables/camPAN/camPAN",
+                        "controlAddress": "/inputValue"
+                      }
+                    ],
+                    "niceName": "Input Value",
+                    "type": "Input Value"
+                  },
+                  {
+                    "parameters": [
+                      {
+                        "value": "/customVariables/customVariables/values/camera/camTILT",
+                        "controlAddress": "/inputValue"
+                      }
+                    ],
+                    "niceName": "Input Value 2",
+                    "type": "Input Value"
+                  },
+                  {
+                    "parameters": [
+                      {
+                        "value": "/customVariables/customVariables/values/camera/camZOOM",
+                        "controlAddress": "/inputValue"
+                      }
+                    ],
+                    "niceName": "Input Value 1",
+                    "type": "Input Value"
+                  }
+                ],
+                "viewOffset": [
+                  0,
+                  0
+                ],
+                "viewZoom": 1.0
+              },
+              "params": {
+                "parameters": [
+                  {
+                    "value": 50,
+                    "hexMode": false,
+                    "controlAddress": "/updateRate"
+                  }
+                ],
+                "editorIsCollapsed": true
+              },
+              "filters": {
+                "items": [
+                  {
+                    "niceName": "Script",
+                    "type": "Script",
+                    "filterParams": {
+                      "paramLinks": {
+                      }
+                    },
+                    "script": {
+                      "parameters": [
+                        {
+                          "value": "/data/home/csaba/gprojects/github/ccp_audio_system_manual/setup/streampc/exported_configurations/chataigne/scripts/ptzMoveURL.js",
+                          "controlAddress": "/filePath"
+                        },
+                        {
+                          "value": true,
+                          "controlAddress": "/enableLog"
+                        }
+                      ],
+                      "niceName": "ptzMoveURL",
+                      "type": "BaseItem",
+                      "scriptParams": {
+                        "hideInEditor": true
+                      }
+                    }
+                  }
+                ],
+                "viewOffset": [
+                  0,
+                  0
+                ],
+                "viewZoom": 1.0
+              },
+              "outputs": {
+                "viewOffset": [
+                  0,
+                  0
+                ],
+                "viewZoom": 1.0
+              }
+            },
+            {
+              "niceName": "MOVE CAM",
+              "editorIsCollapsed": true,
+              "type": "Action",
+              "conditions": {
+                "items": [
+                  {
+                    "parameters": [
+                      {
+                        "value": "/states/cameraActions/processors/camMOVEURL/outValues/out1",
+                        "controlAddress": "/inputValue"
+                      },
+                      {
+                        "value": true,
+                        "controlAddress": "/alwaysTrigger"
+                      }
+                    ],
+                    "niceName": "From Input Value",
+                    "type": "From Input Value",
+                    "comparator": {
+                      "parameters": [
+                        {
+                          "value": "!=",
+                          "controlAddress": "/comparisonFunction"
+                        },
+                        {
+                          "value": "",
+                          "controlAddress": "/reference"
+                        }
+                      ],
+                      "hideInEditor": true
+                    }
+                  }
+                ],
+                "viewOffset": [
+                  0,
+                  0
+                ],
+                "viewZoom": 1.0
+              },
+              "consequences": {
+                "parameters": [
+                  {
+                    "value": false,
+                    "controlAddress": "/cancelDelaysOnTrigger"
+                  }
+                ],
+                "items": [
+                  {
+                    "niceName": "Consequence",
+                    "editorIsCollapsed": true,
+                    "type": "Consequence",
+                    "commandModule": "http_PTZCONTROL",
+                    "commandPath": "Templates",
+                    "commandType": "MOVE",
+                    "command": {
+                      "parameters": [
+                        {
+                          "value": "",
+                          "controlMode": 2,
+                          "reference": {
+                            "value": "/states/cameraActions/processors/camMOVEURL/outValues/out1",
+                            "controlAddress": "/reference"
+                          },
+                          "controlAddress": "/address"
+                        }
+                      ],
+                      "paramLinks": {
+                      },
+                      "argManager": {
+                        "hideInEditor": true,
+                        "viewOffset": [
+                          0,
+                          0
+                        ],
+                        "viewZoom": 1.0
+                      }
+                    }
+                  },
+                  {
+                    "niceName": "Consequence 1",
+                    "type": "Consequence",
+                    "commandModule": "sequences",
+                    "commandPath": "Playback",
+                    "commandType": "Play Sequence",
+                    "command": {
+                      "parameters": [
+                        {
+                          "value": "/sequences/resetCameraVAriables",
+                          "controlAddress": "/target"
+                        },
+                        {
+                          "value": true,
+                          "controlAddress": "/playFromStart"
+                        }
+                      ],
+                      "paramLinks": {
+                      }
+                    }
+                  }
+                ],
+                "viewOffset": [
+                  0,
+                  0
+                ],
+                "viewZoom": 1.0
+              },
+              "consequencesOff": {
+                "parameters": [
+                  {
+                    "value": false,
+                    "controlAddress": "/cancelDelaysOnTrigger"
+                  }
+                ],
+                "items": [
+                  {
+                    "niceName": "Consequence 3",
+                    "editorIsCollapsed": true,
+                    "type": "Consequence",
+                    "commandModule": "http_PTZCONTROL",
+                    "commandPath": "Templates",
+                    "commandType": "PTZSTOP",
+                    "command": {
+                      "paramLinks": {
+                      },
+                      "argManager": {
+                        "hideInEditor": true,
+                        "viewOffset": [
+                          0,
+                          0
+                        ],
+                        "viewZoom": 1.0
+                      }
+                    }
+                  },
+                  {
+                    "niceName": "Consequence 2",
+                    "editorIsCollapsed": true,
+                    "type": "Consequence",
+                    "commandModule": "http_PTZCONTROL",
+                    "commandPath": "Templates",
+                    "commandType": "ZOOMSTOP",
+                    "command": {
+                      "paramLinks": {
+                      },
+                      "argManager": {
+                        "hideInEditor": true,
+                        "viewOffset": [
+                          0,
+                          0
+                        ],
+                        "viewZoom": 1.0
+                      }
+                    }
+                  }
+                ],
                 "viewOffset": [
                   0,
                   0
@@ -6024,10 +7228,6 @@
             {
               "parameters": [
                 {
-                  "value": true,
-                  "controlAddress": "/enabled"
-                },
-                {
                   "value": [
                     0.5971372723579407,
                     0.1581647098064423,
@@ -6121,12 +7321,6 @@
                 "viewZoom": 1.0
               },
               "consequencesOff": {
-                "parameters": [
-                  {
-                    "value": false,
-                    "controlAddress": "/cancelDelaysOnTrigger"
-                  }
-                ],
                 "viewOffset": [
                   0,
                   0
@@ -6986,12 +8180,6 @@
               "editorIsCollapsed": true,
               "type": "Action",
               "conditions": {
-                "parameters": [
-                  {
-                    "value": "AND",
-                    "controlAddress": "/operator"
-                  }
-                ],
                 "items": [
                   {
                     "parameters": [
@@ -7936,7 +9124,7 @@
                     "controlAddress": "/validationTime"
                   },
                   {
-                    "value": 0.009999999776482582,
+                    "value": 0.02,
                     "controlAddress": "/invalidationTime"
                   }
                 ],
@@ -8052,10 +9240,6 @@
                       {
                         "value": "/customVariables/customVariables/values/workflows/stageMuteCounter",
                         "controlAddress": "/inputValue"
-                      },
-                      {
-                        "value": false,
-                        "controlAddress": "/alwaysTrigger"
                       }
                     ],
                     "niceName": "From Input Value 1",
@@ -8099,7 +9283,7 @@
                     "command": {
                       "parameters": [
                         {
-                          "value": "Unmuting the stage",
+                          "value": "Muting the stage",
                           "controlMode": 1,
                           "expression": "root.customVariables.workflows.variables.stageMuted.stageMuted.get()?\"Unmuting the stage\":\"Muting the stage\"",
                           "controlAddress": "/message"
@@ -8155,7 +9339,7 @@
                           "controlAddress": "/operator"
                         },
                         {
-                          "value": false,
+                          "value": true,
                           "controlMode": 2,
                           "reference": {
                             "value": "/states/stageMuter/processors/stageMutedNegated/outValues/out1",
@@ -8251,8 +9435,8 @@
       }
     ],
     "viewOffset": [
-      -72,
-      183
+      390,
+      83
     ],
     "viewZoom": 1.0,
     "transitions": {
@@ -8266,8 +9450,8 @@
     "comments": {
       "hideInEditor": true,
       "viewOffset": [
-        -72,
-        183
+        390,
+        83
       ],
       "viewZoom": 1.0
     }
@@ -8279,10 +9463,6 @@
           {
             "value": 3.0,
             "controlAddress": "/totalTime"
-          },
-          {
-            "value": false,
-            "controlAddress": "/loop"
           },
           {
             "value": 3.0,
@@ -8360,6 +9540,163 @@
                             "parameters": [
                               {
                                 "value": "/workflows/stageMuteCounter",
+                                "controlAddress": "/target"
+                              },
+                              {
+                                "value": "All",
+                                "controlAddress": "/component"
+                              },
+                              {
+                                "value": "Equals",
+                                "controlAddress": "/operator"
+                              }
+                            ],
+                            "paramLinks": {
+                            }
+                          }
+                        }
+                      ],
+                      "viewOffset": [
+                        0,
+                        0
+                      ],
+                      "viewZoom": 1.0
+                    }
+                  }
+                ],
+                "viewOffset": [
+                  0,
+                  0
+                ],
+                "viewZoom": 1.0
+              }
+            }
+          ],
+          "viewOffset": [
+            0,
+            0
+          ],
+          "viewZoom": 1.0
+        },
+        "cues": {
+          "hideInEditor": true,
+          "viewOffset": [
+            0,
+            0
+          ],
+          "viewZoom": 1.0
+        }
+      },
+      {
+        "parameters": [
+          {
+            "value": 10.0,
+            "controlAddress": "/totalTime"
+          },
+          {
+            "value": 10.0,
+            "controlAddress": "/viewEndTime"
+          },
+          {
+            "value": "",
+            "controlAddress": "/ltcSyncModule",
+            "enabled": false
+          }
+        ],
+        "niceName": "Reset Camera VAriables",
+        "type": "Sequence",
+        "layers": {
+          "hideInEditor": true,
+          "items": [
+            {
+              "parameters": [
+                {
+                  "value": 60.0,
+                  "controlAddress": "/listSize"
+                }
+              ],
+              "niceName": "Trigger",
+              "type": "Trigger",
+              "triggers": {
+                "hideInEditor": true,
+                "items": [
+                  {
+                    "parameters": [
+                      {
+                        "value": 10.0,
+                        "controlAddress": "/time"
+                      }
+                    ],
+                    "niceName": "Trigger 1",
+                    "type": "TimeTrigger",
+                    "consequences": {
+                      "parameters": [
+                        {
+                          "value": false,
+                          "controlAddress": "/cancelDelaysOnTrigger"
+                        }
+                      ],
+                      "items": [
+                        {
+                          "niceName": "Consequence",
+                          "type": "Consequence",
+                          "commandModule": "customVariables",
+                          "commandPath": "",
+                          "commandType": "Set Value",
+                          "command": {
+                            "parameters": [
+                              {
+                                "value": "/camera/camZOOM",
+                                "controlAddress": "/target"
+                              },
+                              {
+                                "value": "All",
+                                "controlAddress": "/component"
+                              },
+                              {
+                                "value": "Equals",
+                                "controlAddress": "/operator"
+                              }
+                            ],
+                            "paramLinks": {
+                            }
+                          }
+                        },
+                        {
+                          "niceName": "Consequence 1",
+                          "type": "Consequence",
+                          "commandModule": "customVariables",
+                          "commandPath": "",
+                          "commandType": "Set Value",
+                          "command": {
+                            "parameters": [
+                              {
+                                "value": "/camera/camTILT",
+                                "controlAddress": "/target"
+                              },
+                              {
+                                "value": "All",
+                                "controlAddress": "/component"
+                              },
+                              {
+                                "value": "Equals",
+                                "controlAddress": "/operator"
+                              }
+                            ],
+                            "paramLinks": {
+                            }
+                          }
+                        },
+                        {
+                          "niceName": "Consequence 2",
+                          "type": "Consequence",
+                          "commandModule": "customVariables",
+                          "commandPath": "",
+                          "commandType": "Set Value",
+                          "command": {
+                            "parameters": [
+                              {
+                                "value": "/camera/camPAN",
                                 "controlAddress": "/target"
                               },
                               {
