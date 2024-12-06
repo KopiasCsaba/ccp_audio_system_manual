@@ -16,29 +16,29 @@ function filter(input, min, max) {
     var keyword = "";
 
     if (moveLeft == 1) {
-        keyword = "LEFT";
+        keyword = "left";
     } else if (moveRight == 1) {
-        keyword = "RIGHT";
+        keyword = "right";
     } else if (moveUpRight == 1) {
-        keyword = "RIGHTUP";
+        keyword = "rightup";
     } else if (moveUpLeft == 1) {
-        keyword = "LEFTUP";
+        keyword = "leftup";
     } else if (moveDown == 1) {
-        keyword = "DOWN";
+        keyword = "down";
     } else if (moveDownLeft == 1) {
-        keyword = "LEFTDOWN";
+        keyword = "leftdown";
     } else if (moveDownRight == 1) {
-        keyword = "RIGHTDOWN";
+        keyword = "rightdown";
     } else if (moveUp == 1) {
-        keyword = "UP";
+        keyword = "up";
     }
     if (keyword !== "") {
         return returnValue("cgi-bin/ptzctrl.cgi?ptzcmd&" + keyword + "&" + ptSpeed + "&1");
     }
     if (zoomIn == 1) {
-        keyword = "ZOOMIN";
+        keyword = "zoomin";
     } else if (zoomOut == 1) {
-        keyword = "ZOOMOUT";
+        keyword = "zoomout";
     }
 
     if (keyword !== "") {
