@@ -49,7 +49,7 @@
         "volume": 1.0,
         "balance": 0.5,
         "enabled": true,
-        "muted": true,
+        "muted": false,
         "push-to-mute": false,
         "push-to-mute-delay": 0,
         "push-to-talk": false,
@@ -98,8 +98,8 @@
             }
         ]
     },
-    "current_scene": "EVENT PRE STREAM (live_on, rs_on, rec_on_afterleave, mute_on)",
-    "current_program_scene": "STAND BY  (live_off, rec_off, mute_on)",
+    "current_scene": "PULPIT (mute_off, autoptz_to_stage)",
+    "current_program_scene": "STAGE  (mute_off, autoptz)",
     "scene_order": [
         {
             "name": "=============== SUNDAY ==============="
@@ -362,7 +362,7 @@
                                     "version": 1
                                 }
                             },
-                            "condition": 0,
+                            "condition": 2,
                             "version": 1
                         },
                         {
@@ -382,7 +382,7 @@
                             },
                             "dayOfWeek": 7,
                             "condition": 2,
-                            "dateTime": "Sun Aug 11 10:20:00 2024",
+                            "dateTime": "Sun Sep 22 10:20:00 2024",
                             "dateTime2": "Sun Jun 23 11:16:52 2024",
                             "ignoreDate": false,
                             "ignoreTime": false,
@@ -488,7 +488,7 @@
                             },
                             "dayOfWeek": 7,
                             "condition": 0,
-                            "dateTime": "Sun Aug 11 10:01:00 2024",
+                            "dateTime": "Sun Sep 22 10:01:00 2024",
                             "dateTime2": "Sat Aug 12 13:04:33 2023",
                             "ignoreDate": false,
                             "ignoreTime": false,
@@ -600,7 +600,7 @@
                             },
                             "dayOfWeek": 7,
                             "condition": 0,
-                            "dateTime": "Sun Aug 11 10:29:57 2024",
+                            "dateTime": "Sun Sep 22 10:29:57 2024",
                             "dateTime2": "Sat Aug 12 13:04:33 2023",
                             "ignoreDate": false,
                             "ignoreTime": false,
@@ -838,7 +838,7 @@
                             },
                             "dayOfWeek": 7,
                             "condition": 1,
-                            "dateTime": "Sun Aug 11 11:50:00 2024",
+                            "dateTime": "Sun Sep 22 11:50:00 2024",
                             "dateTime2": "Sun Sep 10 08:53:17 2023",
                             "ignoreDate": false,
                             "ignoreTime": false,
@@ -3104,8 +3104,8 @@
             "sceneGroupTabPos": 14,
             "triggerTabPos": 17,
             "saveWindowGeo": false,
-            "windowPosX": 450,
-            "windowPosY": 187,
+            "windowPosX": -992,
+            "windowPosY": 174,
             "windowWidth": 1000,
             "windowHeight": 600,
             "macroActionConditionSplitterPosition": [

@@ -49,7 +49,7 @@
         "volume": 1.0,
         "balance": 0.5,
         "enabled": true,
-        "muted": false,
+        "muted": true,
         "push-to-mute": false,
         "push-to-mute-delay": 0,
         "push-to-talk": false,
@@ -98,8 +98,8 @@
             }
         ]
     },
-    "current_scene": "PULPIT (mute_off, autoptz_to_stage)",
-    "current_program_scene": "STAGE  (mute_off, autoptz)",
+    "current_scene": "STAND BY  (live_off, rec_off, mute_on)",
+    "current_program_scene": "STAND BY  (live_off, rec_off, mute_on)",
     "scene_order": [
         {
             "name": "=============== SUNDAY ==============="
@@ -198,7 +198,7 @@
     ],
     "current_transition": "Fade",
     "transition_duration": 400,
-    "preview_locked": true,
+    "preview_locked": false,
     "scaling_enabled": false,
     "scaling_level": 0,
     "scaling_off_x": 0.0,
@@ -211,7 +211,7 @@
         "source-dock": {
             "docks": [
                 {
-                    "source_name": "To Projector Input Grabber",
+                    "source_name": "ToProjectorInputGrabber",
                     "selected": false,
                     "title": "PROJECTOR",
                     "hidden": false,
@@ -225,7 +225,7 @@
                     "properties": false,
                     "filters": false,
                     "textinput": false,
-                    "geometry": "AdnQywADAAAAAAAAAAAAHwAAALUAAAC0AAAAAAAAAAD//////////wAAAAAAAAAAB4AAAAAAAAAAHwAAALUAAAC0",
+                    "geometry": "AdnQywADAAAAAAAAAAAAHwAAAFYAAAC0AAAAAAAAAAD//////////wAAAAEAAAAABQAAAAAAAAAAHwAAAFYAAAC0",
                     "split": "AAAA/wAAAAEAAAABAAAAHgD/////AQAAAAIA",
                     "window": "",
                     "dockarea": 8,
@@ -249,7 +249,7 @@
                     "properties": false,
                     "filters": false,
                     "textinput": false,
-                    "geometry": "AdnQywADAAAAAAAAAAAAHwAAALUAAACsAAAAAAAAAAD//////////wAAAAAAAAAAB4AAAAAAAAAAHwAAALUAAACs",
+                    "geometry": "AdnQywADAAAAAAAAAAAAHwAAAFYAAACsAAAAAAAAAAD//////////wAAAAEAAAAABQAAAAAAAAAAHwAAAFYAAACs",
                     "split": "AAAA/wAAAAEAAAABAAAAHgD/////AQAAAAIA",
                     "window": "",
                     "dockarea": 8,
@@ -273,7 +273,7 @@
                     "properties": false,
                     "filters": false,
                     "textinput": false,
-                    "geometry": "AdnQywADAAAAAAAAAAAAHwAAARgAAAOZAAAAAAAAAAD//////////wAAAAAAAAAAB4AAAAAAAAAAHwAAARgAAAOZ",
+                    "geometry": "AdnQywADAAAAAAAAAAAAHwAAARgAAAKBAAAAAAAAAAD//////////wAAAAEAAAAABQAAAAAAAAAAHwAAARgAAAKB",
                     "split": "AAAA/wAAAAEAAAABAAAAHgD/////AQAAAAIA",
                     "window": "",
                     "dockarea": 1,
@@ -382,7 +382,7 @@
                             },
                             "dayOfWeek": 7,
                             "condition": 2,
-                            "dateTime": "Sun Sep 22 10:20:00 2024",
+                            "dateTime": "Sun Dec 1 10:20:00 2024",
                             "dateTime2": "Sun Jun 23 11:16:52 2024",
                             "ignoreDate": false,
                             "ignoreTime": false,
@@ -488,7 +488,7 @@
                             },
                             "dayOfWeek": 7,
                             "condition": 0,
-                            "dateTime": "Sun Sep 22 10:01:00 2024",
+                            "dateTime": "Sun Dec 1 10:01:00 2024",
                             "dateTime2": "Sat Aug 12 13:04:33 2023",
                             "ignoreDate": false,
                             "ignoreTime": false,
@@ -600,7 +600,7 @@
                             },
                             "dayOfWeek": 7,
                             "condition": 0,
-                            "dateTime": "Sun Sep 22 10:29:57 2024",
+                            "dateTime": "Sun Dec 1 10:29:57 2024",
                             "dateTime2": "Sat Aug 12 13:04:33 2023",
                             "ignoreDate": false,
                             "ignoreTime": false,
@@ -716,7 +716,7 @@
                                 "type": 0,
                                 "idxType": 0,
                                 "idx": 0,
-                                "item": "To Projector Input Grabber"
+                                "item": "ToProjectorInputGrabber"
                             },
                             "action": 1
                         },
@@ -838,7 +838,7 @@
                             },
                             "dayOfWeek": 7,
                             "condition": 1,
-                            "dateTime": "Sun Sep 22 11:50:00 2024",
+                            "dateTime": "Sun Dec 1 11:50:00 2024",
                             "dateTime2": "Sun Sep 10 08:53:17 2023",
                             "ignoreDate": false,
                             "ignoreTime": false,
@@ -2402,7 +2402,7 @@
                                 "type": 0,
                                 "idxType": 0,
                                 "idx": 0,
-                                "item": "To Projector Input Grabber"
+                                "item": "ToProjectorInputGrabber"
                             },
                             "action": 1
                         },
@@ -3104,8 +3104,8 @@
             "sceneGroupTabPos": 14,
             "triggerTabPos": 17,
             "saveWindowGeo": false,
-            "windowPosX": -992,
-            "windowPosY": 174,
+            "windowPosX": -1095,
+            "windowPosY": 240,
             "windowWidth": 1000,
             "windowHeight": 600,
             "macroActionConditionSplitterPosition": [
@@ -5939,7 +5939,7 @@
             "id": "scene",
             "versioned_id": "scene",
             "settings": {
-                "id_counter": 8,
+                "id_counter": 9,
                 "custom_size": false,
                 "items": [
                     {
@@ -6318,7 +6318,7 @@
         },
         {
             "prev_ver": 486604803,
-            "name": "To Projector Input Grabber",
+            "name": "ToProjectorInputGrabber",
             "uuid": "86bf5a3a-2836-400a-8d4f-03b9f675a6c5",
             "id": "dshow_input",
             "versioned_id": "dshow_input",
@@ -6618,7 +6618,7 @@
                         "private_settings": {}
                     },
                     {
-                        "name": "To Projector Input Grabber",
+                        "name": "ToProjectorInputGrabber",
                         "source_uuid": "86bf5a3a-2836-400a-8d4f-03b9f675a6c5",
                         "visible": false,
                         "locked": false,
@@ -6772,14 +6772,14 @@
                 "OBSBasic.SelectScene": [],
                 "libobs.show_scene_item.Pole Camera": [],
                 "libobs.hide_scene_item.Pole Camera": [],
-                "libobs.show_scene_item.To Projector Input Grabber": [
+                "libobs.show_scene_item.ToProjectorInputGrabber": [
                     {
                         "shift": true,
                         "command": true,
                         "key": "OBS_KEY_F11"
                     }
                 ],
-                "libobs.hide_scene_item.To Projector Input Grabber": [
+                "libobs.hide_scene_item.ToProjectorInputGrabber": [
                     {
                         "shift": true,
                         "command": true,
