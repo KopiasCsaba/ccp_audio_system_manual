@@ -42,7 +42,6 @@ You want to check out the introduction video about how to use the small keyboard
 2. Move the pulpit to the marked position on the floor, or put the chair on the floor-marked position.
 
 3. Turn on the following sockets/switches:
-    * "Network"
     * "Screens + Sockets + Projector"
 
 <div style="page-break-after: always;"></div>

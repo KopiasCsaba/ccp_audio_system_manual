@@ -8,6 +8,9 @@
 
 
 <!-- TOC -->
+* [Screens are messed up](#screens-are-messed-up)
+  * [Make sure screens are aligned properly:](#make-sure-screens-are-aligned-properly)
+  * [Select the SONY SCREEN in Advanced Scene Switcher](#select-the-sony-screen-in-advanced-scene-switcher)
 * [Baby room TV doesn't work](#baby-room-tv-doesnt-work)
   * [No signal](#no-signal)
   * [The page can not be found](#the-page-can-not-be-found-)
@@ -37,13 +40,56 @@
 
 <div style="page-break-after: always;"></div>
 
+# Screens are messed up
+If you see this, or something similar:
+
+<img src="assets/troubleshoot/screenmessedup/badstate.jpeg" height=200 >
+
+So the camera image is on the middle screen, and not on the pole screen, then you have a problem, and here is how to fix it.
+
+## Make sure screens are aligned properly:
+ * On the desktop, right click
+ * Select "Display settings"
+
+It should look like this:
+
+
+<img src="assets/troubleshoot/screenmessedup/screen_layout.jpeg" height=300 >
+
+## Select the SONY SCREEN in Advanced Scene Switcher
+
+In **OBS**:
+
+ * Tools -> Advanced Scene Switcher
+ * Select the **MACRO** tab
+ * On the left side, select  "pole_screen_projector_fixer"
+ * At the bottom there is a line with "OPEN Fullscreen projector of program on [?]", select SONY TV in there.
+
+
+<div style="page-break-after: always;"></div>
+It should look like this:
+
+<img src="assets/troubleshoot/screenmessedup/obs_projector.png" height=300 >
+
+ * Close this MACRO window.
+ * Move your mouse over the camera's image (you'll not see the cursor)
+ * Right click
+ * Select "CLOSE"
+
+<img src="assets/troubleshoot/screenmessedup/threescreens.jpeg.out.png" height=300 >
+
+
+If everything works okay, in 5 seconds it should re-open on the other screen.
+
+
+<div style="page-break-after: always;"></div>
+
 # Baby room TV doesn't work
 ## No signal
  * That TV only gets signal when the stream is going in OBS.
 
 ## The page can not be found 
  * After turning on, the TV needs a minute to connect to the internet, just wait a bit and retry.
- * Make sure the "Network" socket is turned on.
 
 ## What URL?
 If for any reason the TV forgets the URL it needs to load, load this url:
@@ -124,8 +170,9 @@ Make sure **all** the following statements hold true:
 
 In OBS:
 
-* Select the "_ Notebook + Cam" scene.
-* Right-click on the "Notebook" source, select "Properties".
+* Select the "_ Notebook + Cam" scene (in the SCENES section around the bottom of OBS window)
+* Right-click on the "ToProjectorInputGrabber" source (in the SOURCES section around the bottom of OBS window)
+* Select "Properties"
 * Press deactivate, then activate.
 
 ## No image from the camera
@@ -134,7 +181,6 @@ Make sure you have turned all the required sockets on, especially these:
 
  * "Main speakers"
  * "Screens + Sockets + Projector"
- * "Network"
 
 You might need to restart OBS to re-try opening the camera.
 
