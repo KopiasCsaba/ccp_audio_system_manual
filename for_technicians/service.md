@@ -64,7 +64,6 @@ You should do this section before 09:50, as timed operations will start the stre
 ### Turn on the sockets
 
 1. "Screens, projector, sockets" (close to the light switches, below the counter)
-2. "Networking"  (between pc screens & console)
 
 ### Turn on the pole-TV
 
