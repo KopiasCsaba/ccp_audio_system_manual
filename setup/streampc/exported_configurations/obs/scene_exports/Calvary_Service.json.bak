@@ -40,7 +40,7 @@
         "id": "wasapi_input_capture",
         "versioned_id": "wasapi_input_capture",
         "settings": {
-            "device_id": "{0.0.1.00000000}.{34a2f1ab-1247-4158-94d4-9e352c7e99c3}",
+            "device_id": "{0.0.1.00000000}.{57e457dd-09a9-4787-810a-f61f1163ebdd}",
             "use_device_timing": true
         },
         "mixers": 255,
@@ -74,8 +74,8 @@
                 "id": "noise_gate_filter",
                 "versioned_id": "noise_gate_filter",
                 "settings": {
-                    "open_threshold": -50.0,
-                    "close_threshold": -55.0,
+                    "open_threshold": -50,
+                    "close_threshold": -55,
                     "hold_time": 234,
                     "release_time": 268
                 },
@@ -192,13 +192,13 @@
         {
             "monitor": 2,
             "type": 3,
-            "geometry": "AdnQywADAAAAAAeIAAAAAAAADvcAAAQvAAAHgAAAAAAAAA7/AAAEJAAAAAIABAAAB4AAAAeAAAAAAAAADv8AAAQ3",
+            "geometry": "AdnQywADAAAAAAyI////yAAAE/cAAAP3AAAMgP///8gAABP/AAAD7AAAAAIABAAAB4AAAAyA////yAAAE/8AAAP/",
             "alwaysOnTopOverridden": false
         }
     ],
     "current_transition": "Fade",
     "transition_duration": 400,
-    "preview_locked": false,
+    "preview_locked": true,
     "scaling_enabled": false,
     "scaling_level": 0,
     "scaling_off_x": 0.0,
@@ -225,7 +225,7 @@
                     "properties": false,
                     "filters": false,
                     "textinput": false,
-                    "geometry": "AdnQywADAAAAAAAAAAAAHwAAAFYAAAC0AAAAAAAAAAD//////////wAAAAEAAAAABQAAAAAAAAAAHwAAAFYAAAC0",
+                    "geometry": "AdnQywADAAAAAAAAAAAAHwAAAFYAAAC0AAAAAAAAAAD//////////wAAAAAAAAAABQAAAAAAAAAAHwAAAFYAAAC0",
                     "split": "AAAA/wAAAAEAAAABAAAAHgD/////AQAAAAIA",
                     "window": "",
                     "dockarea": 8,
@@ -249,7 +249,7 @@
                     "properties": false,
                     "filters": false,
                     "textinput": false,
-                    "geometry": "AdnQywADAAAAAAAAAAAAHwAAAFYAAACsAAAAAAAAAAD//////////wAAAAEAAAAABQAAAAAAAAAAHwAAAFYAAACs",
+                    "geometry": "AdnQywADAAAAAAAAAAAAHwAAAFYAAACsAAAAAAAAAAD//////////wAAAAAAAAAABQAAAAAAAAAAHwAAAFYAAACs",
                     "split": "AAAA/wAAAAEAAAABAAAAHgD/////AQAAAAIA",
                     "window": "",
                     "dockarea": 8,
@@ -273,7 +273,7 @@
                     "properties": false,
                     "filters": false,
                     "textinput": false,
-                    "geometry": "AdnQywADAAAAAAAAAAAAHwAAARgAAAKBAAAAAAAAAAD//////////wAAAAEAAAAABQAAAAAAAAAAHwAAARgAAAKB",
+                    "geometry": "AdnQywADAAAAAAAAAAAAHwAAARgAAAKBAAAAAAAAAAD//////////wAAAAAAAAAABQAAAAAAAAAAHwAAARgAAAKB",
                     "split": "AAAA/wAAAAEAAAABAAAAHgD/////AQAAAAIA",
                     "window": "",
                     "dockarea": 1,
@@ -316,12 +316,6 @@
         },
         "advanced-scene-switcher": {
             "sceneGroups": [],
-            "macroProperties": {
-                "highlightExecuted": true,
-                "highlightConditions": true,
-                "highlightActions": true,
-                "newMacroRegisterHotkey": false
-            },
             "macros": [
                 {
                     "name": "sunday_bgmusic_eq_enable",
@@ -329,6 +323,7 @@
                     "parallel": false,
                     "onChange": true,
                     "skipExecOnStart": false,
+                    "stopActionsIfNotDone": false,
                     "group": false,
                     "dockSettings": {
                         "register": false,
@@ -342,13 +337,33 @@
                         "conditionsTrueStatusText": "Conditions are true.",
                         "conditionsFalseStatusText": "Conditions are false."
                     },
+                    "macroActionConditionSplitterPosition": [
+                        {
+                            "pos": 192
+                        },
+                        {
+                            "pos": 191
+                        }
+                    ],
+                    "macroElseActionSplitterPosition": [
+                        {
+                            "pos": 153
+                        },
+                        {
+                            "pos": 0
+                        }
+                    ],
                     "registerHotkeys": false,
                     "pauseHotkey": [],
                     "unpauseHotkey": [],
                     "togglePauseHotkey": [],
                     "conditions": [
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "plugin_state",
                             "logic": 0,
                             "durationModifier": {
@@ -366,7 +381,11 @@
                             "version": 1
                         },
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "date",
                             "logic": 101,
                             "durationModifier": {
@@ -382,7 +401,7 @@
                             },
                             "dayOfWeek": 7,
                             "condition": 2,
-                            "dateTime": "Sun Dec 1 10:20:00 2024",
+                            "dateTime": "Sun Apr 13 10:20:00 2025",
                             "dateTime2": "Sun Jun 23 11:16:52 2024",
                             "ignoreDate": false,
                             "ignoreTime": false,
@@ -402,7 +421,11 @@
                     ],
                     "actions": [
                         {
-                            "collapsed": true,
+                            "segmentSettings": {
+                                "collapsed": true,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "osc",
                             "enabled": false,
                             "protocol": 1,
@@ -424,7 +447,11 @@
                             }
                         },
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "osc",
                             "enabled": true,
                             "protocol": 1,
@@ -445,7 +472,9 @@
                                 ]
                             }
                         }
-                    ]
+                    ],
+                    "elseActions": [],
+                    "inputVariables": []
                 },
                 {
                     "name": "sunday_timed_prestream",
@@ -453,6 +482,7 @@
                     "parallel": false,
                     "onChange": true,
                     "skipExecOnStart": false,
+                    "stopActionsIfNotDone": false,
                     "group": false,
                     "dockSettings": {
                         "register": false,
@@ -466,13 +496,33 @@
                         "conditionsTrueStatusText": "Conditions are true.",
                         "conditionsFalseStatusText": "Conditions are false."
                     },
+                    "macroActionConditionSplitterPosition": [
+                        {
+                            "pos": 192
+                        },
+                        {
+                            "pos": 191
+                        }
+                    ],
+                    "macroElseActionSplitterPosition": [
+                        {
+                            "pos": 153
+                        },
+                        {
+                            "pos": 0
+                        }
+                    ],
                     "registerHotkeys": false,
                     "pauseHotkey": [],
                     "unpauseHotkey": [],
                     "togglePauseHotkey": [],
                     "conditions": [
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "date",
                             "logic": 0,
                             "durationModifier": {
@@ -488,7 +538,7 @@
                             },
                             "dayOfWeek": 7,
                             "condition": 0,
-                            "dateTime": "Sun Dec 1 10:01:00 2024",
+                            "dateTime": "Sun Apr 13 10:01:00 2025",
                             "dateTime2": "Sat Aug 12 13:04:33 2023",
                             "ignoreDate": false,
                             "ignoreTime": false,
@@ -508,7 +558,11 @@
                     ],
                     "actions": [
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "studio_mode",
                             "enabled": true,
                             "action": 1,
@@ -518,7 +572,11 @@
                             }
                         },
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "scene_switch",
                             "enabled": true,
                             "sceneSelection": {
@@ -535,10 +593,15 @@
                                 "unit": 0,
                                 "version": 1
                             },
-                            "blockUntilTransitionDone": true
+                            "blockUntilTransitionDone": true,
+                            "sceneType": 0
                         },
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "scene_switch",
                             "enabled": true,
                             "sceneSelection": {
@@ -555,9 +618,12 @@
                                 "unit": 0,
                                 "version": 1
                             },
-                            "blockUntilTransitionDone": true
+                            "blockUntilTransitionDone": true,
+                            "sceneType": 0
                         }
-                    ]
+                    ],
+                    "elseActions": [],
+                    "inputVariables": []
                 },
                 {
                     "name": "sunday_timed_start",
@@ -565,6 +631,7 @@
                     "parallel": false,
                     "onChange": true,
                     "skipExecOnStart": false,
+                    "stopActionsIfNotDone": false,
                     "group": false,
                     "dockSettings": {
                         "register": false,
@@ -578,13 +645,33 @@
                         "conditionsTrueStatusText": "Conditions are true.",
                         "conditionsFalseStatusText": "Conditions are false."
                     },
+                    "macroActionConditionSplitterPosition": [
+                        {
+                            "pos": 192
+                        },
+                        {
+                            "pos": 191
+                        }
+                    ],
+                    "macroElseActionSplitterPosition": [
+                        {
+                            "pos": 153
+                        },
+                        {
+                            "pos": 0
+                        }
+                    ],
                     "registerHotkeys": false,
                     "pauseHotkey": [],
                     "unpauseHotkey": [],
                     "togglePauseHotkey": [],
                     "conditions": [
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "date",
                             "logic": 0,
                             "durationModifier": {
@@ -600,7 +687,7 @@
                             },
                             "dayOfWeek": 7,
                             "condition": 0,
-                            "dateTime": "Sun Dec 1 10:29:57 2024",
+                            "dateTime": "Sun Apr 13 10:29:57 2025",
                             "dateTime2": "Sat Aug 12 13:04:33 2023",
                             "ignoreDate": false,
                             "ignoreTime": false,
@@ -620,7 +707,11 @@
                     ],
                     "actions": [
                         {
-                            "collapsed": true,
+                            "segmentSettings": {
+                                "collapsed": true,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "osc",
                             "enabled": false,
                             "protocol": 1,
@@ -642,7 +733,11 @@
                             }
                         },
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "osc",
                             "enabled": true,
                             "protocol": 1,
@@ -664,7 +759,11 @@
                             }
                         },
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "http",
                             "enabled": true,
                             "url": "http://192.168.2.104/cgi-bin/ptzctrl.cgi?ptzcmd&poscall&0#PULPIT",
@@ -682,7 +781,11 @@
                             }
                         },
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "wait",
                             "enabled": true,
                             "duration": {
@@ -705,7 +808,11 @@
                             "version": 1
                         },
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "scene_visibility",
                             "enabled": true,
                             "sceneSelection": {
@@ -721,7 +828,11 @@
                             "action": 1
                         },
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "scene_visibility",
                             "enabled": true,
                             "sceneSelection": {
@@ -737,7 +848,11 @@
                             "action": 1
                         },
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "scene_visibility",
                             "enabled": true,
                             "sceneSelection": {
@@ -753,7 +868,11 @@
                             "action": 1
                         },
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "wait",
                             "enabled": true,
                             "duration": {
@@ -776,7 +895,11 @@
                             "version": 1
                         },
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "scene_switch",
                             "enabled": true,
                             "sceneSelection": {
@@ -793,9 +916,12 @@
                                 "unit": 0,
                                 "version": 1
                             },
-                            "blockUntilTransitionDone": true
+                            "blockUntilTransitionDone": true,
+                            "sceneType": 0
                         }
-                    ]
+                    ],
+                    "elseActions": [],
+                    "inputVariables": []
                 },
                 {
                     "name": "sunday_end_preview_to_finished",
@@ -803,6 +929,7 @@
                     "parallel": false,
                     "onChange": true,
                     "skipExecOnStart": false,
+                    "stopActionsIfNotDone": false,
                     "group": false,
                     "dockSettings": {
                         "register": false,
@@ -816,13 +943,33 @@
                         "conditionsTrueStatusText": "Conditions are true.",
                         "conditionsFalseStatusText": "Conditions are false."
                     },
+                    "macroActionConditionSplitterPosition": [
+                        {
+                            "pos": 192
+                        },
+                        {
+                            "pos": 191
+                        }
+                    ],
+                    "macroElseActionSplitterPosition": [
+                        {
+                            "pos": 153
+                        },
+                        {
+                            "pos": 0
+                        }
+                    ],
                     "registerHotkeys": false,
                     "pauseHotkey": [],
                     "unpauseHotkey": [],
                     "togglePauseHotkey": [],
                     "conditions": [
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "date",
                             "logic": 0,
                             "durationModifier": {
@@ -838,7 +985,7 @@
                             },
                             "dayOfWeek": 7,
                             "condition": 1,
-                            "dateTime": "Sun Dec 1 11:50:00 2024",
+                            "dateTime": "Sun Apr 13 11:50:00 2025",
                             "dateTime2": "Sun Sep 10 08:53:17 2023",
                             "ignoreDate": false,
                             "ignoreTime": false,
@@ -858,7 +1005,11 @@
                     ],
                     "actions": [
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "studio_mode",
                             "enabled": true,
                             "action": 1,
@@ -867,7 +1018,9 @@
                                 "name": "EVENT FINISHED  (rs_off_delayed, rec_off_delayed, mute_on, fade_out)"
                             }
                         }
-                    ]
+                    ],
+                    "elseActions": [],
+                    "inputVariables": []
                 },
                 {
                     "name": "sunday_end_notification",
@@ -875,6 +1028,7 @@
                     "parallel": false,
                     "onChange": true,
                     "skipExecOnStart": false,
+                    "stopActionsIfNotDone": false,
                     "group": false,
                     "dockSettings": {
                         "register": false,
@@ -888,13 +1042,19 @@
                         "conditionsTrueStatusText": "Conditions are true.",
                         "conditionsFalseStatusText": "Conditions are false."
                     },
+                    "macroActionConditionSplitterPosition": [],
+                    "macroElseActionSplitterPosition": [],
                     "registerHotkeys": false,
                     "pauseHotkey": [],
                     "unpauseHotkey": [],
                     "togglePauseHotkey": [],
                     "conditions": [
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "studio_mode",
                             "logic": 0,
                             "durationModifier": {
@@ -915,7 +1075,11 @@
                             }
                         },
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "scene",
                             "logic": 103,
                             "durationModifier": {
@@ -933,12 +1097,17 @@
                                 "type": 0,
                                 "name": "_ BLACK"
                             },
-                            "type": 0,
+                            "type": 10,
                             "pattern": ".*Scene.*",
-                            "useTransitionTargetScene": false
+                            "useTransitionTargetScene": false,
+                            "version": 1
                         },
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "timer",
                             "logic": 101,
                             "durationModifier": {
@@ -976,7 +1145,11 @@
                             "version": 1
                         },
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "streaming",
                             "logic": 101,
                             "durationModifier": {
@@ -997,7 +1170,11 @@
                             }
                         },
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "streaming",
                             "logic": 101,
                             "durationModifier": {
@@ -1020,7 +1197,11 @@
                     ],
                     "actions": [
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "systray_notification",
                             "enabled": true,
                             "message": "Maybe its time to stop the LIVE stream? Press transition, to change to the last scene, that will stop everything.",
@@ -1028,7 +1209,9 @@
                             "icon": "E:/StreamAssets/ccp_audio_system_manual_gitrepo/setup/streampc/obs_scene_assets/notification_icon_stop.png",
                             "version": 1
                         }
-                    ]
+                    ],
+                    "elseActions": [],
+                    "inputVariables": []
                 },
                 {
                     "name": "live_on",
@@ -1036,6 +1219,7 @@
                     "parallel": false,
                     "onChange": true,
                     "skipExecOnStart": false,
+                    "stopActionsIfNotDone": false,
                     "group": false,
                     "dockSettings": {
                         "register": false,
@@ -1049,13 +1233,33 @@
                         "conditionsTrueStatusText": "Conditions are true.",
                         "conditionsFalseStatusText": "Conditions are false."
                     },
+                    "macroActionConditionSplitterPosition": [
+                        {
+                            "pos": 192
+                        },
+                        {
+                            "pos": 191
+                        }
+                    ],
+                    "macroElseActionSplitterPosition": [
+                        {
+                            "pos": 153
+                        },
+                        {
+                            "pos": 0
+                        }
+                    ],
                     "registerHotkeys": false,
                     "pauseHotkey": [],
                     "unpauseHotkey": [],
                     "togglePauseHotkey": [],
                     "conditions": [
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "scene",
                             "logic": 0,
                             "durationModifier": {
@@ -1073,14 +1277,19 @@
                                 "type": 0,
                                 "name": ""
                             },
-                            "type": 4,
+                            "type": 60,
                             "pattern": ".*live_on.*",
-                            "useTransitionTargetScene": false
+                            "useTransitionTargetScene": false,
+                            "version": 1
                         }
                     ],
                     "actions": [
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "streaming",
                             "enabled": true,
                             "action": 1,
@@ -1090,7 +1299,9 @@
                             },
                             "stringValue": ""
                         }
-                    ]
+                    ],
+                    "elseActions": [],
+                    "inputVariables": []
                 },
                 {
                     "name": "live_off",
@@ -1098,6 +1309,7 @@
                     "parallel": false,
                     "onChange": true,
                     "skipExecOnStart": false,
+                    "stopActionsIfNotDone": false,
                     "group": false,
                     "dockSettings": {
                         "register": false,
@@ -1111,13 +1323,33 @@
                         "conditionsTrueStatusText": "Conditions are true.",
                         "conditionsFalseStatusText": "Conditions are false."
                     },
+                    "macroActionConditionSplitterPosition": [
+                        {
+                            "pos": 192
+                        },
+                        {
+                            "pos": 191
+                        }
+                    ],
+                    "macroElseActionSplitterPosition": [
+                        {
+                            "pos": 153
+                        },
+                        {
+                            "pos": 0
+                        }
+                    ],
                     "registerHotkeys": false,
                     "pauseHotkey": [],
                     "unpauseHotkey": [],
                     "togglePauseHotkey": [],
                     "conditions": [
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "scene",
                             "logic": 0,
                             "durationModifier": {
@@ -1135,14 +1367,19 @@
                                 "type": 0,
                                 "name": ""
                             },
-                            "type": 4,
+                            "type": 60,
                             "pattern": ".*live_off[^_].*",
-                            "useTransitionTargetScene": false
+                            "useTransitionTargetScene": false,
+                            "version": 1
                         }
                     ],
                     "actions": [
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "streaming",
                             "enabled": true,
                             "action": 0,
@@ -1152,7 +1389,9 @@
                             },
                             "stringValue": ""
                         }
-                    ]
+                    ],
+                    "elseActions": [],
+                    "inputVariables": []
                 },
                 {
                     "name": "live_off_delayed",
@@ -1160,6 +1399,7 @@
                     "parallel": true,
                     "onChange": true,
                     "skipExecOnStart": false,
+                    "stopActionsIfNotDone": false,
                     "group": false,
                     "dockSettings": {
                         "register": false,
@@ -1173,13 +1413,33 @@
                         "conditionsTrueStatusText": "Conditions are true.",
                         "conditionsFalseStatusText": "Conditions are false."
                     },
+                    "macroActionConditionSplitterPosition": [
+                        {
+                            "pos": 192
+                        },
+                        {
+                            "pos": 191
+                        }
+                    ],
+                    "macroElseActionSplitterPosition": [
+                        {
+                            "pos": 153
+                        },
+                        {
+                            "pos": 0
+                        }
+                    ],
                     "registerHotkeys": false,
                     "pauseHotkey": [],
                     "unpauseHotkey": [],
                     "togglePauseHotkey": [],
                     "conditions": [
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "scene",
                             "logic": 0,
                             "durationModifier": {
@@ -1197,14 +1457,19 @@
                                 "type": 0,
                                 "name": ""
                             },
-                            "type": 4,
+                            "type": 60,
                             "pattern": ".*live_off_delayed.*",
-                            "useTransitionTargetScene": false
+                            "useTransitionTargetScene": false,
+                            "version": 1
                         }
                     ],
                     "actions": [
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "wait",
                             "enabled": true,
                             "duration": {
@@ -1227,7 +1492,11 @@
                             "version": 1
                         },
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "streaming",
                             "enabled": true,
                             "action": 0,
@@ -1237,7 +1506,9 @@
                             },
                             "stringValue": ""
                         }
-                    ]
+                    ],
+                    "elseActions": [],
+                    "inputVariables": []
                 },
                 {
                     "name": "rs_on",
@@ -1245,6 +1516,7 @@
                     "parallel": false,
                     "onChange": true,
                     "skipExecOnStart": false,
+                    "stopActionsIfNotDone": false,
                     "group": false,
                     "dockSettings": {
                         "register": false,
@@ -1258,13 +1530,19 @@
                         "conditionsTrueStatusText": "Conditions are true.",
                         "conditionsFalseStatusText": "Conditions are false."
                     },
+                    "macroActionConditionSplitterPosition": [],
+                    "macroElseActionSplitterPosition": [],
                     "registerHotkeys": false,
                     "pauseHotkey": [],
                     "unpauseHotkey": [],
                     "togglePauseHotkey": [],
                     "conditions": [
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "scene",
                             "logic": 0,
                             "durationModifier": {
@@ -1282,14 +1560,19 @@
                                 "type": 0,
                                 "name": ""
                             },
-                            "type": 4,
+                            "type": 60,
                             "pattern": ".*rs_on.*",
-                            "useTransitionTargetScene": false
+                            "useTransitionTargetScene": false,
+                            "version": 1
                         }
                     ],
                     "actions": [
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "run",
                             "enabled": true,
                             "processConfig": {
@@ -1306,9 +1589,21 @@
                                         "arg": "start"
                                     }
                                 ]
-                            }
+                            },
+                            "duration": {
+                                "value": {
+                                    "value": 1.0,
+                                    "type": 0
+                                },
+                                "unit": 0,
+                                "version": 1
+                            },
+                            "wait": false,
+                            "version": 1
                         }
-                    ]
+                    ],
+                    "elseActions": [],
+                    "inputVariables": []
                 },
                 {
                     "name": "rs_off",
@@ -1316,6 +1611,7 @@
                     "parallel": false,
                     "onChange": true,
                     "skipExecOnStart": false,
+                    "stopActionsIfNotDone": false,
                     "group": false,
                     "dockSettings": {
                         "register": false,
@@ -1329,13 +1625,33 @@
                         "conditionsTrueStatusText": "Conditions are true.",
                         "conditionsFalseStatusText": "Conditions are false."
                     },
+                    "macroActionConditionSplitterPosition": [
+                        {
+                            "pos": 192
+                        },
+                        {
+                            "pos": 191
+                        }
+                    ],
+                    "macroElseActionSplitterPosition": [
+                        {
+                            "pos": 153
+                        },
+                        {
+                            "pos": 0
+                        }
+                    ],
                     "registerHotkeys": false,
                     "pauseHotkey": [],
                     "unpauseHotkey": [],
                     "togglePauseHotkey": [],
                     "conditions": [
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "scene",
                             "logic": 0,
                             "durationModifier": {
@@ -1353,14 +1669,19 @@
                                 "type": 0,
                                 "name": ""
                             },
-                            "type": 4,
+                            "type": 60,
                             "pattern": ".*rs_off[^_].*",
-                            "useTransitionTargetScene": false
+                            "useTransitionTargetScene": false,
+                            "version": 1
                         }
                     ],
                     "actions": [
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "run",
                             "enabled": true,
                             "processConfig": {
@@ -1377,9 +1698,21 @@
                                         "arg": "stop"
                                     }
                                 ]
-                            }
+                            },
+                            "duration": {
+                                "value": {
+                                    "value": 1.0,
+                                    "type": 0
+                                },
+                                "unit": 0,
+                                "version": 1
+                            },
+                            "wait": false,
+                            "version": 1
                         }
-                    ]
+                    ],
+                    "elseActions": [],
+                    "inputVariables": []
                 },
                 {
                     "name": "rs_off_delayed",
@@ -1387,6 +1720,7 @@
                     "parallel": true,
                     "onChange": true,
                     "skipExecOnStart": false,
+                    "stopActionsIfNotDone": false,
                     "group": false,
                     "dockSettings": {
                         "register": false,
@@ -1400,13 +1734,33 @@
                         "conditionsTrueStatusText": "Conditions are true.",
                         "conditionsFalseStatusText": "Conditions are false."
                     },
+                    "macroActionConditionSplitterPosition": [
+                        {
+                            "pos": 192
+                        },
+                        {
+                            "pos": 191
+                        }
+                    ],
+                    "macroElseActionSplitterPosition": [
+                        {
+                            "pos": 153
+                        },
+                        {
+                            "pos": 0
+                        }
+                    ],
                     "registerHotkeys": false,
                     "pauseHotkey": [],
                     "unpauseHotkey": [],
                     "togglePauseHotkey": [],
                     "conditions": [
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "scene",
                             "logic": 0,
                             "durationModifier": {
@@ -1424,14 +1778,19 @@
                                 "type": 0,
                                 "name": ""
                             },
-                            "type": 4,
+                            "type": 60,
                             "pattern": ".*rs_off_delayed.*",
-                            "useTransitionTargetScene": false
+                            "useTransitionTargetScene": false,
+                            "version": 1
                         }
                     ],
                     "actions": [
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "wait",
                             "enabled": true,
                             "duration": {
@@ -1454,7 +1813,11 @@
                             "version": 1
                         },
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "run",
                             "enabled": true,
                             "processConfig": {
@@ -1471,10 +1834,24 @@
                                         "arg": "stop"
                                     }
                                 ]
-                            }
+                            },
+                            "duration": {
+                                "value": {
+                                    "value": 1.0,
+                                    "type": 0
+                                },
+                                "unit": 0,
+                                "version": 1
+                            },
+                            "wait": false,
+                            "version": 1
                         },
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "wait",
                             "enabled": true,
                             "duration": {
@@ -1497,7 +1874,11 @@
                             "version": 1
                         },
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "scene_switch",
                             "enabled": true,
                             "sceneSelection": {
@@ -1514,9 +1895,12 @@
                                 "unit": 0,
                                 "version": 1
                             },
-                            "blockUntilTransitionDone": true
+                            "blockUntilTransitionDone": true,
+                            "sceneType": 0
                         }
-                    ]
+                    ],
+                    "elseActions": [],
+                    "inputVariables": []
                 },
                 {
                     "name": "rec_on",
@@ -1524,6 +1908,7 @@
                     "parallel": false,
                     "onChange": true,
                     "skipExecOnStart": false,
+                    "stopActionsIfNotDone": false,
                     "group": false,
                     "dockSettings": {
                         "register": false,
@@ -1537,13 +1922,19 @@
                         "conditionsTrueStatusText": "Conditions are true.",
                         "conditionsFalseStatusText": "Conditions are false."
                     },
+                    "macroActionConditionSplitterPosition": [],
+                    "macroElseActionSplitterPosition": [],
                     "registerHotkeys": false,
                     "pauseHotkey": [],
                     "unpauseHotkey": [],
                     "togglePauseHotkey": [],
                     "conditions": [
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "scene",
                             "logic": 0,
                             "durationModifier": {
@@ -1561,21 +1952,28 @@
                                 "type": 0,
                                 "name": ""
                             },
-                            "type": 4,
+                            "type": 60,
                             "pattern": ".*rec_on[^_].*",
-                            "useTransitionTargetScene": false
+                            "useTransitionTargetScene": false,
+                            "version": 1
                         }
                     ],
                     "actions": [
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "recording",
                             "enabled": true,
                             "action": 1,
                             "folder": "C:/Users/Calvary/Videos",
                             "format": "%CCYY-%MM-%DD %hh-%mm-%ss"
                         }
-                    ]
+                    ],
+                    "elseActions": [],
+                    "inputVariables": []
                 },
                 {
                     "name": "rec_on_afterleave",
@@ -1583,6 +1981,7 @@
                     "parallel": false,
                     "onChange": true,
                     "skipExecOnStart": false,
+                    "stopActionsIfNotDone": false,
                     "group": false,
                     "dockSettings": {
                         "register": false,
@@ -1596,13 +1995,19 @@
                         "conditionsTrueStatusText": "Conditions are true.",
                         "conditionsFalseStatusText": "Conditions are false."
                     },
+                    "macroActionConditionSplitterPosition": [],
+                    "macroElseActionSplitterPosition": [],
                     "registerHotkeys": false,
                     "pauseHotkey": [],
                     "unpauseHotkey": [],
                     "togglePauseHotkey": [],
                     "conditions": [
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "scene",
                             "logic": 0,
                             "durationModifier": {
@@ -1620,21 +2025,28 @@
                                 "type": 0,
                                 "name": ""
                             },
-                            "type": 5,
+                            "type": 70,
                             "pattern": ".*rec_on_afterleave[^_].*",
-                            "useTransitionTargetScene": false
+                            "useTransitionTargetScene": false,
+                            "version": 1
                         }
                     ],
                     "actions": [
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "recording",
                             "enabled": true,
                             "action": 1,
                             "folder": "C:/Users/Calvary/Videos",
                             "format": "%CCYY-%MM-%DD %hh-%mm-%ss"
                         }
-                    ]
+                    ],
+                    "elseActions": [],
+                    "inputVariables": []
                 },
                 {
                     "name": "rec_off",
@@ -1642,6 +2054,7 @@
                     "parallel": false,
                     "onChange": true,
                     "skipExecOnStart": false,
+                    "stopActionsIfNotDone": false,
                     "group": false,
                     "dockSettings": {
                         "register": false,
@@ -1655,13 +2068,19 @@
                         "conditionsTrueStatusText": "Conditions are true.",
                         "conditionsFalseStatusText": "Conditions are false."
                     },
+                    "macroActionConditionSplitterPosition": [],
+                    "macroElseActionSplitterPosition": [],
                     "registerHotkeys": false,
                     "pauseHotkey": [],
                     "unpauseHotkey": [],
                     "togglePauseHotkey": [],
                     "conditions": [
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "scene",
                             "logic": 0,
                             "durationModifier": {
@@ -1679,21 +2098,28 @@
                                 "type": 0,
                                 "name": ""
                             },
-                            "type": 4,
+                            "type": 60,
                             "pattern": ".*rec_off[^_].*",
-                            "useTransitionTargetScene": false
+                            "useTransitionTargetScene": false,
+                            "version": 1
                         }
                     ],
                     "actions": [
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "recording",
                             "enabled": true,
                             "action": 0,
                             "folder": "C:/Users/Calvary/Videos",
                             "format": "%CCYY-%MM-%DD %hh-%mm-%ss"
                         }
-                    ]
+                    ],
+                    "elseActions": [],
+                    "inputVariables": []
                 },
                 {
                     "name": "rec_off_delayed",
@@ -1701,6 +2127,7 @@
                     "parallel": true,
                     "onChange": true,
                     "skipExecOnStart": false,
+                    "stopActionsIfNotDone": false,
                     "group": false,
                     "dockSettings": {
                         "register": false,
@@ -1714,13 +2141,19 @@
                         "conditionsTrueStatusText": "Conditions are true.",
                         "conditionsFalseStatusText": "Conditions are false."
                     },
+                    "macroActionConditionSplitterPosition": [],
+                    "macroElseActionSplitterPosition": [],
                     "registerHotkeys": false,
                     "pauseHotkey": [],
                     "unpauseHotkey": [],
                     "togglePauseHotkey": [],
                     "conditions": [
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "scene",
                             "logic": 0,
                             "durationModifier": {
@@ -1738,14 +2171,19 @@
                                 "type": 0,
                                 "name": ""
                             },
-                            "type": 4,
+                            "type": 60,
                             "pattern": ".*rec_off_delayed.*",
-                            "useTransitionTargetScene": false
+                            "useTransitionTargetScene": false,
+                            "version": 1
                         }
                     ],
                     "actions": [
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "wait",
                             "enabled": true,
                             "duration": {
@@ -1768,14 +2206,20 @@
                             "version": 1
                         },
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "recording",
                             "enabled": true,
                             "action": 0,
                             "folder": "C:/Users/Calvary/Videos",
                             "format": "%CCYY-%MM-%DD %hh-%mm-%ss"
                         }
-                    ]
+                    ],
+                    "elseActions": [],
+                    "inputVariables": []
                 },
                 {
                     "name": "fade_out",
@@ -1783,6 +2227,7 @@
                     "parallel": true,
                     "onChange": true,
                     "skipExecOnStart": false,
+                    "stopActionsIfNotDone": false,
                     "group": false,
                     "dockSettings": {
                         "register": false,
@@ -1796,13 +2241,19 @@
                         "conditionsTrueStatusText": "Conditions are true.",
                         "conditionsFalseStatusText": "Conditions are false."
                     },
+                    "macroActionConditionSplitterPosition": [],
+                    "macroElseActionSplitterPosition": [],
                     "registerHotkeys": false,
                     "pauseHotkey": [],
                     "unpauseHotkey": [],
                     "togglePauseHotkey": [],
                     "conditions": [
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "scene",
                             "logic": 0,
                             "durationModifier": {
@@ -1820,14 +2271,19 @@
                                 "type": 0,
                                 "name": ""
                             },
-                            "type": 4,
+                            "type": 60,
                             "pattern": ".*fade_out.*",
-                            "useTransitionTargetScene": false
+                            "useTransitionTargetScene": false,
+                            "version": 1
                         }
                     ],
                     "actions": [
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "wait",
                             "enabled": true,
                             "duration": {
@@ -1850,7 +2306,11 @@
                             "version": 1
                         },
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "scene_switch",
                             "enabled": true,
                             "sceneSelection": {
@@ -1867,9 +2327,12 @@
                                 "unit": 0,
                                 "version": 1
                             },
-                            "blockUntilTransitionDone": true
+                            "blockUntilTransitionDone": true,
+                            "sceneType": 0
                         }
-                    ]
+                    ],
+                    "elseActions": [],
+                    "inputVariables": []
                 },
                 {
                     "name": "rec_paused_pause",
@@ -1877,6 +2340,7 @@
                     "parallel": true,
                     "onChange": true,
                     "skipExecOnStart": false,
+                    "stopActionsIfNotDone": false,
                     "group": false,
                     "dockSettings": {
                         "register": false,
@@ -1890,13 +2354,33 @@
                         "conditionsTrueStatusText": "Conditions are true.",
                         "conditionsFalseStatusText": "Conditions are false."
                     },
+                    "macroActionConditionSplitterPosition": [
+                        {
+                            "pos": 192
+                        },
+                        {
+                            "pos": 191
+                        }
+                    ],
+                    "macroElseActionSplitterPosition": [
+                        {
+                            "pos": 153
+                        },
+                        {
+                            "pos": 0
+                        }
+                    ],
                     "registerHotkeys": false,
                     "pauseHotkey": [],
                     "unpauseHotkey": [],
                     "togglePauseHotkey": [],
                     "conditions": [
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "scene",
                             "logic": 0,
                             "durationModifier": {
@@ -1914,14 +2398,19 @@
                                 "type": 0,
                                 "name": ""
                             },
-                            "type": 4,
+                            "type": 60,
                             "pattern": ".*rec_pause.*",
-                            "useTransitionTargetScene": true
+                            "useTransitionTargetScene": true,
+                            "version": 1
                         }
                     ],
                     "actions": [
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "wait",
                             "enabled": true,
                             "duration": {
@@ -1944,14 +2433,20 @@
                             "version": 1
                         },
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "recording",
                             "enabled": true,
                             "action": 2,
                             "folder": "C:/Users/Calvary/Videos",
                             "format": "%CCYY-%MM-%DD %hh-%mm-%ss"
                         }
-                    ]
+                    ],
+                    "elseActions": [],
+                    "inputVariables": []
                 },
                 {
                     "name": "rec_paused_resume",
@@ -1959,6 +2454,7 @@
                     "parallel": true,
                     "onChange": true,
                     "skipExecOnStart": false,
+                    "stopActionsIfNotDone": false,
                     "group": false,
                     "dockSettings": {
                         "register": false,
@@ -1972,13 +2468,19 @@
                         "conditionsTrueStatusText": "Conditions are true.",
                         "conditionsFalseStatusText": "Conditions are false."
                     },
+                    "macroActionConditionSplitterPosition": [],
+                    "macroElseActionSplitterPosition": [],
                     "registerHotkeys": false,
                     "pauseHotkey": [],
                     "unpauseHotkey": [],
                     "togglePauseHotkey": [],
                     "conditions": [
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "scene",
                             "logic": 0,
                             "durationModifier": {
@@ -1996,21 +2498,28 @@
                                 "type": 0,
                                 "name": ""
                             },
-                            "type": 5,
+                            "type": 70,
                             "pattern": ".*rec_pause.*",
-                            "useTransitionTargetScene": true
+                            "useTransitionTargetScene": true,
+                            "version": 1
                         }
                     ],
                     "actions": [
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "recording",
                             "enabled": true,
                             "action": 3,
                             "folder": "C:/Users/Calvary/Videos",
                             "format": "%CCYY-%MM-%DD %hh-%mm-%ss"
                         }
-                    ]
+                    ],
+                    "elseActions": [],
+                    "inputVariables": []
                 },
                 {
                     "name": "mute_on",
@@ -2018,6 +2527,7 @@
                     "parallel": false,
                     "onChange": true,
                     "skipExecOnStart": false,
+                    "stopActionsIfNotDone": false,
                     "group": false,
                     "dockSettings": {
                         "register": false,
@@ -2031,13 +2541,33 @@
                         "conditionsTrueStatusText": "Conditions are true.",
                         "conditionsFalseStatusText": "Conditions are false."
                     },
+                    "macroActionConditionSplitterPosition": [
+                        {
+                            "pos": 192
+                        },
+                        {
+                            "pos": 191
+                        }
+                    ],
+                    "macroElseActionSplitterPosition": [
+                        {
+                            "pos": 153
+                        },
+                        {
+                            "pos": 0
+                        }
+                    ],
                     "registerHotkeys": false,
                     "pauseHotkey": [],
                     "unpauseHotkey": [],
                     "togglePauseHotkey": [],
                     "conditions": [
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "scene",
                             "logic": 0,
                             "durationModifier": {
@@ -2055,14 +2585,19 @@
                                 "type": 0,
                                 "name": ""
                             },
-                            "type": 4,
+                            "type": 60,
                             "pattern": ".*mute_on.*",
-                            "useTransitionTargetScene": false
+                            "useTransitionTargetScene": false,
+                            "version": 1
                         }
                     ],
                     "actions": [
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "audio",
                             "enabled": true,
                             "duration": {
@@ -2087,6 +2622,10 @@
                                 "value": 0.5,
                                 "type": 0
                             },
+                            "track": {
+                                "value": 1,
+                                "type": 0
+                            },
                             "volume": {
                                 "value": 0,
                                 "type": 0
@@ -2099,9 +2638,16 @@
                             "fadeType": 0,
                             "wait": false,
                             "abortActiveFade": false,
-                            "version": 1
+                            "useDb": false,
+                            "volumeDB": {
+                                "value": 0.0,
+                                "type": 0
+                            },
+                            "version": 3
                         }
-                    ]
+                    ],
+                    "elseActions": [],
+                    "inputVariables": []
                 },
                 {
                     "name": "mute_off",
@@ -2109,6 +2655,7 @@
                     "parallel": false,
                     "onChange": true,
                     "skipExecOnStart": false,
+                    "stopActionsIfNotDone": false,
                     "group": false,
                     "dockSettings": {
                         "register": false,
@@ -2122,13 +2669,19 @@
                         "conditionsTrueStatusText": "Conditions are true.",
                         "conditionsFalseStatusText": "Conditions are false."
                     },
+                    "macroActionConditionSplitterPosition": [],
+                    "macroElseActionSplitterPosition": [],
                     "registerHotkeys": false,
                     "pauseHotkey": [],
                     "unpauseHotkey": [],
                     "togglePauseHotkey": [],
                     "conditions": [
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "scene",
                             "logic": 0,
                             "durationModifier": {
@@ -2146,14 +2699,19 @@
                                 "type": 0,
                                 "name": ""
                             },
-                            "type": 4,
+                            "type": 60,
                             "pattern": ".*mute_off.*",
-                            "useTransitionTargetScene": false
+                            "useTransitionTargetScene": false,
+                            "version": 1
                         }
                     ],
                     "actions": [
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "audio",
                             "enabled": true,
                             "duration": {
@@ -2178,6 +2736,10 @@
                                 "value": 0.5,
                                 "type": 0
                             },
+                            "track": {
+                                "value": 1,
+                                "type": 0
+                            },
                             "volume": {
                                 "value": 0,
                                 "type": 0
@@ -2190,9 +2752,16 @@
                             "fadeType": 0,
                             "wait": false,
                             "abortActiveFade": false,
-                            "version": 1
+                            "useDb": false,
+                            "volumeDB": {
+                                "value": 0.0,
+                                "type": 0
+                            },
+                            "version": 3
                         }
-                    ]
+                    ],
+                    "elseActions": [],
+                    "inputVariables": []
                 },
                 {
                     "name": "notification_pulpit_and_headset",
@@ -2200,6 +2769,7 @@
                     "parallel": false,
                     "onChange": true,
                     "skipExecOnStart": false,
+                    "stopActionsIfNotDone": false,
                     "group": false,
                     "dockSettings": {
                         "register": false,
@@ -2213,13 +2783,33 @@
                         "conditionsTrueStatusText": "Conditions are true.",
                         "conditionsFalseStatusText": "Conditions are false."
                     },
+                    "macroActionConditionSplitterPosition": [
+                        {
+                            "pos": 192
+                        },
+                        {
+                            "pos": 191
+                        }
+                    ],
+                    "macroElseActionSplitterPosition": [
+                        {
+                            "pos": 153
+                        },
+                        {
+                            "pos": 0
+                        }
+                    ],
                     "registerHotkeys": false,
                     "pauseHotkey": [],
                     "unpauseHotkey": [],
                     "togglePauseHotkey": [],
                     "conditions": [
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "websocket",
                             "logic": 0,
                             "durationModifier": {
@@ -2245,7 +2835,11 @@
                     ],
                     "actions": [
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "systray_notification",
                             "enabled": true,
                             "message": "Mute one of them ASAP.",
@@ -2253,7 +2847,9 @@
                             "icon": "E:/StreamAssets/ccp_audio_system_manual_gitrepo/setup/streampc/obs_scene_assets/notification_icon_warning.png",
                             "version": 1
                         }
-                    ]
+                    ],
+                    "elseActions": [],
+                    "inputVariables": []
                 },
                 {
                     "name": "notification_stage_and_speaker_mics",
@@ -2261,6 +2857,7 @@
                     "parallel": false,
                     "onChange": true,
                     "skipExecOnStart": false,
+                    "stopActionsIfNotDone": false,
                     "group": false,
                     "dockSettings": {
                         "register": false,
@@ -2274,13 +2871,19 @@
                         "conditionsTrueStatusText": "Conditions are true.",
                         "conditionsFalseStatusText": "Conditions are false."
                     },
+                    "macroActionConditionSplitterPosition": [],
+                    "macroElseActionSplitterPosition": [],
                     "registerHotkeys": false,
                     "pauseHotkey": [],
                     "unpauseHotkey": [],
                     "togglePauseHotkey": [],
                     "conditions": [
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "websocket",
                             "logic": 0,
                             "durationModifier": {
@@ -2306,7 +2909,11 @@
                     ],
                     "actions": [
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "systray_notification",
                             "enabled": true,
                             "message": "Either the stage should be muted, or the preaching mics.",
@@ -2314,7 +2921,9 @@
                             "icon": "E:/StreamAssets/ccp_audio_system_manual_gitrepo/setup/streampc/obs_scene_assets/notification_icon_warning.png",
                             "version": 1
                         }
-                    ]
+                    ],
+                    "elseActions": [],
+                    "inputVariables": []
                 },
                 {
                     "name": "obs_startup",
@@ -2322,6 +2931,7 @@
                     "parallel": false,
                     "onChange": true,
                     "skipExecOnStart": false,
+                    "stopActionsIfNotDone": false,
                     "group": false,
                     "dockSettings": {
                         "register": false,
@@ -2335,13 +2945,33 @@
                         "conditionsTrueStatusText": "Conditions are true.",
                         "conditionsFalseStatusText": "Conditions are false."
                     },
+                    "macroActionConditionSplitterPosition": [
+                        {
+                            "pos": 123
+                        },
+                        {
+                            "pos": 440
+                        }
+                    ],
+                    "macroElseActionSplitterPosition": [
+                        {
+                            "pos": 402
+                        },
+                        {
+                            "pos": 0
+                        }
+                    ],
                     "registerHotkeys": false,
                     "pauseHotkey": [],
                     "unpauseHotkey": [],
                     "togglePauseHotkey": [],
                     "conditions": [
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "plugin_state",
                             "logic": 0,
                             "durationModifier": {
@@ -2361,7 +2991,11 @@
                     ],
                     "actions": [
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "scene_switch",
                             "enabled": true,
                             "sceneSelection": {
@@ -2378,10 +3012,15 @@
                                 "unit": 0,
                                 "version": 1
                             },
-                            "blockUntilTransitionDone": true
+                            "blockUntilTransitionDone": true,
+                            "sceneType": 0
                         },
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "studio_mode",
                             "enabled": true,
                             "action": 1,
@@ -2391,7 +3030,11 @@
                             }
                         },
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "scene_visibility",
                             "enabled": true,
                             "sceneSelection": {
@@ -2407,7 +3050,11 @@
                             "action": 1
                         },
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "hotkey",
                             "enabled": true,
                             "action": 0,
@@ -2434,7 +3081,11 @@
                             "version": 2
                         },
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "scene_visibility",
                             "enabled": true,
                             "sceneSelection": {
@@ -2450,7 +3101,11 @@
                             "action": 1
                         },
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "scene_visibility",
                             "enabled": true,
                             "sceneSelection": {
@@ -2465,7 +3120,9 @@
                             },
                             "action": 1
                         }
-                    ]
+                    ],
+                    "elseActions": [],
+                    "inputVariables": []
                 },
                 {
                     "name": "pole_screen_projector_fixer",
@@ -2473,6 +3130,7 @@
                     "parallel": false,
                     "onChange": true,
                     "skipExecOnStart": false,
+                    "stopActionsIfNotDone": false,
                     "group": false,
                     "dockSettings": {
                         "register": false,
@@ -2486,13 +3144,33 @@
                         "conditionsTrueStatusText": "Conditions are true.",
                         "conditionsFalseStatusText": "Conditions are false."
                     },
+                    "macroActionConditionSplitterPosition": [
+                        {
+                            "pos": 197
+                        },
+                        {
+                            "pos": 186
+                        }
+                    ],
+                    "macroElseActionSplitterPosition": [
+                        {
+                            "pos": 148
+                        },
+                        {
+                            "pos": 0
+                        }
+                    ],
                     "registerHotkeys": false,
                     "pauseHotkey": [],
                     "unpauseHotkey": [],
                     "togglePauseHotkey": [],
                     "conditions": [
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "timer",
                             "logic": 0,
                             "durationModifier": {
@@ -2530,7 +3208,11 @@
                             "version": 1
                         },
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "window",
                             "logic": 103,
                             "durationModifier": {
@@ -2567,11 +3249,16 @@
                     ],
                     "actions": [
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "projector",
                             "enabled": true,
                             "type": 3,
-                            "monitor": 2,
+                            "monitor": -1,
+                            "monitorName": "SONY TV: 1920x1080 @ 3200,-56",
                             "fullscreen": true,
                             "sceneSelection": {
                                 "type": 0,
@@ -2582,7 +3269,9 @@
                                 "name": ""
                             }
                         }
-                    ]
+                    ],
+                    "elseActions": [],
+                    "inputVariables": []
                 },
                 {
                     "name": "cam_movement_fixer",
@@ -2590,6 +3279,7 @@
                     "parallel": false,
                     "onChange": true,
                     "skipExecOnStart": false,
+                    "stopActionsIfNotDone": false,
                     "group": false,
                     "dockSettings": {
                         "register": false,
@@ -2603,13 +3293,33 @@
                         "conditionsTrueStatusText": "Conditions are true.",
                         "conditionsFalseStatusText": "Conditions are false."
                     },
+                    "macroActionConditionSplitterPosition": [
+                        {
+                            "pos": 282
+                        },
+                        {
+                            "pos": 281
+                        }
+                    ],
+                    "macroElseActionSplitterPosition": [
+                        {
+                            "pos": 243
+                        },
+                        {
+                            "pos": 0
+                        }
+                    ],
                     "registerHotkeys": false,
                     "pauseHotkey": [],
                     "unpauseHotkey": [],
                     "togglePauseHotkey": [],
                     "conditions": [
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "hotkey",
                             "logic": 0,
                             "durationModifier": {
@@ -2632,10 +3342,15 @@
                                     "command": true,
                                     "key": "OBS_KEY_F4"
                                 }
-                            ]
+                            ],
+                            "checkPressed": true
                         },
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "hotkey",
                             "logic": 102,
                             "durationModifier": {
@@ -2658,10 +3373,15 @@
                                     "command": true,
                                     "key": "OBS_KEY_F9"
                                 }
-                            ]
+                            ],
+                            "checkPressed": true
                         },
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "hotkey",
                             "logic": 102,
                             "durationModifier": {
@@ -2684,10 +3404,15 @@
                                     "command": true,
                                     "key": "OBS_KEY_F8"
                                 }
-                            ]
+                            ],
+                            "checkPressed": true
                         },
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "hotkey",
                             "logic": 102,
                             "durationModifier": {
@@ -2710,10 +3435,15 @@
                                     "command": true,
                                     "key": "OBS_KEY_F10"
                                 }
-                            ]
+                            ],
+                            "checkPressed": true
                         },
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "hotkey",
                             "logic": 102,
                             "durationModifier": {
@@ -2736,10 +3466,15 @@
                                     "command": true,
                                     "key": "OBS_KEY_F5"
                                 }
-                            ]
+                            ],
+                            "checkPressed": true
                         },
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "hotkey",
                             "logic": 102,
                             "durationModifier": {
@@ -2762,12 +3497,17 @@
                                     "command": true,
                                     "key": "OBS_KEY_F3"
                                 }
-                            ]
+                            ],
+                            "checkPressed": true
                         }
                     ],
                     "actions": [
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "scene_switch",
                             "enabled": true,
                             "sceneSelection": {
@@ -2784,9 +3524,12 @@
                                 "unit": 0,
                                 "version": 1
                             },
-                            "blockUntilTransitionDone": false
+                            "blockUntilTransitionDone": false,
+                            "sceneType": 0
                         }
-                    ]
+                    ],
+                    "elseActions": [],
+                    "inputVariables": []
                 },
                 {
                     "name": "restreamer_stop",
@@ -2794,6 +3537,7 @@
                     "parallel": false,
                     "onChange": true,
                     "skipExecOnStart": false,
+                    "stopActionsIfNotDone": false,
                     "group": false,
                     "dockSettings": {
                         "register": false,
@@ -2807,13 +3551,33 @@
                         "conditionsTrueStatusText": "Conditions are true.",
                         "conditionsFalseStatusText": "Conditions are false."
                     },
+                    "macroActionConditionSplitterPosition": [
+                        {
+                            "pos": 282
+                        },
+                        {
+                            "pos": 281
+                        }
+                    ],
+                    "macroElseActionSplitterPosition": [
+                        {
+                            "pos": 243
+                        },
+                        {
+                            "pos": 0
+                        }
+                    ],
                     "registerHotkeys": false,
                     "pauseHotkey": [],
                     "unpauseHotkey": [],
                     "togglePauseHotkey": [],
                     "conditions": [
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "hotkey",
                             "logic": 0,
                             "durationModifier": {
@@ -2828,12 +3592,17 @@
                                 }
                             },
                             "desc": "restreamer_stop",
-                            "keyBind": []
+                            "keyBind": [],
+                            "checkPressed": true
                         }
                     ],
                     "actions": [
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "run",
                             "enabled": true,
                             "processConfig": {
@@ -2850,9 +3619,21 @@
                                         "arg": "stop_confirm"
                                     }
                                 ]
-                            }
+                            },
+                            "duration": {
+                                "value": {
+                                    "value": 1.0,
+                                    "type": 0
+                                },
+                                "unit": 0,
+                                "version": 1
+                            },
+                            "wait": false,
+                            "version": 1
                         }
-                    ]
+                    ],
+                    "elseActions": [],
+                    "inputVariables": []
                 },
                 {
                     "name": "restreamer_start",
@@ -2860,6 +3641,7 @@
                     "parallel": false,
                     "onChange": true,
                     "skipExecOnStart": false,
+                    "stopActionsIfNotDone": false,
                     "group": false,
                     "dockSettings": {
                         "register": false,
@@ -2873,13 +3655,19 @@
                         "conditionsTrueStatusText": "Conditions are true.",
                         "conditionsFalseStatusText": "Conditions are false."
                     },
+                    "macroActionConditionSplitterPosition": [],
+                    "macroElseActionSplitterPosition": [],
                     "registerHotkeys": false,
                     "pauseHotkey": [],
                     "unpauseHotkey": [],
                     "togglePauseHotkey": [],
                     "conditions": [
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "hotkey",
                             "logic": 0,
                             "durationModifier": {
@@ -2894,12 +3682,17 @@
                                 }
                             },
                             "desc": "restreamer_start",
-                            "keyBind": []
+                            "keyBind": [],
+                            "checkPressed": true
                         }
                     ],
                     "actions": [
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "run",
                             "enabled": true,
                             "processConfig": {
@@ -2916,9 +3709,21 @@
                                         "arg": "start_confirm"
                                     }
                                 ]
-                            }
+                            },
+                            "duration": {
+                                "value": {
+                                    "value": 1.0,
+                                    "type": 0
+                                },
+                                "unit": 0,
+                                "version": 1
+                            },
+                            "wait": false,
+                            "version": 1
                         }
-                    ]
+                    ],
+                    "elseActions": [],
+                    "inputVariables": []
                 },
                 {
                     "name": "sunday_youtube_autostart",
@@ -2926,6 +3731,7 @@
                     "parallel": false,
                     "onChange": true,
                     "skipExecOnStart": false,
+                    "stopActionsIfNotDone": false,
                     "group": false,
                     "dockSettings": {
                         "register": false,
@@ -2939,13 +3745,19 @@
                         "conditionsTrueStatusText": "Conditions are true.",
                         "conditionsFalseStatusText": "Conditions are false."
                     },
+                    "macroActionConditionSplitterPosition": [],
+                    "macroElseActionSplitterPosition": [],
                     "registerHotkeys": false,
                     "pauseHotkey": [],
                     "unpauseHotkey": [],
                     "togglePauseHotkey": [],
                     "conditions": [
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "streaming",
                             "logic": 0,
                             "durationModifier": {
@@ -2968,7 +3780,11 @@
                     ],
                     "actions": [
                         {
-                            "collapsed": false,
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label"
+                            },
                             "id": "run",
                             "enabled": true,
                             "processConfig": {
@@ -2982,12 +3798,29 @@
                                         "arg": "general"
                                     }
                                 ]
-                            }
+                            },
+                            "duration": {
+                                "value": {
+                                    "value": 1.0,
+                                    "type": 0
+                                },
+                                "unit": 0,
+                                "version": 1
+                            },
+                            "wait": false,
+                            "version": 1
                         }
-                    ]
+                    ],
+                    "elseActions": [],
+                    "inputVariables": []
                 }
             ],
-            "connections": [],
+            "macroSettings": {
+                "highlightExecuted": true,
+                "highlightConditions": true,
+                "highlightActions": true,
+                "newMacroRegisterHotkey": false
+            },
             "variables": [],
             "switches": [],
             "ignoreWindows": [],
@@ -3058,7 +3891,7 @@
             "active": true,
             "startup_behavior": 0,
             "autoStartEvent": 0,
-            "verbose": false,
+            "logLevel": 0,
             "showSystemTrayNotifications": true,
             "disableHints": false,
             "disableFilterComboboxFilter": false,
@@ -3085,46 +3918,91 @@
             "upMacroSegmentHotkey": [],
             "downMacroSegmentHotkey": [],
             "removeMacroSegmentHotkey": [],
-            "generalTabPos": 0,
-            "macroTabPos": 1,
-            "transitionTabPos": 15,
-            "pauseTabPos": 16,
-            "titleTabPos": 2,
-            "exeTabPos": 3,
-            "regionTabPos": 4,
-            "mediaTabPos": 5,
-            "fileTabPos": 6,
-            "randomTabPos": 7,
-            "timeTabPos": 8,
-            "idleTabPos": 9,
-            "sequenceTabPos": 10,
-            "audioTabPos": 11,
-            "videoTabPos": 12,
-            "networkTabPos": 13,
-            "sceneGroupTabPos": 14,
-            "triggerTabPos": 17,
+            "tabWidgetOrder": [
+                {
+                    "generalTab": 0
+                },
+                {
+                    "macroTab": 1
+                },
+                {
+                    "windowTitleTab": 2
+                },
+                {
+                    "executableTab": 3
+                },
+                {
+                    "screenRegionTab": 4
+                },
+                {
+                    "mediaTab": 5
+                },
+                {
+                    "fileTab": 6
+                },
+                {
+                    "randomTab": 7
+                },
+                {
+                    "timeTab": 8
+                },
+                {
+                    "idleTab": 9
+                },
+                {
+                    "sceneSequenceTab": 10
+                },
+                {
+                    "audioTab": 11
+                },
+                {
+                    "videoTab": 12
+                },
+                {
+                    "networkTab": 13
+                },
+                {
+                    "sceneGroupTab": 14
+                },
+                {
+                    "transitionsTab": 15
+                },
+                {
+                    "pauseTab": 16
+                },
+                {
+                    "sceneTriggerTab": 17
+                },
+                {
+                    "websocketConnectionTab": 18
+                },
+                {
+                    "twitchConnectionTab": 19
+                },
+                {
+                    "variableTab": 20
+                },
+                {
+                    "actionQueueTab": 21
+                }
+            ],
             "saveWindowGeo": false,
-            "windowPosX": -1095,
-            "windowPosY": 240,
+            "windowPosX": 1730,
+            "windowPosY": 155,
             "windowWidth": 1000,
             "windowHeight": 600,
-            "macroActionConditionSplitterPosition": [
-                {
-                    "pos": 0
-                },
-                {
-                    "pos": 0
-                }
-            ],
             "macroListMacroEditSplitterPosition": [
                 {
-                    "pos": 0
+                    "pos": 254
                 },
                 {
-                    "pos": 0
+                    "pos": 719
                 }
             ],
-            "version": "577808f1a307cfd49af20a7a6807975ecc50d76f"
+            "version": "e3ff6f34fcce1a42d6eb65effdb7eb279776fb5e",
+            "websocketConnections": [],
+            "twitchConnections": [],
+            "actionQueues": []
         }
     },
     "sources": [
@@ -3135,8 +4013,8 @@
             "id": "scene",
             "versioned_id": "scene",
             "settings": {
-                "id_counter": 0,
                 "custom_size": false,
+                "id_counter": 0,
                 "items": []
             },
             "mixers": 0,
@@ -3165,8 +4043,8 @@
             "id": "scene",
             "versioned_id": "scene",
             "settings": {
-                "id_counter": 0,
                 "custom_size": false,
+                "id_counter": 0,
                 "items": []
             },
             "mixers": 0,
@@ -3195,8 +4073,8 @@
             "id": "scene",
             "versioned_id": "scene",
             "settings": {
-                "id_counter": 0,
                 "custom_size": false,
+                "id_counter": 0,
                 "items": []
             },
             "mixers": 0,
@@ -3225,8 +4103,8 @@
             "id": "scene",
             "versioned_id": "scene",
             "settings": {
-                "id_counter": 0,
                 "custom_size": false,
+                "id_counter": 0,
                 "items": []
             },
             "mixers": 0,
@@ -3353,8 +4231,8 @@
             "id": "scene",
             "versioned_id": "scene",
             "settings": {
-                "id_counter": 3,
                 "custom_size": false,
+                "id_counter": 3,
                 "items": [
                     {
                         "name": "_ Notebook + Cam",
@@ -3531,8 +4409,8 @@
             "id": "scene",
             "versioned_id": "scene",
             "settings": {
-                "id_counter": 15,
                 "custom_size": false,
+                "id_counter": 15,
                 "items": [
                     {
                         "name": "christian-piano-music-143489.mp3",
@@ -3851,8 +4729,8 @@
             "id": "scene",
             "versioned_id": "scene",
             "settings": {
-                "id_counter": 5,
                 "custom_size": false,
+                "id_counter": 5,
                 "items": [
                     {
                         "name": "palm-trees-2301981_1920.jpg 2",
@@ -4008,8 +4886,8 @@
             "id": "scene",
             "versioned_id": "scene",
             "settings": {
-                "id_counter": 13,
                 "custom_size": false,
+                "id_counter": 13,
                 "items": [
                     {
                         "name": "ms_start_bg",
@@ -4332,9 +5210,9 @@
                 "text": "Thank you for \njoining us",
                 "font": {
                     "face": "Bahnschrift SemiBold",
-                    "style": "SemiBold",
+                    "flags": 1,
                     "size": 256,
-                    "flags": 1
+                    "style": "SemiBold"
                 },
                 "align": "center",
                 "transform": 1
@@ -4366,9 +5244,9 @@
                 "text": "www.calvarycyprus.com",
                 "font": {
                     "face": "Bahnschrift",
-                    "style": "Regular",
+                    "flags": 0,
                     "size": 256,
-                    "flags": 0
+                    "style": "Regular"
                 },
                 "align": "center",
                 "transform": 1
@@ -4435,7 +5313,7 @@
                     "versioned_id": "color_filter_v2",
                     "settings": {
                         "contrast": -1.0700000000000001,
-                        "hue_shift": 0.0,
+                        "hue_shift": 0,
                         "opacity": 0.15040000000000001
                     },
                     "mixers": 0,
@@ -4464,8 +5342,8 @@
             "id": "scene",
             "versioned_id": "scene",
             "settings": {
-                "id_counter": 2,
                 "custom_size": false,
+                "id_counter": 2,
                 "items": [
                     {
                         "name": "_ Notebook + Cam",
@@ -4723,9 +5601,9 @@
             "versioned_id": "ndi_source",
             "settings": {
                 "ndi_fix_alpha_blending": false,
-                "ndi_source_name": "PTZOPTICSCAMERA (Chan1, 192.168.2.104)",
-                "ndi_recv_hw_accel": true,
                 "ndi_framesync": true,
+                "ndi_recv_hw_accel": true,
+                "ndi_source_name": "PTZOPTICSCAMERA (Chan1, 192.168.2.104)",
                 "ndi_sync": 1,
                 "yuv_range": 2,
                 "latency": 2,
@@ -4790,7 +5668,7 @@
                     "versioned_id": "clut_filter",
                     "settings": {
                         "image_path": "E:/StreamAssets/ccp_audio_system_manual_gitrepo/setup/streampc/obs_scene_assets/ptz_colorcorrection_lut2.cube",
-                        "clut_amount": 1.0
+                        "clut_amount": 1
                     },
                     "mixers": 0,
                     "sync": 0,
@@ -4844,8 +5722,8 @@
             "id": "browser_source",
             "versioned_id": "browser_source",
             "settings": {
-                "undo_sname": "Browser",
                 "is_local_file": false,
+                "undo_sname": "Browser",
                 "url": "e:\\StreamAssets\\ccp_audio_system_manual_gitrepo\\setup\\streampc\\obs_scene_assets\\SDGStreamingJourney\\src\\sources\\countdown.html?by=103000&color=%230d193a&fontFamily=Bahnschrift%20SemiBold&align=left&textFormat=IN clock",
                 "width": 1920
             },
@@ -4879,13 +5757,13 @@
             "id": "text_gdiplus",
             "versioned_id": "text_gdiplus_v2",
             "settings": {
-                "text": "in",
                 "gradient": false,
+                "text": "in",
                 "font": {
                     "face": "Bahnschrift SemiCondensed",
-                    "style": "SemiCondensed",
+                    "flags": 0,
                     "size": 256,
-                    "flags": 0
+                    "style": "SemiCondensed"
                 },
                 "color": 4281997581,
                 "gradient_color": 4280093702
@@ -4915,14 +5793,14 @@
             "versioned_id": "text_gdiplus_v2",
             "settings": {
                 "gradient": false,
-                "undo_sname": "prestream_text3",
-                "text": "Prepare your computer, your Bible and your heart",
                 "outline": false,
+                "text": "Prepare your computer, your Bible and your heart",
+                "undo_sname": "prestream_text3",
                 "font": {
                     "face": "Bahnschrift SemiCondensed",
-                    "style": "Bold SemiCondensed",
+                    "flags": 1,
                     "size": 256,
-                    "flags": 1
+                    "style": "Bold SemiCondensed"
                 },
                 "color": 4281997581,
                 "bk_opacity": 0,
@@ -4955,9 +5833,9 @@
                 "text": "service starting",
                 "font": {
                     "face": "Bahnschrift SemiBold",
-                    "style": "SemiBold",
+                    "flags": 1,
                     "size": 256,
-                    "flags": 1
+                    "style": "SemiBold"
                 },
                 "align": "right",
                 "color": 4281997581,
@@ -4988,8 +5866,8 @@
             "id": "scene",
             "versioned_id": "scene",
             "settings": {
-                "id_counter": 3,
                 "custom_size": false,
+                "id_counter": 3,
                 "items": [
                     {
                         "name": "_ Notebook + Cam",
@@ -5108,8 +5986,8 @@
             "id": "ptz_action_source",
             "versioned_id": "ptz_action_source",
             "settings": {
-                "device_id": 1,
                 "action": 2,
+                "device_id": 1,
                 "preset_id": 5
             },
             "mixers": 0,
@@ -5136,8 +6014,8 @@
             "id": "ptz_action_source",
             "versioned_id": "ptz_action_source",
             "settings": {
-                "device_id": 1,
                 "action": 2,
+                "device_id": 1,
                 "preset_id": 4
             },
             "mixers": 0,
@@ -5164,8 +6042,8 @@
             "id": "ptz_action_source",
             "versioned_id": "ptz_action_source",
             "settings": {
-                "device_id": 1,
                 "action": 2,
+                "device_id": 1,
                 "preset_id": 3
             },
             "mixers": 0,
@@ -5192,8 +6070,8 @@
             "id": "ptz_action_source",
             "versioned_id": "ptz_action_source",
             "settings": {
-                "device_id": 1,
                 "action": 2,
+                "device_id": 1,
                 "preset_id": 0
             },
             "mixers": 0,
@@ -5220,8 +6098,8 @@
             "id": "ptz_action_source",
             "versioned_id": "ptz_action_source",
             "settings": {
-                "device_id": 1,
                 "action": 2,
+                "device_id": 1,
                 "preset_id": 2
             },
             "mixers": 0,
@@ -5248,8 +6126,8 @@
             "id": "ptz_action_source",
             "versioned_id": "ptz_action_source",
             "settings": {
-                "device_id": 1,
                 "action": 2,
+                "device_id": 1,
                 "preset_id": 1
             },
             "mixers": 0,
@@ -5276,8 +6154,8 @@
             "id": "scene",
             "versioned_id": "scene",
             "settings": {
-                "id_counter": 10,
                 "custom_size": false,
+                "id_counter": 10,
                 "items": [
                     {
                         "name": "PTZ Action to pulpit",
@@ -5436,8 +6314,8 @@
             "id": "scene",
             "versioned_id": "scene",
             "settings": {
-                "id_counter": 3,
                 "custom_size": false,
+                "id_counter": 3,
                 "items": [
                     {
                         "name": "_ Notebook + Cam",
@@ -5556,8 +6434,8 @@
             "id": "scene",
             "versioned_id": "scene",
             "settings": {
-                "id_counter": 3,
                 "custom_size": false,
+                "id_counter": 3,
                 "items": [
                     {
                         "name": "PTZ Action sitting",
@@ -5676,8 +6554,8 @@
             "id": "scene",
             "versioned_id": "scene",
             "settings": {
-                "id_counter": 8,
                 "custom_size": false,
+                "id_counter": 8,
                 "items": [
                     {
                         "name": "_ Notebook + Cam",
@@ -5796,8 +6674,8 @@
             "id": "scene",
             "versioned_id": "scene",
             "settings": {
-                "id_counter": 5,
                 "custom_size": false,
+                "id_counter": 5,
                 "items": [
                     {
                         "name": "PTZ Action to pulpit",
@@ -5939,8 +6817,8 @@
             "id": "scene",
             "versioned_id": "scene",
             "settings": {
-                "id_counter": 9,
                 "custom_size": false,
+                "id_counter": 9,
                 "items": [
                     {
                         "name": "palm-trees-2301981_1920.jpg",
@@ -6210,8 +7088,8 @@
             "id": "scene",
             "versioned_id": "scene",
             "settings": {
-                "id_counter": 2,
                 "custom_size": false,
+                "id_counter": 2,
                 "items": [
                     {
                         "name": "PTZ Action to pulpit",
@@ -6323,12 +7201,12 @@
             "id": "dshow_input",
             "versioned_id": "dshow_input",
             "settings": {
-                "video_device_id": "USB Video:\\\\?\\usb#22vid_534d&pid_2109&mi_00#22a&198d9bd0&0&0000#22{65e8773d-8f56-11d0-a3b9-00a0c9223196}\\global",
-                "last_video_device_id": "USB Video:\\\\?\\usb#22vid_534d&pid_2109&mi_00#22a&198d9bd0&0&0000#22{65e8773d-8f56-11d0-a3b9-00a0c9223196}\\global",
-                "resolution": "1920x1080",
-                "last_resolution": "1920x1080",
                 "buffering": 1,
-                "frame_interval": 250000,
+                "last_resolution": "1920x1080",
+                "last_video_device_id": "USB Video:\\\\?\\usb#22vid_534d&pid_2109&mi_00#22a&1a5a6a02&0&0000#22{65e8773d-8f56-11d0-a3b9-00a0c9223196}\\global",
+                "resolution": "1920x1080",
+                "video_device_id": "USB Video:\\\\?\\usb#22vid_534d&pid_2109&mi_00#22a&1a5a6a02&0&0000#22{65e8773d-8f56-11d0-a3b9-00a0c9223196}\\global",
+                "frame_interval": 333333,
                 "res_type": 1,
                 "active": true,
                 "color_space": "709",
@@ -6395,8 +7273,8 @@
             "id": "scene",
             "versioned_id": "scene",
             "settings": {
-                "id_counter": 0,
                 "custom_size": false,
+                "id_counter": 0,
                 "items": []
             },
             "mixers": 0,
@@ -6425,8 +7303,8 @@
             "id": "scene",
             "versioned_id": "scene",
             "settings": {
-                "id_counter": 11,
                 "custom_size": false,
+                "id_counter": 11,
                 "items": [
                     {
                         "name": "debug",
@@ -6576,8 +7454,8 @@
             "id": "scene",
             "versioned_id": "scene",
             "settings": {
-                "id_counter": 24,
                 "custom_size": false,
+                "id_counter": 29,
                 "items": [
                     {
                         "name": "Pole Camera",
