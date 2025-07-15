@@ -6,21 +6,26 @@
 This document is under construction.
 
 <!-- TOC -->
-
-* [<h1>CONFIGURATION REFERENCE</h1>](#h1configuration-referenceh1)
+  * [<h1>CONFIGURATION REFERENCE</h1>](#h1configuration-referenceh1)
 * [Main speakers' settings](#main-speakers-settings)
-    * [Front speakers](#front-speakers)
-    * [Fill speakers](#fill-speakers)
-    * [Coffee shop speakers](#coffee-shop-speakers)
-    * [Rhode link settings](#rhode-link-settings)
+  * [Front speakers](#front-speakers)
+  * [Front speakers](#front-speakers-1)
+  * [Fill speakers](#fill-speakers)
+  * [Fill speakers](#fill-speakers-1)
+  * [Coffee shop speakers](#coffee-shop-speakers)
+  * [Rhode link settings](#rhode-link-settings)
 * [Hardware](#hardware)
-    * [Projector](#projector)
-    * [Coffeshop TV (LG)](#coffeshop-tv-lg)
-    * [Pole TV (Century)](#pole-tv-century)
-    * [PTZ Camera](#ptz-camera)
-    * [Baby-room TV](#baby-room-tv)
+  * [Projector](#projector)
+  * [Coffeshop TV (LG)](#coffeshop-tv-lg)
+  * [Pole TV (Century)](#pole-tv-century)
+  * [PTZ Camera](#ptz-camera)
+    * [Webadmin](#webadmin)
+      * [Video](#video)
+      * [Image](#image)
+    * [OSD](#osd)
+  * [Baby-room TV](#baby-room-tv)
 * [Streaming PC](#streaming-pc)
-
+* [Console Read only preset](#console-read-only-preset)
 <!-- TOC -->
 
 <div style="page-break-after: always;"></div>

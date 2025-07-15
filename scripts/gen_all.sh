@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e;
 cd "$(dirname "$0")/.."
 MD_TO_PDF=$(realpath "scripts/md_to_pdf.sh")
 

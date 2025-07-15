@@ -61,32 +61,6 @@ This device measures the volume (lets say) in the room, and it is located on the
 
 <div style="page-break-after: always;"></div>
 
-# Verify main speakers' settings
-
-## Front speakers
- 
-<img alt="" src="assets/reset/mains.png" align="right" style="float:right" height="300">
-
-* Ch 2 Level at **9 o'clock**
-* DSP D-contour **OFF**
-* DSP HPF **OFF**
-* Gray button **NOT** pressed in
-
-<br clear="both" style="clear:both"/>
-
-## Fill speakers
-
-<img alt="" src="assets/reset/fills.png" align="right" style="float:right"  height="300"/>
-
-* Level at 9 o'clock
-* High at 0
-* Low at 0
-
-<br clear="right" style="clear:right">
-
-
-<div style="page-break-after: always;"></div>
-
 # Verify stage monitor settings & connections
 
 ### Left stage monitor

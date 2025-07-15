@@ -164,7 +164,7 @@ We have 8 drum microphones, and this one sets them both, together as one up or d
 
 ## Aux / PC
 
-This sets the volumes of all the incoming signals, from both PCS. (There ar e two stereo 3.5mm jack "cable" coming out
+This sets the volumes of all the incoming signals, from both PCS. (There are two stereo 3.5mm jack "cable" coming out
 of the mixer, one is connected to the streaming pc, the other is dangling around the projection pc.)
 
 ## FX

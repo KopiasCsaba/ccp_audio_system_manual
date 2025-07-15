@@ -83,7 +83,8 @@ EOF
 # Remove TOC
 #sed -i '/<!-- TOC -->/,/<!-- TOC -->/d' tmp.html
 
-google-chrome --headless --no-pdf-header-footer --print-to-pdf=tmp.pdf tmp.html >/dev/null 2>&1
+#google-chrome --headless --no-pdf-header-footer --print-to-pdf=tmp.pdf tmp.html >/dev/null 2>&1
+brave-browser --headless --no-pdf-header-footer --print-to-pdf=tmp.pdf tmp.html >/dev/null 2>&1
 
 cat >pagenumber.latex <<EOF
 \documentclass[8pt]{article}

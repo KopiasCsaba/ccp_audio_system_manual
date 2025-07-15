@@ -11,7 +11,6 @@
   * [Align the pulpit](#align-the-pulpit)
   * [Prepare for live-streaming](#prepare-for-live-streaming)
     * [Turn on the sockets](#turn-on-the-sockets)
-    * [Turn on the pole-TV](#turn-on-the-pole-tv)
     * [Turn on the coffee-shop TV](#turn-on-the-coffee-shop-tv)
     * [Turn on the PC](#turn-on-the-pc)
     * [LOG IN](#log-in)
@@ -64,15 +63,6 @@ You should do this section before 09:50, as timed operations will start the stre
 ### Turn on the sockets
 
 1. "Screens, projector, sockets" (close to the light switches, below the counter)
-
-### Turn on the pole-TV
-
-<img alt="" src="assets/video/century_remote.jpg"  align="right" style="float:right" height="100">
-<img alt="" src="assets/video/poletv.jpg" align="right" style="float:right" height="100">
-
-Use the remote control labeled "CENTURY", it is above the console on the shelf usually:
-
-<br clear="both" style="clear:both"/>
 
 ### Turn on the coffee-shop TV
 
@@ -130,9 +120,9 @@ Usually there is a small rehearsal before the service, since you are set up from
 You can play background music from two sources, the easiest is the first option.
 
 ### First option: Playing from the streaming PC
- 1. Open Google Chrome
+ 1. Open the browser
  2. There is a bookmark called, "BG MUSIC"
- 3. Start playing (with shuffle)
+ 3. Start playing (click on shuffle)
 
 ### Second option: from the extra 3.5mm cord
 
