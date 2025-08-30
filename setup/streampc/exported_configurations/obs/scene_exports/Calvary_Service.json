@@ -160,18 +160,6 @@
         },
         {
             "name": "_ DEBUG"
-        },
-        {
-            "name": "OLD SUNDAY_PRE_STREAM (live_on, rs_on, rec_off, mute_on)"
-        },
-        {
-            "name": "OLD EVENT FINISHED  (rs_off_delayed, rec_off_delayed, mute_on, fade_out)"
-        },
-        {
-            "name": "OLD EVENT PRE STREAM (live_on, rs_on, rec_on_afterleave, mute_on)"
-        },
-        {
-            "name": "OLD EVENT BREAK  (mute_on, rec_pause)"
         }
     ],
     "name": "Calvary Service",
@@ -413,7 +401,7 @@
                             },
                             "dayOfWeek": 7,
                             "condition": 2,
-                            "dateTime": "Sun Jun 22 10:20:00 2025",
+                            "dateTime": "Sun Aug 24 10:20:00 2025",
                             "dateTime2": "Sun Jun 23 11:16:52 2024",
                             "ignoreDate": false,
                             "ignoreTime": false,
@@ -550,7 +538,7 @@
                             },
                             "dayOfWeek": 7,
                             "condition": 0,
-                            "dateTime": "Sun Jun 22 10:01:00 2025",
+                            "dateTime": "Sun Aug 24 10:01:00 2025",
                             "dateTime2": "Sat Aug 12 13:04:33 2023",
                             "ignoreDate": false,
                             "ignoreTime": false,
@@ -699,7 +687,7 @@
                             },
                             "dayOfWeek": 7,
                             "condition": 0,
-                            "dateTime": "Sun Jun 22 10:29:57 2025",
+                            "dateTime": "Sun Aug 24 10:29:57 2025",
                             "dateTime2": "Sat Aug 12 13:04:33 2023",
                             "ignoreDate": false,
                             "ignoreTime": false,
@@ -997,7 +985,7 @@
                             },
                             "dayOfWeek": 7,
                             "condition": 1,
-                            "dateTime": "Sun Jun 22 11:50:00 2025",
+                            "dateTime": "Sun Aug 24 11:50:00 2025",
                             "dateTime2": "Sun Sep 10 08:53:17 2023",
                             "ignoreDate": false,
                             "ignoreTime": false,
@@ -1083,7 +1071,7 @@
                             "condition": 2,
                             "sceneSelection": {
                                 "type": 0,
-                                "name": "OLD EVENT FINISHED  (rs_off_delayed, rec_off_delayed, mute_on, fade_out)"
+                                "name": ""
                             }
                         },
                         {
@@ -4161,10 +4149,10 @@
             "settings": {
                 "local_file": "E:/StreamAssets/ccp_audio_system_manual_gitrepo/setup/streampc/obs_scene_assets/Calvary Paphos Logos/Media for Socials & Streaming/output_loop.mp4",
                 "hw_decode": true,
+                "close_when_inactive": false,
                 "looping": true,
                 "clear_on_media_end": false,
-                "restart_on_activate": true,
-                "close_when_inactive": false
+                "restart_on_activate": true
             },
             "mixers": 255,
             "sync": 0,
@@ -4253,7 +4241,8 @@
             "id": "image_source",
             "versioned_id": "image_source",
             "settings": {
-                "file": "E:/StreamAssets/ccp_audio_system_manual_gitrepo/setup/streampc/obs_scene_assets/Calvary Paphos Logos/Calvary Logo with Text - Black on Transparent.png"
+                "linear_alpha": true,
+                "file": "E:/StreamAssets/ccp_audio_system_manual_gitrepo/setup/streampc/obs_scene_assets/Calvary Paphos Logos/Calvary Logo with Text - Black on Transparent rescaled.png"
             },
             "mixers": 0,
             "sync": 0,
@@ -4328,42 +4317,6 @@
                 "MediaSource.Play": [],
                 "MediaSource.Pause": [],
                 "MediaSource.Stop": []
-            },
-            "deinterlace_mode": 0,
-            "deinterlace_field_order": 0,
-            "monitoring_type": 0,
-            "private_settings": {}
-        },
-        {
-            "prev_ver": 486604803,
-            "name": "clock",
-            "uuid": "109d20f9-ccd7-4fb8-9c60-d01ceabc4b6e",
-            "id": "browser_source",
-            "versioned_id": "browser_source",
-            "settings": {
-                "is_local_file": false,
-                "url": "e:\\StreamAssets\\ccp_audio_system_manual_gitrepo\\setup\\streampc\\obs_scene_assets\\SDGStreamingJourney\\src\\sources\\countdown.html?by=103000&color=%23ffffff&fontFamily=Bahnschrift%20SemiBold&align=left&clockOnly=true",
-                "width": 800,
-                "height": 300,
-                "shutdown": true
-            },
-            "mixers": 255,
-            "sync": 0,
-            "flags": 0,
-            "volume": 1.0,
-            "balance": 0.5,
-            "enabled": true,
-            "muted": false,
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "hotkeys": {
-                "libobs.mute": [],
-                "libobs.unmute": [],
-                "libobs.push-to-mute": [],
-                "libobs.push-to-talk": [],
-                "ObsBrowser.Refresh": []
             },
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
@@ -4585,7 +4538,7 @@
                         "crop_bottom": 0,
                         "id": 1,
                         "group_item_backup": false,
-                        "scale_filter": "disable",
+                        "scale_filter": "lanczos",
                         "blend_method": "default",
                         "blend_type": "normal",
                         "show_transition": {
@@ -4755,12 +4708,12 @@
                         "locked": false,
                         "rot": 0.0,
                         "pos": {
-                            "x": 1534.0,
-                            "y": 921.0
+                            "x": 1552.0,
+                            "y": 927.0
                         },
                         "scale": {
-                            "x": 0.046172060072422028,
-                            "y": 0.046113796532154083
+                            "x": 0.47241866588592529,
+                            "y": 0.47200000286102295
                         },
                         "align": 5,
                         "bounds_type": 0,
@@ -4775,7 +4728,7 @@
                         "crop_bottom": 0,
                         "id": 10,
                         "group_item_backup": false,
-                        "scale_filter": "disable",
+                        "scale_filter": "lanczos",
                         "blend_method": "default",
                         "blend_type": "normal",
                         "show_transition": {
@@ -4938,7 +4891,7 @@
                         "crop_bottom": 0,
                         "id": 6,
                         "group_item_backup": false,
-                        "scale_filter": "disable",
+                        "scale_filter": "lanczos",
                         "blend_method": "default",
                         "blend_type": "normal",
                         "show_transition": {
@@ -4976,7 +4929,7 @@
                         "crop_bottom": 0,
                         "id": 11,
                         "group_item_backup": false,
-                        "scale_filter": "disable",
+                        "scale_filter": "lanczos",
                         "blend_method": "default",
                         "blend_type": "normal",
                         "show_transition": {
@@ -5135,7 +5088,7 @@
                         "crop_bottom": 0,
                         "id": 4,
                         "group_item_backup": false,
-                        "scale_filter": "disable",
+                        "scale_filter": "lanczos",
                         "blend_method": "default",
                         "blend_type": "normal",
                         "show_transition": {
@@ -5173,7 +5126,7 @@
                         "crop_bottom": 0,
                         "id": 7,
                         "group_item_backup": false,
-                        "scale_filter": "disable",
+                        "scale_filter": "lanczos",
                         "blend_method": "default",
                         "blend_type": "normal",
                         "show_transition": {
@@ -5191,12 +5144,12 @@
                         "locked": false,
                         "rot": 0.0,
                         "pos": {
-                            "x": 1534.0,
-                            "y": 921.0
+                            "x": 1550.0,
+                            "y": 926.0
                         },
                         "scale": {
-                            "x": 0.046172060072422028,
-                            "y": 0.046113796532154083
+                            "x": 0.47524753212928772,
+                            "y": 0.47600001096725464
                         },
                         "align": 5,
                         "bounds_type": 0,
@@ -5211,7 +5164,7 @@
                         "crop_bottom": 0,
                         "id": 8,
                         "group_item_backup": false,
-                        "scale_filter": "disable",
+                        "scale_filter": "lanczos",
                         "blend_method": "default",
                         "blend_type": "normal",
                         "show_transition": {
@@ -5258,182 +5211,6 @@
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
             "private_settings": {}
-        },
-        {
-            "prev_ver": 486604803,
-            "name": "event_break_loading",
-            "uuid": "fab16907-d2c8-423e-bc84-9b04e7fa8a3a",
-            "id": "ffmpeg_source",
-            "versioned_id": "ffmpeg_source",
-            "settings": {
-                "hw_decode": false,
-                "local_file": "E:/StreamAssets/ccp_audio_system_manual_gitrepo/setup/streampc/obs_scene_assets/loading_pixabay.mp4",
-                "is_local_file": true,
-                "looping": true,
-                "clear_on_media_end": false,
-                "restart_on_activate": false,
-                "linear_alpha": true
-            },
-            "mixers": 255,
-            "sync": 0,
-            "flags": 0,
-            "volume": 1.0,
-            "balance": 0.5,
-            "enabled": true,
-            "muted": false,
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "hotkeys": {
-                "libobs.mute": [],
-                "libobs.unmute": [],
-                "libobs.push-to-mute": [],
-                "libobs.push-to-talk": [],
-                "MediaSource.Restart": [],
-                "MediaSource.Play": [],
-                "MediaSource.Pause": [],
-                "MediaSource.Stop": []
-            },
-            "deinterlace_mode": 0,
-            "deinterlace_field_order": 0,
-            "monitoring_type": 0,
-            "private_settings": {}
-        },
-        {
-            "prev_ver": 486604803,
-            "name": "finished_text1",
-            "uuid": "0b0e5fe6-2425-42e0-891a-393fa60c8946",
-            "id": "text_gdiplus",
-            "versioned_id": "text_gdiplus_v2",
-            "settings": {
-                "text": "Thank you for \njoining us",
-                "font": {
-                    "face": "Bahnschrift SemiBold",
-                    "flags": 1,
-                    "size": 256,
-                    "style": "SemiBold"
-                },
-                "align": "center",
-                "transform": 1
-            },
-            "mixers": 0,
-            "sync": 0,
-            "flags": 0,
-            "volume": 1.0,
-            "balance": 0.5,
-            "enabled": true,
-            "muted": false,
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "hotkeys": {},
-            "deinterlace_mode": 0,
-            "deinterlace_field_order": 0,
-            "monitoring_type": 0,
-            "private_settings": {}
-        },
-        {
-            "prev_ver": 486604803,
-            "name": "finished_text2",
-            "uuid": "11d2157b-985d-49a6-a739-bb9f8b6fdf4d",
-            "id": "text_gdiplus",
-            "versioned_id": "text_gdiplus_v2",
-            "settings": {
-                "text": "www.calvarycyprus.com",
-                "font": {
-                    "face": "Bahnschrift",
-                    "flags": 0,
-                    "size": 256,
-                    "style": "Regular"
-                },
-                "align": "center",
-                "transform": 1
-            },
-            "mixers": 0,
-            "sync": 0,
-            "flags": 0,
-            "volume": 1.0,
-            "balance": 0.5,
-            "enabled": true,
-            "muted": false,
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "hotkeys": {},
-            "deinterlace_mode": 0,
-            "deinterlace_field_order": 0,
-            "monitoring_type": 0,
-            "private_settings": {}
-        },
-        {
-            "prev_ver": 486604803,
-            "name": "laser_-_121651_pixabay.mp4",
-            "uuid": "3693be67-e736-4639-819a-8d8bbbf8f6d1",
-            "id": "ffmpeg_source",
-            "versioned_id": "ffmpeg_source",
-            "settings": {
-                "local_file": "E:/StreamAssets/ccp_audio_system_manual_gitrepo/setup/streampc/obs_scene_assets/laser_-_121651_pixabay.mp4",
-                "looping": true,
-                "restart_on_activate": false
-            },
-            "mixers": 255,
-            "sync": 0,
-            "flags": 0,
-            "volume": 1.0,
-            "balance": 0.5,
-            "enabled": true,
-            "muted": false,
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "hotkeys": {
-                "libobs.mute": [],
-                "libobs.unmute": [],
-                "libobs.push-to-mute": [],
-                "libobs.push-to-talk": [],
-                "MediaSource.Restart": [],
-                "MediaSource.Play": [],
-                "MediaSource.Pause": [],
-                "MediaSource.Stop": []
-            },
-            "deinterlace_mode": 0,
-            "deinterlace_field_order": 0,
-            "monitoring_type": 0,
-            "private_settings": {},
-            "filters": [
-                {
-                    "prev_ver": 486604803,
-                    "name": "Colour Correction",
-                    "uuid": "b85b1c3e-94df-49c5-8f78-c06b407caac2",
-                    "id": "color_filter",
-                    "versioned_id": "color_filter_v2",
-                    "settings": {
-                        "contrast": -1.0700000000000001,
-                        "hue_shift": 0,
-                        "opacity": 0.15040000000000001
-                    },
-                    "mixers": 0,
-                    "sync": 0,
-                    "flags": 0,
-                    "volume": 1.0,
-                    "balance": 0.5,
-                    "enabled": true,
-                    "muted": false,
-                    "push-to-mute": false,
-                    "push-to-mute-delay": 0,
-                    "push-to-talk": false,
-                    "push-to-talk-delay": 0,
-                    "hotkeys": {},
-                    "deinterlace_mode": 0,
-                    "deinterlace_field_order": 0,
-                    "monitoring_type": 0,
-                    "private_settings": {}
-                }
-            ]
         },
         {
             "prev_ver": 486604803,
@@ -5508,110 +5285,6 @@
                 "transition": "Fade",
                 "transition_duration": 600
             }
-        },
-        {
-            "prev_ver": 486604803,
-            "name": "ms_bg",
-            "uuid": "7762aa05-5d1b-45f4-aa21-9a493bb1716f",
-            "id": "color_source",
-            "versioned_id": "color_source_v3",
-            "settings": {
-                "color": 4283846466
-            },
-            "mixers": 0,
-            "sync": 0,
-            "flags": 0,
-            "volume": 1.0,
-            "balance": 0.5,
-            "enabled": true,
-            "muted": false,
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "hotkeys": {},
-            "deinterlace_mode": 0,
-            "deinterlace_field_order": 0,
-            "monitoring_type": 0,
-            "private_settings": {}
-        },
-        {
-            "prev_ver": 486604803,
-            "name": "ms_break",
-            "uuid": "eea43bcf-ddff-42ae-9de6-691812732687",
-            "id": "text_gdiplus",
-            "versioned_id": "text_gdiplus_v2",
-            "settings": {
-                "text": "Continuing soon ..."
-            },
-            "mixers": 0,
-            "sync": 0,
-            "flags": 0,
-            "volume": 1.0,
-            "balance": 0.5,
-            "enabled": true,
-            "muted": false,
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "hotkeys": {},
-            "deinterlace_mode": 0,
-            "deinterlace_field_order": 0,
-            "monitoring_type": 0,
-            "private_settings": {}
-        },
-        {
-            "prev_ver": 486604803,
-            "name": "ms_start_bg",
-            "uuid": "6499dbbe-80b6-43b2-acf3-fbbdbafa78d7",
-            "id": "color_source",
-            "versioned_id": "color_source_v3",
-            "settings": {
-                "color": 4278190080
-            },
-            "mixers": 0,
-            "sync": 0,
-            "flags": 0,
-            "volume": 1.0,
-            "balance": 0.5,
-            "enabled": true,
-            "muted": false,
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "hotkeys": {},
-            "deinterlace_mode": 0,
-            "deinterlace_field_order": 0,
-            "monitoring_type": 0,
-            "private_settings": {}
-        },
-        {
-            "prev_ver": 486604803,
-            "name": "ms_start_soon",
-            "uuid": "31045b10-e640-4016-9ad2-85376dccd9aa",
-            "id": "text_gdiplus",
-            "versioned_id": "text_gdiplus_v2",
-            "settings": {
-                "text": "Starting soon..."
-            },
-            "mixers": 0,
-            "sync": 0,
-            "flags": 0,
-            "volume": 1.0,
-            "balance": 0.5,
-            "enabled": true,
-            "muted": false,
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "hotkeys": {},
-            "deinterlace_mode": 0,
-            "deinterlace_field_order": 0,
-            "monitoring_type": 0,
-            "private_settings": {}
         },
         {
             "prev_ver": 486604803,
@@ -5936,1096 +5609,6 @@
         },
         {
             "prev_ver": 486604803,
-            "name": "OLD EVENT BREAK  (mute_on, rec_pause)",
-            "uuid": "89a98a32-f149-4930-9742-1bd1ff40444e",
-            "id": "scene",
-            "versioned_id": "scene",
-            "settings": {
-                "id_counter": 7,
-                "custom_size": false,
-                "items": [
-                    {
-                        "name": "christian-piano-music-143489.mp3",
-                        "source_uuid": "66391b3a-4fff-474b-9412-f6f9c23105a6",
-                        "visible": true,
-                        "locked": false,
-                        "rot": 0.0,
-                        "pos": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "scale": {
-                            "x": 1.0,
-                            "y": 1.0
-                        },
-                        "align": 5,
-                        "bounds_type": 0,
-                        "bounds_align": 0,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "crop_left": 0,
-                        "crop_top": 0,
-                        "crop_right": 0,
-                        "crop_bottom": 0,
-                        "id": 1,
-                        "group_item_backup": false,
-                        "scale_filter": "disable",
-                        "blend_method": "default",
-                        "blend_type": "normal",
-                        "show_transition": {
-                            "duration": 0
-                        },
-                        "hide_transition": {
-                            "duration": 0
-                        },
-                        "private_settings": {}
-                    },
-                    {
-                        "name": "ms_start_bg",
-                        "source_uuid": "6499dbbe-80b6-43b2-acf3-fbbdbafa78d7",
-                        "visible": true,
-                        "locked": false,
-                        "rot": 0.0,
-                        "pos": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "scale": {
-                            "x": 1.0,
-                            "y": 1.0
-                        },
-                        "align": 5,
-                        "bounds_type": 0,
-                        "bounds_align": 0,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "crop_left": 0,
-                        "crop_top": 0,
-                        "crop_right": 0,
-                        "crop_bottom": 0,
-                        "id": 2,
-                        "group_item_backup": false,
-                        "scale_filter": "disable",
-                        "blend_method": "default",
-                        "blend_type": "normal",
-                        "show_transition": {
-                            "duration": 0
-                        },
-                        "hide_transition": {
-                            "duration": 0
-                        },
-                        "private_settings": {}
-                    },
-                    {
-                        "name": "laser_-_121651_pixabay.mp4",
-                        "source_uuid": "3693be67-e736-4639-819a-8d8bbbf8f6d1",
-                        "visible": true,
-                        "locked": false,
-                        "rot": 0.0,
-                        "pos": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "scale": {
-                            "x": 1.0,
-                            "y": 1.0
-                        },
-                        "align": 5,
-                        "bounds_type": 0,
-                        "bounds_align": 0,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "crop_left": 0,
-                        "crop_top": 0,
-                        "crop_right": 0,
-                        "crop_bottom": 0,
-                        "id": 3,
-                        "group_item_backup": false,
-                        "scale_filter": "disable",
-                        "blend_method": "default",
-                        "blend_type": "additive",
-                        "show_transition": {
-                            "duration": 0
-                        },
-                        "hide_transition": {
-                            "duration": 0
-                        },
-                        "private_settings": {}
-                    },
-                    {
-                        "name": "ms_bg",
-                        "source_uuid": "7762aa05-5d1b-45f4-aa21-9a493bb1716f",
-                        "visible": false,
-                        "locked": false,
-                        "rot": 0.0,
-                        "pos": {
-                            "x": -1.0,
-                            "y": 0.0
-                        },
-                        "scale": {
-                            "x": 1.0,
-                            "y": 1.0
-                        },
-                        "align": 5,
-                        "bounds_type": 0,
-                        "bounds_align": 0,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "crop_left": 0,
-                        "crop_top": 0,
-                        "crop_right": 0,
-                        "crop_bottom": 0,
-                        "id": 4,
-                        "group_item_backup": false,
-                        "scale_filter": "disable",
-                        "blend_method": "default",
-                        "blend_type": "normal",
-                        "show_transition": {
-                            "duration": 0
-                        },
-                        "hide_transition": {
-                            "duration": 0
-                        },
-                        "private_settings": {}
-                    },
-                    {
-                        "name": "event_break_loading",
-                        "source_uuid": "fab16907-d2c8-423e-bc84-9b04e7fa8a3a",
-                        "visible": false,
-                        "locked": false,
-                        "rot": 0.0,
-                        "pos": {
-                            "x": 1306.0,
-                            "y": 664.0
-                        },
-                        "scale": {
-                            "x": 0.35104167461395264,
-                            "y": 0.35092592239379883
-                        },
-                        "align": 5,
-                        "bounds_type": 0,
-                        "bounds_align": 0,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "crop_left": 0,
-                        "crop_top": 0,
-                        "crop_right": 0,
-                        "crop_bottom": 0,
-                        "id": 5,
-                        "group_item_backup": false,
-                        "scale_filter": "disable",
-                        "blend_method": "default",
-                        "blend_type": "additive",
-                        "show_transition": {
-                            "duration": 0
-                        },
-                        "hide_transition": {
-                            "duration": 0
-                        },
-                        "private_settings": {}
-                    },
-                    {
-                        "name": "ms_break",
-                        "source_uuid": "eea43bcf-ddff-42ae-9de6-691812732687",
-                        "visible": true,
-                        "locked": false,
-                        "rot": 0.0,
-                        "pos": {
-                            "x": 92.0,
-                            "y": 92.0
-                        },
-                        "scale": {
-                            "x": 0.41558441519737244,
-                            "y": 0.41561713814735413
-                        },
-                        "align": 5,
-                        "bounds_type": 0,
-                        "bounds_align": 0,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "crop_left": 0,
-                        "crop_top": 0,
-                        "crop_right": 0,
-                        "crop_bottom": 0,
-                        "id": 6,
-                        "group_item_backup": false,
-                        "scale_filter": "disable",
-                        "blend_method": "default",
-                        "blend_type": "normal",
-                        "show_transition": {
-                            "duration": 0
-                        },
-                        "hide_transition": {
-                            "duration": 0
-                        },
-                        "private_settings": {}
-                    },
-                    {
-                        "name": "clock",
-                        "source_uuid": "109d20f9-ccd7-4fb8-9c60-d01ceabc4b6e",
-                        "visible": true,
-                        "locked": false,
-                        "rot": 0.0,
-                        "pos": {
-                            "x": 1388.375,
-                            "y": 904.0
-                        },
-                        "scale": {
-                            "x": 0.70375001430511475,
-                            "y": 0.70333331823348999
-                        },
-                        "align": 5,
-                        "bounds_type": 0,
-                        "bounds_align": 0,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "crop_left": 0,
-                        "crop_top": 0,
-                        "crop_right": 0,
-                        "crop_bottom": 0,
-                        "id": 7,
-                        "group_item_backup": false,
-                        "scale_filter": "disable",
-                        "blend_method": "default",
-                        "blend_type": "normal",
-                        "show_transition": {
-                            "duration": 0
-                        },
-                        "hide_transition": {
-                            "duration": 0
-                        },
-                        "private_settings": {}
-                    }
-                ]
-            },
-            "mixers": 0,
-            "sync": 0,
-            "flags": 0,
-            "volume": 1.0,
-            "balance": 0.5,
-            "enabled": true,
-            "muted": false,
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "hotkeys": {
-                "OBSBasic.SelectScene": [],
-                "libobs.show_scene_item.christian-piano-music-143489.mp3": [],
-                "libobs.hide_scene_item.christian-piano-music-143489.mp3": [],
-                "libobs.show_scene_item.ms_start_bg": [],
-                "libobs.hide_scene_item.ms_start_bg": [],
-                "libobs.show_scene_item.laser_-_121651_pixabay.mp4": [],
-                "libobs.hide_scene_item.laser_-_121651_pixabay.mp4": [],
-                "libobs.show_scene_item.ms_bg": [],
-                "libobs.hide_scene_item.ms_bg": [],
-                "libobs.show_scene_item.event_break_loading": [],
-                "libobs.hide_scene_item.event_break_loading": [],
-                "libobs.show_scene_item.ms_break": [],
-                "libobs.hide_scene_item.ms_break": [],
-                "libobs.show_scene_item.clock": [],
-                "libobs.hide_scene_item.clock": []
-            },
-            "deinterlace_mode": 0,
-            "deinterlace_field_order": 0,
-            "monitoring_type": 0,
-            "private_settings": {
-                "transition": "Fade",
-                "transition_duration": 600
-            }
-        },
-        {
-            "prev_ver": 486604803,
-            "name": "OLD EVENT FINISHED  (rs_off_delayed, rec_off_delayed, mute_on, fade_out)",
-            "uuid": "02f70584-0b8b-41b1-8b6f-eb0f42c776f5",
-            "id": "scene",
-            "versioned_id": "scene",
-            "settings": {
-                "custom_size": false,
-                "id_counter": 5,
-                "items": [
-                    {
-                        "name": "palm-trees-2301981_1920.jpg 2",
-                        "source_uuid": "a1aacf90-b6d8-4997-8272-ada44d169545",
-                        "visible": true,
-                        "locked": true,
-                        "rot": 0.0,
-                        "pos": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "scale": {
-                            "x": 1.0,
-                            "y": 1.0
-                        },
-                        "align": 5,
-                        "bounds_type": 0,
-                        "bounds_align": 0,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "crop_left": 0,
-                        "crop_top": 0,
-                        "crop_right": 0,
-                        "crop_bottom": 0,
-                        "id": 4,
-                        "group_item_backup": false,
-                        "scale_filter": "disable",
-                        "blend_method": "default",
-                        "blend_type": "normal",
-                        "show_transition": {
-                            "duration": 0
-                        },
-                        "hide_transition": {
-                            "duration": 0
-                        },
-                        "private_settings": {}
-                    },
-                    {
-                        "name": "finished_text1",
-                        "source_uuid": "0b0e5fe6-2425-42e0-891a-393fa60c8946",
-                        "visible": true,
-                        "locked": false,
-                        "rot": 0.0,
-                        "pos": {
-                            "x": 790.0,
-                            "y": 335.0
-                        },
-                        "scale": {
-                            "x": 0.61557537317276001,
-                            "y": 0.61553031206130981
-                        },
-                        "align": 5,
-                        "bounds_type": 0,
-                        "bounds_align": 0,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "crop_left": 0,
-                        "crop_top": 0,
-                        "crop_right": 0,
-                        "crop_bottom": 0,
-                        "id": 3,
-                        "group_item_backup": false,
-                        "scale_filter": "disable",
-                        "blend_method": "default",
-                        "blend_type": "normal",
-                        "show_transition": {
-                            "duration": 0
-                        },
-                        "hide_transition": {
-                            "duration": 0
-                        },
-                        "private_settings": {}
-                    },
-                    {
-                        "name": "finished_text2",
-                        "source_uuid": "11d2157b-985d-49a6-a739-bb9f8b6fdf4d",
-                        "visible": true,
-                        "locked": false,
-                        "rot": 0.0,
-                        "pos": {
-                            "x": 1119.0,
-                            "y": 664.1514892578125
-                        },
-                        "scale": {
-                            "x": 0.1444937139749527,
-                            "y": 0.14453125
-                        },
-                        "align": 5,
-                        "bounds_type": 0,
-                        "bounds_align": 0,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "crop_left": 0,
-                        "crop_top": 0,
-                        "crop_right": 0,
-                        "crop_bottom": 0,
-                        "id": 5,
-                        "group_item_backup": false,
-                        "scale_filter": "disable",
-                        "blend_method": "default",
-                        "blend_type": "normal",
-                        "show_transition": {
-                            "duration": 0
-                        },
-                        "hide_transition": {
-                            "duration": 0
-                        },
-                        "private_settings": {}
-                    }
-                ]
-            },
-            "mixers": 0,
-            "sync": 0,
-            "flags": 0,
-            "volume": 1.0,
-            "balance": 0.5,
-            "enabled": true,
-            "muted": false,
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "hotkeys": {
-                "OBSBasic.SelectScene": [],
-                "libobs.show_scene_item.palm-trees-2301981_1920.jpg 2": [],
-                "libobs.hide_scene_item.palm-trees-2301981_1920.jpg 2": [],
-                "libobs.show_scene_item.finished_text1": [],
-                "libobs.hide_scene_item.finished_text1": [],
-                "libobs.show_scene_item.finished_text2": [],
-                "libobs.hide_scene_item.finished_text2": []
-            },
-            "deinterlace_mode": 0,
-            "deinterlace_field_order": 0,
-            "monitoring_type": 0,
-            "private_settings": {}
-        },
-        {
-            "prev_ver": 486604803,
-            "name": "OLD EVENT PRE STREAM (live_on, rs_on, rec_on_afterleave, mute_on)",
-            "uuid": "232bf565-c647-4a08-9b59-36081a0007b3",
-            "id": "scene",
-            "versioned_id": "scene",
-            "settings": {
-                "custom_size": false,
-                "id_counter": 13,
-                "items": [
-                    {
-                        "name": "ms_start_bg",
-                        "source_uuid": "6499dbbe-80b6-43b2-acf3-fbbdbafa78d7",
-                        "visible": true,
-                        "locked": false,
-                        "rot": 0.0,
-                        "pos": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "scale": {
-                            "x": 1.0,
-                            "y": 1.0
-                        },
-                        "align": 5,
-                        "bounds_type": 0,
-                        "bounds_align": 0,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "crop_left": 0,
-                        "crop_top": 0,
-                        "crop_right": 0,
-                        "crop_bottom": 0,
-                        "id": 3,
-                        "group_item_backup": false,
-                        "scale_filter": "disable",
-                        "blend_method": "default",
-                        "blend_type": "normal",
-                        "show_transition": {
-                            "duration": 0
-                        },
-                        "hide_transition": {
-                            "duration": 0
-                        },
-                        "private_settings": {}
-                    },
-                    {
-                        "name": "laser_-_121651_pixabay.mp4",
-                        "source_uuid": "3693be67-e736-4639-819a-8d8bbbf8f6d1",
-                        "visible": true,
-                        "locked": false,
-                        "rot": 0.0,
-                        "pos": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "scale": {
-                            "x": 1.0,
-                            "y": 1.0
-                        },
-                        "align": 5,
-                        "bounds_type": 0,
-                        "bounds_align": 0,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "crop_left": 0,
-                        "crop_top": 0,
-                        "crop_right": 0,
-                        "crop_bottom": 0,
-                        "id": 12,
-                        "group_item_backup": false,
-                        "scale_filter": "disable",
-                        "blend_method": "default",
-                        "blend_type": "additive",
-                        "show_transition": {
-                            "duration": 0
-                        },
-                        "hide_transition": {
-                            "duration": 0
-                        },
-                        "private_settings": {}
-                    },
-                    {
-                        "name": "ms_start_soon",
-                        "source_uuid": "31045b10-e640-4016-9ad2-85376dccd9aa",
-                        "visible": true,
-                        "locked": false,
-                        "rot": 0.0,
-                        "pos": {
-                            "x": 92.0,
-                            "y": 92.0
-                        },
-                        "scale": {
-                            "x": 0.41558441519737244,
-                            "y": 0.41561713814735413
-                        },
-                        "align": 5,
-                        "bounds_type": 0,
-                        "bounds_align": 0,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "crop_left": 0,
-                        "crop_top": 0,
-                        "crop_right": 0,
-                        "crop_bottom": 0,
-                        "id": 4,
-                        "group_item_backup": false,
-                        "scale_filter": "disable",
-                        "blend_method": "default",
-                        "blend_type": "normal",
-                        "show_transition": {
-                            "duration": 0
-                        },
-                        "hide_transition": {
-                            "duration": 0
-                        },
-                        "private_settings": {}
-                    },
-                    {
-                        "name": "christian-piano-music-143489.mp3",
-                        "source_uuid": "66391b3a-4fff-474b-9412-f6f9c23105a6",
-                        "visible": true,
-                        "locked": false,
-                        "rot": 0.0,
-                        "pos": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "scale": {
-                            "x": 1.0,
-                            "y": 1.0
-                        },
-                        "align": 5,
-                        "bounds_type": 0,
-                        "bounds_align": 0,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "crop_left": 0,
-                        "crop_top": 0,
-                        "crop_right": 0,
-                        "crop_bottom": 0,
-                        "id": 5,
-                        "group_item_backup": false,
-                        "scale_filter": "disable",
-                        "blend_method": "default",
-                        "blend_type": "normal",
-                        "show_transition": {
-                            "duration": 0
-                        },
-                        "hide_transition": {
-                            "duration": 0
-                        },
-                        "private_settings": {}
-                    },
-                    {
-                        "name": "event_break_loading",
-                        "source_uuid": "fab16907-d2c8-423e-bc84-9b04e7fa8a3a",
-                        "visible": false,
-                        "locked": false,
-                        "rot": 0.0,
-                        "pos": {
-                            "x": 1306.0,
-                            "y": 664.0
-                        },
-                        "scale": {
-                            "x": 0.35104167461395264,
-                            "y": 0.35092592239379883
-                        },
-                        "align": 5,
-                        "bounds_type": 0,
-                        "bounds_align": 0,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "crop_left": 0,
-                        "crop_top": 0,
-                        "crop_right": 0,
-                        "crop_bottom": 0,
-                        "id": 8,
-                        "group_item_backup": false,
-                        "scale_filter": "disable",
-                        "blend_method": "default",
-                        "blend_type": "additive",
-                        "show_transition": {
-                            "duration": 0
-                        },
-                        "hide_transition": {
-                            "duration": 0
-                        },
-                        "private_settings": {}
-                    },
-                    {
-                        "name": "clock",
-                        "source_uuid": "109d20f9-ccd7-4fb8-9c60-d01ceabc4b6e",
-                        "visible": true,
-                        "locked": false,
-                        "rot": 0.0,
-                        "pos": {
-                            "x": 1388.375,
-                            "y": 904.0
-                        },
-                        "scale": {
-                            "x": 0.70375001430511475,
-                            "y": 0.70333331823348999
-                        },
-                        "align": 5,
-                        "bounds_type": 0,
-                        "bounds_align": 0,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "crop_left": 0,
-                        "crop_top": 0,
-                        "crop_right": 0,
-                        "crop_bottom": 0,
-                        "id": 13,
-                        "group_item_backup": false,
-                        "scale_filter": "disable",
-                        "blend_method": "default",
-                        "blend_type": "normal",
-                        "show_transition": {
-                            "duration": 0
-                        },
-                        "hide_transition": {
-                            "duration": 0
-                        },
-                        "private_settings": {}
-                    }
-                ]
-            },
-            "mixers": 0,
-            "sync": 0,
-            "flags": 0,
-            "volume": 1.0,
-            "balance": 0.5,
-            "enabled": true,
-            "muted": false,
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "hotkeys": {
-                "OBSBasic.SelectScene": [],
-                "libobs.show_scene_item.ms_start_bg": [],
-                "libobs.hide_scene_item.ms_start_bg": [],
-                "libobs.show_scene_item.laser_-_121651_pixabay.mp4": [],
-                "libobs.hide_scene_item.laser_-_121651_pixabay.mp4": [],
-                "libobs.show_scene_item.ms_start_soon": [],
-                "libobs.hide_scene_item.ms_start_soon": [],
-                "libobs.show_scene_item.christian-piano-music-143489.mp3": [],
-                "libobs.hide_scene_item.christian-piano-music-143489.mp3": [],
-                "libobs.show_scene_item.event_break_loading": [],
-                "libobs.hide_scene_item.event_break_loading": [],
-                "libobs.show_scene_item.clock": [],
-                "libobs.hide_scene_item.clock": []
-            },
-            "deinterlace_mode": 0,
-            "deinterlace_field_order": 0,
-            "monitoring_type": 0,
-            "private_settings": {
-                "transition": "Fade",
-                "transition_duration": 600
-            }
-        },
-        {
-            "prev_ver": 486604803,
-            "name": "OLD SUNDAY_PRE_STREAM (live_on, rs_on, rec_off, mute_on)",
-            "uuid": "e17e4db7-2bf4-4900-8e8b-bf495059fadc",
-            "id": "scene",
-            "versioned_id": "scene",
-            "settings": {
-                "custom_size": false,
-                "id_counter": 9,
-                "items": [
-                    {
-                        "name": "palm-trees-2301981_1920.jpg",
-                        "source_uuid": "af118ec0-a85f-4a3d-afb9-ca15feee1077",
-                        "visible": true,
-                        "locked": false,
-                        "rot": 0.0,
-                        "pos": {
-                            "x": 0.0,
-                            "y": -63.0
-                        },
-                        "scale": {
-                            "x": 1.0,
-                            "y": 1.0
-                        },
-                        "align": 5,
-                        "bounds_type": 0,
-                        "bounds_align": 0,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "crop_left": 0,
-                        "crop_top": 0,
-                        "crop_right": 0,
-                        "crop_bottom": 0,
-                        "id": 1,
-                        "group_item_backup": false,
-                        "scale_filter": "disable",
-                        "blend_method": "default",
-                        "blend_type": "normal",
-                        "show_transition": {
-                            "duration": 0
-                        },
-                        "hide_transition": {
-                            "duration": 0
-                        },
-                        "private_settings": {}
-                    },
-                    {
-                        "name": "christian-piano-music-143489.mp3",
-                        "source_uuid": "66391b3a-4fff-474b-9412-f6f9c23105a6",
-                        "visible": true,
-                        "locked": false,
-                        "rot": 0.0,
-                        "pos": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "scale": {
-                            "x": 1.0,
-                            "y": 1.0
-                        },
-                        "align": 5,
-                        "bounds_type": 0,
-                        "bounds_align": 0,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "crop_left": 0,
-                        "crop_top": 0,
-                        "crop_right": 0,
-                        "crop_bottom": 0,
-                        "id": 4,
-                        "group_item_backup": false,
-                        "scale_filter": "disable",
-                        "blend_method": "default",
-                        "blend_type": "normal",
-                        "show_transition": {
-                            "duration": 0
-                        },
-                        "hide_transition": {
-                            "duration": 0
-                        },
-                        "private_settings": {}
-                    },
-                    {
-                        "name": "prestream_text3",
-                        "source_uuid": "0313b12d-5fc4-4c4c-baea-c752c7a11ba5",
-                        "visible": true,
-                        "locked": false,
-                        "rot": 0.0,
-                        "pos": {
-                            "x": 959.0,
-                            "y": 774.0
-                        },
-                        "scale": {
-                            "x": 0.18602195382118225,
-                            "y": 0.1875
-                        },
-                        "align": 5,
-                        "bounds_type": 0,
-                        "bounds_align": 0,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "crop_left": 0,
-                        "crop_top": 0,
-                        "crop_right": 0,
-                        "crop_bottom": 0,
-                        "id": 3,
-                        "group_item_backup": false,
-                        "scale_filter": "disable",
-                        "blend_method": "default",
-                        "blend_type": "normal",
-                        "show_transition": {
-                            "duration": 0
-                        },
-                        "hide_transition": {
-                            "duration": 0
-                        },
-                        "private_settings": {}
-                    },
-                    {
-                        "name": "prestream_cntdwn",
-                        "source_uuid": "bbf2ed3c-dae9-4a69-9bfc-20ab62403f58",
-                        "visible": true,
-                        "locked": false,
-                        "rot": 0.0,
-                        "pos": {
-                            "x": 1221.0,
-                            "y": 232.5
-                        },
-                        "scale": {
-                            "x": 0.64531248807907104,
-                            "y": 0.64499998092651367
-                        },
-                        "align": 5,
-                        "bounds_type": 0,
-                        "bounds_align": 0,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "crop_left": 0,
-                        "crop_top": 0,
-                        "crop_right": 0,
-                        "crop_bottom": 0,
-                        "id": 5,
-                        "group_item_backup": false,
-                        "scale_filter": "disable",
-                        "blend_method": "default",
-                        "blend_type": "normal",
-                        "show_transition": {
-                            "duration": 0
-                        },
-                        "hide_transition": {
-                            "duration": 0
-                        },
-                        "private_settings": {}
-                    },
-                    {
-                        "name": "prestream_text2",
-                        "source_uuid": "444989cc-e2f8-415c-8542-6b72edbc9ff4",
-                        "visible": false,
-                        "locked": false,
-                        "rot": 0.0,
-                        "pos": {
-                            "x": 1533.0,
-                            "y": 303.45452880859375
-                        },
-                        "scale": {
-                            "x": 0.32896706461906433,
-                            "y": 0.32954546809196472
-                        },
-                        "align": 5,
-                        "bounds_type": 0,
-                        "bounds_align": 0,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "crop_left": 0,
-                        "crop_top": 0,
-                        "crop_right": 0,
-                        "crop_bottom": 0,
-                        "id": 6,
-                        "group_item_backup": false,
-                        "scale_filter": "disable",
-                        "blend_method": "default",
-                        "blend_type": "normal",
-                        "show_transition": {
-                            "duration": 0
-                        },
-                        "hide_transition": {
-                            "duration": 0
-                        },
-                        "private_settings": {}
-                    },
-                    {
-                        "name": "prestream_text4",
-                        "source_uuid": "8886eb5f-a73b-4c7a-812f-619c805bffe0",
-                        "visible": true,
-                        "locked": false,
-                        "rot": 0.0,
-                        "pos": {
-                            "x": 713.0,
-                            "y": 77.0
-                        },
-                        "scale": {
-                            "x": 0.60853129625320435,
-                            "y": 0.607421875
-                        },
-                        "align": 5,
-                        "bounds_type": 0,
-                        "bounds_align": 0,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "crop_left": 0,
-                        "crop_top": 0,
-                        "crop_right": 0,
-                        "crop_bottom": 0,
-                        "id": 7,
-                        "group_item_backup": false,
-                        "scale_filter": "disable",
-                        "blend_method": "default",
-                        "blend_type": "normal",
-                        "show_transition": {
-                            "duration": 0
-                        },
-                        "hide_transition": {
-                            "duration": 0
-                        },
-                        "private_settings": {}
-                    }
-                ]
-            },
-            "mixers": 0,
-            "sync": 0,
-            "flags": 0,
-            "volume": 1.0,
-            "balance": 0.5,
-            "enabled": true,
-            "muted": false,
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "hotkeys": {
-                "OBSBasic.SelectScene": [],
-                "libobs.show_scene_item.palm-trees-2301981_1920.jpg": [],
-                "libobs.hide_scene_item.palm-trees-2301981_1920.jpg": [],
-                "libobs.show_scene_item.christian-piano-music-143489.mp3": [],
-                "libobs.hide_scene_item.christian-piano-music-143489.mp3": [],
-                "libobs.show_scene_item.prestream_text3": [],
-                "libobs.hide_scene_item.prestream_text3": [],
-                "libobs.show_scene_item.prestream_cntdwn": [],
-                "libobs.hide_scene_item.prestream_cntdwn": [],
-                "libobs.show_scene_item.prestream_text2": [],
-                "libobs.hide_scene_item.prestream_text2": [],
-                "libobs.show_scene_item.prestream_text4": [],
-                "libobs.hide_scene_item.prestream_text4": []
-            },
-            "deinterlace_mode": 0,
-            "deinterlace_field_order": 0,
-            "monitoring_type": 0,
-            "private_settings": {}
-        },
-        {
-            "prev_ver": 486604803,
-            "name": "palm-trees-2301981_1920.jpg",
-            "uuid": "af118ec0-a85f-4a3d-afb9-ca15feee1077",
-            "id": "image_source",
-            "versioned_id": "image_source",
-            "settings": {
-                "file": "E:/StreamAssets/ccp_audio_system_manual_gitrepo/setup/streampc/obs_scene_assets/palm-trees-2301981_1920.jpg"
-            },
-            "mixers": 0,
-            "sync": 0,
-            "flags": 0,
-            "volume": 1.0,
-            "balance": 0.5,
-            "enabled": true,
-            "muted": false,
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "hotkeys": {},
-            "deinterlace_mode": 0,
-            "deinterlace_field_order": 0,
-            "monitoring_type": 0,
-            "private_settings": {}
-        },
-        {
-            "prev_ver": 486604803,
-            "name": "palm-trees-2301981_1920.jpg 2",
-            "uuid": "a1aacf90-b6d8-4997-8272-ada44d169545",
-            "id": "image_source",
-            "versioned_id": "image_source",
-            "settings": {
-                "file": "E:/StreamAssets/ccp_audio_system_manual_gitrepo/setup/streampc/obs_scene_assets/palm-trees-2301981_1920.jpg"
-            },
-            "mixers": 0,
-            "sync": 0,
-            "flags": 0,
-            "volume": 1.0,
-            "balance": 0.5,
-            "enabled": true,
-            "muted": false,
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "hotkeys": {},
-            "deinterlace_mode": 0,
-            "deinterlace_field_order": 0,
-            "monitoring_type": 0,
-            "private_settings": {},
-            "filters": [
-                {
-                    "prev_ver": 486604803,
-                    "name": "Chroma Key",
-                    "uuid": "a2d9810c-2768-4275-a61c-16518d2e58e0",
-                    "id": "chroma_key_filter",
-                    "versioned_id": "chroma_key_filter_v2",
-                    "settings": {
-                        "opacity": 0.059799999999999999
-                    },
-                    "mixers": 0,
-                    "sync": 0,
-                    "flags": 0,
-                    "volume": 1.0,
-                    "balance": 0.5,
-                    "enabled": true,
-                    "muted": false,
-                    "push-to-mute": false,
-                    "push-to-mute-delay": 0,
-                    "push-to-talk": false,
-                    "push-to-talk-delay": 0,
-                    "hotkeys": {},
-                    "deinterlace_mode": 0,
-                    "deinterlace_field_order": 0,
-                    "monitoring_type": 0,
-                    "private_settings": {}
-                }
-            ]
-        },
-        {
-            "prev_ver": 486604803,
             "name": "Pole Camera",
             "uuid": "902b9fc4-1f85-4316-8c24-fb4b4870e71e",
             "id": "ndi_source",
@@ -7145,151 +5728,6 @@
                     "private_settings": {}
                 }
             ]
-        },
-        {
-            "prev_ver": 486604803,
-            "name": "prestream_cntdwn",
-            "uuid": "bbf2ed3c-dae9-4a69-9bfc-20ab62403f58",
-            "id": "browser_source",
-            "versioned_id": "browser_source",
-            "settings": {
-                "is_local_file": false,
-                "undo_sname": "Browser",
-                "url": "e:\\StreamAssets\\ccp_audio_system_manual_gitrepo\\setup\\streampc\\obs_scene_assets\\SDGStreamingJourney\\src\\sources\\countdown.html?by=103000&color=%23000000&fontFamily=Bahnschrift%20SemiBold&align=left&textFormat=IN clock",
-                "width": 1920,
-                "css": "body { background-color: rgba(0, 0, 0, 0); margin: 0px auto; overflow: hidden; }"
-            },
-            "mixers": 255,
-            "sync": 0,
-            "flags": 0,
-            "volume": 1.0,
-            "balance": 0.5,
-            "enabled": true,
-            "muted": false,
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "hotkeys": {
-                "libobs.mute": [],
-                "libobs.unmute": [],
-                "libobs.push-to-mute": [],
-                "libobs.push-to-talk": [],
-                "ObsBrowser.Refresh": []
-            },
-            "deinterlace_mode": 0,
-            "deinterlace_field_order": 0,
-            "monitoring_type": 0,
-            "private_settings": {}
-        },
-        {
-            "prev_ver": 486604803,
-            "name": "prestream_text2",
-            "uuid": "444989cc-e2f8-415c-8542-6b72edbc9ff4",
-            "id": "text_gdiplus",
-            "versioned_id": "text_gdiplus_v2",
-            "settings": {
-                "gradient": false,
-                "text": "in",
-                "font": {
-                    "face": "Bahnschrift SemiCondensed",
-                    "flags": 0,
-                    "size": 256,
-                    "style": "SemiCondensed"
-                },
-                "color": 4281997581,
-                "gradient_color": 4280093702
-            },
-            "mixers": 0,
-            "sync": 0,
-            "flags": 0,
-            "volume": 1.0,
-            "balance": 0.5,
-            "enabled": true,
-            "muted": false,
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "hotkeys": {},
-            "deinterlace_mode": 0,
-            "deinterlace_field_order": 0,
-            "monitoring_type": 0,
-            "private_settings": {}
-        },
-        {
-            "prev_ver": 486604803,
-            "name": "prestream_text3",
-            "uuid": "0313b12d-5fc4-4c4c-baea-c752c7a11ba5",
-            "id": "text_gdiplus",
-            "versioned_id": "text_gdiplus_v2",
-            "settings": {
-                "gradient": false,
-                "outline": false,
-                "text": "Prepare your devIce, your Bible and your heart",
-                "undo_sname": "prestream_text3",
-                "font": {
-                    "face": "Bahnschrift SemiCondensed",
-                    "flags": 1,
-                    "size": 256,
-                    "style": "Bold SemiCondensed"
-                },
-                "color": 4281997581,
-                "bk_opacity": 0,
-                "transform": 1
-            },
-            "mixers": 0,
-            "sync": 0,
-            "flags": 0,
-            "volume": 1.0,
-            "balance": 0.5,
-            "enabled": true,
-            "muted": false,
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "hotkeys": {},
-            "deinterlace_mode": 0,
-            "deinterlace_field_order": 0,
-            "monitoring_type": 0,
-            "private_settings": {}
-        },
-        {
-            "prev_ver": 486604803,
-            "name": "prestream_text4",
-            "uuid": "8886eb5f-a73b-4c7a-812f-619c805bffe0",
-            "id": "text_gdiplus",
-            "versioned_id": "text_gdiplus_v2",
-            "settings": {
-                "text": "service starting",
-                "font": {
-                    "face": "Bahnschrift SemiBold",
-                    "flags": 1,
-                    "size": 256,
-                    "style": "SemiBold"
-                },
-                "align": "right",
-                "color": 4278190080,
-                "bk_opacity": 0,
-                "transform": 1
-            },
-            "mixers": 0,
-            "sync": 0,
-            "flags": 0,
-            "volume": 1.0,
-            "balance": 0.5,
-            "enabled": true,
-            "muted": false,
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "hotkeys": {},
-            "deinterlace_mode": 0,
-            "deinterlace_field_order": 0,
-            "monitoring_type": 0,
-            "private_settings": {}
         },
         {
             "prev_ver": 486604803,
@@ -8393,7 +6831,7 @@
                         "crop_bottom": 0,
                         "id": 10,
                         "group_item_backup": false,
-                        "scale_filter": "disable",
+                        "scale_filter": "lanczos",
                         "blend_method": "default",
                         "blend_type": "normal",
                         "show_transition": {
@@ -8431,7 +6869,7 @@
                         "crop_bottom": 0,
                         "id": 11,
                         "group_item_backup": false,
-                        "scale_filter": "disable",
+                        "scale_filter": "lanczos",
                         "blend_method": "default",
                         "blend_type": "normal",
                         "show_transition": {
@@ -8449,12 +6887,12 @@
                         "locked": false,
                         "rot": 0.0,
                         "pos": {
-                            "x": 97.0,
-                            "y": 909.0
+                            "x": 63.0,
+                            "y": 933.0
                         },
                         "scale": {
-                            "x": 0.046172060072422028,
-                            "y": 0.046113796532154083
+                            "x": 0.44837340712547302,
+                            "y": 0.44800001382827759
                         },
                         "align": 5,
                         "bounds_type": 0,
@@ -8469,7 +6907,7 @@
                         "crop_bottom": 0,
                         "id": 12,
                         "group_item_backup": false,
-                        "scale_filter": "disable",
+                        "scale_filter": "lanczos",
                         "blend_method": "default",
                         "blend_type": "normal",
                         "show_transition": {
@@ -8970,7 +7408,7 @@
                     {
                         "name": "ToProjectorInputGrabber",
                         "source_uuid": "86bf5a3a-2836-400a-8d4f-03b9f675a6c5",
-                        "visible": false,
+                        "visible": true,
                         "locked": false,
                         "rot": 0.0,
                         "pos": {
