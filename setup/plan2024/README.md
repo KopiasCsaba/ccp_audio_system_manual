@@ -25,3 +25,11 @@
 # Schematic
 
 ![schematic.png](schematic.png)
+
+
+# Notes
+
+Example latency from pc to output:
+https://youtu.be/fHT2pqEMIBQ?si=r_CF3j0XQK49qyHf&t=940
+
+5 frames @ 60fps => 83ms
