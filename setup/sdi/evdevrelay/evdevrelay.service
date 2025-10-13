@@ -1,0 +1,32 @@
+[Unit]
+Description=EvdevRelay - Linux evdev to OSC relay
+After=network.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=root
+Group=input
+Restart=always
+RestartSec=5
+
+# Environment variables (customize these)
+Environment="OSC_HOST=localhost"
+Environment="OSC_PORT=8000"
+Environment="RECONNECT_DELAY=5"
+Environment="SCAN_INTERVAL=5"
+
+# Path to the binary (update this to match your installation)
+ExecStart=/usr/local/bin/evdevrelay
+
+# Security settings
+NoNewPrivileges=true
+PrivateTmp=true
+
+# Logging
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=evdevrelay
+
+[Install]
+WantedBy=multi-user.target
