@@ -1,7 +1,8 @@
 version: "3"
 services:
   restreamer:
-    image: datarhei/restreamer:2.8.0
+    # image: datarhei/restreamer:2.8.0
+    image: datarhei/restreamer:2.12.0
     container_name: restreamer
     ports:
       - 1935:1935
