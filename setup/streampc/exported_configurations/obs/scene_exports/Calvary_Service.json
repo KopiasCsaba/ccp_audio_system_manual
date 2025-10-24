@@ -6,7 +6,7 @@
         "id": "wasapi_output_capture",
         "versioned_id": "wasapi_output_capture",
         "settings": {
-            "device_id": "{0.0.0.00000000}.{b95ecd6b-b963-4e1f-86b1-95c0beb65605}"
+            "device_id": "default"
         },
         "mixers": 255,
         "sync": 0,
@@ -40,7 +40,7 @@
         "id": "wasapi_input_capture",
         "versioned_id": "wasapi_input_capture",
         "settings": {
-            "device_id": "{0.0.1.00000000}.{a6a26c00-8a25-4f3c-901d-8212ca86a8c1}",
+            "device_id": "{0.0.1.00000000}.{556052fb-ed4a-4ec4-88da-51a7e3dd064b}",
             "use_device_timing": true
         },
         "mixers": 255,
@@ -49,7 +49,7 @@
         "volume": 1.0,
         "balance": 0.5,
         "enabled": true,
-        "muted": false,
+        "muted": true,
         "push-to-mute": false,
         "push-to-mute-delay": 0,
         "push-to-talk": false,
@@ -98,8 +98,8 @@
             }
         ]
     },
-    "current_scene": "SUNDAY_PRE_STREAM (live_on, rs_on, rec_off, mute_on)",
-    "current_program_scene": "PULPIT (mute_off, autoptz_to_stage)",
+    "current_scene": "STAND BY  (live_off, rec_off, mute_on)",
+    "current_program_scene": "STAND BY  (live_off, rec_off, mute_on)",
     "scene_order": [
         {
             "name": "=============== SUNDAY ==============="
@@ -190,9 +190,9 @@
     "transitions": [],
     "saved_projectors": [
         {
-            "monitor": 1,
+            "monitor": 2,
             "type": 3,
-            "geometry": "AdnQywADAAAAAAyIAAAAAAAAEccAAAL3AAAMgAAAAAAAABHPAAAC/wAAAAEABAAABVAAAAyAAAAAAAAAEc8AAAL/",
+            "geometry": "AdnQywADAAAAAAyIAAABDwAAEccAAAQGAAAMgAAAAQ8AABHPAAAEDgAAAAICBAAABVAAAAyAAAABDwAAEc8AAAQO",
             "alwaysOnTopOverridden": false
         }
     ],
@@ -225,7 +225,7 @@
                     "properties": false,
                     "filters": false,
                     "textinput": false,
-                    "geometry": "AdnQywADAAAAAAAAAAAAHwAAALUAAAC0AAAAAAAAAAD//////////wAAAAIAAAAAB4AAAAAAAAAAHwAAALUAAAC0",
+                    "geometry": "AdnQywADAAAAAAAAAAAAHwAAALUAAAC0AAAAAAAAAAD//////////wAAAAEAAAAAB4AAAAAAAAAAHwAAALUAAAC0",
                     "split": "AAAA/wAAAAEAAAABAAAAHgD/////AQAAAAIA",
                     "window": "",
                     "dockarea": 8,
@@ -249,7 +249,7 @@
                     "properties": false,
                     "filters": false,
                     "textinput": false,
-                    "geometry": "AdnQywADAAAAAAAAAAAAHwAAALUAAACsAAAAAAAAAAD//////////wAAAAIAAAAAB4AAAAAAAAAAHwAAALUAAACs",
+                    "geometry": "AdnQywADAAAAAAAAAAAAHwAAALUAAACsAAAAAAAAAAD//////////wAAAAEAAAAAB4AAAAAAAAAAHwAAALUAAACs",
                     "split": "AAAA/wAAAAEAAAABAAAAHgD/////AQAAAAIA",
                     "window": "",
                     "dockarea": 8,
@@ -273,7 +273,7 @@
                     "properties": false,
                     "filters": false,
                     "textinput": false,
-                    "geometry": "AdnQywADAAAAAAAAAAAAHwAAARgAAAPJAAAAAAAAAAD//////////wAAAAIAAAAAB4AAAAAAAAAAHwAAARgAAAPJ",
+                    "geometry": "AdnQywADAAAAAAAAAAAAHwAAARgAAAPJAAAAAAAAAAD//////////wAAAAEAAAAAB4AAAAAAAAAAHwAAARgAAAPJ",
                     "split": "AAAA/wAAAAEAAAABAAAAHgD/////AQAAAAIA",
                     "window": "",
                     "dockarea": 1,
@@ -401,7 +401,7 @@
                             },
                             "dayOfWeek": 7,
                             "condition": 2,
-                            "dateTime": "Sun Aug 24 10:20:00 2025",
+                            "dateTime": "Sun Oct 19 10:20:00 2025",
                             "dateTime2": "Sun Jun 23 11:16:52 2024",
                             "ignoreDate": false,
                             "ignoreTime": false,
@@ -498,15 +498,15 @@
                     },
                     "macroActionConditionSplitterPosition": [
                         {
-                            "pos": 192
+                            "pos": 236
                         },
                         {
-                            "pos": 191
+                            "pos": 536
                         }
                     ],
                     "macroElseActionSplitterPosition": [
                         {
-                            "pos": 153
+                            "pos": 498
                         },
                         {
                             "pos": 0
@@ -538,7 +538,7 @@
                             },
                             "dayOfWeek": 7,
                             "condition": 0,
-                            "dateTime": "Sun Aug 24 10:01:00 2025",
+                            "dateTime": "Sun Oct 19 10:01:00 2025",
                             "dateTime2": "Sat Aug 12 13:04:33 2023",
                             "ignoreDate": false,
                             "ignoreTime": false,
@@ -647,15 +647,15 @@
                     },
                     "macroActionConditionSplitterPosition": [
                         {
-                            "pos": 192
+                            "pos": 153
                         },
                         {
-                            "pos": 191
+                            "pos": 619
                         }
                     ],
                     "macroElseActionSplitterPosition": [
                         {
-                            "pos": 153
+                            "pos": 581
                         },
                         {
                             "pos": 0
@@ -687,7 +687,7 @@
                             },
                             "dayOfWeek": 7,
                             "condition": 0,
-                            "dateTime": "Sun Aug 24 10:29:57 2025",
+                            "dateTime": "Sun Oct 19 10:29:57 2025",
                             "dateTime2": "Sat Aug 12 13:04:33 2023",
                             "ignoreDate": false,
                             "ignoreTime": false,
@@ -945,15 +945,15 @@
                     },
                     "macroActionConditionSplitterPosition": [
                         {
-                            "pos": 192
+                            "pos": 225
                         },
                         {
-                            "pos": 191
+                            "pos": 547
                         }
                     ],
                     "macroElseActionSplitterPosition": [
                         {
-                            "pos": 153
+                            "pos": 509
                         },
                         {
                             "pos": 0
@@ -985,7 +985,7 @@
                             },
                             "dayOfWeek": 7,
                             "condition": 1,
-                            "dateTime": "Sun Aug 24 11:50:00 2025",
+                            "dateTime": "Sun Oct 19 11:50:00 2025",
                             "dateTime2": "Sun Sep 10 08:53:17 2023",
                             "ignoreDate": false,
                             "ignoreTime": false,
@@ -1235,15 +1235,15 @@
                     },
                     "macroActionConditionSplitterPosition": [
                         {
-                            "pos": 192
+                            "pos": 387
                         },
                         {
-                            "pos": 191
+                            "pos": 385
                         }
                     ],
                     "macroElseActionSplitterPosition": [
                         {
-                            "pos": 153
+                            "pos": 347
                         },
                         {
                             "pos": 0
@@ -1325,15 +1325,15 @@
                     },
                     "macroActionConditionSplitterPosition": [
                         {
-                            "pos": 192
+                            "pos": 387
                         },
                         {
-                            "pos": 191
+                            "pos": 385
                         }
                     ],
                     "macroElseActionSplitterPosition": [
                         {
-                            "pos": 153
+                            "pos": 347
                         },
                         {
                             "pos": 0
@@ -1415,15 +1415,15 @@
                     },
                     "macroActionConditionSplitterPosition": [
                         {
-                            "pos": 192
+                            "pos": 387
                         },
                         {
-                            "pos": 191
+                            "pos": 385
                         }
                     ],
                     "macroElseActionSplitterPosition": [
                         {
-                            "pos": 153
+                            "pos": 347
                         },
                         {
                             "pos": 0
@@ -1530,8 +1530,22 @@
                         "conditionsTrueStatusText": "Conditions are true.",
                         "conditionsFalseStatusText": "Conditions are false."
                     },
-                    "macroActionConditionSplitterPosition": [],
-                    "macroElseActionSplitterPosition": [],
+                    "macroActionConditionSplitterPosition": [
+                        {
+                            "pos": 386
+                        },
+                        {
+                            "pos": 386
+                        }
+                    ],
+                    "macroElseActionSplitterPosition": [
+                        {
+                            "pos": 348
+                        },
+                        {
+                            "pos": 0
+                        }
+                    ],
                     "registerHotkeys": false,
                     "pauseHotkey": [],
                     "unpauseHotkey": [],
@@ -1627,15 +1641,15 @@
                     },
                     "macroActionConditionSplitterPosition": [
                         {
-                            "pos": 192
+                            "pos": 387
                         },
                         {
-                            "pos": 191
+                            "pos": 385
                         }
                     ],
                     "macroElseActionSplitterPosition": [
                         {
-                            "pos": 153
+                            "pos": 347
                         },
                         {
                             "pos": 0
@@ -3126,7 +3140,7 @@
                 },
                 {
                     "name": "pole_screen_projector_fixer",
-                    "pause": false,
+                    "pause": true,
                     "parallel": false,
                     "onChange": true,
                     "skipExecOnStart": false,
@@ -3146,15 +3160,15 @@
                     },
                     "macroActionConditionSplitterPosition": [
                         {
-                            "pos": 395
+                            "pos": 198
                         },
                         {
-                            "pos": 372
+                            "pos": 185
                         }
                     ],
                     "macroElseActionSplitterPosition": [
                         {
-                            "pos": 334
+                            "pos": 147
                         },
                         {
                             "pos": 0
@@ -3258,7 +3272,7 @@
                             "enabled": true,
                             "type": 3,
                             "monitor": -1,
-                            "monitorName": "SONY TV: 1920x1080 @ 3200,-56",
+                            "monitorName": "SONY TV: 1360x768 @ 3200,271",
                             "fullscreen": true,
                             "sceneSelection": {
                                 "type": 0,
@@ -4001,16 +4015,16 @@
                 }
             ],
             "saveWindowGeo": false,
-            "windowPosX": 1494,
-            "windowPosY": -27,
-            "windowWidth": 1236,
-            "windowHeight": 792,
+            "windowPosX": 1396,
+            "windowPosY": -44,
+            "windowWidth": 1762,
+            "windowHeight": 989,
             "macroListMacroEditSplitterPosition": [
                 {
-                    "pos": 364
+                    "pos": 490
                 },
                 {
-                    "pos": 845
+                    "pos": 1245
                 }
             ],
             "version": "e3ff6f34fcce1a42d6eb65effdb7eb279776fb5e",
@@ -4241,8 +4255,8 @@
             "id": "image_source",
             "versioned_id": "image_source",
             "settings": {
-                "linear_alpha": true,
-                "file": "E:/StreamAssets/ccp_audio_system_manual_gitrepo/setup/streampc/obs_scene_assets/Calvary Paphos Logos/Calvary Logo with Text - Black on Transparent rescaled.png"
+                "file": "E:/StreamAssets/ccp_audio_system_manual_gitrepo/setup/streampc/obs_scene_assets/Calvary Paphos Logos/Calvary Logo with Text - Black on Transparent rescaled.png",
+                "linear_alpha": true
             },
             "mixers": 0,
             "sync": 0,
@@ -4508,7 +4522,7 @@
             "id": "scene",
             "versioned_id": "scene",
             "settings": {
-                "id_counter": 10,
+                "id_counter": 11,
                 "custom_size": false,
                 "items": [
                     {
@@ -4518,12 +4532,12 @@
                         "locked": false,
                         "rot": 0.0,
                         "pos": {
-                            "x": 0.0,
-                            "y": 0.0
+                            "x": -3.0,
+                            "y": -5.0
                         },
                         "scale": {
-                            "x": 1.5,
-                            "y": 1.5
+                            "x": 1.0046875476837158,
+                            "y": 1.0046296119689941
                         },
                         "align": 5,
                         "bounds_type": 0,
@@ -4536,9 +4550,9 @@
                         "crop_top": 0,
                         "crop_right": 0,
                         "crop_bottom": 0,
-                        "id": 1,
+                        "id": 11,
                         "group_item_backup": false,
-                        "scale_filter": "lanczos",
+                        "scale_filter": "disable",
                         "blend_method": "default",
                         "blend_type": "normal",
                         "show_transition": {
@@ -4992,12 +5006,12 @@
                         "locked": false,
                         "rot": 0.0,
                         "pos": {
-                            "x": 0.0,
-                            "y": 0.0
+                            "x": -3.0,
+                            "y": -5.0
                         },
                         "scale": {
-                            "x": 1.5,
-                            "y": 1.5
+                            "x": 1.0046875476837158,
+                            "y": 1.0046296119689941
                         },
                         "align": 5,
                         "bounds_type": 0,
@@ -7143,9 +7157,9 @@
             "id": "ffmpeg_source",
             "versioned_id": "ffmpeg_source",
             "settings": {
-                "local_file": "E:/StreamAssets/ccp_audio_system_manual_gitrepo/setup/streampc/obs_scene_assets/Calvary Paphos Logos/Media for Socials & Streaming/output_loop.mp4",
                 "hw_decode": true,
                 "close_when_inactive": false,
+                "local_file": "E:/StreamAssets/ccp_audio_system_manual_gitrepo/setup/streampc/obs_scene_assets/Calvary Paphos Logos/Media for Socials & Streaming/beach_loop_upscaled_smoothcut.mov",
                 "looping": true,
                 "clear_on_media_end": false,
                 "restart_on_activate": false
@@ -7214,12 +7228,12 @@
             "versioned_id": "scene",
             "settings": {
                 "custom_size": false,
-                "id_counter": 11,
+                "id_counter": 12,
                 "items": [
                     {
                         "name": "debug",
                         "source_uuid": "3c444d0d-6402-4eef-937e-96f585dd282c",
-                        "visible": true,
+                        "visible": false,
                         "locked": false,
                         "rot": 0.0,
                         "pos": {
@@ -7408,7 +7422,7 @@
                     {
                         "name": "ToProjectorInputGrabber",
                         "source_uuid": "86bf5a3a-2836-400a-8d4f-03b9f675a6c5",
-                        "visible": true,
+                        "visible": false,
                         "locked": false,
                         "rot": 0.0,
                         "pos": {
