@@ -1,0 +1,4 @@
+pywin32
+
+# Optional: For OBS WebSocket integration (auto-open projector)
+# obsws-python>=305
