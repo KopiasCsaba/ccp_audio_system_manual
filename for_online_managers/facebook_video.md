@@ -60,13 +60,15 @@ You can find the live stream at:
 https://facebook.com/100064617556957/live_videos
 
 We also stream to YouTube:
-https://youtube.com/@calvarychapelpaphos6683/streams
+https://www.youtube.com/@calvarypaphos/streams
 
 Join us in real life, or through the live stream!
 ```
 
 * Settings -> Stream -> Use persistent stream key (!!!)
+* Settings -> Stream -> Enable backup stream
 * Create Event
+* Persistent post message: "Good morning church!"
 * Return to home
 
 ## Enabling auto start every week
