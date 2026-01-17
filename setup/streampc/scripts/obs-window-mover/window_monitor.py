@@ -267,6 +267,8 @@ class WindowMonitor:
             move_once = config["move_once"]
             has_callback = config["on_not_found"] is not None
             monitor = self.find_monitor_by_position(monitor_id)
+            print("DEBUG",monitor_id)
+            print("DEBUG",monitor)
             
             fullscreen_text = " [FULLSCREEN]" if fullscreen else ""
             move_once_text = " [MOVE ONCE]" if move_once else " [KEEP ON SCREEN]"
