@@ -8,6 +8,7 @@
 
 1. [Audio Training: Overview of the audio system and the console](https://youtube.com/watch?v=Z1rGS40XmTA)
 2. [Audio Training: Rehearsal walkthrough with the console](https://youtu.be/CDxC-ptjJwU)
+6. [Stage monitor mixing](https://youtu.be/sBUXmkqT-NQ)
 3. [How does the stage mixer work?](https://youtu.be/nRDQFHH9zpU)
 4. [How does the drum room stage-talkback work?](https://youtu.be/nelw-jKgT6w)
 5. [Introduction to the little keyboard](https://www.youtube.com/watch?v=bivtL445jj4)
