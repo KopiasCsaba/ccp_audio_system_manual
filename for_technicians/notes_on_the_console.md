@@ -46,7 +46,7 @@
 
 The logic is, that:
 
-* Close to **Mic1** is the **Inst1** and **Inst2** cables.
+* Close to **Mic1** are the **Inst1** and **Inst2** cables.
 * Close to **Mic3** is the **Inst3** cable.
 * And the stage corner has **Inst4** and **Inst5** cables.
 
@@ -294,7 +294,7 @@ By never disabling it, we don't need to keep an eye on it either, it just works 
 All vocal effects can be disabled by the "EFFECTS" button on the "Mute groups" section (see above). If it is LIT, then
 it is MUTED.
 
-We need to watch out during worship, to disable the vocal effects during them preaching/praying. Having echo/reverb on a
+We need to watch out during worship to disable the vocal effects when they are preaching/praying. Having echo/reverb on a
 prayer is very, very, very cheesy, so please pay attention to it.
 
 If you think it's too much to look after, then just mute the effects and forget it. It's better not to have effects,

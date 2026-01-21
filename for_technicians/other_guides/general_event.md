@@ -66,8 +66,8 @@ You want to check out the introduction video about how to use the small keyboard
         * Turn off "True Tone"
         * Select "sRGB-IEC..." color profile
 
-6. Make sure the projector is in sRGB mode (there is an "image mode" button on the remote). 
-   * Some MACs reset it to "HDR SIM", that WILL NOT WORK
+6. Make sure the projector is in sRGB mode (there is an "image mode" button on the remote).
+   * Some Macs reset it to "HDR SIM", which will not work
 
 
 # Setup headset
@@ -223,7 +223,7 @@ To manually move or zoom the camera:
 
 1. Turn off the projector.
 2. Close back the projector-screen.
-3. Get the headset batteries out and put them back into the charger. Please pay attention to the polarity.
+3. Take out the headset batteries and put them back into the charger. Please pay attention to the polarity.
 4. Put the headset back to the shelf.
 5. Restore the HDMI cables as they were (unplug, and reconnect the USB grabber)
 

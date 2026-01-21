@@ -13,7 +13,7 @@ This is the simplest guide that just lets you use the pulpit/headset without any
 
 <img alt="" src="../assets/reset/rhodelink.jpg.png"  align="right" style="float:right" width="150">
 
-Only applies, if you want to use it. If The pulpit mic is enough, skip.
+Only applies if you want to use it. If the pulpit mic is enough, skip.
 
 
 1. Above the mixing console, on the shelf you'll find the battery charger & the headset.
@@ -60,7 +60,7 @@ Only applies, if you want to use it. If The pulpit mic is enough, skip.
 
 # Finishing
 
-1. Get the headset batteries out and put them back into the charger. Please pay attention to the polarity.
+1. Take out the headset batteries and put them back into the charger. Please pay attention to the polarity.
 2. Put the headset back to the shelf.
 3. Finally, follow the [Turning off the audio system](../../labels/turningoff.pdf) guide.
 

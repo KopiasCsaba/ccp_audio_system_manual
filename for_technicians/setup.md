@@ -76,8 +76,8 @@ This device measures the volume (lets say) in the room, and it is located on the
 # Check if everything is working
 
 * Turn on the keyboard, and press one of the keys:
-  * You should hear it in the room
-  * You should see signal indcation on the stage mixers
+  * You should hear it from the speakers in the room
+  * You should see signal indication on the stage mixers
 
 * Speak into each microphone, and you should see activity on the stage mixers, and hear yourself from the room.
 

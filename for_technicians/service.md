@@ -144,8 +144,8 @@ You can play background music from two sources, the easiest is the first option.
 | Worship       | Muted  | Muted   | ON    |
 | Preaching**   | Muted  | ON      | OFF   |
 
-* *: If the person who is doing the announcements has the headset then switch to it.
-* **: If the headset doesn't work, or stops to work, then switch to pulpit.
+* *: If the person doing announcements has the headset, then switch to it.
+* **: If the headset doesn't work or stops working, then switch to pulpit.
 
 <div style="page-break-after: always;"></div>
 
@@ -158,7 +158,7 @@ You can play background music from two sources, the easiest is the first option.
 * SPL METER: Put it back onto the shelf above the console.
 
 * Headset:
-    * Take out the batteries and put them back into the charger, to the same spot they were in.
+    * Take out the batteries and put them back into the charger in the same spot they were in.
     * Put the headset back to the shelf above the console too.
 
 * Wait for the recordings to upload.

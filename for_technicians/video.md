@@ -37,5 +37,5 @@ To manually move or zoom the camera:
 
 * Press <img src="assets/keycaps/fn.png" height=34 align=center> together with  <img src="assets/keycaps/camtoggle.png" height=34 align=center> to transition to live.
  
-* This will stop the recording and the live stream also.
+* This will also stop the recording and the live stream.
 

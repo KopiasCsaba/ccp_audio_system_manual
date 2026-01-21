@@ -10,9 +10,7 @@
 <!-- TOC -->
 * [Screens are messed up](#screens-are-messed-up)
   * [Make sure screens are aligned properly:](#make-sure-screens-are-aligned-properly)
-* [Baby room TV doesn't work](#baby-room-tv-doesnt-work)
   * [No signal](#no-signal)
-  * [The page can not be found](#the-page-can-not-be-found-)
   * [What URL?](#what-url)
 * [Electricity is GONE!?](#electricity-is-gone)
   * [Three main electric boxes](#three-main-electric-boxes)
@@ -63,16 +61,9 @@ Then bring your mouse over the camera's image (you'll not see the cursor):
 
 <div style="page-break-after: always;"></div>
 
-# Baby room TV doesn't work
-## Usually
-It only means the people there didn't follow the instructions posted on the wall on how to turn it on.
-Just go there and turn it on.
 
 ## No signal
  * That TV only gets signal when the stream is going in OBS.
-
-## The page can not be found 
- * After turning on, the TV needs a minute to connect to the internet, just wait a bit and retry.
 
 ## What URL?
 If for any reason the TV forgets the URL it needs to load, load this url:

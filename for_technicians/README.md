@@ -7,7 +7,7 @@
 ### Training videos
 
 1. [Audio Training: Overview of the audio system and the console](https://youtube.com/watch?v=Z1rGS40XmTA)
-2. [Audio training: Rehearsal walkthrough with the console](https://youtu.be/CDxC-ptjJwU)
+2. [Audio Training: Rehearsal walkthrough with the console](https://youtu.be/CDxC-ptjJwU)
 3. [How does the stage mixer work?](https://youtu.be/nRDQFHH9zpU)
 4. [How does the drum room stage-talkback work?](https://youtu.be/nelw-jKgT6w)
 5. [Introduction to the little keyboard](https://www.youtube.com/watch?v=bivtL445jj4)
@@ -17,7 +17,7 @@
 
 <img alt="" src="assets/manual.jpg"  align="right" style="float:right" height="200">
 
-These are printed out and organized into a folder, that you can find next
+These are printed out and organized into a folder that you can find next
 to the console.
 
  * Setting up the system: [WEB](setup.md), [PDF](setup.pdf)
@@ -62,7 +62,7 @@ Our console is called "[Behringer X32 Compact](https://www.behringer.com/product
 
 The logic is, that:
 
-* Close to **Mic1** is now **Inst1** and **Inst2** cables.
+* Close to **Mic1** are the **Inst1** and **Inst2** cables.
 * Close to **Mic3** is the **Inst3** cable.
 * And the stage corner has **Inst4** and **Inst5** cables.
 
@@ -73,6 +73,6 @@ The logic is, that:
 Our internal systems for streaming, audio, etc. are using the network, and we don't want any interruption in our network.
 
 Often people ask for the password, feel free to give the above explanation.
-If the reason is to be able to read the bible, we have bibles in many languages, point them 
+If the reason is to be able to read the Bible, we have Bibles in many languages, point them
 to those on the shelves.
 

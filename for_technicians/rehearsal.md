@@ -219,7 +219,7 @@ On the console:
 3. Is the volume below the limit on the SPL meter?
 4. Do you hear all instruments?
 5. Do you hear all vocalists?
-6. Do you hear the drum (from the speakers!? Watch for the hi-hats.)
+6. Do you hear the drum from the speakers? (Watch for the hi-hats.)
 7. Does all the singers sing into the microphone?
     * Are they far away from it, or angled in relation to it?
 8. Did you ask the instrument players to reset their eq/volume levels?
