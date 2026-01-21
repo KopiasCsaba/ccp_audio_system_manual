@@ -6,6 +6,7 @@
 
 
 <!-- TOC -->
+* [Reference on stage channel names](#reference-on-stage-channel-names)
 * [LAYERS, CHANNELS!](#layers-channels)
 * [Signal flow](#signal-flow)
 * [Notes on groups](#notes-on-groups)
@@ -39,7 +40,16 @@
     * [Instrument tuner aid](#instrument-tuner-aid)
 <!-- TOC -->
 
-<div style="page-break-after: always;"></div>
+# Reference on stage channel names
+
+<img src="../for_worship_team/assets/stage.jpg" height="400"/>
+
+The logic is, that:
+
+* Close to **Mic1** is the **Inst1** and **Inst2** cables.
+* Close to **Mic3** is the **Inst3** cable.
+* And the stage corner has **Inst4** and **Inst5** cables.
+
 
 # LAYERS, CHANNELS!
 

@@ -9,17 +9,12 @@
 * [Prepare for the service](#prepare-for-the-service)
   * [Align the pulpit microphone](#align-the-pulpit-microphone)
   * [Align the pulpit](#align-the-pulpit)
-  * [Prepare for live-streaming](#prepare-for-live-streaming)
-    * [Turn on the sockets](#turn-on-the-sockets)
     * [Turn on the coffee-shop TV](#turn-on-the-coffee-shop-tv)
-    * [Turn on the PC](#turn-on-the-pc)
-    * [LOG IN](#log-in)
   * [Prepare the headset](#prepare-the-headset)
   * [Rehearsal](#rehearsal)
 * [Before the service](#before-the-service)
   * [Playing background music](#playing-background-music)
-    * [First option: Playing from the streaming PC](#first-option-playing-from-the-streaming-pc)
-    * [Second option: from the extra 3.5mm cord](#second-option-from-the-extra-35mm-cord)
+    * [Playing from the streaming PC](#playing-from-the-streaming-pc)
     * [Enabling the background music](#enabling-the-background-music)
 * [During service](#during-service)
   * [During worship](#during-worship)
@@ -34,10 +29,11 @@
 # Prepare for the service
 
 * Follow the [setting up the system](setup.md) guide.
+* Turn on the "Sockets, Screens, Projector" switch.
+* Turn on the PC  before 09:50, as automations will start soon after that.
+  * **Log in to the PC.**
 * You don't need to go through the rehearsal guide again. Definitely don't reset the stage mixers.
 * Turn off the stage.
-* Mute the pulpit.
-* Mute the headset.
 
 
 ## Align the pulpit microphone
@@ -56,35 +52,11 @@ There is a mark on the floor, align the pulpit to be at the correct position.
 
 <div style="page-break-after: always;"></div>
 
-## Prepare for live-streaming
-
-You should do this section before 09:50, as timed operations will start the streaming after that.
-
-### Turn on the sockets
-
-1. "Screens, projector, sockets" (close to the light switches, below the counter)
 
 ### Turn on the coffee-shop TV
 
-<img alt="" src="assets/video/lg.jpg" height="150">
+ * The remote is dangling around somewhere on the shelf.
 
-* Pull it out to face the audience.
-* The button is in the bottom center.
-
-### Turn on the PC
-
-<img alt="" src="assets/video/pc_button.jpg" align="right" style="float:right" height="100">
-
-The power button is on the top:
-
-**Wait** for the LOGIN screen.
-<br clear="both" style="clear:both"/>
-
-### LOG IN
-
-After the PC booted, enter the password.
-
-<div style="page-break-after: always;"></div>
 
 ## Prepare the headset
 
@@ -119,15 +91,11 @@ Usually there is a small rehearsal before the service, since you are set up from
 
 You can play background music from two sources, the easiest is the first option.
 
-### First option: Playing from the streaming PC
+### Playing from the streaming PC
  1. Open the browser
  2. There is a bookmark called, "BG MUSIC"
  3. Start playing (click on shuffle)
 
-### Second option: from the extra 3.5mm cord
-
-There is an extra 3.5mm TRS jack lead dangling around the projection machine, you might connect some device to it to
-play back music.
 
 ### Enabling the background music
 
@@ -152,7 +120,7 @@ play back music.
 
 ### When someone speaks or prays
 
-* Mute the effects! Having effect on praying or preaching is very cheesy.
+* Mute the effects! Having effects on praying or preaching is very cheesy.
 * If it's too much to pay attention to, that's all right, then mute the effects once and forget it:)
 
 ## During preaching
@@ -186,8 +154,6 @@ play back music.
 * Turn off the coffee shop TV.
 
 * Restore all custom changes on the stage, if you made any.
-
-* Plug back the monitor power cables on the stage.
 
 * SPL METER: Put it back onto the shelf above the console.
 

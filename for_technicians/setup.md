@@ -7,16 +7,13 @@
 <!-- TOC -->
 * [At the console](#at-the-console)
   * [Loading the scene](#loading-the-scene)
-  * [Other things](#other-things)
   * [Set up the sound pressure level (SPL) meter](#set-up-the-sound-pressure-level-spl-meter)
 * [Verify stage monitor settings & connections](#verify-stage-monitor-settings--connections)
     * [Left stage monitor](#left-stage-monitor)
-    * [Middle stage monitor](#middle-stage-monitor)
     * [Right stage monitor](#right-stage-monitor)
 * [Check if everything is working](#check-if-everything-is-working)
   * [Troubleshooting](#troubleshooting)
     * [Common failures](#common-failures)
-    * [Stage mixer connection](#stage-mixer-connection)
     * [Verify keyboard connection](#verify-keyboard-connection)
 <!-- TOC -->
 <div style="page-break-after: always;"></div>
@@ -24,8 +21,7 @@
 # At the console
 
 * Follow the "[Turning on the audio system](../labels/turningon.pdf)" guide posted on the mixer door.
-
-
+* Turn on the "Sockets, Screens, Projector" switch.
 
 ## Loading the scene
 
@@ -36,9 +32,6 @@
 3. Press **{Knobs/GO}**: to load the scene.
 4. Press **{Knobs/CONFIRM}**: to really load the scene.
 
-## Other things
-
-1. Set **{Main/Fader}** to 0.
 
 ## Set up the sound pressure level (SPL) meter
 
@@ -69,7 +62,7 @@ This device measures the volume (lets say) in the room, and it is located on the
 
 <br clear="both" style="clear:both"/>
 
-### Middle stage monitor
+### Right stage monitor
 
 <img alt="" src="assets/reset/speaker_middle.png"  align="right" style="float:right" height="260">
 
@@ -78,21 +71,15 @@ This device measures the volume (lets say) in the room, and it is located on the
 
 <br clear="both" style="clear:both"/>
 
-### Right stage monitor
-
-<img alt="" src="assets/reset/speaker_right.png"  align="right" style="float:right" height="260">
-
-* This one is a bit damaged, the level should be at 3 o'clock!
-* Check power and signal cable connections, sometimes they become loose.
-
-<br clear="both" style="clear:both"/>
 
 
 # Check if everything is working
 
-* Turn on the keyboard, and press one of the keys, you should hear it, from all monitors.
+* Turn on the keyboard, and press one of the keys:
+  * You should hear it in the room
+  * You should see signal indcation on the stage mixers
 
-* Speak into each microphone, and you should see activity on the stage mixers, and hear yourself in each monitor.
+* Speak into each microphone, and you should see activity on the stage mixers, and hear yourself from the room.
 
 If everything was working, continue with the [Rehearsal guide](rehearsal.md) or the [Service guide](service.md)!
 
@@ -118,16 +105,13 @@ There is signal indication, but inaudible?
 * Is the stage mixer connected to the monitor?
 * Is the limiter and level knobs above half way?
 
-### Stage mixer connection
-
-<img align="right" alt="" src="assets/reset/mixer_conn.jpg" height="100">
-Verify that the speakers are connected to **L/MONO**:
-<br style="clear:both">
-
 ### Verify keyboard connection
 <img align="right" src="assets/reset/keyboard.jpg" height="100">
 
-Verify that it is connected properly, sometimes they unplug it for practicing.
+Verify that it is connected properly, sometimes they unplug it for practicing:
+- Left, right should be connected 
+- Headphones must be connected to the stage mixer
+
 <br style="clear:both">
 
 

@@ -6,14 +6,13 @@
 
 
 <!-- TOC -->
-* [Reference on stage channel names](#reference-on-stage-channel-names)
 * [Before the band arrives](#before-the-band-arrives)
-  * [You should know the band setup](#you-should-know-the-band-setup)
-  * [(Dis)connect Monitors](#disconnect-monitors)
+  * [Check the band setup](#check-the-band-setup)
   * [Setup phone cable](#setup-phone-cable)
   * [Reset the stage mixers](#reset-the-stage-mixers)
   * [Stage housekeeping](#stage-housekeeping)
   * [At the main console](#at-the-main-console)
+    * [Enable stage monitors if needed](#enable-stage-monitors-if-needed)
     * [Mute unused vocals](#mute-unused-vocals)
     * [Load channel presets](#load-channel-presets)
 * [After the band arrives](#after-the-band-arrives)
@@ -22,23 +21,13 @@
   * [During the rehearsal](#during-the-rehearsal)
     * [Set up a mix](#set-up-a-mix)
     * [Check stage monitors](#check-stage-monitors)
+      * [Changing levels in stage monitors](#changing-levels-in-stage-monitors)
+      * [Check if the stage is not too loud:](#check-if-the-stage-is-not-too-loud)
     * [If a vocalist sounds off-key or unexpected](#if-a-vocalist-sounds-off-key-or-unexpected)
 * [After the rehearsal](#after-the-rehearsal)
   * [Save the scene](#save-the-scene-1)
   * [Close up](#close-up)
 <!-- TOC -->
-<div style="page-break-after: always;"></div>
-
-# Reference on stage channel names
-
-<img src="../for_worship_team/assets/stage.jpg" height="400"/>
-
-The logic is, that:
-
-* Close to **Mic1** is the **Inst1** and **Inst2** cables.
-* Close to **Mic3** is the **Inst3** cable.
-* And the stage corner has **Inst4** and **Inst5** cables.
-
 <div style="page-break-after: always;"></div>
 
 # Before the band arrives
@@ -47,30 +36,22 @@ You should be there ~20minutes before them, to be able to set up
 everything professionally and to avoid hurry-induced errors, fix random issues, etc.
 
 * Follow the "[Setting up the system](setup.md)" guide.
-* You might want to turn on the PC, if you or the projection team needs it.
+* Turn on the "Sockets, Screens, Projector" switch
+* Turn on the PC
 
-## You should know the band setup
+## Check the band setup
 
-* Who will be at which mic on the stage.
-* Who will use which instrument.
+* Who will be at which mic on the stage?
+* Who will use which instrument?
 
-Our worship related drive document should contain that information,
-but alternatively you can consult about this with the worship leader also.
+Our [worship scheduling](https://docs.google.com/spreadsheets/d/1CF_XKNQTk1d7-xo27YtngI1Acds7xjWmtpUdBukaisc) drive document should contain that information,
+but alternatively you can consult about this with the worship leader as well.
 
-
-## (Dis)connect Monitors
-
-Check the band setup, **if they use In-Ear Monitoring** on MIC1 or MIC2 **unplug** the appropriate monitors.
-Also, plug them in if they don't use I.E.M.
-
-<img alt="" src="assets/iem/monitor_plugs.jpg" height="100">
-<img alt="" src="assets/iem/monitor_plugs_unplugged.jpg" height="100">
- 
 
 ## Setup phone cable
 
-If they specified "PHONE" as an instrument in the document, connect that instrument cable to the little adapter hanging at the back of
-the second music stander.
+If they specified "Phone backing", "Phone click track" on INSTR3, then connect that instrument cable to the little adapter hanging at the back of
+the second music stand.
 
 <img alt="" src="assets/phone/phones.jpg" height="200">
 
@@ -105,10 +86,16 @@ Do these in this order:
 
 * Tidy up cables, especially I.E.M. cables.
 * Fold back unused microphones.
-* Turn level knob to zero on stage mixers that will not be used.
 * Clean up, move away obstacles, trash, etc.
 
 ## At the main console
+
+### Enable stage monitors if needed
+If there is anyone on stage not using IEM you need to enable the closest stage monitor to that person.
+
+   * If the person on MIC1 has no IEM, then unmute **{Layers/MONITOR/Monitor L}**
+   * If the person on MIC2+ has no IEM, then unmute **{Layers/MONITOR/Monitor R}**
+
 
 ### Mute unused vocals
 
@@ -182,9 +169,10 @@ Go through: **Vocal 1-6**, **Instruments 1-5**: and for each used channel, check
 
 Warnings & common pitfalls:
 
-* In this step, you have no reason to touch ANY OF THE FADERS. Focus on these: Gain knob, Select button, Channel meter.
+* Focus on these: Gain knob, Select button, Channel meter.
+* In this step, you have no reason to touch ANY OF THE FADERS.
 * No need to gain-stage the drums and the keyboard.
-* Don't adjust if there is no input!
+* Only adjust gain if there is input!
 * Always, always, always check which channel is selected before turning the gain knob.
 * If you need to turn up gain all the way to the top **something is wrong**.
     * Don't do this, even if the level remains too low. It will feedback and cause all sorts of problems.
@@ -239,36 +227,48 @@ On the console:
 
 ### Check stage monitors
 
-* If you have capacity, go up to the stage while they sing, and check if:
-    * Everything is balanced, everyone hears everyone.
-    * Nothing is too loud.
+No need for any of this, if the stage monitors are not in use.
 
-* Isn't the stage too loud?
-    * Sometimes mute the MAIN channel, to see if the stage is too loud or if one source is overpowering the others on
-      the stage.
-    * If an instrument or vocalist fills the room just from the monitors, ask them or help them adjust it.
-    * Don't mute the room for long, it disturbs the band. Mute, listen, unmute.
+* Press **{SOLO CLEAR}**
+* Press **{Layers/MONITOR/Monitor L/SOLO}** (later do the same with Monitor R!)
+* Put up the headphones and check:
+  * Everything is balanced (nothing is too loud)
+  * Everyone who is needed in that speaker are present
+  * Noone who is not needed present
 
-<div style="page-break-after: always;"></div>
+
+#### Changing levels in stage monitors
+If you need to edit the monitor mix:
+
+ * Press **{Assign/? Monitor}** to enter the monitor mix mode (middle red button will blink)
+ * Go to the layer where the channel you want to adjust is, e.g. Vocals, Instr.
+ * Adjust carefully the channel fader up or down
+ * Press **{Assign/? Monitor}** again to get out of the monitor mix mode. (middle red button should stop blinking)
+
+
+#### Check if the stage is not too loud:
+
+ * Momentarily press **{Main/MUTE}** to mute the room and hear how loud the stage is.
+ * If an instrument or vocalist fills the room just from the monitors, edit the monitor mix (see above)
+ * If the whole thing is just too loud, pull down the **{Monitors/Monitor L/R/Fader}**
+ * Don't mute the room for long, it disturbs the band. Mute, listen, unmute.
+
+Repeat this process everyonce in a while during rehearsal.
+
 
 ### If a vocalist sounds off-key or unexpected
 
 Our singers are quite good and checked, so if they sound bad,
 that is most likely due to them not hearing themselves correctly.
 
-To solve this: go up on the stage and check the monitor volume levels.
+To solve this: check the monitors ([see above](#check-stage-monitors)).
 
 Your goal is so that they would be a bit more present in the stage-monitor mix:
 
-* Either increase the overall monitor level.
+* Lower something that is too loud.
 * Or increase their level in the monitor.
-* Or lower something that is too loud.
+* Or increase the overall monitor level.
 
-An alternative reason can be:
-
-* An overworking compressor on the channel.
-* A too high (or low) low-cut.
-* An unfortunate equalizer setting.
 
 # After the rehearsal
 
