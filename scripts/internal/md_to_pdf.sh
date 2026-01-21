@@ -4,8 +4,11 @@ set -e
 
 INPUT_MD_PATH=$(realpath "$1")
 PDF_PATH="$(dirname $(realpath "$1"))/$(basename "$1" .md).pdf"
+WORK_DIR=$(dirname "$INPUT_MD_PATH")
 
-cd $(dirname "$1")
+# Create temporary directory for latex processing
+TEMP_DIR=$(mktemp -d)
+trap "rm -rf $TEMP_DIR; rm -f $WORK_DIR/.tmp.html" EXIT
 
 FILE_FOOTER=$(basename "$INPUT_MD_PATH" .md)
 FILE_FOOTER=${FILE_FOOTER^^}
@@ -27,7 +30,7 @@ if [ -z "$ALL" ]; then
   fi
 fi
 
-cat >tmp.html <<EOF
+cat >$WORK_DIR/.tmp.html <<EOF
 <!doctype html>
 <html lang=en-US>
 <head>
@@ -71,9 +74,9 @@ padding-bottom: 7px;
 
 EOF
 
-pandoc -f markdown "$INPUT_MD_PATH" >> tmp.html  2>/dev/null
+pandoc -f markdown "$INPUT_MD_PATH" >> $WORK_DIR/.tmp.html 2>/dev/null
 
-cat >>tmp.html <<EOF
+cat >>$WORK_DIR/.tmp.html <<EOF
 </div>
 
 </body>
@@ -81,12 +84,38 @@ cat >>tmp.html <<EOF
 EOF
 
 # Remove TOC
-#sed -i '/<!-- TOC -->/,/<!-- TOC -->/d' tmp.html
+#sed -i '/<!-- TOC -->/,/<!-- TOC -->/d' $WORK_DIR/.tmp.html
 
-#google-chrome --headless --no-pdf-header-footer --print-to-pdf=tmp.pdf tmp.html >/dev/null 2>&1
-brave-browser --headless --no-pdf-header-footer --print-to-pdf=tmp.pdf tmp.html >/dev/null 2>&1
+# Run brave from the markdown directory so relative image paths work
+cd "$WORK_DIR"
 
-cat >pagenumber.latex <<EOF
+# Use timeout to prevent hanging (30 seconds max)
+echo "Converting HTML to PDF..."
+timeout 30 brave-browser \
+    --headless=new \
+    --no-sandbox \
+    --disable-setuid-sandbox \
+    --disable-gpu \
+    --disable-dev-shm-usage \
+    --disable-software-rasterizer \
+    --disable-extensions \
+    --disable-background-networking \
+    --disable-sync \
+    --disable-features=VizDisplayCompositor \
+    --no-first-run \
+    --mute-audio \
+    --password-store=basic \
+    --no-pdf-header-footer \
+    --print-to-pdf=$TEMP_DIR/tmp.pdf \
+    .tmp.html 2>&1 | grep -v "ERROR:dbus" | grep -v "ERROR:bus.cc" | grep -v "ERROR:components" || {
+    echo "ERROR: brave-browser failed or timed out"
+    exit 1
+}
+
+# Clean up HTML file
+rm .tmp.html
+
+cat >$TEMP_DIR/pagenumber.latex <<EOF
 \documentclass[8pt]{article}
 \usepackage[final]{pdfpages}
 \usepackage{fancyhdr}
@@ -107,7 +136,12 @@ cat >pagenumber.latex <<EOF
 \end{document}
 
 EOF
-pdflatex pagenumber.latex
+cd $TEMP_DIR
+echo "Adding page numbers with pdflatex..."
+pdflatex -interaction=nonstopmode pagenumber.latex > /dev/null || {
+    echo "ERROR: pdflatex failed"
+    exit 1
+}
 
-rm tmp.pdf tmp.html pagenumber.log pagenumber.aux pagenumber.latex
 mv pagenumber.pdf $PDF_PATH
+echo "✓ Created: $PDF_PATH"

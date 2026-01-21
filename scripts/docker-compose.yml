@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  pdf-generator:
+    build: .
+    volumes:
+      - .:/workspace
+    working_dir: /workspace
+    command: bash scripts/gen_all.sh
