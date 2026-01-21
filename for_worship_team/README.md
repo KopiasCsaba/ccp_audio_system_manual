@@ -28,6 +28,9 @@ And this is generally how you want to set it up for yourself:
 ## For Drummers
 * [How does the drum room stage-talkback work?](https://youtu.be/nelw-jKgT6w)
     * EDIT: It is enabled always and you can use it.
+* Please try to play as soft as possible. 
+Soft/smooth is preferred to hard hitting, as the drum is very loud, and the drum room isn't sealing it away completely.
+The drums have more microphones on them (8) than any other instrument of ours, so don't worry we'll hear everything even if being played soft ;)
 
 
 ## Cable & microphone numbering on the stage
