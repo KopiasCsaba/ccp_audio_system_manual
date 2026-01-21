@@ -11,6 +11,7 @@ By using IEM:
 Ideally the audience should only hear the properly mixed and balanced and composed main mix from the room speakers. Everything else, like the stage monitor speakers (not optimized mix, echoing from the wall, etc) just adds noise that is unpleasant and unwanted.
 Ultimately we all serve the people, and we should strive to get the best quality we can achieve, and this is a huge step in this direction.
 
+### Stage mixers
 
 This is how our stage mixers work:
 
