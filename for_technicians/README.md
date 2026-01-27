@@ -21,9 +21,9 @@
 These are printed out and organized into a folder that you can find next
 to the console.
 
- * SETUP: [WEB](setup.md), [PDF](setup.pdf)
- * REHEARSAL: [WEB](rehearsal.md), [PDF](rehearsal.pdf).
- * SERVICE: [WEB](service.md), [PDF](service.pdf).
+ 1. **SETUP**: [WEB](setup.md), [PDF](setup.pdf)
+ 2. **REHEARSAL**: [WEB](rehearsal.md), [PDF](rehearsal.pdf).
+ 3. **SERVICE**: [WEB](service.md), [PDF](service.pdf).
 
 
  * Notes On The Console: [WEB](notes_on_the_console.md), [PDF](notes_on_the_console.pdf).
