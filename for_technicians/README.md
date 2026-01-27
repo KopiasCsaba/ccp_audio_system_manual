@@ -19,7 +19,7 @@
 <img alt="" src="assets/manual.jpg"  align="right" style="float:right" height="200">
 
 These are printed out and organized into a folder that you can find next
-to the console.
+to the console (Currently the printed version is out of date, please use this:)).
 
  1. **SETUP**: [WEB](setup.md), [PDF](setup.pdf)
  2. **REHEARSAL**: [WEB](rehearsal.md), [PDF](rehearsal.pdf).
