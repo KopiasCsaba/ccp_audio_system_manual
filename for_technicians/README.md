@@ -21,13 +21,13 @@
 These are printed out and organized into a folder that you can find next
 to the console.
 
- * Setting up the system: [WEB](setup.md), [PDF](setup.pdf)
- * What to do during a rehearsal: [WEB](rehearsal.md), [PDF](rehearsal.pdf).
- * What to do during a service: [WEB](service.md), [PDF](service.pdf).
- * Notes on the console: [WEB](notes_on_the_console.md), [PDF](notes_on_the_console.pdf).
+ * SETUP: [WEB](setup.md), [PDF](setup.pdf)
+ * REHEARSAL: [WEB](rehearsal.md), [PDF](rehearsal.pdf).
+ * SERVICE: [WEB](service.md), [PDF](service.pdf).
 
+
+ * Notes On The Console: [WEB](notes_on_the_console.md), [PDF](notes_on_the_console.pdf).
 <br>
-
 * Troubleshooting guide: [WEB](troubleshooting.md), [PDF](troubleshooting.pdf).
 
 <br clear="both" style="clear:both"/>

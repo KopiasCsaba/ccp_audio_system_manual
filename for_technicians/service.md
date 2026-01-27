@@ -151,8 +151,6 @@ You can play background music from two sources, the easiest is the first option.
 
 # Closing
 
-* Turn off the coffee shop TV.
-
 * Restore all custom changes on the stage, if you made any.
 
 * SPL METER: Put it back onto the shelf above the console.
