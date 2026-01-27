@@ -27,7 +27,6 @@ to the console (Currently the printed version is out of date, please use this:))
 
 
  * Notes On The Console: [WEB](notes_on_the_console.md), [PDF](notes_on_the_console.pdf).
-<br>
 * Troubleshooting guide: [WEB](troubleshooting.md), [PDF](troubleshooting.pdf).
 
 <br clear="both" style="clear:both"/>
