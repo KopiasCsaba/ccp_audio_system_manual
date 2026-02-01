@@ -109,57 +109,52 @@ You want to check out the introduction video about how to use the small keyboard
 
   
 
-* Press FN + PRE STREAM (<img src="../assets/keycaps/fn.png" height=40 align=center> +  <img src="../assets/keycaps/prestream.png" height=40 align=center>)  to transition to live.   
+* Press **FN** + **PRE STREAM** (<img src="../assets/keycaps/fn.png" height=40 align=center> +  <img src="../assets/keycaps/prestream.png" height=40 align=center>)  to transition to live.   
 
-* This **starts the live stream** so people can start to tune in online.
+* This starts the live stream so people can start to tune in online.
 * Do this 10+ mins before the event, to give time for the  online audience to join.
 
 ### WHEN THE EVENT STARTS
 
-* Press <img src="../assets/keycaps/showcam.png" height=40 align=center> to start the event. 
+* Press  **SHOW CAMERA** (<img src="../assets/keycaps/showcam.png" height=40 align=center>) to start the event. 
 
 
 ### DURING THE EVENT
 
-* Press <img src="../assets/keycaps/pulpittoggle.png" height=40 align=center> to switch between the camera and the presentation from the pulpit PC.
+* Press **PULPIT TOGGLE** (<img src="../assets/keycaps/pulpittoggle.png" height=40 align=center>) to switch between the camera and the presentation from the pulpit PC.
 
 
 ### WHEN GOING ON A BREAK
 
 
-* Press FN + BREAK (<img src="../assets/keycaps/fn.png" height=40 align=center> + <img src="../assets/keycaps/break.png" height=40 align=center>). 
+* Press **FN** + **BREAK** (<img src="../assets/keycaps/fn.png" height=40 align=center> + <img src="../assets/keycaps/break.png" height=40 align=center>). 
 
 
 ### WHEN RETURNING FROM A BREAK
 
-* Press <img src="../assets/keycaps/pulpittoggle.png" height=40 align=center> to get out of the break mode. 
+* Press **SHOW CAMERA** (<img src="../assets/keycaps/showcam.png" height=40 align=center>) to get out of the break mode. 
 
 
 
 ### AT THE END
 
-* Press FN + FINISH (<img src="../assets/keycaps/fn.png" height=40 align=center> + <img src="../assets/keycaps/finish.png" height=40 align=center>)
+* Press **FN** + **FINISH** (<img src="../assets/keycaps/fn.png" height=40 align=center> + <img src="../assets/keycaps/finish.png" height=40 align=center>)
 
-* This will **end recording and streaming** after some delay.
+* This will end recording and streaming after some delay.
 
 <div style="page-break-after: always;"></div>
 
 
 # Optional camera management
 ## Changing camera angles
-If you ever need to change the camera angle:
-
- * Press any of these once, to reload camera positions:
+If you ever need to change the camera angle, then press any of these once, to reload camera positions:
 
 <img src="../assets/keycaps/campositions.png" height=50 align=center>
 
-
 ## Manual camera adjustment
-To manually move or zoom the camera:
+To manually move or zoom the camera, press any of these:
 
-* Press any of these: 
-
-  <img src="../assets/keycaps/cammove.png" height=120 align=center>
+<img src="../assets/keycaps/cammove.png" height=120 align=center>
 
 
 

@@ -1,41 +1,43 @@
 # STREAM lifecycle on Sundays
-### 10:01
+### 10:00
 It will automatically start to stream with the "SERVICE PRE-STREAM" scene.
 This helps people to tune in, check audio and video settings, etc.
 
 The "TOGGLE" button does not work during this.
 
 ### 10:30  
-It will automatically switch to the "PULPIT" scene, and starts the recording.
+It will automatically turn the camera to the PULPIT, and the event begins.
 
 ### DURING the service
 
-Use the <img src="assets/keycaps/camtoggle.png" height=34 align=center> button to toggle between the camera and the presentation.
+ * Use the <img src="assets/keycaps/projtoggle.png" height=34 align=center> button to toggle between the camera and the presentation.
+ * Use the <img src="assets/keycaps/pulpittoggle.png" height=34 align=center> button to toggle between the camera and the pulpit PC.
+ * Use the <img src="assets/keycaps/avpctoggle.png" height=34 align=center> button to toggle between the camera and the pc's screen in the audio booth.
 
-#### Changing camera angles
-* Press any of these once:
-  <img src="assets/keycaps/projector_canvas.png" height=34 align=center>
-  <img src="assets/keycaps/pulpit_wide.png" height=34 align=center>
-  <img src="assets/keycaps/pulpit.png" height=34 align=center>
-  <img src="assets/keycaps/stage.png" height=34 align=center>
+Or:
+ * Use the <img src="assets/keycaps/showcam.png" height=34 align=center> button to show the camera at any time.
+ * Use the <img src="assets/keycaps/bg.png" height=34 align=center> to show the general background.
 
-* Press <img src="assets/keycaps/fn.png" height=34 align=center> together with  <img src="assets/keycaps/camtoggle.png" height=34 align=center> to transition to live.
+# Optional camera management
+## Changing camera angles
+If you ever need to change the camera angle, then press any of these once, to reload camera positions:
 
-#### Manual camera adjustment
-To manually move or zoom the camera:
+<img src="assets/keycaps/campositions.png" height=50 align=center>
 
-* Press & hold <img src="assets/keycaps/fn.png" height=34 align=center>
-* Press any of these to move: ←, ↑, →, ↓
-* Press any of these to zoom:+, -
+
+## Manual camera adjustment
+To manually move or zoom the camera, press any of these:
+
+<img src="assets/keycaps/cammove.png" height=120 align=center>
 
 
 
 ### AFTER the end, after the blessing, on "AMEN"
 
-* Press <img src="assets/keycaps/finish.png" height=34 align=center>.
+* Press **FN** + **FINISH** (<img src="assets/keycaps/fn.png" height=40 align=center> + <img src="assets/keycaps/finish.png" height=40 align=center>)
 
+* This will end the recording and streaming after some delay.
 
-* Press <img src="assets/keycaps/fn.png" height=34 align=center> together with  <img src="assets/keycaps/camtoggle.png" height=34 align=center> to transition to live.
- 
-* This will also stop the recording and the live stream.
+* After all that the generic background will be shown on screens. If the service needs continuation, then just press <img src="assets/keycaps/bg.png" height=34 align=center>, and everything can continue (without recording or streaming).
+
 
