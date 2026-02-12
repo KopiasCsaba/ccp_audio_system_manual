@@ -1,10 +1,17 @@
 <h1>Downloading assets</h1>
 
 <!-- TOC -->
+* [Accessing the NAS](#accessing-the-nas)
+  * [QSYNC](#qsync)
 * [How to know if you have anything to do?](#how-to-know-if-you-have-anything-to-do)
-* [Download recordings](#download-recordings)
-  * [Synchronized recordings from the streaming PC](#synchronized-recordings-from-the-streaming-pc)
-  * [Other recordings uploaded by others](#other-recordings-uploaded-by-others)
+* [About the files](#about-the-files)
+  * [Recordings](#recordings)
+  * [The PROGRAM recording](#the-program-recording)
+  * [The ISO recordings](#the-iso-recordings)
+    * [Originals](#originals)
+    * [The _converted.mp4-s](#the-_convertedmp4-s)
+    * [More files](#more-files)
+* [Archive](#archive)
 * [Thumbnails](#thumbnails)
 <!-- TOC -->
 
