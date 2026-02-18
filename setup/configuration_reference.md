@@ -9,9 +9,7 @@ This document is under construction.
   * [<h1>CONFIGURATION REFERENCE</h1>](#h1configuration-referenceh1)
 * [Main speakers' settings](#main-speakers-settings)
   * [Front speakers](#front-speakers)
-  * [Front speakers](#front-speakers-1)
   * [Fill speakers](#fill-speakers)
-  * [Fill speakers](#fill-speakers-1)
   * [Coffee shop speakers](#coffee-shop-speakers)
   * [Rhode link settings](#rhode-link-settings)
 * [Hardware](#hardware)
@@ -71,6 +69,26 @@ This document is under construction.
 * The transmitter (the one with the mic) should be on 10db gain.
 
 <img alt="" src="assets/config/rhodelink.png" height="200">
+
+## Left stage monitor
+
+<img alt="" src="assets/reset/speaker_left.png"  align="right" style="float:right" height="200">
+
+* All 12 o'clock.
+* Check power and signal cable connections, sometimes they become loose.
+
+<br clear="both" style="clear:both"/>
+
+## Right stage monitor
+
+<img alt="" src="assets/reset/speaker_middle.png"  align="right" style="float:right" height="260">
+
+* All 12 o'clock.
+* Check power and signal cable connections, sometimes they become loose.
+
+<br clear="both" style="clear:both"/>
+
+
 
 # Hardware
 

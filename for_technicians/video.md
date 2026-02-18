@@ -1,4 +1,4 @@
-# STREAM lifecycle on Sundays
+# STREAM lifecycle on  Sundays
 ### 10:00
 It will automatically start to stream, showing the "PRE STREAM" video. This helps people to tune in, check audio and video settings, etc.
 
@@ -24,7 +24,7 @@ To manually move or zoom the camera, press any of these:
 
 <img src="assets/keycaps/cammove.png" height=60 align=center>
 
-
+ 
 
 ### AFTER the end, after the blessing, on "AMEN"
 

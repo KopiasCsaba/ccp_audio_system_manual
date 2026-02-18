@@ -8,9 +8,6 @@
 * [At the console](#at-the-console)
   * [Loading the scene](#loading-the-scene)
   * [Set up the sound pressure level (SPL) meter](#set-up-the-sound-pressure-level-spl-meter)
-* [Verify stage monitor settings & connections](#verify-stage-monitor-settings--connections)
-    * [Left stage monitor](#left-stage-monitor)
-    * [Right stage monitor](#right-stage-monitor)
 * [Check if everything is working](#check-if-everything-is-working)
   * [Troubleshooting](#troubleshooting)
     * [Common failures](#common-failures)
@@ -50,28 +47,6 @@ This device measures the volume (lets say) in the room, and it is located on the
 
 
 <div style="page-break-after: always;"></div>
-
-# Verify stage monitor settings & connections
-
-### Left stage monitor
-
-<img alt="" src="assets/reset/speaker_left.png"  align="right" style="float:right" height="200">
-
-* All 12 o'clock.
-* Check power and signal cable connections, sometimes they become loose.
-
-<br clear="both" style="clear:both"/>
-
-### Right stage monitor
-
-<img alt="" src="assets/reset/speaker_middle.png"  align="right" style="float:right" height="260">
-
-* All 12 o'clock.
-* Check power and signal cable connections, sometimes they become loose.
-
-<br clear="both" style="clear:both"/>
-
-
 
 # Check if everything is working
 

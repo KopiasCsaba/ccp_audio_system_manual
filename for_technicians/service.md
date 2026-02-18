@@ -30,8 +30,7 @@
 
 * Follow the [setting up the system](setup.md) guide.
 * Turn on the "Sockets, Screens, Projector" switch.
-* Turn on the PC  before 09:50, as automations will start soon after that.
-  * **Log in to the PC.**
+* Turn on the PC
 * You don't need to go through the rehearsal guide again. Definitely don't reset the stage mixers.
 * Turn off the stage.
 
@@ -91,7 +90,7 @@ Usually there is a small rehearsal before the service, since you are set up from
 
 You can play background music from two sources, the easiest is the first option.
 
-### Playing from the streaming PC
+### Playing from the AV/PC PC
  1. Open the browser
  2. There is a bookmark called, "BG MUSIC"
  3. Start playing (click on shuffle)
@@ -159,15 +158,6 @@ You can play background music from two sources, the easiest is the first option.
     * Take out the batteries and put them back into the charger in the same spot they were in.
     * Put the headset back to the shelf above the console too.
 
-* Wait for the recordings to upload.
-
-  **If you can**, please wait about 15 minutes to pass between the end of the live-streaming, and turning off the PC.
-  The computer automatically uploads the recordings of this event, so that our crew could edit/upload/manage it.
-
-  You can check on the status by clicking on the:
-  **System tray → Google Drive icon**, and verifying that a file with today's date is being/was uploaded.
-
-   <img src="assets/streampc/drive_sync.png"  height="200">
-
+* Wait for the recordings to upload: 15 minutes after the recording stopped.
 
 * Follow the "[Turning off the audio system](../labels/turningoff.pdf)" guide posted on the mixer door.
