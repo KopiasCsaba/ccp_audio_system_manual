@@ -19,7 +19,7 @@
 
 Please note, that most of this is under development, and is subject to change, but this document reveals the current state.
 
-The nas can be found here: https://ccp-cy.myddns.me/cgi-bin/
+The nas can be found here: https://ccp-cy.duckdns.org
  * Log in
  * Open File Station
  * Navigate to Data/av_ccp_recordings or
@@ -38,7 +38,7 @@ You might set up the QSYNC desktop app for synchronization:
 <a href="assets/downloads/qsync1.png"><img src="assets/downloads/qsync1.png" height=200></a>
 
  4. NAS ADDRESS:
-    * ccp-cy.myddns.me (no https:// in the beginning, no / at the end, just that)
+    * ccp-cy.duckdns.org (no https:// in the beginning, no / at the end, just that)
 
 <a href="assets/downloads/qsync2.png"><img src="assets/downloads/qsync2.png" height=200></a>
 
