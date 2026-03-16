@@ -118,6 +118,27 @@ we recommend using those for any purpose.
 
 The _converted.mp4-s might not be there immediately, currently the server processes them after midnight, so by next day they will be there if all goes well.
 
+### SHORTS
+If during an event anyone pressed the "It's good" button (to be documented), then the system will create an edit for that moment.
+
+In this case you'll see this folder: "Video ISO Files/shorts/"
+
+And in this, you'll see files, named like this:
+
+`CCP_20260315_1000 CAM 1 01 id19 in4106 out4706.mp4`
+
+The part where the button was pressed is exactly in the middle of each file, so the context can be edited easily.
+If you want to search this part in the original full recording, then the file name can help you:
+
+ * `CCP_20260315_1000 CAM 1 01 id19 in4106 out4706.mp4` breaks down to:
+   * `CCP_20260315_1000 CAM 1 01(_converted.mp4)`: the source recording
+   * `id19`: Just an internal id of the record for this sort
+   * `in4106`: 4106 is the seconds where this exact video starts in the source
+   * `out4706`: 4706 is the seconds where this exact video ends in the source
+
+Also (4106+(4706-4106)/2) is the formula for the seconds where the button was pressed in the source.
+
+
 ### More files
 Here is a more convoluted possibility:
 

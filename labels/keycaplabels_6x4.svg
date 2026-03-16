@@ -26,9 +26,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#c2c2c2"
      inkscape:document-units="mm"
-     inkscape:zoom="7.3286612"
-     inkscape:cx="547.98549"
-     inkscape:cy="255.98127"
+     inkscape:zoom="1.8321653"
+     inkscape:cx="259.80189"
+     inkscape:cy="213.95449"
      inkscape:window-width="2560"
      inkscape:window-height="1032"
      inkscape:window-x="1920"
@@ -3023,7 +3023,7 @@
        style="font-size:8px;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:center;white-space:pre;shape-inside:url(#rect57);display:inline;fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:8.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill"><tspan
          x="340.76172"
          y="349.11914"
-         id="tspan4">160mm</tspan></text>
+         id="tspan1">160mm</tspan></text>
     <rect
        style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.0981;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill"
        id="rect62"
@@ -3053,7 +3053,7 @@
        y="0"><tspan
          x="346.05957"
          y="198.71094"
-         id="tspan5">MOVE CAM</tspan></text>
+         id="tspan2">MOVE CAM</tspan></text>
     <rect
        style="fill:#ffbf00;fill-opacity:1;stroke:none;stroke-width:1.49883;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill"
        id="rect449"
@@ -3076,9 +3076,9 @@
        inkscape:export-ydpi="195.38458"><tspan
          x="353.22949"
          y="198.71094"
-         id="tspan7"><tspan
+         id="tspan4"><tspan
            style="font-weight:bold;text-align:center;text-anchor:middle"
-           id="tspan6">PULPIT</tspan></tspan></text>
+           id="tspan3">PULPIT</tspan></tspan></text>
     <rect
        style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.49882;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill"
        id="rect350"
@@ -3105,9 +3105,9 @@
        y="0"><tspan
          x="366.05859"
          y="198.71094"
-         id="tspan9"><tspan
+         id="tspan6"><tspan
            style="font-weight:bold"
-           id="tspan8">BREAK</tspan></tspan></text>
+           id="tspan5">BREAK</tspan></tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.1832556,0,0,0.1832556,0.37439905,-0.01091502)"
@@ -3117,7 +3117,7 @@
        y="0"><tspan
          x="366.69531"
          y="198.71094"
-         id="tspan10">EVENT</tspan></text>
+         id="tspan7">EVENT</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.1832556,0,0,0.1832556,3.2531439,35.041488)"
@@ -3127,7 +3127,7 @@
        y="0"><tspan
          x="358.07324"
          y="198.71094"
-         id="tspan11">CAM </tspan></text>
+         id="tspan8">CAM </tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(-0.38833213,0,0,-0.38833213,208.52355,144.88733)"
@@ -3137,7 +3137,7 @@
        y="0"><tspan
          x="360.06308"
          y="211.79667"
-         id="tspan12">↑</tspan></text>
+         id="tspan9">↑</tspan></text>
     <rect
        style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.0981;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill"
        id="rect4"
@@ -3164,15 +3164,15 @@
        y="0"><tspan
          x="357.2998"
          y="198.71094"
-         id="tspan14"><tspan
+         id="tspan11"><tspan
            style="font-weight:bold"
-           id="tspan13">P-I-P
+           id="tspan10">P-I-P
 </tspan></tspan><tspan
          x="344.61816"
          y="208.71094"
-         id="tspan16"><tspan
+         id="tspan117"><tspan
            style="font-weight:bold"
-           id="tspan15">PRESENTER</tspan></tspan></text>
+           id="tspan12">PRESENTER</tspan></tspan></text>
     <rect
        style="fill:#eb54ff;fill-opacity:1;stroke:none;stroke-width:1.0981;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill"
        id="rect11"
@@ -3192,15 +3192,15 @@
        y="0"><tspan
          x="355.22559"
          y="198.71094"
-         id="tspan18"><tspan
+         id="tspan119"><tspan
            style="font-weight:900;-inkscape-font-specification:'Roboto Heavy';text-align:center;text-anchor:middle"
-           id="tspan17">SHOW
+           id="tspan118">SHOW
 </tspan></tspan><tspan
          x="361.46973"
          y="208.71094"
-         id="tspan20"><tspan
+         id="tspan121"><tspan
            style="font-weight:900;-inkscape-font-specification:'Roboto Heavy';text-align:center;text-anchor:middle"
-           id="tspan19">BG</tspan></tspan></text>
+           id="tspan120">BG</tspan></tspan></text>
     <rect
        style="fill:#ffbf00;fill-opacity:1;stroke:none;stroke-width:1.0981;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill"
        id="rect459"
@@ -3227,7 +3227,7 @@
        y="0"><tspan
          x="358.07324"
          y="198.71094"
-         id="tspan21">CAM </tspan></text>
+         id="tspan122">CAM </tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.38833213,0,0,0.38833213,-76.340052,-31.43047)"
@@ -3237,9 +3237,9 @@
        y="0"><tspan
          x="360.06308"
          y="211.79667"
-         id="tspan23"><tspan
+         id="tspan124"><tspan
            style="font-family:'Dela Gothic One';-inkscape-font-specification:'Dela Gothic One'"
-           id="tspan22">↑</tspan></tspan></text>
+           id="tspan123">↑</tspan></tspan></text>
     <rect
        style="fill:#ffbf00;fill-opacity:1;stroke:none;stroke-width:1.49883;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill"
        id="rect478"
@@ -3266,7 +3266,7 @@
        y="0"><tspan
          x="346.05957"
          y="198.71094"
-         id="tspan24">MOVE CAM</tspan></text>
+         id="tspan125">MOVE CAM</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.15842662,0,0,0.15842662,-14.395191,-6.2221167)"
@@ -3276,15 +3276,15 @@
        y="0"><tspan
          x="342.30664"
          y="202.21094"
-         id="tspan26"><tspan
+         id="tspan127"><tspan
            style="font-weight:bold"
-           id="tspan25">PULPIT
+           id="tspan126">PULPIT
 </tspan></tspan><tspan
          x="342.30664"
          y="217.21094"
-         id="tspan28"><tspan
+         id="tspan129"><tspan
            style="font-weight:bold"
-           id="tspan27">WIDE</tspan></tspan></text>
+           id="tspan128">WIDE</tspan></tspan></text>
     <rect
        style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.49881;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill"
        id="rect55"
@@ -3311,7 +3311,7 @@
        y="0"><tspan
          x="366.69531"
          y="198.71094"
-         id="tspan29">EVENT</tspan></text>
+         id="tspan130">EVENT</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.23646383,0,0,0.23646383,-41.192531,-14.699722)"
@@ -3321,15 +3321,15 @@
        y="0"><tspan
          x="342.30664"
          y="198.71094"
-         id="tspan31"><tspan
+         id="tspan132"><tspan
            style="font-weight:bold"
-           id="tspan30">PRE
+           id="tspan131">PRE
 </tspan></tspan><tspan
          x="342.30664"
          y="208.71094"
-         id="tspan33"><tspan
+         id="tspan134"><tspan
            style="font-weight:bold"
-           id="tspan32">STREAM</tspan></tspan></text>
+           id="tspan133">STREAM</tspan></tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.1832556,0,0,0.1832556,-17.032479,34.165479)"
@@ -3339,7 +3339,7 @@
        y="0"><tspan
          x="358.07324"
          y="198.71094"
-         id="tspan34">CAM </tspan></text>
+         id="tspan135">CAM </tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0,0.38833213,0.38833213,0,-33.581351,-76.931948)"
@@ -3349,7 +3349,7 @@
        y="0"><tspan
          x="360.06308"
          y="211.79667"
-         id="tspan35">↑</tspan></text>
+         id="tspan136">↑</tspan></text>
     <rect
        style="fill:#f9f9f9;stroke:none;stroke-width:1.55294;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill"
        id="rect1"
@@ -3376,9 +3376,9 @@
        y="0"><tspan
          x="361.76074"
          y="198.71094"
-         id="tspan37"><tspan
+         id="tspan138"><tspan
            style="font-weight:bold"
-           id="tspan36">FN</tspan></tspan></text>
+           id="tspan137">FN</tspan></tspan></text>
     <rect
        style="fill:#ffbf00;fill-opacity:1;stroke:none;stroke-width:1.0981;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill"
        id="rect455"
@@ -3405,7 +3405,7 @@
        y="0"><tspan
          x="358.07324"
          y="198.71094"
-         id="tspan38">CAM </tspan></text>
+         id="tspan139">CAM </tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(-0.38833213,0,0,-0.38833213,188.23792,127.5618)"
@@ -3415,7 +3415,7 @@
        y="0"><tspan
          x="361.06238"
          y="211.79667"
-         id="tspan39">+</tspan></text>
+         id="tspan140">+</tspan></text>
     <rect
        style="fill:#ffbf00;fill-opacity:1;stroke:none;stroke-width:1.49883;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill"
        id="rect480"
@@ -3442,7 +3442,7 @@
        y="0"><tspan
          x="346.05957"
          y="198.71094"
-         id="tspan40">MOVE CAM</tspan></text>
+         id="tspan141">MOVE CAM</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.23135829,0,0,0.23135829,-1.6529378,-20.196199)"
@@ -3452,9 +3452,9 @@
        y="0"><tspan
          x="354.41613"
          y="198.71094"
-         id="tspan42"><tspan
+         id="tspan143"><tspan
            style="font-weight:bold;text-align:center;text-anchor:middle"
-           id="tspan41">STAGE</tspan></tspan></text>
+           id="tspan142">STAGE</tspan></tspan></text>
     <rect
        style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.49882;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill"
        id="rect63"
@@ -3484,9 +3484,9 @@
        y="0"><tspan
          x="365.96094"
          y="198.71094"
-         id="tspan44"><tspan
+         id="tspan145"><tspan
            style="font-weight:bold"
-           id="tspan43">FINISH</tspan></tspan></text>
+           id="tspan144">FINISH</tspan></tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.1832556,0,0,0.1832556,20.659994,-0.01091502)"
@@ -3496,7 +3496,7 @@
        y="0"><tspan
          x="366.69531"
          y="198.71094"
-         id="tspan45">EVENT</tspan></text>
+         id="tspan146">EVENT</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.1832556,0,0,0.1832556,23.538761,35.055803)"
@@ -3506,7 +3506,7 @@
        y="0"><tspan
          x="358.07324"
          y="198.71094"
-         id="tspan46">CAM </tspan></text>
+         id="tspan147">CAM </tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0,0.38833213,-0.38833213,0,165.76484,-76.931944)"
@@ -3516,7 +3516,7 @@
        y="0"><tspan
          x="360.06308"
          y="211.79667"
-         id="tspan47">↑</tspan></text>
+         id="tspan148">↑</tspan></text>
     <rect
        style="fill:#fac0c0;fill-opacity:1;stroke:none;stroke-width:1.0981;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill"
        id="rect6"
@@ -3553,15 +3553,15 @@
        y="0"><tspan
          x="355.22559"
          y="198.71094"
-         id="tspan49"><tspan
+         id="tspan150"><tspan
            style="font-weight:900;-inkscape-font-specification:'Roboto Heavy';text-align:center;text-anchor:middle"
-           id="tspan48">SHOW
+           id="tspan149">SHOW
 </tspan></tspan><tspan
          x="350.35059"
          y="208.71094"
-         id="tspan51"><tspan
+         id="tspan152"><tspan
            style="font-weight:900;-inkscape-font-specification:'Roboto Heavy';text-align:center;text-anchor:middle"
-           id="tspan50">CAMERA</tspan></tspan></text>
+           id="tspan151">CAMERA</tspan></tspan></text>
     <rect
        style="fill:#ffbf00;fill-opacity:1;stroke:none;stroke-width:1.0981;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill"
        id="rect453"
@@ -3588,7 +3588,7 @@
        y="0"><tspan
          x="358.07324"
          y="198.71094"
-         id="tspan52">CAM </tspan></text>
+         id="tspan153">CAM </tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(-0.56885617,0,0,-0.56885617,295.02148,162.17023)"
@@ -3598,9 +3598,9 @@
        y="0"><tspan
          x="363.43569"
          y="205.42255"
-         id="tspan54"><tspan
+         id="tspan155"><tspan
            style="font-weight:bold;font-family:'Dela Gothic One';-inkscape-font-specification:'Dela Gothic One Bold'"
-           id="tspan53">-</tspan></tspan></text>
+           id="tspan154">-</tspan></tspan></text>
     <rect
        style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.55294;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill"
        id="rect66"
@@ -3637,15 +3637,15 @@
        y="0"><tspan
          x="342.30664"
          y="198.71094"
-         id="tspan56"><tspan
+         id="tspan157"><tspan
            style="font-weight:bold"
-           id="tspan55">CUSTOM
+           id="tspan156">CUSTOM
 </tspan></tspan><tspan
          x="342.30664"
          y="208.71094"
-         id="tspan58"><tspan
+         id="tspan159"><tspan
            style="font-weight:bold"
-           id="tspan57">ANGLE</tspan></tspan></text>
+           id="tspan158">ANGLE</tspan></tspan></text>
     <rect
        style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.55294;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill"
        id="rect354"
@@ -3662,7 +3662,7 @@
        y="0"><tspan
          x="346.05957"
          y="198.71094"
-         id="tspan59">MOVE CAM</tspan></text>
+         id="tspan160">MOVE CAM</tspan></text>
     <rect
        style="fill:#ffbf00;fill-opacity:1;stroke:none;stroke-width:1.55295;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill"
        id="rect806"
@@ -3679,15 +3679,15 @@
        y="0"><tspan
          x="342.60645"
          y="198.71094"
-         id="tspan61"><tspan
+         id="tspan162"><tspan
            style="font-weight:bold"
-           id="tspan60">PROJECTION
+           id="tspan161">PROJECTION
 </tspan></tspan><tspan
          x="343.57041"
          y="208.71094"
-         id="tspan63"><tspan
+         id="tspan164"><tspan
            style="font-weight:bold"
-           id="tspan62">KEY TOGGLE</tspan></tspan></text>
+           id="tspan163">KEY TOGGLE</tspan></tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.27041138,0,0,0.27041138,48.126202,-20.652604)"
@@ -3697,15 +3697,15 @@
        y="0"><tspan
          x="356.92133"
          y="198.71094"
-         id="tspan65"><tspan
+         id="tspan166"><tspan
            style="font-weight:bold"
-           id="tspan64">SAVE
+           id="tspan165">SAVE
 </tspan></tspan><tspan
          x="349.35645"
          y="208.71094"
-         id="tspan67"><tspan
+         id="tspan168"><tspan
            style="font-weight:bold"
-           id="tspan66">C. ANGLE</tspan></tspan></text>
+           id="tspan167">C. ANGLE</tspan></tspan></text>
     <rect
        style="fill:#ffbf00;fill-opacity:1;stroke:none;stroke-width:1.0981;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill"
        id="rect15"
@@ -3732,14 +3732,14 @@
        y="0"><tspan
          x="355.34277"
          y="198.71094"
-         id="tspan69"><tspan
+         id="tspan170"><tspan
            style="font-weight:900;-inkscape-font-specification:'Roboto Heavy';text-align:center;text-anchor:middle"
-           id="tspan68">PROJ. </tspan></tspan><tspan
+           id="tspan169">PROJ. </tspan></tspan><tspan
          x="351.68848"
          y="208.71094"
-         id="tspan71"><tspan
+         id="tspan172"><tspan
            style="font-weight:900;-inkscape-font-specification:'Roboto Heavy';text-align:center;text-anchor:middle"
-           id="tspan70">TOGGLE</tspan></tspan></text>
+           id="tspan171">TOGGLE</tspan></tspan></text>
     <rect
        style="fill:#ffbf00;fill-opacity:1;stroke:none;stroke-width:1.55295;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill"
        id="rect833"
@@ -3756,16 +3756,22 @@
        y="41.457012" />
     <text
        xml:space="preserve"
-       transform="matrix(0.27041138,0,0,0.27041138,48.07919,-5.0071761)"
+       transform="matrix(0.39166541,0,0,0.39166541,3.6844514,-30.669819)"
        id="text833"
-       style="font-size:8px;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:center;white-space:pre;shape-inside:url(#rect834);display:inline;fill:#000000;stroke:none;stroke-width:8.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill"
+       style="font-size:8px;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:center;white-space:pre;shape-inside:url(#rect834);display:inline;fill:#000000;stroke:none;stroke-width:5.6614;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill"
        x="12.78125"
        y="0"><tspan
-         x="346.74816"
+         x="360.73365"
          y="198.71094"
-         id="tspan73"><tspan
+         id="tspan174"><tspan
            style="font-weight:bold"
-           id="tspan72">TALKBACK</tspan></tspan></text>
+           id="tspan173">It's 
+</tspan></tspan><tspan
+         x="354.85449"
+         y="208.71094"
+         id="tspan176"><tspan
+           style="font-weight:bold"
+           id="tspan175">GOOD!</tspan></tspan></text>
     <rect
        style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.09809;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill"
        id="rect471"
@@ -3785,9 +3791,9 @@
        y="0"><tspan
          x="360.68359"
          y="198.71094"
-         id="tspan75"><tspan
+         id="tspan178"><tspan
            style="font-weight:bold"
-           id="tspan74">SITTING</tspan></tspan></text>
+           id="tspan177">SITTING</tspan></tspan></text>
     <rect
        style="fill:#ffbf00;fill-opacity:1;stroke:none;stroke-width:1.0981;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill"
        id="rect141"
@@ -3814,7 +3820,7 @@
        y="0"><tspan
          x="346.05957"
          y="198.71094"
-         id="tspan76">MOVE CAM</tspan></text>
+         id="tspan179">MOVE CAM</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.27041147,0,0,0.27041147,27.793554,-20.652622)"
@@ -3824,14 +3830,14 @@
        y="0"><tspan
          x="351.33585"
          y="198.71094"
-         id="tspan78"><tspan
+         id="tspan181"><tspan
            style="font-weight:bold"
-           id="tspan77">FADE TO </tspan></tspan><tspan
+           id="tspan180">FADE TO </tspan></tspan><tspan
          x="354.21148"
          y="208.71094"
-         id="tspan80"><tspan
+         id="tspan183"><tspan
            style="font-weight:bold"
-           id="tspan79">BLACK</tspan></tspan></text>
+           id="tspan182">BLACK</tspan></tspan></text>
     <rect
        style="fill:#ffbf00;fill-opacity:1;stroke:none;stroke-width:1.0981;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill"
        id="rect807"
@@ -3848,15 +3854,15 @@
        y="0"><tspan
          x="353.22949"
          y="198.71094"
-         id="tspan82"><tspan
+         id="tspan185"><tspan
            style="font-weight:bold"
-           id="tspan81">PULPIT
+           id="tspan184">PULPIT
 </tspan></tspan><tspan
          x="343.57041"
          y="208.71094"
-         id="tspan84"><tspan
+         id="tspan187"><tspan
            style="font-weight:bold"
-           id="tspan83">KEY TOGGLE</tspan></tspan></text>
+           id="tspan186">KEY TOGGLE</tspan></tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.27459228,-0.27459228,-0.27459228,-0.27459228,82.464211,219.35681)"
@@ -3866,7 +3872,7 @@
        y="0"><tspan
          x="360.06308"
          y="211.79667"
-         id="tspan85">↑</tspan></text>
+         id="tspan188">↑</tspan></text>
     <rect
        style="fill:#fac0c0;fill-opacity:1;stroke:none;stroke-width:1.09809;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill"
        id="rect10"
@@ -3903,14 +3909,14 @@
        y="0"><tspan
          x="353.18262"
          y="198.71094"
-         id="tspan87"><tspan
+         id="tspan190"><tspan
            style="font-weight:900;-inkscape-font-specification:'Roboto Heavy';text-align:center;text-anchor:middle"
-           id="tspan86">PULPIT </tspan></tspan><tspan
+           id="tspan189">PULPIT </tspan></tspan><tspan
          x="351.68848"
          y="208.71094"
-         id="tspan89"><tspan
+         id="tspan192"><tspan
            style="font-weight:900;-inkscape-font-specification:'Roboto Heavy';text-align:center;text-anchor:middle"
-           id="tspan88">TOGGLE</tspan></tspan></text>
+           id="tspan191">TOGGLE</tspan></tspan></text>
     <rect
        style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.09809;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill"
        id="rect65"
@@ -3930,7 +3936,7 @@
        y="0"><tspan
          x="360.06308"
          y="211.79667"
-         id="tspan90">↑</tspan></text>
+         id="tspan193">↑</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.1832556,0,0,0.1832556,64.11001,17.348639)"
@@ -3940,7 +3946,7 @@
        y="0"><tspan
          x="358.07324"
          y="198.71094"
-         id="tspan91">CAM </tspan></text>
+         id="tspan194">CAM </tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.1832556,0,0,0.1832556,64.11001,28.5558)"
@@ -3950,7 +3956,7 @@
        y="0"><tspan
          x="358.07324"
          y="198.71094"
-         id="tspan92">CAM </tspan></text>
+         id="tspan195">CAM </tspan></text>
     <rect
        style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.09809;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill"
        id="rect469"
@@ -3970,15 +3976,15 @@
        y="0"><tspan
          x="342.30664"
          y="202.21094"
-         id="tspan94"><tspan
+         id="tspan197"><tspan
            style="font-weight:bold"
-           id="tspan93">PROJECTOR
+           id="tspan196">PROJECTOR
 </tspan></tspan><tspan
          x="342.30664"
          y="217.21094"
-         id="tspan96"><tspan
+         id="tspan199"><tspan
            style="font-weight:bold"
-           id="tspan95">CANVAS</tspan></tspan></text>
+           id="tspan198">CANVAS</tspan></tspan></text>
     <rect
        style="fill:#ffbf00;fill-opacity:1;stroke:none;stroke-width:1.0981;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill"
        id="rect138"
@@ -4005,7 +4011,7 @@
        y="0"><tspan
          x="346.05957"
          y="198.71094"
-         id="tspan97">MOVE CAM</tspan></text>
+         id="tspan200">MOVE CAM</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.27041138,0,0,0.27041138,7.4365435,-20.652074)"
@@ -4015,15 +4021,15 @@
        y="0"><tspan
          x="350.81543"
          y="198.71094"
-         id="tspan99"><tspan
+         id="tspan202"><tspan
            style="font-weight:bold"
-           id="tspan98">CHANGE
+           id="tspan201">CHANGE
 </tspan></tspan><tspan
          x="352.15723"
          y="208.71094"
-         id="tspan101"><tspan
+         id="tspan204"><tspan
            style="font-weight:bold"
-           id="tspan100">PRESET</tspan></tspan></text>
+           id="tspan203">PRESET</tspan></tspan></text>
     <rect
        style="fill:#ffbf00;fill-opacity:1;stroke:none;stroke-width:1.0981;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill"
        id="rect808"
@@ -4040,15 +4046,15 @@
        y="0"><tspan
          x="353.80371"
          y="198.71094"
-         id="tspan103"><tspan
+         id="tspan206"><tspan
            style="font-weight:bold"
-           id="tspan102">A/V PC
+           id="tspan205">A/V PC
 </tspan></tspan><tspan
          x="343.57041"
          y="208.71094"
-         id="tspan105"><tspan
+         id="tspan208"><tspan
            style="font-weight:bold"
-           id="tspan104">KEY TOGGLE</tspan></tspan></text>
+           id="tspan207">KEY TOGGLE</tspan></tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(-0.27459228,-0.27459228,0.27459228,-0.27459228,151.24208,219.35681)"
@@ -4058,7 +4064,7 @@
        y="0"><tspan
          x="360.06308"
          y="211.79667"
-         id="tspan106">↑</tspan></text>
+         id="tspan209">↑</tspan></text>
     <rect
        style="fill:#eb54ff;fill-opacity:1;stroke:none;stroke-width:1.55295;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill"
        id="rect8"
@@ -4078,14 +4084,14 @@
        y="0"><tspan
          x="353.77832"
          y="198.71094"
-         id="tspan108"><tspan
+         id="tspan211"><tspan
            style="font-weight:900;-inkscape-font-specification:'Roboto Heavy';text-align:center;text-anchor:middle"
-           id="tspan107">A/V PC </tspan></tspan><tspan
+           id="tspan210">A/V PC </tspan></tspan><tspan
          x="351.68848"
          y="208.71094"
-         id="tspan110"><tspan
+         id="tspan213"><tspan
            style="font-weight:900;-inkscape-font-specification:'Roboto Heavy';text-align:center;text-anchor:middle"
-           id="tspan109">TOGGLE</tspan></tspan></text>
+           id="tspan212">TOGGLE</tspan></tspan></text>
     <rect
        style="fill:#ffbf00;fill-opacity:1;stroke:none;stroke-width:1.0981;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill"
        id="rect829"
@@ -4112,7 +4118,7 @@
        y="0"><tspan
          x="360.06308"
          y="211.79667"
-         id="tspan111">↑</tspan></text>
+         id="tspan214">↑</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.1832556,0,0,0.1832556,43.735506,17.348639)"
@@ -4122,7 +4128,7 @@
        y="0"><tspan
          x="358.07324"
          y="198.71094"
-         id="tspan112">CAM </tspan></text>
+         id="tspan215">CAM </tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.1832556,0,0,0.1832556,43.711233,28.5558)"
@@ -4132,7 +4138,7 @@
        y="0"><tspan
          x="358.07324"
          y="198.71094"
-         id="tspan113">CAM </tspan></text>
+         id="tspan216">CAM </tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.26458333,0,0,0.26458333,-51.100073,72.261573)"
@@ -4142,15 +4148,15 @@
        y="0"><tspan
          x="655.83398"
          y="83.498982"
-         id="tspan114">- Cam presets reordered
+         id="tspan217">- Cam presets reordered
 </tspan><tspan
          x="655.83398"
          y="98.498982"
-         id="tspan115">- Stream &amp; rec controls removed
+         id="tspan218">- Stream &amp; rec controls removed
 </tspan><tspan
          x="655.83398"
          y="113.49898"
-         id="tspan116">- Fade to black changed with change preset
+         id="tspan219">- Fade to black changed with change preset
 </tspan></text>
   </g>
 </svg>
