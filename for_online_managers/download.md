@@ -10,6 +10,7 @@
   * [The ISO recordings](#the-iso-recordings)
     * [Originals](#originals)
     * [The _converted.mp4-s](#the-_convertedmp4-s)
+    * [SHORTS](#shorts)
     * [More files](#more-files)
 * [Archive](#archive)
 * [Thumbnails](#thumbnails)
