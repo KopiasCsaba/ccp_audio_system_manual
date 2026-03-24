@@ -9,7 +9,7 @@
    id="svg1"
    inkscape:version="1.4.3 (0d15f75042, 2025-12-25)"
    sodipodi:docname="keycaplabels_6x4.svg"
-   inkscape:export-filename="../for_technicians/assets/keycaps/finish.png"
+   inkscape:export-filename="./keycaplabels_6x4.png"
    inkscape:export-xdpi="900"
    inkscape:export-ydpi="900"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -3006,9 +3006,12 @@
        style="fill:#999999;stroke-width:0.289577"
        id="rect691"
        width="125.34122"
-       height="70.889511"
+       height="71.072357"
        x="33.872963"
-       y="20.005861" />
+       y="21.358541"
+       inkscape:export-filename="keycaplabels_6x4.png"
+       inkscape:export-xdpi="900"
+       inkscape:export-ydpi="900" />
     <rect
        style="fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:0.637117;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill"
        id="rect56"
