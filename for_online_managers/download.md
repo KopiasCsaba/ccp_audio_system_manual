@@ -120,15 +120,15 @@ we recommend using those for any purpose.
 The _converted.mp4-s might not be there immediately, currently the server processes them after midnight, so by next day they will be there if all goes well.
 
 ### SHORTS
-If during an event anyone pressed the "It's good" button (to be documented), then the system will create an edit for that moment.
+If during an event anyone pressed the ["It's good"](itsgood-button.md) button, then the system will create an edit for that moment.
 
-In this case you'll see this folder: "Video ISO Files/shorts/"
+In this case you'll see this folder (after the videos are processed): "Video ISO Files/shorts/"
 
 And in this, you'll see files, named like this:
 
 `CCP_20260315_1000 CAM 1 01 id19 in4106 out4706.mp4`
 
-The part where the button was pressed is exactly in the middle of each file, so the context can be edited easily.
+> The part where the button was pressed is **exactly in the middle of each file**, so the context can be edited easily.
 If you want to search this part in the original full recording, then the file name can help you:
 
  * `CCP_20260315_1000 CAM 1 01 id19 in4106 out4706.mp4` breaks down to:

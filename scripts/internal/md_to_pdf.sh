@@ -144,4 +144,6 @@ pdflatex -interaction=nonstopmode pagenumber.latex > /dev/null || {
 }
 
 mv pagenumber.pdf $PDF_PATH
+chmod 0777 $PDF_PATH
 echo "✓ Created: $PDF_PATH"
+

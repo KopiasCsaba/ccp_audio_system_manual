@@ -158,6 +158,8 @@ You can play background music from two sources, the easiest is the first option.
     * Take out the batteries and put them back into the charger in the same spot they were in.
     * Put the headset back to the shelf above the console too.
 
-* Wait for the recordings to upload: 15 minutes after the recording stopped.
+* Wait for the recordings to synchronize:
+
+<img src="assets/sync/sync.png" height=200>
 
 * Follow the "[Turning off the audio system](../labels/turningoff.pdf)" guide posted on the mixer door.

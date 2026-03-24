@@ -7,7 +7,7 @@ echo $MD_TO_PDF
 
 
 # Use find to get a list of files
-files=$(find . -type f | grep -E '\.md$' | grep 'for_technicians' | grep -v "README.md")
+files=$(find . -type f | grep -E '\.md$' | grep -E 'for_technicians|labels/markdowns/' | grep -v "README.md")
 
 # Iterate through the files using a for loop
 for file in $files; do

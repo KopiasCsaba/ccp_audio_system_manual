@@ -20,9 +20,10 @@ E.g.: Bible school, ad-hoc events, etc.
     * [WHEN GOING ON A BREAK](#when-going-on-a-break)
     * [WHEN RETURNING FROM A BREAK](#when-returning-from-a-break)
     * [AT THE END](#at-the-end)
-* [Optional camera management](#optional-camera-management)
-  * [Changing camera angles](#changing-camera-angles)
-  * [Manual camera adjustment](#manual-camera-adjustment)
+* [Remote control](#remote-control)
+* [Camera](#camera)
+  * [Changing angles](#changing-angles)
+  * [Manual adjustment](#manual-adjustment)
 * [Finishing](#finishing)
 <!-- TOC -->
 
@@ -144,14 +145,48 @@ You want to check out the introduction video about how to use the small keyboard
 
 <div style="page-break-after: always;"></div>
 
+# Remote control
 
-# Optional camera management
-## Changing camera angles
+You can control the keyboard remotely through a web interface. 
+This allows you to remain outside the audio booth while managing slide and camera transitions—ideal for technicians or presenters. 
+Pastors or other speakers can also operate the controls themselves if desired.
+Sitting in the audio booth can be distracting, so in this case this will come useful to you.
+
+
+
+
+
+
+
+1. Connect to the **Staff WiFi** network (it only works from this or the Tech network)
+2. Open this address: [https://192.168.2.10/remote](https://192.168.2.10/remote/)
+3. Get through the warning "**This Connection Is Not Private**":
+    * Click on "**Show details**" or "Advanced" or "More"
+    * Click on "**Accept**" or "Proceed to ..." or similar.
+
+4. Ask the password from the tech team, or the one showing you this:)
+5. You should get to this:
+ 
+   <img src="assets/event/keyboard-full.png" height="150"/>
+
+Now this is the full keyboard, but for simplicity sake, you probably want to go to the "Pulpit" or "Projection"
+tabs, depending on where the slides will come. On Bible school, the preacher's computer will be on the "Pulpit":
+
+  <img src="assets/event/keyboard-pulpit.png" height="200"/>
+
+This website will try to keep your phone's display light constantly on, to prevent the lockscreen coming in.
+So you can lower the brightness of your screen and put it next to you, so you can just conveniently touch the button to switch whenever you want.
+
+
+
+
+# Camera
+## Changing angles
 If you ever need to change the camera angle, then press any of these once, to reload camera positions:
 
 <img src="../assets/keycaps/campositions.png" height=50 align=center>
 
-## Manual camera adjustment
+## Manual adjustment
 To manually move or zoom the camera, press any of these:
 
 <img src="../assets/keycaps/cammove.png" height=120 align=center>
@@ -161,9 +196,13 @@ To manually move or zoom the camera, press any of these:
 # Finishing
 
 1. Turn off the projector.
-1. Close back the projector-screen.
-1. Take out the headset batteries and put them back into the charger. Please pay attention to the polarity.
-1. Put the headset back to the shelf.
-1. Finally, follow the [Turning off the audio system](../../labels/turningoff.pdf) guide.
+2. Close back the projector-screen.
+3. Take out the headset batteries and put them back into the charger. Please pay attention to the polarity.
+4. Put the headset back to the shelf.
+5. Wait for the recordings to synchronize:
+
+<img src="../assets/sync/sync.png" height=200>
+
+6. Finally, follow the [Turning off the audio system](../../labels/turningoff.pdf) guide.
 
 <div style="page-break-after: always;"></div>
