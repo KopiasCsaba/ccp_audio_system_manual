@@ -91,10 +91,6 @@ ensure_mounted
 
 echo "$(date) - Starting sync from $MOUNT_POINT to $DEST_DIR"
 
-# Touch ~sync_done on each source folder matching PREFIX so rsync copies it last
-# (~  is ASCII 126, sorts after all letters/digits, guaranteeing it's the last file per folder)
-# This file is the marker that a folder is completely synced, used by video_processor.py
-find "$MOUNT_POINT" -maxdepth 1 -type d -name "${PREFIX}*" -exec touch "{}/~sync_done" \;
 
 # Create exclude list of files modified in the past 2 minutes
 echo "$(date) - Building exclude list of recently modified files..."

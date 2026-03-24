@@ -40,8 +40,7 @@ def get_files(folder):
     return [f for f in folder.rglob("*") if f.is_file()
             and not f.name.endswith('.log')
             and '_converted' not in f.name
-            and '_converting.tmp' not in f.name
-            and (f.parent / '~sync_done').exists()]
+            and '_converting.tmp' not in f.name]
 
 def process():
     folder = Path(WORK_FOLDER)
