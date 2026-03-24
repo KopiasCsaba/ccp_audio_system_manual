@@ -37,7 +37,6 @@ cat >$WORK_DIR/.tmp.html <<EOF
 <style>
 body {
 font-family: Roboto;
-  font-family: 'Georgia', serif;
 }
 
 table {
