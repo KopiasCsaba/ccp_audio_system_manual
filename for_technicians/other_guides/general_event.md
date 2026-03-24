@@ -108,11 +108,10 @@ You want to check out the introduction video about how to use the small keyboard
 
 
 ### Testing PC connection
-For testing purposes, connect the teacher's computer to the pulpit cable or to the one in the audio booth.
 
- * If the PC is on the pulpit, then press  **PULPIT TOGGLE** (<img src="../assets/keycaps/pulpittoggle.png" height=40 align=center>) to show it on the screens.
- * If the PC is in the audio booth, then press  **PROJ TOGGLE** (<img src="../assets/keycaps/projtoggle.png" height=40 align=center>) to show it on the screens.
-
+ * Connect the teacher's computer to the pulpit HDMI cable.
+ * Press  **PULPIT TOGGLE** (<img src="../assets/keycaps/pulpittoggle.png" height=40 align=center>) to show it on the screens.
+ 
 
 ### BEFORE THE EVENT STARTS
 
