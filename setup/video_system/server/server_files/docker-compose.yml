@@ -1,0 +1,541 @@
+name: "ccp-av"
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: postgres
+    # PostgreSQL performance tuning for n8n workloads
+    # https://github.com/mjmirza/n8n-ent/blob/main/docs/POSTGRESQL_TUNING.md
+    command:
+      - postgres
+      # --- WAL & Checkpoint Settings ---
+      # Don't wait for WAL write to disk before confirming transaction.
+      # Improves write performance significantly. Safe for n8n - minor data loss risk on crash.
+      - -c
+      - synchronous_commit=off
+      # How often to force a checkpoint (write dirty pages to disk).
+      # Longer interval = less I/O spikes, better sustained performance.
+      - -c
+      - checkpoint_timeout=15min
+      # Spread checkpoint writes over 90% of checkpoint interval.
+      # Reduces I/O spikes by smoothing out write activity.
+      - -c
+      - checkpoint_completion_target=0.9
+      # Maximum WAL size before forcing checkpoint.
+      # Larger = fewer forced checkpoints during heavy writes.
+      - -c
+      - max_wal_size=1GB
+      # SSD supports high parallelism
+      - -c
+      - effective_io_concurrency=200
+      # Memory for WAL data before writing to disk.
+      # Larger buffer = better write batching, fewer disk operations.
+      - -c
+      - wal_buffers=64MB
+      # --- Memory Settings ---
+      # Main memory cache for database pages.
+      # Rule of thumb: 25% of container RAM. Critical for read performance.
+      - -c
+      - shared_buffers=256MB
+      # Memory per query operation (sorts, hashes, joins).
+      # Higher = faster complex queries. Be careful: multiplied by concurrent queries.
+      - -c
+      - work_mem=32MB
+      # Memory for maintenance ops (VACUUM, CREATE INDEX).
+      # Higher = faster maintenance, less time locked.
+      - -c
+      - maintenance_work_mem=128MB
+      # Hint to planner about OS disk cache size.
+      # Helps planner choose index scans vs seq scans. Set to ~75% of container RAM.
+      - -c
+      - effective_cache_size=2GB
+      # --- Query Planner ---
+      # Cost estimate for random disk read (vs sequential=1.0).
+      # Lower value (1.1) tells planner SSDs are fast, prefer index scans more.
+      - -c
+      - random_page_cost=1.1
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_DB=${POSTGRES_DB}
+      - TZ=${TZ}
+    deploy:
+      resources:
+        limits:
+          # Hard memory limit - container killed if exceeded
+          memory: 6G
+    volumes:
+      - ./docker_volumes/postgres:/var/lib/postgresql/data
+    ports:
+      - "2999:5432"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U n8n"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - ccp_network
+
+  n8n:
+    image: docker.n8n.io/n8nio/n8n:2.4.4
+    container_name: n8n
+    user: "1000:1000"
+    ports:
+      - "3000:5678"
+    volumes:
+      # Main n8n data directory (workflows, credentials, settings)
+      - ./docker_volumes/n8n/:/home/node/.n8n
+      # Custom static files accessible from workflows
+      - ./docker_volumes/n8n_static/:/home/node/n8n_static
+      # Cache directory for temporary data
+      - ./docker_volumes/n8n_cache/:/home/node/.cache
+      # Binary data storage - filesystem mode stores files here instead of DB/memory
+      - ./docker_volumes/n8n_bindata/:/home/node/binaryData
+    environment:
+      # ============================================================
+      # NETWORK & BASIC SETTINGS
+      # ============================================================
+      - N8N_HOST=0.0.0.0
+      - N8N_PORT=5678
+      - N8N_PROTOCOL=http
+      # WEBHOOK_URL: External URL for webhooks. Must match how external systems reach n8n.
+      - WEBHOOK_URL=${N8N_WEBHOOK_URL}
+      # Timezone for cron triggers and date operations
+      - GENERIC_TIMEZONE=${TZ}
+      - TZ=${TZ}
+
+      # ============================================================
+      # NODE.JS PERFORMANCE TUNING
+      # ============================================================
+      # max-old-space-size: V8 heap memory limit in MB. Default ~1.5GB.
+      # 4096MB = 4GB allows larger datasets in memory. Increase if OOM errors.
+      - NODE_OPTIONS=--max-old-space-size=4096
+      # UV_THREADPOOL_SIZE: libuv thread pool for async I/O (file ops, DNS, crypto).
+      # Default is 4, which bottlenecks file-heavy workflows. Set to CPU core count.
+      - UV_THREADPOOL_SIZE=16
+
+      # ============================================================
+      # CONCURRENCY CONTROL
+      # ============================================================
+      # N8N_CONCURRENCY_PRODUCTION_LIMIT: Max parallel workflow executions.
+      # Higher = more throughput but more memory/CPU. 20 is good for 4GB+ RAM.
+      # If seeing lag with high CPU, reduce. If backlog builds with low CPU, increase.
+      - N8N_CONCURRENCY_PRODUCTION_LIMIT=20
+
+      # ============================================================
+      # BINARY DATA HANDLING (CRITICAL FOR PERFORMANCE)
+      # ============================================================
+      # N8N_DEFAULT_BINARY_DATA_MODE: Where to store file/binary data during execution.
+      # "default" = in-memory (crashes with large files, 50+ items)
+      # "filesystem" = disk storage (handles thousands of files, way less memory)
+      - N8N_DEFAULT_BINARY_DATA_MODE=filesystem
+
+      # ============================================================
+      # EXECUTION DATA MANAGEMENT (DB SIZE & PERFORMANCE)
+      # ============================================================
+      # EXECUTIONS_DATA_PRUNE: Enable automatic cleanup of old executions.
+      # Essential to prevent DB bloat and slowdown over time.
+      - EXECUTIONS_DATA_PRUNE=true
+      # EXECUTIONS_DATA_MAX_AGE: Hours to keep execution history. 48h = 2 days.
+      # Lower = smaller DB, faster queries. Increase if you need longer history.
+      - EXECUTIONS_DATA_MAX_AGE=48
+      # EXECUTIONS_DATA_PRUNE_MAX_COUNT: Max total executions to keep regardless of age.
+      # 1000 is reasonable. Lower for faster DB, higher for more history.
+      - EXECUTIONS_DATA_PRUNE_MAX_COUNT=1000
+      # Hard delete buffer: Hours to wait before permanently deleting (safety margin).
+      - EXECUTIONS_DATA_HARD_DELETE_BUFFER=1
+
+      # ============================================================
+      # DATABASE CONNECTION
+      # ============================================================
+      - DB_TYPE=postgresdb
+      - DB_POSTGRESDB_HOST=postgres
+      - DB_POSTGRESDB_PORT=5432
+      - DB_POSTGRESDB_DATABASE=${POSTGRES_DB}
+      - DB_POSTGRESDB_USER=${POSTGRES_USER}
+      - DB_POSTGRESDB_PASSWORD=${POSTGRES_PASSWORD}
+      # DB_POSTGRESDB_POOL_SIZE: Connection pool size. Should be >= concurrency limit.
+      # 25 connections handles 20 concurrent + overhead for UI, webhooks, etc.
+      - DB_POSTGRESDB_POOL_SIZE=25
+      # DB_LOGGING_ENABLED: Log all SQL queries. Useful for debugging, hurts performance.
+      # Disable in production to reduce I/O and CPU overhead.
+      - DB_LOGGING_ENABLED=false
+
+      # ============================================================
+      # TASK RUNNERS (Code Node Execution)
+      # ============================================================
+      # N8N_RUNNERS_MODE: How to run Code nodes (JavaScript/Python).
+      # "internal" = runs in main process (simpler, less isolation)
+      # "external" = separate container (more secure, more complex setup)
+      - N8N_RUNNERS_MODE=internal
+      - N8N_PYTHON_ENABLED=false
+      - N8N_NATIVE_PYTHON_RUNNER=false
+      # Task timeout in seconds - max time a Code node can run before being killed.
+      - N8N_RUNNERS_TASK_TIMEOUT=3000
+
+      # ============================================================
+      # LOGGING (Reduce Overhead)
+      # ============================================================
+      # N8N_LOG_LEVEL: "warn" = only warnings and errors. Reduces log volume.
+      # Use "info" for more visibility, "debug" only for troubleshooting.
+      - N8N_LOG_LEVEL=info
+      # Log output destination
+      - N8N_LOG_OUTPUT=console
+
+      # ============================================================
+      # METRICS & MONITORING
+      # ============================================================
+      # N8N_METRICS: Expose Prometheus metrics at /metrics endpoint.
+      # Enables monitoring of execution counts, durations, queue depth, etc.
+      - N8N_METRICS=true
+      - N8N_METRICS_PREFIX=n8n_
+
+      # ============================================================
+      # DISABLE UNNECESSARY FEATURES (Reduce Background Overhead)
+      # ============================================================
+      # Diagnostics/telemetry - sends anonymous usage data to n8n.
+      # Disabling removes background HTTP calls and data collection.
+      - N8N_DIAGNOSTICS_ENABLED=false
+      # Version notifications - checks for n8n updates.
+      # Disabling removes periodic HTTP calls to n8n servers.
+      - N8N_VERSION_NOTIFICATIONS_ENABLED=false
+      # Personalization prompts - onboarding questions in UI.
+      - N8N_PERSONALIZATION_ENABLED=false
+      # Hiring banner in UI
+      - N8N_HIRING_BANNER_ENABLED=false
+      # Templates gallery - workflow templates from n8n.
+      # Disable if not using to remove background fetching.
+      - N8N_TEMPLATES_ENABLED=false
+
+      # ============================================================
+      # PAYLOAD & TIMEOUT SETTINGS
+      # ============================================================
+      # N8N_PAYLOAD_SIZE_MAX: Max request body size in bytes. Default 16MB.
+      # 64MB allows larger file uploads via webhooks.
+      - N8N_PAYLOAD_SIZE_MAX=67108864
+      # Execution timeout in seconds. 3600 = 1 hour max per workflow execution.
+      - EXECUTIONS_TIMEOUT=3600
+      - EXECUTIONS_TIMEOUT_MAX=7200
+
+      # ============================================================
+      # SECURITY & OTHER
+      # ============================================================
+      - N8N_ENCRYPTION_KEY=${N8N_ENCRYPTION_KEY}
+      # Secure cookies - disable if not using HTTPS
+      - N8N_SECURE_COOKIE=false
+      # Allow git operations in Code nodes
+      - N8N_GIT_NODE_ENABLE_HOOKS=true
+      # Skip file permission checks (needed for some volume mounts)
+      - N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=false
+      # Enable data table module
+      - N8N_ENABLED_MODULES=data-table
+
+    # Resource limits to prevent runaway memory consumption
+    deploy:
+      resources:
+        limits:
+          # Hard memory limit - container killed if exceeded
+          memory: 4G
+        reservations:
+          # Guaranteed minimum memory
+          memory: 1G
+    depends_on:
+      postgres:
+        condition: service_healthy
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "wget --no-verbose --tries=1 --spider http://localhost:5678/healthz || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    networks:
+      - ccp_network
+
+# Good tutorial for extending: https://community.n8n.io/t/n8n-2-0-python-code-node-blocks-all-imports-stdlib-external-how-to-configure-permissions/237706/6
+#  n8n-task-runners:
+#    image: n8nio/runners:2.4.4
+#    container_name: n8n-runners
+#    user: "1000:1000"
+#    environment:
+#      - N8N_RUNNERS_TASK_BROKER_URI=http://n8n:5679  # Port 5679 is correct - n8n broker uses different port than main service (5678)
+#      - N8N_RUNNERS_AUTH_TOKEN=${N8N_RUNNERS_AUTH_TOKEN}
+#      # etc.
+#    depends_on:
+#      n8n:
+#        condition: service_healthy
+#    volumes:
+#      - ./n8n-task-runners.json:/etc/n8n-task-runners.json:ro
+#    restart: unless-stopped
+#    healthcheck:
+#      test: ["CMD-SHELL", "pgrep -f node || exit 1"]
+#      interval: 30s
+#      timeout: 5s
+#      retries: 3
+#      start_period: 30s
+#    networks:
+#      - ccp_network
+
+  companion:
+    image: ghcr.io/bitfocus/companion/companion:latest
+    container_name: companion
+    user: "1002:100"
+#    network_mode: host # Atem plugin was bugging when it was NAT-ed.
+    ports:
+      - "3001:8000"
+      - "16622:16622"
+      - "16623:16623"
+      - "12000:12000/udp"
+      - "28492:28492"
+      - "9910-9920:9910-9920/udp"  # extra ATEM UDP ports
+      - "6970-6999:6970-6999/udp"    # Discovery range (optional)
+    volumes:
+      - ./docker_volumes/companion:/companion
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          # Hard memory limit - container killed if exceeded
+          memory: 4G
+    environment:
+      - TZ=${TZ}
+      - COMPANION_PORT=3001
+    healthcheck:
+      test: ["CMD-SHELL", "wget --no-verbose --tries=1 --spider http://localhost:8000/ || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 45s
+    networks:
+      - ccp_network
+#  smb:
+#    image: dperson/samba
+#    container_name: smb
+#    ports:
+#      - "445:445"
+#      - "139:139"
+#    volumes:
+#      - /home/csaba/Downloads/video:/data
+#    command:
+#      [
+#        "-u", "USER;PASS",
+#        "-s", "share;/data;yes;no;no;USER"
+#      ]
+#    restart: no
+
+  restreamer:
+    image: datarhei/restreamer:latest
+    container_name: restreamer
+    ports:
+      - "3002:8080"    # Web UI
+      - "1935:1935"    # RTMP
+      - "6000:6000/udp" # SRT
+    volumes:
+      - ./docker_volumes/restreamer/config:/core/config
+      - ./docker_volumes/restreamer/data:/core/data
+    environment:
+      - RS_USERNAME=${RS_USERNAME}
+      - RS_PASSWORD=${RS_PASSWORD}
+      - RS_TOKEN=${RS_TOKEN}
+      - CORE_API_AUTH_ENABLE=false
+      - CORE_LOG_LEVEL=error
+      - TZ=${TZ}
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          # Hard memory limit - container killed if exceeded
+          memory: 4G
+    healthcheck:
+      test: ["CMD-SHELL", "wget --no-verbose --tries=1 --spider http://localhost:8080/api/v3/health || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - ccp_network
+
+#
+#  console-obs-bridge:
+#    hostname: console-obs-bridge
+#    container_name: console-obs-bridge
+#    image: console-obs-bridge
+#    platform: linux/amd64
+#    build:
+#      context: ./console-obs-bridge
+#      dockerfile: Dockerfile
+#      target: prod
+#    volumes:
+#      - type: bind
+#        source: ./console-obs-bridge/config/
+#        target: /core/config/
+#    network_mode: host
+#    environment:
+#      - APP_CONFIG_FILE=/core/config/ccp-oscbridge.yml
+#    deploy:
+#      replicas: 1
+#      restart_policy:
+#        condition: any
+#        delay: 5s
+#        window: 10s
+#    stdin_open: true
+#    tty: true
+
+
+  video-processor:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: ccp-av-base
+    container_name: video-processor
+    networks:
+      ccp_network:
+    environment:
+      - TZ=Europe/Nicosia
+      - SHORTS_WEBHOOK_URL=${SHORTS_WEBHOOK_URL}
+      - SHORTS_BASE_PATH=/mnt
+    command: >
+      bash -c '
+      while true; do
+        sleep $$((60 - $$(date +%S)));
+        if [ "$$(date +%H%M)" = "2320" ]; then
+          python /ccp_it_stuff/video_processor.py
+          python3 /ccp_it_stuff/make_shorts.py
+        fi;
+      done'
+    volumes:
+      - ./:/ccp_it_stuff:ro
+      - /share/production/recordings/:/mnt/
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          # Hard memory limit - container killed if exceeded
+          memory: 4G
+          cpus: 3.2 # 4 cores * 80%
+
+  atem-nas-sync:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: ccp-av-base
+    container_name: atem-nas-sync
+    network_mode: host
+    privileged: true  # needed for CIFS mounts
+    environment:
+      - TZ=${TZ}
+      - ATEM_IP=${ATEM_IP}
+      - BANDWIDTH_LIMIT=${ATEM_SYNC_LIMIT}
+      - SMB_SHARE=${ATEM_SMB_SHARE}
+      - SMB_USER=${ATEM_SMB_USER}
+      - SMB_PASS=${ATEM_SMB_PASS}
+      - SMB_WORKGROUP=${ATEM_SMB_WORKGROUP}
+      - NOTIFY_URL=${N8N_NOTIF_URL}
+#    command: sh -c "apk add --no-cache ffmpeg bash mc nano rsync cifs-utils && sleep infinity"
+    # Run sync every 5min with flock to prevent overlapping:
+    command:
+      - bash
+      - -c
+      - |
+        while true; do
+          flock -n /tmp/sync.lock bash -c '
+            /ccp_it_stuff/sync_recordings.sh CCP_     /mnt/recordings/ccp
+            /ccp_it_stuff/sync_recordings.sh CHINESE_ /mnt/recordings/chinese
+          '
+          sleep 60
+        done
+    volumes:
+      - ./:/ccp_it_stuff:ro
+      - /share/production/recordings/:/mnt/recordings
+    stdin_open: true
+    tty: true
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          # Hard memory limit - container killed if exceeded
+          memory: 4G
+
+  reverse_proxy_webserver:
+    dns:
+      - 192.168.2.1
+    networks:
+      ccp_network:
+      qnet_lan2:
+        ipv4_address: 192.168.2.10
+    image: caddy:alpine
+    container_name: reverse_proxy_webserver
+    ports:
+      - "8989:80"
+      - "4343:443"
+    volumes:
+      - /share/production/ccp_it_stuff/html/remote:/var/www/remote:ro
+      - /share/production/ccp_it_stuff/html/nursery:/var/www/nursery:ro
+      - /share/production/ccp_it_stuff/html/reborn:/var/www/reborn:ro
+      - /share/production/ccp_it_stuff/html/default:/var/www/default:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    command: |
+      sh -c "cat > /etc/caddy/Caddyfile << 'EOF'
+      {
+        debug
+      }
+
+      192.168.2.10 {
+        tls internal
+
+        log {
+          output stdout
+          format console
+          level DEBUG
+        }
+
+        handle_path /remote* {
+          root * /var/www/remote
+          file_server
+        }
+
+        handle_path /nursery* {
+          root * /var/www/nursery
+          file_server
+        }
+
+    
+
+        handle_path /reborn* {
+          root * /var/www/reborn
+          file_server
+        }
+      
+        handle_path /n8n/* {
+          reverse_proxy n8n:5678
+        }
+        handle {
+          root * /var/www/default
+          file_server
+        }
+      }
+      EOF
+      caddy run --config /etc/caddy/Caddyfile --adapter caddyfile"
+    restart: unless-stopped
+
+volumes:
+  caddy_data:
+  caddy_config:
+
+networks:
+  ccp_network:
+    driver: bridge
+  qnet_lan2:
+    driver: qnet
+    driver_opts:
+      iface: "eth1"
+    ipam:
+      driver: qnet
+      options:
+        iface: "eth1"
+      config:
+        - subnet: 192.168.2.0/24
+          gateway: 192.168.2.1
+

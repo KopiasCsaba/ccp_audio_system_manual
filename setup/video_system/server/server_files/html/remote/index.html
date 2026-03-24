@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard Remote</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="toast"></div>
+<div id="login-screen" class="login-screen">
+    <div class="login-box">
+        <h2>Keyboard Remote</h2>
+        <input type="password" id="password-input" placeholder="Enter password" autocomplete="off">
+        <button id="login-btn">Login</button>
+        <div id="login-error" class="login-error"></div>
+    </div>
+</div>
+
+<div id="main-content" class="main-content hidden">
+    <div class="tabs-container">
+        <div class="tabs" id="tabs"></div>
+        <button id="scale-minus-btn" class="icon-btn" title="Decrease scale">−</button>
+        <button id="scale-plus-btn" class="icon-btn" title="Increase scale">+</button>
+        <button id="fullscreen-btn" class="icon-btn" title="Toggle fullscreen">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/>
+            </svg>
+        </button>
+    </div>
+    <div class="status hidden" id="status"></div>
+    <div class="keys-grid" id="keys-grid"></div>
+    <!-- Hidden video for wake lock fallback (works over HTTP) -->
+    <video id="wakelock-video" style="display: none;" loop muted playsinline></video>
+</div>
+
+<script src="config.js"></script>
+<script>
+
+    let currentRole = null;
+
+    let toastTimer = null;
+    function showToast(text, type) {
+        const toast = document.getElementById('toast');
+        clearTimeout(toastTimer);
+        toast.classList.remove('show', 'toast-sending', 'toast-error');
+        toast.offsetHeight; // force reflow to restart transition
+        toast.textContent = text;
+        if (type === 'sending' || type === 'error') toast.classList.add(`toast-${type}`);
+        toast.classList.add('show');
+        if (type !== 'sending') toastTimer = setTimeout(() => toast.classList.remove('show'), 2500);
+    }
+
+    function findRole(password) {
+        return ROLES[password] || null;
+    }
+
+    function getVisibleTabs() {
+        if (!currentRole || !currentRole.tabs) {
+            return Object.keys(CONFIG.tabs);
+        }
+        return currentRole.tabs.filter(t => CONFIG.tabs[t]);
+    }
+
+    function checkAuth() {
+        const storedPass = localStorage.getItem('pass');
+        const role = findRole(storedPass);
+        if (role) {
+            currentRole = role;
+            showMainContent();
+            return true;
+        }
+        showLoginScreen();
+        return false;
+    }
+
+    function showLoginScreen() {
+        document.getElementById('login-screen').classList.remove('hidden');
+        document.getElementById('main-content').classList.add('hidden');
+        document.getElementById('password-input').focus();
+    }
+
+    function showMainContent() {
+        document.getElementById('login-screen').classList.add('hidden');
+        document.getElementById('main-content').classList.remove('hidden');
+    }
+
+    function handleLogin() {
+        const passwordInput = document.getElementById('password-input');
+        const password = passwordInput.value;
+        const errorEl = document.getElementById('login-error');
+
+        const role = findRole(password);
+        if (role) {
+            currentRole = role;
+            localStorage.setItem('pass', password);
+            errorEl.textContent = '';
+            showMainContent();
+            initializeApp();
+        } else {
+            errorEl.textContent = 'Incorrect password';
+            passwordInput.value = '';
+            passwordInput.focus();
+        }
+    }
+
+    // Calculate the bounds for an action key on bg.png
+    function getKeyBounds(action) {
+        const {row, col, is_secondary} = action;
+
+        // Calculate position
+        const x = col * COL_STEP;
+        const y = row * ROW_STEP;
+
+        const halfHeight = Math.floor(KEY_HEIGHT / 2);
+
+        if (is_secondary === true) {
+            // Secondary keys always use bottom half
+            return {
+                x: x,
+                y: y + halfHeight,
+                width: KEY_WIDTH,
+                height: KEY_HEIGHT - halfHeight
+            };
+        }
+
+        // Primary key - check if there's a secondary at same position
+        const hasSecondary = checkHasSecondary(row, col);
+
+        if (hasSecondary) {
+            // Top half (primary with secondary below)
+            return {
+                x: x,
+                y: y,
+                width: KEY_WIDTH,
+                height: halfHeight
+            };
+        } else {
+            // Full height key (no secondary)
+            return {
+                x: x,
+                y: y,
+                width: KEY_WIDTH,
+                height: KEY_HEIGHT
+            };
+        }
+    }
+
+    // Check if a position has a secondary action
+    function checkHasSecondary(row, col) {
+        for (const [key, action] of Object.entries(CONFIG.actions)) {
+            if (action.row === row && action.col === col && action.is_secondary === true) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    // Current tab state
+    let currentTab = null;
+
+    // Save current tab to localStorage
+    function saveCurrentTab() {
+        localStorage.setItem('keyboardCurrentTab', currentTab);
+    }
+
+    // Load current tab from localStorage (constrained to role-visible tabs)
+    function loadCurrentTab() {
+        const visibleTabs = getVisibleTabs();
+        currentTab = visibleTabs[0];
+        const savedTab = localStorage.getItem('keyboardCurrentTab');
+        if (savedTab && visibleTabs.includes(savedTab)) {
+            currentTab = savedTab;
+        }
+    }
+
+    // Build tab buttons
+    function buildTabs() {
+        const tabsContainer = document.getElementById('tabs');
+
+        for (const tabName of getVisibleTabs()) {
+            const btn = document.createElement('button');
+            btn.className = 'tab' + (tabName === currentTab ? ' active' : '');
+            btn.textContent = tabName;
+            btn.addEventListener('click', () => selectTab(tabName));
+            tabsContainer.appendChild(btn);
+        }
+    }
+
+    // Select a tab and rebuild the grid
+    function selectTab(tabName) {
+        currentTab = tabName;
+        saveCurrentTab();
+
+        // Update tab buttons
+        document.querySelectorAll('.tab').forEach(btn => {
+            btn.classList.toggle('active', btn.textContent === tabName);
+        });
+
+        // Rebuild the grid for this tab
+        buildGridForTab(tabName);
+    }
+
+    // Build the grid layout for a specific tab
+    function buildGridForTab(tabName) {
+        const container = document.getElementById('keys-grid');
+        container.innerHTML = '';
+
+        const tabConfig = CONFIG.tabs[tabName];
+        const {rows, cols, keys} = tabConfig;
+        const tabScale = tabConfig.scale || 1.0;
+
+        // Set grid template
+        container.style.gridTemplateColumns = `repeat(${cols}, auto)`;
+        container.style.gridTemplateRows = `repeat(${rows}, auto)`;
+
+        // Create cells in order
+        for (let i = 0; i < keys.length; i++) {
+            const actionKey = keys[i];
+
+            if (actionKey === null) {
+                // Empty placeholder cell
+                const placeholder = document.createElement('div');
+                placeholder.className = 'key-placeholder';
+                container.appendChild(placeholder);
+            } else {
+                const btn = createKeyButton(actionKey, tabScale);
+                container.appendChild(btn);
+            }
+        }
+    }
+
+    // Create a single key button
+    function createKeyButton(actionKey, tabScale = 1.0) {
+        const action = CONFIG.actions[actionKey];
+        const bounds = getKeyBounds(action);
+
+        const btn = document.createElement('button');
+        btn.className = 'key-btn';
+        btn.dataset.action = actionKey;
+
+        if (action.disabled) {
+            btn.classList.add('disabled');
+        }
+
+        // Set button size (scaled with both global SCALE and tab-specific multiplier)
+        const displayWidth = bounds.width * SCALE * tabScale;
+        const displayHeight = bounds.height * SCALE * tabScale;
+        btn.style.width = displayWidth + 'px';
+        btn.style.height = displayHeight + 'px';
+
+        // Set background position to crop the correct keycap
+        const bgScaleX = IMG_WIDTH * SCALE * tabScale;
+        const bgScaleY = IMG_HEIGHT * SCALE * tabScale;
+        btn.style.backgroundSize = `${bgScaleX}px ${bgScaleY}px`;
+        btn.style.backgroundPosition = `-${bounds.x * SCALE * tabScale}px -${bounds.y * SCALE * tabScale}px`;
+
+        // Event handlers
+        if (!action.disabled) {
+            if (action.is_hold) {
+                btn.addEventListener('mousedown', (e) => {
+                    e.preventDefault();
+                    sendAction(actionKey, 'down');
+                    btn.classList.add('active');
+                });
+                btn.addEventListener('mouseup', () => {
+                    sendAction(actionKey, 'up');
+                    btn.classList.remove('active');
+                });
+                btn.addEventListener('mouseleave', () => {
+                    if (btn.classList.contains('active')) {
+                        // sendAction(actionKey, 'release');
+                        btn.classList.remove('active');
+                    }
+                });
+
+                // Touch handling - hold while finger is down
+                btn.addEventListener('touchstart', (e) => {
+                    e.preventDefault();
+                    sendAction(actionKey, 'down');
+                    btn.classList.add('active');
+                }, {passive: false});
+
+                btn.addEventListener('touchend', () => {
+                    sendAction(actionKey, 'up');
+                    btn.classList.remove('active');
+                });
+
+                btn.addEventListener('touchcancel', () => {
+                    sendAction(actionKey, 'up');
+                    btn.classList.remove('active');
+                });
+            } else {
+                // Non-hold button - regular click
+                btn.addEventListener('click', () => {
+                    sendAction(actionKey, 'down', btn);
+                });
+
+                // Touch handling for mobile
+                let touchStartX = 0;
+                let touchStartY = 0;
+
+                btn.addEventListener('touchstart', (e) => {
+                    const touch = e.touches[0];
+                    touchStartX = touch.clientX;
+                    touchStartY = touch.clientY;
+                }, {passive: true});
+
+                btn.addEventListener('touchend', (e) => {
+                    const touch = e.changedTouches[0];
+                    const deltaX = Math.abs(touch.clientX - touchStartX);
+                    const deltaY = Math.abs(touch.clientY - touchStartY);
+
+                    // Only trigger if touch didn't move much (not a scroll)
+                    if (deltaX < 10 && deltaY < 10) {
+                        e.preventDefault();
+                        sendAction(actionKey, 'down', btn);
+                        btn.classList.add('active');
+                        setTimeout(() => {
+                            btn.classList.remove('active');
+                        }, 150);
+                    }
+                });
+            }
+        }
+
+        return btn;
+    }
+
+    // Send action to webhook
+    async function sendAction(actionKey, eventType, btn = null) {
+        const action = CONFIG.actions[actionKey];
+        if (!action || action.disabled) return;
+        console.log(`${actionKey} - ${eventType}`);
+
+        const statusEl = document.getElementById('status');
+        const showFeedback = btn && !action.is_hold;
+
+        // Show "sending" indicator after 500ms if no response yet
+        let sendingTimer = null;
+        if (showFeedback) {
+            sendingTimer = setTimeout(() => {
+                btn.classList.add('sending');
+                if (action.textualnotify) showToast('Sending...', 'sending');
+            }, 500);
+        }
+
+        const clearFeedback = (cls) => {
+            if (!showFeedback) return;
+            clearTimeout(sendingTimer);
+            btn.classList.remove('sending');
+            btn.classList.add(cls);
+            setTimeout(() => btn.classList.remove(cls), 600);
+        };
+
+        const payload = {
+            "dev": "8089:0008",
+            "type": "kbd",
+            "c": action.keycombination.c,
+            "s": eventType,
+            "ms": {
+                "ctrl": action.keycombination.ctrl,
+                "shift": action.keycombination.shift,
+                "alt": action.keycombination.alt,
+                "meta": action.keycombination.meta
+            },
+            "v": action.keycombination.v
+        }
+
+        try {
+            const response = await fetch(CONFIG.webhook_url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(payload)
+            });
+
+            if (response.ok) {
+                clearFeedback('success');
+                if (action.textualnotify) showToast('Success', 'success');
+                statusEl.classList.add('hidden');
+            } else {
+                clearFeedback('error');
+                if (action.textualnotify) showToast('Failure', 'error');
+                const errorMsg = `Error: ${response.status} - ${action.label}`;
+                statusEl.innerHTML = `<div class="status-line status-error">[${new Date().toLocaleTimeString()}] ${errorMsg}</div>`;
+                statusEl.classList.remove('hidden');
+            }
+        } catch (err) {
+            clearFeedback('error');
+            if (action.textualnotify) showToast('Failure', 'error');
+            const errorMsg = `Network error: ${err.message}`;
+            statusEl.innerHTML = `<div class="status-line status-error">[${new Date().toLocaleTimeString()}] ${errorMsg}</div>`;
+            statusEl.classList.remove('hidden');
+        }
+    }
+
+
+    // Screen Wake Lock to keep screen on
+    let wakeLock = null;
+    let usingVideoFallback = false;
+
+    async function requestWakeLock() {
+        try {
+            if ('wakeLock' in navigator) {
+                wakeLock = await navigator.wakeLock.request('screen');
+                console.log('Wake Lock API acquired');
+
+                wakeLock.addEventListener('release', () => {
+                    console.log('Wake Lock released');
+                });
+            } else {
+                console.log('Wake Lock API not supported, using video fallback');
+                useVideoFallback();
+            }
+        } catch (err) {
+            console.error('Wake Lock error (probably HTTP context):', err.message);
+            console.log('Using video fallback method');
+            useVideoFallback();
+        }
+    }
+
+    // Fallback method using hidden video (works over HTTP)
+    function useVideoFallback() {
+        if (usingVideoFallback) return;
+
+        const video = document.getElementById('wakelock-video');
+        // Create a tiny 1-second blank video data URL
+        video.src = 'data:video/mp4;base64,AAAAIGZ0eXBpc29tAAACAGlzb21pc28yYXZjMWlzb20AAAAI' +
+                    'ZnJlZQAAAz5tZGF0AAACrgYF//+q3EXpvebZSLeWLNgg2SPu73gyNjQgLSBjb3JlIDE1' +
+                    'MiByMjg1NCBlOWE1OTAzIC0gSC4yNjQvTVBFRy00IEFWQyBjb2RlYyAtIENvcHlsZWZ0' +
+                    'IDIwMDMtMjAxNyAtIGh0dHA6Ly93d3cudmlkZW9sYW4ub3JnL3gyNjQuaHRtbCAtIG9w' +
+                    'dGlvbnM6IGNhYmFjPTEgcmVmPTMgZGVibG9jaz0xOjA6MCBhbmFseXNlPTB4MzoweDEx' +
+                    'MyBtZT1oZXggc3VibWU9NyBwc3k9MSBwc3lfcmQ9MS4wMDowLjAwIG1peGVkX3JlZj0x' +
+                    'IG1lX3JhbmdlPTE2IGNocm9tYV9tZT0xIHRyZWxsaXM9MSA4eDhkY3Q9MSBjcW09MCBk' +
+                    'ZWFkem9uZT0yMSwxMSBmYXN0X3Bza2lwPTEgY2hyb21hX3FwX29mZnNldD0tMiB0aHJl' +
+                    'YWRzPTEgbG9va2FoZWFkX3RocmVhZHM9MSBzbGljZWRfdGhyZWFkcz0wIG5yPTAgZGVj' +
+                    'aW1hdGU9MSBpbnRlcmxhY2VkPTAgYmx1cmF5X2NvbXBhdD0wIGNvbnN0cmFpbmVkX2lu' +
+                    'dHJhPTAgYmZyYW1lcz0zIGJfcHlyYW1pZD0yIGJfYWRhcHQ9MSBiX2JpYXM9MCBkaXJl' +
+                    'Y3Q9MSB3ZWlnaHRiPTEgb3Blbl9nb3A9MCB3ZWlnaHRwPTIga2V5aW50PTI1MCBrZXlp' +
+                    'bnRfbWluPTI1IHNjZW5lY3V0PTQwIGludHJhX3JlZnJlc2g9MCByY19sb29rYWhlYWQ9' +
+                    'NDAgcmM9Y3JmIG1idHJlZT0xIGNyZj0yMy4wIHFjb21wPTAuNjAgcXBtaW49MCBxcG1h' +
+                    'eD02OSBxcHN0ZXA9NCBpcF9yYXRpbz0xLjQwIGFxPTE6MS4wMACAAAAAD2WIhAA3//72' +
+                    '8P8AAAMAAQAAAwAA/8XhY5QBggERAAABhkdlnIAAAAB+dGaWE9AAAABfbW9vdgAAAGxt' +
+                    'dmhkAAAAAAAAAAAAAAAAAAAD6AAAACoAAQAAAQAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA' +
+                    'AAAAAQAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' +
+                    'AAAAAAAAAHRyYWsAAABcdGtoZAAAAAMAAAAAAAAAAAAAAAEAAAAAAAAAAAABAAAAAAAA' +
+                    'AAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAABAAAAAAAAAAAACA' +
+                    'AAAAAAAAAA';
+
+        video.play().then(() => {
+            console.log('Video fallback active - screen should stay on');
+            usingVideoFallback = true;
+        }).catch(err => {
+            console.error('Video fallback failed:', err);
+        });
+    }
+
+    // Re-acquire wake lock when page becomes visible again
+    document.addEventListener('visibilitychange', async () => {
+        if (document.visibilityState === 'visible') {
+            if (!usingVideoFallback && wakeLock === null) {
+                await requestWakeLock();
+            } else if (usingVideoFallback) {
+                const video = document.getElementById('wakelock-video');
+                video.play().catch(err => console.error('Video restart failed:', err));
+            }
+        }
+    });
+
+    // Scale management
+    function loadScale() {
+        const savedScale = localStorage.getItem('keyboardScale');
+        if (savedScale) {
+            SCALE = parseFloat(savedScale);
+        }
+    }
+
+    function saveScale() {
+        localStorage.setItem('keyboardScale', SCALE.toString());
+    }
+
+    function changeScale(delta) {
+        // Adjust scale in 0.1 increments, keep between 0.2 and 2.0
+        SCALE = Math.max(0.2, Math.min(2.0, SCALE + delta));
+        saveScale();
+
+        // Rebuild the current tab with new scale
+        buildGridForTab(currentTab);
+
+        console.log('Scale changed to:', SCALE);
+    }
+
+    // Fullscreen toggle functionality
+    function toggleFullscreen() {
+        if (!document.fullscreenElement) {
+            document.documentElement.requestFullscreen().catch(err => {
+                console.error('Error attempting to enable fullscreen:', err);
+            });
+        } else {
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+            }
+        }
+    }
+
+    // Update fullscreen button icon on fullscreen change
+    function updateFullscreenButton() {
+        const btn = document.getElementById('fullscreen-btn');
+        if (!btn) return;
+
+        if (document.fullscreenElement) {
+            // Exit fullscreen icon
+            btn.innerHTML = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3"/>
+            </svg>`;
+        } else {
+            // Enter fullscreen icon
+            btn.innerHTML = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/>
+            </svg>`;
+        }
+    }
+
+    // Initialize app after authentication
+    function initializeApp() {
+        // Load saved scale and tab
+        loadScale();
+        loadCurrentTab();
+
+        buildTabs();
+        selectTab(currentTab);
+        requestWakeLock();
+
+        // Set up scale buttons
+        const scalePlusBtn = document.getElementById('scale-plus-btn');
+        const scaleMinusBtn = document.getElementById('scale-minus-btn');
+        if (scalePlusBtn) {
+            scalePlusBtn.addEventListener('click', () => changeScale(0.05));
+        }
+        if (scaleMinusBtn) {
+            scaleMinusBtn.addEventListener('click', () => changeScale(-0.05));
+        }
+
+        // Set up fullscreen button
+        const fullscreenBtn = document.getElementById('fullscreen-btn');
+        if (fullscreenBtn) {
+            fullscreenBtn.addEventListener('click', toggleFullscreen);
+        }
+
+        // Listen for fullscreen changes
+        document.addEventListener('fullscreenchange', updateFullscreenButton);
+    }
+
+    // Initialize
+    document.addEventListener('DOMContentLoaded', () => {
+        // Set up login handlers
+        document.getElementById('login-btn').addEventListener('click', handleLogin);
+        document.getElementById('password-input').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                handleLogin();
+            }
+        });
+
+        // Check authentication
+        if (checkAuth()) {
+            initializeApp();
+        }
+    });
+</script>
+</body>
+</html>

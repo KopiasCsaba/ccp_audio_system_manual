@@ -4,8 +4,8 @@
 
 # Components
  * [Raspberry PI](rpi)
- * [Restreamer](restreamer)
- * [N8N](n8n)
- * [Companion](companion)
  * [ATEM](atem)
  * [Macro Keyboard](keyboard)
+
+ * [Server configuration](server)
+

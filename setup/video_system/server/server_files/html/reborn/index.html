@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comments</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            display: flex;
+            min-height: 100vh;
+        }
+
+        .comments-container {
+            flex: 1;
+            padding: 10px;
+            overflow-y: auto;
+            height: 100vh;
+        }
+
+        /* Hide scrollbar but keep functionality */
+        .comments-container::-webkit-scrollbar {
+            display: none;
+        }
+
+        .comments-container {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+
+        .comment {
+            font-size: 30px;
+            /*line-height: 1.6;*/
+            margin-bottom: 5px;
+            padding-left: 20px;
+            border-left: 2px solid rgba(255, 255, 255, 0.3);
+            opacity: 0;
+            animation: fadeIn 0.5s ease-in forwards;
+            white-space: pre-wrap;
+        }
+
+        .comment .row-number {
+            font-size: 20px;
+            color: rgba(255, 255, 255, 0.6);
+            font-weight: 300;
+            margin-right: 8px;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        .sidebar {
+            width: 200px;
+            background-color: #000;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        .cat {
+            font-size: 80px;
+            text-align: center;
+            display: inline-block;
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .cat.spinning {
+            animation: spin 0.6s ease-in-out;
+        }
+
+        .ask-text {
+            font-size: 18px;
+            font-weight: bold;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.9);
+            text-align: center;
+            margin: 5px 0;
+        }
+
+        .qr-code {
+            width: 160px;
+            height: 160px;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        .qr-code img {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .loading {
+            text-align: center;
+            opacity: 0.7;
+            font-size: 32px;
+            padding: 40px;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+    <div class="comments-container" id="commentsContainer">
+        <div class="loading">Loading comments...</div>
+    </div>
+
+    <div class="sidebar">
+        <div class="cat">🐱</div>
+        <div class="qr-code">
+            <img src="qrcode.png" alt="QR Code">
+        </div>
+        <div class="ask-text">ASK THE CAT</div>
+    </div>
+
+    <script>
+        const commentsContainer = document.getElementById('commentsContainer');
+        const API_URL = '/n8n/webhook/reborn-query';
+        const MIN_FETCH_INTERVAL = 30000; // 30 seconds
+        const MAX_FETCH_INTERVAL = 90000; // 90 seconds
+
+        let displayedRows = new Set(); // Track which rows have been displayed
+
+        function getRandomInterval() {
+            return Math.floor(Math.random() * (MAX_FETCH_INTERVAL - MIN_FETCH_INTERVAL + 1)) + MIN_FETCH_INTERVAL;
+        }
+
+        async function fetchComments() {
+            try {
+                const response = await fetch(API_URL);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const data = await response.json();
+                displayComments(data);
+            } catch (error) {
+                console.error('Error fetching comments:', error);
+                // Don't overwrite existing comments on error
+                if (displayedRows.size === 0) {
+                    commentsContainer.innerHTML = '<div class="loading">Error loading comments</div>';
+                }
+            }
+
+            // Schedule next fetch with random interval
+            const nextInterval = getRandomInterval();
+            console.log(`Next fetch in ${(nextInterval / 1000).toFixed(1)} seconds`);
+            setTimeout(fetchComments, nextInterval);
+        }
+
+        function displayComments(comments) {
+            if (!comments || comments.length === 0) {
+                if (displayedRows.size === 0) {
+                    commentsContainer.innerHTML = '<div class="loading">No one asked the cat yet.</div>';
+                }
+                return;
+            }
+
+            // Clear the "no comments" message if it exists
+            const loadingMsg = commentsContainer.querySelector('.loading');
+            if (loadingMsg) {
+                commentsContainer.innerHTML = '';
+            }
+
+            // Find new comments
+            const newComments = comments.filter(item => !displayedRows.has(item.row));
+
+            if (newComments.length > 0) {
+                // Spin the cat!
+                spinCat();
+
+                // Add new comments at the top (reverse order - newest first)
+                newComments.forEach(item => {
+                    displayedRows.add(item.row);
+                    const commentDiv = document.createElement('div');
+                    commentDiv.className = 'comment';
+                    const cleanedComment = cleanComment(item.comment);
+                    commentDiv.innerHTML = `<span class="row-number">#${item.row}</span>${escapeHtml(cleanedComment)}`;
+                    commentsContainer.insertBefore(commentDiv, commentsContainer.firstChild);
+                });
+            }
+        }
+
+        function spinCat() {
+            const cat = document.querySelector('.cat');
+            cat.classList.add('spinning');
+            setTimeout(() => {
+                cat.classList.remove('spinning');
+            }, 600); // Match animation duration
+        }
+
+        function cleanComment(text) {
+            // Remove HTML tags
+            text = text.replace(/<[^>]*>/g, '');
+            // Trim whitespace from beginning and end
+            text = text.trim();
+            return text;
+        }
+
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        // Initial fetch (will schedule subsequent fetches automatically)
+        fetchComments();
+
+
+
+
+    // Screen Wake Lock to keep screen on
+    let wakeLock = null;
+    let usingVideoFallback = false;
+
+    async function requestWakeLock() {
+        try {
+            if ('wakeLock' in navigator) {
+                wakeLock = await navigator.wakeLock.request('screen');
+                console.log('Wake Lock API acquired');
+
+                wakeLock.addEventListener('release', () => {
+                    console.log('Wake Lock released');
+                });
+            } else {
+                console.log('Wake Lock API not supported, using video fallback');
+                useVideoFallback();
+            }
+        } catch (err) {
+            console.error('Wake Lock error (probably HTTP context):', err.message);
+            console.log('Using video fallback method');
+            useVideoFallback();
+        }
+    }
+
+    // Fallback method using hidden video (works over HTTP)
+    function useVideoFallback() {
+        if (usingVideoFallback) return;
+
+        const video = document.getElementById('wakelock-video');
+        // Create a tiny 1-second blank video data URL
+        video.src = 'data:video/mp4;base64,AAAAIGZ0eXBpc29tAAACAGlzb21pc28yYXZjMWlzb20AAAAI' +
+                    'ZnJlZQAAAz5tZGF0AAACrgYF//+q3EXpvebZSLeWLNgg2SPu73gyNjQgLSBjb3JlIDE1' +
+                    'MiByMjg1NCBlOWE1OTAzIC0gSC4yNjQvTVBFRy00IEFWQyBjb2RlYyAtIENvcHlsZWZ0' +
+                    'IDIwMDMtMjAxNyAtIGh0dHA6Ly93d3cudmlkZW9sYW4ub3JnL3gyNjQuaHRtbCAtIG9w' +
+                    'dGlvbnM6IGNhYmFjPTEgcmVmPTMgZGVibG9jaz0xOjA6MCBhbmFseXNlPTB4MzoweDEx' +
+                    'MyBtZT1oZXggc3VibWU9NyBwc3k9MSBwc3lfcmQ9MS4wMDowLjAwIG1peGVkX3JlZj0x' +
+                    'IG1lX3JhbmdlPTE2IGNocm9tYV9tZT0xIHRyZWxsaXM9MSA4eDhkY3Q9MSBjcW09MCBk' +
+                    'ZWFkem9uZT0yMSwxMSBmYXN0X3Bza2lwPTEgY2hyb21hX3FwX29mZnNldD0tMiB0aHJl' +
+                    'YWRzPTEgbG9va2FoZWFkX3RocmVhZHM9MSBzbGljZWRfdGhyZWFkcz0wIG5yPTAgZGVj' +
+                    'aW1hdGU9MSBpbnRlcmxhY2VkPTAgYmx1cmF5X2NvbXBhdD0wIGNvbnN0cmFpbmVkX2lu' +
+                    'dHJhPTAgYmZyYW1lcz0zIGJfcHlyYW1pZD0yIGJfYWRhcHQ9MSBiX2JpYXM9MCBkaXJl' +
+                    'Y3Q9MSB3ZWlnaHRiPTEgb3Blbl9nb3A9MCB3ZWlnaHRwPTIga2V5aW50PTI1MCBrZXlp' +
+                    'bnRfbWluPTI1IHNjZW5lY3V0PTQwIGludHJhX3JlZnJlc2g9MCByY19sb29rYWhlYWQ9' +
+                    'NDAgcmM9Y3JmIG1idHJlZT0xIGNyZj0yMy4wIHFjb21wPTAuNjAgcXBtaW49MCBxcG1h' +
+                    'eD02OSBxcHN0ZXA9NCBpcF9yYXRpbz0xLjQwIGFxPTE6MS4wMACAAAAAD2WIhAA3//72' +
+                    '8P8AAAMAAQAAAwAA/8XhY5QBggERAAABhkdlnIAAAAB+dGaWE9AAAABfbW9vdgAAAGxt' +
+                    'dmhkAAAAAAAAAAAAAAAAAAAD6AAAACoAAQAAAQAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA' +
+                    'AAAAAQAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' +
+                    'AAAAAAAAAHRyYWsAAABcdGtoZAAAAAMAAAAAAAAAAAAAAAEAAAAAAAAAAAABAAAAAAAA' +
+                    'AAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAABAAAAAAAAAAAACA' +
+                    'AAAAAAAAAA';
+
+        video.play().then(() => {
+            console.log('Video fallback active - screen should stay on');
+            usingVideoFallback = true;
+        }).catch(err => {
+            console.error('Video fallback failed:', err);
+        });
+    }
+
+    // Re-acquire wake lock when page becomes visible again
+    document.addEventListener('visibilitychange', async () => {
+        if (document.visibilityState === 'visible') {
+            if (!usingVideoFallback && wakeLock === null) {
+                await requestWakeLock();
+            } else if (usingVideoFallback) {
+                const video = document.getElementById('wakelock-video');
+                video.play().catch(err => console.error('Video restart failed:', err));
+            }
+        }
+    });
+
+    </script>
+</body>
+</html>
