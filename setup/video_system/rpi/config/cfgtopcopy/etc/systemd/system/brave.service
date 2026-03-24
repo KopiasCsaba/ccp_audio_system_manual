@@ -1,0 +1,32 @@
+[Unit]
+Description=Brave Browser (Kiosk Mode)
+Documentation=man:brave-browser(1)
+After=openbox.service
+Requires=openbox.service
+PartOf=graphical.target
+
+[Service]
+Type=simple
+User=ccpadmin
+Group=ccpadmin
+# Load X11 environment
+EnvironmentFile=/config/xorg.env
+Environment=DISPLAY=:0
+# Disable PulseAudio (we use ALSA directly in VLC)
+Environment=PULSE_SERVER=
+# Disable dbus
+Environment=DBUS_SESSION_BUS_ADDRESS=
+# Create XDG_RUNTIME_DIR if systemd didn't (fallback for user services)
+ExecStartPre=/bin/sh -c 'mkdir -p /run/user/$(id -u ccpadmin) && chown ccpadmin:ccpadmin /run/user/$(id -u ccpadmin)'
+ExecStart=/config/start_browser.sh
+Restart=always
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+
+# Security hardening
+NoNewPrivileges=true
+PrivateTmp=false
+
+[Install]
+WantedBy=graphical.target

@@ -1,0 +1,27 @@
+[Unit]
+Description=Openbox Window Manager
+Documentation=man:openbox(1)
+After=xorg.service
+Requires=xorg.service
+PartOf=graphical.target
+
+[Service]
+Type=simple
+User=ccpadmin
+Group=ccpadmin
+# Load X11 environment
+EnvironmentFile=/config/xorg.env
+Environment=DISPLAY=:0
+# Start openbox directly - no wrapper script needed
+ExecStart=/usr/bin/openbox --config-file /etc/xdg/openbox/rc.xml
+Restart=always
+RestartSec=3
+StandardOutput=journal
+StandardError=journal
+
+# Security hardening
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=graphical.target

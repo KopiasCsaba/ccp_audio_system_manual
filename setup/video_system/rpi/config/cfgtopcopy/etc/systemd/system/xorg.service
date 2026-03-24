@@ -1,0 +1,21 @@
+[Unit]
+Description=X Server with dual screens
+After=systemd-user-sessions.service
+
+[Service]
+Type=notify
+User=root
+# Create XDG_RUNTIME_DIR for user 1000 (ccpadmin)
+ExecStartPre=/bin/mkdir -p /run/user/1000
+ExecStartPre=/bin/chown 1000:1000 /run/user/1000
+ExecStartPre=/bin/chmod 0700 /run/user/1000
+# Start X server - it will notify systemd when ready via sd_notify()
+# Xorg 21.1+ has native systemd notification support (no polling needed)
+ExecStart=/usr/bin/X :0 vt7 -nolisten tcp -nocursor -s 0 -dpms
+Restart=always
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

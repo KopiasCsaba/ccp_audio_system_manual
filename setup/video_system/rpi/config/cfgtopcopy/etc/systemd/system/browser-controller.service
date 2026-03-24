@@ -1,0 +1,22 @@
+[Unit]
+Description=Browser HTTP Controller
+After=brave.service
+Wants=brave.service
+PartOf=graphical.target
+
+[Service]
+Type=simple
+User=ccpadmin
+Group=ccpadmin
+ExecStart=/usr/bin/python3 /config/start_browser_controller.py
+Restart=always
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+
+# Security hardening
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=graphical.target

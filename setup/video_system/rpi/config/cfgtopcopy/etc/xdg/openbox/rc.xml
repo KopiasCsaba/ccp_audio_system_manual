@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Openbox configuration for dual-monitor kiosk mode
+     This configuration enforces strict window geometry for MPV and Brave
+     to prevent them from expanding across both monitors.
+
+     MPV:   0,0     @ 1920x1080 (HDMI-1, left monitor)
+     Brave: 1920,0  @ 1920x1080 (HDMI-2, right monitor)
+-->
+<openbox_config xmlns="http://openbox.org/3.4/rc"
+                xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <!-- Window resistance: disabled for kiosk mode -->
+  <resistance>
+    <strength>0</strength>
+    <screen_edge_strength>0</screen_edge_strength>
+  </resistance>
+
+  <!-- Focus behavior -->
+  <focus>
+    <focusNew>yes</focusNew>
+    <followMouse>no</followMouse>
+    <focusLast>yes</focusLast>
+    <underMouse>no</underMouse>
+    <focusDelay>0</focusDelay>
+    <raiseOnFocus>yes</raiseOnFocus>
+  </focus>
+
+  <!-- Window placement -->
+  <placement>
+    <policy>Smart</policy>
+    <center>no</center>
+    <monitor>Any</monitor>
+    <primaryMonitor>0</primaryMonitor>
+  </placement>
+
+  <!-- Theme: minimal, no decorations -->
+  <theme>
+    <name>Clearlooks</name>
+    <titleLayout></titleLayout>
+    <keepBorder>no</keepBorder>
+    <animateIconify>no</animateIconify>
+    <font place="ActiveWindow">
+      <name>sans</name>
+      <size>8</size>
+      <weight>bold</weight>
+      <slant>normal</slant>
+    </font>
+    <font place="InactiveWindow">
+      <name>sans</name>
+      <size>8</size>
+      <weight>bold</weight>
+      <slant>normal</slant>
+    </font>
+  </theme>
+
+  <!-- Single desktop for kiosk -->
+  <desktops>
+    <number>1</number>
+    <firstdesk>1</firstdesk>
+    <names>
+      <name>Kiosk</name>
+    </names>
+    <popupTime>0</popupTime>
+  </desktops>
+
+  <!-- Minimal keyboard bindings (none needed for kiosk) -->
+  <keyboard>
+    <chainQuitKey>C-g</chainQuitKey>
+  </keyboard>
+
+  <!-- Minimal mouse bindings -->
+  <mouse>
+    <dragThreshold>1</dragThreshold>
+    <doubleClickTime>200</doubleClickTime>
+    <screenEdgeWarpTime>0</screenEdgeWarpTime>
+  </mouse>
+
+  <!-- Application-specific rules -->
+  <applications>
+    <!-- MPV: Force to left monitor (HDMI-1) at 0,0 -->
+    <!-- Monitor 1 = HDMI-1 (left screen at 0+0), Monitor 2 = HDMI-2 (right screen at 1920+0) -->
+    <application class="mpv">
+      <decor>no</decor>
+      <shade>no</shade>
+      <position force="yes">
+        <x>0</x>
+        <y>0</y>
+        <monitor>1</monitor>
+      </position>
+      <size>
+        <width>1920</width>
+        <height>1080</height>
+      </size>
+      <maximized>no</maximized>
+      <fullscreen>no</fullscreen>
+      <desktop>1</desktop>
+      <layer>normal</layer>
+      <iconic>no</iconic>
+      <skip_pager>yes</skip_pager>
+      <skip_taskbar>yes</skip_taskbar>
+      <focus>yes</focus>
+    </application>
+
+    <!-- VLC: Force to left monitor (HDMI-1) at 0,0 - same as MPV -->
+    <!-- Note: VLC doesn't set _NET_WM_WINDOW_TYPE, so we don't filter by type -->
+    <!-- VLC resizes its window to match video dimensions, so we use maximized=yes to constrain it -->
+    <!-- Monitor 1 = HDMI-1 (left screen at 0+0), Monitor 2 = HDMI-2 (right screen at 1920+0) -->
+    <!-- With primaryMonitor=0, monitor index is 1-based, so HDMI-1=1, HDMI-2=2 -->
+    <application class="Vlc">
+      <decor>no</decor>
+      <shade>no</shade>
+      <position force="yes">
+        <x>0</x>
+        <y>0</y>
+        <monitor>1</monitor>
+      </position>
+      <maximized>yes</maximized>
+      <fullscreen>no</fullscreen>
+      <desktop>1</desktop>
+      <layer>normal</layer>
+      <iconic>no</iconic>
+      <skip_pager>yes</skip_pager>
+      <skip_taskbar>yes</skip_taskbar>
+      <focus>yes</focus>
+    </application>
+
+    <!-- Brave Browser: Force to right monitor (HDMI-2) at 1920,0 -->
+    <!-- Monitor 1 = HDMI-1 (left screen at 0+0), Monitor 2 = HDMI-2 (right screen at 1920+0) -->
+    <application class="Brave-browser">
+      <decor>no</decor>
+      <shade>no</shade>
+      <position force="yes">
+        <x>1920</x>
+        <y>0</y>
+        <monitor>2</monitor>
+      </position>
+      <size>
+        <width>1920</width>
+        <height>1080</height>
+      </size>
+      <maximized>no</maximized>
+      <desktop>1</desktop>
+      <layer>normal</layer>
+      <iconic>no</iconic>
+      <skip_pager>yes</skip_pager>
+      <skip_taskbar>yes</skip_taskbar>
+      <focus>yes</focus>
+    </application>
+  </applications>
+
+</openbox_config>
