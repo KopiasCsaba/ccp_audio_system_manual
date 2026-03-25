@@ -6,9 +6,16 @@ from pathlib import Path
 # ============== CONFIGURATION ==============
 WORK_FOLDER = "/mnt"
 
-CONVERT_PATTERNS = [r"[^.].*CAM 1.*\.mp4$", r"[^.].*CAM 2.*\.mp4$", r"[^.].*CAM 3.*\.mp4$"]
+CONVERT_PATTERNS = [
+    r"[^.].*CAM 1.*\.mp4$", # Camera
+    r"[^.].*CAM 2.*\.mp4$", # Projection
+    r"[^.].*CAM 3.*\.mp4$"  # Pulpit
+    ]
 
-IGNORE_PATTERNS = [r".*/shorts/.*"]
+IGNORE_PATTERNS = [
+    r".*/shorts/.*", # We don't need to convert shorts, as they are made from the converted files already
+    r".*/\.~tmp~/.*" # This helps to avoid working with incomplete source folders. This could happen if the devices were turned off during sync.
+    ]
 
 # FFMPEG_CMD = '''ffmpeg -i "{input}" \
 #   -y -c:v libx264 -preset fast -crf 23 -maxrate 5000k -bufsize 10000k \

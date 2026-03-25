@@ -120,7 +120,6 @@ RSYNC_FILTERS=(
     --exclude='*CAM*.mp4'
     --include='[!.]*.mp4'
     --include='*.drp'
-    --include='~sync_done'
     --exclude='*'
 )
 
@@ -133,7 +132,9 @@ if [ "${PENDING:-0}" -gt 0 ]; then
     notify "Syncing ${PENDING:-0} files :loading:"
 fi
 
-run_resilient rsync -rvm $DEBUG --progress "${RSYNC_FILTERS[@]}" \
+# --delay-updates makes rsync to work in a tmp folder, and at finish move files out. So this is our semaphore, to avoid
+# processing partial files. Partial files can be made if the AV system is turned off before the sync finishes.
+run_resilient rsync -rvm $DEBUG --progress --delay-updates "${RSYNC_FILTERS[@]}" \
     "$MOUNT_POINT/" "$DEST_DIR/" | tee /tmp/rsync_files.log
 
 echo "$(date) - Videos synced."
