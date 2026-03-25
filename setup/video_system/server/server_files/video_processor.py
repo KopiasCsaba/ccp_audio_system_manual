@@ -8,6 +8,8 @@ WORK_FOLDER = "/mnt"
 
 CONVERT_PATTERNS = [r"[^.].*CAM 1.*\.mp4$", r"[^.].*CAM 2.*\.mp4$", r"[^.].*CAM 3.*\.mp4$"]
 
+IGNORE_PATTERNS = [r".*/shorts/.*"]
+
 # FFMPEG_CMD = '''ffmpeg -i "{input}" \
 #   -y -c:v libx264 -preset fast -crf 23 -maxrate 5000k -bufsize 10000k \
 #   -x264-params rc-lookahead=60:threads=0:thread-frames=2 \
@@ -51,6 +53,9 @@ def process():
     log(f"Processing {len(files)} files (recursive)")
 
     for f in files:
+        if matches(str(f), IGNORE_PATTERNS):
+            log(f"IGNORE: {f.relative_to(folder)}")
+            continue
         if matches(f.name, CONVERT_PATTERNS):
             out = f.with_stem(f"{f.stem}_converted")
             if out.exists():
