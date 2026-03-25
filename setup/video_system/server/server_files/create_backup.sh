@@ -2,6 +2,7 @@
 # Creates a timestamped backup of:
 #   - PostgreSQL database (schema + data, compressed)
 #   - n8n workflows, credentials (decrypted), and entities via CLI
+#   - .env file
 #   - All docker_volumes (except postgres, which is covered by pg_dump)
 #
 # Restore hints:
@@ -85,7 +86,12 @@ done
 rm -rf "$ENTITIES_TMP"
 log "Entities decrypted ($(ls "$BACKUP_DIR/n8n/entities_decrypted/" | wc -l) files)"
 
-# ── 5. docker_volumes (everything except postgres) ──────────────────────────────
+# ── 5. .env ─────────────────────────────────────────────────────────────────────
+log "Backing up .env..."
+cp "$SCRIPT_DIR/.env" "$BACKUP_DIR/.env"
+log ".env done"
+
+# ── 6. docker_volumes (everything except postgres) ──────────────────────────────
 # Postgres data is already captured by pg_dump above — no need to duplicate it.
 # sudo is required because volume files are owned by various container users.
 log "Compressing docker_volumes (excluding postgres data)..."
