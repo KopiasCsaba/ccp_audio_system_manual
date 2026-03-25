@@ -386,7 +386,7 @@ services:
   video-processor:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: services/Dockerfile.for.scripts
     image: ccp-av-base
     container_name: video-processor
     networks:
@@ -400,8 +400,8 @@ services:
       while true; do
         sleep $$((60 - $$(date +%S)));
         if [ "$$(date +%H%M)" = "2320" ]; then
-          python /ccp_it_stuff/video_processor.py
-          python3 /ccp_it_stuff/make_shorts.py
+          python /ccp_it_stuff/services/video_processor.py
+          python3 /ccp_it_stuff/services/make_shorts.py
         fi;
       done'
     volumes:
@@ -418,7 +418,7 @@ services:
   atem-nas-sync:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: services/Dockerfile.for.scripts
     image: ccp-av-base
     container_name: atem-nas-sync
     network_mode: host
@@ -432,16 +432,15 @@ services:
       - SMB_PASS=${ATEM_SMB_PASS}
       - SMB_WORKGROUP=${ATEM_SMB_WORKGROUP}
       - NOTIFY_URL=${N8N_NOTIF_URL}
-#    command: sh -c "apk add --no-cache ffmpeg bash mc nano rsync cifs-utils && sleep infinity"
-    # Run sync every 5min with flock to prevent overlapping:
+    # Run sync every 5min with flock to avoid multiple instances:
     command:
       - bash
       - -c
       - |
         while true; do
           flock -n /tmp/sync.lock bash -c '
-            /ccp_it_stuff/sync_recordings.sh CCP_     /mnt/recordings/ccp
-            /ccp_it_stuff/sync_recordings.sh CHINESE_ /mnt/recordings/chinese
+            /ccp_it_stuff/services/sync_recordings.sh CCP_     /mnt/recordings/ccp
+            /ccp_it_stuff/services/sync_recordings.sh CHINESE_ /mnt/recordings/chinese
           '
           sleep 60
         done
