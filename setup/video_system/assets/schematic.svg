@@ -25,7 +25,7 @@
      inkscape:document-units="mm"
      inkscape:zoom="1.2676634"
      inkscape:cx="406.25926"
-     inkscape:cy="538.78656"
+     inkscape:cy="475.67832"
      inkscape:window-width="2560"
      inkscape:window-height="1032"
      inkscape:window-x="1920"
@@ -1532,6 +1532,11 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(-1058.6003)">
+    <path
+       style="fill:none;stroke:#999999;stroke-width:0.999996;marker-end:url(#marker70);paint-order:stroke fill markers"
+       d="m 1223.8865,121.81805 26.1112,0.42719"
+       id="path256"
+       sodipodi:nodetypes="cc" />
     <path
        style="fill:none;stroke:#999999;stroke-width:0.999996;marker-end:url(#marker70);paint-order:stroke fill markers"
        d="m 1229.5219,125.06928 c 5.2623,0.21296 1.8185,8.67159 -1.7159,11.87428 -17.2905,15.66826 -115.5106,45.08853 -110.8874,-1.73793"
@@ -3623,11 +3628,6 @@
            y="166.94724"
            id="tspan206">NAS</tspan></text>
     </g>
-    <path
-       style="fill:none;stroke:#999999;stroke-width:0.999996;marker-end:url(#marker70);paint-order:stroke fill markers"
-       d="m 1223.8865,121.81805 26.1112,0.42719"
-       id="path256"
-       sodipodi:nodetypes="cc" />
     <path
        style="fill:none;stroke:#b3b3b3;stroke-width:3.00001;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill"
        d="m 1145.2392,5.9476947 3.5029,-9e-7"
