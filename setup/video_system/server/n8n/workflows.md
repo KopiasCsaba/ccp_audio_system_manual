@@ -9,7 +9,8 @@ This document describes all n8n automation workflows used in the CCP video syste
 ---
 
 ### Main
-Workflow file: [f8eQySUHVPeEQpVT](n8n_workflows/f8eQySUHVPeEQpVT.json)
+Workflow file: [f8eQySUHVPeEQpVT](n8n_workflows/f8eQySUHVPeEQpVT.json)  
+[Open in n8n](http://192.168.2.5:3000/workflow/f8eQySUHVPeEQpVT)
 
 The central command router for the entire production system. It listens for HTTP key press events on the `/keyinput` webhook and dispatches each command to the appropriate sub-workflow or device. This is the single entry point used by all physical control surfaces and web remote controls.
 
@@ -18,7 +19,8 @@ Commands handled include PTZ camera movements (8 directions, zoom in/out), camer
 ---
 
 ### Event Manager
-Workflow file: [mooEWAfPCkfAoJCv](n8n_workflows/mooEWAfPCkfAoJCv.json)
+Workflow file: [mooEWAfPCkfAoJCv](n8n_workflows/mooEWAfPCkfAoJCv.json)  
+[Open in n8n](http://192.168.2.5:3000/workflow/mooEWAfPCkfAoJCv)
 
 Manages the full lifecycle of a live service session. 
 
@@ -33,7 +35,8 @@ The supported session commands are:
 ---
 
 ### ATEM
-Workflow file: [Dgk7CxGWHSHsNcoT](n8n_workflows/Dgk7CxGWHSHsNcoT.json)
+Workflow file: [Dgk7CxGWHSHsNcoT](n8n_workflows/Dgk7CxGWHSHsNcoT.json)  
+[Open in n8n](http://192.168.2.5:3000/workflow/Dgk7CxGWHSHsNcoT)
 
 The low-level ATEM switcher control interface. Since n8n has no native ATEM plugin, this sub-workflow acts as a translation layer — it accepts named command parameters and converts each into a formatted POST request 
 to Bitfocus Companion's custom variable API. 
@@ -52,7 +55,8 @@ Nearly every other workflow that needs to control the ATEM does so by calling th
 ---
 
 ### Auto Starter
-Workflow file: [fFXyk8UoUrM2yx6R](n8n_workflows/fFXyk8UoUrM2yx6R.json)
+Workflow file: [fFXyk8UoUrM2yx6R](n8n_workflows/fFXyk8UoUrM2yx6R.json)  
+[Open in n8n](http://192.168.2.5:3000/workflow/fFXyk8UoUrM2yx6R)
 
 Provides fully automatic, schedule-driven service startup. It runs every minute and checks the current day and time against a `timed_start` schedule defined in the system configuration. 
 If the current time matches a configured entry (E.g. sunday-08:45), it triggers the complete startup sequence without any manual intervention.
@@ -68,7 +72,8 @@ The automated startup sequence:
 ---
 
 ### Read Config
-Workflow file: [CgSbDSo1mHpiRCnr](n8n_workflows/CgSbDSo1mHpiRCnr.json)
+Workflow file: [CgSbDSo1mHpiRCnr](n8n_workflows/CgSbDSo1mHpiRCnr.json)  
+[Open in n8n](http://192.168.2.5:3000/workflow/CgSbDSo1mHpiRCnr)
 
 A foundational utility sub-workflow called by virtually every other workflow in the system. 
 It reads the global configuration JSON blob and the currently active preset name from the n8n data tables, then merges the two — overlaying the selected preset's settings on top of the global defaults.
@@ -86,7 +91,8 @@ Centralising config access in this way means settings only need to be updated in
 ---
 
 ### Preset Manager
-Workflow file: [YdhwWL3hSgPUVoxo](n8n_workflows/YdhwWL3hSgPUVoxo.json)
+Workflow file: [YdhwWL3hSgPUVoxo](n8n_workflows/YdhwWL3hSgPUVoxo.json)  
+[Open in n8n](http://192.168.2.5:3000/workflow/YdhwWL3hSgPUVoxo)
 
 A preset is every configuration related to a live session.
 For example our church has some custom backgrounds, has specific yt/facbook accounts, and also the pre stream, the automated countdown, the finish video files are configured in this preset.
@@ -107,7 +113,8 @@ When called with a preset name:
 ---
 
 ### Stream Manager
-Workflow file: [6NPqhmV3MOUnctVX](n8n_workflows/6NPqhmV3MOUnctVX.json)
+Workflow file: [6NPqhmV3MOUnctVX](n8n_workflows/6NPqhmV3MOUnctVX.json)  
+[Open in n8n](http://192.168.2.5:3000/workflow/6NPqhmV3MOUnctVX)
 
 Controls the live streaming outputs for the currently active preset. It accepts a single `set_streams_status` parameter (1 to enable, 0 to disable) and enables or disables all streaming destinations — typically YouTube and Facebook — that are defined in the current preset's configuration.
 
@@ -118,7 +125,8 @@ This abstraction means the Event Manager only needs to call Stream Manager once 
 ---
 
 ### Restreamer
-Workflow file: [0AUTg9h7jIJdrnCK](n8n_workflows/0AUTg9h7jIJdrnCK.json)
+Workflow file: [0AUTg9h7jIJdrnCK](n8n_workflows/0AUTg9h7jIJdrnCK.json)  
+[Open in n8n](http://192.168.2.5:3000/workflow/0AUTg9h7jIJdrnCK)
 
 A low-level sub-workflow that communicates directly with the datarhei Restreamer API to manage individual streaming outputs. 
 It accepts an output name and optional stream key values, then reads the current configuration before making a PUT request to the Restreamer REST API.
@@ -130,7 +138,8 @@ This allows the system to reconfigure stream destinations at runtime without man
 ---
 
 ### Log
-Workflow file: [E0yl55s1YkCD2LNx](n8n_workflows/E0yl55s1YkCD2LNx.json)
+Workflow file: [E0yl55s1YkCD2LNx](n8n_workflows/E0yl55s1YkCD2LNx.json)  
+[Open in n8n](http://192.168.2.5:3000/workflow/E0yl55s1YkCD2LNx)
 
 The central logging and error-reporting system for the entire workflow suite. 
 It operates in three modes: 
@@ -141,7 +150,8 @@ It operates in three modes:
 ---
 
 ### Send Email
-Workflow file: [xrGdCgP0Sg3dM3Ft7orlh](n8n_workflows/xrGdCgP0Sg3dM3Ft7orlh.json)
+Workflow file: [xrGdCgP0Sg3dM3Ft7orlh](n8n_workflows/xrGdCgP0Sg3dM3Ft7orlh.json)  
+[Open in n8n](http://192.168.2.5:3000/workflow/xrGdCgP0Sg3dM3Ft7orlh)
 
 A simple transactional email sub-workflow. It accepts `to`, `subject`, and `body` parameters and delivers the message via the Resend API. 
 It is used primarily by the Log workflow to send error alert emails to system administrators when a workflow fails unexpectedly.
@@ -149,7 +159,8 @@ It is used primarily by the Log workflow to send error alert emails to system ad
 ---
 
 ### Video Player
-Workflow file: [FK8D44cxEXsOJz7z](n8n_workflows/FK8D44cxEXsOJz7z.json)
+Workflow file: [FK8D44cxEXsOJz7z](n8n_workflows/FK8D44cxEXsOJz7z.json)  
+[Open in n8n](http://192.168.2.5:3000/workflow/FK8D44cxEXsOJz7z)
 
 Controls VLC media player via its HTTP API on the RPI. When called with a file path it stops any currently playing media and starts playback of the specified file. 
 It accepts a `repeat` flag for looping content and a `stop` flag to halt playback without starting anything new.
@@ -160,7 +171,8 @@ This is used to play pre-stream loops, countdown videos, and break slides on the
 ---
 
 ### Browser
-Workflow file: [vGC4rpFc0kzVwrtT](n8n_workflows/vGC4rpFc0kzVwrtT.json)
+Workflow file: [vGC4rpFc0kzVwrtT](n8n_workflows/vGC4rpFc0kzVwrtT.json)  
+[Open in n8n](http://192.168.2.5:3000/workflow/vGC4rpFc0kzVwrtT)
 
 A minimal sub-workflow that navigates a kiosk/headless browser to a given URL. 
 It posts the target URL to the configured browser control endpoint. 
@@ -169,7 +181,8 @@ Other workflows use this to load specific HTML pages — such as the nursery cal
 ---
 
 ### Browser Notification
-Workflow file: [oKYuBwn0nJ3SpMblzAqQ9](n8n_workflows/oKYuBwn0nJ3SpMblzAqQ9.json)
+Workflow file: [oKYuBwn0nJ3SpMblzAqQ9](n8n_workflows/oKYuBwn0nJ3SpMblzAqQ9.json)  
+[Open in n8n](http://192.168.2.5:3000/workflow/oKYuBwn0nJ3SpMblzAqQ9)
 
 Displays a text notification on the browser-based ATEM source overlay. 
 It can be triggered via a POST webhook at `/browser-notification` or called directly by another workflow with a message text. 
@@ -180,7 +193,8 @@ Once the lock is clear it calls the Browser sub-workflow to load a notification 
 ---
 
 ### Nursery Call
-Workflow file: [JpetspgVx6Id7XV7LcU82](n8n_workflows/JpetspgVx6Id7XV7LcU82.json)
+Workflow file: [JpetspgVx6Id7XV7LcU82](n8n_workflows/JpetspgVx6Id7XV7LcU82.json)  
+[Open in n8n](http://192.168.2.5:3000/workflow/JpetspgVx6Id7XV7LcU82)
 
 Handles the congregation nursery paging system. 
 It exposes a webhook at `/nurserycall` where nursery staff can submit a call code (protected by a password). 
@@ -195,7 +209,8 @@ When a new call is detected:
 ---
 
 ### Shorter
-Workflow file: [t2Sa0MfLHA25zPqyi4tOG](n8n_workflows/t2Sa0MfLHA25zPqyi4tOG.json)
+Workflow file: [t2Sa0MfLHA25zPqyi4tOG](n8n_workflows/t2Sa0MfLHA25zPqyi4tOG.json)  
+[Open in n8n](http://192.168.2.5:3000/workflow/t2Sa0MfLHA25zPqyi4tOG)
 
 Manages the recording of timestamped highlight clips for short-form video content. 
 When called by the Main workflow (triggered by an operator key press), it queries Companion for the current ATEM recording duration, filename, and index, then inserts a new entry into the `shorts` data table with a clip window of ±5 minutes around the current playback position.
