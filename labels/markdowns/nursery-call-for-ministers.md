@@ -12,11 +12,11 @@
    * Click on "**Show details**" or "Advanced" or "More" 
    * Click on "**Accept**" or "Proceed to ..." or similar.
 
-4. You should get to this:
-
-   <img src="assets/nursery-call-ui.png" height="200"/>
-
 ## Using
 
 The submitted number will be visible on all the screens except behind the preacher.
 Make sure to instruct parents to see any of the screens that is not behind the preacher, to notice the call.
+
+<p align="center">
+<img align=center src="assets/PXL_20260331_171918432.edited.jpg" height="300"/>
+</p>

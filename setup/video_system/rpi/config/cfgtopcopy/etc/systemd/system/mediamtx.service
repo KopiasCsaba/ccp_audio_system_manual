@@ -1,0 +1,16 @@
+[Unit]
+Description=MediaMTX RTSP/RTMP/HLS/WebRTC media server
+After=network.target
+
+[Service]
+Type=simple
+User=ccpadmin
+Group=ccpadmin
+ExecStart=/opt/bin/mediamtx /etc/mediamtx.yml
+Restart=on-failure
+RestartSec=5
+LimitNOFILE=65536
+WorkingDirectory=/etc
+
+[Install]
+WantedBy=multi-user.target

@@ -67,8 +67,8 @@ ensure_mounted() {
 
 notify() {
     local timestamp
-    timestamp=$(date '+%Y-%m-%d %H:%M')
-    local body="${timestamp}\n$1"
+    timestamp=$(date '+%H:%M')
+    local body="[${timestamp}]: $1"
     echo "NOTIFY: $body"
     [ -z "$NOTIFY_URL" ] && return 0
     curl -s -o /dev/null -X POST "$NOTIFY_URL" -H "Content-Type: text/plain" --data-raw "$body"
@@ -92,9 +92,9 @@ ensure_mounted
 echo "$(date) - Starting sync from $MOUNT_POINT to $DEST_DIR"
 
 
-# Create exclude list of files modified in the past 2 minutes
+# Create exclude list of files modified in the past 1 minutes
 echo "$(date) - Building exclude list of recently modified files..."
-find "$MOUNT_POINT" -type f -mmin -2 -printf '%P\n' > /tmp/recent_files.txt
+find "$MOUNT_POINT" -type f -mmin -1 -printf '%P\n' > /tmp/recent_files.txt
 EXCLUDE_COUNT=$(wc -l < /tmp/recent_files.txt)
 echo "$(date) - Excluding $EXCLUDE_COUNT recently modified files from sync"
 
@@ -128,8 +128,8 @@ DRY_STATS=$(rsync -rvm --dry-run --stats "${RSYNC_FILTERS[@]}" "$MOUNT_POINT/" "
 PENDING=$(echo "$DRY_STATS" | grep "Number of regular files transferred:" | awk '{print $NF}')
 
 echo "$(date) - Syncing files... (pending: ${PENDING:-0})"
-if [ "${PENDING:-0}" -gt 0 ]; then
-    notify "Syncing ${PENDING:-0} files :loading:"
+if [ "${PENDING:-0}" -gt 1 ]; then
+    notify "Syncing ${PENDING:-0} files<br>:loading:"
 fi
 
 # --delay-updates makes rsync to work in a tmp folder, and at finish move files out. So this is our semaphore, to avoid
@@ -162,7 +162,7 @@ echo "$(date)  Running chmod on destination directories"
 chmod 0777 -R "$DEST_DIR"
 
 
-if [ "${PENDING:-0}" -gt 0 ]; then
-    notify "Synchronisation finished!"
+if [ "${PENDING:-0}" -gt 1 ]; then
+    notify "Sync finished!"
 fi
 

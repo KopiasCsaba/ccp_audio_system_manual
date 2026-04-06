@@ -141,6 +141,10 @@ sudo systemctl daemon-reload
 sudo systemctl restart systemd-journald
 sudo systemctl enable --now openbox.service vlc.service brave.service browser-controller.service keys.service vlc-healthcheck.timer
 
+# Enable webcam streaming with mediamtx
+sudo systemctl daemon-reload
+sudo systemctl enable mediamtx.service
+sudo systemctl start mediamtx.service
 
 # Configure SSH: enable password & key authentication
 sudo sed -i 's/^\s*#\?\s*PasswordAuthentication\s\+.*/PasswordAuthentication yes/' /etc/ssh/sshd_config

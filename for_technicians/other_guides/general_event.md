@@ -16,7 +16,7 @@ E.g.: Bible school, ad-hoc events, etc.
 * [Configure the console](#configure-the-console)
     * [Testing PC connection](#testing-pc-connection)
     * [BEFORE THE EVENT STARTS](#before-the-event-starts)
-    * [WHEN THE EVENT STARTS](#when-the-event-starts)
+    * [WHEN THE EVENT REALLY STARTS](#when-the-event-really-starts)
     * [DURING THE EVENT](#during-the-event)
     * [WHEN GOING ON A BREAK](#when-going-on-a-break)
     * [WHEN RETURNING FROM A BREAK](#when-returning-from-a-break)
@@ -61,7 +61,7 @@ You want to check out the introduction video about how to use the small keyboard
 # Setup headset
 
 
-<img alt="" src="../assets/reset/rhodelink.jpg.png"  align="right" style="float:right" width="180">
+<img alt="" src="../assets/reset/rhodelink.jpg.png"  align="right" style="float:right" width="130">
 
 1. Above the mixing console, on the shelf you'll find the battery charger.
 2. Based on the labels on the charger, select the appropriate set of batteries.
@@ -119,10 +119,10 @@ You want to check out the introduction video about how to use the small keyboard
 
 * Press **FN** + **PRE STREAM** (<img src="../assets/keycaps/fn.png" height=40 align=center> +  <img src="../assets/keycaps/prestream.png" height=40 align=center>)  to transition to live.   
 
-* This starts the live stream so people can start to tune in online.
+* This **starts the live stream** so people can start to tune in online.
 * Do this 10+ mins before the event, to give time for the  online audience to join.
 
-### WHEN THE EVENT STARTS
+### WHEN THE EVENT REALLY STARTS
 
 * Press  **SHOW CAMERA** (<img src="../assets/keycaps/showcam.png" height=40 align=center>) to start the event. 
 
