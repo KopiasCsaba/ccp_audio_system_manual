@@ -1,8 +1,12 @@
 # Keyboard
 
-<img src="keycaplabels_6x4.png">
+<img src="kbdportrait.jpg" height="100">
+
 
  * [Sayo Device 24 keys macro keyboard](https://duckduckgo.com/?q=sayo+device+4x6+24keys+keyboard)
+
+<img src="keycaplabels_6x4.png" height="200">
+
 
 # Configuration
  * Most keys send ALT+SUPER(windows key)+<some character>, except FN that adds CTRL.

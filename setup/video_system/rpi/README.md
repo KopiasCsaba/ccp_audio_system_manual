@@ -1,11 +1,12 @@
 # RPI5 Video & browser setup
 
-Below is the full transcript of setting up an RPI5 to::
+Below is the full transcript of setting up an RPI5 to:
  - Show VLC in one HDMI output
  - Show a fullscreen brave on the another HDMI output
- - Run our keys.py (basically a keylogger) that forwards key presses to N8N, allowing the remote controlling of our gear based on hotkeys.
+ - Run our keys.py (basically a keylogger) that forwards key presses to N8N, allowing the remote controlling of our gear based on hotkeys with the macro keyboard.
  - Run start_browser_controller.py that listens for commands to remote control the brave instance to load webpages
  - Contain our media files
+ - Run mediamtx that allows us to remotely see the multiview of the ATEM.
  - Have a read-only filesystem
 
 
@@ -40,6 +41,7 @@ xorg.service (X11 server)
   │     └─→ brave.service (browser)
   │           └─→ browser-controller.service (HTTP API for browser control)
   └─→ keys.service (keyboard input monitor)
+  └─→ mediamtx.service (ATEM acts as a webcam, this one streams it via a web interface)
 ```
 
 # SD card preparation with rpi-imager
@@ -200,7 +202,7 @@ sudo /config/togglerw.sh
 ```bash
 sudo rsync -rv --keep-dirlinks /config/cfgtopcopy/ /
 sudo systemctl daemon-reload
-sudo systemctl restart openbox.service vlc.service brave.service browser-controller.service keys.service vlc-healthcheck.timer
+sudo systemctl restart openbox.service vlc.service brave.service browser-controller.service keys.service mediamtx.service vlc-healthcheck.timer
 ```
 
 ## Troubleshooting and Management
@@ -209,7 +211,7 @@ Useful systemd commands for managing the kiosk system:
 
 ```bash
 # Check status of all kiosk services
-sudo systemctl status openbox vlc brave browser-controller keys
+sudo systemctl status openbox vlc brave browser-controller keys mediamtx
 
 # View recent logs from a specific service
 sudo journalctl -u vlc.service -n 100
