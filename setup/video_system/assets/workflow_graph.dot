@@ -11,7 +11,7 @@ digraph workflow {
         concentrate=false
     ];
     node [fontname="Helvetica", fontsize=11, shape=box, style="filled,rounded", margin="0.25,0.12"];
-    edge [fontname="Helvetica", fontsize=10, color="#555555", arrowsize=0.8, decorate=true];
+    edge [fontname="Helvetica", fontsize=10, color="#555555", arrowsize=0.8];
 
     // ── Entry Points ──────────────────────────────────────────────────────────
     subgraph cluster_triggers {
@@ -81,14 +81,15 @@ digraph workflow {
     // #6A1B9A     = external webhooks in
 
     // ── Entry → Workflow ──────────────────────────────────────────────────────
-    keyboard    -> main         [label="POST /keyinput",  color="#E65100", penwidth=2.5, fontcolor="#E65100"];
-    timer_1m    -> auto_starter [                         color="#1565C0", penwidth=1.5];
-    timer_5s    -> nursery_call [                         color="#1565C0", penwidth=1.5];
-    wh_bn       -> browser_notif[                         color="#6A1B9A", penwidth=1.5];
-    wh_nc       -> nursery_call [                         color="#6A1B9A", penwidth=1.5];
-    wh_gs       -> shorter      [                         color="#6A1B9A", penwidth=1.5];
-    wh_gl       -> log_wf       [                         color="#6A1B9A", penwidth=1.5];
-    err_trigger -> log_wf       [label="catch errors",   color="#B71C1C", penwidth=2, style=dashed, fontcolor="#B71C1C"];
+    // headlabel keeps text near the arrowhead, clearly tied to the destination
+    keyboard    -> main         [headlabel="POST /keyinput",  color="#E65100", penwidth=2.5, labelfontcolor="#E65100", labelfontsize=10, labelangle=-20, labeldistance=2.5];
+    timer_1m    -> auto_starter [color="#1565C0", penwidth=1.5];
+    timer_5s    -> nursery_call [color="#1565C0", penwidth=1.5];
+    wh_bn       -> browser_notif[color="#6A1B9A", penwidth=1.5];
+    wh_nc       -> nursery_call [color="#6A1B9A", penwidth=1.5];
+    wh_gs       -> shorter      [color="#6A1B9A", penwidth=1.5];
+    wh_gl       -> log_wf       [color="#6A1B9A", penwidth=1.5];
+    err_trigger -> log_wf       [headlabel="catch errors", color="#B71C1C", penwidth=2, style=dashed, labelfontcolor="#B71C1C", labelfontsize=9, labeldistance=2.2];
 
     // ── Main → sub-workflows ──────────────────────────────────────────────────
     main -> atem_wf      [label="ATEM commands"];
@@ -114,23 +115,23 @@ digraph workflow {
     stream_mgr -> restreamer_wf [label="per output"];
 
     // ── Browser pipeline ──────────────────────────────────────────────────────
-    browser_notif -> browser_wf [label="navigate to\nnotification page"];
-    nursery_call  -> browser_wf [label="navigate to\nnursery page"];
-    nursery_call  -> atem_wf    [label="supersource\noverlay"];
+    browser_notif -> browser_wf [label="notification page"];
+    nursery_call  -> browser_wf [label="nursery page"];
+    nursery_call  -> atem_wf    [label="supersource overlay"];
 
     // ── Logging chain ─────────────────────────────────────────────────────────
     log_wf -> send_email [label="on error"];
 
-    // ── PTZ (indigo) ──────────────────────────────────────────────────────────
-    main         -> camera [label="PTZ",          color="#5C6BC0", penwidth=2, fontcolor="#5C6BC0"];
-    auto_starter -> camera [label="PTZ to pulpit",color="#5C6BC0", penwidth=2, fontcolor="#5C6BC0"];
-    preset_mgr   -> camera [label="PTZ to pulpit",color="#5C6BC0", penwidth=2, fontcolor="#5C6BC0"];
+    // ── PTZ (indigo) — no label, destination is self-describing ──────────────
+    main         -> camera [color="#5C6BC0", penwidth=2];
+    auto_starter -> camera [color="#5C6BC0", penwidth=2];
+    preset_mgr   -> camera [color="#5C6BC0", penwidth=2];
 
-    // ── Workflow → External API (dark blue) ───────────────────────────────────
-    atem_wf       -> companion      [label="custom variable API", color="#1A237E", penwidth=2, fontcolor="#1A237E"];
-    shorter       -> companion      [label="GET recording info",  color="#1A237E", penwidth=2, fontcolor="#1A237E"];
-    video_player  -> pi_vlc         [label="VLC HTTP API",        color="#1A237E", penwidth=2, fontcolor="#1A237E"];
-    browser_wf    -> pi_browser     [label="POST URL",            color="#1A237E", penwidth=2, fontcolor="#1A237E"];
-    restreamer_wf -> restreamer_svc [label="REST API",            color="#1A237E", penwidth=2, fontcolor="#1A237E"];
-    send_email    -> resend_api     [label="POST /emails",        color="#1A237E", penwidth=2, fontcolor="#1A237E"];
+    // ── Workflow → External API — headlabel near arrowhead ────────────────────
+    atem_wf       -> companion      [headlabel="custom variable\nAPI", color="#1A237E", penwidth=2, labelfontcolor="#1A237E", labelfontsize=9, labeldistance=3];
+    shorter       -> companion      [headlabel="recording info",       color="#1A237E", penwidth=2, labelfontcolor="#1A237E", labelfontsize=9, labeldistance=2.5];
+    video_player  -> pi_vlc         [headlabel="VLC HTTP API",         color="#1A237E", penwidth=2, labelfontcolor="#1A237E", labelfontsize=9, labeldistance=2.5];
+    browser_wf    -> pi_browser     [headlabel="POST URL",             color="#1A237E", penwidth=2, labelfontcolor="#1A237E", labelfontsize=9, labeldistance=2.2];
+    restreamer_wf -> restreamer_svc [headlabel="REST API",             color="#1A237E", penwidth=2, labelfontcolor="#1A237E", labelfontsize=9, labeldistance=2.2];
+    send_email    -> resend_api     [headlabel="POST /emails",         color="#1A237E", penwidth=2, labelfontcolor="#1A237E", labelfontsize=9, labeldistance=2.5];
 }
