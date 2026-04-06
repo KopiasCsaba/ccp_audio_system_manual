@@ -23,9 +23,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:zoom="0.89637339"
-     inkscape:cx="4414.455"
-     inkscape:cy="435.08655"
+     inkscape:zoom="1.7927468"
+     inkscape:cx="4283.9291"
+     inkscape:cy="538.83795"
      inkscape:window-width="2560"
      inkscape:window-height="1032"
      inkscape:window-x="1920"
@@ -58,7 +58,7 @@
     <rect
        x="4011.7211"
        y="402.73396"
-       width="188.5375"
+       width="254.02473"
        height="187.9797"
        id="rect89" />
     <marker
@@ -1438,14 +1438,31 @@
        width="233.89421"
        height="46.963295"
        id="rect61" />
+    <rect
+       x="4011.7211"
+       y="402.73396"
+       width="255.93213"
+       height="246.47315"
+       id="rect98" />
+    <rect
+       x="4011.7211"
+       y="402.73396"
+       width="254.02473"
+       height="187.9797"
+       id="rect100" />
   </defs>
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
     <path
-       style="fill:none;stroke:#cccccc;stroke-width:1;marker-end:url(#marker214);paint-order:stroke fill markers"
-       d="m 1099.9722,105.78372 c 19.0977,8.63707 37.1198,6.24072 56.9501,6.08604"
+       style="fill:none;stroke:#ffe680;stroke-width:1;marker-end:url(#marker214);paint-order:stroke fill markers"
+       d="m 1109.0335,151.6459 c 18.4752,-1.32271 67.6758,0.0757 79.0293,-8.48803"
+       id="path98"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#ffe680;stroke-width:1;marker-end:url(#marker214);paint-order:stroke fill markers"
+       d="m 1107.6947,105.78372 c 19.0977,8.63707 29.3973,6.24072 49.2276,6.08604"
        id="path89"
        sodipodi:nodetypes="cc" />
     <rect
@@ -2874,9 +2891,9 @@
        style="font-weight:500;font-stretch:condensed;font-size:17.3333px;line-height:1;font-family:Roboto;-inkscape-font-specification:'Roboto Medium Condensed';text-align:center;letter-spacing:0.64px;white-space:pre;shape-inside:url(#rect280);display:inline;fill:#cccccc;stroke:#800000;stroke-width:22.2248;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill"><tspan
          x="250.46614"
          y="23.326147"
-         id="tspan97"><tspan
+         id="tspan98"><tspan
            style="fill:#000000;stroke:none"
-           id="tspan96">SDI</tspan></tspan></text>
+           id="tspan97">SDI</tspan></tspan></text>
     <rect
        style="fill:#ff0000;stroke:#333333;stroke-width:3.00001;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill"
        id="rect253"
@@ -2893,9 +2910,9 @@
        y="0"><tspan
          x="165.85156"
          y="23.326147"
-         id="tspan99"><tspan
+         id="tspan101"><tspan
            style="fill:#000000;stroke:none"
-           id="tspan98">SDI 2 HDMI</tspan></tspan></text>
+           id="tspan100">SDI 2 HDMI</tspan></tspan></text>
     <rect
        style="fill:#800000;fill-opacity:1;stroke:#333333;stroke-width:3.00001;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill"
        id="rect255"
@@ -2912,9 +2929,9 @@
        y="0"><tspan
          x="165.85156"
          y="23.326147"
-         id="tspan101"><tspan
+         id="tspan103"><tspan
            style="fill:#000000;stroke:none"
-           id="tspan100">HDMI 2 SDI</tspan></tspan></text>
+           id="tspan102">HDMI 2 SDI</tspan></tspan></text>
     <path
        style="fill:none;stroke:#ff0000;stroke-width:1.05833333;stroke-linecap:round;stroke-miterlimit:4.1;paint-order:stroke markers fill;stroke-dasharray:none"
        d="m 1235.7516,113.63105 c 11.9665,0.36222 22.066,5.57251 38.0327,-4.45347"
@@ -2946,9 +2963,9 @@
        y="0"><tspan
          x="3639.4922"
          y="458.72265"
-         id="tspan103"><tspan
+         id="tspan105"><tspan
            style="baseline-shift:baseline;vector-effect:none;stop-color:#000000;stop-opacity:1"
-           id="tspan102">O4 PROGRAM RAW</tspan></tspan></text>
+           id="tspan104">O4 PROGRAM RAW</tspan></tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.11066477,0,0,0.11053224,793.85146,51.117894)"
@@ -2958,9 +2975,9 @@
        y="0"><tspan
          x="3639.4922"
          y="458.72265"
-         id="tspan105"><tspan
+         id="tspan107"><tspan
            style="baseline-shift:baseline;vector-effect:none;stop-color:#000000;stop-opacity:1"
-           id="tspan104">I1</tspan></tspan></text>
+           id="tspan106">I1</tspan></tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.11066477,0,0,0.11053224,793.85146,54.105619)"
@@ -2970,9 +2987,9 @@
        y="0"><tspan
          x="3639.4922"
          y="458.72265"
-         id="tspan107"><tspan
+         id="tspan109"><tspan
            style="baseline-shift:baseline;vector-effect:none;stop-color:#000000;stop-opacity:1"
-           id="tspan106">I2</tspan></tspan></text>
+           id="tspan108">I2</tspan></tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.11066477,0,0,0.11053224,793.85146,57.093344)"
@@ -2982,9 +2999,9 @@
        y="0"><tspan
          x="3639.4922"
          y="458.72265"
-         id="tspan109"><tspan
+         id="tspan111"><tspan
            style="baseline-shift:baseline;vector-effect:none;stop-color:#000000;stop-opacity:1"
-           id="tspan108">I3</tspan></tspan></text>
+           id="tspan110">I3</tspan></tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.11066477,0,0,0.11053224,793.85146,60.079851)"
@@ -2994,9 +3011,9 @@
        y="0"><tspan
          x="3639.4922"
          y="458.72265"
-         id="tspan111"><tspan
+         id="tspan113"><tspan
            style="baseline-shift:baseline;vector-effect:none;stop-color:#000000;stop-opacity:1"
-           id="tspan110">I4</tspan></tspan></text>
+           id="tspan112">I4</tspan></tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.11066477,0,0,0.11053224,793.85146,63.041981)"
@@ -3006,9 +3023,9 @@
        y="0"><tspan
          x="3639.4922"
          y="458.72265"
-         id="tspan113"><tspan
+         id="tspan115"><tspan
            style="baseline-shift:baseline;vector-effect:none;stop-color:#000000;stop-opacity:1"
-           id="tspan112">I5</tspan></tspan></text>
+           id="tspan114">I5</tspan></tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.11066477,0,0,0.11053224,793.85146,66.054083)"
@@ -3018,9 +3035,9 @@
        y="0"><tspan
          x="3639.4922"
          y="458.72265"
-         id="tspan115"><tspan
+         id="tspan117"><tspan
            style="baseline-shift:baseline;vector-effect:none;stop-color:#000000;stop-opacity:1"
-           id="tspan114">I6</tspan></tspan></text>
+           id="tspan116">I6</tspan></tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.11066477,0,0,0.11053224,793.85146,69.04059)"
@@ -3030,9 +3047,9 @@
        y="0"><tspan
          x="3639.4922"
          y="458.72265"
-         id="tspan117"><tspan
+         id="tspan119"><tspan
            style="baseline-shift:baseline;vector-effect:none;stop-color:#000000;stop-opacity:1"
-           id="tspan116">I7</tspan></tspan></text>
+           id="tspan118">I7</tspan></tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.11066477,0,0,0.11053224,793.85146,72.028315)"
@@ -3042,9 +3059,9 @@
        y="0"><tspan
          x="3639.4922"
          y="458.72265"
-         id="tspan119"><tspan
+         id="tspan121"><tspan
            style="baseline-shift:baseline;vector-effect:none;stop-color:#000000;stop-opacity:1"
-           id="tspan118">I8</tspan></tspan></text>
+           id="tspan120">I8</tspan></tspan></text>
     <path
        style="fill:none;stroke:#ff0000;stroke-width:1.05833333;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill;stroke-dasharray:none"
        d="m 1097.8003,79.062272 c 16.3344,-1.057857 8.9295,19.204597 17.6544,23.882238 23.6079,12.65676 71.3499,3.6281 80.2595,4.01878"
@@ -3195,9 +3212,9 @@
        style="font-size:60px;line-height:1.1;font-family:'Saira Stencil One';-inkscape-font-specification:'Saira Stencil One';text-align:center;letter-spacing:7px;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect103);display:inline;fill:none;stroke:#000000;stroke-width:2.31174;stroke-linecap:round;stroke-miterlimit:4.1;paint-order:stroke markers fill"><tspan
          x="4521.4355"
          y="696.41797"
-         id="tspan121"><tspan
+         id="tspan123"><tspan
            style="font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, ';fill:#1a1a1a;stroke:none"
-           id="tspan120">AUDIO BOOTH</tspan></tspan></text>
+           id="tspan122">AUDIO BOOTH</tspan></tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.20845111,0,0,0.20820148,288.54829,26.625894)"
@@ -3205,9 +3222,9 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:60px;line-height:1.1;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, ';text-align:center;letter-spacing:7px;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect122);display:inline;fill:#1a1a1a;stroke:none;stroke-width:1.20004;stroke-linecap:round;stroke-miterlimit:4.1;paint-order:stroke markers fill"><tspan
          x="4287.8164"
          y="292.5918"
-         id="tspan123"><tspan
+         id="tspan125"><tspan
            dx="0 31.113281 37.207031 36.064453"
-           id="tspan122">SHOR</tspan></tspan></text>
+           id="tspan124">SHOR</tspan></tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.20845111,0,0,0.20820148,288.54829,26.625894)"
@@ -3222,7 +3239,7 @@
        y="0"><tspan
          x="165.85156"
          y="23.326147"
-         id="tspan124">5m</tspan></text>
+         id="tspan126">5m</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.11732786,0,0,0.11713027,1132.7395,94.835354)"
@@ -3232,7 +3249,7 @@
        y="0"><tspan
          x="165.85156"
          y="23.326147"
-         id="tspan125">SHORT</tspan></text>
+         id="tspan127">SHORT</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.11732786,0,0,0.11713027,1131.3577,115.5539)"
@@ -3242,7 +3259,7 @@
        y="0"><tspan
          x="165.85156"
          y="23.326147"
-         id="tspan126">SHORT</tspan></text>
+         id="tspan128">SHORT</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.11732786,0,0,0.11713027,1164.3915,100.16007)"
@@ -3252,7 +3269,7 @@
        y="0"><tspan
          x="165.85156"
          y="23.326147"
-         id="tspan127">SHORT</tspan></text>
+         id="tspan129">SHORT</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.11553298,-0.02044403,0.0204096,0.11533841,1164.1757,114.31733)"
@@ -3262,7 +3279,7 @@
        y="0"><tspan
          x="165.85156"
          y="23.326147"
-         id="tspan128">SHORT</tspan></text>
+         id="tspan130">SHORT</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.11732786,0,0,0.11713027,1206.314,86.624274)"
@@ -3272,7 +3289,7 @@
        y="0"><tspan
          x="165.85156"
          y="23.326147"
-         id="tspan129">SHORT</tspan></text>
+         id="tspan131">SHORT</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.11732786,0,0,0.11713027,1221.2991,86.441754)"
@@ -3282,7 +3299,7 @@
        y="0"><tspan
          x="165.85156"
          y="23.326147"
-         id="tspan130">SHORT</tspan></text>
+         id="tspan132">SHORT</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.11732786,0,0,0.11713027,1218.068,57.803351)"
@@ -3292,11 +3309,11 @@
        y="0"><tspan
          x="165.85156"
          y="23.326147"
-         id="tspan131">ORIGINAL 
+         id="tspan133">ORIGINAL 
 </tspan><tspan
          x="165.85156"
          y="40.659446"
-         id="tspan132">HDMI LONG</tspan></text>
+         id="tspan134">HDMI LONG</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.11732786,0,0,0.11713027,1226.2331,113.27292)"
@@ -3306,7 +3323,7 @@
        y="0"><tspan
          x="165.85156"
          y="23.326147"
-         id="tspan133">SHORT</tspan></text>
+         id="tspan135">SHORT</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.20845111,0,0,0.20820148,288.54829,26.625894)"
@@ -3321,7 +3338,7 @@
        y="0"><tspan
          x="165.85156"
          y="23.326147"
-         id="tspan134">15m</tspan></text>
+         id="tspan136">15m</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.33392995,0,0,0.33336759,1235.5017,79.535918)"
@@ -3331,7 +3348,7 @@
        y="0"><tspan
          x="165.85156"
          y="23.326147"
-         id="tspan135">15m</tspan></text>
+         id="tspan137">15m</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.33392995,0,0,0.33336759,1266.5442,86.114423)"
@@ -3343,7 +3360,7 @@
        inkscape:transform-center-y="-12.229175"><tspan
          x="165.85156"
          y="23.326147"
-         id="tspan136">17m</tspan></text>
+         id="tspan138">17m</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.33392995,0,0,0.33336759,1235.6798,108.14245)"
@@ -3355,7 +3372,7 @@
        inkscape:transform-center-y="-12.229163"><tspan
          x="165.85156"
          y="23.326147"
-         id="tspan137">9m</tspan></text>
+         id="tspan139">9m</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.33392995,0,0,0.33336759,1235.6289,87.749534)"
@@ -3365,7 +3382,7 @@
        y="0"><tspan
          x="165.85156"
          y="23.326147"
-         id="tspan138">6m</tspan></text>
+         id="tspan140">6m</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.33392995,0,0,0.33336759,1235.7193,135.38855)"
@@ -3375,7 +3392,7 @@
        y="0"><tspan
          x="165.85156"
          y="23.326147"
-         id="tspan139">20m</tspan></text>
+         id="tspan141">20m</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.33392995,0,0,0.33336759,1120.8214,72.807409)"
@@ -3385,7 +3402,7 @@
        y="0"><tspan
          x="165.85156"
          y="23.326147"
-         id="tspan140">15m</tspan></text>
+         id="tspan142">15m</tspan></text>
     <path
        style="fill:none;stroke:#800000;stroke-width:1.05833333;stroke-linecap:round;stroke-miterlimit:4.1;paint-order:stroke markers fill;stroke-dasharray:none"
        d="m 1147.2718,147.34007 28.0036,-11.90231"
@@ -3409,7 +3426,7 @@
          style="font-weight:500;font-stretch:condensed;font-size:17.3333px;line-height:1;font-family:Roboto;-inkscape-font-specification:'Roboto Medium Condensed';text-align:center;letter-spacing:0.64px;white-space:pre;shape-inside:url(#rect276-7);display:inline;fill:#1a1a1a;stroke:none;stroke-width:13.3348;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill"><tspan
            x="217.6686"
            y="166.94724"
-           id="tspan141">STREAM PC</tspan></text>
+           id="tspan143">STREAM PC</tspan></text>
     </g>
     <rect
        style="fill:#800000;fill-opacity:1;stroke:#333333;stroke-width:3.00001;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill"
@@ -3427,7 +3444,7 @@
        y="0"><tspan
          x="165.85156"
          y="23.326147"
-         id="tspan142">SHORT</tspan></text>
+         id="tspan144">SHORT</tspan></text>
     <path
        style="fill:none;stroke:#ff0000;stroke-width:1.05833333;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill;stroke-dasharray:none"
        d="m 1180.0719,134.14512 15.5414,-18.2143"
@@ -3442,7 +3459,7 @@
        y="0"><tspan
          x="165.85156"
          y="23.326147"
-         id="tspan143">SHORT</tspan></text>
+         id="tspan145">SHORT</tspan></text>
     <g
        id="g106"
        transform="matrix(0.51061045,0,0,0.50975054,1106.1769,99.681524)"
@@ -3461,14 +3478,14 @@
          style="font-weight:500;font-stretch:condensed;font-size:17.3333px;line-height:1;font-family:Roboto;-inkscape-font-specification:'Roboto Medium Condensed';text-align:center;letter-spacing:0.64px;white-space:pre;shape-inside:url(#rect106);display:inline;fill:#1a1a1a;stroke:none;stroke-width:13.3348;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill"><tspan
            x="221.81342"
            y="166.94724"
-           id="tspan144">PLAYBACK
+           id="tspan146">PLAYBACK
 </tspan><tspan
            x="246.48145"
            y="184.28054"
-           id="tspan145">BOX </tspan><tspan
+           id="tspan147">BOX </tspan><tspan
            x="225.10058"
            y="201.61384"
-           id="tspan146">BROWSER</tspan></text>
+           id="tspan148">BROWSER</tspan></text>
     </g>
     <path
        style="fill:none;stroke:#800000;stroke-width:1.05833333;stroke-linecap:round;stroke-miterlimit:4.1;paint-order:stroke markers fill;stroke-dasharray:none"
@@ -3496,7 +3513,7 @@
        y="0"><tspan
          x="165.85156"
          y="23.326147"
-         id="tspan147">SHORT</tspan></text>
+         id="tspan149">SHORT</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.10240352,-0.05726558,0.05716914,0.10223106,1165.8928,127.51331)"
@@ -3506,7 +3523,7 @@
        y="0"><tspan
          x="165.85156"
          y="23.326147"
-         id="tspan148">SHORT</tspan></text>
+         id="tspan150">SHORT</tspan></text>
     <path
        style="fill:none;stroke:#ff0000;stroke-width:1.05833;stroke-linecap:round;stroke-miterlimit:4.1;stroke-dasharray:none;paint-order:stroke markers fill"
        d="m 1242.0159,122.55826 c 28.9665,21.90522 -80.6476,47.48289 -47.9212,-2.5808 0.4464,-0.68285 0.9316,-1.19782 1.7616,-1.0889"
@@ -3530,7 +3547,7 @@
          style="font-weight:500;font-stretch:condensed;font-size:17.3333px;line-height:1;font-family:Roboto;-inkscape-font-specification:'Roboto Medium Condensed';text-align:center;letter-spacing:0.64px;white-space:pre;shape-inside:url(#rect257);display:inline;fill:#1a1a1a;stroke:none;stroke-width:13.3348;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill"><tspan
            x="229.60579"
            y="166.94724"
-           id="tspan149">CAMERA</tspan></text>
+           id="tspan151">CAMERA</tspan></text>
     </g>
     <text
        xml:space="preserve"
@@ -3541,9 +3558,9 @@
        y="0"><tspan
          x="165.85156"
          y="23.326147"
-         id="tspan151"><tspan
+         id="tspan153"><tspan
            style="fill:#000000;stroke:none"
-           id="tspan150">SDI SPLIT</tspan></tspan></text>
+           id="tspan152">SDI SPLIT</tspan></tspan></text>
     <rect
        style="fill:#00ff00;stroke:#1a1a1a;stroke-width:2.97368;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill"
        id="rect108"
@@ -3559,15 +3576,15 @@
        style="font-size:53.3333px;font-family:'Secular One';-inkscape-font-specification:'Secular One';text-align:center;letter-spacing:0px;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect130);display:inline;fill:#000000;stroke:#000000;stroke-width:6.24022;paint-order:stroke fill markers"><tspan
          x="4329.5586"
          y="1006.4154"
-         id="tspan153"><tspan
+         id="tspan155"><tspan
            dx="0 34.880047 37.119938 36.533279 16.05336 39.519928"
-           id="tspan152">AUDIO
+           id="tspan154">AUDIO
 </tspan></tspan><tspan
          x="4329.5586"
          y="1073.082"
-         id="tspan155"><tspan
+         id="tspan157"><tspan
            dx="0 31.04002 39.519932 38.346642 28.85334 39.519928 25.866684"
-           id="tspan154">CONSOLE</tspan></tspan></text>
+           id="tspan156">CONSOLE</tspan></tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.08431766,0,0,0.08421668,794.71175,156.34377)"
@@ -3575,11 +3592,11 @@
        style="font-size:53.3333px;font-family:'Secular One';-inkscape-font-specification:'Secular One';text-align:center;letter-spacing:0px;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect152);display:inline;fill:#000000;stroke:none;stroke-width:6.24022;paint-order:stroke fill markers"><tspan
          x="4549.9575"
          y="1050.3548"
-         id="tspan156">AUDIO
+         id="tspan158">AUDIO
 </tspan><tspan
          x="4516.3041"
          y="1117.0215"
-         id="tspan157">CONSOLE</tspan></text>
+         id="tspan159">CONSOLE</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.20845111,0,0,0.20820148,288.54829,26.625894)"
@@ -3594,7 +3611,7 @@
        y="0"><tspan
          x="4631.3483"
          y="1050.3548"
-         id="tspan158">LIVE OUT</tspan></text>
+         id="tspan160">LIVE OUT</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0,-0.08421668,0.08431766,0,1071.4475,625.79244)"
@@ -3604,7 +3621,7 @@
        y="0"><tspan
          x="4647.4549"
          y="1050.3548"
-         id="tspan159">AUX 1 IN</tspan></text>
+         id="tspan161">AUX 1 IN</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0,-0.08421668,0.08431766,0,1077.0382,625.79244)"
@@ -3614,7 +3631,7 @@
        y="0"><tspan
          x="4643.2415"
          y="1050.3548"
-         id="tspan160">AUX 2 IN</tspan></text>
+         id="tspan162">AUX 2 IN</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0,-0.08421668,0.08431766,0,1082.6292,625.61278)"
@@ -3624,7 +3641,7 @@
        y="0"><tspan
          x="4644.8949"
          y="1050.3548"
-         id="tspan161">AUX 3 IN</tspan></text>
+         id="tspan163">AUX 3 IN</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0,-0.08421668,0.08431766,0,1088.1615,625.79244)"
@@ -3634,7 +3651,7 @@
        y="0"><tspan
          x="4640.2016"
          y="1050.3548"
-         id="tspan162">AUX 4 IN</tspan></text>
+         id="tspan164">AUX 4 IN</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0,0.11053224,-0.11066477,0,1252.5528,-266.58804)"
@@ -3644,7 +3661,7 @@
        y="0"><tspan
          x="3639.4922"
          y="458.72265"
-         id="tspan163">MIC1</tspan></text>
+         id="tspan165">MIC1</tspan></text>
     <path
        style="fill:none;stroke:#0000ff;stroke-width:0.75;stroke-dasharray:0.75, 0.75;stroke-dashoffset:0;marker-end:url(#Triangle);paint-order:stroke fill markers"
        d="m 1222.1912,216.91218 c -27.6598,-31.72032 -25.9487,-46.83746 -20.3593,-71.75587"
@@ -3690,15 +3707,15 @@
        y="0"><tspan
          x="165.85156"
          y="23.326147"
-         id="tspan165"><tspan
+         id="tspan167"><tspan
            style="fill:#000000;stroke:none"
-           id="tspan164">SDI AUDIO EXTRACTOR
+           id="tspan166">SDI AUDIO EXTRACTOR
 </tspan></tspan><tspan
          x="165.85156"
          y="40.659446"
-         id="tspan167"><tspan
+         id="tspan169"><tspan
            style="fill:#000000;stroke:none"
-           id="tspan166">WITH SDI PASSTHROUGH</tspan></tspan></text>
+           id="tspan168">WITH SDI PASSTHROUGH</tspan></tspan></text>
     <rect
        style="fill:#0000ff;stroke:#333333;stroke-width:3.00001;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill"
        id="rect169"
@@ -3723,15 +3740,15 @@
        y="0"><tspan
          x="4077.8088"
          y="819.38358"
-         id="tspan169"><tspan
+         id="tspan171"><tspan
            style="stroke-width:52.7192"
-           id="tspan168">USB
+           id="tspan170">USB
 </tspan></tspan><tspan
          x="4043.9155"
          y="857.65067"
-         id="tspan171"><tspan
+         id="tspan173"><tspan
            style="stroke-width:52.7192"
-           id="tspan170">AUDIO</tspan></tspan></text>
+           id="tspan172">AUDIO</tspan></tspan></text>
     <path
        style="fill:none;stroke:#0000ff;stroke-width:0.75;stroke-dasharray:0.75, 0.75;stroke-dashoffset:0;marker-end:url(#Triangle);paint-order:stroke fill markers"
        d="m 1123.7504,132.06182 c -3.8981,49.59361 29.5222,59.69116 40.3897,82.48866"
@@ -3746,9 +3763,9 @@
        y="0"><tspan
          x="4090.2621"
          y="819.38358"
-         id="tspan173"><tspan
+         id="tspan175"><tspan
            style="stroke-width:52.7192"
-           id="tspan172">PI5</tspan></tspan></text>
+           id="tspan174">PI5</tspan></tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.26790107,0,0,0.2674499,1017.336,1.1533638)"
@@ -3758,7 +3775,7 @@
        y="0"><tspan
          x="165.85156"
          y="23.326147"
-         id="tspan174">Cable types:</tspan></text>
+         id="tspan176">Cable types:</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.05414648,-0.10408643,0.10391114,0.05405529,1176.1061,149.49395)"
@@ -3770,7 +3787,7 @@
        inkscape:transform-center-y="1.1625799"><tspan
          x="165.85156"
          y="23.326147"
-         id="tspan175">SHORT</tspan></text>
+         id="tspan177">SHORT</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.18371476,0,0,0.18340537,1115.1247,105.43448)"
@@ -3780,7 +3797,7 @@
        y="0"><tspan
          x="165.85156"
          y="23.326147"
-         id="tspan176">LONG!</tspan></text>
+         id="tspan178">LONG!</tspan></text>
     <path
        style="fill:none;stroke:#0000ff;stroke-width:0.75;stroke-dasharray:0.75, 0.75;stroke-dashoffset:0;marker-end:url(#Triangle);paint-order:stroke fill markers"
        d="m 1132.9968,6.0516972 6.4296,-0.1552383"
@@ -3793,9 +3810,9 @@
        style="font-weight:500;font-stretch:condensed;font-size:17.3333px;line-height:1;font-family:Roboto;-inkscape-font-specification:'Roboto Medium Condensed';text-align:center;letter-spacing:0.64px;white-space:pre;shape-inside:url(#rect209);display:inline;fill:#cccccc;stroke:#800000;stroke-width:22.2248;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill"><tspan
          x="239.25943"
          y="23.326147"
-         id="tspan178"><tspan
+         id="tspan180"><tspan
            style="fill:#000000;stroke:none"
-           id="tspan177">AUDIO</tspan></tspan></text>
+           id="tspan179">AUDIO</tspan></tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.26790107,0,0,0.2674499,1017.336,11.703238)"
@@ -3805,7 +3822,7 @@
        y="0"><tspan
          x="165.85156"
          y="23.326147"
-         id="tspan179">Converters:</tspan></text>
+         id="tspan181">Converters:</tspan></text>
     <rect
        style="fill:none;stroke:#1a1a1a;stroke-width:0.499999;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers"
        id="rect211"
@@ -3822,7 +3839,7 @@
        y="0"><tspan
          x="165.85156"
          y="23.326147"
-         id="tspan180">SHORT</tspan></text>
+         id="tspan182">SHORT</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.13403878,0,0,0.13381305,1065.9789,85.930583)"
@@ -3832,7 +3849,7 @@
        y="0"><tspan
          x="165.85156"
          y="23.326147"
-         id="tspan181">STAGE CORNER</tspan></text>
+         id="tspan183">STAGE CORNER</tspan></text>
     <rect
        style="fill:none;stroke:#1a1a1a;stroke-width:0.499998;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers"
        id="rect214"
@@ -3862,59 +3879,125 @@
        y="0"><tspan
          x="3639.4922"
          y="458.72265"
-         id="tspan182">TYPE-C WEBCAM</tspan></text>
+         id="tspan184">TYPE-C WEBCAM</tspan></text>
     <path
        style="fill:none;stroke:#999999;stroke-width:1;marker-end:url(#marker70);paint-order:stroke fill markers"
        d="m 1241.242,129.40475 c 5.6011,0.22667 7.1194,8.60126 3.3575,12.01004 -18.4038,16.67648 -128.9169,52.23109 -123.9961,2.39145"
        id="path68"
        sodipodi:nodetypes="csc" />
     <rect
-       style="fill:none;stroke:#cccccc;stroke-width:1;paint-order:stroke fill markers"
+       style="fill:none;stroke:#ffe680;stroke-width:1;paint-order:stroke fill markers"
        id="rect87"
-       width="35.456203"
-       height="33.944653"
+       width="43.491795"
+       height="26.117748"
        x="1064.2386"
        y="105.81876" />
     <text
        xml:space="preserve"
        transform="matrix(0.16413799,0,0,0.16413799,407.24936,41.763931)"
        id="text87"
-       style="font-weight:500;font-size:13.3333px;line-height:15px;font-family:'DM Mono';-inkscape-font-specification:'DM Mono Medium';letter-spacing:0.06px;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect89);fill:#000000;stroke:none;stroke-width:6.09244;paint-order:stroke fill markers"><tspan
+       style="font-weight:500;font-size:13.3333px;line-height:15px;font-family:'DM Mono';-inkscape-font-specification:'DM Mono Medium';letter-spacing:0.06px;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect89);display:inline;fill:#000000;stroke:none;stroke-width:6.09244;paint-order:stroke fill markers"><tspan
          x="4011.7207"
          y="413.72643"
-         id="tspan183">I think the BM adapter </tspan><tspan
+         id="tspan185">I think the BM adapter was </tspan><tspan
          x="4011.7207"
          y="428.72643"
-         id="tspan184">was constantly </tspan><tspan
+         id="tspan186">constantly reinitialized </tspan><tspan
          x="4011.7207"
          y="443.72643"
-         id="tspan185">reinitialized something </tspan><tspan
+         id="tspan187">something with the HDMI-&gt;audio </tspan><tspan
          x="4011.7207"
          y="458.72643"
-         id="tspan186">with the HDMI-&gt;audio </tspan><tspan
+         id="tspan188">adapter, and it made it to </tspan><tspan
          x="4011.7207"
          y="473.72643"
-         id="tspan187">adapter, and it made it </tspan><tspan
+         id="tspan189">click once per second. So to </tspan><tspan
          x="4011.7207"
          y="488.72643"
-         id="tspan188">to click once per </tspan><tspan
+         id="tspan190">avoid that, I added a hdmi </tspan><tspan
          x="4011.7207"
          y="503.72643"
-         id="tspan189">second. So to avoid </tspan><tspan
+         id="tspan191">splitter before it, it is hacky </tspan><tspan
          x="4011.7207"
          y="518.72643"
-         id="tspan190">that, I added a hdmi </tspan><tspan
+         id="tspan192">but does seem to work, and it </tspan><tspan
          x="4011.7207"
          y="533.72643"
-         id="tspan191">splitter before it, it </tspan><tspan
+         id="tspan193">is not clicking anymore.</tspan></text>
+    <rect
+       style="fill:none;stroke:#ffe680;stroke-width:0.999997;paint-order:stroke fill markers"
+       id="rect96"
+       width="44.639767"
+       height="31.961838"
+       x="1064.2386"
+       y="151.57025" />
+    <text
+       xml:space="preserve"
+       transform="matrix(0.16413799,0,0,0.16413799,407.24936,86.777492)"
+       id="text96"
+       style="font-weight:500;font-size:13.3333px;line-height:15px;font-family:'DM Mono';-inkscape-font-specification:'DM Mono Medium';letter-spacing:0.06px;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect98);display:inline;fill:#000000;stroke:none;stroke-width:6.09244;paint-order:stroke fill markers"><tspan
+         x="4011.7207"
+         y="413.72643"
+         id="tspan194">The program output is fed back </tspan><tspan
+         x="4011.7207"
+         y="428.72643"
+         id="tspan195">as an input.
+</tspan><tspan
+         x="4011.7207"
+         y="443.72643"
+         id="tspan196">Then with a supersource we can </tspan><tspan
+         x="4011.7207"
+         y="458.72643"
+         id="tspan197">put something above the O4 </tspan><tspan
+         x="4011.7207"
+         y="473.72643"
+         id="tspan198">output without adding it to the </tspan><tspan
+         x="4011.7207"
+         y="488.72643"
+         id="tspan199">program. This is how we have </tspan><tspan
+         x="4011.7207"
+         y="503.72643"
+         id="tspan200">our nursery call: we don't </tspan><tspan
+         x="4011.7207"
+         y="518.72643"
+         id="tspan201">wanna live stream the call, but </tspan><tspan
+         x="4011.7207"
+         y="533.72643"
+         id="tspan202">wanna show on all our screens. </tspan><tspan
          x="4011.7207"
          y="548.72643"
-         id="tspan192">is hacky but does seem </tspan><tspan
+         id="tspan203">So O4 can be set to PROGRAM or </tspan><tspan
          x="4011.7207"
          y="563.72643"
-         id="tspan193">to work, and it is not </tspan><tspan
+         id="tspan204">SSRC (while ssrc's background </tspan><tspan
          x="4011.7207"
          y="578.72643"
-         id="tspan194">clicking anymore.</tspan></text>
+         id="tspan205">can be the PROGRAM).</tspan></text>
+    <rect
+       style="fill:none;stroke:#ffe680;stroke-width:1;paint-order:stroke fill markers"
+       id="rect99"
+       width="43.491795"
+       height="10.768862"
+       x="1064.829"
+       y="189.35213" />
+    <text
+       xml:space="preserve"
+       transform="matrix(0.16413799,0,0,0.16413799,407.98729,125.0633)"
+       id="text99"
+       style="font-weight:500;font-size:13.3333px;line-height:15px;font-family:'DM Mono';-inkscape-font-specification:'DM Mono Medium';letter-spacing:0.06px;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect100);display:inline;fill:#000000;stroke:none;stroke-width:6.09244;paint-order:stroke fill markers"><tspan
+         x="4011.7207"
+         y="413.72643"
+         id="tspan206">This enables remote monitoring </tspan><tspan
+         x="4011.7207"
+         y="428.72643"
+         id="tspan207">the multiview via the PI and </tspan><tspan
+         x="4011.7207"
+         y="443.72643"
+         id="tspan208">the mediamtx running on it.</tspan></text>
+    <path
+       style="fill:none;stroke:#ffe680;stroke-width:1;marker-end:url(#marker214);paint-order:stroke fill markers"
+       d="m 1108.7383,189.42777 c 18.4752,-1.32271 4.0665,-19.25799 15.42,-27.82172"
+       id="path100"
+       sodipodi:nodetypes="cc" />
   </g>
 </svg>
