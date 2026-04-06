@@ -1,0 +1,289 @@
+{
+  "updatedAt": "2026-03-04T20:58:41.032Z",
+  "createdAt": "2025-11-16T12:50:24.487Z",
+  "id": "CgSbDSo1mHpiRCnr",
+  "name": "readconfig",
+  "description": null,
+  "active": true,
+  "isArchived": false,
+  "nodes": [
+    {
+      "parameters": {
+        "inputSource": "passthrough"
+      },
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        -304,
+        224
+      ],
+      "id": "e2324fce-dae5-4850-8fb9-e187f21b9b12",
+      "name": "When Executed by Another Workflow"
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "dataTableId": {
+          "__rl": true,
+          "value": "il3gZO5GYNLZhOsa",
+          "mode": "list",
+          "cachedResultName": "config",
+          "cachedResultUrl": "/projects/NBttNnd6CVeZWrwI/datatables/il3gZO5GYNLZhOsa"
+        },
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "key",
+              "keyValue": "config"
+            }
+          ]
+        },
+        "limit": 1
+      },
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1,
+      "position": [
+        -80,
+        128
+      ],
+      "id": "83d0b6ee-2c7b-4bf0-a5c8-1206bc1ac523",
+      "name": "get_config"
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "dataTableId": {
+          "__rl": true,
+          "value": "il3gZO5GYNLZhOsa",
+          "mode": "list",
+          "cachedResultName": "config",
+          "cachedResultUrl": "/projects/NBttNnd6CVeZWrwI/datatables/il3gZO5GYNLZhOsa"
+        },
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "key",
+              "keyValue": "current_preset"
+            }
+          ]
+        },
+        "limit": 1
+      },
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1,
+      "position": [
+        -80,
+        320
+      ],
+      "id": "09be4826-6e6e-4c2e-ad0a-05bfeaf39fcc",
+      "name": "get selected_preset"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "ad148d85-d8a8-45ff-a8ef-d6f185cf3489",
+              "name": "=config",
+              "value": "={{ JSON.parse($json.value) }}",
+              "type": "object"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        144,
+        128
+      ],
+      "id": "071f1d40-983a-47f2-b95e-e30b3b6c4af7",
+      "name": "Edit Fields1"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "ad148d85-d8a8-45ff-a8ef-d6f185cf3489",
+              "name": "=selected_preset",
+              "value": "={{ $json.value }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        144,
+        320
+      ],
+      "id": "e3c552c7-76a8-4ec7-b965-4e306df6de8f",
+      "name": "Edit Fields2"
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "combineBy": "combineAll",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        368,
+        224
+      ],
+      "id": "f7bed292-bcd9-4575-a4e8-731ba1a182dd",
+      "name": "Merge1",
+      "alwaysOutputData": false,
+      "executeOnce": false
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "5093ab53-2eca-4850-bce8-8db5238eff87",
+              "name": "config",
+              "value": "={{ $json.config }}",
+              "type": "object"
+            },
+            {
+              "id": "0adfd418-b0ae-434a-abaa-788b04dca2f7",
+              "name": "config.selected_preset_name",
+              "value": "={{ $json.selected_preset }}",
+              "type": "string"
+            },
+            {
+              "id": "5a44f90d-d033-4483-af41-830023ce1d4c",
+              "name": "config.selected_preset",
+              "value": "={{ $json.config.presets[$json.selected_preset] }}",
+              "type": "object"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        592,
+        224
+      ],
+      "id": "44f41aaa-9758-44dd-a65e-a76fb66c31cc",
+      "name": "Edit Fields3"
+    }
+  ],
+  "connections": {
+    "When Executed by Another Workflow": {
+      "main": [
+        [
+          {
+            "node": "get_config",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "get selected_preset",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "get_config": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "get selected_preset": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields1": {
+      "main": [
+        [
+          {
+            "node": "Merge1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields2": {
+      "main": [
+        [
+          {
+            "node": "Merge1",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Merge1": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "saveDataSuccessExecution": "none",
+    "saveManualExecutions": false,
+    "callerPolicy": "workflowsFromSameOwner",
+    "availableInMCP": false,
+    "errorWorkflow": "E0yl55s1YkCD2LNx",
+    "timeSavedMode": "fixed"
+  },
+  "staticData": null,
+  "meta": null,
+  "pinData": {},
+  "versionId": "4a7631cd-979c-4d4c-a07b-aff32a92683b",
+  "activeVersionId": "4a7631cd-979c-4d4c-a07b-aff32a92683b",
+  "versionCounter": 103,
+  "triggerCount": 0,
+  "tags": [],
+  "shared": [
+    {
+      "updatedAt": "2026-01-28T09:50:30.201Z",
+      "createdAt": "2026-01-28T09:50:30.201Z",
+      "role": "workflow:owner",
+      "workflowId": "CgSbDSo1mHpiRCnr",
+      "projectId": "NBttNnd6CVeZWrwI",
+      "project": {
+        "updatedAt": "2026-01-28T08:29:07.278Z",
+        "createdAt": "2026-01-28T08:04:49.772Z",
+        "id": "NBttNnd6CVeZWrwI",
+        "name": "Calvary Paphos <calvarycypruscalendar@gmail.com>",
+        "type": "personal",
+        "icon": null,
+        "description": null,
+        "creatorId": "d84e1e89-6472-46a2-881c-0780a65eac38"
+      }
+    }
+  ]
+}

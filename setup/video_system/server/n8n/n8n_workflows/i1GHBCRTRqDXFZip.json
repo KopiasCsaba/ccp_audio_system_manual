@@ -1,0 +1,41 @@
+{
+  "updatedAt": "2025-12-03T12:39:00.317Z",
+  "createdAt": "2025-12-03T12:38:54.268Z",
+  "id": "i1GHBCRTRqDXFZip",
+  "name": "log",
+  "description": null,
+  "active": false,
+  "isArchived": true,
+  "nodes": [],
+  "connections": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "meta": null,
+  "pinData": {},
+  "versionId": "b1f262b2-45ff-4454-a548-e57aaa211de4",
+  "activeVersionId": null,
+  "versionCounter": 2,
+  "triggerCount": 0,
+  "tags": [],
+  "shared": [
+    {
+      "updatedAt": "2026-01-28T09:50:30.201Z",
+      "createdAt": "2026-01-28T09:50:30.201Z",
+      "role": "workflow:owner",
+      "workflowId": "i1GHBCRTRqDXFZip",
+      "projectId": "NBttNnd6CVeZWrwI",
+      "project": {
+        "updatedAt": "2026-01-28T08:29:07.278Z",
+        "createdAt": "2026-01-28T08:04:49.772Z",
+        "id": "NBttNnd6CVeZWrwI",
+        "name": "Calvary Paphos <calvarycypruscalendar@gmail.com>",
+        "type": "personal",
+        "icon": null,
+        "description": null,
+        "creatorId": "d84e1e89-6472-46a2-881c-0780a65eac38"
+      }
+    }
+  ]
+}

@@ -1,0 +1,4677 @@
+{
+  "updatedAt": "2026-03-17T17:39:07.096Z",
+  "createdAt": "2025-11-13T21:06:24.137Z",
+  "id": "f8eQySUHVPeEQpVT",
+  "name": "main",
+  "description": null,
+  "active": true,
+  "isArchived": false,
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "keyinput",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        -4576,
+        4784
+      ],
+      "id": "d4ddaa52-1102-428b-b5cf-dc947db5ea42",
+      "name": "Webhook",
+      "webhookId": "5f1a7b2b-b5fb-4a8e-9d65-194cc1652bbd"
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "combineBy": "combineAll",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        -4128,
+        4784
+      ],
+      "id": "ddeee57e-9722-4dda-9e59-5fa4167c07db",
+      "name": "Merge"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "CgSbDSo1mHpiRCnr",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/CgSbDSo1mHpiRCnr",
+          "cachedResultName": "readconfig"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {}
+        },
+        "mode": "each",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        -4352,
+        4864
+      ],
+      "id": "936b89a6-cd18-480c-88a9-437de69dd5fe",
+      "name": "readconfig",
+      "executeOnce": false
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "Dgk7CxGWHSHsNcoT",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/Dgk7CxGWHSHsNcoT",
+          "cachedResultName": "atem"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "usk_on_air_enable": "=2,{{ $json.value }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "program_name",
+              "displayName": "program_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "preview_name",
+              "displayName": "preview_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "toggle_black",
+              "displayName": "toggle_black",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "enable_stream",
+              "displayName": "enable_stream",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "enable_recording",
+              "displayName": "enable_recording",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "execute_macro",
+              "displayName": "execute_macro",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "recording_filename",
+              "displayName": "recording_filename",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "toggle_program",
+              "displayName": "toggle_program",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "program_name_with_transition",
+              "displayName": "program_name_with_transition",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "usk_on_air_toggle",
+              "displayName": "usk_on_air_toggle",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "usk_set_fill_source",
+              "displayName": "usk_set_fill_source",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "usk_on_air_enable",
+              "displayName": "usk_on_air_enable",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {
+          "waitForSubWorkflow": false
+        }
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        -3232,
+        2624
+      ],
+      "id": "c0173626-f664-4074-8547-d48843c0c21c",
+      "name": "Call 'atem'12"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "Dgk7CxGWHSHsNcoT",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/Dgk7CxGWHSHsNcoT",
+          "cachedResultName": "atem"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "usk_on_air_enable": "=3,{{ $json.value }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "program_name",
+              "displayName": "program_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "preview_name",
+              "displayName": "preview_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "toggle_black",
+              "displayName": "toggle_black",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "enable_stream",
+              "displayName": "enable_stream",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "enable_recording",
+              "displayName": "enable_recording",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "execute_macro",
+              "displayName": "execute_macro",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "recording_filename",
+              "displayName": "recording_filename",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "toggle_program",
+              "displayName": "toggle_program",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "program_name_with_transition",
+              "displayName": "program_name_with_transition",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "usk_on_air_toggle",
+              "displayName": "usk_on_air_toggle",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "usk_set_fill_source",
+              "displayName": "usk_set_fill_source",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "usk_on_air_enable",
+              "displayName": "usk_on_air_enable",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {
+          "waitForSubWorkflow": false
+        }
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        -3232,
+        2432
+      ],
+      "id": "279d08a0-2a64-40ab-85e1-25781393e071",
+      "name": "Call 'atem'15"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "Dgk7CxGWHSHsNcoT",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/Dgk7CxGWHSHsNcoT",
+          "cachedResultName": "atem"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "usk_on_air_enable": "=4,{{ $json.value }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "program_name",
+              "displayName": "program_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "preview_name",
+              "displayName": "preview_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "toggle_black",
+              "displayName": "toggle_black",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "enable_stream",
+              "displayName": "enable_stream",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "enable_recording",
+              "displayName": "enable_recording",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "execute_macro",
+              "displayName": "execute_macro",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "recording_filename",
+              "displayName": "recording_filename",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "toggle_program",
+              "displayName": "toggle_program",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "program_name_with_transition",
+              "displayName": "program_name_with_transition",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "usk_on_air_toggle",
+              "displayName": "usk_on_air_toggle",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "usk_set_fill_source",
+              "displayName": "usk_set_fill_source",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "usk_on_air_enable",
+              "displayName": "usk_on_air_enable",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {
+          "waitForSubWorkflow": false
+        }
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        -3232,
+        2240
+      ],
+      "id": "efc41979-daba-46a0-8f85-20d6ec42d43a",
+      "name": "Call 'atem'16"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "eb20b9cb-3d09-4446-9b28-0bc56e4952ee",
+              "leftValue": "={{ $json.value }}",
+              "rightValue": "1",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -3456,
+        1568
+      ],
+      "id": "401d4e73-3400-45b9-a0d5-995434aec4e4",
+      "name": "toggle the key?1"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "eb20b9cb-3d09-4446-9b28-0bc56e4952ee",
+              "leftValue": "={{ $json.value }}",
+              "rightValue": "1",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -3456,
+        2000
+      ],
+      "id": "e3889d2c-0f6a-41b3-ae11-2a81da4bb996",
+      "name": "toggle the key?2"
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "dataTableId": {
+          "__rl": true,
+          "value": "il3gZO5GYNLZhOsa",
+          "mode": "list",
+          "cachedResultName": "config",
+          "cachedResultUrl": "/projects/NBttNnd6CVeZWrwI/datatables/il3gZO5GYNLZhOsa"
+        },
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "key",
+              "keyValue": "current_preset"
+            }
+          ]
+        },
+        "limit": 1
+      },
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1,
+      "position": [
+        -3680,
+        4208
+      ],
+      "id": "3659d7c3-1b41-4ff4-b383-4e156b17c6a5",
+      "name": "get current preset1"
+    },
+    {
+      "parameters": {
+        "jsCode": "const presetNames = Object.keys($('readconfig').first().json.config.presets);\nconst currentPresetIndex = presetNames.indexOf($input.first().json.value);\nconst nextPresetIndex = currentPresetIndex>=presetNames.length-1?0:currentPresetIndex+1;\n\nreturn {nextPreset:presetNames[nextPresetIndex]};"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -3456,
+        4208
+      ],
+      "id": "99f10d11-a4db-4579-b6d0-efa30072ea7b",
+      "name": "calcualte next preset1"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "eb20b9cb-3d09-4446-9b28-0bc56e4952ee",
+              "leftValue": "={{ $json.value }}",
+              "rightValue": "1",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -3456,
+        1136
+      ],
+      "id": "a99424ca-940b-4fe4-b0c4-d85bf0948b3d",
+      "name": "toggle the key?"
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "dataTableId": {
+          "__rl": true,
+          "value": "il3gZO5GYNLZhOsa",
+          "mode": "list",
+          "cachedResultName": "config",
+          "cachedResultUrl": "/projects/NBttNnd6CVeZWrwI/datatables/il3gZO5GYNLZhOsa"
+        },
+        "matchType": "allConditions",
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "key",
+              "keyValue": "usk2_on_air_requested"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1,
+      "position": [
+        -3680,
+        1136
+      ],
+      "id": "72265743-beb7-4781-b5f3-f75d353146ff",
+      "name": "get key 2 state1"
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "dataTableId": {
+          "__rl": true,
+          "value": "il3gZO5GYNLZhOsa",
+          "mode": "list",
+          "cachedResultName": "config",
+          "cachedResultUrl": "/projects/NBttNnd6CVeZWrwI/datatables/il3gZO5GYNLZhOsa"
+        },
+        "matchType": "allConditions",
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "key",
+              "keyValue": "usk3_on_air_requested"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1,
+      "position": [
+        -3680,
+        1568
+      ],
+      "id": "33438fbb-82f3-4cdd-9045-f258a4610073",
+      "name": "get key 3 state1"
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "dataTableId": {
+          "__rl": true,
+          "value": "il3gZO5GYNLZhOsa",
+          "mode": "list",
+          "cachedResultName": "config",
+          "cachedResultUrl": "/projects/NBttNnd6CVeZWrwI/datatables/il3gZO5GYNLZhOsa"
+        },
+        "matchType": "allConditions",
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "key",
+              "keyValue": "usk4_on_air_requested"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1,
+      "position": [
+        -3680,
+        2000
+      ],
+      "id": "d94db24a-7b43-4ee8-802a-7be86035c7a7",
+      "name": "get key 4 state2"
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "dataTableId": {
+          "__rl": true,
+          "value": "il3gZO5GYNLZhOsa",
+          "mode": "list",
+          "cachedResultName": "config",
+          "cachedResultUrl": "/projects/NBttNnd6CVeZWrwI/datatables/il3gZO5GYNLZhOsa"
+        },
+        "matchType": "allConditions",
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "key",
+              "keyValue": "usk2_on_air_requested"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1,
+      "position": [
+        -3680,
+        2624
+      ],
+      "id": "3ed1516b-02a7-4d3a-bf1c-4845e01dab91",
+      "name": "get key 2 state"
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "dataTableId": {
+          "__rl": true,
+          "value": "il3gZO5GYNLZhOsa",
+          "mode": "list",
+          "cachedResultName": "config",
+          "cachedResultUrl": "/projects/NBttNnd6CVeZWrwI/datatables/il3gZO5GYNLZhOsa"
+        },
+        "matchType": "allConditions",
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "key",
+              "keyValue": "usk3_on_air_requested"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1,
+      "position": [
+        -3680,
+        2432
+      ],
+      "id": "3d563ac3-f362-40ba-ac44-dfdf11a0bb36",
+      "name": "get key 3 state"
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "dataTableId": {
+          "__rl": true,
+          "value": "il3gZO5GYNLZhOsa",
+          "mode": "list",
+          "cachedResultName": "config",
+          "cachedResultUrl": "/projects/NBttNnd6CVeZWrwI/datatables/il3gZO5GYNLZhOsa"
+        },
+        "matchType": "allConditions",
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "key",
+              "keyValue": "usk4_on_air_requested"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1,
+      "position": [
+        -3680,
+        2240
+      ],
+      "id": "6c95589e-42e2-4c31-9308-2b01e2ea0480",
+      "name": "get key 4 state"
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "dataTableId": {
+          "__rl": true,
+          "value": "il3gZO5GYNLZhOsa",
+          "mode": "list",
+          "cachedResultName": "config",
+          "cachedResultUrl": "/projects/NBttNnd6CVeZWrwI/datatables/il3gZO5GYNLZhOsa"
+        },
+        "matchType": "allConditions",
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "key",
+              "keyValue": "usk2_on_air_requested"
+            }
+          ]
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "value": "={{ $json.value==1?0:1 }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "key",
+              "displayName": "key",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": true
+            },
+            {
+              "id": "value",
+              "displayName": "value",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "description",
+              "displayName": "description",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1,
+      "position": [
+        -3456,
+        2624
+      ],
+      "id": "f488dba1-2c19-4b5a-9538-9a312f9d34e2",
+      "name": "update key state 2",
+      "alwaysOutputData": true,
+      "notesInFlow": true
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "dataTableId": {
+          "__rl": true,
+          "value": "il3gZO5GYNLZhOsa",
+          "mode": "list",
+          "cachedResultName": "config",
+          "cachedResultUrl": "/projects/NBttNnd6CVeZWrwI/datatables/il3gZO5GYNLZhOsa"
+        },
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "key",
+              "keyValue": "usk3_on_air_requested"
+            }
+          ]
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "value": "={{ $json.value==1?0:1 }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "key",
+              "displayName": "key",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": true
+            },
+            {
+              "id": "value",
+              "displayName": "value",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1,
+      "position": [
+        -3456,
+        2432
+      ],
+      "id": "d3fb4346-9d12-479c-9cbf-c9a139fc26e0",
+      "name": "update key state 3",
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "dataTableId": {
+          "__rl": true,
+          "value": "il3gZO5GYNLZhOsa",
+          "mode": "list",
+          "cachedResultName": "config",
+          "cachedResultUrl": "/projects/NBttNnd6CVeZWrwI/datatables/il3gZO5GYNLZhOsa"
+        },
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "key",
+              "keyValue": "usk4_on_air_requested"
+            }
+          ]
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "value": "={{ $json.value==1?0:1 }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "key",
+              "displayName": "key",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": true
+            },
+            {
+              "id": "value",
+              "displayName": "value",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1,
+      "position": [
+        -3456,
+        2240
+      ],
+      "id": "bf4443db-8962-42ef-aef8-51bdb5f357f1",
+      "name": "update key 4 state",
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "mooEWAfPCkfAoJCv",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/mooEWAfPCkfAoJCv",
+          "cachedResultName": "event manager"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "navigated_away": "1"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "navigated_away",
+              "displayName": "navigated_away",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "do_prestream",
+              "displayName": "do_prestream",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "do_break",
+              "displayName": "do_break",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "do_finish",
+              "displayName": "do_finish",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {
+          "waitForSubWorkflow": false
+        }
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        -2784,
+        1760
+      ],
+      "id": "3e8f4fe3-1503-4aab-9e30-01a506f51646",
+      "name": "navigated_away"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "mooEWAfPCkfAoJCv",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/mooEWAfPCkfAoJCv",
+          "cachedResultName": "event manager"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "do_prestream": "1"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "navigated_away",
+              "displayName": "navigated_away",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "do_prestream",
+              "displayName": "do_prestream",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "do_break",
+              "displayName": "do_break",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "do_finish",
+              "displayName": "do_finish",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {
+          "waitForSubWorkflow": false
+        }
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        -3680,
+        3440
+      ],
+      "id": "e85d503f-d5e2-4cfa-86cb-ff52ed89007e",
+      "name": "do_prestream"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "mooEWAfPCkfAoJCv",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/mooEWAfPCkfAoJCv",
+          "cachedResultName": "event manager"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "do_break": "1"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "navigated_away",
+              "displayName": "navigated_away",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "do_prestream",
+              "displayName": "do_prestream",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "do_break",
+              "displayName": "do_break",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "do_finish",
+              "displayName": "do_finish",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {
+          "waitForSubWorkflow": false
+        }
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        -3680,
+        3632
+      ],
+      "id": "1687537a-671c-4f40-ac0b-3018db196a26",
+      "name": "do_break"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "mooEWAfPCkfAoJCv",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/mooEWAfPCkfAoJCv",
+          "cachedResultName": "event manager"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "do_finish": "1"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "navigated_away",
+              "displayName": "navigated_away",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "do_prestream",
+              "displayName": "do_prestream",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "do_break",
+              "displayName": "do_break",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "do_finish",
+              "displayName": "do_finish",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {
+          "waitForSubWorkflow": false
+        }
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        -3680,
+        3824
+      ],
+      "id": "c8617b0f-fbfe-4cbc-b6e2-ab40ad05b4d1",
+      "name": "do_finish"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "YdhwWL3hSgPUVoxo",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/YdhwWL3hSgPUVoxo",
+          "cachedResultName": "preset manager"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "load_preset": "={{ $json.nextPreset }}"
+          },
+          "matchingColumns": [
+            "load_preset"
+          ],
+          "schema": [
+            {
+              "id": "load_preset",
+              "displayName": "load_preset",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {
+          "waitForSubWorkflow": false
+        }
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        -3232,
+        4208
+      ],
+      "id": "7e3cdac3-0af9-43be-ba20-f3a4fe7f8ce9",
+      "name": "load preset"
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ ($json.body.ms.ctrl?\"CTRL+\":\"\") + ($json.body.ms.alt?\"ALT+\":\"\") + ($json.body.ms.shift?\"SHIFT+\":\"\") + ($json.body.ms.meta?\"META+\":\"\") + $json.body.v+\"/\"+$json.body.s }}",
+                    "rightValue": "ALT+META+1/down",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "cond-0001"
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "MOVE UP"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ ($json.body.ms.ctrl?\"CTRL+\":\"\") + ($json.body.ms.alt?\"ALT+\":\"\") + ($json.body.ms.shift?\"SHIFT+\":\"\") + ($json.body.ms.meta?\"META+\":\"\") + $json.body.v+\"/\"+$json.body.s }}",
+                    "rightValue": "ALT+META+2/down",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "cond-0002"
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "MOVE DOWN"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ ($json.body.ms.ctrl?\"CTRL+\":\"\") + ($json.body.ms.alt?\"ALT+\":\"\") + ($json.body.ms.shift?\"SHIFT+\":\"\") + ($json.body.ms.meta?\"META+\":\"\") + $json.body.v+\"/\"+$json.body.s }}",
+                    "rightValue": "ALT+META+3/down",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "cond-0003"
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "MOVE LEFT"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ ($json.body.ms.ctrl?\"CTRL+\":\"\") + ($json.body.ms.alt?\"ALT+\":\"\") + ($json.body.ms.shift?\"SHIFT+\":\"\") + ($json.body.ms.meta?\"META+\":\"\") + $json.body.v+\"/\"+$json.body.s }}",
+                    "rightValue": "ALT+META+4/down",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "cond-0004"
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "MOVE RIGHT"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ ($json.body.ms.ctrl?\"CTRL+\":\"\") + ($json.body.ms.alt?\"ALT+\":\"\") + ($json.body.ms.shift?\"SHIFT+\":\"\") + ($json.body.ms.meta?\"META+\":\"\") + $json.body.v+\"/\"+$json.body.s }}",
+                    "rightValue": "ALT+META+q/down",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "cond-0005"
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "MOVE RIGHTUP"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ ($json.body.ms.ctrl?\"CTRL+\":\"\") + ($json.body.ms.alt?\"ALT+\":\"\") + ($json.body.ms.shift?\"SHIFT+\":\"\") + ($json.body.ms.meta?\"META+\":\"\") + $json.body.v+\"/\"+$json.body.s }}",
+                    "rightValue": "ALT+META+o/down",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "cond-0006"
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "MOVE LEFTUP"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ ($json.body.ms.ctrl?\"CTRL+\":\"\") + ($json.body.ms.alt?\"ALT+\":\"\") + ($json.body.ms.shift?\"SHIFT+\":\"\") + ($json.body.ms.meta?\"META+\":\"\") + $json.body.v+\"/\"+$json.body.s }}",
+                    "rightValue": "ALT+META+v/down",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "cond-0007"
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "MOVE RIGHTDOWN"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ ($json.body.ms.ctrl?\"CTRL+\":\"\") + ($json.body.ms.alt?\"ALT+\":\"\") + ($json.body.ms.shift?\"SHIFT+\":\"\") + ($json.body.ms.meta?\"META+\":\"\") + $json.body.v+\"/\"+$json.body.s }}",
+                    "rightValue": "ALT+META+u/down",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "cond-0008"
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "MOVE LEFTDOWN"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ ($json.body.ms.ctrl?\"CTRL+\":\"\") + ($json.body.ms.alt?\"ALT+\":\"\") + ($json.body.ms.shift?\"SHIFT+\":\"\") + ($json.body.ms.meta?\"META+\":\"\") + $json.body.v+\"/\"+$json.body.s }}",
+                    "rightValue": "ALT+META+9/down",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "cond-0009"
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "ZOOM IN"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ ($json.body.ms.ctrl?\"CTRL+\":\"\") + ($json.body.ms.alt?\"ALT+\":\"\") + ($json.body.ms.shift?\"SHIFT+\":\"\") + ($json.body.ms.meta?\"META+\":\"\") + $json.body.v+\"/\"+$json.body.s }}",
+                    "rightValue": "ALT+META+a/down",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "cond-0010"
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "ZOOM OUT"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ ($json.body.ms.ctrl?\"CTRL+\":\"\") + ($json.body.ms.alt?\"ALT+\":\"\") + ($json.body.ms.shift?\"SHIFT+\":\"\") + ($json.body.ms.meta?\"META+\":\"\") + $json.body.v+\"/\"+$json.body.s }}",
+                    "rightValue": "ALT+META+b/down",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "cond-0011"
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "PRESET SAVE CUSTOM"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ ($json.body.ms.ctrl?\"CTRL+\":\"\") + ($json.body.ms.alt?\"ALT+\":\"\") + ($json.body.ms.shift?\"SHIFT+\":\"\") + ($json.body.ms.meta?\"META+\":\"\") + $json.body.v+\"/\"+$json.body.s }}",
+                    "rightValue": "ALT+META+g/down",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "cond-0012"
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "PRESET PROJECTOR"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ ($json.body.ms.ctrl?\"CTRL+\":\"\") + ($json.body.ms.alt?\"ALT+\":\"\") + ($json.body.ms.shift?\"SHIFT+\":\"\") + ($json.body.ms.meta?\"META+\":\"\") + $json.body.v+\"/\"+$json.body.s }}",
+                    "rightValue": "ALT+META+c/down",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "cond-0013"
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "PRESET PULPIT WIDE"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ ($json.body.ms.ctrl?\"CTRL+\":\"\") + ($json.body.ms.alt?\"ALT+\":\"\") + ($json.body.ms.shift?\"SHIFT+\":\"\") + ($json.body.ms.meta?\"META+\":\"\") + $json.body.v+\"/\"+$json.body.s }}",
+                    "rightValue": "ALT+META+s/down",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "cond-0014"
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "PRESET STAGE"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ ($json.body.ms.ctrl?\"CTRL+\":\"\") + ($json.body.ms.alt?\"ALT+\":\"\") + ($json.body.ms.shift?\"SHIFT+\":\"\") + ($json.body.ms.meta?\"META+\":\"\") + $json.body.v+\"/\"+$json.body.s }}",
+                    "rightValue": "ALT+META+f/down",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "cond-0015"
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "PRESET CUSTOM CALL"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ ($json.body.ms.ctrl?\"CTRL+\":\"\") + ($json.body.ms.alt?\"ALT+\":\"\") + ($json.body.ms.shift?\"SHIFT+\":\"\") + ($json.body.ms.meta?\"META+\":\"\") + $json.body.v+\"/\"+$json.body.s }}",
+                    "rightValue": "CTRL+ALT+META+f/down",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "cond-0016"
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "PRESET CUSTOM SAVE"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ ($json.body.ms.ctrl?\"CTRL+\":\"\") + ($json.body.ms.alt?\"ALT+\":\"\") + ($json.body.ms.shift?\"SHIFT+\":\"\") + ($json.body.ms.meta?\"META+\":\"\") + $json.body.v+\"/\"+$json.body.s }}",
+                    "rightValue": "ALT+META+t/down",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "cond-0017"
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "PRESET SITTING"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ ($json.body.ms.ctrl?\"CTRL+\":\"\") + ($json.body.ms.alt?\"ALT+\":\"\") + ($json.body.ms.shift?\"SHIFT+\":\"\") + ($json.body.ms.meta?\"META+\":\"\") + $json.body.v+\"/\"+$json.body.s }}",
+                    "rightValue": "ALT+META+d/down",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "cond-0018"
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "PRESET PULPIT"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.body.v+\"/\"+$json.body.s }}",
+                    "rightValue": "1/up",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "cond-stop-1"
+                  },
+                  {
+                    "leftValue": "={{ $json.body.v+\"/\"+$json.body.s }}",
+                    "rightValue": "2/up",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "cond-stop-2"
+                  },
+                  {
+                    "leftValue": "={{ $json.body.v+\"/\"+$json.body.s }}",
+                    "rightValue": "3/up",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "cond-stop-3"
+                  },
+                  {
+                    "leftValue": "={{ $json.body.v+\"/\"+$json.body.s }}",
+                    "rightValue": "4/up",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "cond-stop-4"
+                  },
+                  {
+                    "leftValue": "={{ $json.body.v+\"/\"+$json.body.s }}",
+                    "rightValue": "q/up",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "cond-stop-5"
+                  },
+                  {
+                    "leftValue": "={{ $json.body.v+\"/\"+$json.body.s }}",
+                    "rightValue": "o/up",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "cond-stop-6"
+                  },
+                  {
+                    "leftValue": "={{ $json.body.v+\"/\"+$json.body.s }}",
+                    "rightValue": "u/up",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "cond-stop-7"
+                  },
+                  {
+                    "leftValue": "={{ $json.body.v+\"/\"+$json.body.s }}",
+                    "rightValue": "v/up",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "cond-stop-8"
+                  }
+                ],
+                "combinator": "or"
+              },
+              "renameOutput": true,
+              "outputKey": "PTZ STOP"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.body.v+\"/\"+$json.body.s }}",
+                    "rightValue": "9/up",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "cond-zstop-1"
+                  },
+                  {
+                    "leftValue": "={{ $json.body.v+\"/\"+$json.body.s }}",
+                    "rightValue": "a/up",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "cond-zstop-2"
+                  }
+                ],
+                "combinator": "or"
+              },
+              "renameOutput": true,
+              "outputKey": "ZOOM STOP"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.4,
+      "position": [
+        -3904,
+        6176
+      ],
+      "id": "f7503c23-492f-4cc1-bb4d-1380b3bae4d2",
+      "name": "Mains"
+    },
+    {
+      "parameters": {
+        "url": "={{ $('Merge').item.json.config.camera_host }}/cgi-bin/ptzctrl.cgi?ptzcmd&up&{{ $('Merge').item.json.config.camera_pan_speed }}&{{ $('Merge').item.json.config.camera_tilt_speed }}",
+        "options": {
+          "timeout": 20000
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        -3680,
+        4592
+      ],
+      "id": "6202943d-17ff-4340-969d-7c6b3e9c5a7e",
+      "name": "MOVE UP"
+    },
+    {
+      "parameters": {
+        "url": "={{ $('Merge').item.json.config.camera_host }}/cgi-bin/ptzctrl.cgi?ptzcmd&down&{{ $('Merge').item.json.config.camera_pan_speed }}&{{ $('Merge').item.json.config.camera_tilt_speed }}",
+        "options": {
+          "timeout": 20000
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        -3680,
+        4784
+      ],
+      "id": "c85c6ecc-f6f4-49db-923e-4ff80a259efe",
+      "name": "MOVE DOWN"
+    },
+    {
+      "parameters": {
+        "url": "={{ $('Merge').item.json.config.camera_host }}/cgi-bin/ptzctrl.cgi?ptzcmd&left&{{ $('Merge').item.json.config.camera_pan_speed }}&{{ $('Merge').item.json.config.camera_tilt_speed }}",
+        "options": {
+          "timeout": 20000
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        -3680,
+        4976
+      ],
+      "id": "579944ab-cdde-481f-8604-bfb1cffeb6a5",
+      "name": "MOVE LEFT"
+    },
+    {
+      "parameters": {
+        "url": "={{ $('Merge').item.json.config.camera_host }}/cgi-bin/ptzctrl.cgi?ptzcmd&right&{{ $('Merge').item.json.config.camera_pan_speed }}&{{ $('Merge').item.json.config.camera_tilt_speed }}",
+        "options": {
+          "timeout": 20000
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        -3680,
+        5168
+      ],
+      "id": "2ca94478-e01f-4d13-8b4f-c0b2f38ef330",
+      "name": "MOVE RIGHT"
+    },
+    {
+      "parameters": {
+        "url": "={{ $('Merge').item.json.config.camera_host }}/cgi-bin/ptzctrl.cgi?ptzcmd&rightup&{{ $('Merge').item.json.config.camera_pan_speed }}&{{ $('Merge').item.json.config.camera_tilt_speed }}",
+        "options": {
+          "timeout": 20000
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        -3680,
+        5360
+      ],
+      "id": "14bbad18-cb61-4347-bc4f-9645b56f7bc9",
+      "name": "MOVE RIGHTUP"
+    },
+    {
+      "parameters": {
+        "url": "={{ $('Merge').item.json.config.camera_host }}/cgi-bin/ptzctrl.cgi?ptzcmd&leftup&{{ $('Merge').item.json.config.camera_pan_speed }}&{{ $('Merge').item.json.config.camera_tilt_speed }}",
+        "options": {
+          "timeout": 20000
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        -3680,
+        5552
+      ],
+      "id": "001354f1-b587-4c53-b5e6-f9e79ba0a2e2",
+      "name": "MOVE LEFTUP"
+    },
+    {
+      "parameters": {
+        "url": "={{ $('Merge').item.json.config.camera_host }}/cgi-bin/ptzctrl.cgi?ptzcmd&rightdown&{{ $('Merge').item.json.config.camera_pan_speed }}&{{ $('Merge').item.json.config.camera_tilt_speed }}",
+        "options": {
+          "timeout": 20000
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        -3680,
+        5744
+      ],
+      "id": "7618b2b1-7830-42a5-b59b-f3377884883a",
+      "name": "MOVE RIGHTDOWN"
+    },
+    {
+      "parameters": {
+        "url": "={{ $('Merge').item.json.config.camera_host }}/cgi-bin/ptzctrl.cgi?ptzcmd&leftdown&{{ $('Merge').item.json.config.camera_pan_speed }}&{{ $('Merge').item.json.config.camera_tilt_speed }}",
+        "options": {
+          "timeout": 20000
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        -3680,
+        5936
+      ],
+      "id": "867dca6a-6aab-4bab-a989-eb0e889e9c04",
+      "name": "MOVE LEFTDOWN"
+    },
+    {
+      "parameters": {
+        "url": "={{ $('Merge').item.json.config.camera_host }}/cgi-bin/ptzctrl.cgi?ptzcmd&zoomin&{{ $('Merge').item.json.config.camera_zoom_speed }}",
+        "options": {
+          "timeout": 20000
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        -3680,
+        6128
+      ],
+      "id": "1d49405c-138b-4a33-bae5-c3cd17b824dd",
+      "name": "ZOOM IN"
+    },
+    {
+      "parameters": {
+        "url": "={{ $('Merge').item.json.config.camera_host }}/cgi-bin/ptzctrl.cgi?ptzcmd&zoomout&{{ $('Merge').item.json.config.camera_zoom_speed }}",
+        "options": {
+          "timeout": 20000
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        -3680,
+        6320
+      ],
+      "id": "0c0a56fd-a556-4a39-ae40-114bd40ec500",
+      "name": "ZOOM OUT"
+    },
+    {
+      "parameters": {
+        "url": "={{ $('Merge').item.json.config.camera_host }}/cgi-bin/ptzctrl.cgi?ptzcmd&posset&5",
+        "options": {
+          "timeout": 20000
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        -3680,
+        6512
+      ],
+      "id": "170b6b9b-9ef5-4552-8f13-7b70215537a6",
+      "name": "PRESET SAVE CUSTOM"
+    },
+    {
+      "parameters": {
+        "url": "={{ $('Merge').item.json.config.camera_host }}/cgi-bin/ptzctrl.cgi?ptzcmd&poscall&4",
+        "options": {
+          "timeout": 20000
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        -3680,
+        6704
+      ],
+      "id": "1eda1b92-26d9-4055-9395-4f8f1721eb0f",
+      "name": "PRESET PROJECTOR"
+    },
+    {
+      "parameters": {
+        "url": "={{ $('Merge').item.json.config.camera_host }}/cgi-bin/ptzctrl.cgi?ptzcmd&poscall&2",
+        "options": {
+          "timeout": 20000
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        -3680,
+        6896
+      ],
+      "id": "2a41d7f9-8d88-4869-82a8-48bf20a4fe6a",
+      "name": "PRESET PULPIT WIDE"
+    },
+    {
+      "parameters": {
+        "url": "={{ $('Merge').item.json.config.camera_host }}/cgi-bin/ptzctrl.cgi?ptzcmd&poscall&1",
+        "options": {
+          "timeout": 20000
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        -3680,
+        7088
+      ],
+      "id": "81a2f64e-ec3b-4105-aa75-b063b788aec3",
+      "name": "PRESET STAGE"
+    },
+    {
+      "parameters": {
+        "url": "={{ $('Merge').item.json.config.camera_host }}/cgi-bin/ptzctrl.cgi?ptzcmd&poscall&5",
+        "options": {
+          "timeout": 20000
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        -3680,
+        7280
+      ],
+      "id": "2321e77e-0a26-4781-82b5-a91cb735d075",
+      "name": "PRESET CUSTOM CALL"
+    },
+    {
+      "parameters": {
+        "url": "={{ $('Merge').item.json.config.camera_host }}/cgi-bin/ptzctrl.cgi?ptzcmd&posset&5",
+        "options": {
+          "timeout": 20000
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        -3680,
+        7472
+      ],
+      "id": "5f19670e-d314-410d-a6f9-2f4e175b921d",
+      "name": "PRESET CUSTOM SAVE"
+    },
+    {
+      "parameters": {
+        "url": "={{ $('Merge').item.json.config.camera_host }}/cgi-bin/ptzctrl.cgi?ptzcmd&poscall&3",
+        "options": {
+          "timeout": 20000
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        -3680,
+        7664
+      ],
+      "id": "11db6cd4-5f15-4741-b4ef-84df4cfba086",
+      "name": "PRESET SITTING"
+    },
+    {
+      "parameters": {
+        "url": "={{ $('Merge').item.json.config.camera_host }}/cgi-bin/ptzctrl.cgi?ptzcmd&poscall&0",
+        "options": {
+          "timeout": 20000
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        -3680,
+        7856
+      ],
+      "id": "c2790398-18a0-44e7-aa63-5827209576df",
+      "name": "PRESET PULPIT"
+    },
+    {
+      "parameters": {
+        "url": "={{ $('Merge').item.json.config.camera_host }}/cgi-bin/ptzctrl.cgi?ptzcmd&ptzstop&{{ $('Merge').item.json.config.camera_pan_speed }}&{{ $('Merge').item.json.config.camera_tilt_speed }}",
+        "options": {
+          "timeout": 20000
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        -3680,
+        8048
+      ],
+      "id": "5a9183c4-1243-4e17-861c-e02df89037b1",
+      "name": "PTZ STOP"
+    },
+    {
+      "parameters": {
+        "url": "={{ $('Merge').item.json.config.camera_host }}/cgi-bin/ptzctrl.cgi?ptzcmd&zoomstop&{{ $('Merge').item.json.config.camera_zoom_speed }}",
+        "options": {
+          "timeout": 20000
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        -3680,
+        8240
+      ],
+      "id": "5cbe9a1d-d276-46d8-b4a8-4738ce1555ba",
+      "name": "ZOOM STOP"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "cb4aafb3-6071-46d2-a8cd-638a47a564e2",
+              "name": "program",
+              "value": "PROJ",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -3232,
+        1280
+      ],
+      "id": "d644dff9-26a1-4083-8289-dba51d6903cf",
+      "name": "program value: PROJ"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "cb4aafb3-6071-46d2-a8cd-638a47a564e2",
+              "name": "program",
+              "value": "PULP",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -3232,
+        1664
+      ],
+      "id": "8e8d9f27-eba4-4292-8263-714bb3bc45c2",
+      "name": "program value: PULP"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "cb4aafb3-6071-46d2-a8cd-638a47a564e2",
+              "name": "program",
+              "value": "AVPC",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -3232,
+        2048
+      ],
+      "id": "d583deb0-934c-4a1a-b34c-021b630d4a35",
+      "name": "program value: AVPC"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "cb4aafb3-6071-46d2-a8cd-638a47a564e2",
+              "name": "program",
+              "value": "MPLAYER1",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -3232,
+        2816
+      ],
+      "id": "a7cb3c2b-fed7-4250-9353-a3165fd04cfe",
+      "name": "program value: MPLAYER1"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "cb4aafb3-6071-46d2-a8cd-638a47a564e2",
+              "name": "program",
+              "value": "CAM",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -3680,
+        3088
+      ],
+      "id": "5ac844d5-0588-4f1d-9f2c-607eb6c25277",
+      "name": "program value: CAM"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "ba7b5294-5c89-4434-b41c-f4b0d6b08c36",
+              "leftValue": "={{ $json.value }}",
+              "rightValue": "1",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        -2560,
+        1952
+      ],
+      "id": "58c240cb-6a3b-4de1-89b2-eeceef6db8c1",
+      "name": "is changing_program_locked ?"
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "dataTableId": {
+          "__rl": true,
+          "value": "il3gZO5GYNLZhOsa",
+          "mode": "list",
+          "cachedResultName": "config",
+          "cachedResultUrl": "/projects/NBttNnd6CVeZWrwI/datatables/il3gZO5GYNLZhOsa"
+        },
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "key",
+              "keyValue": "changing_program_locked"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1.1,
+      "position": [
+        -2784,
+        1952
+      ],
+      "id": "f62aec85-cca2-4577-a2b8-63f95acd5642",
+      "name": "get changing_program_locked"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "Dgk7CxGWHSHsNcoT",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/Dgk7CxGWHSHsNcoT",
+          "cachedResultName": "atem"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "toggle_program": "={{ $('program').item.json.program }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "program_name",
+              "displayName": "program_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "preview_name",
+              "displayName": "preview_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "toggle_black",
+              "displayName": "toggle_black",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "enable_stream",
+              "displayName": "enable_stream",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "enable_recording",
+              "displayName": "enable_recording",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "execute_macro",
+              "displayName": "execute_macro",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "recording_filename",
+              "displayName": "recording_filename",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "toggle_program",
+              "displayName": "toggle_program",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {
+          "waitForSubWorkflow": false
+        }
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        -2336,
+        2048
+      ],
+      "id": "d46766d4-579f-4a22-80a7-382c28a6a3cc",
+      "name": "do toggle_program"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "cb4aafb3-6071-46d2-a8cd-638a47a564e2",
+              "name": "program",
+              "value": "={{ $json.program }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -3008,
+        1856
+      ],
+      "id": "f345908a-64c9-4627-9f05-18f4b9b099af",
+      "name": "program"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "Dgk7CxGWHSHsNcoT",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/Dgk7CxGWHSHsNcoT",
+          "cachedResultName": "atem"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "set_projector_aux_to": "={{ $('program').item.json.program }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "program_name",
+              "displayName": "program_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "preview_name",
+              "displayName": "preview_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "toggle_black",
+              "displayName": "toggle_black",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "enable_stream",
+              "displayName": "enable_stream",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "enable_recording",
+              "displayName": "enable_recording",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "execute_macro",
+              "displayName": "execute_macro",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "recording_filename",
+              "displayName": "recording_filename",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "toggle_program",
+              "displayName": "toggle_program",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "program_name_with_transition",
+              "displayName": "program_name_with_transition",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "usk_on_air_toggle",
+              "displayName": "usk_on_air_toggle",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "usk_set_fill_source",
+              "displayName": "usk_set_fill_source",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "usk_on_air_enable",
+              "displayName": "usk_on_air_enable",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "mediaplayer_set_still",
+              "displayName": "mediaplayer_set_still",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "set_tbar_to",
+              "displayName": "set_tbar_to",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "set_mix1_on",
+              "displayName": "set_mix1_on",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "set_projector_aux_to",
+              "displayName": "set_projector_aux_to",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "set_program_ssrc_aux_to",
+              "displayName": "set_program_ssrc_aux_to",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {
+          "waitForSubWorkflow": false
+        }
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        -2336,
+        1856
+      ],
+      "id": "cae50820-aada-4976-aba5-310e510f3e5b",
+      "name": "set projector aux"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "ba7b5294-5c89-4434-b41c-f4b0d6b08c36",
+              "leftValue": "={{ $json.value }}",
+              "rightValue": "1",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        -2560,
+        1568
+      ],
+      "id": "1b522330-6c5c-47e4-8c15-a1c7141735a2",
+      "name": "is changing_program_locked ?1"
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "dataTableId": {
+          "__rl": true,
+          "value": "il3gZO5GYNLZhOsa",
+          "mode": "list",
+          "cachedResultName": "config",
+          "cachedResultUrl": "/projects/NBttNnd6CVeZWrwI/datatables/il3gZO5GYNLZhOsa"
+        },
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "key",
+              "keyValue": "changing_program_locked"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1.1,
+      "position": [
+        -2784,
+        1568
+      ],
+      "id": "f99c9fae-b0e4-47dc-ae78-bfd3bcb2fd2a",
+      "name": "get changing_program_locked1"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "cb4aafb3-6071-46d2-a8cd-638a47a564e2",
+              "name": "key",
+              "value": "2",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -3232,
+        1088
+      ],
+      "id": "f555c966-1356-4fbc-9ac3-f11c769d5b04",
+      "name": "Key: 2"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "cb4aafb3-6071-46d2-a8cd-638a47a564e2",
+              "name": "key",
+              "value": "3",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -3232,
+        1472
+      ],
+      "id": "4f061de2-4574-4bff-9886-da6e399dca38",
+      "name": "Key: 3"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "cb4aafb3-6071-46d2-a8cd-638a47a564e2",
+              "name": "key",
+              "value": "4",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -3232,
+        1856
+      ],
+      "id": "b72bda03-990c-4ab6-8182-bd6082e73509",
+      "name": "Key: 4"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "Dgk7CxGWHSHsNcoT",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/Dgk7CxGWHSHsNcoT",
+          "cachedResultName": "atem"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "usk_on_air_toggle": "={{ $('key for toggle').item.json.key }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "program_name",
+              "displayName": "program_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "preview_name",
+              "displayName": "preview_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "toggle_black",
+              "displayName": "toggle_black",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "enable_stream",
+              "displayName": "enable_stream",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "enable_recording",
+              "displayName": "enable_recording",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "execute_macro",
+              "displayName": "execute_macro",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "recording_filename",
+              "displayName": "recording_filename",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "toggle_program",
+              "displayName": "toggle_program",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "program_name_with_transition",
+              "displayName": "program_name_with_transition",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "usk_on_air_toggle",
+              "displayName": "usk_on_air_toggle",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "usk_set_fill_source",
+              "displayName": "usk_set_fill_source",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {
+          "waitForSubWorkflow": false
+        }
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        -2336,
+        1568
+      ],
+      "id": "12ba773e-4ebf-4387-ac3a-4398027dfd6d",
+      "name": "usk_onair_toggle"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "Dgk7CxGWHSHsNcoT",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/Dgk7CxGWHSHsNcoT",
+          "cachedResultName": "atem"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "toggle_black": 1
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "program_name",
+              "displayName": "program_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "preview_name",
+              "displayName": "preview_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "toggle_black",
+              "displayName": "toggle_black",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "number",
+              "removed": false
+            },
+            {
+              "id": "enable_stream",
+              "displayName": "enable_stream",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "number",
+              "removed": true
+            },
+            {
+              "id": "enable_recording",
+              "displayName": "enable_recording",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "number",
+              "removed": true
+            },
+            {
+              "id": "execute_macro",
+              "displayName": "execute_macro",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "recording_filename",
+              "displayName": "recording_filename",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {
+          "waitForSubWorkflow": false
+        }
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        -3680,
+        4016
+      ],
+      "id": "5cca8a0e-8bf3-4cff-8a4d-3fa4f7d64c12",
+      "name": "toggle black"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "cb4aafb3-6071-46d2-a8cd-638a47a564e2",
+              "name": "key",
+              "value": "1",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -3232,
+        3296
+      ],
+      "id": "59ff8998-1f33-411d-83b3-d5c7fd3df5f1",
+      "name": "Key: 1"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "cb4aafb3-6071-46d2-a8cd-638a47a564e2",
+              "name": "key",
+              "value": "={{ $json.key }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -3008,
+        1616
+      ],
+      "id": "c0cbea21-4c46-4b01-9cae-620db8721057",
+      "name": "key for toggle"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "ba7b5294-5c89-4434-b41c-f4b0d6b08c36",
+              "leftValue": "={{ $json.value }}",
+              "rightValue": "1",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        -3232,
+        3104
+      ],
+      "id": "8953882a-8d91-48d4-a76e-e5b975fb8574",
+      "name": "is changing_program_locked ?2"
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "dataTableId": {
+          "__rl": true,
+          "value": "il3gZO5GYNLZhOsa",
+          "mode": "list",
+          "cachedResultName": "config",
+          "cachedResultUrl": "/projects/NBttNnd6CVeZWrwI/datatables/il3gZO5GYNLZhOsa"
+        },
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "key",
+              "keyValue": "changing_program_locked"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1.1,
+      "position": [
+        -3456,
+        3104
+      ],
+      "id": "eec906a5-9d2e-4b48-baa8-10c8c5067402",
+      "name": "get changing_program_locked2"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "Dgk7CxGWHSHsNcoT",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/Dgk7CxGWHSHsNcoT",
+          "cachedResultName": "atem"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "program_name_with_transition": "CAM"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "program_name",
+              "displayName": "program_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "preview_name",
+              "displayName": "preview_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "toggle_black",
+              "displayName": "toggle_black",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "enable_stream",
+              "displayName": "enable_stream",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "enable_recording",
+              "displayName": "enable_recording",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "execute_macro",
+              "displayName": "execute_macro",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "recording_filename",
+              "displayName": "recording_filename",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "toggle_program",
+              "displayName": "toggle_program",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "program_name_with_transition",
+              "displayName": "program_name_with_transition",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "usk_on_air_toggle",
+              "displayName": "usk_on_air_toggle",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "usk_set_fill_source",
+              "displayName": "usk_set_fill_source",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "usk_on_air_enable",
+              "displayName": "usk_on_air_enable",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "mediaplayer_set_still",
+              "displayName": "mediaplayer_set_still",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "set_tbar_to",
+              "displayName": "set_tbar_to",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "set_mix1_on",
+              "displayName": "set_mix1_on",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "set_projector_aux_to",
+              "displayName": "set_projector_aux_to",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "set_program_ssrc_aux_to",
+              "displayName": "set_program_ssrc_aux_to",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "turn_all_keys_off",
+              "displayName": "turn_all_keys_off",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {
+          "waitForSubWorkflow": false
+        }
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        -3008,
+        3104
+      ],
+      "id": "df54fc2b-e305-4a8b-9212-1bd9b8e62e15",
+      "name": "show cam"
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ ($json.body.ms.ctrl?\"CTRL+\":\"\") + ($json.body.ms.alt?\"ALT+\":\"\") + ($json.body.ms.shift?\"SHIFT+\":\"\") + ($json.body.ms.meta?\"META+\":\"\") + $json.body.v }}",
+                    "rightValue": "ALT+META+k",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "69bee993-4f2f-4c42-ab82-fdb88caf1d0e"
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "PROJECTION PC TOGGLE (ALT+META+k)"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ ($json.body.ms.ctrl?\"CTRL+\":\"\") + ($json.body.ms.alt?\"ALT+\":\"\") + ($json.body.ms.shift?\"SHIFT+\":\"\") + ($json.body.ms.meta?\"META+\":\"\") + $json.body.v }}",
+                    "rightValue": "ALT+META+l",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "20000000-0000-0000-0000-000000000001"
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "PULPIT TOGGLE (ALT+META+l)"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ ($json.body.ms.ctrl?\"CTRL+\":\"\") + ($json.body.ms.alt?\"ALT+\":\"\") + ($json.body.ms.shift?\"SHIFT+\":\"\") + ($json.body.ms.meta?\"META+\":\"\") + $json.body.v }}",
+                    "rightValue": "ALT+META+m",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "21000000-0000-0000-0000-000000000001"
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "A/V PC TOGGLE (ALT+META+m)"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ ($json.body.ms.ctrl?\"CTRL+\":\"\") + ($json.body.ms.alt?\"ALT+\":\"\") + ($json.body.ms.shift?\"SHIFT+\":\"\") + ($json.body.ms.meta?\"META+\":\"\") + $json.body.v }}",
+                    "rightValue": "CTRL+ALT+META+u",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "82e218c0-4b71-43d8-b07b-5a1bd1169f11"
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "A/V PC KEY TOGGLE (CTRL+ALT+META+u)"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "d67b7bb4-92b9-4e33-966f-b6ae62e65f96",
+                    "leftValue": "={{ ($json.body.ms.ctrl?\"CTRL+\":\"\") + ($json.body.ms.alt?\"ALT+\":\"\") + ($json.body.ms.shift?\"SHIFT+\":\"\") + ($json.body.ms.meta?\"META+\":\"\") + $json.body.v }}",
+                    "rightValue": "ALT+META+x",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "SHOW BG (ALT+META+x)"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "a213dc0b-3659-49da-ab49-3108b703dc7b",
+                    "leftValue": "={{ ($json.body.ms.ctrl?\"CTRL+\":\"\") + ($json.body.ms.alt?\"ALT+\":\"\") + ($json.body.ms.shift?\"SHIFT+\":\"\") + ($json.body.ms.meta?\"META+\":\"\") + $json.body.v }}",
+                    "rightValue": "ALT+META+y",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "SHOW CAM (ALT+META+y)"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ ($json.body.ms.ctrl?\"CTRL+\":\"\") + ($json.body.ms.alt?\"ALT+\":\"\") + ($json.body.ms.shift?\"SHIFT+\":\"\") + ($json.body.ms.meta?\"META+\":\"\") + $json.body.v }}",
+                    "rightValue": "CTRL+ALT+META+v",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "3534429b-0a88-4d14-9759-e052eb61e488"
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "PULPIT KEY TOGGLE (CTRL+ALT+META+v)"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ ($json.body.ms.ctrl?\"CTRL+\":\"\") + ($json.body.ms.alt?\"ALT+\":\"\") + ($json.body.ms.shift?\"SHIFT+\":\"\") + ($json.body.ms.meta?\"META+\":\"\") + $json.body.v }}",
+                    "rightValue": "CTRL+ALT+META+w",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "7611e1e4-dfef-40ca-931b-8c6c428dcc45"
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "PROJECTION KEY TOGGLE (CTRL+ALT+META+w)"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "20ae9a7d-085d-4ce3-90c6-ce7df8ac55ba",
+                    "leftValue": "={{ ($json.body.ms.ctrl?\"CTRL+\":\"\") + ($json.body.ms.alt?\"ALT+\":\"\") + ($json.body.ms.shift?\"SHIFT+\":\"\") + ($json.body.ms.meta?\"META+\":\"\") + $json.body.v }}",
+                    "rightValue": "CTRL+ALT+META+x",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "PIP PRESENTER (CTRL+ALT+META+x)"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ ($json.body.ms.ctrl?\"CTRL+\":\"\") + ($json.body.ms.alt?\"ALT+\":\"\") + ($json.body.ms.shift?\"SHIFT+\":\"\") + ($json.body.ms.meta?\"META+\":\"\") + $json.body.v }}",
+                    "rightValue": "CTRL+ALT+META+c",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "37738479-007b-49ea-a5c3-8f644af95010"
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Event: pre stream mode (CTRL+ALT+META+c)"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ ($json.body.ms.ctrl?\"CTRL+\":\"\") + ($json.body.ms.alt?\"ALT+\":\"\") + ($json.body.ms.shift?\"SHIFT+\":\"\") + ($json.body.ms.meta?\"META+\":\"\") + $json.body.v }}",
+                    "rightValue": "CTRL+ALT+META+d",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "3694886b-d305-4c62-9bc6-b0623a02ff54"
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Event: break (CTRL+ALT+META+d)"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ ($json.body.ms.ctrl?\"CTRL+\":\"\") + ($json.body.ms.alt?\"ALT+\":\"\") + ($json.body.ms.shift?\"SHIFT+\":\"\") + ($json.body.ms.meta?\"META+\":\"\") + $json.body.v }}",
+                    "rightValue": "CTRL+ALT+META+s",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "b0858f52-552c-4754-8165-f77c50e58e50"
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Event: finish (CTRL+ALT+META+s)"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ ($json.body.ms.ctrl?\"CTRL+\":\"\") + ($json.body.ms.alt?\"ALT+\":\"\") + ($json.body.ms.shift?\"SHIFT+\":\"\") + ($json.body.ms.meta?\"META+\":\"\") + $json.body.v }}",
+                    "rightValue": "CTRL+ALT+META+t",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "e2e30af4-3d77-4acf-81cd-eac9b17694d0"
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "fade to black toggle (CTRL+ALT+META+g)"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ ($json.body.ms.ctrl?\"CTRL+\":\"\") + ($json.body.ms.alt?\"ALT+\":\"\") + ($json.body.ms.shift?\"SHIFT+\":\"\") + ($json.body.ms.meta?\"META+\":\"\") + $json.body.v }}",
+                    "rightValue": "CTRL+ALT+META+g",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "607086fb-b88f-40c4-9199-9208d200e12b"
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Change PRESET (CTRL+ALT+META+t)"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "b07727c0-6536-49fc-be30-dfb16ee28d66",
+                    "leftValue": "={{ ($json.body.ms.ctrl?\"CTRL+\":\"\") + ($json.body.ms.alt?\"ALT+\":\"\") + ($json.body.ms.shift?\"SHIFT+\":\"\") + ($json.body.ms.meta?\"META+\":\"\") + $json.body.v }}",
+                    "rightValue": "ALT+META+p",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "IT'S GOOD"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.4,
+      "position": [
+        -3904,
+        2880
+      ],
+      "id": "0736db34-0046-4fe4-a900-ace670f9bbe9",
+      "name": "MAIN"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "t2Sa0MfLHA25zPqyi4tOG",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/t2Sa0MfLHA25zPqyi4tOG",
+          "cachedResultName": "shorter"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {},
+          "matchingColumns": [],
+          "schema": [],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {
+          "waitForSubWorkflow": false
+        }
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        -3680,
+        4400
+      ],
+      "id": "51e22e20-68e5-4d5b-ba79-2d131c159e11",
+      "name": "Call 'shorter' (add short timestamp)"
+    }
+  ],
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "readconfig",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "readconfig": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Merge": {
+      "main": [
+        [
+          {
+            "node": "MAIN",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Mains",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "toggle the key?1": {
+      "main": [
+        [
+          {
+            "node": "Key: 3",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "program value: PULP",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "toggle the key?2": {
+      "main": [
+        [
+          {
+            "node": "Key: 4",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "program value: AVPC",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "get current preset1": {
+      "main": [
+        [
+          {
+            "node": "calcualte next preset1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "calcualte next preset1": {
+      "main": [
+        [
+          {
+            "node": "load preset",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "get key 2 state1": {
+      "main": [
+        [
+          {
+            "node": "toggle the key?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "toggle the key?": {
+      "main": [
+        [
+          {
+            "node": "Key: 2",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "program value: PROJ",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "get key 3 state1": {
+      "main": [
+        [
+          {
+            "node": "toggle the key?1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "get key 4 state2": {
+      "main": [
+        [
+          {
+            "node": "toggle the key?2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "get key 4 state": {
+      "main": [
+        [
+          {
+            "node": "update key 4 state",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "get key 3 state": {
+      "main": [
+        [
+          {
+            "node": "update key state 3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "get key 2 state": {
+      "main": [
+        [
+          {
+            "node": "update key state 2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "update key state 2": {
+      "main": [
+        [
+          {
+            "node": "Call 'atem'12",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "update key state 3": {
+      "main": [
+        [
+          {
+            "node": "Call 'atem'15",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "update key 4 state": {
+      "main": [
+        [
+          {
+            "node": "Call 'atem'16",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Call 'atem'12": {
+      "main": [
+        []
+      ]
+    },
+    "Call 'atem'15": {
+      "main": [
+        []
+      ]
+    },
+    "Call 'atem'16": {
+      "main": [
+        []
+      ]
+    },
+    "Mains": {
+      "main": [
+        [
+          {
+            "node": "MOVE UP",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "MOVE DOWN",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "MOVE LEFT",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "MOVE RIGHT",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "MOVE RIGHTUP",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "MOVE LEFTUP",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "MOVE RIGHTDOWN",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "MOVE LEFTDOWN",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "ZOOM IN",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "ZOOM OUT",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "PRESET SAVE CUSTOM",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "PRESET PROJECTOR",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "PRESET PULPIT WIDE",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "PRESET STAGE",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "PRESET CUSTOM CALL",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "PRESET CUSTOM SAVE",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "PRESET SITTING",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "PRESET PULPIT",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "PTZ STOP",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "ZOOM STOP",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "program value: PULP": {
+      "main": [
+        [
+          {
+            "node": "program",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "is changing_program_locked ?": {
+      "main": [
+        [
+          {
+            "node": "set projector aux",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "do toggle_program",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "get changing_program_locked": {
+      "main": [
+        [
+          {
+            "node": "is changing_program_locked ?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "program value: PROJ": {
+      "main": [
+        [
+          {
+            "node": "program",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "program": {
+      "main": [
+        [
+          {
+            "node": "get changing_program_locked",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "navigated_away",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "program value: AVPC": {
+      "main": [
+        [
+          {
+            "node": "program",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "program value: MPLAYER1": {
+      "main": [
+        [
+          {
+            "node": "program",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "program value: CAM": {
+      "main": [
+        [
+          {
+            "node": "navigated_away",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "get changing_program_locked2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "is changing_program_locked ?1": {
+      "main": [
+        [],
+        [
+          {
+            "node": "usk_onair_toggle",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "get changing_program_locked1": {
+      "main": [
+        [
+          {
+            "node": "is changing_program_locked ?1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Key: 2": {
+      "main": [
+        [
+          {
+            "node": "key for toggle",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Key: 3": {
+      "main": [
+        [
+          {
+            "node": "key for toggle",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Key: 4": {
+      "main": [
+        [
+          {
+            "node": "key for toggle",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "usk_onair_toggle": {
+      "main": [
+        []
+      ]
+    },
+    "Key: 1": {
+      "main": [
+        [
+          {
+            "node": "key for toggle",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "key for toggle": {
+      "main": [
+        [
+          {
+            "node": "get changing_program_locked1",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "navigated_away",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "get changing_program_locked2": {
+      "main": [
+        [
+          {
+            "node": "is changing_program_locked ?2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "is changing_program_locked ?2": {
+      "main": [
+        [],
+        [
+          {
+            "node": "show cam",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "MAIN": {
+      "main": [
+        [
+          {
+            "node": "get key 2 state1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "get key 3 state1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "get key 4 state2",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "get key 4 state",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "program value: MPLAYER1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "program value: CAM",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "get key 3 state",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "get key 2 state",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Key: 1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "do_prestream",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "do_break",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "do_finish",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "toggle black",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "get current preset1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Call 'shorter' (add short timestamp)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "callerPolicy": "workflowsFromSameOwner",
+    "availableInMCP": false,
+    "saveDataSuccessExecution": "none",
+    "saveManualExecutions": false,
+    "errorWorkflow": "E0yl55s1YkCD2LNx",
+    "timeSavedMode": "fixed",
+    "executionTimeout": 60
+  },
+  "staticData": null,
+  "meta": null,
+  "pinData": {
+    "Webhook": [
+      {
+        "json": {
+          "headers": {
+            "host": "192.168.2.10",
+            "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+            "content-length": "115",
+            "accept": "*/*",
+            "accept-encoding": "gzip, deflate, br, zstd",
+            "accept-language": "en-US,en;q=0.8",
+            "content-type": "application/json",
+            "dnt": "1",
+            "origin": "https://192.168.2.10",
+            "priority": "u=1, i",
+            "referer": "https://192.168.2.10/remote/",
+            "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"Brave\";v=\"145\", \"Chromium\";v=\"145\"",
+            "sec-ch-ua-mobile": "?0",
+            "sec-ch-ua-platform": "\"Linux\"",
+            "sec-fetch-dest": "empty",
+            "sec-fetch-mode": "cors",
+            "sec-fetch-site": "same-origin",
+            "sec-gpc": "1",
+            "via": "2.0 Caddy",
+            "x-forwarded-for": "192.168.2.162",
+            "x-forwarded-host": "192.168.2.10",
+            "x-forwarded-proto": "https"
+          },
+          "params": {},
+          "query": {},
+          "body": {
+            "dev": "8089:0008",
+            "type": "kbd",
+            "c": 25,
+            "s": "down",
+            "ms": {
+              "ctrl": false,
+              "shift": false,
+              "alt": true,
+              "meta": true
+            },
+            "v": "p"
+          },
+          "webhookUrl": "http://192.168.2.5:3000/webhook/keyinput",
+          "executionMode": "production"
+        },
+        "pairedItem": {
+          "item": 0
+        }
+      }
+    ]
+  },
+  "versionId": "463833d8-da39-490b-9ac4-39e9b32b3f0d",
+  "activeVersionId": "463833d8-da39-490b-9ac4-39e9b32b3f0d",
+  "versionCounter": 1218,
+  "triggerCount": 1,
+  "tags": [],
+  "shared": [
+    {
+      "updatedAt": "2026-01-28T09:50:30.201Z",
+      "createdAt": "2026-01-28T09:50:30.201Z",
+      "role": "workflow:owner",
+      "workflowId": "f8eQySUHVPeEQpVT",
+      "projectId": "NBttNnd6CVeZWrwI",
+      "project": {
+        "updatedAt": "2026-01-28T08:29:07.278Z",
+        "createdAt": "2026-01-28T08:04:49.772Z",
+        "id": "NBttNnd6CVeZWrwI",
+        "name": "Calvary Paphos <calvarycypruscalendar@gmail.com>",
+        "type": "personal",
+        "icon": null,
+        "description": null,
+        "creatorId": "d84e1e89-6472-46a2-881c-0780a65eac38"
+      }
+    }
+  ]
+}

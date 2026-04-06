@@ -1,0 +1,657 @@
+{
+  "updatedAt": "2026-03-29T11:24:26.091Z",
+  "createdAt": "2026-03-04T18:14:47.248Z",
+  "id": "t2Sa0MfLHA25zPqyi4tOG",
+  "name": "shorter",
+  "description": null,
+  "active": true,
+  "isArchived": false,
+  "nodes": [
+    {
+      "parameters": {
+        "inputSource": "passthrough"
+      },
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        -608,
+        -16
+      ],
+      "id": "2e1ab704-d377-49bc-87c4-2fc03c362044",
+      "name": "When Executed by Another Workflow"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "CgSbDSo1mHpiRCnr",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/CgSbDSo1mHpiRCnr",
+          "cachedResultName": "readconfig"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {},
+          "matchingColumns": [],
+          "schema": [],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "mode": "each",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        -384,
+        -16
+      ],
+      "id": "e90c9fa7-4c7e-42f6-8152-0bef19398b60",
+      "name": "readconfig",
+      "executeOnce": false
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "75ad5b46-50de-4ba1-808c-08d3fa884409",
+              "name": "record_seconds",
+              "value": "={{ $json.data.split(':').reduce((acc, val, i) => acc + parseInt(val) * [3600, 60, 1][i], 0) }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        64,
+        -16
+      ],
+      "id": "2463c529-900b-4b25-b21a-70251d23e186",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.config.companion_host }}/api/custom-variable/atem_record_duration_hms/value",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        -160,
+        -16
+      ],
+      "id": "9d6a4361-322a-4d92-8454-7f479fd6eecb",
+      "name": "get atem_recording_hms"
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.config.companion_host }}/api/custom-variable/atem_record_filename/value",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        -160,
+        -208
+      ],
+      "id": "b0f8df99-8448-4a49-bdc6-711730e30dfa",
+      "name": "get atem_recording_filename"
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "combineBy": "combineByPosition",
+        "numberInputs": 3,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        288,
+        -32
+      ],
+      "id": "f4ff38fc-deb5-4327-ac92-b4f41cdbeffa",
+      "name": "Merge"
+    },
+    {
+      "parameters": {
+        "dataTableId": {
+          "__rl": true,
+          "value": "t1pN3KOW2pFk1HSL",
+          "mode": "list",
+          "cachedResultName": "shorts",
+          "cachedResultUrl": "/projects/NBttNnd6CVeZWrwI/datatables/t1pN3KOW2pFk1HSL"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "recording_folder": "={{ $json.atem_recording_filename }}",
+            "trigger_point": "={{ $json.record_seconds }}",
+            "in_secs": "={{ Math.max(0,$json.record_seconds-(5*60)) }}",
+            "out_secs": "={{ parseInt($json.record_seconds)+(5*60) }}",
+            "recording_index": "={{ $json.atem_record_index }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "recording_folder",
+              "displayName": "recording_folder",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "recording_index",
+              "displayName": "recording_index",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "number",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "in_secs",
+              "displayName": "in_secs",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "number",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "trigger_point",
+              "displayName": "trigger_point",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "number",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "out_secs",
+              "displayName": "out_secs",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "number",
+              "readOnly": false,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1.1,
+      "position": [
+        560,
+        -16
+      ],
+      "id": "eb84954c-2743-4021-a9f4-0dc3ed5d0dff",
+      "name": "Insert row"
+    },
+    {
+      "parameters": {
+        "path": "get-shorts",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        -608,
+        496
+      ],
+      "id": "5a1e336d-7136-4c6e-b254-bee9d9f5a196",
+      "name": "Webhook",
+      "webhookId": "7ab4e99d-a02f-4bd6-be8e-7c4d6ba2d6c2"
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "dataTableId": {
+          "__rl": true,
+          "value": "t1pN3KOW2pFk1HSL",
+          "mode": "list",
+          "cachedResultName": "shorts",
+          "cachedResultUrl": "/projects/NBttNnd6CVeZWrwI/datatables/t1pN3KOW2pFk1HSL"
+        },
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "recording_folder",
+              "keyValue": "={{ $json.query.folder }}"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1.1,
+      "position": [
+        -160,
+        400
+      ],
+      "id": "4defd509-1bc6-45d8-970c-e7abc7e83963",
+      "name": "Get row(s)",
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "{\n  \"type\": \"error\",\n  \"message\": \"invalid parameters\"\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.5,
+      "position": [
+        -160,
+        592
+      ],
+      "id": "53dfbc7c-434e-4c84-9268-307766789d63",
+      "name": "Respond to Webhook"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "fee478ba-2754-4802-8762-29f9558ad247",
+              "leftValue": "={{ $json.query.folder }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "notEmpty",
+                "singleValue": true
+              }
+            },
+            {
+              "id": "92db95c9-35bd-4d2f-be75-12dbfff36baa",
+              "leftValue": "={{ $json.query.folder }}",
+              "rightValue": "^[A-Za-z0-9_-]{1,30}$",
+              "operator": {
+                "type": "string",
+                "operation": "regex"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        -384,
+        496
+      ],
+      "id": "226c9217-b778-42dc-bb13-af1457be4bce",
+      "name": "params okay"
+    },
+    {
+      "parameters": {
+        "respondWith": "allIncomingItems",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.5,
+      "position": [
+        512,
+        400
+      ],
+      "id": "61c0db5d-a1a5-462e-b9fd-a0aa2857b40a",
+      "name": "Respond to Webhook1"
+    },
+    {
+      "parameters": {
+        "aggregate": "aggregateAllItemData",
+        "destinationFieldName": "content",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.aggregate",
+      "typeVersion": 1,
+      "position": [
+        64,
+        400
+      ],
+      "id": "3ab4a03c-13a9-41d0-926a-dabd38b5649a",
+      "name": "Aggregate"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "30355154-0da1-4df0-bbee-811447309a25",
+              "name": "type",
+              "value": "ok",
+              "type": "string"
+            },
+            {
+              "id": "4f4bdc35-7625-48b7-90b9-0f2c789d453a",
+              "name": "content",
+              "value": "={{ $json.content }}",
+              "type": "array"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        288,
+        400
+      ],
+      "id": "667f3be0-7bfe-4243-a4b2-ca71bf193e16",
+      "name": "Edit Fields1"
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.config.companion_host }}/api/custom-variable/atem_record_index/value",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        -160,
+        176
+      ],
+      "id": "d1cf981f-2167-4a75-8bcb-7f15e6c3e957",
+      "name": "get atem_record_index"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "b73a6328-f303-432b-88ae-2a6d0db45cf8",
+              "name": "atem_record_index",
+              "value": "={{ $json.data }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        64,
+        176
+      ],
+      "id": "d6ee655b-9c2f-46a6-9968-0c9ca1820dd1",
+      "name": "Edit Fields2"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "33b3bf3d-ff11-4b02-8252-fde7c20fb063",
+              "name": "atem_recording_filename",
+              "value": "={{ $json.data }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        64,
+        -208
+      ],
+      "id": "1cef1799-94bf-4bfd-8273-434e7f24e73d",
+      "name": "Edit Fields3"
+    }
+  ],
+  "connections": {
+    "When Executed by Another Workflow": {
+      "main": [
+        [
+          {
+            "node": "readconfig",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "readconfig": {
+      "main": [
+        [
+          {
+            "node": "get atem_recording_filename",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "get atem_recording_hms",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "get atem_record_index",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "get atem_recording_hms": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "get atem_recording_filename": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Merge": {
+      "main": [
+        [
+          {
+            "node": "Insert row",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "params okay",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "params okay": {
+      "main": [
+        [
+          {
+            "node": "Get row(s)",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get row(s)": {
+      "main": [
+        [
+          {
+            "node": "Aggregate",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Aggregate": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields1": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "get atem_record_index": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields2": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 2
+          }
+        ]
+      ]
+    },
+    "Edit Fields3": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "availableInMCP": false,
+    "timeSavedMode": "fixed",
+    "saveDataSuccessExecution": "none",
+    "callerPolicy": "workflowsFromSameOwner"
+  },
+  "staticData": null,
+  "meta": null,
+  "pinData": {
+    "Webhook": [
+      {
+        "json": {
+          "headers": {
+            "te": "deflate,gzip;q=0.3",
+            "connection": "TE, close",
+            "host": "192.168.2.5:3000",
+            "user-agent": "lwp-request/6.76 libwww-perl/6.76"
+          },
+          "params": {},
+          "query": {
+            "folder": "CCP_20260101_0101"
+          },
+          "body": {},
+          "webhookUrl": "http://192.168.2.5:3000/webhook/get-shorts",
+          "executionMode": "production"
+        },
+        "pairedItem": {
+          "item": 0
+        }
+      }
+    ]
+  },
+  "versionId": "ee38d0b6-6018-473d-aad7-114c3eca282f",
+  "activeVersionId": "ee38d0b6-6018-473d-aad7-114c3eca282f",
+  "versionCounter": 246,
+  "triggerCount": 1,
+  "tags": [],
+  "shared": [
+    {
+      "updatedAt": "2026-03-04T18:14:47.248Z",
+      "createdAt": "2026-03-04T18:14:47.248Z",
+      "role": "workflow:owner",
+      "workflowId": "t2Sa0MfLHA25zPqyi4tOG",
+      "projectId": "NBttNnd6CVeZWrwI",
+      "project": {
+        "updatedAt": "2026-01-28T08:29:07.278Z",
+        "createdAt": "2026-01-28T08:04:49.772Z",
+        "id": "NBttNnd6CVeZWrwI",
+        "name": "Calvary Paphos <calvarycypruscalendar@gmail.com>",
+        "type": "personal",
+        "icon": null,
+        "description": null,
+        "creatorId": "d84e1e89-6472-46a2-881c-0780a65eac38"
+      }
+    }
+  ]
+}

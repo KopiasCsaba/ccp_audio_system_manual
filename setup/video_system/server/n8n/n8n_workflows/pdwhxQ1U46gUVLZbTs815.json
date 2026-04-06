@@ -1,0 +1,119 @@
+{
+  "updatedAt": "2026-02-10T08:08:31.865Z",
+  "createdAt": "2026-02-03T16:38:22.678Z",
+  "id": "pdwhxQ1U46gUVLZbTs815",
+  "name": "Log cleaner tmp not needed hopefully",
+  "description": null,
+  "active": false,
+  "isArchived": true,
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -224,
+        0
+      ],
+      "id": "60f6c6b4-367c-4bc7-8118-f583dff5de4b",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "operation": "deleteRows",
+        "dataTableId": {
+          "__rl": true,
+          "value": "lbqU5964jQaS42dP",
+          "mode": "list",
+          "cachedResultName": "log",
+          "cachedResultUrl": "/projects/NBttNnd6CVeZWrwI/datatables/lbqU5964jQaS42dP"
+        },
+        "filters": {
+          "conditions": [
+            {
+              "condition": "gt",
+              "keyValue": "1"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1.1,
+      "position": [
+        208,
+        0
+      ],
+      "id": "67bf0bab-1d25-4a77-b681-38cca537bdc4",
+      "name": "Delete row(s)"
+    },
+    {
+      "parameters": {
+        "authentication": "predefinedCredentialType",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        0,
+        0
+      ],
+      "id": "ab001432-c020-46ba-9991-68f5b89a2133",
+      "name": "HTTP Request"
+    }
+  ],
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Delete row(s)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        []
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "availableInMCP": false,
+    "timeSavedMode": "fixed",
+    "callerPolicy": "workflowsFromSameOwner",
+    "executionTimeout": 3600
+  },
+  "staticData": null,
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "pinData": {},
+  "versionId": "7d0aeccc-01cd-46b9-adc8-9ed8f09f97db",
+  "activeVersionId": null,
+  "versionCounter": 20,
+  "triggerCount": 0,
+  "tags": [],
+  "shared": [
+    {
+      "updatedAt": "2026-02-03T16:38:22.678Z",
+      "createdAt": "2026-02-03T16:38:22.678Z",
+      "role": "workflow:owner",
+      "workflowId": "pdwhxQ1U46gUVLZbTs815",
+      "projectId": "NBttNnd6CVeZWrwI",
+      "project": {
+        "updatedAt": "2026-01-28T08:29:07.278Z",
+        "createdAt": "2026-01-28T08:04:49.772Z",
+        "id": "NBttNnd6CVeZWrwI",
+        "name": "Calvary Paphos <calvarycypruscalendar@gmail.com>",
+        "type": "personal",
+        "icon": null,
+        "description": null,
+        "creatorId": "d84e1e89-6472-46a2-881c-0780a65eac38"
+      }
+    }
+  ]
+}

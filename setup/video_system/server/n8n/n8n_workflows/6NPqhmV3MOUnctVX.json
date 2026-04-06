@@ -1,0 +1,1290 @@
+{
+  "updatedAt": "2026-03-04T20:58:41.848Z",
+  "createdAt": "2025-12-01T16:03:17.389Z",
+  "id": "6NPqhmV3MOUnctVX",
+  "name": "stream manager",
+  "description": null,
+  "active": true,
+  "isArchived": false,
+  "nodes": [
+    {
+      "parameters": {
+        "workflowInputs": {
+          "values": [
+            {
+              "name": "set_streams_status"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        336,
+        304
+      ],
+      "id": "0fdd0b4b-ec53-41c0-bc31-0d4c397f6748",
+      "name": "control"
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "combineBy": "combineAll",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        1008,
+        208
+      ],
+      "id": "2ac18dd4-6e09-47f4-b225-b619f8eea5b5",
+      "name": "Merge"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        112,
+        112
+      ],
+      "id": "235981be-3bbd-493c-b055-6d81e495c155",
+      "name": "When clicking ‘Execute workflow’",
+      "disabled": true
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        560,
+        208
+      ],
+      "id": "03affd94-8d3e-4d91-aff8-466ff57fcd7b",
+      "name": "No Operation, do nothing"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "b54eb579-7c80-4590-a778-6d77675792d4",
+              "name": "set_streams_status",
+              "value": "1",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        336,
+        112
+      ],
+      "id": "de99ab94-1e09-412c-903f-584118f175e0",
+      "name": "debug"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "CgSbDSo1mHpiRCnr",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/CgSbDSo1mHpiRCnr",
+          "cachedResultName": "readconfig"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {}
+        },
+        "mode": "each",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        784,
+        288
+      ],
+      "id": "e7e24a6d-15a0-4b58-bf8a-5d8483f4282a",
+      "name": "readconfig",
+      "executeOnce": false
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "1033e6c0-f396-419d-bbcd-674987e82497",
+              "leftValue": "={{ $json.config.selected_preset.restreamer_youtube }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "notEmpty",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        1456,
+        -80
+      ],
+      "id": "7c6d54f8-9601-4ef7-90d0-a6e118784453",
+      "name": "Preset has youtube"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "1033e6c0-f396-419d-bbcd-674987e82497",
+              "leftValue": "={{ $json.config.selected_preset.restreamer_facebook }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "notEmpty",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        1456,
+        112
+      ],
+      "id": "35e333bd-5259-4ce2-988b-e08fcba07e45",
+      "name": "Preset has facebook"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        1680,
+        -80
+      ],
+      "id": "86d4049c-0c1d-4a5d-bd51-7a00398c6a49",
+      "name": "TODO START YOUTUBE STREAM WITH TOOL"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        1680,
+        112
+      ],
+      "id": "5a530899-1f34-4016-acc0-0a524287afd0",
+      "name": "TODO START FACEBOOK STREAM WITH TOOL1"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "840cc6f3-8ec1-4a8f-a34e-f71614df693f",
+              "leftValue": "={{ $json.set_streams_status }}",
+              "rightValue": "1",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        1232,
+        208
+      ],
+      "id": "5fe022de-aa6c-4cd7-94c7-28f50bcef12a",
+      "name": "Enable?"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "0AUTg9h7jIJdrnCK",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/0AUTg9h7jIJdrnCK",
+          "cachedResultName": "restreamer"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "output_set_enabled": "=",
+            "output_name": "={{ $json.config.selected_preset.restreamer_youtube }}",
+            "output_set_stream_key": "1234"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "output_name",
+              "displayName": "output_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "output_set_stream_key",
+              "displayName": "output_set_stream_key",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "output_set_stream_backup_key",
+              "displayName": "output_set_stream_backup_key",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "output_set_enabled",
+              "displayName": "output_set_enabled",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        1904,
+        -80
+      ],
+      "id": "b315bbc4-8a2f-41de-8fc0-6773bbf5023c",
+      "name": "Set restreamer youtube key"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "0AUTg9h7jIJdrnCK",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/0AUTg9h7jIJdrnCK",
+          "cachedResultName": "restreamer"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "output_set_enabled": "=",
+            "output_name": "={{ $json.config.selected_preset.restreamer_facebook }}",
+            "output_set_stream_key": "1234",
+            "output_set_stream_backup_key": "1234"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "output_name",
+              "displayName": "output_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "output_set_stream_key",
+              "displayName": "output_set_stream_key",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "output_set_stream_backup_key",
+              "displayName": "output_set_stream_backup_key",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "output_set_enabled",
+              "displayName": "output_set_enabled",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        1904,
+        112
+      ],
+      "id": "296b0d67-614a-48f3-b713-1b9b85f6711a",
+      "name": "Set restreamer facebook key"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "0AUTg9h7jIJdrnCK",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/0AUTg9h7jIJdrnCK",
+          "cachedResultName": "restreamer"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "output_set_enabled": "=1",
+            "output_name": "={{ $('readconfig').item.json.config.selected_preset.restreamer_facebook }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "output_name",
+              "displayName": "output_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "output_set_stream_key",
+              "displayName": "output_set_stream_key",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "output_set_stream_backup_key",
+              "displayName": "output_set_stream_backup_key",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "output_set_enabled",
+              "displayName": "output_set_enabled",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        2128,
+        112
+      ],
+      "id": "893c3c23-d776-4570-9412-c309b37051af",
+      "name": "Enable restreamer facebook"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "1033e6c0-f396-419d-bbcd-674987e82497",
+              "leftValue": "={{ $json.config.selected_preset.restreamer_youtube }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "notEmpty",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        1456,
+        304
+      ],
+      "id": "40f12e38-3af3-4e70-9c6c-9de5fb79a84c",
+      "name": "Preset has youtube1"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "1033e6c0-f396-419d-bbcd-674987e82497",
+              "leftValue": "={{ $json.config.selected_preset.restreamer_facebook }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "notEmpty",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        1456,
+        496
+      ],
+      "id": "6bd0cb14-c485-4edd-97d2-a877ab009e2b",
+      "name": "Preset has facebook1"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "0AUTg9h7jIJdrnCK",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/0AUTg9h7jIJdrnCK",
+          "cachedResultName": "restreamer"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "output_set_enabled": "=0",
+            "output_name": "={{ $json.config.selected_preset.restreamer_youtube }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "output_name",
+              "displayName": "output_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "output_set_stream_key",
+              "displayName": "output_set_stream_key",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "output_set_stream_backup_key",
+              "displayName": "output_set_stream_backup_key",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "output_set_enabled",
+              "displayName": "output_set_enabled",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        1680,
+        304
+      ],
+      "id": "f308b47e-2c24-41bc-9f60-4aa24a492fe8",
+      "name": "Disable restreamer youtube"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "0AUTg9h7jIJdrnCK",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/0AUTg9h7jIJdrnCK",
+          "cachedResultName": "restreamer"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "output_set_enabled": "=0",
+            "output_name": "={{ $json.config.selected_preset.restreamer_facebook }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "output_name",
+              "displayName": "output_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "output_set_stream_key",
+              "displayName": "output_set_stream_key",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "output_set_stream_backup_key",
+              "displayName": "output_set_stream_backup_key",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "output_set_enabled",
+              "displayName": "output_set_enabled",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        1680,
+        496
+      ],
+      "id": "792bc282-07c9-4f5b-9172-609417c00d36",
+      "name": "Disable restreamer facebook"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "0AUTg9h7jIJdrnCK",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/0AUTg9h7jIJdrnCK",
+          "cachedResultName": "restreamer"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "output_set_enabled": "=1",
+            "output_name": "={{ $('readconfig').item.json.config.selected_preset.restreamer_youtube }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "output_name",
+              "displayName": "output_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "output_set_stream_key",
+              "displayName": "output_set_stream_key",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "output_set_stream_backup_key",
+              "displayName": "output_set_stream_backup_key",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "output_set_enabled",
+              "displayName": "output_set_enabled",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        2128,
+        -80
+      ],
+      "id": "e67fd74f-d931-4826-82b6-40601ed497ff",
+      "name": "Enable restreamer youtube"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "E0yl55s1YkCD2LNx",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/E0yl55s1YkCD2LNx",
+          "cachedResultName": "log"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "type": "notice",
+            "message": "=set_streams_status: {{ $json.set_streams_status }}",
+            "execution_id": "={{ $execution.id }}:{{ $workflow.name }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "type",
+              "displayName": "type",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "message",
+              "displayName": "message",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "private_message",
+              "displayName": "private_message",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "execution_id",
+              "displayName": "execution_id",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        1136,
+        16
+      ],
+      "id": "3afcbd0c-016b-4302-b129-8901a0af5b79",
+      "name": "Call 'log'4"
+    },
+    {
+      "parameters": {
+        "amount": 10
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        2336,
+        -80
+      ],
+      "id": "5fd6504d-bf55-4032-bdf2-076bee68c988",
+      "name": "Wait",
+      "webhookId": "ffdf99ee-e568-4391-8345-8af1969eff76",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "0AUTg9h7jIJdrnCK",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/0AUTg9h7jIJdrnCK",
+          "cachedResultName": "restreamer"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "output_set_enabled": "=0",
+            "output_name": "={{ $('readconfig').item.json.config.selected_preset.restreamer_youtube }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "output_name",
+              "displayName": "output_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "output_set_stream_key",
+              "displayName": "output_set_stream_key",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "output_set_stream_backup_key",
+              "displayName": "output_set_stream_backup_key",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "output_set_enabled",
+              "displayName": "output_set_enabled",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        2544,
+        -80
+      ],
+      "id": "5aaa3deb-bec3-4a64-b47f-bf3fbeb124e1",
+      "name": "Disable restreamer youtube1",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "amount": 2
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        2736,
+        -80
+      ],
+      "id": "1efabb59-c7ec-4ab0-82fe-5458f6a411fa",
+      "name": "Wait1",
+      "webhookId": "ffdf99ee-e568-4391-8345-8af1969eff76",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "0AUTg9h7jIJdrnCK",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/0AUTg9h7jIJdrnCK",
+          "cachedResultName": "restreamer"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "output_set_enabled": "=1",
+            "output_name": "={{ $('readconfig').item.json.config.selected_preset.restreamer_youtube }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "output_name",
+              "displayName": "output_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "output_set_stream_key",
+              "displayName": "output_set_stream_key",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "output_set_stream_backup_key",
+              "displayName": "output_set_stream_backup_key",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "output_set_enabled",
+              "displayName": "output_set_enabled",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        2928,
+        -80
+      ],
+      "id": "e9a722fb-eb2f-41c7-a298-3de18d775c8b",
+      "name": "Enable restreamer youtube1",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "content": "# Youtube fix\nAt first sometimes the audio is bugging. Probably restreamer bug. \nMaybe fixed by recoding audio.\ngithub.com/datarhei/restreamer/issues/728",
+        "width": 656
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        2320,
+        -272
+      ],
+      "typeVersion": 1,
+      "id": "95916f43-fbd2-4cca-8783-69931f7902a3",
+      "name": "Sticky Note"
+    }
+  ],
+  "connections": {
+    "control": {
+      "main": [
+        [
+          {
+            "node": "No Operation, do nothing",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge": {
+      "main": [
+        [
+          {
+            "node": "Enable?",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Call 'log'4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "debug",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "No Operation, do nothing": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "readconfig",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "debug": {
+      "main": [
+        [
+          {
+            "node": "No Operation, do nothing",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "readconfig": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Preset has youtube": {
+      "main": [
+        [
+          {
+            "node": "TODO START YOUTUBE STREAM WITH TOOL",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Preset has facebook": {
+      "main": [
+        [
+          {
+            "node": "TODO START FACEBOOK STREAM WITH TOOL1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "TODO START YOUTUBE STREAM WITH TOOL": {
+      "main": [
+        [
+          {
+            "node": "Set restreamer youtube key",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Enable?": {
+      "main": [
+        [
+          {
+            "node": "Preset has youtube",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Preset has facebook",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Preset has youtube1",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Preset has facebook1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set restreamer youtube key": {
+      "main": [
+        [
+          {
+            "node": "Enable restreamer youtube",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "TODO START FACEBOOK STREAM WITH TOOL1": {
+      "main": [
+        [
+          {
+            "node": "Set restreamer facebook key",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set restreamer facebook key": {
+      "main": [
+        [
+          {
+            "node": "Enable restreamer facebook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Preset has youtube1": {
+      "main": [
+        [
+          {
+            "node": "Disable restreamer youtube",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Preset has facebook1": {
+      "main": [
+        [
+          {
+            "node": "Disable restreamer facebook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Enable restreamer youtube": {
+      "main": [
+        [
+          {
+            "node": "Wait",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait": {
+      "main": [
+        [
+          {
+            "node": "Disable restreamer youtube1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Disable restreamer youtube1": {
+      "main": [
+        [
+          {
+            "node": "Wait1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait1": {
+      "main": [
+        [
+          {
+            "node": "Enable restreamer youtube1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "saveDataSuccessExecution": "none",
+    "saveManualExecutions": false,
+    "callerPolicy": "workflowsFromSameOwner",
+    "availableInMCP": false,
+    "errorWorkflow": "E0yl55s1YkCD2LNx",
+    "timeSavedMode": "fixed"
+  },
+  "staticData": null,
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "pinData": {
+    "control": [
+      {
+        "json": {
+          "load_preset": "ccp"
+        }
+      }
+    ]
+  },
+  "versionId": "98804032-60ca-44f9-ae06-046e8a19b2df",
+  "activeVersionId": "98804032-60ca-44f9-ae06-046e8a19b2df",
+  "versionCounter": 187,
+  "triggerCount": 0,
+  "tags": [],
+  "shared": [
+    {
+      "updatedAt": "2026-01-28T09:50:30.201Z",
+      "createdAt": "2026-01-28T09:50:30.201Z",
+      "role": "workflow:owner",
+      "workflowId": "6NPqhmV3MOUnctVX",
+      "projectId": "NBttNnd6CVeZWrwI",
+      "project": {
+        "updatedAt": "2026-01-28T08:29:07.278Z",
+        "createdAt": "2026-01-28T08:04:49.772Z",
+        "id": "NBttNnd6CVeZWrwI",
+        "name": "Calvary Paphos <calvarycypruscalendar@gmail.com>",
+        "type": "personal",
+        "icon": null,
+        "description": null,
+        "creatorId": "d84e1e89-6472-46a2-881c-0780a65eac38"
+      }
+    }
+  ]
+}

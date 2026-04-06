@@ -1,0 +1,6102 @@
+{
+  "updatedAt": "2026-04-05T09:20:27.321Z",
+  "createdAt": "2025-11-30T21:53:21.157Z",
+  "id": "mooEWAfPCkfAoJCv",
+  "name": "event manager",
+  "description": null,
+  "active": true,
+  "isArchived": false,
+  "nodes": [
+    {
+      "parameters": {
+        "workflowInputs": {
+          "values": [
+            {
+              "name": "navigated_away"
+            },
+            {
+              "name": "do_prestream"
+            },
+            {
+              "name": "do_break"
+            },
+            {
+              "name": "do_finish"
+            },
+            {
+              "name": "start_session"
+            },
+            {
+              "name": "dont_start_recording"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        336,
+        400
+      ],
+      "id": "1db31399-764e-4b17-a0a3-2f6390869662",
+      "name": "control"
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "combineBy": "combineAll",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        1008,
+        304
+      ],
+      "id": "a309cb55-82e6-4d63-beb5-c8a07ae8b8ba",
+      "name": "Merge"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        112,
+        208
+      ],
+      "id": "e65af775-a96b-4c9b-a5a4-0432107d3715",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        560,
+        304
+      ],
+      "id": "e7e56564-d2cb-438c-82b7-e3b2203851e5",
+      "name": "No Operation, do nothing"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "b54eb579-7c80-4590-a778-6d77675792d4",
+              "name": "navigated_away",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "b79bcb6c-7e69-445c-9bfd-d3b40c066274",
+              "name": "do_prestream",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "4960ab4a-cc29-4aa3-b519-0e3feee1c816",
+              "name": "do_break",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "8ecae6bd-2581-42b7-b8c6-2fd3fcdc28b4",
+              "name": "do_finish",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "31de62da-c378-42a9-85d1-860d206d4faf",
+              "name": "start_session",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "ed3c9b18-0dbb-4984-8dad-910edaca96ab",
+              "name": "dont_start_recording",
+              "value": "1",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        336,
+        208
+      ],
+      "id": "ffcbf75e-5274-438c-8057-c7a568dde076",
+      "name": "debug"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "CgSbDSo1mHpiRCnr",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/CgSbDSo1mHpiRCnr",
+          "cachedResultName": "readconfig"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {},
+          "matchingColumns": [],
+          "schema": [],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "mode": "each",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        784,
+        376
+      ],
+      "id": "979ee790-9ee9-4cca-a033-5817290714c7",
+      "name": "readconfig",
+      "executeOnce": false
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "FK8D44cxEXsOJz7z",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/FK8D44cxEXsOJz7z",
+          "cachedResultName": "videoplayer"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "playFile": "={{ $('readconfig').item.json.config.selected_preset.finish_video }}",
+            "repeat": true
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "playFile",
+              "displayName": "playFile",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "repeat",
+              "displayName": "repeat",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "boolean",
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        1456,
+        2032
+      ],
+      "id": "3ddbf26c-9133-441d-bd08-ff535f3e39a2",
+      "name": "Call 'videoplayer'2",
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "Dgk7CxGWHSHsNcoT",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/Dgk7CxGWHSHsNcoT",
+          "cachedResultName": "atem"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "enable_recording": "0"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "program_name",
+              "displayName": "program_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "preview_name",
+              "displayName": "preview_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "toggle_black",
+              "displayName": "toggle_black",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "enable_stream",
+              "displayName": "enable_stream",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "enable_recording",
+              "displayName": "enable_recording",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "execute_macro",
+              "displayName": "execute_macro",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "recording_filename",
+              "displayName": "recording_filename",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "toggle_program",
+              "displayName": "toggle_program",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "program_name_with_transition",
+              "displayName": "program_name_with_transition",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "usk_on_air_toggle",
+              "displayName": "usk_on_air_toggle",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "usk_set_fill_source",
+              "displayName": "usk_set_fill_source",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "usk_on_air_enable",
+              "displayName": "usk_on_air_enable",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "mediaplayer_set_still",
+              "displayName": "mediaplayer_set_still",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        2800,
+        1936
+      ],
+      "id": "cd1049c0-2de5-4b1f-bab1-d7d21c1ea2f4",
+      "name": "stop recording2"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "FK8D44cxEXsOJz7z",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/FK8D44cxEXsOJz7z",
+          "cachedResultName": "videoplayer"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "playFile": "={{ $('readconfig').item.json.config.selected_preset.break_video }}",
+            "repeat": true
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "playFile",
+              "displayName": "playFile",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "repeat",
+              "displayName": "repeat",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "boolean",
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        1456,
+        1456
+      ],
+      "id": "921a0160-7c29-4c46-8bd8-9a3ca3fa7c4b",
+      "name": "Call 'videoplayer'1",
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "Dgk7CxGWHSHsNcoT",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/Dgk7CxGWHSHsNcoT",
+          "cachedResultName": "atem"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "enable_recording": "0"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "program_name",
+              "displayName": "program_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "preview_name",
+              "displayName": "preview_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "toggle_black",
+              "displayName": "toggle_black",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "enable_stream",
+              "displayName": "enable_stream",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "enable_recording",
+              "displayName": "enable_recording",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "execute_macro",
+              "displayName": "execute_macro",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "recording_filename",
+              "displayName": "recording_filename",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "toggle_program",
+              "displayName": "toggle_program",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "program_name_with_transition",
+              "displayName": "program_name_with_transition",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "usk_on_air_toggle",
+              "displayName": "usk_on_air_toggle",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "usk_set_fill_source",
+              "displayName": "usk_set_fill_source",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "usk_on_air_enable",
+              "displayName": "usk_on_air_enable",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "mediaplayer_set_still",
+              "displayName": "mediaplayer_set_still",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        1456,
+        112
+      ],
+      "id": "d038b851-6331-4b50-9568-8f5eb1eb356d",
+      "name": "stop recording"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "FK8D44cxEXsOJz7z",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/FK8D44cxEXsOJz7z",
+          "cachedResultName": "videoplayer"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "playFile": "={{ $('readconfig').item.json.config.selected_preset.prestream_infinite_video }}",
+            "repeat": true
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "playFile",
+              "displayName": "playFile",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "repeat",
+              "displayName": "repeat",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "boolean",
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        1456,
+        496
+      ],
+      "id": "475a8e04-d92e-47a2-af63-82155dd5279b",
+      "name": "Call 'videoplayer'",
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "Dgk7CxGWHSHsNcoT",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/Dgk7CxGWHSHsNcoT",
+          "cachedResultName": "atem"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "enable_recording": "1"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "program_name",
+              "displayName": "program_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "preview_name",
+              "displayName": "preview_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "toggle_black",
+              "displayName": "toggle_black",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "enable_stream",
+              "displayName": "enable_stream",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "enable_recording",
+              "displayName": "enable_recording",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "execute_macro",
+              "displayName": "execute_macro",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "recording_filename",
+              "displayName": "recording_filename",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "toggle_program",
+              "displayName": "toggle_program",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "program_name_with_transition",
+              "displayName": "program_name_with_transition",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "usk_on_air_toggle",
+              "displayName": "usk_on_air_toggle",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "usk_set_fill_source",
+              "displayName": "usk_set_fill_source",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "usk_on_air_enable",
+              "displayName": "usk_on_air_enable",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "mediaplayer_set_still",
+              "displayName": "mediaplayer_set_still",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        2576,
+        208
+      ],
+      "id": "435c06cc-0fad-4244-8b29-d0f00013a8fb",
+      "name": "start recording",
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "Dgk7CxGWHSHsNcoT",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/Dgk7CxGWHSHsNcoT",
+          "cachedResultName": "atem"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "program_name_with_transition": "PVID"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "program_name",
+              "displayName": "program_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "preview_name",
+              "displayName": "preview_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "toggle_black",
+              "displayName": "toggle_black",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "enable_stream",
+              "displayName": "enable_stream",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "enable_recording",
+              "displayName": "enable_recording",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "execute_macro",
+              "displayName": "execute_macro",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "recording_filename",
+              "displayName": "recording_filename",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "toggle_program",
+              "displayName": "toggle_program",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "program_name_with_transition",
+              "displayName": "program_name_with_transition",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "usk_on_air_toggle",
+              "displayName": "usk_on_air_toggle",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "usk_set_fill_source",
+              "displayName": "usk_set_fill_source",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "usk_on_air_enable",
+              "displayName": "usk_on_air_enable",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "mediaplayer_set_still",
+              "displayName": "mediaplayer_set_still",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        1904,
+        496
+      ],
+      "id": "1ce9f3b7-59b4-4f13-9295-afa5fdf5ddee",
+      "name": "PVID 2 PROGRAM"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "Dgk7CxGWHSHsNcoT",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/Dgk7CxGWHSHsNcoT",
+          "cachedResultName": "atem"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "program_name_with_transition": "PVID"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "program_name",
+              "displayName": "program_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "preview_name",
+              "displayName": "preview_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "toggle_black",
+              "displayName": "toggle_black",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "enable_stream",
+              "displayName": "enable_stream",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "enable_recording",
+              "displayName": "enable_recording",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "execute_macro",
+              "displayName": "execute_macro",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "recording_filename",
+              "displayName": "recording_filename",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "toggle_program",
+              "displayName": "toggle_program",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "program_name_with_transition",
+              "displayName": "program_name_with_transition",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "usk_on_air_toggle",
+              "displayName": "usk_on_air_toggle",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "usk_set_fill_source",
+              "displayName": "usk_set_fill_source",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "usk_on_air_enable",
+              "displayName": "usk_on_air_enable",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "mediaplayer_set_still",
+              "displayName": "mediaplayer_set_still",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        1904,
+        1456
+      ],
+      "id": "2ca318f3-b021-4002-a2b0-b0d44d23283b",
+      "name": "PVID 2 PROGRAM1"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "Dgk7CxGWHSHsNcoT",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/Dgk7CxGWHSHsNcoT",
+          "cachedResultName": "atem"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "program_name_with_transition": "PVID"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "program_name",
+              "displayName": "program_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "preview_name",
+              "displayName": "preview_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "toggle_black",
+              "displayName": "toggle_black",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "enable_stream",
+              "displayName": "enable_stream",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "enable_recording",
+              "displayName": "enable_recording",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "execute_macro",
+              "displayName": "execute_macro",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "recording_filename",
+              "displayName": "recording_filename",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "toggle_program",
+              "displayName": "toggle_program",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "program_name_with_transition",
+              "displayName": "program_name_with_transition",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "usk_on_air_toggle",
+              "displayName": "usk_on_air_toggle",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "usk_set_fill_source",
+              "displayName": "usk_set_fill_source",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "usk_on_air_enable",
+              "displayName": "usk_on_air_enable",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "mediaplayer_set_still",
+              "displayName": "mediaplayer_set_still",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        1904,
+        2032
+      ],
+      "id": "961cbf48-8aff-4f38-96a2-0cb0c7c03311",
+      "name": "PVID 2 PROGRAM2"
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "seconds",
+              "secondsInterval": 10
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.3,
+      "position": [
+        112,
+        -1552
+      ],
+      "id": "ed34cbbb-325b-4522-b512-ea8ed26bbaaf",
+      "name": "Schedule Trigger"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "CgSbDSo1mHpiRCnr",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/CgSbDSo1mHpiRCnr",
+          "cachedResultName": "readconfig"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {},
+          "matchingColumns": [],
+          "schema": [],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "mode": "each",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        336,
+        -1552
+      ],
+      "id": "80943574-af2c-4627-82d8-86cb3a5182b3",
+      "name": "readconfig1",
+      "executeOnce": false,
+      "alwaysOutputData": false
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "f7935f6c-bc9e-44c8-b81b-5db857906dd4",
+              "leftValue": "={{ $json.data }}",
+              "rightValue": "00:00:00",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        1232,
+        -1360
+      ],
+      "id": "6a3190fa-5173-46e8-a1b8-5ae1558a7485",
+      "name": "ATEM NEEDS INIT?"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "YdhwWL3hSgPUVoxo",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/YdhwWL3hSgPUVoxo",
+          "cachedResultName": "preset manager"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "load_preset": "ccp"
+          },
+          "matchingColumns": [
+            "load_preset"
+          ],
+          "schema": [
+            {
+              "id": "load_preset",
+              "displayName": "load_preset",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {
+          "waitForSubWorkflow": false
+        }
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        1456,
+        -784
+      ],
+      "id": "efef76fd-a120-43c2-a912-d265be26e065",
+      "name": "load ccp preset"
+    },
+    {
+      "parameters": {
+        "content": "# INITIALIZE ATEM\n\nThe ATEM starts non-streaming, thats how we know it is not initialised yet.\nWe initialize it and start the stream to restreamer.",
+        "height": 288
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        256,
+        -1408
+      ],
+      "id": "b2079676-aa1e-442e-b9dd-aa78bc4e316b",
+      "name": "Sticky Note"
+    },
+    {
+      "parameters": {
+        "amount": "={{  $('readconfig').item.json.config.selected_preset.finish_video_length_secs }}"
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        2128,
+        2128
+      ],
+      "id": "0d6892f0-0e6b-442f-b80d-8a653f0c05da",
+      "name": "Wait for finish video to end",
+      "webhookId": "8e7f6cd7-cc84-4f07-a57d-ede0fb6b60aa"
+    },
+    {
+      "parameters": {
+        "amount": "={{ $('readconfig').item.json.config.video_load_delay }}"
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        1680,
+        2032
+      ],
+      "id": "0618cbae-5a84-4f54-811b-11bb6e65aeba",
+      "name": "wait for video player to load",
+      "webhookId": "8e7f6cd7-cc84-4f07-a57d-ede0fb6b60aa"
+    },
+    {
+      "parameters": {
+        "amount": "={{ $('readconfig').item.json.config.video_load_delay }}"
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        1680,
+        1456
+      ],
+      "id": "ee970c2a-6cb3-4207-8f6e-5eb69c4af7f1",
+      "name": "wait for video player to load1",
+      "webhookId": "8e7f6cd7-cc84-4f07-a57d-ede0fb6b60aa"
+    },
+    {
+      "parameters": {
+        "amount": "={{ $('readconfig').item.json.config.video_load_delay }}"
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        1680,
+        496
+      ],
+      "id": "7aca7b22-01e2-44db-880d-2fb1f1d9463b",
+      "name": "wait for video player to load2",
+      "webhookId": "8e7f6cd7-cc84-4f07-a57d-ede0fb6b60aa"
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "dataTableId": {
+          "__rl": true,
+          "value": "il3gZO5GYNLZhOsa",
+          "mode": "list",
+          "cachedResultName": "config",
+          "cachedResultUrl": "/projects/NBttNnd6CVeZWrwI/datatables/il3gZO5GYNLZhOsa"
+        },
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "key",
+              "keyValue": "awaiting_to_switch"
+            }
+          ]
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "value": "0"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "key",
+              "displayName": "key",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": true
+            },
+            {
+              "id": "value",
+              "displayName": "value",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1,
+      "position": [
+        2128,
+        208
+      ],
+      "id": "dc3c2f11-c216-4339-9d9a-e1248e73c563",
+      "name": "awaiting_to_switch to 0"
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "dataTableId": {
+          "__rl": true,
+          "value": "il3gZO5GYNLZhOsa",
+          "mode": "list",
+          "cachedResultName": "config",
+          "cachedResultUrl": "/projects/NBttNnd6CVeZWrwI/datatables/il3gZO5GYNLZhOsa"
+        },
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "key",
+              "keyValue": "awaiting_to_switch"
+            }
+          ]
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "value": "1"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "key",
+              "displayName": "key",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": true
+            },
+            {
+              "id": "value",
+              "displayName": "value",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1,
+      "position": [
+        2128,
+        400
+      ],
+      "id": "99233d17-3fca-414c-8849-6856fdb7b79f",
+      "name": "awaiting_to_switch to 1"
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "dataTableId": {
+          "__rl": true,
+          "value": "il3gZO5GYNLZhOsa",
+          "mode": "list",
+          "cachedResultName": "config",
+          "cachedResultUrl": "/projects/NBttNnd6CVeZWrwI/datatables/il3gZO5GYNLZhOsa"
+        },
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "key",
+              "keyValue": "awaiting_to_switch"
+            }
+          ]
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "value": "1"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "key",
+              "displayName": "key",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": true
+            },
+            {
+              "id": "value",
+              "displayName": "value",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1,
+      "position": [
+        2128,
+        1648
+      ],
+      "id": "e4981c92-973f-4f2e-ae6c-c920ff5d85b4",
+      "name": "awaiting_to_switch to 1 (2)"
+    },
+    {
+      "parameters": {
+        "amount": 4
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        2576,
+        2128
+      ],
+      "id": "f58d0464-fe2e-45cd-b026-cfa7b2cc5df6",
+      "name": "wait for fade to black",
+      "webhookId": "61a090ee-853c-434a-b556-02b1d56ce2fd"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "Dgk7CxGWHSHsNcoT",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/Dgk7CxGWHSHsNcoT",
+          "cachedResultName": "atem"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "program_name_with_transition": "BLK"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "program_name",
+              "displayName": "program_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "preview_name",
+              "displayName": "preview_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "toggle_black",
+              "displayName": "toggle_black",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "enable_stream",
+              "displayName": "enable_stream",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "enable_recording",
+              "displayName": "enable_recording",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "execute_macro",
+              "displayName": "execute_macro",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "recording_filename",
+              "displayName": "recording_filename",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "toggle_program",
+              "displayName": "toggle_program",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "program_name_with_transition",
+              "displayName": "program_name_with_transition",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "usk_on_air_toggle",
+              "displayName": "usk_on_air_toggle",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "usk_set_fill_source",
+              "displayName": "usk_set_fill_source",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "usk_on_air_enable",
+              "displayName": "usk_on_air_enable",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "mediaplayer_set_still",
+              "displayName": "mediaplayer_set_still",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        2352,
+        2128
+      ],
+      "id": "890f6b23-d7be-4af7-b7d3-c8bb666e8f6b",
+      "name": "call 'atem' - fade to black",
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "6NPqhmV3MOUnctVX",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/6NPqhmV3MOUnctVX",
+          "cachedResultName": "stream manager"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "set_streams_status": "1"
+          },
+          "matchingColumns": [
+            "set_streams_status"
+          ],
+          "schema": [
+            {
+              "id": "set_streams_status",
+              "displayName": "set_streams_status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        2352,
+        976
+      ],
+      "id": "334f49fb-cda4-4ed3-a106-262d6b1b3b63",
+      "name": "Restreamer: Start streams"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "6NPqhmV3MOUnctVX",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/6NPqhmV3MOUnctVX",
+          "cachedResultName": "stream manager"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "set_streams_status": "0"
+          },
+          "matchingColumns": [
+            "set_streams_status"
+          ],
+          "schema": [
+            {
+              "id": "set_streams_status",
+              "displayName": "set_streams_status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        3248,
+        2032
+      ],
+      "id": "392e2499-dd6e-459c-80ce-307883a58101",
+      "name": "Restreamer: Stop streams",
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "Dgk7CxGWHSHsNcoT",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/Dgk7CxGWHSHsNcoT",
+          "cachedResultName": "atem"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "mediaplayer_set_still": "=1,{{ $('readconfig').item.json.config.selected_preset.clean_bg_still }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "program_name",
+              "displayName": "program_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "preview_name",
+              "displayName": "preview_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "toggle_black",
+              "displayName": "toggle_black",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "enable_stream",
+              "displayName": "enable_stream",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "enable_recording",
+              "displayName": "enable_recording",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "execute_macro",
+              "displayName": "execute_macro",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "recording_filename",
+              "displayName": "recording_filename",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "toggle_program",
+              "displayName": "toggle_program",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "program_name_with_transition",
+              "displayName": "program_name_with_transition",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "usk_on_air_toggle",
+              "displayName": "usk_on_air_toggle",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "usk_set_fill_source",
+              "displayName": "usk_set_fill_source",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "usk_on_air_enable",
+              "displayName": "usk_on_air_enable",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "mediaplayer_set_still",
+              "displayName": "mediaplayer_set_still",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "set_tbar_to",
+              "displayName": "set_tbar_to",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        3024,
+        2224
+      ],
+      "id": "680e3773-ba6a-4ca6-b938-1fe7413fe209",
+      "name": "Set mediaplayer to clean background",
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "Dgk7CxGWHSHsNcoT",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/Dgk7CxGWHSHsNcoT",
+          "cachedResultName": "atem"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "mediaplayer_set_still": "=",
+            "program_name_with_transition": "MPLAYER1"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "program_name",
+              "displayName": "program_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "preview_name",
+              "displayName": "preview_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "toggle_black",
+              "displayName": "toggle_black",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "enable_stream",
+              "displayName": "enable_stream",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "enable_recording",
+              "displayName": "enable_recording",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "execute_macro",
+              "displayName": "execute_macro",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "recording_filename",
+              "displayName": "recording_filename",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "toggle_program",
+              "displayName": "toggle_program",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "program_name_with_transition",
+              "displayName": "program_name_with_transition",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "usk_on_air_toggle",
+              "displayName": "usk_on_air_toggle",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "usk_set_fill_source",
+              "displayName": "usk_set_fill_source",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "usk_on_air_enable",
+              "displayName": "usk_on_air_enable",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "mediaplayer_set_still",
+              "displayName": "mediaplayer_set_still",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "set_tbar_to",
+              "displayName": "set_tbar_to",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        3248,
+        2224
+      ],
+      "id": "fd734747-11da-4c2c-b975-f54249ceb870",
+      "name": "Show mp1"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "E0yl55s1YkCD2LNx",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/E0yl55s1YkCD2LNx",
+          "cachedResultName": "log"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "type": "notice",
+            "message": "=Initializing newly turned on ATEM",
+            "execution_id": "={{ $execution.id }}:{{ $workflow.name }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "type",
+              "displayName": "type",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "message",
+              "displayName": "message",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "private_message",
+              "displayName": "private_message",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "execution_id",
+              "displayName": "execution_id",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {
+          "waitForSubWorkflow": false
+        }
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        1456,
+        -1936
+      ],
+      "id": "952a7750-8f15-4f07-b506-1122788a1273",
+      "name": "Call 'log'"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "E0yl55s1YkCD2LNx",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/E0yl55s1YkCD2LNx",
+          "cachedResultName": "log"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "type": "notice",
+            "message": "=navigated away from special scene",
+            "execution_id": "={{ $execution.id }}:{{ $workflow.name }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "type",
+              "displayName": "type",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "message",
+              "displayName": "message",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "private_message",
+              "displayName": "private_message",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "execution_id",
+              "displayName": "execution_id",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {
+          "waitForSubWorkflow": false
+        }
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        1456,
+        -272
+      ],
+      "id": "8adaf4a5-d4bd-4fe1-88af-112ffdb3d1d7",
+      "name": "Call 'log'1"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "E0yl55s1YkCD2LNx",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/E0yl55s1YkCD2LNx",
+          "cachedResultName": "log"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "type": "notice",
+            "message": "=PRESTREAM",
+            "execution_id": "={{ $execution.id }}:{{ $workflow.name }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "type",
+              "displayName": "type",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "message",
+              "displayName": "message",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "private_message",
+              "displayName": "private_message",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "execution_id",
+              "displayName": "execution_id",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {
+          "waitForSubWorkflow": false
+        }
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        1456,
+        -80
+      ],
+      "id": "9b15e963-7c83-4185-bb67-9d70aa8d1a98",
+      "name": "Call 'log'2"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "E0yl55s1YkCD2LNx",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/E0yl55s1YkCD2LNx",
+          "cachedResultName": "log"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "type": "notice",
+            "message": "=BREAK",
+            "execution_id": "={{ $execution.id }}:{{ $workflow.name }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "type",
+              "displayName": "type",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "message",
+              "displayName": "message",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "private_message",
+              "displayName": "private_message",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "execution_id",
+              "displayName": "execution_id",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {
+          "waitForSubWorkflow": false
+        }
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        1456,
+        1072
+      ],
+      "id": "fb86e9b5-1787-4098-89c3-dc8a9e7e8356",
+      "name": "Call 'log'3"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "E0yl55s1YkCD2LNx",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/E0yl55s1YkCD2LNx",
+          "cachedResultName": "log"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "type": "notice",
+            "message": "=FINISH",
+            "execution_id": "={{ $execution.id }}:{{ $workflow.name }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "type",
+              "displayName": "type",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "message",
+              "displayName": "message",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "private_message",
+              "displayName": "private_message",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "execution_id",
+              "displayName": "execution_id",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {
+          "waitForSubWorkflow": false
+        }
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        1456,
+        1840
+      ],
+      "id": "1eae543e-649d-4eb1-9dfb-aba237533154",
+      "name": "Call 'log'4"
+    },
+    {
+      "parameters": {
+        "amount": "=3"
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        2352,
+        400
+      ],
+      "id": "867e8a43-8580-456a-ab61-92706ac63ee9",
+      "name": "Wait",
+      "webhookId": "ef1ca027-4059-4fb4-919c-15f57c2abd74"
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "dataTableId": {
+          "__rl": true,
+          "value": "il3gZO5GYNLZhOsa",
+          "mode": "list",
+          "cachedResultName": "config",
+          "cachedResultUrl": "/projects/NBttNnd6CVeZWrwI/datatables/il3gZO5GYNLZhOsa"
+        },
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "key",
+              "keyValue": "awaiting_to_switch"
+            }
+          ]
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "value": "0"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "key",
+              "displayName": "key",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": true
+            },
+            {
+              "id": "value",
+              "displayName": "value",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {
+          "dryRun": false
+        }
+      },
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1,
+      "position": [
+        1456,
+        -1168
+      ],
+      "id": "73a4d20e-6a6a-4870-8956-5b7b96c08f6d",
+      "name": "awaiting_to_switch to "
+    },
+    {
+      "parameters": {
+        "content": "# INITIALIZE PI\nThe PI boots with the browser showing a certain html. \"data:text/html....\" this is where we know it have just booted."
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        256,
+        -1952
+      ],
+      "id": "093ac0d9-b64a-4fcb-aef3-e744d3b418f6",
+      "name": "Sticky Note2"
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.config.browser_endpoint }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        560,
+        -1648
+      ],
+      "id": "269229bb-ff16-49e6-8e6d-f1f8ab509ba4",
+      "name": "HTTP Request",
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "c324d2bf-a1fb-4af5-8ca1-91d9dffe0331",
+              "leftValue": "={{ $json.url }}",
+              "rightValue": "data:text/html",
+              "operator": {
+                "type": "string",
+                "operation": "startsWith"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        784,
+        -1648
+      ],
+      "id": "a0174b60-d0dc-419b-ac6b-d406d55305fe",
+      "name": "If1"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "E0yl55s1YkCD2LNx",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/E0yl55s1YkCD2LNx",
+          "cachedResultName": "log"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "type": "notice",
+            "message": "=Initializing newly turned on PI",
+            "execution_id": "={{ $execution.id }}:{{ $workflow.name }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "type",
+              "displayName": "type",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "message",
+              "displayName": "message",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "private_message",
+              "displayName": "private_message",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "execution_id",
+              "displayName": "execution_id",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {
+          "waitForSubWorkflow": false
+        }
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        1008,
+        -1744
+      ],
+      "id": "e2440668-4b9a-4691-9e4e-3d39c2f1e33e",
+      "name": "Call 'log'5"
+    },
+    {
+      "parameters": {
+        "url": "={{ $('readconfig1').item.json.config.companion_host }}/api/variable/atem/stream_duration_hms/value",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        1008,
+        -1360
+      ],
+      "id": "270c10f7-6507-4a74-a872-cb5612a44439",
+      "name": "get atem stream state"
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.config.companion_host }}/api/custom-variable/internal_connection_atem_status/value",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        560,
+        -1360
+      ],
+      "id": "86dab7f3-28fe-4f26-9f89-0545ce94ebc6",
+      "name": "get atem status"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "483fb3be-1a3b-4cd3-8bb9-4a893d4a4f0d",
+              "leftValue": "={{ $json.data }}",
+              "rightValue": "error",
+              "operator": {
+                "type": "string",
+                "operation": "notEquals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        784,
+        -1360
+      ],
+      "id": "0684f9f3-8231-491f-90bd-e653deb15696",
+      "name": "if not error"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "Dgk7CxGWHSHsNcoT",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/Dgk7CxGWHSHsNcoT",
+          "cachedResultName": "atem"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "set_mix1_on": "0"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "program_name",
+              "displayName": "program_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "preview_name",
+              "displayName": "preview_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "toggle_black",
+              "displayName": "toggle_black",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "enable_stream",
+              "displayName": "enable_stream",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "enable_recording",
+              "displayName": "enable_recording",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "execute_macro",
+              "displayName": "execute_macro",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "recording_filename",
+              "displayName": "recording_filename",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "toggle_program",
+              "displayName": "toggle_program",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "program_name_with_transition",
+              "displayName": "program_name_with_transition",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "usk_on_air_toggle",
+              "displayName": "usk_on_air_toggle",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "usk_set_fill_source",
+              "displayName": "usk_set_fill_source",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "usk_on_air_enable",
+              "displayName": "usk_on_air_enable",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "mediaplayer_set_still",
+              "displayName": "mediaplayer_set_still",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "set_tbar_to",
+              "displayName": "set_tbar_to",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "set_mix1_on",
+              "displayName": "set_mix1_on",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        2128,
+        1168
+      ],
+      "id": "db8d21ba-8c0b-466b-9d5c-845d6ef45bcc",
+      "name": "atem: disable live audio input"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "Dgk7CxGWHSHsNcoT",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/Dgk7CxGWHSHsNcoT",
+          "cachedResultName": "atem"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "set_mix1_on": "0"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "program_name",
+              "displayName": "program_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "preview_name",
+              "displayName": "preview_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "toggle_black",
+              "displayName": "toggle_black",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "enable_stream",
+              "displayName": "enable_stream",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "enable_recording",
+              "displayName": "enable_recording",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "execute_macro",
+              "displayName": "execute_macro",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "recording_filename",
+              "displayName": "recording_filename",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "toggle_program",
+              "displayName": "toggle_program",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "program_name_with_transition",
+              "displayName": "program_name_with_transition",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "usk_on_air_toggle",
+              "displayName": "usk_on_air_toggle",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "usk_set_fill_source",
+              "displayName": "usk_set_fill_source",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "usk_on_air_enable",
+              "displayName": "usk_on_air_enable",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "mediaplayer_set_still",
+              "displayName": "mediaplayer_set_still",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "set_tbar_to",
+              "displayName": "set_tbar_to",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "set_mix1_on",
+              "displayName": "set_mix1_on",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        1456,
+        304
+      ],
+      "id": "92778e67-d10c-4c0f-becb-d9fc9c264258",
+      "name": "atem: disable live audio input1"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "Dgk7CxGWHSHsNcoT",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/Dgk7CxGWHSHsNcoT",
+          "cachedResultName": "atem"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "set_mix1_on": "0"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "program_name",
+              "displayName": "program_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "preview_name",
+              "displayName": "preview_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "toggle_black",
+              "displayName": "toggle_black",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "enable_stream",
+              "displayName": "enable_stream",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "enable_recording",
+              "displayName": "enable_recording",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "execute_macro",
+              "displayName": "execute_macro",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "recording_filename",
+              "displayName": "recording_filename",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "toggle_program",
+              "displayName": "toggle_program",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "program_name_with_transition",
+              "displayName": "program_name_with_transition",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "usk_on_air_toggle",
+              "displayName": "usk_on_air_toggle",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "usk_set_fill_source",
+              "displayName": "usk_set_fill_source",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "usk_on_air_enable",
+              "displayName": "usk_on_air_enable",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "mediaplayer_set_still",
+              "displayName": "mediaplayer_set_still",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "set_tbar_to",
+              "displayName": "set_tbar_to",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "set_mix1_on",
+              "displayName": "set_mix1_on",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {
+          "waitForSubWorkflow": true
+        }
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        2128,
+        1840
+      ],
+      "id": "00105b5e-d791-4011-a869-f29c21b8ae18",
+      "name": "atem: disable live audio input2"
+    },
+    {
+      "parameters": {
+        "amount": "={{ $('readconfig').item.json.config.restreamer_delay }}"
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        2800,
+        2128
+      ],
+      "id": "7a3bd684-d1a4-42d6-b62f-0a9a7de16c89",
+      "name": "wait for livestream buffer to finish",
+      "webhookId": "b0eea72f-6789-4d12-b00c-696ac8f9468e"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "Dgk7CxGWHSHsNcoT",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/Dgk7CxGWHSHsNcoT",
+          "cachedResultName": "atem"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "enable_recording": "0"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "program_name",
+              "displayName": "program_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "preview_name",
+              "displayName": "preview_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "toggle_black",
+              "displayName": "toggle_black",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "enable_stream",
+              "displayName": "enable_stream",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "enable_recording",
+              "displayName": "enable_recording",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "execute_macro",
+              "displayName": "execute_macro",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "recording_filename",
+              "displayName": "recording_filename",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "toggle_program",
+              "displayName": "toggle_program",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "program_name_with_transition",
+              "displayName": "program_name_with_transition",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "usk_on_air_toggle",
+              "displayName": "usk_on_air_toggle",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "usk_set_fill_source",
+              "displayName": "usk_set_fill_source",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "usk_on_air_enable",
+              "displayName": "usk_on_air_enable",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "mediaplayer_set_still",
+              "displayName": "mediaplayer_set_still",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        1456,
+        1264
+      ],
+      "id": "d630fa82-b6e9-49e3-9e5a-f61d220911bf",
+      "name": "stop recording1"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "Dgk7CxGWHSHsNcoT",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/Dgk7CxGWHSHsNcoT",
+          "cachedResultName": "atem"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "set_mix1_on": "1"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "program_name",
+              "displayName": "program_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "preview_name",
+              "displayName": "preview_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "toggle_black",
+              "displayName": "toggle_black",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "enable_stream",
+              "displayName": "enable_stream",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "enable_recording",
+              "displayName": "enable_recording",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "execute_macro",
+              "displayName": "execute_macro",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "recording_filename",
+              "displayName": "recording_filename",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "toggle_program",
+              "displayName": "toggle_program",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "program_name_with_transition",
+              "displayName": "program_name_with_transition",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "usk_on_air_toggle",
+              "displayName": "usk_on_air_toggle",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "usk_set_fill_source",
+              "displayName": "usk_set_fill_source",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "usk_on_air_enable",
+              "displayName": "usk_on_air_enable",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "mediaplayer_set_still",
+              "displayName": "mediaplayer_set_still",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "set_tbar_to",
+              "displayName": "set_tbar_to",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "set_mix1_on",
+              "displayName": "set_mix1_on",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        2352,
+        -368
+      ],
+      "id": "17300dc8-57fb-4a40-8712-8ceab43b237c",
+      "name": "atem: enable live audio input"
+    },
+    {
+      "parameters": {
+        "amount": "={{ $('readconfig').item.json.config.restreamer_delay }}"
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        2128,
+        976
+      ],
+      "id": "2192c641-510b-4bb1-8a1e-46f19c716ce2",
+      "name": "wait for restreamer delay",
+      "webhookId": "ede05fcb-27b6-4276-b0ae-4f020787e13a"
+    },
+    {
+      "parameters": {
+        "amount": 3
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        3024,
+        2032
+      ],
+      "id": "c399c24c-215f-4385-8e99-68f561db2b05",
+      "name": "Wait1",
+      "webhookId": "b27b22c1-0791-427a-a05c-cfc740f9a57b"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "6NPqhmV3MOUnctVX",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/6NPqhmV3MOUnctVX",
+          "cachedResultName": "stream manager"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "set_streams_status": "0"
+          },
+          "matchingColumns": [
+            "set_streams_status"
+          ],
+          "schema": [
+            {
+              "id": "set_streams_status",
+              "displayName": "set_streams_status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        1456,
+        -1744
+      ],
+      "id": "fb98f5ba-695c-4588-8639-3a5aebb031d5",
+      "name": "disable live streams"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "Dgk7CxGWHSHsNcoT",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/Dgk7CxGWHSHsNcoT",
+          "cachedResultName": "atem"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "enable_stream": "1"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "program_name",
+              "displayName": "program_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "preview_name",
+              "displayName": "preview_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "toggle_black",
+              "displayName": "toggle_black",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "enable_stream",
+              "displayName": "enable_stream",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "enable_recording",
+              "displayName": "enable_recording",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "execute_macro",
+              "displayName": "execute_macro",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "recording_filename",
+              "displayName": "recording_filename",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "toggle_program",
+              "displayName": "toggle_program",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "program_name_with_transition",
+              "displayName": "program_name_with_transition",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "usk_on_air_toggle",
+              "displayName": "usk_on_air_toggle",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "usk_set_fill_source",
+              "displayName": "usk_set_fill_source",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "usk_on_air_enable",
+              "displayName": "usk_on_air_enable",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "mediaplayer_set_still",
+              "displayName": "mediaplayer_set_still",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {
+          "waitForSubWorkflow": false
+        }
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        1456,
+        -1360
+      ],
+      "id": "cf162632-2944-4f51-b8ce-1bf53f404784",
+      "name": "atem: enable streaming"
+    },
+    {
+      "parameters": {
+        "content": "If the system was stopped without the streams stopped, it would just continue streaming... And thats unfortunate.\n",
+        "height": 96
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        1648,
+        -1744
+      ],
+      "typeVersion": 1,
+      "id": "be7b5793-cad9-4ec2-bfd5-bb5755cd85a5",
+      "name": "Sticky Note3"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "Dgk7CxGWHSHsNcoT",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/Dgk7CxGWHSHsNcoT",
+          "cachedResultName": "atem"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "recording_filename": "={{ $('readconfig').item.json.config.selected_preset.recording_prefix }}{{ new Date(new Date() - new Date().getTimezoneOffset() * 60000).toISOString().slice(0,16).replace(/-/g,'').replace('T','_').replace(':','') }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "program_name",
+              "displayName": "program_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "preview_name",
+              "displayName": "preview_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "toggle_black",
+              "displayName": "toggle_black",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "enable_stream",
+              "displayName": "enable_stream",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "enable_recording",
+              "displayName": "enable_recording",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "execute_macro",
+              "displayName": "execute_macro",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "recording_filename",
+              "displayName": "recording_filename",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "toggle_program",
+              "displayName": "toggle_program",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "program_name_with_transition",
+              "displayName": "program_name_with_transition",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "usk_on_air_toggle",
+              "displayName": "usk_on_air_toggle",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "usk_set_fill_source",
+              "displayName": "usk_set_fill_source",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "usk_on_air_enable",
+              "displayName": "usk_on_air_enable",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "mediaplayer_set_still",
+              "displayName": "mediaplayer_set_still",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "set_tbar_to",
+              "displayName": "set_tbar_to",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "set_mix1_on",
+              "displayName": "set_mix1_on",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        3472,
+        2224
+      ],
+      "id": "f4cd2f9a-541a-4120-8eb5-224bc755bc0f",
+      "name": "set recording filename1"
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "dataTableId": {
+          "__rl": true,
+          "value": "il3gZO5GYNLZhOsa",
+          "mode": "list",
+          "cachedResultName": "config",
+          "cachedResultUrl": "/projects/NBttNnd6CVeZWrwI/datatables/il3gZO5GYNLZhOsa"
+        },
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "key",
+              "keyValue": "awaiting_to_switch"
+            }
+          ]
+        },
+        "limit": 1
+      },
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1,
+      "position": [
+        1680,
+        -272
+      ],
+      "id": "ce0fa525-7ade-4d72-aa02-58456ab6b7f5",
+      "name": "read awaiting_to_switch"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "86d89b70-0b91-48a3-a47b-fbb780afa3ce",
+              "leftValue": "={{ $json.value }}",
+              "rightValue": "1",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        1904,
+        -272
+      ],
+      "id": "6fa93618-ac9f-447c-8d59-93b5da7490d0",
+      "name": "awaiting_to_switch away?"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "E0yl55s1YkCD2LNx",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/E0yl55s1YkCD2LNx",
+          "cachedResultName": "log"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "type": "notice",
+            "message": "=starting session",
+            "execution_id": "={{ $execution.id }}:{{ $workflow.name }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "type",
+              "displayName": "type",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "message",
+              "displayName": "message",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "private_message",
+              "displayName": "private_message",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "execution_id",
+              "displayName": "execution_id",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {
+          "waitForSubWorkflow": false
+        }
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        2352,
+        -560
+      ],
+      "id": "da3d567b-1d7d-4441-9c91-67de7da260d3",
+      "name": "Call 'log'6"
+    },
+    {
+      "parameters": {
+        "content": "## START / RESUME Session\nEnable audio, stop video playback, start recording, etc.\n",
+        "height": 224,
+        "width": 192
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        2080,
+        -720
+      ],
+      "id": "1ebf619c-b38d-4d75-8c5d-252246f96741",
+      "name": "Sticky Note4"
+    },
+    {
+      "parameters": {
+        "content": "### Navigated away\nWhen we were in \"PRE STREAM\" or \"BREAK\" mode (not recording just streaming some pre-recorded stugg), the way we get out of those is to trigger the navigated away entrypoint of this wf.\n\nIf they pull up the camera or the slides, or anything that triggers this, then we'd resume the session.",
+        "height": 192,
+        "width": 400
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        720,
+        -272
+      ],
+      "id": "05a7535c-686d-48fd-8bd1-8317febb4c22",
+      "name": "Sticky Note5"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "oKYuBwn0nJ3SpMblzAqQ9",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/oKYuBwn0nJ3SpMblzAqQ9",
+          "cachedResultName": "browser notification"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "text": "INITIALISED"
+          },
+          "matchingColumns": [
+            "text"
+          ],
+          "schema": [
+            {
+              "id": "text",
+              "displayName": "text",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        1008,
+        -1552
+      ],
+      "id": "9cd588d1-c6d5-4753-afd9-9230f6a17d28",
+      "name": "Call 'browser log'"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "d89b9b89-d365-47bc-92a4-792a191fc0f5",
+              "leftValue": "={{ $json.start_session }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "notEmpty",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        1904,
+        -464
+      ],
+      "id": "5f506e0d-261a-400f-8021-8bf9bfbc758d",
+      "name": "START SESSION ?"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        2128,
+        -464
+      ],
+      "id": "1647c072-a402-4684-b493-e9e8ffedcabc",
+      "name": "START SESSION"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "d89b9b89-d365-47bc-92a4-792a191fc0f5",
+              "leftValue": "={{ $json.navigated_away }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "notEmpty",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        1232,
+        -272
+      ],
+      "id": "1a1e8679-ba28-4948-8257-d193ffcb31fa",
+      "name": "NAVIGATED_AWAY ?"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "d89b9b89-d365-47bc-92a4-792a191fc0f5",
+              "leftValue": "={{ $json.do_prestream }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "notEmpty",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        1232,
+        304
+      ],
+      "id": "8406b55a-22ca-4e38-b773-ebdf35283c3c",
+      "name": "PRESTREAM ?"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "d89b9b89-d365-47bc-92a4-792a191fc0f5",
+              "leftValue": "={{ $json.do_break }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "notEmpty",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        1232,
+        880
+      ],
+      "id": "c34aaefc-cc8a-4345-b5fe-b4a7200f1b84",
+      "name": "BREAK ?"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "d89b9b89-d365-47bc-92a4-792a191fc0f5",
+              "leftValue": "={{ $json.do_finish }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "notEmpty",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        1232,
+        1744
+      ],
+      "id": "64d638bc-168f-402d-9984-798eaf3496f2",
+      "name": "FINISH ?"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "Dgk7CxGWHSHsNcoT",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/Dgk7CxGWHSHsNcoT",
+          "cachedResultName": "atem"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "turn_all_keys_off": "1"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "program_name",
+              "displayName": "program_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "preview_name",
+              "displayName": "preview_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "toggle_black",
+              "displayName": "toggle_black",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "enable_stream",
+              "displayName": "enable_stream",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "enable_recording",
+              "displayName": "enable_recording",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "execute_macro",
+              "displayName": "execute_macro",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "recording_filename",
+              "displayName": "recording_filename",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "toggle_program",
+              "displayName": "toggle_program",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "program_name_with_transition",
+              "displayName": "program_name_with_transition",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "usk_on_air_toggle",
+              "displayName": "usk_on_air_toggle",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "usk_set_fill_source",
+              "displayName": "usk_set_fill_source",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "usk_on_air_enable",
+              "displayName": "usk_on_air_enable",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "mediaplayer_set_still",
+              "displayName": "mediaplayer_set_still",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "set_tbar_to",
+              "displayName": "set_tbar_to",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "set_mix1_on",
+              "displayName": "set_mix1_on",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "set_projector_aux_to",
+              "displayName": "set_projector_aux_to",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "set_program_ssrc_aux_to",
+              "displayName": "set_program_ssrc_aux_to",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "turn_all_keys_off",
+              "displayName": "turn_all_keys_off",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        1456,
+        880
+      ],
+      "id": "3c8cc7c1-8dab-426a-b63e-29aed8fa4599",
+      "name": "atem: turn all keys off",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "Dgk7CxGWHSHsNcoT",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/Dgk7CxGWHSHsNcoT",
+          "cachedResultName": "atem"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "set_program_raw_aux_to": "BLACK"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "program_name",
+              "displayName": "program_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "preview_name",
+              "displayName": "preview_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "toggle_black",
+              "displayName": "toggle_black",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "enable_stream",
+              "displayName": "enable_stream",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "enable_recording",
+              "displayName": "enable_recording",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "execute_macro",
+              "displayName": "execute_macro",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "recording_filename",
+              "displayName": "recording_filename",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "toggle_program",
+              "displayName": "toggle_program",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "program_name_with_transition",
+              "displayName": "program_name_with_transition",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "usk_on_air_toggle",
+              "displayName": "usk_on_air_toggle",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "usk_set_fill_source",
+              "displayName": "usk_set_fill_source",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "usk_on_air_enable",
+              "displayName": "usk_on_air_enable",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "mediaplayer_set_still",
+              "displayName": "mediaplayer_set_still",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "set_tbar_to",
+              "displayName": "set_tbar_to",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "set_mix1_on",
+              "displayName": "set_mix1_on",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "set_projector_aux_to",
+              "displayName": "set_projector_aux_to",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "set_program_ssrc_aux_to",
+              "displayName": "set_program_ssrc_aux_to",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "turn_all_keys_off",
+              "displayName": "turn_all_keys_off",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "set_program_raw_aux_to",
+              "displayName": "set_program_raw_aux_to",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        1456,
+        -1552
+      ],
+      "id": "56ab0cc3-289f-4a48-b581-1c1f13a05b07",
+      "name": "program raw : BLACK"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "FK8D44cxEXsOJz7z",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/FK8D44cxEXsOJz7z",
+          "cachedResultName": "videoplayer"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "stop": "1"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "playFile",
+              "displayName": "playFile",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "repeat",
+              "displayName": "repeat",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "boolean",
+              "removed": true
+            },
+            {
+              "id": "stop",
+              "displayName": "stop",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        2800,
+        2320
+      ],
+      "id": "b2a50edd-4166-4821-8624-8e88684266e0",
+      "name": "stop video playback"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "FK8D44cxEXsOJz7z",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/FK8D44cxEXsOJz7z",
+          "cachedResultName": "videoplayer"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "stop": "1"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "playFile",
+              "displayName": "playFile",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            },
+            {
+              "id": "repeat",
+              "displayName": "repeat",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "boolean",
+              "removed": true
+            },
+            {
+              "id": "stop",
+              "displayName": "stop",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        2576,
+        400
+      ],
+      "id": "957f3f15-c47a-4bd7-b1b5-77cf8b523e5a",
+      "name": "stop video playback1"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "a7406d45-5f0a-47ee-8a73-3994bd5d4514",
+              "leftValue": "={{ $('Merge').item.json.dont_start_recording }}",
+              "rightValue": "1",
+              "operator": {
+                "type": "string",
+                "operation": "notEquals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        2352,
+        208
+      ],
+      "id": "31991517-a30c-4992-9fe4-ff26e155d48d",
+      "name": "do_recording?"
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "dataTableId": {
+          "__rl": true,
+          "value": "il3gZO5GYNLZhOsa",
+          "mode": "list",
+          "cachedResultName": "config",
+          "cachedResultUrl": "/projects/NBttNnd6CVeZWrwI/datatables/il3gZO5GYNLZhOsa"
+        },
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "key",
+              "keyValue": "changing_program_locked"
+            }
+          ]
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "value": "0"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "key",
+              "displayName": "key",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": true
+            },
+            {
+              "id": "value",
+              "displayName": "value",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {
+          "dryRun": false
+        }
+      },
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1,
+      "position": [
+        1456,
+        -976
+      ],
+      "id": "4f8e2396-fd48-46f2-b495-effc355dec09",
+      "name": "changing_program_locked to 0"
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "dataTableId": {
+          "__rl": true,
+          "value": "il3gZO5GYNLZhOsa",
+          "mode": "list",
+          "cachedResultName": "config",
+          "cachedResultUrl": "/projects/NBttNnd6CVeZWrwI/datatables/il3gZO5GYNLZhOsa"
+        },
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "key",
+              "keyValue": "changing_program_locked"
+            }
+          ]
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "key": "changing_program_locked",
+            "value": "1"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "key",
+              "displayName": "key",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "value",
+              "displayName": "value",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "description",
+              "displayName": "description",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1.1,
+      "position": [
+        1456,
+        1648
+      ],
+      "id": "664c8ae5-443c-487c-84f1-7fb26bd01aa3",
+      "name": "block changing_program_locked"
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "dataTableId": {
+          "__rl": true,
+          "value": "il3gZO5GYNLZhOsa",
+          "mode": "list",
+          "cachedResultName": "config",
+          "cachedResultUrl": "/projects/NBttNnd6CVeZWrwI/datatables/il3gZO5GYNLZhOsa"
+        },
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "key",
+              "keyValue": "changing_program_locked"
+            }
+          ]
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "key": "changing_program_locked",
+            "value": "0"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "key",
+              "displayName": "key",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "value",
+              "displayName": "value",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "description",
+              "displayName": "description",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1.1,
+      "position": [
+        3472,
+        2032
+      ],
+      "id": "b1cec948-c07d-431b-a318-94fc2b0b271e",
+      "name": "unblock changing_program_locked"
+    }
+  ],
+  "connections": {
+    "control": {
+      "main": [
+        [
+          {
+            "node": "No Operation, do nothing",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge": {
+      "main": [
+        [
+          {
+            "node": "FINISH ?",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "BREAK ?",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "PRESTREAM ?",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "NAVIGATED_AWAY ?",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "START SESSION ?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "debug",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "No Operation, do nothing": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "readconfig",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "debug": {
+      "main": [
+        [
+          {
+            "node": "No Operation, do nothing",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "readconfig": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Call 'videoplayer'2": {
+      "main": [
+        [
+          {
+            "node": "wait for video player to load",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "stop recording2": {
+      "main": [
+        []
+      ]
+    },
+    "Call 'videoplayer'1": {
+      "main": [
+        [
+          {
+            "node": "wait for video player to load1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "stop recording": {
+      "main": [
+        []
+      ]
+    },
+    "Call 'videoplayer'": {
+      "main": [
+        [
+          {
+            "node": "wait for video player to load2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "start recording": {
+      "main": [
+        []
+      ]
+    },
+    "PVID 2 PROGRAM": {
+      "main": [
+        [
+          {
+            "node": "wait for restreamer delay",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "awaiting_to_switch to 1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "PVID 2 PROGRAM1": {
+      "main": [
+        [
+          {
+            "node": "awaiting_to_switch to 1 (2)",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "atem: disable live audio input",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "PVID 2 PROGRAM2": {
+      "main": [
+        [
+          {
+            "node": "Wait for finish video to end",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "atem: disable live audio input2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "readconfig1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "readconfig1": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "get atem status",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ATEM NEEDS INIT?": {
+      "main": [
+        [
+          {
+            "node": "Call 'log'",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "awaiting_to_switch to ",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "atem: enable streaming",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "load ccp preset",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "disable live streams",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "program raw : BLACK",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "changing_program_locked to 0",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "load ccp preset": {
+      "main": [
+        []
+      ]
+    },
+    "Wait for finish video to end": {
+      "main": [
+        [
+          {
+            "node": "call 'atem' - fade to black",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "wait for video player to load": {
+      "main": [
+        [
+          {
+            "node": "PVID 2 PROGRAM2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "wait for video player to load1": {
+      "main": [
+        [
+          {
+            "node": "PVID 2 PROGRAM1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "wait for video player to load2": {
+      "main": [
+        [
+          {
+            "node": "PVID 2 PROGRAM",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "wait for fade to black": {
+      "main": [
+        [
+          {
+            "node": "wait for livestream buffer to finish",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "stop recording2",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "stop video playback",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "call 'atem' - fade to black": {
+      "main": [
+        [
+          {
+            "node": "wait for fade to black",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "awaiting_to_switch to 1": {
+      "main": [
+        []
+      ]
+    },
+    "Restreamer: Stop streams": {
+      "main": [
+        [
+          {
+            "node": "unblock changing_program_locked",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set mediaplayer to clean background": {
+      "main": [
+        [
+          {
+            "node": "Show mp1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait": {
+      "main": [
+        [
+          {
+            "node": "stop video playback1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "If1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If1": {
+      "main": [
+        [
+          {
+            "node": "Call 'log'5",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Call 'browser log'",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        []
+      ]
+    },
+    "get atem stream state": {
+      "main": [
+        [
+          {
+            "node": "ATEM NEEDS INIT?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "get atem status": {
+      "main": [
+        [
+          {
+            "node": "if not error",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "if not error": {
+      "main": [
+        [
+          {
+            "node": "get atem stream state",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "wait for livestream buffer to finish": {
+      "main": [
+        [
+          {
+            "node": "Set mediaplayer to clean background",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Wait1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "wait for restreamer delay": {
+      "main": [
+        [
+          {
+            "node": "Restreamer: Start streams",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait1": {
+      "main": [
+        [
+          {
+            "node": "Restreamer: Stop streams",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atem: enable streaming": {
+      "main": [
+        []
+      ]
+    },
+    "Show mp1": {
+      "main": [
+        [
+          {
+            "node": "set recording filename1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "read awaiting_to_switch": {
+      "main": [
+        [
+          {
+            "node": "awaiting_to_switch away?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "awaiting_to_switch away?": {
+      "main": [
+        [
+          {
+            "node": "awaiting_to_switch to 0",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "START SESSION",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Call 'log'1": {
+      "main": [
+        [
+          {
+            "node": "read awaiting_to_switch",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "START SESSION ?": {
+      "main": [
+        [
+          {
+            "node": "START SESSION",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "START SESSION": {
+      "main": [
+        [
+          {
+            "node": "atem: enable live audio input",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Call 'log'6",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Wait",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "do_recording?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "NAVIGATED_AWAY ?": {
+      "main": [
+        [
+          {
+            "node": "Call 'log'1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "PRESTREAM ?": {
+      "main": [
+        [
+          {
+            "node": "Call 'videoplayer'",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "stop recording",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Call 'log'2",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "atem: disable live audio input1",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "atem: turn all keys off",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "BREAK ?": {
+      "main": [
+        [
+          {
+            "node": "Call 'videoplayer'1",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Call 'log'3",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "stop recording1",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "atem: turn all keys off",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "FINISH ?": {
+      "main": [
+        [
+          {
+            "node": "Call 'videoplayer'2",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Call 'log'4",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "atem: turn all keys off",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "block changing_program_locked",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "do_recording?": {
+      "main": [
+        [
+          {
+            "node": "start recording",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "saveDataSuccessExecution": "none",
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner",
+    "availableInMCP": false,
+    "errorWorkflow": "E0yl55s1YkCD2LNx",
+    "timeSavedMode": "fixed",
+    "timeSavedPerExecution": 0
+  },
+  "staticData": {
+    "node:Schedule Trigger": {
+      "recurrenceRules": []
+    }
+  },
+  "meta": null,
+  "pinData": {
+    "Schedule Trigger": [
+      {
+        "json": {
+          "timestamp": "2025-12-04T01:36:21.003-05:00",
+          "Readable date": "December 4th 2025, 1:36:21 am",
+          "Readable time": "1:36:21 am",
+          "Day of week": "Thursday",
+          "Year": "2025",
+          "Month": "December",
+          "Day of month": "04",
+          "Hour": "01",
+          "Minute": "36",
+          "Second": "21",
+          "Timezone": "America/New_York (UTC-05:00)"
+        }
+      }
+    ],
+    "control": [
+      {
+        "json": {
+          "navigated_away": "1",
+          "do_prestream": null,
+          "do_break": null,
+          "do_finish": null,
+          "start_session": null
+        },
+        "pairedItem": {
+          "item": 0
+        }
+      }
+    ]
+  },
+  "versionId": "fe4aec65-3842-41fe-a3f1-bfacf363c92a",
+  "activeVersionId": "fe4aec65-3842-41fe-a3f1-bfacf363c92a",
+  "versionCounter": 980,
+  "triggerCount": 1,
+  "tags": [],
+  "shared": [
+    {
+      "updatedAt": "2026-01-28T09:50:30.201Z",
+      "createdAt": "2026-01-28T09:50:30.201Z",
+      "role": "workflow:owner",
+      "workflowId": "mooEWAfPCkfAoJCv",
+      "projectId": "NBttNnd6CVeZWrwI",
+      "project": {
+        "updatedAt": "2026-01-28T08:29:07.278Z",
+        "createdAt": "2026-01-28T08:04:49.772Z",
+        "id": "NBttNnd6CVeZWrwI",
+        "name": "Calvary Paphos <calvarycypruscalendar@gmail.com>",
+        "type": "personal",
+        "icon": null,
+        "description": null,
+        "creatorId": "d84e1e89-6472-46a2-881c-0780a65eac38"
+      }
+    }
+  ]
+}

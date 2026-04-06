@@ -1,0 +1,57 @@
+{
+  "updatedAt": "2026-02-10T08:08:53.415Z",
+  "createdAt": "2026-01-29T11:21:36.378Z",
+  "id": "uyjqDgtY7ij_HkbgeyT-a",
+  "name": "filesync",
+  "description": null,
+  "active": false,
+  "isArchived": true,
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "bca57821-de41-4501-bc0e-1844029d4669",
+      "name": "When clicking ‘Execute workflow’"
+    }
+  ],
+  "connections": {},
+  "settings": {
+    "executionOrder": "v1",
+    "availableInMCP": false,
+    "timeSavedMode": "fixed",
+    "callerPolicy": "workflowsFromSameOwner",
+    "executionTimeout": 3600
+  },
+  "staticData": null,
+  "meta": null,
+  "pinData": {},
+  "versionId": "e376b257-0559-4b6d-9357-a439c08d22d8",
+  "activeVersionId": null,
+  "versionCounter": 5,
+  "triggerCount": 0,
+  "tags": [],
+  "shared": [
+    {
+      "updatedAt": "2026-01-29T11:21:36.378Z",
+      "createdAt": "2026-01-29T11:21:36.378Z",
+      "role": "workflow:owner",
+      "workflowId": "uyjqDgtY7ij_HkbgeyT-a",
+      "projectId": "NBttNnd6CVeZWrwI",
+      "project": {
+        "updatedAt": "2026-01-28T08:29:07.278Z",
+        "createdAt": "2026-01-28T08:04:49.772Z",
+        "id": "NBttNnd6CVeZWrwI",
+        "name": "Calvary Paphos <calvarycypruscalendar@gmail.com>",
+        "type": "personal",
+        "icon": null,
+        "description": null,
+        "creatorId": "d84e1e89-6472-46a2-881c-0780a65eac38"
+      }
+    }
+  ]
+}

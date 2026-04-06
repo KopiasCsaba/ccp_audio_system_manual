@@ -1,0 +1,203 @@
+{
+  "updatedAt": "2026-03-04T20:58:42.251Z",
+  "createdAt": "2026-02-28T21:36:19.023Z",
+  "id": "xrGdCgP0Sg3dM3Ft7orlh",
+  "name": "send email",
+  "description": null,
+  "active": true,
+  "isArchived": false,
+  "nodes": [
+    {
+      "parameters": {
+        "workflowInputs": {
+          "values": [
+            {
+              "name": "subject"
+            },
+            {
+              "name": "body"
+            },
+            {
+              "name": "to",
+              "type": "array"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        -576,
+        -112
+      ],
+      "id": "77ad790c-dff0-4aa1-967b-ca6b90b01b3a",
+      "name": "When Executed by Another Workflow"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.resend.com/emails",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer re_d1bvnryW_QAi7GpJcosFyRe29fzM3Ufcn"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "from",
+              "value": "noreply@resend.dev"
+            },
+            {
+              "name": "to",
+              "value": "={{ $json.to[0] }}"
+            },
+            {
+              "name": "subject",
+              "value": "={{ $json.subject }}"
+            },
+            {
+              "name": "html",
+              "value": "={{ $json.body }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        -352,
+        -208
+      ],
+      "id": "2122f7ca-ddea-4908-945f-56aa32d21f27",
+      "name": "HTTP Request"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -800,
+        -304
+      ],
+      "id": "2060f683-0dca-4730-9b6e-95738aa06738",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "ccc82f6c-cf96-4fdc-a773-1bebf28fd2dc",
+              "name": "to",
+              "value": "={{ ['calvarycypruscalendar@gmail.com'] }}",
+              "type": "array"
+            },
+            {
+              "id": "7f428d3e-cc98-4bf7-93a8-cf85124ae3ac",
+              "name": "body",
+              "value": "test",
+              "type": "string"
+            },
+            {
+              "id": "f5e896c2-a2ce-4c5a-828d-670dcf7702ba",
+              "name": "subject",
+              "value": "test subject",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -576,
+        -304
+      ],
+      "id": "dab8d238-bda2-42d4-b763-9671cb0c585b",
+      "name": "debug"
+    }
+  ],
+  "connections": {
+    "When Executed by Another Workflow": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "debug",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "debug": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "availableInMCP": false,
+    "timeSavedMode": "fixed",
+    "saveDataSuccessExecution": "none",
+    "callerPolicy": "workflowsFromSameOwner"
+  },
+  "staticData": null,
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "pinData": {},
+  "versionId": "9154036f-ed69-4016-95df-73e2f1a48c5a",
+  "activeVersionId": "9154036f-ed69-4016-95df-73e2f1a48c5a",
+  "versionCounter": 92,
+  "triggerCount": 0,
+  "tags": [],
+  "shared": [
+    {
+      "updatedAt": "2026-02-28T21:36:19.023Z",
+      "createdAt": "2026-02-28T21:36:19.023Z",
+      "role": "workflow:owner",
+      "workflowId": "xrGdCgP0Sg3dM3Ft7orlh",
+      "projectId": "NBttNnd6CVeZWrwI",
+      "project": {
+        "updatedAt": "2026-01-28T08:29:07.278Z",
+        "createdAt": "2026-01-28T08:04:49.772Z",
+        "id": "NBttNnd6CVeZWrwI",
+        "name": "Calvary Paphos <calvarycypruscalendar@gmail.com>",
+        "type": "personal",
+        "icon": null,
+        "description": null,
+        "creatorId": "d84e1e89-6472-46a2-881c-0780a65eac38"
+      }
+    }
+  ]
+}

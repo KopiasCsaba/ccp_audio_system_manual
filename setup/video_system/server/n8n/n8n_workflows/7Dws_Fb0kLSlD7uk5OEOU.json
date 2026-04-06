@@ -1,0 +1,414 @@
+{
+  "updatedAt": "2026-04-03T15:18:17.801Z",
+  "createdAt": "2026-02-24T11:14:24.222Z",
+  "id": "7Dws_Fb0kLSlD7uk5OEOU",
+  "name": "reborn questionnaire backend",
+  "description": null,
+  "active": true,
+  "isArchived": false,
+  "nodes": [
+    {
+      "parameters": {
+        "authentication": "serviceAccount",
+        "documentId": {
+          "__rl": true,
+          "value": "https://docs.google.com/spreadsheets/d/1IPPRHGaS6qc8c2INjMqzW3p12fIINstoRJz8OTzEUGk",
+          "mode": "url"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 871104679,
+          "mode": "list",
+          "cachedResultName": "A(z) 1. lapon lévő válaszok",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1IPPRHGaS6qc8c2INjMqzW3p12fIINstoRJz8OTzEUGk/edit#gid=871104679"
+        },
+        "options": {
+          "outputFormatting": {
+            "values": {
+              "general": "UNFORMATTED_VALUE",
+              "date": "SERIAL_NUMBER"
+            }
+          }
+        }
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        256,
+        -80
+      ],
+      "id": "8536b055-93d6-4036-89c5-c1ead8002b2f",
+      "name": "Get row(s) in sheet",
+      "credentials": {
+        "googleApi": {
+          "id": "IXX0XUVGWCSsg3z3",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "80bb703a-e6be-41d0-96ad-e390082f3401",
+              "leftValue": "={{ $json['Don\\'t show on-screen'] }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "empty",
+                "singleValue": true
+              }
+            },
+            {
+              "id": "a1aef3bd-0957-47dd-a4c4-69f2ac7b34a7",
+              "leftValue": "={{ $json['Időbélyeg'] }}",
+              "rightValue": "={{ Math.floor((Date.now() + new Date().getTimezoneOffset() * -60000) / 86400000) + 25569 }}",
+              "operator": {
+                "type": "number",
+                "operation": "gt"
+              }
+            },
+            {
+              "id": "9f3dc02a-f68f-4373-9dc2-d1dbec1c3b7d",
+              "leftValue": "={{ $json['Időbélyeg'] }}",
+              "rightValue": "={{ (Date.now() + new Date().getTimezoneOffset() * -60000) / 86400000 + 25569 - ((6)/1440) }}",
+              "operator": {
+                "type": "number",
+                "operation": "lt"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "looseTypeValidation": true,
+        "options": {
+          "ignoreCase": false
+        }
+      },
+      "type": "n8n-nodes-base.filter",
+      "typeVersion": 2.3,
+      "position": [
+        480,
+        -80
+      ],
+      "id": "8aa53df3-2e78-4017-91c9-b8ccb12ae4b0",
+      "name": "Filter for screen",
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "path": "reborn-query",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        32,
+        32
+      ],
+      "id": "a3276985-3da1-48fd-b43d-f39544d83e97",
+      "name": "Webhook",
+      "webhookId": "5879a3f7-0984-4368-bf3d-5fd62d1b6e25"
+    },
+    {
+      "parameters": {
+        "respondWith": "allIncomingItems",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.5,
+      "position": [
+        1600,
+        32
+      ],
+      "id": "f4fe43d2-ad44-40e4-ab6d-b39dbc882185",
+      "name": "Respond to Webhook"
+    },
+    {
+      "parameters": {
+        "mode": "raw",
+        "jsonOutput": "={\n  \"row\": \"{{ $json.row_number }}\",\n  \"comment\": \"{{ $json['Your question / comment'] }}\"\n}\n",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1376,
+        32
+      ],
+      "id": "85d24782-f69b-4a13-8a23-53d5c6722455",
+      "name": "Edit Fields1",
+      "alwaysOutputData": false,
+      "executeOnce": false
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        32,
+        -176
+      ],
+      "id": "b2d4e50b-849b-436e-ac83-d561b7c870c0",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "6fb6d555-989f-4227-b9bf-3b6f7d2e3aa7",
+              "leftValue": "={{ $json.count_row_number }}",
+              "rightValue": 0,
+              "operator": {
+                "type": "number",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "looseTypeValidation": true,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        928,
+        -144
+      ],
+      "id": "eb0b9910-1cca-44ad-befe-b1ec87b2bd8e",
+      "name": "No records?",
+      "executeOnce": false
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "[]",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.5,
+      "position": [
+        1152,
+        -192
+      ],
+      "id": "4a66324f-d9da-4a76-b204-cd4d506e8f17",
+      "name": "Respond to Webhook1"
+    },
+    {
+      "parameters": {
+        "fieldsToSummarize": {
+          "values": [
+            {
+              "field": "row_number"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.summarize",
+      "typeVersion": 1.1,
+      "position": [
+        704,
+        -144
+      ],
+      "id": "ef7d2edd-a3ee-4206-a6c8-768881f4f61b",
+      "name": "Summarize"
+    },
+    {
+      "parameters": {
+        "mode": "chooseBranch",
+        "useDataOfInput": 2
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        1152,
+        32
+      ],
+      "id": "134cdad1-d830-43d1-8540-52174533f287",
+      "name": "Merge"
+    }
+  ],
+  "connections": {
+    "Get row(s) in sheet": {
+      "main": [
+        [
+          {
+            "node": "Filter for screen",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Get row(s) in sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Filter for screen": {
+      "main": [
+        [
+          {
+            "node": "Summarize",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Get row(s) in sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields1": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "No records?": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Summarize": {
+      "main": [
+        [
+          {
+            "node": "No records?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "availableInMCP": false,
+    "timeSavedMode": "fixed",
+    "saveDataSuccessExecution": "none",
+    "saveManualExecutions": false,
+    "callerPolicy": "workflowsFromSameOwner"
+  },
+  "staticData": null,
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "pinData": {
+    "Webhook": [
+      {
+        "json": {
+          "headers": {
+            "host": "192.168.2.5:3000",
+            "connection": "keep-alive",
+            "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+            "dnt": "1",
+            "accept": "*/*",
+            "sec-gpc": "1",
+            "origin": "null",
+            "accept-encoding": "gzip, deflate",
+            "accept-language": "en-US,en;q=0.9",
+            "if-none-match": "W/\"1d-dAoo8+fd54uGiVb2oAY6JUyLodk\""
+          },
+          "params": {},
+          "query": {},
+          "body": {},
+          "webhookUrl": "http://192.168.2.5:3000/webhook/reborn-query",
+          "executionMode": "production"
+        },
+        "pairedItem": {
+          "item": 0
+        }
+      }
+    ]
+  },
+  "versionId": "b0532aca-82f0-4724-981b-9b0f8a44cf70",
+  "activeVersionId": "b0532aca-82f0-4724-981b-9b0f8a44cf70",
+  "versionCounter": 289,
+  "triggerCount": 1,
+  "tags": [],
+  "shared": [
+    {
+      "updatedAt": "2026-02-24T11:14:24.222Z",
+      "createdAt": "2026-02-24T11:14:24.222Z",
+      "role": "workflow:owner",
+      "workflowId": "7Dws_Fb0kLSlD7uk5OEOU",
+      "projectId": "NBttNnd6CVeZWrwI",
+      "project": {
+        "updatedAt": "2026-01-28T08:29:07.278Z",
+        "createdAt": "2026-01-28T08:04:49.772Z",
+        "id": "NBttNnd6CVeZWrwI",
+        "name": "Calvary Paphos <calvarycypruscalendar@gmail.com>",
+        "type": "personal",
+        "icon": null,
+        "description": null,
+        "creatorId": "d84e1e89-6472-46a2-881c-0780a65eac38"
+      }
+    }
+  ]
+}

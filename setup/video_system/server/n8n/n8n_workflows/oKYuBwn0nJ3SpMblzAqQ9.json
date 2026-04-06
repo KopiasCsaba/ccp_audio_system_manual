@@ -1,0 +1,416 @@
+{
+  "updatedAt": "2026-03-31T16:35:00.356Z",
+  "createdAt": "2026-03-01T18:08:07.639Z",
+  "id": "oKYuBwn0nJ3SpMblzAqQ9",
+  "name": "browser notification",
+  "description": null,
+  "active": true,
+  "isArchived": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        -224
+      ],
+      "id": "779d6218-dceb-46d1-adc5-939f4cdcf621",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "329b90b8-54e0-4736-b71d-a5bc1cdeab3a",
+              "name": "text",
+              "value": "[01:01] Syncing 4 files<br>:loading:",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        224,
+        -224
+      ],
+      "id": "d8aff543-d2ce-4417-b990-5ac86a1e7f2f",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "workflowInputs": {
+          "values": [
+            {
+              "name": "text"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        224,
+        160
+      ],
+      "id": "e5eb3a7a-d116-4c60-a631-f82eb8ae02e2",
+      "name": "When Executed by Another Workflow"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "vGC4rpFc0kzVwrtT",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/vGC4rpFc0kzVwrtT",
+          "cachedResultName": "browser"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "url": "=file:///config/media/htmls/blacklog.html?text={{encodeURIComponent($('sum').item.json.text)}}&fontSize=120px"
+          },
+          "matchingColumns": [
+            "url"
+          ],
+          "schema": [
+            {
+              "id": "url",
+              "displayName": "url",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        1136,
+        -128
+      ],
+      "id": "37fd9ef1-af0c-4246-b05b-84f9d54a27d5",
+      "name": "Call 'browser'"
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "browser-notification",
+        "options": {
+          "rawBody": true
+        }
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        0,
+        -32
+      ],
+      "id": "5893732c-9970-462a-959d-c7361920e361",
+      "name": "Webhook",
+      "webhookId": "03294785-2800-46e4-88f1-d35be606e6aa"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "de00c402-8a7a-483c-9179-ca9838d1c1fa",
+              "name": "text",
+              "value": "={{ $json.body }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        224,
+        -32
+      ],
+      "id": "6786df14-0858-431d-b781-ab5772301d89",
+      "name": "Edit Fields1"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        448,
+        -32
+      ],
+      "id": "227b00ee-e352-4801-8036-6724aa5a2189",
+      "name": "sum"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        1120,
+        64
+      ],
+      "id": "ae79eb87-3129-45d9-ad4a-3d9f9ef0d26f",
+      "name": "Wait",
+      "webhookId": "464ddfc7-8015-4c9d-86d4-c2a5752f2ca4"
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "dataTableId": {
+          "__rl": true,
+          "value": "il3gZO5GYNLZhOsa",
+          "mode": "list",
+          "cachedResultName": "config",
+          "cachedResultUrl": "/projects/NBttNnd6CVeZWrwI/datatables/il3gZO5GYNLZhOsa"
+        },
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "key",
+              "keyValue": "browser_page_locked"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1.1,
+      "position": [
+        672,
+        -32
+      ],
+      "id": "4f29e7b1-7c40-419b-a85f-edaf73a3c6d6",
+      "name": "get lock",
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "f2a9fff0-6bf8-413b-a743-48ec4cd85bb6",
+              "leftValue": "={{ $json.value }}",
+              "rightValue": "1",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "looseTypeValidation": true,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        896,
+        -112
+      ],
+      "id": "550f46a6-2f7a-4095-86ab-4917612ccbae",
+      "name": "locked?"
+    }
+  ],
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When Executed by Another Workflow": {
+      "main": [
+        [
+          {
+            "node": "sum",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "sum",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields1": {
+      "main": [
+        [
+          {
+            "node": "sum",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "sum": {
+      "main": [
+        [
+          {
+            "node": "get lock",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait": {
+      "main": [
+        [
+          {
+            "node": "get lock",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "get lock": {
+      "main": [
+        [
+          {
+            "node": "locked?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "locked?": {
+      "main": [
+        [
+          {
+            "node": "Wait",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Call 'browser'",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "availableInMCP": false,
+    "timeSavedMode": "fixed",
+    "callerPolicy": "workflowsFromSameOwner",
+    "saveDataSuccessExecution": "none"
+  },
+  "staticData": null,
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "pinData": {
+    "Webhook": [
+      {
+        "json": {
+          "headers": {
+            "host": "192.168.2.5:3000",
+            "user-agent": "curl/8.17.0",
+            "accept": "*/*",
+            "content-type": "text/plain",
+            "content-length": "43"
+          },
+          "params": {},
+          "query": {},
+          "body": "2026-03-04 19:29\\nSynchronisation finished!",
+          "webhookUrl": "http://192.168.2.5:3000/webhook/browser-notification",
+          "executionMode": "production"
+        },
+        "binary": {
+          "data": {
+            "data": "MjAyNi0wMy0wNCAxOToyOVxuU3luY2hyb25pc2F0aW9uIGZpbmlzaGVkIQ==",
+            "mimeType": "text/plain"
+          }
+        },
+        "pairedItem": {
+          "item": 0
+        }
+      }
+    ],
+    "When Executed by Another Workflow": [
+      {
+        "json": {
+          "text": "INITIALISED"
+        },
+        "pairedItem": {
+          "item": 0
+        }
+      }
+    ]
+  },
+  "versionId": "d50f4d1e-6d27-43d1-852c-b9eec617d571",
+  "activeVersionId": "d50f4d1e-6d27-43d1-852c-b9eec617d571",
+  "versionCounter": 167,
+  "triggerCount": 1,
+  "tags": [],
+  "shared": [
+    {
+      "updatedAt": "2026-03-01T18:08:07.639Z",
+      "createdAt": "2026-03-01T18:08:07.639Z",
+      "role": "workflow:owner",
+      "workflowId": "oKYuBwn0nJ3SpMblzAqQ9",
+      "projectId": "NBttNnd6CVeZWrwI",
+      "project": {
+        "updatedAt": "2026-01-28T08:29:07.278Z",
+        "createdAt": "2026-01-28T08:04:49.772Z",
+        "id": "NBttNnd6CVeZWrwI",
+        "name": "Calvary Paphos <calvarycypruscalendar@gmail.com>",
+        "type": "personal",
+        "icon": null,
+        "description": null,
+        "creatorId": "d84e1e89-6472-46a2-881c-0780a65eac38"
+      }
+    }
+  ]
+}

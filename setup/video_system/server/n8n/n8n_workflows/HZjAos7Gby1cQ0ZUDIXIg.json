@@ -1,0 +1,79 @@
+{
+  "updatedAt": "2026-03-31T16:24:15.029Z",
+  "createdAt": "2026-02-22T08:32:08.091Z",
+  "id": "HZjAos7Gby1cQ0ZUDIXIg",
+  "name": "tmp ccp facebook",
+  "description": null,
+  "active": false,
+  "isArchived": true,
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "f98ba09c-b3ca-4025-abc7-e02147e7da69",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.facebookGraphApi",
+      "typeVersion": 1,
+      "position": [
+        208,
+        0
+      ],
+      "id": "f7835355-cf40-4553-b525-7acebfe48077",
+      "name": "Facebook Graph API"
+    }
+  ],
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Facebook Graph API",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "availableInMCP": false
+  },
+  "staticData": null,
+  "meta": null,
+  "pinData": {},
+  "versionId": "5497a07f-25e1-4c17-9219-feb2bb4e1374",
+  "activeVersionId": null,
+  "versionCounter": 5,
+  "triggerCount": 0,
+  "tags": [],
+  "shared": [
+    {
+      "updatedAt": "2026-02-22T08:32:08.091Z",
+      "createdAt": "2026-02-22T08:32:08.091Z",
+      "role": "workflow:owner",
+      "workflowId": "HZjAos7Gby1cQ0ZUDIXIg",
+      "projectId": "NBttNnd6CVeZWrwI",
+      "project": {
+        "updatedAt": "2026-01-28T08:29:07.278Z",
+        "createdAt": "2026-01-28T08:04:49.772Z",
+        "id": "NBttNnd6CVeZWrwI",
+        "name": "Calvary Paphos <calvarycypruscalendar@gmail.com>",
+        "type": "personal",
+        "icon": null,
+        "description": null,
+        "creatorId": "d84e1e89-6472-46a2-881c-0780a65eac38"
+      }
+    }
+  ]
+}

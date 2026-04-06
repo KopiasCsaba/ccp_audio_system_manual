@@ -1,0 +1,595 @@
+{
+  "updatedAt": "2026-03-04T20:58:41.521Z",
+  "createdAt": "2025-11-30T09:56:30.525Z",
+  "id": "0AUTg9h7jIJdrnCK",
+  "name": "restreamer",
+  "description": null,
+  "active": true,
+  "isArchived": false,
+  "nodes": [
+    {
+      "parameters": {
+        "workflowInputs": {
+          "values": [
+            {
+              "name": "output_name"
+            },
+            {
+              "name": "output_set_stream_key"
+            },
+            {
+              "name": "output_set_stream_backup_key"
+            },
+            {
+              "name": "output_set_enabled"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        336,
+        128
+      ],
+      "id": "54ddec4e-d398-4cd7-8320-3eeb4d8a29ca",
+      "name": "control"
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "combineBy": "combineAll",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        1008,
+        32
+      ],
+      "id": "426a9376-e4ed-48e9-a169-e1fb57b1a78b",
+      "name": "Merge"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        112,
+        -80
+      ],
+      "id": "0734b8a2-3770-4c02-964b-e73e8bf17ead",
+      "name": "When clicking ‘Execute workflow’",
+      "disabled": true
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        560,
+        32
+      ],
+      "id": "a55f4482-d117-4399-9c3f-acb9d385a1fe",
+      "name": "No Operation, do nothing"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "473f2210-2f2c-44f4-9647-20acdabd9087",
+              "name": "output_name",
+              "value": "ccp_facebook",
+              "type": "string"
+            },
+            {
+              "id": "81de6281-8998-4655-a7d3-f600fd9aad1f",
+              "name": "output_set_enabled",
+              "value": "1",
+              "type": "string"
+            },
+            {
+              "id": "28e69f07-3ee3-4d08-b669-b11ddebbd779",
+              "name": "output_set_stream_key",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "b54eb579-7c80-4590-a778-6d77675792d4",
+              "name": "output_set_stream_backup_key",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        336,
+        -80
+      ],
+      "id": "7d13d01c-9a9b-476f-8163-e42267eb687d",
+      "name": "debug"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "CgSbDSo1mHpiRCnr",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/CgSbDSo1mHpiRCnr",
+          "cachedResultName": "readconfig"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {}
+        },
+        "mode": "each",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        784,
+        112
+      ],
+      "id": "39b9b53d-55c4-4931-86a4-22ec6ad77341",
+      "name": "readconfig",
+      "executeOnce": false
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "09dba554-7708-4518-8021-0708dd160dd4",
+              "leftValue": "={{ $json.output_name }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "notEmpty",
+                "singleValue": true
+              }
+            },
+            {
+              "id": "ef91de00-b240-4721-83cb-4f4d8fee9d95",
+              "leftValue": "={{ $json.output_set_enabled }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "notEmpty",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        1232,
+        -80
+      ],
+      "id": "84955516-5e14-4f47-80b1-97f5779aa957",
+      "name": "output_name + output_set_enabled"
+    },
+    {
+      "parameters": {
+        "method": "PUT",
+        "url": "={{ $json.config.restreamer_host }}/api/v3/process/{{ encodeURIComponent($('readconfig').item.json.config.restreamer_map[$json.output_name].id) }}/command",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "command",
+              "value": "={{ $json.output_set_enabled==1?\"start\":\"stop\" }}"
+            }
+          ]
+        },
+        "options": {
+          "response": {
+            "response": {
+              "fullResponse": true,
+              "neverError": true,
+              "responseFormat": "text"
+            }
+          }
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        1456,
+        -80
+      ],
+      "id": "0013c968-038d-4725-9bf5-ae70fa23ad4d",
+      "name": "command"
+    },
+    {
+      "parameters": {
+        "jsCode": "// n8n Code Node: Update Restreamer Stream Keys\n// Processes upstream data and updates stream keys via Restreamer API\n//\n// Expected input format (from upstream node):\n// [{\n//   \"output_set_stream_key\": \"1111\",           // Primary key (YouTube) or Primary key (Facebook)\n//   \"output_set_stream_backup_key\": \"1111\",    // Backup key (Facebook only)\n//   \"processID\": \"restreamer-ui:egress:youtube:xxx\",\n//   \"restreamer_host\": \"http://127.0.0.1:8080\"\n// }]\n\n// Process each item from upstream\nconst results = [];\n\nconst streamKey = $input.first().json.output_set_stream_key;\nconst backupKey = $input.first().json.output_set_stream_backup_key;\nconst processID = $('readconfig').first().json.config.restreamer_map[$input.first().json.output_name].id;\nconst restreamerHost = $input.first().json.config.restreamer_host;\n\n\n\n// Validate required fields\nif (!processID || !streamKey || !restreamerHost) {\n    throw new Error('Missing required fields: processID, output_set_stream_key, or restreamer_host');\n}\n\n// Detect platform from processID\nlet platform;\nif (processID.includes(':youtube:')) {\n    platform = 'youtube';\n} else if (processID.includes(':facebook:')) {\n    platform = 'facebook';\n    // Facebook requires backup key\n} else {\n    throw new Error('Invalid processID - must contain :youtube: or :facebook:');\n}\n\ntry {\n    // URL-encode the processID\n    const processIdEncoded = encodeURIComponent(processID);\n    const apiProcess = `${restreamerHost}/api/v3/process/${processIdEncoded}`;\n    const apiMetadata = `${apiProcess}/metadata/restreamer-ui`;\n\n    // Fetch current config and metadata using n8n's httpRequest helper\n    const [configResponse, metadataResponse] =\n        await Promise.all([\n            this.helpers.httpRequest({method: 'GET', url: apiProcess, json: true}),\n            this.helpers.httpRequest({method: 'GET', url: apiMetadata, json: true})\n        ]);\n\n    let config = configResponse.config;\n    let metadata = metadataResponse;\n\n    // Update config and metadata based on platform\n    if (platform === 'youtube') {\n        // Update config outputs\n        config.output[0].address = replaceLastSegment(config.output[0].address, streamKey)\n        if (config.output.length > 1) {\n            config.output[1].address = replaceLastSegment(config.output[1].address, streamKey)\n        }\n        // Update metadata\n        metadata.settings.stream_key = streamKey;\n        metadata.outputs[0].address = replaceLastSegment(metadata.outputs[0].address, streamKey)\n        if (metadata.outputs.length > 1) {\n            metadata.outputs[1].address = replaceLastSegment(metadata.outputs[1].address, streamKey)\n        }\n    } else {\n        // Facebook\n        // Update config outputs\n        config.output[0].address = replaceLastSegment(config.output[0].address,streamKey);\n        if (config.output.length > 1) {\n            config.output[1].address = replaceLastSegment(config.output[1].address, backupKey)\n        }\n        // Update metadata\n        metadata.settings.stream_key_primary = streamKey;\n        metadata.settings.stream_key_backup = backupKey;\n        metadata.outputs[0].address = replaceLastSegment(metadata.outputs[0].address, streamKey)\n        if (metadata.outputs.length > 1) {\n            metadata.outputs[1].address = replaceLastSegment(metadata.outputs[1].address, backupKey)\n        }\n    }\n\n    // Send updates to Restreamer API using n8n's httpRequest helper\n    await Promise.all([\n        this.helpers.httpRequest({method: 'PUT', url: apiProcess, headers: {'Content-Type': 'application/json'}, body: config, json: true}),\n        this.helpers.httpRequest({method: 'PUT', url: apiMetadata, headers: {'Content-Type': 'application/json'}, body: metadata, json: true})\n    ]);\n\n    // Success\n    return {\n        json: {\n            success: true,\n            message: `Stream key(s) updated successfully for ${platform}`\n        }\n    };\n\n} catch (error) {\n    throw new Error(error.message + \": \" + error.toString());\n}\n\n\nfunction replaceLastSegment(url, replacement) {\n    const idx = url.lastIndexOf('/');\n    if (idx === -1) {\n        return url;\n    }\n    return url.slice(0, idx + 1) + replacement;\n}"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1456,
+        128
+      ],
+      "id": "9d3bd435-ab96-49e9-bed2-0cac7cf0bc84",
+      "name": "handle key setting",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "E0yl55s1YkCD2LNx",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/E0yl55s1YkCD2LNx",
+          "cachedResultName": "log"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "type": "notice",
+            "message": "=Set output {{ $('Merge').item.json.output_name }} {{ $('Merge').item.json.output_set_enabled?\"enabled\":\"disabled\" }}",
+            "execution_id": "={{ $execution.id }}:{{ $workflow.name }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "type",
+              "displayName": "type",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "message",
+              "displayName": "message",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "private_message",
+              "displayName": "private_message",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "execution_id",
+              "displayName": "execution_id",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        1456,
+        -240
+      ],
+      "id": "f2f2ca4b-12cd-4fda-a0d3-fb462761aa0c",
+      "name": "Call 'log'"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "E0yl55s1YkCD2LNx",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/E0yl55s1YkCD2LNx",
+          "cachedResultName": "log"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "type": "notice",
+            "message": "=Set stream key of {{ $('Merge').item.json.output_name }} to '{{ $json.output_set_stream_key }}' '{{ $json.output_set_stream_backup_key }}'",
+            "execution_id": "={{ $execution.id }}:{{ $workflow.name }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "type",
+              "displayName": "type",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "message",
+              "displayName": "message",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "private_message",
+              "displayName": "private_message",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "execution_id",
+              "displayName": "execution_id",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        1440,
+        336
+      ],
+      "id": "afb8f43e-6904-4869-912a-f9533b917d1b",
+      "name": "Call 'log'1",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "09dba554-7708-4518-8021-0708dd160dd4",
+              "leftValue": "={{ $json.output_name }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "notEmpty",
+                "singleValue": true
+              }
+            },
+            {
+              "id": "ef91de00-b240-4721-83cb-4f4d8fee9d95",
+              "leftValue": "={{ $json.output_set_stream_key }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "notEmpty",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        1232,
+        128
+      ],
+      "id": "3c12b10f-2f7d-4f50-b38c-b25365aa0e7f",
+      "name": "output_name + output_set_stream_key",
+      "disabled": true
+    }
+  ],
+  "connections": {
+    "control": {
+      "main": [
+        [
+          {
+            "node": "No Operation, do nothing",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge": {
+      "main": [
+        [
+          {
+            "node": "output_name + output_set_enabled",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "output_name + output_set_stream_key",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "debug",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "No Operation, do nothing": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "readconfig",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "debug": {
+      "main": [
+        [
+          {
+            "node": "No Operation, do nothing",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "readconfig": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "output_name + output_set_enabled": {
+      "main": [
+        [
+          {
+            "node": "command",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Call 'log'",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "output_name + output_set_stream_key": {
+      "main": [
+        [
+          {
+            "node": "handle key setting",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Call 'log'1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "saveDataSuccessExecution": "none",
+    "saveManualExecutions": false,
+    "callerPolicy": "workflowsFromSameOwner",
+    "availableInMCP": false,
+    "errorWorkflow": "E0yl55s1YkCD2LNx",
+    "timeSavedMode": "fixed"
+  },
+  "staticData": null,
+  "meta": null,
+  "pinData": {
+    "control": [
+      {
+        "json": {
+          "output_name": "ccp_youtube",
+          "output_set_stream_key": null,
+          "output_set_stream_backup_key": null,
+          "output_set_enabled": "1"
+        },
+        "pairedItem": {
+          "item": 0
+        }
+      }
+    ]
+  },
+  "versionId": "524270b6-d5d0-4409-b43a-c52b0f18dcf9",
+  "activeVersionId": "524270b6-d5d0-4409-b43a-c52b0f18dcf9",
+  "versionCounter": 140,
+  "triggerCount": 0,
+  "tags": [],
+  "shared": [
+    {
+      "updatedAt": "2026-01-28T09:50:30.201Z",
+      "createdAt": "2026-01-28T09:50:30.201Z",
+      "role": "workflow:owner",
+      "workflowId": "0AUTg9h7jIJdrnCK",
+      "projectId": "NBttNnd6CVeZWrwI",
+      "project": {
+        "updatedAt": "2026-01-28T08:29:07.278Z",
+        "createdAt": "2026-01-28T08:04:49.772Z",
+        "id": "NBttNnd6CVeZWrwI",
+        "name": "Calvary Paphos <calvarycypruscalendar@gmail.com>",
+        "type": "personal",
+        "icon": null,
+        "description": null,
+        "creatorId": "d84e1e89-6472-46a2-881c-0780a65eac38"
+      }
+    }
+  ]
+}

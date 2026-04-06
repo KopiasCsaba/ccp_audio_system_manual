@@ -1,0 +1,950 @@
+{
+  "updatedAt": "2026-03-04T20:58:40.763Z",
+  "createdAt": "2025-11-23T08:28:08.718Z",
+  "id": "FK8D44cxEXsOJz7z",
+  "name": "videoplayer",
+  "description": null,
+  "active": true,
+  "isArchived": false,
+  "nodes": [
+    {
+      "parameters": {
+        "workflowInputs": {
+          "values": [
+            {
+              "name": "playFile"
+            },
+            {
+              "name": "repeat",
+              "type": "boolean"
+            },
+            {
+              "name": "stop"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        -1232,
+        -352
+      ],
+      "id": "7d48b1ef-afe6-4c2f-8aee-9c970a50af3e",
+      "name": "control"
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "combineBy": "combineAll",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        -560,
+        -352
+      ],
+      "id": "f2502c37-160a-4c2e-a349-cf745b099b17",
+      "name": "Merge"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -1456,
+        -544
+      ],
+      "id": "ea01e28b-ea02-493a-85fa-ee18caa242cd",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        -1008,
+        -352
+      ],
+      "id": "b6886928-34f1-4ef6-a45e-8f556f04e63d",
+      "name": "No Operation, do nothing"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "a96f4072-8e0a-4bfc-9b46-7ea4699efa96",
+              "name": "playFile",
+              "value": "/config/media/presetfiles/ccp/prestream_infinite_short.mov",
+              "type": "string"
+            },
+            {
+              "id": "7e731335-53e4-459c-ac3e-ea9996b22dc7",
+              "name": "repeat",
+              "value": true,
+              "type": "boolean"
+            },
+            {
+              "id": "c2cf80ff-0bd7-438f-86fd-ad89e655c176",
+              "name": "stop",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -1232,
+        -544
+      ],
+      "id": "bbd2f1b2-2244-45f0-9f57-9d0696b80b27",
+      "name": "debug"
+    },
+    {
+      "parameters": {
+        "url": "={{ $('readconfig').item.json.config.vlc_endpoint }}/requests/status.json",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "command",
+              "value": "pl_empty"
+            }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "={{ $('calculate vlc auth header').item.json.header }}"
+            }
+          ]
+        },
+        "options": {
+          "timeout": 20000
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        336,
+        -64
+      ],
+      "id": "ef146340-e316-4ccd-a055-5e008854532a",
+      "name": "playlist clear",
+      "alwaysOutputData": false,
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "url": "={{ $('Merge').item.json.config.vlc_endpoint }}/requests/status.json",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "command",
+              "value": "in_enqueue"
+            },
+            {
+              "name": "input",
+              "value": "={{ $('Merge').item.json.playFile }}"
+            }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "={{ $('calculate vlc auth header').item.json.header }}"
+            }
+          ]
+        },
+        "options": {
+          "response": {
+            "response": {
+              "fullResponse": true,
+              "neverError": true,
+              "responseFormat": "json"
+            }
+          },
+          "timeout": 20000
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        784,
+        -64
+      ],
+      "id": "af582451-acc5-4588-b395-6219aab6a12b",
+      "name": "enqueue",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "CgSbDSo1mHpiRCnr",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/CgSbDSo1mHpiRCnr",
+          "cachedResultName": "readconfig"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {}
+        },
+        "mode": "each",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        -784,
+        -352
+      ],
+      "id": "70fea16b-dd15-43be-9e8e-68f34099feed",
+      "name": "readconfig",
+      "executeOnce": false
+    },
+    {
+      "parameters": {
+        "jsCode": "return items.map(item => {\n  const { playFile } = item.json;\n\n  if (!playFile) {\n    throw new Error('mediaFile is required');\n  }\n\n\n  // Basic image detection\n  const isImage = /\\.(jpg|jpeg|png|gif|bmp|webp|svg)$/i.test(playFile);\n\n\n  return {\n    json: {\n      ... item.json,\n      isImage,\n    },\n  };\n});"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        112,
+        -160
+      ],
+      "id": "41b8b062-9232-4215-8e5d-5b8debcac372",
+      "name": "isImage"
+    },
+    {
+      "parameters": {
+        "url": "={{ $('Merge').item.json.config.vlc_endpoint }}/requests/status.json",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "command",
+              "value": "pl_repeat"
+            },
+            {
+              "name": "input",
+              "value": "={{ $('Merge').item.json.playFile }}"
+            }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "={{ $('calculate vlc auth header').item.json.header }}"
+            }
+          ]
+        },
+        "options": {
+          "response": {
+            "response": {
+              "fullResponse": true,
+              "neverError": true,
+              "responseFormat": "json"
+            }
+          },
+          "timeout": 20000
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        1456,
+        -64
+      ],
+      "id": "2be79fd4-e114-4f9a-848e-cffa78772187",
+      "name": "toggle loop"
+    },
+    {
+      "parameters": {
+        "url": "={{ $('Merge').item.json.config.vlc_endpoint }}/requests/status.json",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "command",
+              "value": "in_play"
+            },
+            {
+              "name": "input",
+              "value": "=file://{{ ($('Merge').item.json.playFile) }}"
+            }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "={{ $('calculate vlc auth header').item.json.header }}"
+            }
+          ]
+        },
+        "options": {
+          "response": {
+            "response": {
+              "fullResponse": true,
+              "neverError": true,
+              "responseFormat": "json"
+            }
+          },
+          "timeout": 20000
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        1008,
+        -64
+      ],
+      "id": "40058fc2-64b5-444c-89eb-03fa34ef61e6",
+      "name": "play"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "78932a5c-5ced-4ca9-b798-f1a99df53970",
+              "leftValue": "={{ $('isImage').item.json.isImage }}",
+              "rightValue": "={{ $json.body.loop }}",
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            },
+            {
+              "id": "58b2ffb9-c313-4631-8e4c-caa123a16095",
+              "leftValue": "={{ $json.body.repeat }}",
+              "rightValue": "",
+              "operator": {
+                "type": "boolean",
+                "operation": "false",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        1232,
+        -160
+      ],
+      "id": "318bb986-5c39-405c-bf03-f8f28608d608",
+      "name": "if image then enable"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "78932a5c-5ced-4ca9-b798-f1a99df53970",
+              "leftValue": "={{ !$('isImage').item.json.isImage }}",
+              "rightValue": "={{ $json.body.loop }}",
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            },
+            {
+              "id": "58b2ffb9-c313-4631-8e4c-caa123a16095",
+              "leftValue": "={{ $json.body.repeat }}",
+              "rightValue": "={{ $('Merge').item.json.repeat }}",
+              "operator": {
+                "type": "boolean",
+                "operation": "notEquals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        1232,
+        32
+      ],
+      "id": "545eb7bd-5dda-46e9-835a-0756ae8c4057",
+      "name": "if video and change is needed"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "E0yl55s1YkCD2LNx",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/E0yl55s1YkCD2LNx",
+          "cachedResultName": "log"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "type": "notice",
+            "message": "=File: {{ $json.playFile }}, Repeat: {{ $('Merge').item.json.repeat?1:0 }}",
+            "execution_id": "={{ $execution.id }}:{{ $workflow.name }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "type",
+              "displayName": "type",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "message",
+              "displayName": "message",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "private_message",
+              "displayName": "private_message",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "execution_id",
+              "displayName": "execution_id",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {
+          "waitForSubWorkflow": false
+        }
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        336,
+        -256
+      ],
+      "id": "bab243d9-0a2f-4973-aaff-304ac2d1dda7",
+      "name": "Call 'log'"
+    },
+    {
+      "parameters": {
+        "jsCode": "const item = $input.first();\nconst data = item.json;\nconst vlcPass = \":\" + data.config.vlc_pass;\nconst encoded = \"Basic \" + Buffer.from(vlcPass).toString('base64');\n\n// Keep everything, just add/override a field\ndata.header = encoded;\n\nreturn [{\n  json: data\n}];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -336,
+        -352
+      ],
+      "id": "35f4f692-0726-4540-bdac-ea50d97ae312",
+      "name": "calculate vlc auth header"
+    },
+    {
+      "parameters": {
+        "amount": 1
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        560,
+        -64
+      ],
+      "id": "d9ebc7cc-6353-43c4-9316-f56cc5e475ec",
+      "name": "Wait",
+      "webhookId": "89643c32-cf86-4cb2-bd76-d26e7fe7d474",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "5e587c76-cad5-4309-b8f0-a82fe3fabd1e",
+              "name": "playFile",
+              "value": "={{ $json.stop==1?\"/config/media/static/black.png\":$json.playFile }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -112,
+        -112
+      ],
+      "id": "7374458a-56c1-4a74-ab46-3e9494d75e1b",
+      "name": "handle stop by showing black.png",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "f12086a3-c35a-499e-ae20-5f14fa29e7e8",
+              "leftValue": "={{ $('Merge').item.json.stop }}",
+              "rightValue": "1",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        -112,
+        -352
+      ],
+      "id": "83c8e1f1-ca72-4bdc-add5-9d4c9d75fa29",
+      "name": "stop?"
+    },
+    {
+      "parameters": {
+        "url": "={{ $('Merge').item.json.config.vlc_endpoint }}/requests/status.json",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "command",
+              "value": "pl_stop"
+            },
+            {
+              "name": "input",
+              "value": "=file://{{ ($('Merge').item.json.playFile) }}"
+            }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "={{ $('calculate vlc auth header').item.json.header }}"
+            }
+          ]
+        },
+        "options": {
+          "response": {
+            "response": {
+              "fullResponse": true,
+              "neverError": true,
+              "responseFormat": "json"
+            }
+          },
+          "timeout": 20000
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        112,
+        -352
+      ],
+      "id": "860f53e1-cc9a-471b-a102-837d0e572e3d",
+      "name": "stop"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "E0yl55s1YkCD2LNx",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/E0yl55s1YkCD2LNx",
+          "cachedResultName": "log"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "type": "notice",
+            "message": "=STOP",
+            "execution_id": "={{ $execution.id }}:{{ $workflow.name }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "type",
+              "displayName": "type",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "message",
+              "displayName": "message",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "private_message",
+              "displayName": "private_message",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "execution_id",
+              "displayName": "execution_id",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {
+          "waitForSubWorkflow": false
+        }
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        112,
+        -544
+      ],
+      "id": "56865128-74e9-4a03-bfb8-d8196daf880d",
+      "name": "Call 'log'1"
+    }
+  ],
+  "connections": {
+    "control": {
+      "main": [
+        [
+          {
+            "node": "No Operation, do nothing",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge": {
+      "main": [
+        [
+          {
+            "node": "calculate vlc auth header",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "debug",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "No Operation, do nothing": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "readconfig",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "debug": {
+      "main": [
+        [
+          {
+            "node": "No Operation, do nothing",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "playlist clear": {
+      "main": [
+        [
+          {
+            "node": "Wait",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "enqueue": {
+      "main": [
+        [
+          {
+            "node": "play",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "readconfig": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "isImage": {
+      "main": [
+        [
+          {
+            "node": "playlist clear",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Call 'log'",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "toggle loop": {
+      "main": [
+        []
+      ]
+    },
+    "if image then enable": {
+      "main": [
+        [
+          {
+            "node": "toggle loop",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        []
+      ]
+    },
+    "if video and change is needed": {
+      "main": [
+        [
+          {
+            "node": "toggle loop",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        []
+      ]
+    },
+    "calculate vlc auth header": {
+      "main": [
+        [
+          {
+            "node": "stop?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait": {
+      "main": [
+        [
+          {
+            "node": "enqueue",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "play": {
+      "main": [
+        [
+          {
+            "node": "if image then enable",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "if video and change is needed",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "handle stop by showing black.png": {
+      "main": [
+        [
+          {
+            "node": "isImage",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "stop?": {
+      "main": [
+        [
+          {
+            "node": "stop",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Call 'log'1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "isImage",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "callerPolicy": "workflowsFromSameOwner",
+    "availableInMCP": false,
+    "errorWorkflow": "E0yl55s1YkCD2LNx",
+    "timeSavedMode": "fixed",
+    "executionTimeout": 60,
+    "saveDataSuccessExecution": "none",
+    "saveManualExecutions": false
+  },
+  "staticData": null,
+  "meta": null,
+  "pinData": {
+    "control": [
+      {
+        "json": {
+          "playFile": "/config/media/presetfiles/ccp/prestream_infinite.mov",
+          "repeat": true,
+          "stop": null
+        },
+        "binary": {},
+        "pairedItem": {
+          "item": 0
+        }
+      }
+    ]
+  },
+  "versionId": "502df205-1d61-4c3c-9761-fc3c1926a6c5",
+  "activeVersionId": "502df205-1d61-4c3c-9761-fc3c1926a6c5",
+  "versionCounter": 254,
+  "triggerCount": 0,
+  "tags": [],
+  "shared": [
+    {
+      "updatedAt": "2026-01-28T09:50:30.201Z",
+      "createdAt": "2026-01-28T09:50:30.201Z",
+      "role": "workflow:owner",
+      "workflowId": "FK8D44cxEXsOJz7z",
+      "projectId": "NBttNnd6CVeZWrwI",
+      "project": {
+        "updatedAt": "2026-01-28T08:29:07.278Z",
+        "createdAt": "2026-01-28T08:04:49.772Z",
+        "id": "NBttNnd6CVeZWrwI",
+        "name": "Calvary Paphos <calvarycypruscalendar@gmail.com>",
+        "type": "personal",
+        "icon": null,
+        "description": null,
+        "creatorId": "d84e1e89-6472-46a2-881c-0780a65eac38"
+      }
+    }
+  ]
+}

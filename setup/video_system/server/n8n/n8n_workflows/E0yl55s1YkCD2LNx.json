@@ -1,0 +1,603 @@
+{
+  "updatedAt": "2026-03-04T20:58:42.608Z",
+  "createdAt": "2025-12-03T12:39:12.361Z",
+  "id": "E0yl55s1YkCD2LNx",
+  "name": "log",
+  "description": null,
+  "active": true,
+  "isArchived": false,
+  "nodes": [
+    {
+      "parameters": {
+        "workflowInputs": {
+          "values": [
+            {
+              "name": "type"
+            },
+            {
+              "name": "message"
+            },
+            {
+              "name": "private_message"
+            },
+            {
+              "name": "execution_id"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        64,
+        192
+      ],
+      "id": "d65f6dcc-4878-4467-82f4-295b40a39110",
+      "name": "control"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -160,
+        0
+      ],
+      "id": "a4e025be-31c8-4c75-a60d-f0ae1f1f09f7",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        288,
+        0
+      ],
+      "id": "c47730ee-1f68-43ac-95ac-396587bdbfe3",
+      "name": "No Operation, do nothing"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "b54eb579-7c80-4590-a778-6d77675792d4",
+              "name": "type",
+              "value": "error",
+              "type": "string"
+            },
+            {
+              "id": "3bd3dc8b-e489-433e-ac39-b0ae6f209aee",
+              "name": "message",
+              "value": "Krumplika!",
+              "type": "string"
+            },
+            {
+              "id": "d4549576-67b5-4a35-bcd5-7d5148ead21b",
+              "name": "private_message",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "aaa9ff79-7d07-459c-b8d6-966d375b9369",
+              "name": "execution_id",
+              "value": "={{ $execution.id }}:{{ $workflow.name }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        64,
+        0
+      ],
+      "id": "05fed2da-ad23-4302-8f62-1cff267dfc32",
+      "name": "debug"
+    },
+    {
+      "parameters": {
+        "dataTableId": {
+          "__rl": true,
+          "value": "lbqU5964jQaS42dP",
+          "mode": "list",
+          "cachedResultName": "log",
+          "cachedResultUrl": "/projects/NBttNnd6CVeZWrwI/datatables/lbqU5964jQaS42dP"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "type": "={{ $json.type }}",
+            "msg": "={{ $json.execution_id?\"[\"+$json.execution_id.toUpperCase()+\"] \":\"\" }}{{ $json.message }}",
+            "private_data": "={{ $json.private_message }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "type",
+              "displayName": "type",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "msg",
+              "displayName": "msg",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "private_data",
+              "displayName": "private_data",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {
+          "optimizeBulk": true
+        }
+      },
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1,
+      "position": [
+        512,
+        -96
+      ],
+      "id": "4bd84981-dc9a-4b23-8f0e-8a6801e85f92",
+      "name": "Insert row"
+    },
+    {
+      "parameters": {
+        "path": "getlogs",
+        "responseMode": "lastNode",
+        "responseData": "allEntries",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        -384,
+        416
+      ],
+      "id": "6686c9b8-cc48-43ac-bcd0-d373626dd1b1",
+      "name": "Webhook",
+      "webhookId": "8923630f-b493-4c15-b724-d562fa8c9d93"
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "dataTableId": {
+          "__rl": true,
+          "value": "lbqU5964jQaS42dP",
+          "mode": "list",
+          "cachedResultName": "log",
+          "cachedResultUrl": "/projects/NBttNnd6CVeZWrwI/datatables/lbqU5964jQaS42dP"
+        },
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "createdAt",
+              "condition": "gt",
+              "keyValue": "={{ $now.minus({ hours: 10 }).toISO() }}"
+            }
+          ]
+        },
+        "returnAll": true
+      },
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1,
+      "position": [
+        -160,
+        416
+      ],
+      "id": "4305b8bb-a014-434d-8a72-a0d7c309489a",
+      "name": "Get row(s)"
+    },
+    {
+      "parameters": {
+        "sortFieldsUi": {
+          "sortField": [
+            {
+              "fieldName": "id",
+              "order": "descending"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.sort",
+      "typeVersion": 1,
+      "position": [
+        64,
+        416
+      ],
+      "id": "eeb9eea7-f6b7-4477-a5ad-9f262960c2b1",
+      "name": "Sort"
+    },
+    {
+      "parameters": {
+        "operation": "deleteRows",
+        "dataTableId": {
+          "__rl": true,
+          "value": "lbqU5964jQaS42dP",
+          "mode": "list",
+          "cachedResultName": "log",
+          "cachedResultUrl": "/projects/NBttNnd6CVeZWrwI/datatables/lbqU5964jQaS42dP"
+        },
+        "matchType": "allConditions",
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "createdAt",
+              "condition": "lt",
+              "keyValue": "={{ $now.minus({ days: 1 }).toISO() }}"
+            }
+          ]
+        },
+        "options": {
+          "dryRun": false
+        }
+      },
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1,
+      "position": [
+        512,
+        96
+      ],
+      "id": "47445263-f16e-4876-ab38-8b1741d9fa0d",
+      "name": "Delete row(s)"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.errorTrigger",
+      "typeVersion": 1,
+      "position": [
+        -384,
+        -192
+      ],
+      "id": "bb931925-6172-41af-8e4c-1426357db367",
+      "name": "Error Trigger"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "29a12a7a-b9d4-4c8e-b39d-6744df4d1045",
+              "name": "type",
+              "value": "error",
+              "type": "string"
+            },
+            {
+              "id": "0712b3fd-adb0-4e5a-b7e4-04ae9de2d432",
+              "name": "message",
+              "value": "=WF: {{ $json.workflow.name }} EX ID: {{ $json.execution.id }} Error: {{ $json.execution.error.message }}",
+              "type": "string"
+            },
+            {
+              "id": "ba403c1a-56d5-4128-bc3b-d6a88cfe949f",
+              "name": "private_message",
+              "value": "=Stack: {{ $json.execution.error.stack }}",
+              "type": "string"
+            },
+            {
+              "id": "296440e0-c5a1-4aea-8a90-56ac76bac440",
+              "name": "execution_id",
+              "value": "={{ $execution.id }}:{{ $workflow.name }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        64,
+        -192
+      ],
+      "id": "ddfcb6f9-7f83-4311-a048-46be7d2ef065",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "b0e62e5d-1751-40a4-b1cc-b9d0bdffbf87",
+              "leftValue": "={{ $json.workflow.name }}",
+              "rightValue": "log",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            },
+            {
+              "id": "b7b5bcd7-8561-44c0-943c-b606cfb2116f",
+              "leftValue": "={{ $json.execution.error.message }}",
+              "rightValue": "count changed",
+              "operator": {
+                "type": "string",
+                "operation": "notContains"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.filter",
+      "typeVersion": 2.3,
+      "position": [
+        -160,
+        -192
+      ],
+      "id": "9b536084-b355-421a-ab1e-341c86bb0f66",
+      "name": "Ignore count issue records"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "xrGdCgP0Sg3dM3Ft7orlh",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/xrGdCgP0Sg3dM3Ft7orlh",
+          "cachedResultName": "send email"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "to": "={{['calvarycypruscalendar@gmail.com']}}",
+            "subject": "N8N Worfklow Error Occurred",
+            "body": "={{ $json.message }}\n<br><br>\n{{ $json.execution_id }}\n<br><br>\n{{ $json.private_message }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "subject",
+              "displayName": "subject",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "body",
+              "displayName": "body",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "to",
+              "displayName": "to",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "array",
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        288,
+        -192
+      ],
+      "id": "1627bc53-ee82-409c-a378-ef7da6ac9dc1",
+      "name": "Call 'send email'"
+    }
+  ],
+  "connections": {
+    "control": {
+      "main": [
+        [
+          {
+            "node": "No Operation, do nothing",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "debug",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "debug": {
+      "main": [
+        [
+          {
+            "node": "No Operation, do nothing",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "No Operation, do nothing": {
+      "main": [
+        [
+          {
+            "node": "Insert row",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Delete row(s)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Get row(s)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get row(s)": {
+      "main": [
+        [
+          {
+            "node": "Sort",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Delete row(s)": {
+      "main": [
+        []
+      ]
+    },
+    "Error Trigger": {
+      "main": [
+        [
+          {
+            "node": "Ignore count issue records",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "No Operation, do nothing",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Call 'send email'",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ignore count issue records": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "timeSavedMode": "fixed",
+    "saveDataSuccessExecution": "none",
+    "saveManualExecutions": false,
+    "callerPolicy": "workflowsFromSameOwner",
+    "availableInMCP": false
+  },
+  "staticData": null,
+  "meta": null,
+  "pinData": {
+    "Webhook": [
+      {
+        "json": {
+          "headers": {
+            "host": "192.168.2.5:3000",
+            "connection": "keep-alive",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+            "dnt": "1",
+            "accept": "*/*",
+            "sec-gpc": "1",
+            "origin": "null",
+            "accept-encoding": "gzip, deflate",
+            "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+            "if-none-match": "W/\"3f2a0-aQHbk+rK8ef8nodxLVfzD89mO4M\""
+          },
+          "params": {},
+          "query": {},
+          "body": {},
+          "webhookUrl": "http://192.168.2.5:3000/webhook/getlogs",
+          "executionMode": "production"
+        },
+        "pairedItem": {
+          "item": 0
+        }
+      }
+    ]
+  },
+  "versionId": "327008c5-b3ee-4e16-96b9-f848eb8b6c0e",
+  "activeVersionId": "327008c5-b3ee-4e16-96b9-f848eb8b6c0e",
+  "versionCounter": 196,
+  "triggerCount": 1,
+  "tags": [],
+  "shared": [
+    {
+      "updatedAt": "2026-01-28T09:50:30.201Z",
+      "createdAt": "2026-01-28T09:50:30.201Z",
+      "role": "workflow:owner",
+      "workflowId": "E0yl55s1YkCD2LNx",
+      "projectId": "NBttNnd6CVeZWrwI",
+      "project": {
+        "updatedAt": "2026-01-28T08:29:07.278Z",
+        "createdAt": "2026-01-28T08:04:49.772Z",
+        "id": "NBttNnd6CVeZWrwI",
+        "name": "Calvary Paphos <calvarycypruscalendar@gmail.com>",
+        "type": "personal",
+        "icon": null,
+        "description": null,
+        "creatorId": "d84e1e89-6472-46a2-881c-0780a65eac38"
+      }
+    }
+  ]
+}
