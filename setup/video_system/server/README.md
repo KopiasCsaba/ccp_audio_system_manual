@@ -3,10 +3,9 @@
 <!-- TOC -->
 * [Configuration](#configuration)
 * [Services](#services)
-* [Noteworthy files](#noteworthy-files)
-  * [.env](#env)
-  * [manage.sh](#managesh)
+* [Management scripts](#management-scripts)
   * [create_backup.sh](#create_backupsh)
+  * [manage.sh](#managesh)
 * [Postprocessing scripts](#postprocessing-scripts)
   * [sync_recordings.sh](#sync_recordingssh)
     * [Purpose](#purpose)
