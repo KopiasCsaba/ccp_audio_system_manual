@@ -36,11 +36,15 @@ minimal server-level configuration is needed, all is self-contained in here.
 * [Companion](companion)
 
 
-# Noteworthy files
-## .env
-Based on .env.example: rename this to .env and set values properly
+# Management scripts
+
+
+## create_backup.sh
+Creates a full backup of all services and their data into the backups/ folder.
+
 
 ## manage.sh
+Tool to manage all our containers.
 
 ```bash
 $ ./manage.sh 
@@ -66,9 +70,6 @@ Services:
   restreamer
 ```
 
-## create_backup.sh
-Creates a full backup of all services and their data into the backups/ folder.
- 
 
 ---
 
@@ -76,8 +77,9 @@ Creates a full backup of all services and their data into the backups/ folder.
 
 These three scripts form the post-service recording pipeline. They run inside Docker containers defined in [docker-compose.yml](server_files/docker-compose.yml) and handle everything from pulling raw footage off the ATEM to producing short clips ready for publishing.
 
+Overview:
 ```
-ATEM Mini → [sync_recordings.sh] → NAS → [video_processor.py] → [make_shorts.py] → shorts/
+ATEM → [sync_recordings.sh] → NAS → [video_processor.py] → [make_shorts.py] → shorts/
 ```
 
 ---
