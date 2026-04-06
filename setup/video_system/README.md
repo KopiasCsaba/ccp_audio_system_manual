@@ -21,7 +21,7 @@
 
 The addresses below only work from the church network, or via special remote access.
 
- * N8N [192.168.2.5:3000](192.168.2.5:3000)
+ * N8N [http://192.168.2.5:3000](http://192.168.2.5:3000)
  * Companion [http://192.168.2.5:3001](http://192.168.2.5:3001)
  * Restreamer [http://192.168.2.5:3002/ui/#/7cc9f27e-9b99-41d8-ba7c-dcb9eb84b967](http://192.168.2.5:3002/ui/#/7cc9f27e-9b99-41d8-ba7c-dcb9eb84b967)
  * Various web services: https://192.168.2.10
