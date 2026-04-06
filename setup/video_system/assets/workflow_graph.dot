@@ -1,0 +1,136 @@
+digraph workflow {
+    rankdir=TB;
+    graph [
+        fontname="Helvetica",
+        fontsize=12,
+        splines=curved,
+        nodesep=0.6,
+        ranksep=0.9,
+        bgcolor="white",
+        pad=0.5,
+        concentrate=false
+    ];
+    node [fontname="Helvetica", fontsize=11, shape=box, style="filled,rounded", margin="0.25,0.12"];
+    edge [fontname="Helvetica", fontsize=10, color="#555555", arrowsize=0.8, decorate=true];
+
+    // ── Entry Points ──────────────────────────────────────────────────────────
+    subgraph cluster_triggers {
+        label="Entry Points";
+        style=filled; fillcolor="#F0F0F0"; color="#AAAAAA";
+        fontname="Helvetica-Bold"; fontsize=13;
+
+        keyboard    [label="Macro\nKeyboard",            shape=diamond,       fillcolor="#FFE0B2", color="#E65100", penwidth=2];
+        timer_1m    [label="Timer\n(1 min)",             shape=ellipse,       fillcolor="#BBDEFB", color="#1565C0"];
+        timer_5s    [label="Timer\n(5 sec)",             shape=ellipse,       fillcolor="#BBDEFB", color="#1565C0"];
+        err_trigger [label="Error Trigger\n(any wf)",   shape=octagon,       fillcolor="#FFCDD2", color="#B71C1C", penwidth=2];
+        wh_bn       [label="POST\n/browser-notification", shape=parallelogram, fillcolor="#E1BEE7", color="#6A1B9A"];
+        wh_nc       [label="POST\n/nurserycall",         shape=parallelogram, fillcolor="#E1BEE7", color="#6A1B9A"];
+        wh_gs       [label="GET\n/get-shorts",           shape=parallelogram, fillcolor="#E1BEE7", color="#6A1B9A"];
+        wh_gl       [label="GET\n/getlogs",              shape=parallelogram, fillcolor="#E1BEE7", color="#6A1B9A"];
+    }
+
+    // ── Core Workflows ────────────────────────────────────────────────────────
+    subgraph cluster_workflows {
+        label="N8N Workflows  —  all workflows also call Read Config and route errors to Log";
+        style=filled; fillcolor="#F9FBE7"; color="#AAAAAA";
+        fontname="Helvetica-Bold"; fontsize=13;
+
+        // Utility nodes (visually distinct inside the cluster)
+        readconfig [label="Read Config",
+                    fillcolor="#FFF59D", color="#F9A825",
+                    style="filled,rounded,dashed", fontsize=10];
+        log_wf     [label="Log",
+                    fillcolor="#FFCC80", color="#E65100", penwidth=2, fontsize=10];
+        send_email [label="Send Email",
+                    fillcolor="#FFE0B2", color="#BF360C", fontsize=10];
+
+        // Main workflows
+        main         [label="Main\n(central dispatcher)", fillcolor="#43A047", color="#1B5E20", penwidth=2.5, fontcolor="white", fontsize=12];
+        auto_starter [label="Auto Starter",               fillcolor="#A5D6A7", color="#2E7D32"];
+        event_mgr    [label="Event Manager",              fillcolor="#A5D6A7", color="#2E7D32"];
+        preset_mgr   [label="Preset Manager",             fillcolor="#A5D6A7", color="#2E7D32"];
+        atem_wf      [label="ATEM",                       fillcolor="#A5D6A7", color="#2E7D32"];
+        stream_mgr   [label="Stream Manager",             fillcolor="#A5D6A7", color="#2E7D32"];
+        restreamer_wf[label="Restreamer",                 fillcolor="#A5D6A7", color="#2E7D32"];
+        video_player [label="Video Player",               fillcolor="#A5D6A7", color="#2E7D32"];
+        browser_wf   [label="Browser",                    fillcolor="#A5D6A7", color="#2E7D32"];
+        browser_notif[label="Browser Notification",       fillcolor="#A5D6A7", color="#2E7D32"];
+        nursery_call [label="Nursery Call",               fillcolor="#A5D6A7", color="#2E7D32"];
+        shorter      [label="Shorter",                    fillcolor="#A5D6A7", color="#2E7D32"];
+    }
+
+    // ── External Systems ──────────────────────────────────────────────────────
+    subgraph cluster_external {
+        label="External Systems";
+        style=filled; fillcolor="#E8EAF6"; color="#AAAAAA";
+        fontname="Helvetica-Bold"; fontsize=13;
+
+        companion      [label="Companion",      fillcolor="#5C6BC0", color="#1A237E", penwidth=2, fontcolor="white"];
+        pi_vlc         [label="PI-VLC",         fillcolor="#5C6BC0", color="#1A237E", penwidth=2, fontcolor="white"];
+        pi_browser     [label="PI-Browser",     fillcolor="#5C6BC0", color="#1A237E", penwidth=2, fontcolor="white"];
+        camera         [label="Camera\n(PTZ)",  fillcolor="#5C6BC0", color="#1A237E", penwidth=2, fontcolor="white"];
+        restreamer_svc [label="Restreamer\nSvc",fillcolor="#5C6BC0", color="#1A237E", penwidth=2, fontcolor="white"];
+        resend_api     [label="Resend API",     fillcolor="#5C6BC0", color="#1A237E", penwidth=2, fontcolor="white"];
+    }
+
+    // ── Edge colour legend ────────────────────────────────────────────────────
+    // black/grey  = workflow orchestration calls
+    // #5C6BC0     = PTZ / camera commands
+    // #1A237E     = external system API calls
+    // #B71C1C     = error / error trigger
+    // #6A1B9A     = external webhooks in
+
+    // ── Entry → Workflow ──────────────────────────────────────────────────────
+    keyboard    -> main         [label="POST /keyinput",  color="#E65100", penwidth=2.5, fontcolor="#E65100"];
+    timer_1m    -> auto_starter [                         color="#1565C0", penwidth=1.5];
+    timer_5s    -> nursery_call [                         color="#1565C0", penwidth=1.5];
+    wh_bn       -> browser_notif[                         color="#6A1B9A", penwidth=1.5];
+    wh_nc       -> nursery_call [                         color="#6A1B9A", penwidth=1.5];
+    wh_gs       -> shorter      [                         color="#6A1B9A", penwidth=1.5];
+    wh_gl       -> log_wf       [                         color="#6A1B9A", penwidth=1.5];
+    err_trigger -> log_wf       [label="catch errors",   color="#B71C1C", penwidth=2, style=dashed, fontcolor="#B71C1C"];
+
+    // ── Main → sub-workflows ──────────────────────────────────────────────────
+    main -> atem_wf      [label="ATEM commands"];
+    main -> event_mgr    [label="session events"];
+    main -> shorter      [label="mark highlight"];
+
+    // ── Auto Starter orchestration ────────────────────────────────────────────
+    auto_starter -> preset_mgr   [label="load preset"];
+    auto_starter -> video_player [label="play countdown"];
+    auto_starter -> atem_wf      [label="switch source"];
+    auto_starter -> stream_mgr   [label="enable streams"];
+    auto_starter -> event_mgr    [label="start_session"];
+
+    // ── Event Manager ─────────────────────────────────────────────────────────
+    event_mgr -> video_player [label="play video"];
+    event_mgr -> atem_wf      [label="rec control"];
+    event_mgr -> stream_mgr   [label="start / stop"];
+
+    // ── Preset Manager ────────────────────────────────────────────────────────
+    preset_mgr -> atem_wf [label="load media"];
+
+    // ── Stream pipeline ───────────────────────────────────────────────────────
+    stream_mgr -> restreamer_wf [label="per output"];
+
+    // ── Browser pipeline ──────────────────────────────────────────────────────
+    browser_notif -> browser_wf [label="navigate to\nnotification page"];
+    nursery_call  -> browser_wf [label="navigate to\nnursery page"];
+    nursery_call  -> atem_wf    [label="supersource\noverlay"];
+
+    // ── Logging chain ─────────────────────────────────────────────────────────
+    log_wf -> send_email [label="on error"];
+
+    // ── PTZ (indigo) ──────────────────────────────────────────────────────────
+    main         -> camera [label="PTZ",          color="#5C6BC0", penwidth=2, fontcolor="#5C6BC0"];
+    auto_starter -> camera [label="PTZ to pulpit",color="#5C6BC0", penwidth=2, fontcolor="#5C6BC0"];
+    preset_mgr   -> camera [label="PTZ to pulpit",color="#5C6BC0", penwidth=2, fontcolor="#5C6BC0"];
+
+    // ── Workflow → External API (dark blue) ───────────────────────────────────
+    atem_wf       -> companion      [label="custom variable API", color="#1A237E", penwidth=2, fontcolor="#1A237E"];
+    shorter       -> companion      [label="GET recording info",  color="#1A237E", penwidth=2, fontcolor="#1A237E"];
+    video_player  -> pi_vlc         [label="VLC HTTP API",        color="#1A237E", penwidth=2, fontcolor="#1A237E"];
+    browser_wf    -> pi_browser     [label="POST URL",            color="#1A237E", penwidth=2, fontcolor="#1A237E"];
+    restreamer_wf -> restreamer_svc [label="REST API",            color="#1A237E", penwidth=2, fontcolor="#1A237E"];
+    send_email    -> resend_api     [label="POST /emails",        color="#1A237E", penwidth=2, fontcolor="#1A237E"];
+}

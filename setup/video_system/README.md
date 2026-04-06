@@ -1,11 +1,15 @@
 # Schematic
 
+# Components
+* [Macro Keyboard](keyboard)
+* [Raspberry PI](rpi)
+* [ATEM](atem)
+
+* [Server configuration](server)
+
+# Connection diagram
+
 ![schematic.png](assets/schematic.png)
 
-# Components
- * [Raspberry PI](rpi)
- * [ATEM](atem)
- * [Macro Keyboard](keyboard)
-
- * [Server configuration](server)
-
+# Automation diagram
+![workflow_graph.png](assets/workflow_graph.png)
