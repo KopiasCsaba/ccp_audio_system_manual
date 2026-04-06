@@ -23,9 +23,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:zoom="1.2676634"
-     inkscape:cx="406.25926"
-     inkscape:cy="475.67832"
+     inkscape:zoom="1.7927468"
+     inkscape:cx="486.40445"
+     inkscape:cy="485.28884"
      inkscape:window-width="2560"
      inkscape:window-height="1032"
      inkscape:window-x="1920"
@@ -2697,9 +2697,9 @@
          id="tspan95">SHORT</tspan></text>
     <path
        style="fill:none;stroke:#ff0000;stroke-width:1.05833;stroke-linecap:round;stroke-miterlimit:4.1;stroke-dasharray:none;paint-order:stroke markers fill"
-       d="m 1230.9869,115.24224 c 27.2143,20.58088 -75.7693,44.6122 -45.0224,-2.42477 0.4193,-0.64157 0.6143,-1.07322 1.3941,-0.97089"
+       d="m 1230.9869,115.24224 c 0,0 5.8474,-0.33619 6.4057,1.47742 5.7868,18.79753 -79.4695,38.99591 -51.4281,-3.90219 0.4194,-0.64153 0.6143,-1.07322 1.3941,-0.97089"
        id="path2"
-       sodipodi:nodetypes="csc" />
+       sodipodi:nodetypes="cssc" />
     <g
        id="g141"
        transform="matrix(0.47972401,0,0,0.47893234,1144.183,6.2779156)"
@@ -2999,7 +2999,7 @@
        y="1.5095425" />
     <text
        xml:space="preserve"
-       transform="matrix(0.11014166,-0.00443207,0.00442446,0.10995989,1150.2091,100.26696)"
+       transform="matrix(0.11014166,-0.00443207,0.00442446,0.10995989,1157.1456,99.824204)"
        id="text211"
        style="font-weight:500;font-stretch:condensed;font-size:17.3333px;line-height:1;font-family:Roboto;-inkscape-font-specification:'Roboto Medium Condensed';text-align:start;letter-spacing:0.64px;white-space:pre;shape-inside:url(#rect212);display:inline;fill:#000000;stroke:none;stroke-width:35.3007;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5;paint-order:stroke markers fill"
        x="-58.497341"
