@@ -9,8 +9,14 @@
 
 
 # Configuration
- * Most keys send ALT+SUPER(windows key)+<some character>, except FN that adds CTRL.
+ * Most keys send ALT+SUPER(windows key)+`<some character>`, except FN that adds CTRL.
+   * e.g.: ALT+META+f _recall custom angle_ CTRL+ALT+META+f (same button with FN) is _save custom angle_
  * These keyboards configurable at https://sayodevice.com (or https://github.com/Sayobot/SayoDevice_manual)
+
+# Labels
+  * [keycaplabels_6x4.svg](keycaplabels_6x4.svg)
+  * [keycaplabels_6x4.png](keycaplabels_6x4.png)
+  * [keycaplabels_6x4.pdf](keycaplabels_6x4.pdf)
 
 # Hotkey config list
 | Hotkey | Function | What Happens |                                                                                                                                                                                                                                                      
@@ -25,7 +31,6 @@
 | ALT+META+u | CAM MOVE LEFTDOWN | PTZ camera moves diagonally down-left (`ptzcmd&leftdown`). Releasing stops. |
 | ALT+META+9 | CAM ZOOM IN | PTZ camera zooms in continuously (`ptzcmd&zoomin`). Releasing stops zoom. |
 | ALT+META+a | CAM ZOOM OUT | PTZ camera zooms out continuously (`ptzcmd&zoomout`). Releasing stops zoom. |
-| ALT+META+b | CAM PRESET SAVE CUSTOM | Saves current camera position to PTZ preset slot 5 (`ptzcmd&posset&5`). |
 | ALT+META+g | CAM RECALL PRESET PROJECTOR | Recalls PTZ camera preset slot 4 — projector view (`ptzcmd&poscall&4`). |
 | ALT+META+c | CAM RECALL PRESET PULPIT WIDE | Recalls PTZ camera preset slot 2 — wide pulpit view (`ptzcmd&poscall&2`). |
 | ALT+META+s | CAM RECALL PRESET STAGE | Recalls PTZ camera preset slot 1 — stage view (`ptzcmd&poscall&1`). |
