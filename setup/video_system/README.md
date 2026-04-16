@@ -9,8 +9,9 @@
 
 # Connection diagram
 
-![schematic.png](assets/schematic.png)
+[Alternate Schematic during replacement](assets/alternate_schematic.png)
 
+![schematic.png](assets/schematic.png)
 # Automation diagram
 (Learn more in [n8n](server/n8n).)
 ![workflow_graph.png](assets/workflow_graph.png)

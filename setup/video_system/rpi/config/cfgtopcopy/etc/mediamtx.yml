@@ -815,7 +815,7 @@ paths:
       -i /dev/v4l/by-id/usb-Blackmagic_Design_ATEM_SDI_Extreme_ISO_476928c2ff364f0fa9958b4c4e272199-video-index0
       -thread_queue_size 512
       -f alsa
-      -i hw:0,0
+      -i hw:CARD=ISO,DEV=0
       -c:v libx264
       -x264-params ref=1:bframes=0:me=dia:subme=0:trellis=0
       -threads 2
