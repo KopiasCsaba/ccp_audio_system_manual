@@ -1,5 +1,3 @@
-# Schematic
-
 # Components
 * [Macro Keyboard](keyboard)
 * [Raspberry PI](rpi)
