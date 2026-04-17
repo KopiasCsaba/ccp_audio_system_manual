@@ -1,0 +1,602 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Profile majorVersion="2" minorVersion="1" product="ATEM SDI Extreme SDI">
+    <MixEffectBlocks>
+        <MixEffectBlock index="0">
+            <Program input="3010"/>
+            <Preview input="1"/>
+            <NextTransition selection="Background" nextSelection="Background"/>
+            <TransitionStyle style="Mix" nextStyle="Mix" previewTransition="False" transitionPosition="0">
+                <MixParameters rate="8"/>
+                <DipParameters rate="25" input="2001"/>
+                <WipeParameters rate="25" pattern="TopLeftDiagonal" symmetry="50" xPosition="0.5" yPosition="0.5" reverseDirection="False" flipFlip="False" borderInput="2001" borderWidth="0" borderSoftness="83"/>
+                <DVEParameters rate="25" logoRate="25" reverseDirection="False" flipFlop="False" effect="PushRight" fillSource="3010" keySource="3011" enableKey="True" preMultipliedKey="True" clip="50" gain="70" invertKey="False"/>
+            </TransitionStyle>
+            <Keys>
+                <Key index="0" type="DVE" inputFill="1" inputCut="1" onAir="False" masked="False" maskTop="9" maskBottom="-9" maskLeft="-16" maskRight="16">
+                    <LumaParameters preMultiplied="True" clip="50" gain="70" inverse="False"/>
+                    <AdvancedChromaParameters foregroundLevel="0" backgroundLevel="0" keyEdge="50" spillSuppress="0" flareSuppress="0" brightness="0" contrast="0" saturation="100" red="0" green="0" blue="0" cursorXPosition="-15.35" cursorYPosition="8.35" cursorSize="6.2" sampledY="0.6748" sampledCb="0.163" sampledCr="0.1025"/>
+                    <PatternParameters style="DiamondIris" inverse="False" size="50" symmetry="50" softness="83" xPosition="0.5" yPosition="0.5"/>
+                    <DVEParameters maskEnabled="True" maskTop="0.4" maskBottom="4.5" maskLeft="10" maskRight="7.7" shadowEnabled="False" lightSourceDirection="36" lightSourceAltitude="25" borderEnabled="True" borderStyle="None" borderBevelHue="0" borderBevelSaturation="0" borderBevelLuma="0" borderWidthOut="0" borderWidthIn="0.2" borderSoftnessOut="0" borderSoftnessIn="0" borderBevelOpacity="100" borderBevelPosition="0" borderBevelSoftness="0"/>
+                    <FlyParameters enabled="False" xPosition="11.9" yPosition="-6.7" xSize="0.47" ySize="0.47" rotation="0" rate="25"/>
+                </Key>
+                <Key index="1" type="Chroma" inputFill="2" inputCut="3011" onAir="False" masked="False" maskTop="9" maskBottom="-9" maskLeft="-16" maskRight="16">
+                    <LumaParameters preMultiplied="False" clip="44.3" gain="0" inverse="False"/>
+                    <AdvancedChromaParameters foregroundLevel="0" backgroundLevel="100" keyEdge="5.7" spillSuppress="0" flareSuppress="0" brightness="0" contrast="0" saturation="100" red="0" green="0" blue="0" cursorXPosition="-5.6" cursorYPosition="6.8" cursorSize="6.2" sampledY="0.0706" sampledCb="0.5585" sampledCr="0.4952"/>
+                    <PatternParameters style="DiamondIris" inverse="False" size="50" symmetry="50" softness="83" xPosition="0.5" yPosition="0.5"/>
+                    <DVEParameters maskEnabled="True" maskTop="0" maskBottom="0" maskLeft="0" maskRight="0" shadowEnabled="False" lightSourceDirection="36" lightSourceAltitude="25" borderEnabled="True" borderStyle="None" borderBevelHue="0" borderBevelSaturation="0" borderBevelLuma="0" borderWidthOut="0" borderWidthIn="0.2" borderSoftnessOut="0" borderSoftnessIn="0" borderBevelOpacity="100" borderBevelPosition="0" borderBevelSoftness="0"/>
+                    <FlyParameters enabled="False" xPosition="0" yPosition="0" xSize="0.5" ySize="0.5" rotation="0" rate="25"/>
+                </Key>
+                <Key index="2" type="Chroma" inputFill="3" inputCut="3011" onAir="False" masked="False" maskTop="9" maskBottom="-9" maskLeft="-16" maskRight="16">
+                    <LumaParameters preMultiplied="True" clip="50" gain="70" inverse="False"/>
+                    <AdvancedChromaParameters foregroundLevel="0" backgroundLevel="100" keyEdge="5.7" spillSuppress="0" flareSuppress="0" brightness="0" contrast="0" saturation="100" red="0" green="0" blue="0" cursorXPosition="-5.6" cursorYPosition="6.8" cursorSize="6.2" sampledY="0.0706" sampledCb="0.5585" sampledCr="0.4952"/>
+                    <PatternParameters style="DiamondIris" inverse="False" size="50" symmetry="50" softness="83" xPosition="0.5" yPosition="0.5"/>
+                    <DVEParameters maskEnabled="False" maskTop="0" maskBottom="0" maskLeft="0" maskRight="0" shadowEnabled="False" lightSourceDirection="36" lightSourceAltitude="25" borderEnabled="True" borderStyle="None" borderBevelHue="0" borderBevelSaturation="0" borderBevelLuma="0" borderWidthOut="0" borderWidthIn="0.2" borderSoftnessOut="0" borderSoftnessIn="0" borderBevelOpacity="100" borderBevelPosition="0" borderBevelSoftness="0"/>
+                    <FlyParameters enabled="False" xPosition="12.5" yPosition="7" xSize="0.2" ySize="0.2" rotation="0" rate="25"/>
+                </Key>
+                <Key index="3" type="Chroma" inputFill="6" inputCut="3011" onAir="False" masked="False" maskTop="9" maskBottom="-9" maskLeft="-16" maskRight="16">
+                    <LumaParameters preMultiplied="True" clip="50" gain="70" inverse="False"/>
+                    <AdvancedChromaParameters foregroundLevel="0" backgroundLevel="100" keyEdge="5.7" spillSuppress="0" flareSuppress="0" brightness="0" contrast="0" saturation="100" red="0" green="0" blue="0" cursorXPosition="-5.6" cursorYPosition="6.8" cursorSize="6.2" sampledY="0.0706" sampledCb="0.5585" sampledCr="0.4952"/>
+                    <PatternParameters style="DiamondIris" inverse="False" size="50" symmetry="50" softness="83" xPosition="0.5" yPosition="0.5"/>
+                    <DVEParameters maskEnabled="False" maskTop="0" maskBottom="0" maskLeft="0" maskRight="0" shadowEnabled="False" lightSourceDirection="36" lightSourceAltitude="25" borderEnabled="True" borderStyle="None" borderBevelHue="0" borderBevelSaturation="0" borderBevelLuma="0" borderWidthOut="0" borderWidthIn="0.2" borderSoftnessOut="0" borderSoftnessIn="0" borderBevelOpacity="100" borderBevelPosition="0" borderBevelSoftness="0"/>
+                    <FlyParameters enabled="False" xPosition="12.5" yPosition="7" xSize="0.2" ySize="0.2" rotation="0" rate="25"/>
+                </Key>
+            </Keys>
+            <FadeToBlack rate="5" isFullyBlack="False"/>
+        </MixEffectBlock>
+    </MixEffectBlocks>
+    <DownstreamKeys>
+        <DownstreamKey index="0" fillSource="3010" keySource="3011" rate="25" maskEnabled="False" maskTop="9" maskBottom="-9" maskLeft="-16" maskRight="16" preMultipliedKey="True" clip="50" gain="70" invert="False" onAir="False" tie="False"/>
+        <DownstreamKey index="1" fillSource="3010" keySource="3011" rate="25" maskEnabled="False" maskTop="9" maskBottom="-9" maskLeft="-16" maskRight="16" preMultipliedKey="True" clip="50" gain="70" invert="False" onAir="False" tie="False"/>
+    </DownstreamKeys>
+    <ColorGenerators>
+        <ColorGenerator index="0" hue="0" saturation="0" luma="100"/>
+        <ColorGenerator index="1" hue="27" saturation="100" luma="50"/>
+    </ColorGenerators>
+    <Auxiliaries>
+        <Auxiliary id="8001" input="9001"/>
+        <Auxiliary id="8002" input="3010"/>
+        <Auxiliary id="8003" input="10010"/>
+        <Auxiliary id="8004" input="0"/>
+        <Auxiliary id="8200" input="9001"/>
+    </Auxiliaries>
+    <VideoMode videoMode="1080p50"/>
+    <Settings abDirect="False" cameraAux="-1" SDI3GOutputLevel="LevelB" ftbEnabled="True" dskTallyOverride="False">
+        <MultiViewVideoModes>
+            <MultiViewVideoMode coreVideoMode="1080p2398" multiViewVideoMode="1080p2398"/>
+            <MultiViewVideoMode coreVideoMode="1080p24" multiViewVideoMode="1080p24"/>
+            <MultiViewVideoMode coreVideoMode="1080p25" multiViewVideoMode="1080p25"/>
+            <MultiViewVideoMode coreVideoMode="1080p2997" multiViewVideoMode="1080p2997"/>
+            <MultiViewVideoMode coreVideoMode="1080p30" multiViewVideoMode="1080p30"/>
+            <MultiViewVideoMode coreVideoMode="1080p50" multiViewVideoMode="1080p50"/>
+            <MultiViewVideoMode coreVideoMode="1080p5994" multiViewVideoMode="1080p5994"/>
+            <MultiViewVideoMode coreVideoMode="1080p60" multiViewVideoMode="1080p60"/>
+        </MultiViewVideoModes>
+        <Inputs>
+            <Input id="1" shortName="CAM" longName="Camera" externalPortType="SDI"/>
+            <Input id="2" shortName="PROJ" longName="Proj PC" externalPortType="SDI"/>
+            <Input id="3" shortName="PULP" longName="Pulpit PC" externalPortType="SDI"/>
+            <Input id="4" shortName="PVID" longName="PI Video" externalPortType="SDI"/>
+            <Input id="5" shortName="PBRO" longName="PI Browser" externalPortType="SDI"/>
+            <Input id="6" shortName="AVPC" longName="AV PC" externalPortType="SDI"/>
+            <Input id="7" shortName="PLOO" longName="Program Loopback" externalPortType="SDI"/>
+            <Input id="8" shortName="I8" longName="I8" externalPortType="SDI"/>
+        </Inputs>
+        <Outputs>
+            <Output id="0" shortName="BLK" longName="Black"/>
+            <Output id="1000" shortName="BARS" longName="Color Bars"/>
+            <Output id="2001" shortName="COL1" longName="Color 1"/>
+            <Output id="2002" shortName="COL2" longName="Color 2"/>
+            <Output id="6000" shortName="SSRC" longName="SuperSource"/>
+            <Output id="7001" shortName="CFD" longName="Clean Feed"/>
+            <Output id="8001" shortName="MVV" longName="MULTIVIEW"/>
+            <Output id="8002" shortName="PROJ" longName="PROJECTOR"/>
+            <Output id="8003" shortName="PROG" longName="PROGRAM (SSRLOOP)"/>
+            <Output id="8004" shortName="PRAW" longName="PROGRAM RAW"/>
+            <Output id="8200" shortName="WCAM" longName="Webcam Out"/>
+            <Output id="9001" shortName="MVW" longName="Multiview"/>
+            <Output id="10010" shortName="PGM" longName="Program"/>
+            <Output id="10011" shortName="PVW" longName="Preview"/>
+        </Outputs>
+        <Medias>
+            <Media id="3010" shortName="MP1" longName="Media Player 1"/>
+            <Media id="3011" shortName="MP1K" longName="Media Player 1 Key"/>
+            <Media id="3020" shortName="MP2" longName="Media Player 2"/>
+            <Media id="3021" shortName="MP2K" longName="Media Player 2 Key"/>
+        </Medias>
+        <MultiViews>
+            <MultiView index="0" LayoutID="12" vuMeterOpacity="1" borderColour="0.337,0.337,0.337,1">
+                <Windows>
+                    <Window index="0" input="1" vuMeterEnabled="False" safeAreaEnabled="False" safeAreaType="" labelEnabled="True" borderEnabled="False"/>
+                    <Window index="1" input="2" vuMeterEnabled="True" safeAreaEnabled="True" safeAreaType="Aspect16x9" labelEnabled="True" borderEnabled="False"/>
+                    <Window index="2" input="10010" vuMeterEnabled="True" safeAreaEnabled="False" safeAreaType="" labelEnabled="True" borderEnabled="False"/>
+                    <Window index="3" input="10010" vuMeterEnabled="False" safeAreaEnabled="False" safeAreaType="Aspect16x9" labelEnabled="True" borderEnabled="False"/>
+                    <Window index="4" input="3" vuMeterEnabled="True" safeAreaEnabled="True" safeAreaType="Aspect16x9" labelEnabled="True" borderEnabled="False"/>
+                    <Window index="5" input="4" vuMeterEnabled="True" safeAreaEnabled="True" safeAreaType="Aspect16x9" labelEnabled="True" borderEnabled="False"/>
+                    <Window index="6" input="6000" vuMeterEnabled="False" safeAreaEnabled="False" safeAreaType="Aspect16x9" labelEnabled="True" borderEnabled="False"/>
+                    <Window index="7" input="7001" vuMeterEnabled="False" safeAreaEnabled="False" safeAreaType="Aspect16x9" labelEnabled="True" borderEnabled="False"/>
+                    <Window index="8" input="4" vuMeterEnabled="True" safeAreaEnabled="False" safeAreaType="" labelEnabled="True" borderEnabled="False"/>
+                    <Window index="9" input="6" vuMeterEnabled="True" safeAreaEnabled="False" safeAreaType="" labelEnabled="True" borderEnabled="False"/>
+                    <Window index="10" input="2" vuMeterEnabled="True" safeAreaEnabled="False" safeAreaType="" labelEnabled="True" borderEnabled="False"/>
+                    <Window index="11" input="3" vuMeterEnabled="True" safeAreaEnabled="False" safeAreaType="" labelEnabled="True" borderEnabled="False"/>
+                    <Window index="12" input="5" vuMeterEnabled="True" safeAreaEnabled="False" safeAreaType="" labelEnabled="True" borderEnabled="False"/>
+                    <Window index="13" input="9103" vuMeterEnabled="True" safeAreaEnabled="False" safeAreaType="" labelEnabled="True" borderEnabled="False"/>
+                    <Window index="14" input="9101" vuMeterEnabled="True" safeAreaEnabled="False" safeAreaType="" labelEnabled="True" borderEnabled="False"/>
+                    <Window index="15" input="9102" vuMeterEnabled="False" safeAreaEnabled="False" safeAreaType="" labelEnabled="True" borderEnabled="False"/>
+                </Windows>
+            </MultiView>
+        </MultiViews>
+        <ButtonMapping>
+            <Button index="0" externalInputIndex="0" mappedToCamera="True" mappedCameraModelName="Blackmagic Generic"/>
+            <Button index="1" externalInputIndex="1" mappedToCamera="True" mappedCameraModelName="Blackmagic Generic"/>
+            <Button index="2" externalInputIndex="2" mappedToCamera="True" mappedCameraModelName="Blackmagic Generic"/>
+            <Button index="3" externalInputIndex="3" mappedToCamera="True" mappedCameraModelName="Blackmagic Generic"/>
+            <Button index="4" externalInputIndex="4" mappedToCamera="True" mappedCameraModelName="Blackmagic Generic"/>
+            <Button index="5" externalInputIndex="5" mappedToCamera="True" mappedCameraModelName="Blackmagic Generic"/>
+            <Button index="6" externalInputIndex="6" mappedToCamera="True" mappedCameraModelName="Blackmagic Generic"/>
+            <Button index="7" externalInputIndex="7" mappedToCamera="True" mappedCameraModelName="Blackmagic Generic"/>
+            <Button index="8" externalInputIndex="8" mappedToCamera="True" mappedCameraModelName="Blackmagic Generic"/>
+            <Button index="9" externalInputIndex="9" mappedToCamera="True" mappedCameraModelName="Blackmagic Generic"/>
+        </ButtonMapping>
+        <UpstreamKeys sizeLink="True"/>
+    </Settings>
+    <HyperDecks>
+        <HyperDeck id="0" networkAddress="0.0.0.0" input="0" autoRoll="False" autoRollFrameDelay="0"/>
+        <HyperDeck id="1" networkAddress="0.0.0.0" input="0" autoRoll="False" autoRollFrameDelay="0"/>
+        <HyperDeck id="2" networkAddress="0.0.0.0" input="0" autoRoll="False" autoRollFrameDelay="0"/>
+        <HyperDeck id="3" networkAddress="0.0.0.0" input="0" autoRoll="False" autoRollFrameDelay="0"/>
+        <HyperDeck id="4" networkAddress="0.0.0.0" input="0" autoRoll="False" autoRollFrameDelay="0"/>
+        <HyperDeck id="5" networkAddress="0.0.0.0" input="0" autoRoll="False" autoRollFrameDelay="0"/>
+        <HyperDeck id="6" networkAddress="0.0.0.0" input="0" autoRoll="False" autoRollFrameDelay="0"/>
+        <HyperDeck id="7" networkAddress="0.0.0.0" input="0" autoRoll="False" autoRollFrameDelay="0"/>
+        <HyperDeck id="8" networkAddress="0.0.0.0" input="0" autoRoll="False" autoRollFrameDelay="0"/>
+        <HyperDeck id="9" networkAddress="0.0.0.0" input="0" autoRoll="False" autoRollFrameDelay="0"/>
+    </HyperDecks>
+    <FairlightAudioMixer masterOutFaderGain="0" followFadeToBlack="False" audioFollowVideoCrossfadeTransition="False">
+        <MasterOutEqualizer enabled="True" gain="0">
+            <EqualizerBand index="0" enabled="False" shape="HighPass" frequencyRange="Low" frequency="46" gain="0" qFactor="0.71"/>
+            <EqualizerBand index="1" enabled="True" shape="LowShelf" frequencyRange="Low" frequency="49" gain="0" qFactor="1"/>
+            <EqualizerBand index="2" enabled="True" shape="BandPass" frequencyRange="MidLow" frequency="171" gain="0" qFactor="2"/>
+            <EqualizerBand index="3" enabled="True" shape="BandPass" frequencyRange="MidHigh" frequency="798" gain="0" qFactor="2"/>
+            <EqualizerBand index="4" enabled="True" shape="HighShelf" frequencyRange="High" frequency="7260" gain="0" qFactor="1"/>
+            <EqualizerBand index="5" enabled="False" shape="LowPass" frequencyRange="High" frequency="12900" gain="0" qFactor="0.71"/>
+        </MasterOutEqualizer>
+        <MasterOutDynamicsProcessor makeupGain="0">
+            <Compressor enabled="False" threshold="-35" ratio="2" attack="1.4" hold="0" release="93"/>
+            <Limiter enabled="False" threshold="-12" attack="0.71" hold="0" release="93"/>
+        </MasterOutDynamicsProcessor>
+        <AudioInputs>
+            <AudioInput configuration="Stereo" id="1">
+                <AudioSource id="-65280" inputGain="0" pan="0" faderGain="0" mixOption="Off">
+                    <Equalizer enabled="True" gain="0">
+                        <EqualizerBand index="0" enabled="False" shape="HighPass" frequencyRange="Low" frequency="46" gain="0" qFactor="0.71"/>
+                        <EqualizerBand index="1" enabled="True" shape="LowShelf" frequencyRange="Low" frequency="49" gain="0" qFactor="1"/>
+                        <EqualizerBand index="2" enabled="True" shape="BandPass" frequencyRange="MidLow" frequency="171" gain="0" qFactor="2"/>
+                        <EqualizerBand index="3" enabled="True" shape="BandPass" frequencyRange="MidHigh" frequency="798" gain="0" qFactor="2"/>
+                        <EqualizerBand index="4" enabled="True" shape="HighShelf" frequencyRange="High" frequency="7260" gain="0" qFactor="1"/>
+                        <EqualizerBand index="5" enabled="False" shape="LowPass" frequencyRange="High" frequency="12900" gain="0" qFactor="0.71"/>
+                    </Equalizer>
+                    <DynamicsProcessor makeupGain="0">
+                        <Expander enabled="False" gateMode="False" threshold="-45" range="18" ratio="1.1" attack="1.4" hold="0" release="93"/>
+                        <Compressor enabled="False" threshold="-35" ratio="2" attack="1.4" hold="0" release="93"/>
+                        <Limiter enabled="False" threshold="-12" attack="0.71" hold="0" release="93"/>
+                    </DynamicsProcessor>
+                </AudioSource>
+            </AudioInput>
+            <AudioInput configuration="Stereo" id="2">
+                <AudioSource id="-65280" inputGain="0" pan="0" faderGain="0" mixOption="Off">
+                    <Equalizer enabled="True" gain="0">
+                        <EqualizerBand index="0" enabled="False" shape="HighPass" frequencyRange="Low" frequency="46" gain="0" qFactor="0.71"/>
+                        <EqualizerBand index="1" enabled="True" shape="LowShelf" frequencyRange="Low" frequency="49" gain="0" qFactor="1"/>
+                        <EqualizerBand index="2" enabled="True" shape="BandPass" frequencyRange="MidLow" frequency="171" gain="0" qFactor="2"/>
+                        <EqualizerBand index="3" enabled="True" shape="BandPass" frequencyRange="MidHigh" frequency="798" gain="0" qFactor="2"/>
+                        <EqualizerBand index="4" enabled="True" shape="HighShelf" frequencyRange="High" frequency="7260" gain="0" qFactor="1"/>
+                        <EqualizerBand index="5" enabled="False" shape="LowPass" frequencyRange="High" frequency="12900" gain="0" qFactor="0.71"/>
+                    </Equalizer>
+                    <DynamicsProcessor makeupGain="0">
+                        <Expander enabled="False" gateMode="False" threshold="-45" range="18" ratio="1.1" attack="1.4" hold="0" release="93"/>
+                        <Compressor enabled="False" threshold="-35" ratio="2" attack="1.4" hold="0" release="93"/>
+                        <Limiter enabled="False" threshold="-12" attack="0.71" hold="0" release="93"/>
+                    </DynamicsProcessor>
+                </AudioSource>
+            </AudioInput>
+            <AudioInput configuration="Stereo" id="3">
+                <AudioSource id="-65280" inputGain="0" pan="0" faderGain="0" mixOption="Off">
+                    <Equalizer enabled="True" gain="0">
+                        <EqualizerBand index="0" enabled="False" shape="HighPass" frequencyRange="Low" frequency="46" gain="0" qFactor="0.71"/>
+                        <EqualizerBand index="1" enabled="True" shape="LowShelf" frequencyRange="Low" frequency="49" gain="0" qFactor="1"/>
+                        <EqualizerBand index="2" enabled="True" shape="BandPass" frequencyRange="MidLow" frequency="171" gain="0" qFactor="2"/>
+                        <EqualizerBand index="3" enabled="True" shape="BandPass" frequencyRange="MidHigh" frequency="798" gain="0" qFactor="2"/>
+                        <EqualizerBand index="4" enabled="True" shape="HighShelf" frequencyRange="High" frequency="7260" gain="0" qFactor="1"/>
+                        <EqualizerBand index="5" enabled="False" shape="LowPass" frequencyRange="High" frequency="12900" gain="0" qFactor="0.71"/>
+                    </Equalizer>
+                    <DynamicsProcessor makeupGain="0">
+                        <Expander enabled="False" gateMode="False" threshold="-45" range="18" ratio="1.1" attack="1.4" hold="0" release="93"/>
+                        <Compressor enabled="False" threshold="-35" ratio="2" attack="1.4" hold="0" release="93"/>
+                        <Limiter enabled="False" threshold="-12" attack="0.71" hold="0" release="93"/>
+                    </DynamicsProcessor>
+                </AudioSource>
+            </AudioInput>
+            <AudioInput configuration="Stereo" id="4">
+                <AudioSource id="-65280" inputGain="0" pan="0" faderGain="-15.4" mixOption="AudioFollowVideo">
+                    <Equalizer enabled="True" gain="0">
+                        <EqualizerBand index="0" enabled="False" shape="HighPass" frequencyRange="Low" frequency="46" gain="0" qFactor="0.71"/>
+                        <EqualizerBand index="1" enabled="True" shape="LowShelf" frequencyRange="Low" frequency="49" gain="0" qFactor="1"/>
+                        <EqualizerBand index="2" enabled="True" shape="BandPass" frequencyRange="MidLow" frequency="171" gain="0" qFactor="2"/>
+                        <EqualizerBand index="3" enabled="True" shape="BandPass" frequencyRange="MidHigh" frequency="798" gain="0" qFactor="2"/>
+                        <EqualizerBand index="4" enabled="True" shape="HighShelf" frequencyRange="High" frequency="7260" gain="0" qFactor="1"/>
+                        <EqualizerBand index="5" enabled="False" shape="LowPass" frequencyRange="High" frequency="12900" gain="0" qFactor="0.71"/>
+                    </Equalizer>
+                    <DynamicsProcessor makeupGain="0">
+                        <Expander enabled="False" gateMode="False" threshold="-45" range="18" ratio="1.1" attack="1.4" hold="0" release="93"/>
+                        <Compressor enabled="False" threshold="-35" ratio="2" attack="1.4" hold="0" release="93"/>
+                        <Limiter enabled="False" threshold="-12" attack="0.71" hold="0" release="93"/>
+                    </DynamicsProcessor>
+                </AudioSource>
+            </AudioInput>
+            <AudioInput configuration="Stereo" id="5">
+                <AudioSource id="-65280" inputGain="0" pan="0" faderGain="-15.4" mixOption="AudioFollowVideo">
+                    <Equalizer enabled="True" gain="0">
+                        <EqualizerBand index="0" enabled="False" shape="HighPass" frequencyRange="Low" frequency="46" gain="0" qFactor="0.71"/>
+                        <EqualizerBand index="1" enabled="True" shape="LowShelf" frequencyRange="Low" frequency="49" gain="0" qFactor="1"/>
+                        <EqualizerBand index="2" enabled="True" shape="BandPass" frequencyRange="MidLow" frequency="171" gain="0" qFactor="2"/>
+                        <EqualizerBand index="3" enabled="True" shape="BandPass" frequencyRange="MidHigh" frequency="798" gain="0" qFactor="2"/>
+                        <EqualizerBand index="4" enabled="True" shape="HighShelf" frequencyRange="High" frequency="7260" gain="0" qFactor="1"/>
+                        <EqualizerBand index="5" enabled="False" shape="LowPass" frequencyRange="High" frequency="12900" gain="0" qFactor="0.71"/>
+                    </Equalizer>
+                    <DynamicsProcessor makeupGain="0">
+                        <Expander enabled="False" gateMode="False" threshold="-45" range="18" ratio="1.1" attack="1.4" hold="0" release="93"/>
+                        <Compressor enabled="False" threshold="-35" ratio="2" attack="1.4" hold="0" release="93"/>
+                        <Limiter enabled="False" threshold="-12" attack="0.71" hold="0" release="93"/>
+                    </DynamicsProcessor>
+                </AudioSource>
+            </AudioInput>
+            <AudioInput configuration="Stereo" id="6">
+                <AudioSource id="-65280" inputGain="0" pan="0" faderGain="0" mixOption="Off">
+                    <Equalizer enabled="True" gain="0">
+                        <EqualizerBand index="0" enabled="False" shape="HighPass" frequencyRange="Low" frequency="46" gain="0" qFactor="0.71"/>
+                        <EqualizerBand index="1" enabled="True" shape="LowShelf" frequencyRange="Low" frequency="49" gain="0" qFactor="1"/>
+                        <EqualizerBand index="2" enabled="True" shape="BandPass" frequencyRange="MidLow" frequency="171" gain="0" qFactor="2"/>
+                        <EqualizerBand index="3" enabled="True" shape="BandPass" frequencyRange="MidHigh" frequency="798" gain="0" qFactor="2"/>
+                        <EqualizerBand index="4" enabled="True" shape="HighShelf" frequencyRange="High" frequency="7260" gain="0" qFactor="1"/>
+                        <EqualizerBand index="5" enabled="False" shape="LowPass" frequencyRange="High" frequency="12900" gain="0" qFactor="0.71"/>
+                    </Equalizer>
+                    <DynamicsProcessor makeupGain="0">
+                        <Expander enabled="False" gateMode="False" threshold="-45" range="18" ratio="1.1" attack="1.4" hold="0" release="93"/>
+                        <Compressor enabled="False" threshold="-35" ratio="2" attack="1.4" hold="0" release="93"/>
+                        <Limiter enabled="False" threshold="-12" attack="0.71" hold="0" release="93"/>
+                    </DynamicsProcessor>
+                </AudioSource>
+            </AudioInput>
+            <AudioInput configuration="Stereo" id="7">
+                <AudioSource id="-65280" inputGain="0" pan="0" faderGain="0" mixOption="Off">
+                    <Equalizer enabled="True" gain="0">
+                        <EqualizerBand index="0" enabled="False" shape="HighPass" frequencyRange="Low" frequency="46" gain="0" qFactor="0.71"/>
+                        <EqualizerBand index="1" enabled="True" shape="LowShelf" frequencyRange="Low" frequency="49" gain="0" qFactor="1"/>
+                        <EqualizerBand index="2" enabled="True" shape="BandPass" frequencyRange="MidLow" frequency="171" gain="0" qFactor="2"/>
+                        <EqualizerBand index="3" enabled="True" shape="BandPass" frequencyRange="MidHigh" frequency="798" gain="0" qFactor="2"/>
+                        <EqualizerBand index="4" enabled="True" shape="HighShelf" frequencyRange="High" frequency="7260" gain="0" qFactor="1"/>
+                        <EqualizerBand index="5" enabled="False" shape="LowPass" frequencyRange="High" frequency="12900" gain="0" qFactor="0.71"/>
+                    </Equalizer>
+                    <DynamicsProcessor makeupGain="0">
+                        <Expander enabled="False" gateMode="False" threshold="-45" range="18" ratio="1.1" attack="1.4" hold="0" release="93"/>
+                        <Compressor enabled="False" threshold="-35" ratio="2" attack="1.4" hold="0" release="93"/>
+                        <Limiter enabled="False" threshold="-12" attack="0.71" hold="0" release="93"/>
+                    </DynamicsProcessor>
+                </AudioSource>
+            </AudioInput>
+            <AudioInput configuration="Stereo" id="8">
+                <AudioSource id="-65280" inputGain="0" pan="0" faderGain="0" mixOption="Off">
+                    <Equalizer enabled="True" gain="0">
+                        <EqualizerBand index="0" enabled="False" shape="HighPass" frequencyRange="Low" frequency="46" gain="0" qFactor="0.71"/>
+                        <EqualizerBand index="1" enabled="True" shape="LowShelf" frequencyRange="Low" frequency="49" gain="0" qFactor="1"/>
+                        <EqualizerBand index="2" enabled="True" shape="BandPass" frequencyRange="MidLow" frequency="171" gain="0" qFactor="2"/>
+                        <EqualizerBand index="3" enabled="True" shape="BandPass" frequencyRange="MidHigh" frequency="798" gain="0" qFactor="2"/>
+                        <EqualizerBand index="4" enabled="True" shape="HighShelf" frequencyRange="High" frequency="7260" gain="0" qFactor="1"/>
+                        <EqualizerBand index="5" enabled="False" shape="LowPass" frequencyRange="High" frequency="12900" gain="0" qFactor="0.71"/>
+                    </Equalizer>
+                    <DynamicsProcessor makeupGain="0">
+                        <Expander enabled="False" gateMode="False" threshold="-45" range="18" ratio="1.1" attack="1.4" hold="0" release="93"/>
+                        <Compressor enabled="False" threshold="-35" ratio="2" attack="1.4" hold="0" release="93"/>
+                        <Limiter enabled="False" threshold="-12" attack="0.71" hold="0" release="93"/>
+                    </DynamicsProcessor>
+                </AudioSource>
+            </AudioInput>
+            <AudioInput configuration="Stereo" id="1301">
+                <Analog level="ConsumerLine"/>
+                <AudioSource id="-65280" inputGain="6" pan="0" faderGain="-2.4" mixOption="On" delayFrames="7">
+                    <Equalizer enabled="True" gain="0">
+                        <EqualizerBand index="0" enabled="False" shape="HighPass" frequencyRange="Low" frequency="46" gain="0" qFactor="0.71"/>
+                        <EqualizerBand index="1" enabled="True" shape="LowShelf" frequencyRange="Low" frequency="49" gain="0" qFactor="1"/>
+                        <EqualizerBand index="2" enabled="True" shape="BandPass" frequencyRange="MidLow" frequency="171" gain="0" qFactor="2"/>
+                        <EqualizerBand index="3" enabled="True" shape="BandPass" frequencyRange="MidHigh" frequency="798" gain="0" qFactor="2"/>
+                        <EqualizerBand index="4" enabled="True" shape="HighShelf" frequencyRange="High" frequency="7260" gain="0" qFactor="1"/>
+                        <EqualizerBand index="5" enabled="False" shape="LowPass" frequencyRange="High" frequency="12900" gain="0" qFactor="0.71"/>
+                    </Equalizer>
+                    <DynamicsProcessor makeupGain="0">
+                        <Expander enabled="False" gateMode="False" threshold="-45" range="18" ratio="1.1" attack="1.4" hold="0" release="93"/>
+                        <Compressor enabled="False" threshold="-35" ratio="2" attack="1.4" hold="0" release="93"/>
+                        <Limiter enabled="False" threshold="-12" attack="0.71" hold="0" release="93"/>
+                    </DynamicsProcessor>
+                </AudioSource>
+            </AudioInput>
+            <AudioInput configuration="Stereo" id="1302">
+                <Analog level="Microphone"/>
+                <AudioSource id="-65280" inputGain="0" pan="0" faderGain="0" mixOption="Off" delayFrames="0">
+                    <Equalizer enabled="True" gain="0">
+                        <EqualizerBand index="0" enabled="False" shape="HighPass" frequencyRange="Low" frequency="46" gain="0" qFactor="0.71"/>
+                        <EqualizerBand index="1" enabled="True" shape="LowShelf" frequencyRange="Low" frequency="49" gain="0" qFactor="1"/>
+                        <EqualizerBand index="2" enabled="True" shape="BandPass" frequencyRange="MidLow" frequency="171" gain="0" qFactor="2"/>
+                        <EqualizerBand index="3" enabled="True" shape="BandPass" frequencyRange="MidHigh" frequency="798" gain="0" qFactor="2"/>
+                        <EqualizerBand index="4" enabled="True" shape="HighShelf" frequencyRange="High" frequency="7260" gain="0" qFactor="1"/>
+                        <EqualizerBand index="5" enabled="False" shape="LowPass" frequencyRange="High" frequency="12900" gain="0" qFactor="0.71"/>
+                    </Equalizer>
+                    <DynamicsProcessor makeupGain="0">
+                        <Expander enabled="False" gateMode="False" threshold="-45" range="18" ratio="1.1" attack="1.4" hold="0" release="93"/>
+                        <Compressor enabled="False" threshold="-35" ratio="2" attack="1.4" hold="0" release="93"/>
+                        <Limiter enabled="False" threshold="-12" attack="0.71" hold="0" release="93"/>
+                    </DynamicsProcessor>
+                </AudioSource>
+            </AudioInput>
+        </AudioInputs>
+        <AudioHeadphoneOutputs>
+            <AudioHeadphoneOutput index="0" gain="-10.5" masterOutGain="-6" masterOutMute="False" talkbackMute="True" Solo="False">
+                <SoloInput id="4" source="-65280"/>
+            </AudioHeadphoneOutput>
+        </AudioHeadphoneOutputs>
+    </FairlightAudioMixer>
+    <MediaPlayers>
+        <MediaPlayer index="0" sourceType="Still" sourceIndex="0"/>
+        <MediaPlayer index="1" sourceType="Still" sourceIndex="10"/>
+    </MediaPlayers>
+    <SuperSources>
+        <SuperSource index="0" artFillInput="7" artKeyInput="3021" artOption="Background" artPreMultiplied="False" artClip="74.1" artGain="73.4" artInvertKey="False">
+            <Boxes>
+                <Box index="0" enabled="True" inputSource="5" xPosition="7.5" yPosition="-4" size="0.5" cropped="True" cropTop="15.63" cropBottom="0" cropLeft="22" cropRight="0"/>
+                <Box index="1" enabled="False" inputSource="2" xPosition="6.32" yPosition="-3.5" size="0.5" cropped="False" cropTop="0" cropBottom="0" cropLeft="0" cropRight="0"/>
+                <Box index="2" enabled="False" inputSource="6000" xPosition="0" yPosition="0" size="1" cropped="False" cropTop="0" cropBottom="0" cropLeft="0" cropRight="0"/>
+                <Box index="3" enabled="False" inputSource="3020" xPosition="0" yPosition="0" size="1" cropped="False" cropTop="0" cropBottom="0" cropLeft="0" cropRight="0"/>
+            </Boxes>
+        </SuperSource>
+    </SuperSources>
+    <MediaPool>
+        <Stills>
+            <Still index="0" name="bg_welcome 3" path="ATEM Media Pool/bg_welcome 3.png"/>
+            <Still index="1" name="bg_plain 2" path="ATEM Media Pool/bg_plain 2.png"/>
+            <Still index="2" name="bg_welcome 4" path="ATEM Media Pool/bg_welcome 4.png"/>
+            <Still index="3" name="bg 2" path="ATEM Media Pool/bg 2.png"/>
+            <Still index="4" name="green" path="ATEM Media Pool/green.png"/>
+            <Still index="5" name="white" path="ATEM Media Pool/white.png"/>
+            <Still index="6" name="black" path="ATEM Media Pool/black.png"/>
+            <Still index="7" name="transparent" path="ATEM Media Pool/transparent.png"/>
+            <Still index="8" name="key" path="ATEM Media Pool/key.png"/>
+            <Still index="9" name="ke_transparenty 2" path="ATEM Media Pool/ke_transparenty 2.png"/>
+            <Still index="10" name="annie-spratt-qzSMqWJyJBk-unsplash 2" path="ATEM Media Pool/annie-spratt-qzSMqWJyJBk-unsplash 2.png"/>
+            <Still index="11" name="Capture 9" path="ATEM Media Pool/Capture 9.png"/>
+            <Still index="12" name="Capture 9" path="ATEM Media Pool/Capture 9.png"/>
+            <Still index="13" name="Capture 9" path="ATEM Media Pool/Capture 9.png"/>
+            <Still index="14" name="Capture 9" path="ATEM Media Pool/Capture 9.png"/>
+            <Still index="15" name="Capture 9" path="ATEM Media Pool/Capture 9.png"/>
+            <Still index="16" name="Capture 9" path="ATEM Media Pool/Capture 9.png"/>
+            <Still index="17" name="Capture 9" path="ATEM Media Pool/Capture 9.png"/>
+            <Still index="18" name="Capture 9" path="ATEM Media Pool/Capture 9.png"/>
+            <Still index="19" name="Capture 10" path="ATEM Media Pool/Capture 10.png"/>
+        </Stills>
+    </MediaPool>
+    <CameraControl>
+        <Parameter device="1" category="Lens" parameter="ApertureFstop" value="5.75"/>
+        <Parameter device="1" category="Lens" parameter="ApertureNormalised" value="0"/>
+        <Parameter device="1" category="Video" parameter="ManualWhiteBalance" temperature="5600" tint="0"/>
+        <Parameter device="1" category="Video" parameter="Exposure" value="20000"/>
+        <Parameter device="1" category="Video" parameter="DetailLevel" value="1"/>
+        <Parameter device="1" category="Video" parameter="SensorGainInDecibels" value="0"/>
+        <Parameter device="1" category="Video" parameter="SensorNDFilter" value="0"/>
+        <Parameter device="1" category="ColorCorrection" parameter="LiftAdjust" red="0" green="0" blue="0" luma="0"/>
+        <Parameter device="1" category="ColorCorrection" parameter="GammaAdjust" red="0" green="0" blue="0" luma="0"/>
+        <Parameter device="1" category="ColorCorrection" parameter="GainAdjust" red="1" green="1" blue="1" luma="1"/>
+        <Parameter device="1" category="ColorCorrection" parameter="OffsetAdjust" red="0" green="0" blue="0" luma="0"/>
+        <Parameter device="1" category="ColorCorrection" parameter="ContrastAdjust" pivot="0.5" adjust="1"/>
+        <Parameter device="1" category="ColorCorrection" parameter="LumaMix" value="1"/>
+        <Parameter device="1" category="ColorCorrection" parameter="ColorAdjust" hue="0" saturation="1"/>
+        <Parameter device="2" category="Lens" parameter="ApertureFstop" value="5.75"/>
+        <Parameter device="2" category="Lens" parameter="ApertureNormalised" value="0"/>
+        <Parameter device="2" category="Video" parameter="ManualWhiteBalance" temperature="5600" tint="0"/>
+        <Parameter device="2" category="Video" parameter="Exposure" value="20000"/>
+        <Parameter device="2" category="Video" parameter="DetailLevel" value="1"/>
+        <Parameter device="2" category="Video" parameter="SensorGainInDecibels" value="0"/>
+        <Parameter device="2" category="Video" parameter="SensorNDFilter" value="0"/>
+        <Parameter device="2" category="ColorCorrection" parameter="LiftAdjust" red="0" green="0" blue="0" luma="0"/>
+        <Parameter device="2" category="ColorCorrection" parameter="GammaAdjust" red="0" green="0" blue="0" luma="0"/>
+        <Parameter device="2" category="ColorCorrection" parameter="GainAdjust" red="1" green="1" blue="1" luma="1"/>
+        <Parameter device="2" category="ColorCorrection" parameter="OffsetAdjust" red="0" green="0" blue="0" luma="0"/>
+        <Parameter device="2" category="ColorCorrection" parameter="ContrastAdjust" pivot="0.5" adjust="1"/>
+        <Parameter device="2" category="ColorCorrection" parameter="LumaMix" value="1"/>
+        <Parameter device="2" category="ColorCorrection" parameter="ColorAdjust" hue="0" saturation="1"/>
+        <Parameter device="3" category="Lens" parameter="ApertureFstop" value="5.75"/>
+        <Parameter device="3" category="Lens" parameter="ApertureNormalised" value="0"/>
+        <Parameter device="3" category="Video" parameter="ManualWhiteBalance" temperature="5600" tint="0"/>
+        <Parameter device="3" category="Video" parameter="Exposure" value="20000"/>
+        <Parameter device="3" category="Video" parameter="DetailLevel" value="1"/>
+        <Parameter device="3" category="Video" parameter="SensorGainInDecibels" value="0"/>
+        <Parameter device="3" category="Video" parameter="SensorNDFilter" value="0"/>
+        <Parameter device="3" category="ColorCorrection" parameter="LiftAdjust" red="0" green="0" blue="0" luma="0"/>
+        <Parameter device="3" category="ColorCorrection" parameter="GammaAdjust" red="0" green="0" blue="0" luma="0"/>
+        <Parameter device="3" category="ColorCorrection" parameter="GainAdjust" red="1" green="1" blue="1" luma="1"/>
+        <Parameter device="3" category="ColorCorrection" parameter="OffsetAdjust" red="0" green="0" blue="0" luma="0"/>
+        <Parameter device="3" category="ColorCorrection" parameter="ContrastAdjust" pivot="0.5" adjust="1"/>
+        <Parameter device="3" category="ColorCorrection" parameter="LumaMix" value="1"/>
+        <Parameter device="3" category="ColorCorrection" parameter="ColorAdjust" hue="0" saturation="1"/>
+        <Parameter device="4" category="Lens" parameter="ApertureFstop" value="5.75"/>
+        <Parameter device="4" category="Lens" parameter="ApertureNormalised" value="0"/>
+        <Parameter device="4" category="Video" parameter="ManualWhiteBalance" temperature="5600" tint="0"/>
+        <Parameter device="4" category="Video" parameter="Exposure" value="20000"/>
+        <Parameter device="4" category="Video" parameter="DetailLevel" value="1"/>
+        <Parameter device="4" category="Video" parameter="SensorGainInDecibels" value="0"/>
+        <Parameter device="4" category="Video" parameter="SensorNDFilter" value="0"/>
+        <Parameter device="4" category="ColorCorrection" parameter="LiftAdjust" red="0" green="0" blue="0" luma="0"/>
+        <Parameter device="4" category="ColorCorrection" parameter="GammaAdjust" red="0" green="0" blue="0" luma="0"/>
+        <Parameter device="4" category="ColorCorrection" parameter="GainAdjust" red="1" green="1" blue="1" luma="1"/>
+        <Parameter device="4" category="ColorCorrection" parameter="OffsetAdjust" red="0" green="0" blue="0" luma="0"/>
+        <Parameter device="4" category="ColorCorrection" parameter="ContrastAdjust" pivot="0.5" adjust="1"/>
+        <Parameter device="4" category="ColorCorrection" parameter="LumaMix" value="1"/>
+        <Parameter device="4" category="ColorCorrection" parameter="ColorAdjust" hue="0" saturation="1"/>
+        <Parameter device="5" category="Lens" parameter="ApertureFstop" value="5.75"/>
+        <Parameter device="5" category="Lens" parameter="ApertureNormalised" value="0"/>
+        <Parameter device="5" category="Video" parameter="ManualWhiteBalance" temperature="5600" tint="0"/>
+        <Parameter device="5" category="Video" parameter="Exposure" value="20000"/>
+        <Parameter device="5" category="Video" parameter="DetailLevel" value="1"/>
+        <Parameter device="5" category="Video" parameter="SensorGainInDecibels" value="0"/>
+        <Parameter device="5" category="Video" parameter="SensorNDFilter" value="0"/>
+        <Parameter device="5" category="ColorCorrection" parameter="LiftAdjust" red="0" green="0" blue="0" luma="0"/>
+        <Parameter device="5" category="ColorCorrection" parameter="GammaAdjust" red="0" green="0" blue="0" luma="0"/>
+        <Parameter device="5" category="ColorCorrection" parameter="GainAdjust" red="1" green="1" blue="1" luma="1"/>
+        <Parameter device="5" category="ColorCorrection" parameter="OffsetAdjust" red="0" green="0" blue="0" luma="0"/>
+        <Parameter device="5" category="ColorCorrection" parameter="ContrastAdjust" pivot="0.5" adjust="1"/>
+        <Parameter device="5" category="ColorCorrection" parameter="LumaMix" value="1"/>
+        <Parameter device="5" category="ColorCorrection" parameter="ColorAdjust" hue="0" saturation="1"/>
+        <Parameter device="6" category="Lens" parameter="ApertureFstop" value="5.75"/>
+        <Parameter device="6" category="Lens" parameter="ApertureNormalised" value="0"/>
+        <Parameter device="6" category="Video" parameter="ManualWhiteBalance" temperature="5600" tint="0"/>
+        <Parameter device="6" category="Video" parameter="Exposure" value="20000"/>
+        <Parameter device="6" category="Video" parameter="DetailLevel" value="1"/>
+        <Parameter device="6" category="Video" parameter="SensorGainInDecibels" value="0"/>
+        <Parameter device="6" category="Video" parameter="SensorNDFilter" value="0"/>
+        <Parameter device="6" category="ColorCorrection" parameter="LiftAdjust" red="0" green="0" blue="0" luma="0"/>
+        <Parameter device="6" category="ColorCorrection" parameter="GammaAdjust" red="0" green="0" blue="0" luma="0"/>
+        <Parameter device="6" category="ColorCorrection" parameter="GainAdjust" red="1" green="1" blue="1" luma="1"/>
+        <Parameter device="6" category="ColorCorrection" parameter="OffsetAdjust" red="0" green="0" blue="0" luma="0"/>
+        <Parameter device="6" category="ColorCorrection" parameter="ContrastAdjust" pivot="0.5" adjust="1"/>
+        <Parameter device="6" category="ColorCorrection" parameter="LumaMix" value="1"/>
+        <Parameter device="6" category="ColorCorrection" parameter="ColorAdjust" hue="0" saturation="1"/>
+        <Parameter device="7" category="Lens" parameter="ApertureFstop" value="5.75"/>
+        <Parameter device="7" category="Lens" parameter="ApertureNormalised" value="0"/>
+        <Parameter device="7" category="Video" parameter="ManualWhiteBalance" temperature="5600" tint="0"/>
+        <Parameter device="7" category="Video" parameter="Exposure" value="20000"/>
+        <Parameter device="7" category="Video" parameter="DetailLevel" value="1"/>
+        <Parameter device="7" category="Video" parameter="SensorGainInDecibels" value="0"/>
+        <Parameter device="7" category="Video" parameter="SensorNDFilter" value="0"/>
+        <Parameter device="7" category="ColorCorrection" parameter="LiftAdjust" red="0" green="0" blue="0" luma="0"/>
+        <Parameter device="7" category="ColorCorrection" parameter="GammaAdjust" red="0" green="0" blue="0" luma="0"/>
+        <Parameter device="7" category="ColorCorrection" parameter="GainAdjust" red="1" green="1" blue="1" luma="1"/>
+        <Parameter device="7" category="ColorCorrection" parameter="OffsetAdjust" red="0" green="0" blue="0" luma="0"/>
+        <Parameter device="7" category="ColorCorrection" parameter="ContrastAdjust" pivot="0.5" adjust="1"/>
+        <Parameter device="7" category="ColorCorrection" parameter="LumaMix" value="1"/>
+        <Parameter device="7" category="ColorCorrection" parameter="ColorAdjust" hue="0" saturation="1"/>
+        <Parameter device="8" category="Lens" parameter="ApertureFstop" value="5.75"/>
+        <Parameter device="8" category="Lens" parameter="ApertureNormalised" value="0"/>
+        <Parameter device="8" category="Video" parameter="ManualWhiteBalance" temperature="5600" tint="0"/>
+        <Parameter device="8" category="Video" parameter="Exposure" value="20000"/>
+        <Parameter device="8" category="Video" parameter="DetailLevel" value="1"/>
+        <Parameter device="8" category="Video" parameter="SensorGainInDecibels" value="0"/>
+        <Parameter device="8" category="Video" parameter="SensorNDFilter" value="0"/>
+        <Parameter device="8" category="ColorCorrection" parameter="LiftAdjust" red="0" green="0" blue="0" luma="0"/>
+        <Parameter device="8" category="ColorCorrection" parameter="GammaAdjust" red="0" green="0" blue="0" luma="0"/>
+        <Parameter device="8" category="ColorCorrection" parameter="GainAdjust" red="1" green="1" blue="1" luma="1"/>
+        <Parameter device="8" category="ColorCorrection" parameter="OffsetAdjust" red="0" green="0" blue="0" luma="0"/>
+        <Parameter device="8" category="ColorCorrection" parameter="ContrastAdjust" pivot="0.5" adjust="1"/>
+        <Parameter device="8" category="ColorCorrection" parameter="LumaMix" value="1"/>
+        <Parameter device="8" category="ColorCorrection" parameter="ColorAdjust" hue="0" saturation="1"/>
+        <Property device="1" property="ApertureCoarse" value="1"/>
+        <Property device="1" property="Locked" value="False"/>
+        <Property device="2" property="ApertureCoarse" value="1"/>
+        <Property device="2" property="Locked" value="False"/>
+        <Property device="3" property="ApertureCoarse" value="1"/>
+        <Property device="3" property="Locked" value="False"/>
+        <Property device="4" property="ApertureCoarse" value="1"/>
+        <Property device="4" property="Locked" value="False"/>
+        <Property device="5" property="ApertureCoarse" value="1"/>
+        <Property device="5" property="Locked" value="False"/>
+        <Property device="6" property="ApertureCoarse" value="1"/>
+        <Property device="6" property="Locked" value="False"/>
+        <Property device="7" property="ApertureCoarse" value="1"/>
+        <Property device="7" property="Locked" value="False"/>
+        <Property device="8" property="ApertureCoarse" value="1"/>
+        <Property device="8" property="Locked" value="False"/>
+    </CameraControl>
+    <MacroPool>
+        <Macro index="0" name="SS1" description="">
+            <Op id="SuperSourceV2BoxEnable" superSource="0" boxIndex="0" enable="True"/>
+            <Op id="SuperSourceV2BoxXPosition" superSource="0" boxIndex="0" xPosition="-7.58"/>
+            <Op id="SuperSourceV2BoxYPosition" superSource="0" boxIndex="0" yPosition="4.25"/>
+            <Op id="SuperSourceV2BoxSize" superSource="0" boxIndex="0" size="0.417007"/>
+            <Op id="SuperSourceV2BoxMaskEnable" superSource="0" boxIndex="0" enable="False"/>
+            <Op id="SuperSourceV2BoxMaskLeft" superSource="0" boxIndex="0" left="0"/>
+            <Op id="SuperSourceV2BoxMaskTop" superSource="0" boxIndex="0" top="0"/>
+            <Op id="SuperSourceV2BoxMaskRight" superSource="0" boxIndex="0" right="0"/>
+            <Op id="SuperSourceV2BoxMaskBottom" superSource="0" boxIndex="0" bottom="0"/>
+            <Op id="SuperSourceV2BoxEnable" superSource="0" boxIndex="1" enable="True"/>
+            <Op id="SuperSourceV2BoxXPosition" superSource="0" boxIndex="1" xPosition="7.58"/>
+            <Op id="SuperSourceV2BoxYPosition" superSource="0" boxIndex="1" yPosition="4.25"/>
+            <Op id="SuperSourceV2BoxSize" superSource="0" boxIndex="1" size="0.417007"/>
+            <Op id="SuperSourceV2BoxMaskEnable" superSource="0" boxIndex="1" enable="False"/>
+            <Op id="SuperSourceV2BoxMaskLeft" superSource="0" boxIndex="1" left="0"/>
+            <Op id="SuperSourceV2BoxMaskTop" superSource="0" boxIndex="1" top="0"/>
+            <Op id="SuperSourceV2BoxMaskRight" superSource="0" boxIndex="1" right="0"/>
+            <Op id="SuperSourceV2BoxMaskBottom" superSource="0" boxIndex="1" bottom="0"/>
+            <Op id="SuperSourceV2BoxEnable" superSource="0" boxIndex="2" enable="True"/>
+            <Op id="SuperSourceV2BoxXPosition" superSource="0" boxIndex="2" xPosition="-7.58"/>
+            <Op id="SuperSourceV2BoxYPosition" superSource="0" boxIndex="2" yPosition="-4.25002"/>
+            <Op id="SuperSourceV2BoxSize" superSource="0" boxIndex="2" size="0.417007"/>
+            <Op id="SuperSourceV2BoxMaskEnable" superSource="0" boxIndex="2" enable="False"/>
+            <Op id="SuperSourceV2BoxMaskLeft" superSource="0" boxIndex="2" left="0"/>
+            <Op id="SuperSourceV2BoxMaskTop" superSource="0" boxIndex="2" top="0"/>
+            <Op id="SuperSourceV2BoxMaskRight" superSource="0" boxIndex="2" right="0"/>
+            <Op id="SuperSourceV2BoxMaskBottom" superSource="0" boxIndex="2" bottom="0"/>
+            <Op id="SuperSourceV2BoxEnable" superSource="0" boxIndex="3" enable="True"/>
+            <Op id="SuperSourceV2BoxXPosition" superSource="0" boxIndex="3" xPosition="7.58"/>
+            <Op id="SuperSourceV2BoxYPosition" superSource="0" boxIndex="3" yPosition="-4.25002"/>
+            <Op id="SuperSourceV2BoxSize" superSource="0" boxIndex="3" size="0.417007"/>
+            <Op id="SuperSourceV2BoxMaskEnable" superSource="0" boxIndex="3" enable="False"/>
+            <Op id="SuperSourceV2BoxMaskLeft" superSource="0" boxIndex="3" left="0"/>
+            <Op id="SuperSourceV2BoxMaskTop" superSource="0" boxIndex="3" top="0"/>
+            <Op id="SuperSourceV2BoxMaskRight" superSource="0" boxIndex="3" right="0"/>
+            <Op id="SuperSourceV2BoxMaskBottom" superSource="0" boxIndex="3" bottom="0"/>
+        </Macro>
+        <Macro index="1" name="SS2" description="">
+            <Op id="SuperSourceV2BoxEnable" superSource="0" boxIndex="0" enable="True"/>
+            <Op id="SuperSourceV2BoxXPosition" superSource="0" boxIndex="0" xPosition="-6.32001"/>
+            <Op id="SuperSourceV2BoxYPosition" superSource="0" boxIndex="0" yPosition="3.5"/>
+            <Op id="SuperSourceV2BoxSize" superSource="0" boxIndex="0" size="0.5"/>
+            <Op id="SuperSourceV2BoxMaskEnable" superSource="0" boxIndex="0" enable="False"/>
+            <Op id="SuperSourceV2BoxMaskLeft" superSource="0" boxIndex="0" left="0"/>
+            <Op id="SuperSourceV2BoxMaskTop" superSource="0" boxIndex="0" top="0"/>
+            <Op id="SuperSourceV2BoxMaskRight" superSource="0" boxIndex="0" right="0"/>
+            <Op id="SuperSourceV2BoxMaskBottom" superSource="0" boxIndex="0" bottom="0"/>
+            <Op id="SuperSourceV2BoxEnable" superSource="0" boxIndex="1" enable="True"/>
+            <Op id="SuperSourceV2BoxXPosition" superSource="0" boxIndex="1" xPosition="6.32001"/>
+            <Op id="SuperSourceV2BoxYPosition" superSource="0" boxIndex="1" yPosition="-3.50002"/>
+            <Op id="SuperSourceV2BoxSize" superSource="0" boxIndex="1" size="0.5"/>
+            <Op id="SuperSourceV2BoxMaskEnable" superSource="0" boxIndex="1" enable="False"/>
+            <Op id="SuperSourceV2BoxMaskLeft" superSource="0" boxIndex="1" left="0"/>
+            <Op id="SuperSourceV2BoxMaskTop" superSource="0" boxIndex="1" top="0"/>
+            <Op id="SuperSourceV2BoxMaskRight" superSource="0" boxIndex="1" right="0"/>
+            <Op id="SuperSourceV2BoxMaskBottom" superSource="0" boxIndex="1" bottom="0"/>
+            <Op id="SuperSourceV2BoxEnable" superSource="0" boxIndex="2" enable="False"/>
+            <Op id="SuperSourceV2BoxXPosition" superSource="0" boxIndex="2" xPosition="0"/>
+            <Op id="SuperSourceV2BoxYPosition" superSource="0" boxIndex="2" yPosition="0"/>
+            <Op id="SuperSourceV2BoxSize" superSource="0" boxIndex="2" size="1"/>
+            <Op id="SuperSourceV2BoxMaskEnable" superSource="0" boxIndex="2" enable="False"/>
+            <Op id="SuperSourceV2BoxMaskLeft" superSource="0" boxIndex="2" left="0"/>
+            <Op id="SuperSourceV2BoxMaskTop" superSource="0" boxIndex="2" top="0"/>
+            <Op id="SuperSourceV2BoxMaskRight" superSource="0" boxIndex="2" right="0"/>
+            <Op id="SuperSourceV2BoxMaskBottom" superSource="0" boxIndex="2" bottom="0"/>
+            <Op id="SuperSourceV2BoxEnable" superSource="0" boxIndex="3" enable="False"/>
+            <Op id="SuperSourceV2BoxXPosition" superSource="0" boxIndex="3" xPosition="0"/>
+            <Op id="SuperSourceV2BoxYPosition" superSource="0" boxIndex="3" yPosition="0"/>
+            <Op id="SuperSourceV2BoxSize" superSource="0" boxIndex="3" size="1"/>
+            <Op id="SuperSourceV2BoxMaskEnable" superSource="0" boxIndex="3" enable="False"/>
+            <Op id="SuperSourceV2BoxMaskLeft" superSource="0" boxIndex="3" left="0"/>
+            <Op id="SuperSourceV2BoxMaskTop" superSource="0" boxIndex="3" top="0"/>
+            <Op id="SuperSourceV2BoxMaskRight" superSource="0" boxIndex="3" right="0"/>
+            <Op id="SuperSourceV2BoxMaskBottom" superSource="0" boxIndex="3" bottom="0"/>
+        </Macro>
+    </MacroPool>
+    <MacroControl loop="False"/>
+    <Output>
+        <LiveStream serviceName="Custom URL H.264" url="rtmp://192.168.2.5/7cc9f27e-9b99-41d8-ba7c-dcb9eb84b967.stream" key="maranatha" streamIdExtensions="" lowLatency="False" streamDownConvertMode="None">
+            <Credentials username="" password=""/>
+            <bitrate low="6000000" high="9000000"/>
+            <audioBitrate low="128000" high="128000"/>
+        </LiveStream>
+        <Record filename="CCP_20260417_0753" recordInAllCameras="False" recordAllISOInputs="True"/>
+    </Output>
+</Profile>

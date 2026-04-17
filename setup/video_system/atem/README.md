@@ -9,6 +9,8 @@ Saved into atem's "startup config" via the software control:
  * Transition speeds
  * Preset gallery files for the mediaplayers
 
+See backups in [atemsettings](atemsettings).
+
 # Init
 The event manager n8n workflow periodically looks for the ATEM to come online:
    * if the ATEM is not streaming then we know it is uninitialised
