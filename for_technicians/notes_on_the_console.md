@@ -339,6 +339,7 @@ called [Mixing station (org.devcore.mixingstation)](https://play.google.com/stor
 You might want to download my settings, and load it into the app, to help you started quicker.
 * [Settings V1](assets/console/files/android_mixingstation_settings_backup.msz)
 * [Settings V2](assets/console/files/android_mixingstation_settings_backup_20260705.msz)
+* [Theme](assets/console/files/theme.msz.bin)
 
 # Remote control OBS: OBS Blade
 
