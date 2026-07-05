@@ -23,7 +23,7 @@ NOTIFY_URL="${NOTIFY_URL:-}"
 DEBUG=""
 #DEBUG="-avni"
 
-MOUNT_RETRIES=1
+MOUNT_RETRIES=3
 MOUNT_RETRY_DELAY=15
 
 # Ping with timeout: 3 attempts, 2 second timeout per attempt
@@ -35,28 +35,43 @@ fi
 
 mkdir -p "$MOUNT_POINT" 2>/dev/null || true;
 
+force_unmount() {
+    # Try graceful first, then force, then lazy — wait until mount point is clear
+    umount "$MOUNT_POINT" 2>/dev/null || \
+        umount -f "$MOUNT_POINT" 2>/dev/null || \
+        umount -l "$MOUNT_POINT" 2>/dev/null || true
+    # Wait up to 10s for the mount point to become free
+    for _ in $(seq 1 10); do
+        mountpoint -q "$MOUNT_POINT" || return 0
+        sleep 1
+    done
+    echo "$(date) - WARNING: mount point still busy after unmount attempts"
+}
+
 ensure_mounted() {
-    # If already mounted, check it's not stale
+    # If already mounted, verify it's not stale
     if mountpoint -q "$MOUNT_POINT"; then
-      echo "$(date) Checking mount ..."
-        if ! timeout 10 ls "$MOUNT_POINT" > /dev/null 2>&1; then
-            echo "$(date) - Stale mount detected, unmounting..."
-            umount -l "$MOUNT_POINT" 2>/dev/null || true
-            sleep 2
-        else
-            return 0
+        echo "$(date) - Checking existing mount..."
+        if timeout 10 ls "$MOUNT_POINT" > /dev/null 2>&1; then
+            return 0  # healthy
         fi
+        echo "$(date) - Stale mount detected, unmounting..."
+        force_unmount
     fi
 
     for i in $(seq 1 $MOUNT_RETRIES); do
         echo "$(date) - Mounting $SMB_SHARE (attempt $i/$MOUNT_RETRIES)"
-        if mount -t cifs "$SMB_SHARE" "$MOUNT_POINT" \
-            -o username="$SMB_USER",password="$SMB_PASS",workgroup="$SMB_WORKGROUP",uid=$(id -u),gid=$(id -g); then
+        mount -t cifs "$SMB_SHARE" "$MOUNT_POINT" \
+            -o username="$SMB_USER",password="$SMB_PASS",workgroup="$SMB_WORKGROUP",uid=$(id -u),gid=$(id -g)
+        rc=$?
+        if [ $rc -eq 0 ]; then
             echo "$(date) - Mounted successfully"
             return 0
         fi
+        echo "$(date) - Mount failed (exit $rc), forcing cleanup before retry..."
+        force_unmount
         if [ $i -lt $MOUNT_RETRIES ]; then
-            echo "$(date) - Mount failed, retrying in ${MOUNT_RETRY_DELAY}s..."
+            echo "$(date) - Retrying in ${MOUNT_RETRY_DELAY}s..."
             sleep "$MOUNT_RETRY_DELAY"
         fi
     done

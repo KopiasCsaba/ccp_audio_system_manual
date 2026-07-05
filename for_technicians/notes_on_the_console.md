@@ -336,8 +336,9 @@ section [here](https://www.behringer.com/product.html?modelCode=P0AAP).
 I had much success with the app
 called [Mixing station (org.devcore.mixingstation)](https://play.google.com/store/apps/details?id=org.devcore.mixingstation).
 
-You might want to download [my settings backup](assets/console/files/android_mixingstation_settings_backup.msz), and
-load it into the app, to help you started quicker.
+You might want to download my settings, and load it into the app, to help you started quicker.
+* [Settings V1](assets/console/files/android_mixingstation_settings_backup.msz)
+* [Settings V2](assets/console/files/android_mixingstation_settings_backup_20260705.msz)
 
 # Remote control OBS: OBS Blade
 

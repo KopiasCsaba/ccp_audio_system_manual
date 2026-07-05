@@ -85,7 +85,7 @@ authInternalUsers:
   # if the IP is localhost.
 - user: any
   pass:
-  ips: ['127.0.0.1', '::1']
+  ips: []
   permissions:
   - action: api
   - action: metrics
@@ -162,7 +162,7 @@ authJWTAudience:
 # Global settings -> Control API
 
 # Allow clients to control the server through the Control API.
-api: false
+api: true
 # Address of the Control API listener.
 apiAddress: :9997
 # Enable HTTPS on the Control API server.
@@ -348,7 +348,7 @@ hlsAlwaysRemux: false
 # * mpegts - uses MPEG-TS segments, for maximum compatibility.
 # * fmp4 - uses fragmented MP4 segments, more efficient.
 # * lowLatency - uses Low-Latency HLS.
-hlsVariant: lowLatency
+hlsVariant: fmp4
 # Number of HLS segments to keep on the server.
 # Segments allow to seek through the stream.
 # Their number doesn't influence latency.
@@ -358,7 +358,7 @@ hlsSegmentCount: 7
 # The final segment duration is also influenced by the interval between IDR frames,
 # since the server changes the duration in order to include at least one IDR frame
 # in each segment.
-hlsSegmentDuration: 1s
+hlsSegmentDuration: 4s
 # Minimum duration of each part.
 # A player usually puts 3 parts in a buffer before reproducing the stream.
 # Parts are used in Low-Latency HLS in place of segments.
@@ -524,7 +524,7 @@ pathDefaults:
   # Extension is added automatically.
   # Available variables are %path (path name), %Y %m %d (year, month, day),
   # %H %M %S (hours, minutes, seconds), %f (microseconds), %z (time zone), %s (unix epoch).
-  recordPath: ./recordings/%path/%Y-%m-%d_%H-%M-%S-%f
+  recordPath: /mnt/media/CCP_%Y%m%d_%H%M%S/%path
   # Format of recorded segments.
   # Available formats are "fmp4" (fragmented MP4) and "mpegts" (MPEG-TS).
   recordFormat: fmp4
@@ -536,10 +536,10 @@ pathDefaults:
   # This prevents RAM exhaustion.
   recordMaxPartSize: 50M
   # Minimum duration of each segment.
-  recordSegmentDuration: 1h
+  recordSegmentDuration: 24h
   # Delete segments after this timespan.
   # Set to 0s to disable automatic deletion.
-  recordDeleteAfter: 1d
+  recordDeleteAfter: 0s
 
   ###############################################
   # Default path settings -> Publisher source (when source is "publisher")
@@ -806,29 +806,32 @@ pathDefaults:
 #  all_others:
 paths:
   cam:
-    runOnDemand: >
+    runOnInit: >
       ffmpeg
       -thread_queue_size 512
       -f v4l2
       -input_format mjpeg
       -framerate 25
-      -i /dev/v4l/by-id/usb-Blackmagic_Design_ATEM_SDI_Extreme_ISO_476928c2ff364f0fa9958b4c4e272199-video-index0
+      -i /dev/v4l/by-id/usb-Blackmagic_Design_Blackmagic_Design_e6dfb640616b42d9b99e4b434f023af7-video-index0
       -thread_queue_size 512
       -f alsa
-      -i hw:CARD=ISO,DEV=0
+      -i hw:CARD=Design,DEV=0
       -c:v libx264
       -x264-params ref=1:bframes=0:me=dia:subme=0:trellis=0
       -threads 2
       -preset ultrafast
       -tune zerolatency
-      -crf 40
-      -g 25
+      -crf 26
+      -g 100
       -pix_fmt yuv420p
+      -af aresample=async=1:min_hard_comp=0.100000
       -c:a aac
-      -b:a 64k
-      -ac 1
-      -ar 22050
-      -pkt_size 1200
-      -rtsp_transport tcp
-      -f rtsp rtsp://localhost:$RTSP_PORT/$MTX_PATH
-    runOnDemandRestart: yes
+      -b:a 128k
+      -ac 2
+      -ar 44100
+      -map 0:v
+      -map 1:a
+      -f tee
+      "[f=rtsp:rtsp_transport=tcp]rtsp://localhost:$RTSP_PORT/$MTX_PATH|[f=flv]rtmp://192.168.2.5/7cc9f27e-9b99-41d8-ba7c-dcb9eb84b967.stream/maranatha"
+    runOnInitRestart: yes
+# lehetne -g 50 hlsSegmentDuration lehetne 1s hogy gyorsabb legyen a hls....
