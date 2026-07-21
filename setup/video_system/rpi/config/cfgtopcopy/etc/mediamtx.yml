@@ -62,34 +62,34 @@ authMethod: internal
 authInternalUsers:
   # Default unprivileged user.
   # Username. 'any' means any user, including anonymous ones.
-- user: any
-  # Password. Not used in case of 'any' user.
-  pass:
-  # IPs or networks allowed to use this user. An empty list means any IP.
-  ips: []
-  # Permissions.
-  permissions:
-    # Available actions are: publish, read, playback, api, metrics, pprof.
-  - action: publish
-    # Paths can be set to further restrict access to a specific path.
-    # An empty path means any path.
-    # Regular expressions can be used by using a tilde as prefix.
-    path:
-  - action: read
-    path:
-  - action: playback
-    path:
+  - user: any
+    # Password. Not used in case of 'any' user.
+    pass:
+    # IPs or networks allowed to use this user. An empty list means any IP.
+    ips: []
+    # Permissions.
+    permissions:
+      # Available actions are: publish, read, playback, api, metrics, pprof.
+      - action: publish
+        # Paths can be set to further restrict access to a specific path.
+        # An empty path means any path.
+        # Regular expressions can be used by using a tilde as prefix.
+        path:
+      - action: read
+        path:
+      - action: playback
+        path:
 
-  # Default administrator.
-  # This allows to use API, metrics and PPROF without authentication,
-  # if the IP is localhost.
-- user: any
-  pass:
-  ips: []
-  permissions:
-  - action: api
-  - action: metrics
-  - action: pprof
+    # Default administrator.
+    # This allows to use API, metrics and PPROF without authentication,
+    # if the IP is localhost.
+  - user: any
+    pass:
+    ips: []
+    permissions:
+      - action: api
+      - action: metrics
+      - action: pprof
 
 # HTTP-based authentication.
 # URL called to perform authentication. Every time a user wants
@@ -118,9 +118,9 @@ authHTTPFingerprint:
 # Actions to exclude from HTTP-based authentication.
 # Format is the same as the one of user permissions.
 authHTTPExclude:
-- action: api
-- action: metrics
-- action: pprof
+  - action: api
+  - action: metrics
+  - action: pprof
 
 # JWT-based authentication.
 # Users have to log in through an external identity server and obtain a JWT.
@@ -425,7 +425,7 @@ webrtcICEServers2: []
   # the secret must be inserted into the password field.
   # username: ''
   # password: ''
-  # clientOnly: false
+# clientOnly: false
 # Maximum time to gather STUN candidates.
 webrtcSTUNGatherTimeout: 5s
 # Time to wait for the WebRTC handshake to complete.
@@ -511,7 +511,7 @@ pathDefaults:
     #   sampleRate: 48000
     #   channelCount: 2
     #   # in case of G711, muLaw must be provided too.
-    #   muLaw: false
+  #   muLaw: false
   # An MP4 file can be used instead of the default offline segment.
   alwaysAvailableFile: ''
 
@@ -787,16 +787,16 @@ pathDefaults:
   #   a regular expression.
   runOnRecordSegmentComplete:
 
-###############################################
-# Path settings
+  ###############################################
+  # Path settings
 
-# Settings in "paths" are applied to specific paths, and the map key
-# is the name of the path.
-# Any setting in "pathDefaults" can be overridden here.
-# It's possible to use regular expressions by using a tilde as prefix,
-# for example "~^(test1|test2)$" will match both "test1" and "test2",
-# for example "~^prefix" will match all paths that start with "prefix".
-#paths:
+  # Settings in "paths" are applied to specific paths, and the map key
+  # is the name of the path.
+  # Any setting in "pathDefaults" can be overridden here.
+  # It's possible to use regular expressions by using a tilde as prefix,
+  # for example "~^(test1|test2)$" will match both "test1" and "test2",
+  # for example "~^prefix" will match all paths that start with "prefix".
+  #paths:
   # example:
   # my_camera:
   #   source: rtsp://my_camera
@@ -812,10 +812,10 @@ paths:
       -f v4l2
       -input_format mjpeg
       -framerate 25
-      -i /dev/v4l/by-id/usb-Blackmagic_Design_Blackmagic_Design_e6dfb640616b42d9b99e4b434f023af7-video-index0
+      -i /dev/v4l/by-id/usb-Blackmagic_Design_ATEM_SDI_Extreme_ISO_476928c2ff364f0fa9958b4c4e272199-video-index0
       -thread_queue_size 512
       -f alsa
-      -i hw:CARD=Design,DEV=0
+      -i hw:CARD=ISO,DEV=0
       -c:v libx264
       -x264-params ref=1:bframes=0:me=dia:subme=0:trellis=0
       -threads 2
@@ -825,13 +825,13 @@ paths:
       -g 100
       -pix_fmt yuv420p
       -af aresample=async=1:min_hard_comp=0.100000
-      -c:a aac
+      -c:a libopus
       -b:a 128k
       -ac 2
-      -ar 44100
+      -ar 24000
       -map 0:v
       -map 1:a
-      -f tee
-      "[f=rtsp:rtsp_transport=tcp]rtsp://localhost:$RTSP_PORT/$MTX_PATH|[f=flv]rtmp://192.168.2.5/7cc9f27e-9b99-41d8-ba7c-dcb9eb84b967.stream/maranatha"
+      -f rtsp
+      -rtsp_transport tcp
+      rtsp://localhost:$RTSP_PORT/$MTX_PATH
     runOnInitRestart: yes
-# lehetne -g 50 hlsSegmentDuration lehetne 1s hogy gyorsabb legyen a hls....
