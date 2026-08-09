@@ -831,17 +831,59 @@ paths:
       -ar 24000
       -map 0:v
       -map 1:a
-      -f rtsp -rtsp_transport tcp rtsp://localhost:$RTSP_PORT/$MTX_PATH
+      -f rtsp -rtsp_transport tcp -pkt_size 1200 rtsp://localhost:$RTSP_PORT/$MTX_PATH
       -map 1:a
       -c:a aac
       -b:a 128k
       -ac 1
       -ar 48000
       -flush_packets 1
+      -f rtsp -rtsp_transport tcp -pkt_size 1200 rtsp://localhost:$RTSP_PORT/glossa_src
+    runOnInitRestart: yes
+
+  # Local-only AAC 48kHz mono feed for Glossa, published by the "cam" ffmpeg above.
+  # Always produced, but only forwarded to Glossa while "glossa_push" is on.
+  glossa_src:
+
+  # The Glossa upstream, switched on and off over the Control API (port 9997).
+  #
+  # "sourceOnDemand: yes" is the OFF switch: the feed above is not pulled while
+  # nobody is reading this path, so the path never becomes ready and runOnReady
+  # never fires. That is the state after every boot and after every restart.
+  # Setting it to "no" makes mediamtx pull the feed right away, the path becomes
+  # ready, and runOnReady starts pushing to Glossa. Setting it back to "yes"
+  # drops the pull and SIGINTs the ffmpeg below.
+  #
+  #   START:  curl -X PATCH http://localhost:9997/v3/config/paths/patch/glossa_push \
+  #             -H 'Content-Type: application/json' -d '{"sourceOnDemand":false}'
+  #   STOP:   curl -X PATCH http://localhost:9997/v3/config/paths/patch/glossa_push \
+  #             -H 'Content-Type: application/json' -d '{"sourceOnDemand":true}'
+  #   STATE:  curl http://localhost:9997/v3/config/paths/get/glossa_push
+  #           "sourceOnDemand": false -> on, true -> off
+  #
+  # Repeating either command is harmless: an unchanged config is a no-op, so a
+  # second START does not interrupt a running push.
+  # Neither command touches the "cam" or "glossa_src" paths.
+  #
+  # Side note: since it is "on demand", opening this path in a player (e.g.
+  # http://<pi>:8888/glossa_push) also starts the push, for as long as that
+  # player stays connected. Don't do that by accident.
+  glossa_push:
+    source: rtsp://localhost:8554/glossa_src
+    sourceOnDemand: yes
+    runOnReady: >
+      ffmpeg
+      -hide_banner
+      -nostdin
+      -loglevel warning
       -fflags nobuffer
       -flags low_delay
+      -rtsp_transport tcp
+      -i rtsp://localhost:$RTSP_PORT/$MTX_PATH
+      -c:a copy
+      -flush_packets 1
       -max_delay 0
       -muxpreload 0
       -muxdelay 0
       -f flv rtmp://stream.glossa.live:1935/live/glossa_MjdiNzFiNTgtMDhmMy00ZjJkLTgwYTMtN2M5M2JlMmQ1MzE5OmVu
-    runOnInitRestart: yes
+    runOnReadyRestart: yes

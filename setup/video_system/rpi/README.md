@@ -205,6 +205,50 @@ sudo systemctl daemon-reload
 sudo systemctl restart openbox.service vlc.service brave.service browser-controller.service keys.service mediamtx.service vlc-healthcheck.timer
 ```
 
+## Glossa translation stream (manual start/stop)
+
+The `cam` ffmpeg in `/etc/mediamtx.yml` always produces two local streams:
+
+- `rtsp://<pi>:8554/cam` — H264 + Opus, the multiview
+- `rtsp://<pi>:8554/glossa_src` — AAC 48kHz mono, the Glossa audio feed
+
+A third path, `glossa_push`, forwards `glossa_src` to Glossa with `-c:a copy`
+(no re-encode). It is declared in `/etc/mediamtx.yml` with `sourceOnDemand: yes`,
+which means it pulls nothing while nobody reads it — so it never becomes ready,
+its `runOnReady` ffmpeg never starts, and **after every boot Glossa is OFF**.
+
+Flipping `sourceOnDemand` is the switch. Neither direction touches `cam` or
+`glossa_src`, so the multiview never blips.
+
+```bash
+# START
+curl -X PATCH http://<pi>:9997/v3/config/paths/patch/glossa_push \
+  -H 'Content-Type: application/json' -d '{"sourceOnDemand":false}'
+
+# STOP
+curl -X PATCH http://<pi>:9997/v3/config/paths/patch/glossa_push \
+  -H 'Content-Type: application/json' -d '{"sourceOnDemand":true}'
+
+# STATE: "sourceOnDemand": false = on, true = off
+curl -s http://<pi>:9997/v3/config/paths/get/glossa_push | grep -o '"sourceOnDemand":[a-z]*'
+```
+
+Repeating a command is harmless — an unchanged config is a no-op, so a second
+START does not interrupt a running push.
+
+Notes:
+
+- Both commands are `PATCH` with a JSON body, so a browser address bar (GET
+  only) cannot drive this. The state check is a plain GET.
+- Because the path is on demand, opening it in a player
+  (`http://<pi>:8888/glossa_push`) also starts the push for as long as that
+  player stays connected. Don't do that by accident.
+- Is it actually flowing? `curl -s http://<pi>:9997/v3/paths/list` and look at
+  `bytesReceived` for `glossa_src`, or `journalctl -u mediamtx -f`.
+- The Control API is reachable from any IP (`ips: []` in `authInternalUsers`),
+  so anyone on the LAN can start/stop the Glossa upstream. Restrict `ips:` if
+  that is not wanted.
+
 ## Troubleshooting and Management
 
 Useful systemd commands for managing the kiosk system:
