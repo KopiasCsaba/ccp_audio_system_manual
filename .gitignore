@@ -2,3 +2,5 @@
 *nohup.out
 *.fuse*
 *.~lock*
+.claude
+.serena
