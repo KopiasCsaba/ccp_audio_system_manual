@@ -205,6 +205,28 @@ sudo systemctl daemon-reload
 sudo systemctl restart openbox.service vlc.service brave.service browser-controller.service keys.service mediamtx.service vlc-healthcheck.timer
 ```
 
+## MediaMTX boot race (WebRTC black player after boot)
+
+Symptom: after a boot `http://<pi>:8889/cam/` loads but never plays; a manual
+`systemctl restart mediamtx` fixes it until the next boot.
+
+Cause: mediamtx collects the WebRTC ICE host candidates from the network
+interfaces **at startup**. On this image `NetworkManager-wait-online.service` is
+masked, so `network-online.target` is reached immediately and mediamtx starts
+~6s before `eth0` gets its DHCP lease — it then advertises only `usb0`'s address,
+which no LAN client can route to.
+
+Guards in place (no hardcoded IP anywhere):
+
+- `mediamtx.service` has an `ExecStartPre` that waits up to 60s for a global
+  IPv4 address on `eth0` before launching mediamtx, plus `Restart=always` and
+  `StartLimitIntervalSec=0` so a failed wait can never kill the service for good.
+- `/etc/mediamtx.yml` has `webrtcIPsFromInterfacesList: [eth0]`, so only eth0
+  addresses are ever offered as candidates (usb0 is never advertised).
+
+If eth0 ever gets a *new* address while mediamtx runs (cable replug, different
+subnet), the candidates go stale — restart the service.
+
 ## Glossa translation stream (manual start/stop)
 
 The `cam` ffmpeg in `/etc/mediamtx.yml` always produces two local streams:
